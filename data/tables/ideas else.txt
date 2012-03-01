@@ -1,0 +1,29 @@
+ending : to be continued ? (like warping out with ... GTD Streaker ?)
+	 post-final/bonus mission : teaser for ASPoV : you get to fly on the 			    shivan's side
+	 mention bonus missions in mod.ini
+
+
+
+ToDo : on Hammer time : Blade fail RTB + debrief
+
+more delay after Cyaegha's jump
+
+
+set elite armor for vampire ; reaper & cyaegha & hellknight + escort
+
+
+Demonic spiders
+
+Fail debriefs on vampire slayers
+
+
+
+
+Overkill mk2 :
+	swarming missile : 12/salvo
+	TAG-C : calls 4 aspect-seeking cluster warheads
+		which spawn 5 heat-seeking TAG-C :
+			calls 3 aspect seeking cluster warheads#2
+			which spawn 2 (heat seeking?) cluster warheads#3
+				which spawns high explosive ammunitions
+				

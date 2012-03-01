@@ -1,0 +1,308 @@
+#Primary Weapons
+
+;;Refraction beams
+
+$Name:                          SRed-Refractor
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0 
+$Fire Wait:                     25.0 
+$Damage:                        0		
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0  
+$Energy Consumed:               0.30  
+$Cargo Size:                    0.0 
+$Homing:                        NO
+$LaunchSnd:                     125  
+$ImpactSnd:                     88
++Weapon Range:					4000
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0	
+	+Life:			  			3.8	
+	+Warmup:		  			1500
+	+Warmdown:					1000
+	+Radius:								90.0
+	+PCount:								24
+	+PRadius:								2.8
+	+PAngle:					65.0	
+	+PAni:									particle_red
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5
+	+BeamSound:					177				
+	+WarmupSound:				183	
+	+WarmdownSound:				187	
+	+Muzzleglow:							SbeamAglow
+	+Shots:						0	
+	+ShrinkFactor:				0.1		
+	+ShrinkPct:					1.8	
+	+Range:									6000
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						10.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					10.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			10.0
+		+Texture:		SbeamAA
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			1.0
+		+Tile Factor:	90, 1
+		+Translation:	-2
+	$Section:
+		+Width:			6.0
+		+Texture:		SbeamAB
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			2.0
+	$Section:
+		+Width:			30.0
+		+Texture:		SbeamAC
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.001
+		+Zadd:			1.0
+		+Tile Factor:	10, 1
+		+Translation:	-2
+	$Section:
+		+Width:			90.0
+		+Texture:		SbeamAD
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			60.0
+		+Texture:		SbeamAE
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+		
+$Name:                          MRed-Refractor
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     16.0            ;; in seconds
+$Damage:                        0				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     125             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			3.8				;; how long it lasts once the beam is actually firing
+	+Warmup:		  			1500			;; warmup time in ms
+	+Warmdown:					1000			;; warmdown time in ms
+	+Radius:		  			80.0			;; muzzle glow radius in meters
+	+PCount:					12				;; particles spewed every interval
+	+PRadius:					1.9				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particleexp01	;; particle ani
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					177				;; the looping beam-firing sound
+	+WarmupSound:				183				;; associated warmup sound
+	+WarmdownSound:				187				;; associated warmdown sound
+	+Muzzleglow:				thrusterglow01	;; muzzle glow bitmap	
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
+	$Section:									;; one section of the beam (you can have up to 5)
+		+Width:					10.0			;; width of the section
+		+Texture:				beam-white		;; texture for this section
+		+RGBA Inner:			255 255 255 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			150 150 150 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					2.0				;; hehe
+	$Section:									;; one section of the beam
+		+Width:					22.0			;; width of the section
+		+Texture:				beam-red2		;; texture for this section
+		+RGBA Inner:			160 160 0 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 60 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					1.0				;; hehe
+	$Section:									;; one section of the beam
+		+Width:					26.0			;; width of the section
+		+Texture:				beam-red		;; texture for this section
+		+RGBA Inner:			255 0 0 255		;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 0 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					0.0				;; hehe
+
+
+;;Refracted beams - nexus
+
+;SRed			200
+;MRed			360
+;MredUp			540
+;LRed			600
+
+$Name:                          SRed-Nexus+1SRed
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0 
+$Fire Wait:                     25.0 
+$Damage:                        440
+$Damage Type:					HugeWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0  
+$Energy Consumed:               0.30  
+$Cargo Size:                    0.0 
+$Homing:                        NO
+$LaunchSnd:                     125  
+$ImpactSnd:                     88
++Weapon Range:					5500
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0	
+	+Life:			  			3.8	
+	+Warmup:		  			1500
+	+Warmdown:					1000
+	+Radius:		  			120.0
+	+PCount:					12	
+	+PRadius:					1.9				
+	+PAngle:					65.0	
+	+PAni:						particleexp01	
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5
+	+BeamSound:					177				
+	+WarmupSound:				183	
+	+WarmdownSound:				187	
+	+Muzzleglow:				thrusterglow01	
+	+Shots:						0	
+	+ShrinkFactor:				0.1		
+	+ShrinkPct:					1.8	
+	$Section:			
+		+Width:					9.0	
+		+Texture:				beam-white
+		+RGBA Inner:			255 255 255 255
+		+RGBA Outer:			150 150 150 10
+		+Flicker:				0.1		
+		+Zadd:					2.0	
+	$Section:							
+		+Width:					22.5	
+		+Texture:				beam-red2	
+		+RGBA Inner:			160 160 0 255
+		+RGBA Outer:			60 60 0 10		
+		+Flicker:				0.1	
+		+Zadd:					1.0		
+	$Section:	
+		+Width:					30.0		
+		+Texture:				beam-red	
+		+RGBA Inner:			255 0 0 255		
+		+RGBA Outer:			60 0 0 10	
+		+Flicker:				0.1	
+		+Zadd:					0.0	
+
+
+
+$Name:                          SRed-Nexus+2SRed+1MRed
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0 
+$Fire Wait:                     25.0 
+$Damage:                        826	
+$Damage Type:					HugeWeapon	
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0  
+$Energy Consumed:               0.30  
+$Cargo Size:                    0.0 
+$Homing:                        NO
+$LaunchSnd:                     125  
+$ImpactSnd:                     88
++Weapon Range:					5500
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0	
+	+Life:			  			3.8	
+	+Warmup:		  			1500
+	+Warmdown:					1000
+	+Radius:		  			120.0
+	+PCount:					12	
+	+PRadius:					1.9				
+	+PAngle:					65.0	
+	+PAni:						particleexp01	
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5
+	+BeamSound:					177				
+	+WarmupSound:				183	
+	+WarmdownSound:				187	
+	+Muzzleglow:				thrusterglow01	
+	+Shots:						0	
+	+ShrinkFactor:				0.1		
+	+ShrinkPct:					1.8	
+	$Section:			
+		+Width:					12.0	
+		+Texture:				beam-white
+		+RGBA Inner:			255 255 255 255
+		+RGBA Outer:			150 150 150 10
+		+Flicker:				0.1		
+		+Zadd:					2.0	
+	$Section:							
+		+Width:					26.0	
+		+Texture:				beam-red2	
+		+RGBA Inner:			160 160 0 255
+		+RGBA Outer:			60 60 0 10		
+		+Flicker:				0.1	
+		+Zadd:					1.0		
+	$Section:	
+		+Width:					35.0		
+		+Texture:				beam-red	
+		+RGBA Inner:			255 0 0 255		
+		+RGBA Outer:			60 0 0 10	
+		+Flicker:				0.1	
+		+Zadd:					0.0	
+
+
+#End

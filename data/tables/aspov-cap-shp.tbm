@@ -1,0 +1,698 @@
+#Ship Classes
+
+
+$Name:		SC Lilith
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     navigation,              2.5,0.0
+	$AWACS:			4800
+
+
+$Name:		SC Rakshasa
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Flags:                 ( "cruiser" "awacs")
+$Subsystem:                     navigation,              2.5,0.0
+	$AWACS:			3600
+
+
+$Name:		SC Cain
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     navigation,              5,0.0
+	$AWACS:			2400
+
+
+$Name:		SD Demon
+	+nocreate ;:
+$Armor Type:				Shivan Destroyer Armor
+
+
+$Name:		SD Ravana
+	+nocreate ;:
+$Armor Type:				Shivan Destroyer Armor
+$Subsystem: 	turret01, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			0.6, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret05, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret06, 			0.6, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret07, 			0.6, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret08, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret09, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret20, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret21, 			0.4, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret22, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret23, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret24, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret25, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret26, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret27, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret28, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret29, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret30, 			0.5, 0.5
+	$Flags:			 			( "check hull" )
+
+
+$Name:		SD Lucifer
+	+nocreate ;:
+$Armor Type:				Shivan Destroyer Armor
+$Subsystem: 	turret01, 			1.0, 6.5
+	$Armor Type:				Hell Armor
+	$Default PBanks:		 	( "LRLRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 			1.0, 6.5
+	$Armor Type:				Hell Armor
+	$Default PBanks:		 	( "LRLRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Advanced Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Advanced Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret05, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret06, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Advanced Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret07, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Advanced Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret08, 			0.25, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret09, 			1.0, 6.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Suppression Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			0.25, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Suppression Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			0.5, 0.5
+	$Armor Type:				Shivan Elite Armor
+	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			1.0, 6.5
+	$Armor Type:				Hell Armor
+	$Default PBanks:		 	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			1.0, 6.5
+	$Armor Type:				Hell Armor
+	$Default PBanks:		 	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+
+
+$Name:		SSG Trident
+	+nocreate ;:
+$Armor Type:				Shivan Fighter Armor
+
+
+$Name:		SSG Belial
+	+nocreate ;:
+$Armor Type:				Shivan Fighter Armor
+
+
+$Name:		SCv Moloch
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Flags:             ( "big damage" "corvette" "awacs" )
+$Subsystem: 	turret01, 			0.500, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 		 	0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret05, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret06, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret07, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret08, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret09, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			0.150, 1.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,     5,0.0
+	$AWACS:		10000.0
+
+
+
+$Name:		SJ Sathanas
+	+nocreate ;:
+;; $AI Class:              Elite
+$Armor Type:				Shivan Elite Armor
+$Subsystem: 	turret01, 			2.0, 1.0
+	;; BFRed
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 			2.0, 1.0
+	;; BFRed
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			2.0, 1.0
+	;; BFRed
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			2.0, 1.0
+	;; BFRed
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret05, 			1.0, 0.4
+	$Default PBanks:       		( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret06, 			1.0, 0.4
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret07, 			1.0, 0.4
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret08, 			1.0, 0.4
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret09, 			1.0, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			1.0, 0.4
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			1.0, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			0.3, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			0.3, 0.4
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			0.3, 1.0
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			0.3, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			0.3, 1.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			0.3, 0.4
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			0.3, 1.4
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			0.3, 1.0
+	;; SAAA
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret20, 			0.3, 1.0
+	;; SAAA
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret21, 			0.3, 0.4
+	$Default PBanks:        	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret22, 			0.3, 0.4
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret23, 			0.3, 1.0
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret24, 			0.3, 1.0
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret25, 			0.3, 1.0
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret26, 			0.3, 1.0
+	$Default PBanks:        	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret27, 			0.3, 1.0
+	$Default PBanks:        	( "Fast Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret28, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret29, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret30, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret31, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret32, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret33, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret34, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret35, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret36, 			0.3, 1.0
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret37, 			0.3, 1.0
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret38, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret39, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret40, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret41, 			0.3, 1.0
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret42, 			0.3, 1.4
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret43, 			0.3, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret44, 			0.3, 0.4
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret45, 			0.3, 0.4
+	$Default PBanks:        	( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret46, 			0.3, 1.0
+	$Default PBanks:        	( "MRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret47, 			0.3, 1.0
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret48, 			0.3, 1.0
+	$Default PBanks:        	( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret49, 			0.4, 3.0
+	$Default PBanks:        	( "Suppression Flak" ) ;; LR Flak
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret50, 			0.4, 3.0
+	$Default PBanks:        	( "Suppression Flak" ) ;; LR Flak
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret51, 			0.3, 2.0
+	;; LRed
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret52, 			0.9, 1.4
+	$Default PBanks:        	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret53, 			0.3, 0.4
+	$Default PBanks:        	( "MRedUp" )
+	$Flags:			 			( "check hull" )
+
+$Name:		Shivan Comm Node
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+
+;; GTVA ships
+
+$Name:                          GTVA Colossus
+	+nocreate ;:
+
+;Huge dual rotation turrets
+
+$Subsystem:                     Turret01a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret02a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret03a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret04a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret05a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret06a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret07a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret08a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret09a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+$Subsystem:                     Turret10a, 1.0, 3.0
+	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:					("use multiple guns")
+
+;Flak type turrets
+
+$Subsystem:                     Turret11, 1.0, 3.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret12, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret13, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret14, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret15, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret16, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret17, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret18, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret19, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret20, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret21, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret22, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret23, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret24, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret25, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret26, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret27, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret28, 0.3, 2.0
+	$Default PBanks:        ( "Wraith" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret29, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret30, 0.3, 2.0
+	$Default PBanks:        ( "Advanced Flak" )
+	$Flags:					("check hull")
+
+;Small flat turrets (suitable for anti-fighter beams or missiles)
+
+$Subsystem:                     Turret31, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret32, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret33, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret34, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret35, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret36, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret37, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret38, 0.3, 2.0
+	$Default PBanks:        ( "Piranha" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret39, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret40, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret41, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret42, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret43, 0.3, 2.0
+	$Default PBanks:        ( "AAAf" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret44, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret45, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret46, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret47, 0.3, 2.0
+	$Default PBanks:        ( "Piranha" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret48, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret49, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+$Subsystem:                     Turret50, 0.3, 2.0
+	$Default PBanks:        ( "Tornado" )
+	$Flags:					("check hull")
+
+;Beam Turrets
+
+$Subsystem:                     Turret51, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret52, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret53, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret54, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret55, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret56, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret57, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret58, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret59, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret60, 0.3, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret61, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret62, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+$Subsystem:                     Turret63, 0.3, 2.0
+	$Default PBanks:        ( "VSlash" )
+	
+	
+	
+$Name:                          GTD Hecate
+	+nocreate ;:
+$Flags:						( "capital" "big damage" "in tech database" "awacs" )
+$Subsystem: 	turret01, 			1.875, 3.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret02, 			1.875, 3.0
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret03, 			1.875, 3.0
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret04, 			1.875, 3.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret05, 			1.875, 3.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret06, 			0.625, 2.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret07, 			0.625, 2.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret08, 			0.625, 2.0
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem: 	turret09, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret20, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret21, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret22, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret23, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret24, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret25, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret26, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret27, 			0.625, 2.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     navigation,  5, 0.0
+	$AWACS:			1.0 3000.0
+
+	
+$Name:							GTD Orion
+	+nocreate ;:
+$Subsystem:                     Turret02a, 1.875, 3.0
+	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Flags:					("reset when idle" "use multiple guns")
+$Subsystem:                     Turret03a, 1.875, 3.0
+	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Flags:					("reset when idle" "use multiple guns")
+$Subsystem:                     Turret04a, 1.875, 3.0
+	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Flags:					("reset when idle" "use multiple guns")
+$Subsystem:                     Turret05a, 1.875, 3.0
+	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Flags:					("reset when idle" "use multiple guns")
+#End

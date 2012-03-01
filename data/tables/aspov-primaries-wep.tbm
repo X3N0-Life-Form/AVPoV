@@ -1,0 +1,836 @@
+#Primary Weapons
+
+;; GTVA primaries
+
+$Name:                          UD-8 Kayser 
+	+nocreate ;:
+$Damage Type:					ShivanWeapon
+
+;; special primaries
+
+$Name:							UD-6
+	+Title:						XSTR("UD-6",-1)
+	+Description:				XSTR("Experimental weapon",-1)
+$end_multi_text
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  Alouqua_AniBitmap
+@Laser Glow:					Alouqua_Glow
+@Laser Color:					180, 0, 100
+@Laser Color2:					80, 10, 30
+@Laser Length:       			3.0
+@Laser Head Radius:  			1.90
+@Laser Tail Radius:  			1.30
+$Mass:                          0.35
+$Velocity:                      550.0	
+$Fire Wait:                     0.28	
+$Damage:                        20
+$Damage Type:					ShivanWeapon
+$Armor Factor:					1.0
+$Shield Factor:					0.9
+$Subsystem Factor:				0.6
+$Lifetime:                      2.0
+$Energy Consumed:				0.8	
+$Cargo Size:                    0.0                  
+$Homing:                        NO
+$LaunchSnd:                     103
+$ImpactSnd:                     85  
+$Flags:                         ("player allowed")
+$Trail:
+	+Start Width:	0.35
+	+End Width:		0.1
+	+Start Alpha:	0.4
+	+End Alpha:		0.0
+	+Max Life:		0.07
+	+Bitmap:		Alouqua_Trail
+$Icon:                          iconKayser
+$Anim:                          Kayser
+$Impact Explosion:      		Shivan_Impact01
+$Impact Explosion Radius:			3.8
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			1.9
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+
+; Fighter flak canon
+$Name:							Fire Spitter
+	+Title:						XSTR("Fire Spitter",-1)
+	+Description:				XSTR("Fighter sized flak canon
+Uses ammunition",-1)
+$end_multi_text
+	+Tech Title:				XSTR("Fire Spitter", -1)
+	+Tech Anim:					Tech_GTW-66_Maxim_Gun
+	+Tech Description:			XSTR("", -1)
+$end_multi_text
+$Model File:					wep_maxim_tech.pof
+$Mass:							0.2
+$Velocity:						700.0
+$Fire Wait:						0.45
+$Damage:						20
+$Damage Type:					NormalWeapon
+$Blast Force:              		40.0
+$Inner Radius:					20.0                                    ;; radius at which damage is full
+$Outer Radius:					30.0                                    ;; max radius for attenuated damage
+$Shockwave Speed:				0.0                                     ;; velocity of shockwave.  0 for none.
+$Armor Factor:					1.0
+$Shield Factor:					1.0
+$Subsystem Factor:				0.2
+$Lifetime:						1.5
+$Energy Consumed:				0.0
+$Cargo Size:					0.25
+$Homing:						NO
+$LaunchSnd:						116
+$ImpactSnd:						117
+$Rearm Rate:					40.0
++Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+$Flags:							("Flak" "particle spew" "cycle" "player allowed" "ballistic")
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Icon:							iconNewton
+$Anim:							Newton
+$Impact Explosion:				Exp20
+$Impact Explosion Radius:		25.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+	
+;; minigun
+	
+$Name:                              Hell Spitter
+	+Title:						XSTR("Hell Spitter",-1)
+$Model File:						none
+@Laser Bitmap:						Maxim
+@Laser Glow:						Maxim_Glow
+@Laser Color:						90, 90, 90
+@Laser Color2:						150, 150, 200
+@Laser Length:						18.0
+@Laser Head Radius:					4.0
+@Laser Tail Radius:					2.5
+$Mass:                              0.2
+$Velocity:                          2600.0   
+$Fire Wait:                         0.01 
+$Damage:                            8
+$Damage Type:						HugeWeapon
+$Armor Factor:						1.0
+$Shield Factor:						0.05
+$Subsystem Factor:					0.4
+$Lifetime:                          0.6
+$Energy Consumed:					0.09
+$Cargo Size:						0.04
+$Homing:                            NO
+$LaunchSnd:                         81   
+$ImpactSnd:                         85
+$Rearm Rate:						120.0
+$Flags:                             ( "stream" "player allowed" "shudder" "ballistic" )
+$Trail:
+	+Start Width:	1.0
+	+End Width:		0.3
+	+Start Alpha:	0.2
+	+End Alpha:		0.0
+	+Max Life:		0.3
+	+Bitmap:		Maxim_Trail
+$Impact Explosion:					Maxim_Impact
+$Impact Explosion Radius:			12.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			9.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-4.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						PWmuzzle
+$FOF:								3.5
+	
+;; vasudan primaries
+	
+$Name:                              Hayg Mas
+	+Title:                             XSTR("GVW-63 Hayg Mas", -1)
++Description:
+XSTR(
+"", -1)
+$end_multi_text
++Tech Title:				   XSTR("GVW-63 Hayg Mas", -1)
++Tech Anim:					   Tech_GTW-5a_Prometheus_R
++Tech Description:
+XSTR(
+"", -1)
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						PrometheusR_AniBitmap
+@Laser Glow:						Prometheus_Glow
+@Laser Color:						20, 150, 81
+@Laser Color2:						20, 150, 20
+@Laser Head Radius:					1.2
+@Laser Tail Radius:					1.2
+$Mass:                              3.8
+$Velocity:                          650.0
+$Fire Wait:                         0.35
+$Damage:                            28
+$Damage Type:						NormalWeapon
+$Armor Factor:						0.35
+$Shield Factor:						1.0
+$Subsystem Factor:					0.8
+$Lifetime:                          1.6
+$Energy Consumed:					0.70
+$Cargo Size:						0.0
+$Homing:                            NO
+$LaunchSnd:                         79
+$ImpactSnd:                         85
+$Flags:                             ("player allowed" "cycle")
+$Icon:                              iconPromR
+$Anim:                              PromR
+$Impact Explosion:					Prometheus_Impact
+$Impact Explosion Radius:			2.4
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			1.2
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Gmuzzle
+	
+	
+$Name:                                  Sehku
++Title:                                 XSTR("GVW-52 Sehku", -1)
++Description:
+XSTR(
+"", -1)
+$end_multi_text
++Tech Title:				    XSTR("GVW-52 Sehku", -1)
++Tech Anim:					    Tech_Akheton_SDG
++Tech Description:
+XSTR("", -1)
+$end_multi_text
+$Model File:									none ;  laser1-1.pof
+@Laser Bitmap:							Akheton_Bitmap
+@Laser Glow:							Akheton_Glow
+@Laser Color:							90, 20, 150
+@Laser Color2:							0, 0, 0
+@Laser Length:							40.0
+@Laser Head Radius:						4.5
+@Laser Tail Radius:						2.2
+$Mass:                                	0.2
+$Velocity:                            	1500.0
+$Fire Wait:                            	1.55
+$Damage:                               	400
+$Damage Type:							NormalWeapon
+$Blast Force:							0
+$Inner Radius:							5.0
+$Outer Radius:							15.0
+$Shockwave Speed:						0
+$Armor Factor:							0.05
+$Shield Factor:							0.4
+$Subsystem Factor:						1.0
+$Lifetime:                             	1.2
+$Energy Consumed:						2.6	
+$Cargo Size:							0.0
+$Homing:                               NO
+$LaunchSnd:                            77                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "particle spew")
+$Icon:                                 iconScalpel
+$Anim:                              Scalpel
+$Impact Explosion:					Akheton_Impact
+$Impact Explosion Radius:			1.8
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			0.9
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Bmuzzle
+$Pspew:
+	+Count:		6
+	+Time:		55
+	+Vel:		0.03
+	+Radius:	0.40
+	+Life:		2.3
+	+Scale:		0.25
+	+Bitmap:	Akheton_Particle
+	
+	
+	
+	
+	
+$Name:                             	Sahr AS
+	+Title:                        		XSTR("GVW Sahr Adv. Sidearm", -1)
++Description:
+XSTR(
+"Work in progress", -1)
+$end_multi_text
++Tech Title:				   XSTR("GVW Sahr Adv. Sidearm", -1)
++Tech Anim:					   Tech_GTW_UD-8_Kayser
++Tech Description:
+XSTR(
+"", -1)
+$end_multi_text
+$Model File:						none
+@Laser Bitmap:						Banshee_Bitmap
+@Laser Glow:						round_glow
+@Laser Color: 						190, 150, 250
+@Laser Length: 						25.0
+@Laser Head Radius:					0.480
+@Laser Tail Radius:					0.80
+$Mass:                              0.5
+$Velocity:                          770.0
+$Fire Wait:                         0.30
+$Damage:                            32
+$Damage Type:						NormalWeapon
+$Armor Factor:						0.4
+$Shield Factor:						1.0
+$Subsystem Factor:					0.25
+$Lifetime:                          1.3
+$Energy Consumed:					1.2												;; Energy used when fired
+$Cargo Size:						0.0												;; Amount of space taken up in weapon cargo
+$Homing:                            NO
+$LaunchSnd:                         107
+$ImpactSnd:                         85
+$Flags:                  			( "player allowed")
+$Icon:                              iconKayser
+$Anim:                              Kayser
+$Impact Explosion:					Banshee_Impact
+$Impact Explosion Radius:			2.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			1.9
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash: 						Bmuzzle
+	
+	
+	
+	
+;; shivan primaries
+
+$Name:								Shivan Light Laser
+	+nocreate
+	+Title:							XSTR("Shivan Light Laser",-1)
+$Damage Type:						ShivanWeapon
+$Flags:								( "player allowed" )
+$Icon:								iconSD4
+$Anim:								SD4
+
+$Name:								Shivan Heavy Laser
+	+nocreate
+	+Title:							XSTR("Shivan Heavy Laser",-1)
+$Damage Type:						ShivanWeapon
+$Flags:								( "player allowed" )
+$Icon:                              iconCirce
+$Anim:                              Circe
+
+$Name:                              Shivan Mega Laser
+	+nocreate
+	+Title:							XSTR("Shivan Mega Laser",-1)
+$Damage Type:						ShivanWeapon
+$Flags:								( "player allowed" )
+$Icon:                              iconKayser
+$Anim:                              Kayser
+
+;; upgraded primaries
+
+$Name:                              Shivan Light Laser Up
+	+Title:							XSTR("Shivan Upgraded Light Laser", -1)
+$Model File:                        none ;; laser1-1.pof
+@Laser Bitmap:						Alouqua_AniBitmap
+@Laser Glow:						Alouqua_Glow
+@Laser Color:						180, 0, 100
+@Laser Color2:						80, 10, 30
+@Laser Length:						3.0
+@Laser Head Radius:					1.9
+@Laser Tail Radius:					1.9
+$Mass:                              0.4
+$Velocity:                          475.0
+$Fire Wait:                         0.3
+$Damage:                            15
+$Damage Type:						ShivanWeapon
+$Armor Factor:                  	1.0
+$Shield Factor:         			1.0
+$Subsystem Factor:      			1.0
+$Lifetime:                          2.0
+$Energy Consumed:               	0.30
+$Cargo Size:                    	0.0
+$Homing:                            NO
+$LaunchSnd:                         100
+$ImpactSnd:                         85
+$Flags:                             ( "player allowed" )
+$Trail:
+	+Start Width:	0.35
+	+End Width:		0.1
+	+Start Alpha:	0.4
+	+End Alpha:		0.0
+	+Max Life:		0.07
+	+Bitmap:		Alouqua_Trail
+$Icon:								iconSD4
+$Anim:								SD4
+$Impact Explosion:      			Shivan_Impact01
+$Impact Explosion Radius:			3.8
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			1.9
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+
+
+$Name:                          Shivan Heavy Laser Up
+	+Title:							XSTR("Shivan Upgraded Heavy Laser",-1)
+$Model File:                    none ;;  laser1-1.pof
+@Laser Bitmap:					Citra_Bitmap
+@Laser Glow:					Alouqua_Glow
+@Laser Color:					10, 0, 91
+@Laser Color2:					91, 0, 10
+@Laser Length:					1.2
+@Laser Head Radius:				2.0
+@Laser Tail Radius:				2.0
+$Mass:							0.6
+$Velocity:						500.0
+$Fire Wait:						0.35
+$Damage:						30
+$Damage Type:					ShivanWeapon
+$Armor Factor:                  1.0
+$Shield Factor:					1.0
+$Subsystem Factor:				1.0
+$Lifetime:						2.0
+$Energy Consumed:               0.40
+$Cargo Size:                    0.0
+$Homing:						NO
+$LaunchSnd:                     103
+$ImpactSnd:                     85
+$Flags:							( "particle spew" "player allowed" )
+$Trail:
+	+Start Width:	0.3
+	+End Width:		0.15
+	+Start Alpha:	0.3
+	+End Alpha:		0.0
+	+Max Life:		0.1
+	+Bitmap:		Alouqua_Trail
+$Icon:                              iconCirce
+$Anim:                              Circe
+$Impact Explosion:					Shivan_Impact01
+$Impact Explosion Radius:			4.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			2.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+$Pspew:
+	+Count:		1
+	+Time:		20
+	+Vel:		0.30
+	+Radius:	0.32
+	+Life:		0.24
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+	
+	
+$Name:                          Shivan Anticap Laser
+	+Title:						XSTR("Shivan Anti-Capital Ship Laser",-1)
+	+Description:				XSTR("
+	Heavy Hull Damage
+	",-1)
+$end_multi_text
+$Model File:                    none ;;  laser1-1.pof
+@Laser Bitmap:						Phanuel_Bitmap
+@Laser Glow:						Alouqua_Glow
+@Laser Color:						0, 0, 200
+@Laser Color2:						91, 50, 00
+@Laser Length:						3.4
+@Laser Head Radius:					3.2
+@Laser Tail Radius:					3.2
+$Mass:                              0.9
+$Velocity:                          450.0
+$Fire Wait:                             0.65
+$Damage:                                75
+$Damage Type:							ShivanWeapon
+$Armor Factor:                          1.0
+$Shield Factor:                         0.4
+$Subsystem Factor:                      1.0
+$Lifetime:                              2.90
+$Energy Consumed:                       1.60
+$Cargo Size:                   		    0.0 
+$Homing:                                NO
+$LaunchSnd:                             108                                     ;;      The sound it makes when fired
+$ImpactSnd:                             85                                      ;; The sound it makes when it hits something
+$Flags:								( "particle spew" "player allowed" )
+$Trail:
+	+Start Width:	0.2
+	+End Width:		0.3
+	+Start Alpha:	0.25
+	+End Alpha:		0.0
+	+Max Life:		0.1
+	+Bitmap:		Alouqua_Trail
+$Icon:                              iconLich
+$Anim:                              Lich
+$Impact Explosion:      			Shivan_Impact01
+$Impact Explosion Radius:			6.4
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			3.2
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+$Pspew:
+	+Count:		1
+	+Time:		9
+	+Vel:		0.31
+	+Radius:	0.25
+	+Life:		0.4
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+	
+;; new primaries
+	
+$Name:                          Shivan Heavy Anticap Laser
+	+Title:						XSTR("Shivan Heavy Anti-Capital Ship Laser",-1)
+	+Description:				XSTR("
+	Overpowered laser
+	Use with care
+	",-1)
+$end_multi_text
+$Model File:                    none ;;  laser1-1.pof
+@Laser Bitmap:					Shivan_Megafunk
+@Laser Glow:					Vapula_Glow
+@Laser Color:						250, 30, 30
+@Laser Color2:						240, 50, 50
+@Laser Length:						18.0
+@Laser Head Radius:					3.2
+@Laser Tail Radius:					3.2
+$Mass:                          1.5
+$Velocity:                      420.0
+$Fire Wait:                     0.80
+$Damage:                        125
+$Damage Type:					ShivanHugeWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 0.1
+$Subsystem Factor:              0.35
+$Lifetime:                      3.5
+$Energy Consumed:               4.8
+$Cargo Size:                    0.0
+$Homing:                                NO
+$LaunchSnd:                             108
+$ImpactSnd:                             85
+$Flags:								( "particle spew" "player allowed" "huge" )
+$Trail:
+	+Start Width:	0.2
+	+End Width:		0.3
+	+Start Alpha:	0.25
+	+End Alpha:		0.0
+	+Max Life:		0.3
+	+Bitmap:		Alouqua_Trail
+$Icon:                              iconNewton
+$Anim:                              Newton
+$Impact Explosion:					Shivan_Impact01
+$Impact Explosion Radius:			18.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			9.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Cmuzzle_big
+$Pspew:
+	+Count:		1
+	+Time:		5
+	+Vel:		0.31
+	+Radius:	0.25
+	+Life:		0.6
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+	
+	
+$Name:                              Shivan Scatter Gun
+	+Title:							XSTR("Shivan Scatter Gun",-1)
+$Model File:                        none ;; laser1-1.pof
+@Laser Bitmap:						Alouqua_AniBitmap
+@Laser Glow:						Alouqua_Glow
+@Laser Color:						180, 0, 100
+@Laser Color2:						80, 10, 30
+@Laser Length:						3.2
+@Laser Head Radius:					2.0
+@Laser Tail Radius:					2.0
+$Mass:                              0.25
+$Velocity:                          550.0
+$Fire Wait:                         0.12 
+$Damage:                            20
+$Damage Type:						ShivanWeapon
+$Armor Factor:                  	1.0
+$Shield Factor:         			1.0
+$Subsystem Factor:      			1.0
+$Lifetime:                          1.8 
+$Energy Consumed:               	0.35
+$Cargo Size:                    	0.0 
+$Homing:                            NO
+$LaunchSnd:                         100 
+$ImpactSnd:                         85 
+$Flags:                             ( "player allowed" )
+$Trail:
+	+Start Width:	0.35
+	+End Width:		0.1
+	+Start Alpha:	0.4
+	+End Alpha:		0.0
+	+Max Life:		0.07
+	+Bitmap:		Alouqua_Trail
+$Icon:								iconflail
+$Anim:								Flail2
+$Impact Explosion:      			Shivan_Impact01
+$Impact Explosion Radius:			3.8
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			1.9
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+$FOF:								1.5
+$Shots:								3
+
+
+$Name:                              Shivan Light Scatter Gun
+	+Title:							XSTR("Shivan Light Scatter Gun",-1)
+$Model File:                        none ;; laser1-1.pof
+@Laser Bitmap:						Citra_Bitmap
+@Laser Glow:						Alouqua_Glow
+@Laser Color:								   200, 31, 30
+@Laser Color2:								   200, 31, 30
+@Laser Length:						1.2
+@Laser Head Radius:					2.0
+@Laser Tail Radius:					2.0
+$Mass:                              0.38
+$Velocity:                          570.0
+$Fire Wait:                         0.35 
+$Damage:                            15
+$Damage Type:						ShivanWeapon
+$Armor Factor:                  	1.0
+$Shield Factor:         			1.0
+$Subsystem Factor:      			1.0
+$Lifetime:                          1.4 
+$Energy Consumed:               	0.30
+$Cargo Size:                    	0.0 
+$Homing:                            NO
+$LaunchSnd:                         103 
+$ImpactSnd:                         85 
+$Flags:                             ( "player allowed" "cycle" "particle spew" )
+$Trail:
+	+Start Width:	0.3
+	+End Width:		0.15
+	+Start Alpha:	0.3
+	+End Alpha:		0.0
+	+Max Life:		0.1
+	+Bitmap:		Alouqua_Trail
+$Icon:								iconflail
+$Anim:								Flail2
+$Impact Explosion:					Shivan_Impact01
+$Impact Explosion Radius:			4.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			2.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+$Pspew:
+	+Count:		1
+	+Time:		20
+	+Vel:		0.30
+	+Radius:	0.32
+	+Life:		0.24
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+$FOF:								1.2
+$Shots:								2
+
+	
+$Name:                          Shivan Sniper Gun
+	+Title:						XSTR("Shivan Sniper Gun",-1)
+$Model File:                    none ;;  laser1-1.pof
+@Laser Bitmap:						Phanuel_Bitmap
+@Laser Glow:						Alouqua_Glow
+@Laser Color:						0, 0, 200
+@Laser Color2:						91, 50, 00
+@Laser Length:						4.0
+@Laser Head Radius:					3.2
+@Laser Tail Radius:					3.2
+$Mass:                          0.5
+$Velocity:                      2400.0
+$Fire Wait:                     3.5
+$Damage:                        100
+$Damage Type:					ShivanWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 0.40
+$Subsystem Factor:              0.25
+$Lifetime:                      1.5
+$Energy Consumed:               4.60
+$Cargo Size:                    0.0 
+$Homing:                        NO
+$LaunchSnd:                    108                                     ;;      The sound it makes when fired
+$ImpactSnd:                    85                                      ;; The sound it makes when it hits something
+$Flags:						   ( "particle spew" "player allowed" )
+$Trail:
+	+Start Width:	0.2
+	+End Width:		0.3
+	+Start Alpha:	0.25
+	+End Alpha:		0.0
+	+Max Life:		0.1
+	+Bitmap:		Alouqua_Trail
+$Icon:                              iconLich
+$Anim:                              Lich
+$Impact Explosion:      			Shivan_Impact01
+$Impact Explosion Radius:			6.4
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			3.2
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Rmuzzle
+$Pspew:
+	+Count:		1
+	+Time:		9
+	+Vel:		0.31
+	+Radius:	0.25
+	+Life:		0.4
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+
+	
+	
+$Name:								Shivan Large Canon
+	+Title:							XSTR("Shivan Large Canon",-1)
+$Model File:                        none ;; laser1-1.pof
+@Laser Bitmap:						Shivan_Megafunk
+@Laser Glow:						Vapula_Glow
+@Laser Color:								   250, 30, 30
+@Laser Color2:								   250, 30, 30
+@Laser Length:						18.0
+@Laser Head Radius:					9.00
+@Laser Tail Radius:					9.00
+$Mass:								4.5
+$Velocity:							800.0
+$Fire Wait:							6.5
+$Damage:							800
+$Damage Type:						ShivanHugeWeapon
+$Shockwave Damage Type:				ShivanWeapon
+$Blast Force:						3.0
+$Inner Radius:						10.0
+$Outer Radius:						30.0
+$Shockwave Speed:					30.0
+$Armor Factor:						1.0
+$Shield Factor:						0.1
+$Subsystem Factor:					0.2
+$Lifetime:							5.2
+$Energy Consumed:					8.0
+$LaunchSnd:                         114
+$ImpactSnd:                         85 
+$Flags:								( "particle spew" "Huge" "Player allowed" "capital+" )
+$Trail:
+	+Start Width:	0.2
+	+End Width:		0.3
+	+Start Alpha:	0.25
+	+End Alpha:		0.0
+	+Max Life:		0.1
+	+Bitmap:		Alouqua_Trail
+$Impact Explosion:					capflash
+$Impact Explosion Radius:			18.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			9.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Cmuzzle_big
+$Pspew:
+	+Count:		1
+	+Time:		9
+	+Vel:		0.31
+	+Radius:	0.25
+	+Life:		0.6
+	+Scale:		0.0
+	+Bitmap:	Shivan_Laser_Stream
+$Burst Shots:						3
+$Burst Delay:						400
+$Burst Flags:						()
+
+
+$Name:							Shivan Flak Weapon
+	+Title:						XSTR("Shivan Flak Weapon",-1)
+	+Description:				XSTR("",-1)
+$end_multi_text
+;	+Tech Title:				XSTR("Fire Spitter", -1)
+;	+Tech Anim:					Tech_GTW-66_Maxim_Gun
+;	+Tech Description:			XSTR("", -1)
+;$end_multi_text
+$Model File:					wep_maxim_tech.pof
+$Mass:							0.2
+$Velocity:						750.0
+$Fire Wait:						0.35
+$Damage:						15
+$Damage Type:					ShivanWeapon
+$Blast Force:              		30.0
+$Inner Radius:					20.0                                    ;; radius at which damage is full
+$Outer Radius:					30.0                                    ;; max radius for attenuated damage
+$Shockwave Speed:				0.0                                     ;; velocity of shockwave.  0 for none.
+$Armor Factor:					1.0
+$Shield Factor:					1.0
+$Subsystem Factor:				0.2
+$Lifetime:						1.0
+$Energy Consumed:				0.4
+$Cargo Size:					0.25
+$Homing:						NO
+$LaunchSnd:						116
+$ImpactSnd:						117
+$Rearm Rate:					40.0
++Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+$Flags:							("Flak" "particle spew" "player allowed")
+$Trail:
+	+Start Width:	3.5
+	+End Width:		0.0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		0.10
+	+Bitmap:		Flak_trail
+$Icon:							iconNewton
+$Anim:							Newton
+$Impact Explosion:				Exp20
+$Impact Explosion Radius:		25.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.5
+$Piercing Impact Velocity: 			10
+$Piercing Impact Splash Velocity:	-10
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			5
+$Muzzleflash:						standardflak
+$Pspew:
+	+Count:		2
+	+Time:		1
+	+Vel:		0
+	+Radius:	2.50
+	+Life:		0.0125
+	+Scale:		0.025
+	+Bitmap:	Cmuzzle_0001
+$FOF:			3.0
+$Shots:			3
+	
+#End

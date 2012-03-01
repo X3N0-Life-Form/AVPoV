@@ -1,0 +1,701 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Blue Storm", -1)
+$Author: X3N0-Life-Form
+$Created: 02/17/08 at 22:41:24
+$Modified: 08/15/11 at 22:49:55
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
+
++Game Type Flags: 1
+
++Flags: 128
+
++Disallow Support: 0
+
++Hull Repair Ceiling: 0.000000
+
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: -607.484253, 3122.834229, 339.808960
++Viewer orient:
+	0.986489, 0.000001, 0.163830,
+	-0.124900, 0.647138, 0.752072,
+	-0.106020, -0.762373, 0.638395
+
+
+$AI Profile: myProfile
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 2
+
+$Formula: ( is-goal-true-delay 
+   "Protect the Warspite" 
+   0 
+)
+$Multi text
+    XSTR("The GTCv Warspite completed its weapon testing and succesfully returned from this mission. You did an outsanding job out here, pilot. This is exactly what command expect CEUs to do under these circumstances.
+
+The testing of the new beams was succesfull : despite an higher energy consumption compared to standard AAA beams, these heavy beams showed an improved accuracy, range, and exeptionnal powe. I wouldn't be surprised if command planed to adapt them on Hecate-class and Hatshepsut-class destroyer.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-destroyed-delay 
+   0 
+   "GTCv Warspite" 
+)
+$Multi text
+    XSTR("The Warspite was destroyed, and so were the prototypes of the new anti-fighter beams. Our unit is supposed to defend any capital we are asked to monitor. Command had its reason for dedicating entire squadrons to weapon testing, and your faillure is unacceptable.
+I'm affraid you won't fly for several month pilot. Dismissed", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("Don't bother with the fighters, focus on bombers and disable enemy beams.", -1)
+$end_multi_text
+
+#Players		;! 1 total
+
+$Starting Shipname: Alpha 1
+$Ship Choices: (
+	"GVF Seth"	5
+	"GVF Horus"	5
+	"GVF Thoth"	5
+	"GVF Serapis"	5
+	"GVF Tauret"	5
+	"GVB Sekhmet"	5
+)
+
++Weaponry Pool: (
+	"Mekhu HL-7"	24
+	"Akheton SDG"	16
+	"Morning Star"	16
+	"Prometheus R"	16
+	"Maxim"	16
+	"UD-8 Kayser"	16
+	"Circe"	16
+	"Lamprey"	16
+	"Rockeye"	500
+	"Tempest"	500
+	"Hornet"	500
+	"Tornado"	628
+	"Harpoon"	564
+	"Piranha"	500
+	"Stiletto II"	500
+	"Cyclops"	100
+	"EMP Adv."	500
+)
+
+#Objects		;! 15 total
+
+$Name: Alpha 1		;! Object #0
+$Class: GVF Horus
+$Team: Friendly
+$Location: -1384.270630, 215.485489, 1241.516357
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: Stay Near
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "ignore-count" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Alpha 2		;! Object #1
+$Class: GVF Horus
+$Team: Friendly
+$Location: -1475.651489, 215.485367, 1330.903809
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "ignore-count" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Alpha 3		;! Object #2
+$Class: GVF Horus
+$Team: Friendly
+$Location: -1303.250244, 215.485367, 1189.306030
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "ignore-count" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Alpha 4		;! Object #3
+$Class: GVF Horus
+$Team: Friendly
+$Location: -1456.407104, 215.485367, 1173.929077
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "ignore-count" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: GTCv Warspite		;! Object #4
+$Class: GTCv Deimos
+$Team: Friendly
+$Location: -1827.955811, 278.240967, 1128.933350
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Prometheus S" )
++Subsystem: turret02
++Primary Banks: ( "Prometheus S" )
++Subsystem: turret03
++Primary Banks: ( "Prometheus S" )
++Subsystem: turret04
++Primary Banks: ( "Prometheus S" )
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Primary Banks: ( "Green Beam" )
++Subsystem: turret12
++Primary Banks: ( "Green Beam" )
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Primary Banks: ( "Green Beam" )
++Subsystem: turret24
++Primary Banks: ( "Green Beam" )
++Subsystem: turret25
++Sbank Ammo: ( 0 )
++Subsystem: turret26
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
++Arrival Delay: 2
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 1
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 800
+
+$Name: Leo 1		;! Object #5
+$Class: SF Astaroth
+$Team: Hostile
+$Location: -1658.967041, 177.615387, 5507.190918
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Leo 2		;! Object #6
+$Class: SF Astaroth
+$Team: Hostile
+$Location: -1748.932251, 177.615326, 5288.437500
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Leo 3		;! Object #7
+$Class: SF Astaroth
+$Team: Hostile
+$Location: -1833.921997, 177.615204, 5523.157715
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Gemini 1		;! Object #8
+$Class: SB Seraphim
+$Team: Hostile
+$Location: 753.457397, 597.633545, 4172.231934
+$Orientation:
+	-0.697849, 0.000000, -0.716246,
+	0.000000, 1.000000, 0.000000,
+	0.716246, 0.000000, -0.697849
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" "Trebuchet#Shivan" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Gemini 2		;! Object #9
+$Class: SB Seraphim
+$Team: Hostile
+$Location: 1139.354370, 597.633545, 3950.920410
+$Orientation:
+	-0.697849, 0.000000, -0.716245,
+	0.000000, 1.000000, 0.000000,
+	0.716245, 0.000000, -0.697849
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" "Trebuchet#Shivan" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Gemini 3		;! Object #10
+$Class: SB Seraphim
+$Team: Hostile
+$Location: 1497.378052, 597.633423, 4343.993652
+$Orientation:
+	-0.697849, 0.000000, -0.716245,
+	0.000000, 1.000000, 0.000000,
+	0.716245, 0.000000, -0.697849
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" "Trebuchet#Shivan" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Aquarius 1		;! Object #11
+$Class: SF Manticore
+$Team: Hostile
+$Location: 2461.663574, 925.839111, 4294.373535
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Aquarius 2		;! Object #12
+$Class: SF Manticore
+$Team: Hostile
+$Location: 2152.704102, 925.839111, 4883.962402
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Aquarius 3		;! Object #13
+$Class: SF Manticore
+$Team: Hostile
+$Location: 938.809509, 925.839111, 5303.444824
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Rockeye#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: SC Xana		;! Object #14
+$Class: SC Cain
+$Team: Hostile
+$Location: -1225.133789, 547.653503, 5802.980957
+$Orientation:
+	-0.846408, 0.000000, -0.532535,
+	0.000000, 1.000000, 0.000000,
+	0.532535, 0.000000, -0.846408
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-chase "GTCv Warspite" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Primary Banks: ( "Standard Flak" )
++Subsystem: turret06
++Primary Banks: ( "Standard Flak" )
++Subsystem: turret07
++Primary Banks: ( "MRed" )
++Subsystem: turret08
++Secondary Banks: ( "Tornado#Shivan" )
++Sbank Ammo: ( 0 )
++Subsystem: turret09
++Secondary Banks: ( "Tornado#Shivan" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 2
++Special Hitpoints: 32000
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
+#Wings		;! 4 total
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
+$AI Goals: ( goals ( ai-guard "GTCv Warspite" 50 ) )
++Hotkey: 0
++Flags: ( )
+
+$Name: Leo
+$Waves: 3
+$Wave Threshold: 0
+$Special Ship: 0		;! Leo 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 400
+$Arrival Anchor: SC Xana
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Leo 1"
+	"Leo 2"
+	"Leo 3"
+)
+$AI Goals: ( goals ( ai-guard "SC Xana" 50 ) )
++Flags: ( )
++Wave Delay Min: 14
++Wave Delay Max: 16
+
+$Name: Gemini
+$Waves: 2
+$Wave Threshold: 0
+$Special Ship: 0		;! Gemini 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 1500
+$Arrival Anchor: GTCv Warspite
+$Arrival Cue: ( < ( hits-left "SC Xana" ) 80 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Gemini 1"
+	"Gemini 2"
+	"Gemini 3"
+)
+$AI Goals: ( goals ( ai-chase "GTCv Warspite" 50 ) )
++Flags: ( )
++Wave Delay Min: 5
++Wave Delay Max: 8
+
+$Name: Aquarius
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Aquarius 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 650
+$Arrival Anchor: Gemini 1
+$Arrival Cue: ( has-arrived-delay 2 "Gemini" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Aquarius 1"
+	"Aquarius 2"
+	"Aquarius 3"
+)
+$AI Goals: ( goals ( ai-guard-wing "Gemini" 50 ) )
++Flags: ( )
++Wave Delay Min: 2
++Wave Delay Max: 6
+
+#Events		;! 0 total
+
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Protect the Warspite
+$MessageNew:  XSTR("GTCv Warspite must survive", -1)
+$end_multi_text
+$Formula: ( has-departed-delay 
+   2 
+   "GTCv Warspite" 
+)
++Score: 100
+
+#Waypoints		;! 1 lists total
+
+$Name: Warspite
+$List: (		;! 1 points in list
+	( 165.532166, -0.001449, 7953.732422 )
+)
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 500
+$Ambient light level: 7895160
++Nebula: Nebula01
++Color: Blue
++Pitch: 152
++Bank: 313
++Heading: 259
+
+$Bitmap List:
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: 3: Leviticus
+$Briefing Music: Brief2
+
+#End
+

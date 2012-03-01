@@ -1,0 +1,410 @@
+#Secondary Weapons
+
+; new
+; std
+
+;; new missiles
+
+$Name:                                 	Shivan Swarmer Bomb
+	+Title:								XSTR("Shivan Swarmer Bomb",-1)
+$Model File:							S_Bomb.pof
+$POF target LOD:						0
+$Mass:									25.0
+$Velocity:								240.0
+$Fire Wait:								4.0
+$Damage:                                300
+$Damage Type:							ShivanHugeWeapon
+$Shockwave Damage Type:					ShivanHugeWeapon
+$Blast Force:							600.0
+$Inner Radius:							35.0	
+$Outer Radius:							80.0	 
+$Shockwave Speed:						80     
+$Shockwave name:						shockwave01                              
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:						0.5				
+$Lifetime:								17.0
+$Energy Consumed:						0.0
+$Cargo Size:							8.0
+$Homing:								YES
+	+Type:                              ASPECT	
+	+Turn Time:                         3.0
+	+View Cone:							360.0
+	+Min Lock Time:						4.0	
+	+Lock Pixels/Sec:					35	
+	+Catch-up Pixels/Sec:				70
+	+Catch-up Penalty:					12
+$Swarm:									2	
+$LaunchSnd:								96
+$ImpactSnd:								88
+$FlyBySnd:								-1
+$Rearm Rate:							0.10
+$Flags:									("player allowed" "Bomb" "Huge" "No Dumbfire" "particle spew" )
+$Trail:
+	+Start Width:		1.0
+	+End Width:			0.0
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			3.8
+	+Bitmap:			missiletrail06
+$Icon:	iconbelial
+$Anim:	belial
+$Impact Explosion: ExpMissileHit1
+$Impact Explosion Radius:			29.52
+$Piercing Impact Explosion:			exp04
+$Piercing Impact Radius:			14.76
+$Piercing Impact Velocity:			25
+$Piercing Impact Splash Velocity:	-25
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			10
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	0.5
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew06
+$Thruster Flame Effect:				missilethruster06
+$Thruster Glow Effect:				missileglow06
+
+
+$Name:                                 	Shivan Advanced Swarmer Bomb
+	+Title:								XSTR("Shivan Avanced Swarmer Bomb",-1)
+$Model File:							S_Trebuchet.pof
+$POF target LOD:						0
+$Mass:									35.0
+$Velocity:								320.0
+$Fire Wait:								6.0
+$Damage:                                200
+$Damage Type:							ShivanHugeWeapon
+$Shockwave Damage Type:					ShivanHugeWeapon
+$Blast Force:							600.0
+$Inner Radius:							25.0	
+$Outer Radius:							60.0	 
+$Shockwave Speed:						20     
+$Shockwave name:						shockwave01                                 
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:						0.7				
+$Lifetime:								26.0
+$Energy Consumed:						0.0
+$Cargo Size:							1.0
+$Homing:								YES
+	+Type:                              ASPECT	
+	+Turn Time:                         1.0
+	+View Cone:							360.0
+	+Min Lock Time:						8.0	
+	+Lock Pixels/Sec:					35	
+	+Catch-up Pixels/Sec:				70
+	+Catch-up Penalty:					12
+$LaunchSnd:								92
+$ImpactSnd:								88
+$FlyBySnd:								-1
+$Rearm Rate:							0.10
+$Flags:									("player allowed" "Bomb" "Huge" "No Dumbfire" "particle spew" "corkscrew" )
+$Trail:
+	+Start Width:		1.0
+	+End Width:			0.0
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			3.8
+	+Bitmap:			missiletrail06
+$Icon:								iconbelial
+$Anim:								belial
+$Impact Explosion: 					ExpMissileHit1
+$Impact Explosion Radius:			29.52
+$Piercing Impact Explosion:			exp04
+$Piercing Impact Radius:			14.76
+$Piercing Impact Velocity:			25
+$Piercing Impact Splash Velocity:	-25
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			10
+$Corkscrew:
+	+Num Fired:			8
+	+Radius:			10
+	+Fire Delay:		200
+	+Counter rotate:	YES
+	+Twist:				4
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	0.5
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew06
+$Thruster Flame Effect:				missilethruster06
+$Thruster Glow Effect:				missileglow06
+
+
+
+$Name:                                 	Shivan LR Swarm
+	+Title:								XSTR("Shivan Long Range Swarmer Missile",-1)
+$Model File:							S_Trebuchet.pof
+$POF target LOD:						0
+$Mass:									3.0
+$Velocity:								500.0
+$Fire Wait:								8.0
+$Damage:                                180
+$Damage Type:							ShivanWeapon
+$Blast Force:							50.0
+$Inner Radius:							5.0	
+$Outer Radius:							15.0	 
+$Armor Factor:							1.0
+$Shield Factor:							0.8
+$Subsystem Factor:						1.2
+$Lifetime:								8.0
+$Energy Consumed:						0.0
+$Cargo Size:							2.0
+$Homing:								YES
+	+Type:                              ASPECT	
+	+Turn Time:                         4.0
+	+View Cone:							360.0
+	+Min Lock Time:						1.0	
+	+Lock Pixels/Sec:					35	
+	+Catch-up Pixels/Sec:				70
+	+Catch-up Penalty:					5
+	+Target Lead Scaler:				1
+$Free Flight Time:						1
+$LaunchSnd:								92
+$ImpactSnd:								88
+$FlyBySnd:								-1
+$Rearm Rate:							0.10
+$Flags:									("player allowed" "particle spew" "corkscrew" )
+$Trail:
+	+Start Width:		1.0
+	+End Width:			0.0
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			3.8
+	+Bitmap:			missiletrail06
+$Icon:								iconbelial
+$Anim:								belial
+$Impact Explosion: 					ExpMissileHit1
+$Impact Explosion Radius:			29.52
+$Piercing Impact Explosion:			exp04
+$Piercing Impact Radius:			14.76
+$Piercing Impact Velocity:			25
+$Piercing Impact Splash Velocity:	-25
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			10
+$Corkscrew:
+	+Num Fired:			2
+	+Radius:			8
+	+Fire Delay:		0
+	+Counter rotate:	YES
+	+Twist:				3
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	0.5
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew06
+$Thruster Flame Effect:				missilethruster06
+$Thruster Glow Effect:				missileglow06
+
+
+
+$Name:		Tempest Adv#Shivan
+	+title:			XSTR("Shivan Advanced Dumbfire Missile",-1)
+$Model File:		S_Hornet.pof
+$POF target LOD:	0
+$Mass:				0.7
+$Velocity:			400.0
+$Fire Wait:			0.25
+$Damage:			55
+$Damage Type:		ShivanWeapon
+$Blast Force:		0.4
+$Inner Radius:		10.0
+$Outer Radius:		20.0
+$Shockwave Speed:	0.0
+$Armor Factor:		0.9
+$Shield Factor:		0.7
+$Subsystem Factor:	0.6
+$Lifetime:			2.0
+$Energy Consumed:	0.0
+$Cargo Size:		0.10
+$Homing:			NO
+$LaunchSnd:			90
+$ImpactSnd:			88
+$FlyBySnd:			-1
+$Rearm Rate:		12.0
++Weapon Range:		648
+$Flags: ( "player allowed" )
+$Trail:
+	+Start Width:		0.2
+	+End Width:			0.0
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			3.6
+	+Bitmap:			missiletrail06
+$Icon:	iconTempest
+$Anim:	Tempest
+$Impact Explosion: ExpMissileHit1
+$Impact Explosion Radius:			7.04
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			3.52
+$Piercing Impact Velocity:			20
+$Piercing Impact Splash Velocity:	-5
+$Piercing Impact Variance:			0.1
+$Piercing Impact Particles:			5
+$Thruster Flame Effect:				missilethruster06
+$Thruster Glow Effect:				missileglow06
+
+;; standard shivan missiles
+
+$Name:		Rockeye#Shivan
++nocreate
++Title:                                 XSTR("Shivan Heat Seeking Missile", -1)
++Description:
+XSTR(
+"Standard Issue
+Fire and Forget", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags: ( "player allowed" )
+
+$Name:		Tempest#Shivan
++nocreate
++Title:                                 XSTR("Shivan Dumbfire Missile", -1)
++Description:
+XSTR(
+"Standard Issue
+High-Payload Dumbfire", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags:	("player allowed")
+
+$Name:		Hornet#Shivan
++nocreate
++Title:                                XSTR("Shivan Swarm Missile", -1)
++Description:
+XSTR(
+"Standard Issue
+Swarm Type
+All-Purpose Missile", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags: ("player allowed")
+
+$Name:		Tornado#Shivan
++nocreate
++Title:									XSTR("Shivan Advanced Swarm Missile", -1)
++Description:
+XSTR(
+"Advanced Swarm Type
+All-Purpose Missile
+", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags: ("player allowed")
+
+$Name:		Harpoon#Shivan
++nocreate
++Title:                                 XSTR("Shivan Aspect Seeking Missile", -1)
++Description:
+XSTR(
+"Standard Issue
+Fast Target Lock", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags: ("player allowed")
+
+$Name:		Trebuchet#Shivan
++nocreate
++Title:                                 XSTR("Shivan Long Range Missile", -1)
++Description:
+XSTR(
+"Prototype
+Long-Range Anti-Bomber
+High Payload", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags: ("player allowed")
+
+$Name:		EMP Adv.#Shivan
++nocreate
++Title:                                XSTR("Shivan EMP Missile", -1)
++Description:
+XSTR(
+"Advanced Missile
+Electromagnetic Pulse Weapon
+General Purpose Suppression", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags:	("player allowed")
+
+$Name:		Piranha#Shivan
++nocreate
++Title:                                XSTR("Shivan Cluster Bomb", -1)
++Description:
+XSTR(
+"Standard Issue
+Area Effect
+Fighter Suppresion Weapon", -1)
+$end_multi_text
+$Flags:	("player allowed")
+
+$Name:		Shivan Disruptor
++nocreate
++Title:                                XSTR("Shivan Subsystem Disruptor Bomb", -1)
++Description:
+XSTR(
+"Tactical Missile
+Destroys Subsystems", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags:	("player allowed")
+
+$Name:		Shivan Area Bomb
++nocreate
++Title:              				   XSTR("Shivan Area Suppression Bomb", -1)
++Description:
+XSTR(
+"Standard Issue
+Area Effect
+Fighter Suppression Weapon", -1)
+$end_multi_text
+$Damage Type:		ShivanWeapon
+$Flags:	("player allowed")
+
+$Name:		Shivan Bomb
++nocreate
++Title:								   XSTR("Shivan Standard Bomb", -1)
++Description:
+XSTR(
+"Special Issue
+Anti-Cruiser Bomb
+Non-Conventional Warhead
+", -1)
+$end_multi_text
+$Damage Type:		ShivanHugeWeapon
+$Flags:	("player allowed")
+
+$Name:		Shivan Bomb#Short
++nocreate
++Title:								   XSTR("Shivan Standard Bomb", -1)
++Description:
+XSTR(
+"Special Issue
+Anti-Cruiser Bomb
+Non-Conventional Warhead", -1)
+$end_multi_text
+$Flags:	("player allowed")
+
+$Name:		Shivan Megabomb
++nocreate
++Title:								   XSTR("Shivan Heavy Bomb", -1)
++Description:
+XSTR(
+"Special Issue
+Anti-Capital Ship Weapon
+Anti-Matter Torpedo", -1)
+$end_multi_text
+$Damage Type:		ShivanHugeWeapon
+$Flags:	("player allowed")
+
+#End

@@ -1,0 +1,18 @@
+$Name: A Vasudan Point of View
+$Type: Single
+
+$Flags: 0
+	+Starting Ships: ( "GVF Horus" "GVF Seth" "GVF Toth" )
+	+Starting Weapons: ( "Mekhu HL-7" "Prometheus R" "Akheton SDG" "Lamprey" "Tempest" "Rockeye" "Harpoon" "Hornet" )
+
+;$Mission: 0_Arena.fs2
+;	+Flags: 0
+;	+Main Hall: 1
+;	+Debriefing Persona Index: 0
+;	+Formula: ( true )
+;	+Level: 0
+;	+Position: 0
+
+
+
+#End

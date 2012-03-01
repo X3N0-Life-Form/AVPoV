@@ -1,0 +1,26 @@
+$SSM:
+	+Weapon:		Shivan Subspace Missile
+	+Count:			3
+	+WarpRadius:	40
+	+WarpTime:		6
+	+Radius:		1200
+	+Offset:		1
+
+$SSM:
+	+Weapon:		AntiFighterSSM
+	+Count:			8 ;12
+	+WarpRadius:	15
+	+WarpTime:		4
+	+Radius:		400
+	+Offset:		1
+	
+$SSM:
+    +Weapon:		Bane
+	+Count:			3
+	+WarpRadius:	30
+	+Warptime:		4
+	+Radius:		700
+	+Offset:		1
+	
+	
+#end
