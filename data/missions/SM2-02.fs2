@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("A Game of TAG", 1081)
 $Author: James Agay @ V
 $Created: 07/06/99 at 18:26:05
-$Modified: 01/30/12 at 19:31:38
+$Modified: 03/08/12 at 20:24:17
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -38,7 +38,7 @@ $end_multi_text
 +Viewer pos: -838.187317, 6825.831055, 10920.819336
 +Viewer orient:
 	-0.999917, 0.000003, 0.012916,
-	-0.012904, -0.043972, -0.998949,
+	-0.012904, -0.043972, -0.998950,
 	0.000565, -0.999033, 0.043968
 +SquadReassignName: 134th Barracuda
 +SquadReassignLogo: barracudas.pcx
@@ -1621,7 +1621,7 @@ $AI Goals: ( goals ( ai-chase-wing "Alpha" 43 ) )
 +Wave Delay Min: 12
 +Wave Delay Max: 13
 
-#Events		;! 31 total
+#Events		;! 32 total
 
 $Formula: ( when 
    ( is-previous-goal-true 
@@ -2133,6 +2133,19 @@ $Formula: ( when
    )
 )
 +Name: Kappa dead
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-subsys-guardian-threshold 
+      80 
+      "Alpha 2" 
+      "<all engines>" 
+      "weapons" 
+   )
+)
++Name: guardian stuff
 +Repeat Count: 1
 +Interval: 1
 

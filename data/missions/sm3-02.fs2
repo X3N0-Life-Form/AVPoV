@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("High Noon", 1558)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 01/06/12 at 22:06:40
+$Modified: 03/12/12 at 22:46:11
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -31,11 +31,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: 5280.107910, 827.444397, 26120.281250
++Viewer pos: -6950.979004, 14286.835938, 21613.533203
 +Viewer orient:
-	0.283491, 0.000001, -0.958975,
-	0.839601, 0.483183, 0.248202,
-	0.463361, -0.875519, 0.136977
+	-0.015610, 0.000002, -0.999878,
+	0.507290, 0.861739, -0.007919,
+	0.861634, -0.507351, -0.013453
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -1765,7 +1765,7 @@ $MessageNew:  XSTR("We have eliminated Cancer wing.", 1591)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_18.wav
-;t be good.", -1)
+;t be good.", -1)
 
 #Reinforcements		;! 0 total
 

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Watch out for the bear", -1)
 $Author: X3N0-Life-Form
 $Created: 08/01/10 at 18:47:22
-$Modified: 10/07/11 at 21:32:25
+$Modified: 03/18/12 at 15:30:55
 $Notes:
 Short, You basically don't have to do anything but sit and watch.$End Notes:
 
@@ -15,6 +15,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -22,11 +26,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 75.144211, -917.765625, 2552.866699
++Viewer pos: -958.880066, 6193.739258, -4514.491211
 +Viewer orient:
-	0.946227, -0.000000, -0.323503,
-	-0.008830, 0.999627, -0.025828,
-	0.323382, 0.027296, 0.945875
+	0.989826, -0.000000, -0.142282,
+	0.139455, 0.198352, 0.970159,
+	0.028222, -0.980131, 0.196334
 
 
 $AI Profile: FS2 RETAIL
@@ -362,7 +366,7 @@ $Ship Choices: (
 	"EMP Adv."	240
 )
 
-#Objects		;! 66 total
+#Objects		;! 68 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTB Artemis
@@ -523,7 +527,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret36
 +Subsystem: turret37
 +Subsystem: turret38
-+Primary Banks: ( "SAAA" )
 +Subsystem: turret39
 +Subsystem: turret40
 +Primary Banks: ( "Shivan Turret Laser" )
@@ -593,9 +596,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "beam-protect-ship" )
++Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 14
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -651,9 +655,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "beam-protect-ship" )
++Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 15
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -694,9 +699,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( < ( hits-left "Carthage" ) 15 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "beam-protect-ship" )
++Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 13
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -2290,6 +2296,70 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
+$Name: GTA Charybdis 66		;! Object #66
+$Class: GTA Charybdis
+$Team: Friendly
+$Location: -1397.164429, -0.007172, -2307.753906
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
+$Name: GTA Charybdis 67		;! Object #67
+$Class: GTA Charybdis
+$Team: Friendly
+$Location: 1192.272095, 196.484955, -2646.242432
+$Orientation:
+	0.486564, -0.801620, 0.347363,
+	0.652421, 0.597834, 0.465769,
+	-0.581035, 0.000000, 0.813879
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
 #Wings		;! 12 total
 
 $Name: Alpha
@@ -2528,9 +2598,6 @@ $AI Goals: ( goals ( ai-chase-wing "Delta" 50 ) ( ai-chase-wing "Epsilon" 50 ) (
 
 $Formula: ( when 
    ( true ) 
-   ( add-remove-escort "Pharaoh" 1 ) 
-   ( add-remove-escort "Black Mamba" 1 ) 
-   ( add-remove-escort "Carthage" 1 ) 
    ( send-message-list 
       "#Command" 
       "High" 

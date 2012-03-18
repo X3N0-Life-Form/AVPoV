@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("...But Hate the Traitor", 138)
 $Author: Jim Boone
 $Created: 03/18/99 at 17:26:14
-$Modified: 10/15/11 at 18:19:17
+$Modified: 03/08/12 at 19:21:55
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 24
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 1
 
@@ -45,7 +49,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("I'm Lieutenant Commander Jack Niven, your new squadron leader. Commander Snipes has been reassigned, so until further notice, you'll get your orders from me. With the 13th and 11th Vasudan battle groups advancing, we have a hard fight ahead of us. If we lose Sirius, our backs will be against the wall. The NTF has fought too hard to surrender now.", 140)
+ XSTR("I'm Lieutenant Commander Jack Niven, your new squadron leader. Commander Snipes has been reassigned, so until further notice, you'll get your orders from me. With the $h 13th and $h 11th $h Vasudan $h battle $h groups advancing, we have a hard fight ahead of us. If we lose $b Sirius, our backs will be against the wall. The $g NTF has fought too hard to surrender now.", -1)
 $end_multi_text
 $voice: LP1-3_MB_01.wav
 $camera_pos: 1842.608887, 1932.191040, -317.522095
@@ -73,7 +77,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The 4th Fleet, based in Vega, is providing the Vasudans with logistical support. They've established a cargo depot near the Alpha Centauri jump node. Recon reports a perimeter defense of 16 sentry guns, and fighter patrols inspect the depot at regular intervals. The 185th has been called in to sever that supply line. All targets are of Terran construction.", 141)
+ XSTR("The $h 4th $h Fleet, based in $b Vega, is providing the $r Vasudans with logistical support. They've established a cargo depot near the $b Alpha $b Centauri jump node. Recon reports a perimeter defense of 16 sentry guns, and fighter patrols inspect the depot at regular intervals. The $f 185th has been called in to sever that supply line. All targets are of Terran construction.", -1)
 $end_multi_text
 $voice: LP1-3_MB_02.wav
 $camera_pos: 694.159668, 4104.623047, -3371.152588

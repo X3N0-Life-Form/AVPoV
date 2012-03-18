@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Love the Treason...", 88)
 $Author: Jim Boone
 $Created: 03/25/99 at 18:06:54
-$Modified: 10/07/11 at 19:46:28
+$Modified: 03/08/12 at 19:20:12
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 24
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 1
 
@@ -29,9 +33,9 @@ $end_multi_text
 
 +Viewer pos: 255.237610, 8041.635742, 1851.995361
 +Viewer orient:
-	0.999984, -0.000001, 0.005613,
-	-0.005412, -0.265604, 0.964067,
-	0.001490, -0.964082, -0.265600
+	0.944783, -0.000000, 0.327697,
+	-0.252791, 0.636329, 0.728823,
+	-0.208523, -0.771418, 0.601192
 +SquadReassignName: Scorpians
 +SquadReassignLogo: scorpsquadc.pcx
 
@@ -3320,7 +3324,11 @@ $AI Goals: ( goals ( ai-chase "NTT Sunder" 50 ) )
 
 $Formula: ( when 
    ( has-time-elapsed 24 ) 
-   ( do-nothing ) 
+   ( ship-subsys-guardian-threshold 
+      50 
+      "Alpha 1" 
+      "weapons" 
+   )
 )
 +Name: Timer
 +Repeat Count: 1
@@ -4541,6 +4549,12 @@ $Formula: ( when
       "Beta 1" 
       "High" 
       "Hellespont arrives" 
+   )
+   ( set-armor-type 
+      "NTT Sunder" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Hull" 
    )
 )
 +Name: Hellespont Arrived

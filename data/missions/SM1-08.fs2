@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Sixth Wonder", 893)
 $Author: Brad Johnson
 $Created: 05/17/99 at 14:34:19
-$Modified: 08/15/11 at 22:28:44
+$Modified: 03/07/12 at 19:19:21
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -16,9 +16,15 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
+
 +Hull Repair Ceiling: 0.000000
+
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -26,8 +32,8 @@ $end_multi_text
 
 +Viewer pos: 114.462814, 27947.568359, 4444.995605
 +Viewer orient:
-	0.999980, -0.000001, 0.006382,
-	-0.006259, 0.195584, 0.980667,
+	0.999980, -0.000002, 0.006376,
+	-0.006253, 0.195584, 0.980667,
 	-0.001249, -0.980687, 0.195580
 +SquadReassignName: 242nd Suicide Kings
 +SquadReassignLogo: 242suicide.pcx
@@ -1626,11 +1632,11 @@ $Determination: 10
 $Name: Enif Station		;! Object #37
 $Class: GTI Arcadia
 $Team: Friendly
-$Location: -60.759029, 0.986324, 4717.298340
+$Location: -60.763393, 0.985462, 4717.296387
 $Orientation:
-	-0.378726, 0.028126, 0.925081,
-	-0.115830, 0.990239, -0.077528,
-	-0.918231, -0.136513, -0.371772
+	-0.378731, 0.028125, 0.925079,
+	-0.115831, 0.990239, -0.077528,
+	-0.918229, -0.136514, -0.371777
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2378,6 +2384,19 @@ $Formula: ( when
       "Normal" 
       "Incoming Jump" 
    )
+   ( turret-lock 
+      "Colossus" 
+      "turret01a" 
+      "turret02a" 
+      "turret03a" 
+      "turret04a" 
+      "turret05a" 
+      "turret06a" 
+      "turret07a" 
+      "turret08a" 
+      "turret09a" 
+      "turret10a" 
+   )
 )
 +Name: Incoming Jump
 +Repeat Count: 1
@@ -2445,6 +2464,19 @@ $Formula: ( when
       "#Command" 
       "High" 
       "Colossus Maintain" 
+   )
+   ( turret-free 
+      "Colossus" 
+      "turret01a" 
+      "turret02a" 
+      "turret03a" 
+      "turret04a" 
+      "turret05a" 
+      "turret06a" 
+      "turret07a" 
+      "turret08a" 
+      "turret09a" 
+      "turret10a" 
    )
 )
 +Name: Colossus Maintain

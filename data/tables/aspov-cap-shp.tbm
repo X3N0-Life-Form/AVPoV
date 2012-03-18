@@ -695,4 +695,130 @@ $Subsystem:                     Turret04a, 1.875, 3.0
 $Subsystem:                     Turret05a, 1.875, 3.0
 	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
 	$Flags:					("reset when idle" "use multiple guns")
+	
+$Name:						NTF Iceni
+	+nocreate ;:
+$Subsystem:                     turret01a,0.833,1.0
+	$Default PBanks:        ( "Mass Driver" ) ; 2 barrels/terran huge turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+; $Subsystem:                     turret02,0.833,1.0
+;	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     turret03,0.833,1.0
+	$Default PBanks:        ( "Wraith" ) ; terran huge turret
+$Subsystem:                     turret04,0.833,1.0
+	$Default PBanks:        ( "Wraith" ) ; terran huge turret
+$Subsystem:                     turret05,0.833,1.0
+	$Default PBanks:        ( "Wraith" ) ; terran huge turret
+; $Subsystem:                     turret06,0.833,1.0
+;	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret07,0.833,1.0
+	$Default PBanks:        ( "Wraith" ) ; terran huge turret
+; $Subsystem:                     turret08,0.833,1.0
+;	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     turret09,0.833,1.0
+	$Default PBanks:        ( "Wraith" ) ; terran huge turret
+; $Subsystem:                     turret10,0.833,1.0
+;	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret11a,0.833,1.0
+	$Default PBanks:        ( "Mass Driver" ) ; 2 barrels/terran huge turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+; $Subsystem:                     turret12,0.833,1.0
+;	$Default PBanks:        ( "BGreen" )
+; $Subsystem:                     turret13,0.833,1.0
+;	$Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret14,0.833,1.0
+;	$Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret15,0.833,1.0
+;	$Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret16,0.833,1.0
+;	$Default SBanks:        ( "Piranha" )
+; $Subsystem:                     turret17,0.833,1.0
+;	$Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret18,0.833,1.0
+;	$Default SBanks:        ( "MX-52" )
+$Subsystem:                     turret19,0.833,1.0
+	$Default PBanks:        ( "Standard Flak" ) ; 2 barrels/terran turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+; $Subsystem:                     turret20,0.833,1.0
+;	$Default SBanks:        ( "Piranha" )
+$Subsystem:                     turret21a,0.833,1.0
+	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem:                     turret22a,0.833,1.0
+	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem:                     turret23a,0.833,1.0
+	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem:                     turret24a,0.833,1.0
+	$Default PBanks:        ( "Standard Flak" ) ; 2 barrels/terran turret
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+$Subsystem:                     turret25a,0.833,1.0
+	$Default SBanks:        ( "Trebuchet" ) ; 2 barrels/MX-52
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:			 			( "check hull" "reset when idle" )
+	
+$Name:                          @GTC Fenris
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07, 2, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08, 2, 5.0
+	$Flags:			 			( "check hull" )
+	
+$Name:                  GTC Leviathan
+	+nocreate ;:
+$Subsystem:                     turret01, 1, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03, .5, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04, .5, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05, .5, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06, .5, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07, 1, 5.0
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08, 1, 5.0
+	$Flags:			 			( "check hull" )
+	
+$Name:						GTA Charybdis
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
+$Subsystem:                     turret02, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
+$Subsystem:                     turret03, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
+$Subsystem:                     turret04, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
+$Subsystem:                     turret05, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
+$Subsystem:                     turret06, 2, 1.0
+	$Flags:			 			( "check hull" "use multiple guns" )
 #End

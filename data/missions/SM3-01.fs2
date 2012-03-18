@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Bearbaiting", 1494)
 $Author: James Agay
 $Created: 08/13/99 at 10:40:35
-$Modified: 10/16/11 at 13:22:51
+$Modified: 03/12/12 at 22:35:15
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -16,6 +16,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 131072
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -26,11 +30,11 @@ $end_multi_text
 +Player Entry Delay:
 1.000000
 
-+Viewer pos: -2589.927246, 9356.501953, 1236.063354
++Viewer pos: -5050.512207, 9551.056641, -2709.371582
 +Viewer orient:
-	-0.999936, -0.000001, 0.011331,
-	-0.008023, 0.706188, -0.707979,
-	-0.008001, -0.708024, -0.706143
+	-0.963279, -0.000001, -0.268501,
+	0.225857, 0.540760, -0.810289,
+	0.145195, -0.841177, -0.520903
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -802,6 +806,7 @@ $Orientation:
 	-0.421681, 0.904752, -0.060081,
 	-0.253896, -0.181424, -0.950065
 $AI Behavior: None
++AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -966,13 +971,16 @@ $Orientation:
 	0.060956, 0.864891, -0.498244,
 	-0.357872, -0.447047, -0.819803
 $AI Behavior: None
++AI Class: Big
 $AI Goals: ( goals ( ai-chase "Beleth" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
@@ -1027,7 +1035,9 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret04-base
 +Subsystem: turret05-base
 +Subsystem: turret06a-base
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
 +Subsystem: turret07a-base
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
 +Subsystem: turret08-base
 +Subsystem: turret09-base
 +Subsystem: turret10-base
@@ -1043,19 +1053,19 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret20-base
 +Subsystem: turret21-base
 +Subsystem: turret22
-+Secondary Banks: ( "Shivan Subspace Missile" )
++Secondary Banks: ( "Shivan Swarmer Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret23
-+Secondary Banks: ( "Shivan Subspace Missile" )
++Secondary Banks: ( "Shivan Swarmer Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret24
-+Secondary Banks: ( "Shivan Subspace Missile" )
++Secondary Banks: ( "Shivan Swarmer Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret25
-+Secondary Banks: ( "Shivan Subspace Missile" )
++Secondary Banks: ( "Shivan Swarmer Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret26
-+Secondary Banks: ( "Shivan Subspace Missile" )
++Secondary Banks: ( "Shivan Swarmer Bomb" )
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 22 "Thebes" ) 
@@ -1481,6 +1491,12 @@ $Formula: ( when
    ( validate-goal "Gun 4" ) 
    ( validate-goal "LR Flak" ) 
    ( validate-goal "Bonus" ) 
+   ( fire-beam 
+      "Phoenicia" 
+      "turret20" 
+      "Sathanas" 
+      "fighterbay" 
+   )
 )
 +Name: Armed
 +Repeat Count: 1

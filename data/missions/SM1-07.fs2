@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Slaying Ravana", 866)
 $Author: Brad Johnson
 $Created: 05/08/99 at 20:44:47
-$Modified: 08/15/11 at 23:58:43
+$Modified: 03/05/12 at 23:12:12
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -21,6 +21,10 @@ $end_multi_text
 
 +Storm: none
 
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -31,11 +35,11 @@ $end_multi_text
 +Player Entry Delay:
 1.000000
 
-+Viewer pos: -5136.545410, 8126.036133, 2117.017822
++Viewer pos: -369.783722, 3927.418457, 1580.023193
 +Viewer orient:
-	0.004622, -0.000001, -0.999989,
-	0.838927, 0.544231, 0.003877,
-	0.544225, -0.838936, 0.002516
+	0.999871, -0.000001, 0.016047,
+	-0.013282, 0.561118, 0.827629,
+	-0.009005, -0.827736, 0.561046
 +SquadReassignName: 107th Ravens
 +SquadReassignLogo: ravens.pcx
 
@@ -279,15 +283,15 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	8
+	"Subach HL-7"	15
 	"Akheton SDG"	16
-	"Prometheus R"	14
+	"Prometheus R"	10
 	"Tempest"	1228
-	"Hornet"	610
-	"Cyclops#short"	56
+	"Hornet"	730
+	"Cyclops#short"	98
 )
 
-#Objects		;! 37 total
+#Objects		;! 40 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTB Boanerges
@@ -302,6 +306,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -396,10 +401,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
 +Sbank Ammo: ( 100 33 33 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -422,10 +429,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
 +Sbank Ammo: ( 100 33 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -448,10 +457,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
 +Sbank Ammo: ( 100 33 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -675,10 +686,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 68
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -699,10 +713,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 68
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -723,10 +740,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 68
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1407,7 +1427,85 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-#Wings		;! 12 total
+$Name: Beta 1		;! Object #37
+$Class: GTB Boanerges
+$Team: Friendly
+$Location: 528.516479, -0.000531, 3005.741699
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Beta 2		;! Object #38
+$Class: GTB Boanerges
+$Team: Friendly
+$Location: 681.453613, -0.000403, 2981.250000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Beta 3		;! Object #39
+$Class: GTB Boanerges
+$Team: Friendly
+$Location: 613.647583, -0.000436, 2875.783936
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+#Wings		;! 13 total
 
 $Name: Alpha
 $Waves: 1
@@ -1635,6 +1733,29 @@ $Ships: (		;! 4 total
 	"Delta 4"
 )
 $AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
++Flags: ( )
+
+$Name: Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Beta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-destroyed-delay 
+   0 
+   "Alpha 2" 
+   "Alpha 3" 
+   "Alpha 4" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Beta 1"
+	"Beta 2"
+	"Beta 3"
+)
+$AI Goals: ( goals ( ai-chase "Ravana" 50 ) )
++Hotkey: 1
 +Flags: ( )
 
 #Events		;! 45 total

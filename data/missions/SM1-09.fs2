@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Into the Maelstrom ", 941)
 $Author: James Agay @ V
 $Created: 05/17/99 at 10:26:22
-$Modified: 08/16/11 at 12:08:09
+$Modified: 03/07/12 at 19:39:18
 $Notes:
 $End Notes:
 
@@ -15,6 +15,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -25,11 +29,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: 1120.430176, 2232.115723, 2263.369385
++Viewer pos: 950.821472, 13549.432617, 2484.676758
 +Viewer orient:
-	0.907327, -0.000004, 0.420427,
-	-0.417581, 0.116145, 0.901186,
-	-0.048834, -0.993232, 0.105380
+	0.996134, -0.000004, 0.087845,
+	-0.063346, 0.692791, 0.718351,
+	-0.060861, -0.721139, 0.690112
 +SquadReassignName: 242nd Suicide Kings
 +SquadReassignLogo: 242suicide.pcx
 
@@ -606,14 +610,14 @@ $Ship Choices: (
 	"Subach HL-7"	20
 	"Prometheus R"	20
 	"Rockeye"	500
-	"Tempest"	500
+	"Tempest"	1280
 	"Hornet"	660
 	"Harpoon"	64
 )
 
 #Objects		;! 52 total
 
-;s only weakness.  Well done.", -1)
+;s only weakness.  Well done.", -1)
 $Name: Alpha 1		;! Object #0
 $Class: GTF Perseus
 $Team: Friendly
@@ -2336,7 +2340,7 @@ $Ships: (		;! 2 total
 )
 +Flags: ( )
 
-#Events		;! 60 total
+#Events		;! 61 total
 
 $Formula: ( when 
    ( and 
@@ -3293,6 +3297,24 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( < 
+      ( distance 
+         "Alpha 1" 
+         "Jump point patrol:1" 
+      )
+      5500 
+   )
+   ( ship-invulnerable 
+      "Jooyun" 
+      "Avila" 
+      "Parracombe" 
+   )
+)
++Name: colly arrival cond
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 4 total
 
 $Type: Primary
@@ -3663,7 +3685,7 @@ $Density: 100
 +Field Type: 0
 +Debris Genre: 0
 +Field Debris Type: 2
-$Average Speed: 5.000000
+$Average Speed: 4.999263
 $Minimum: -4000.000000, -1000.000000, -1000.000000
 $Maximum: 4000.000000, 3000.000000, 20000.000000
 +Inner Bound:

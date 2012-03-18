@@ -37,7 +37,7 @@ CO : Admiral Obster
 ///////////////////////////////////////////////////////////////////////////////////
 A_Intro_00.									//ToDo
 /////////////////////////////////////////////////////////////////////////////////
-		Cinematic mission
+		Cutscene mission
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -365,14 +365,16 @@ E_Sathanas_Arc_03.Watch out for the Bear					//ToRework
 
 		"The Sathanas decimated our fleet at the Capella Node"
 		Ships :
-			-GTD Carthage (Orion class)		//destroyed
-			-GVD Pharaoh (Typhon class)		//destroyed
-			-GVD Black Mamba (Hatshepsut class)	//destroyed
+			-GTD Carthage (Orion class)		//
+			-GVD Pharaoh (Typhon class)		//
+			-GVD Black Mamba (Hatshepsut class)	//
 			-Lighter RBCs (Mjolnir class)		//destroyed
 			-SC Nyoghta (Rakshasa class)		//destroyed
 			-SC Nergal (Lilith class)		//destroyed
 			-SD Lamashtu (Demon class)		//destroyed
 			-SJ Sathanas (Sathanas class)		//vital
+			-GVA Seer (Setekh class)		//vital
+			-GTA Watcher (Charybdis class)		//vital
 
 
 ///////////////////////////////////////////////////////////////////////////////////

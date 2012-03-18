@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Proving Grounds", 1126)
 $Author: Brad Johnson
 $Created: 06/01/99 at 16:22:29
-$Modified: 10/16/11 at 11:00:50
+$Modified: 03/09/12 at 18:17:05
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -333,7 +337,7 @@ $Ship Choices: (
 	"EMP Adv."	100
 )
 
-#Objects		;! 33 total
+#Objects		;! 34 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Perseus
@@ -1280,7 +1284,32 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-#Wings		;! 9 total
+$Name: DIE 1		;! Object #33
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: 4139.888672, 0.000157, -177.566940
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+#Wings		;! 10 total
 
 $Name: Alpha
 $Waves: 1
@@ -1454,7 +1483,21 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-guard "Aquitaine" 50 ) )
 +Flags: ( )
 
-#Events		;! 60 total
+$Name: DIE
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! DIE 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( < ( mission-time ) 20 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"DIE 1"
+)
++Flags: ( "reinforcement" )
+
+#Events		;! 62 total
 
 $Formula: ( when 
    ( > ( is-ship-visible "Virgo 1" ) 0 ) 
@@ -2315,6 +2358,26 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( true ) 
+   ( training-msg "ToDie" ) 
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "DIE" ) 
+   ( sabotage-subsystem 
+      "Alpha 1" 
+      "Hull" 
+      100 
+   )
+)
++Name: DIE arrives
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 5 total
 
 $Type: Primary
@@ -2391,7 +2454,7 @@ $List: (		;! 1 points in list
 	( 2346.287598, 0.000138, -2695.302979 )
 )
 
-#Messages		;! 33 total
+#Messages		;! 34 total
 
 
 $Name: Begin
@@ -2635,8 +2698,19 @@ $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: SM203_AC_20.wav
 
-#Reinforcements		;! 0 total
+$Name: ToDie
+$Team: -1
+$MessageNew:  XSTR("To die, call 'DIE' in the reinforcements' menu.", -1)
+$end_multi_text
 
+#Reinforcements		;! 1 total
+
+$Name: DIE
+$Type: Attack/Protect
+$Num times: 1
++Arrival Delay: 0
++No Messages: ( )
++Yes Messages: ( )
 
 #Background bitmaps		;! 0 total
 

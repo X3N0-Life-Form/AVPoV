@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Return to Babel", 1592)
 $Author: Brad Johnson
 $Created: 07/28/99 at 18:05:02
-$Modified: 10/16/11 at 14:04:24
+$Modified: 03/13/12 at 00:06:56
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_standard
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -47,9 +51,9 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("Colossus Triumphant
 
-At 0345 hours, the GTVA Colossus destroyed the Shivan juggernaut Sathanas near the Gamma Draconis jump node in Capella. This victory proves without a doubt our technological superiority over our Great War nemesis. For the second time, the Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
+At 0345 hours, the $f GTVA $f Colossus destroyed the Shivan juggernaut $h Sathanas near the $b Gamma $b Draconis jump node in $b Capella. This victory proves without a doubt our technological superiority over our Great War nemesis. For the second time, the $f Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
 
-With the Colossus, we will have nothing more to fear.", 1594)
+With the $f Colossus, we will have nothing more to fear.", -1)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM303_CB_01.wav

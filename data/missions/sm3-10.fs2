@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Apocalypse", 1942)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 11/01/11 at 13:24:28
+$Modified: 03/05/12 at 21:12:35
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 65664
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -1041,11 +1045,11 @@ $Determination: 10
 $Name: TSC 2 60		;! Object #26
 $Class: TC-TRI
 $Team: Friendly
-$Location: -532.492371, -234.196609, -11361.703125
+$Location: -532.491028, -234.196335, -11361.703125
 $Orientation:
-	0.904179, 0.089669, -0.417637,
-	0.081352, -0.995972, -0.037716,
-	-0.419337, 0.000127, -0.907831
+	0.904147, 0.090070, -0.417622,
+	0.081717, -0.995936, -0.037883,
+	-0.419337, 0.000126, -0.907831
 $AI Behavior: None
 $Cargo 1:  XSTR("Dravis' diary", 1948)
 +Initial Hull: 100
@@ -1145,9 +1149,9 @@ $Class: TSC 2
 $Team: Friendly
 $Location: -5800.721191, -67.705025, -11191.193359
 $Orientation:
-	-0.961630, 0.000000, -0.274348,
-	-0.001351, 0.999988, 0.004739,
-	0.274345, 0.004928, -0.961618
+	-0.961731, 0.000001, -0.273995,
+	-0.001349, 0.999988, 0.004740,
+	0.273992, 0.004928, -0.961719
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Velocity: 33
@@ -1460,9 +1464,9 @@ $Class: VAC 4
 $Team: Friendly
 $Location: -427.663208, -80.176224, -11684.155273
 $Orientation:
-	-0.928070, -0.012988, 0.372180,
-	0.012991, 0.997654, 0.067210,
-	-0.372179, 0.067210, -0.925724
+	-0.928074, -0.012988, 0.372171,
+	0.012990, 0.997654, 0.067210,
+	-0.372171, 0.067210, -0.925728
 $AI Behavior: None
 $Cargo 1:  XSTR("Abbot Laurent's Journal", 1949)
 +Initial Velocity: 33
@@ -1595,9 +1599,9 @@ $Class: VAC 4
 $Team: Friendly
 $Location: -526.236633, -81.021072, -11655.302734
 $Orientation:
-	-0.872386, -0.000258, 0.488818,
-	0.017100, 0.999372, 0.031047,
-	-0.488519, 0.035444, -0.871833
+	-0.872380, -0.000257, 0.488828,
+	0.017102, 0.999372, 0.031047,
+	-0.488529, 0.035444, -0.871828
 $AI Behavior: None
 $Cargo 1:  XSTR("Parker's Boots", 1947)
 +Initial Velocity: 33
@@ -4809,21 +4813,19 @@ $Formula: ( when
 +Name: cains armor
 +Repeat Count: 1
 +Interval: 1
-+Team: 1431655829
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Nagarok" ) 
    ( set-armor-type 
       "Nagarok" 
       ( true ) 
-      "HellArmor" 
+      "Hell Armor" 
       "Hull" 
    )
 )
 +Name: nagarok arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 8410012
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Scorpio" ) 
@@ -4838,7 +4840,6 @@ $Formula: ( when
 +Name: scorpio (dragons) arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 33751040
 
 #Goals		;! 1 total
 
@@ -4942,7 +4943,7 @@ $Name: 2 Cains
 $Team: -1
 $MessageNew:  XSTR("The Shivans have sortied two Cain-class warships, the Bane and the Melchom. Intercept these cruisers before they make the jump to Vega.", 1960)
 
-;t be good.", -1)
+;t be good.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm310_ac_05.WAV

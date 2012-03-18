@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Feint! Parry! Riposte!", 991)
 $Author: James Agay
 $Created: 05/10/99 at 10:36:07
-$Modified: 08/15/11 at 22:29:25
+$Modified: 03/07/12 at 20:01:14
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,19 +17,25 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
+
 +Hull Repair Ceiling: 0.000000
+
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
 1.000000
 
-+Viewer pos: -1557.869629, 257.761414, 10436.378906
++Viewer pos: -1042.659424, 7441.141113, 3776.577881
 +Viewer orient:
-	0.001574, -0.000002, -0.999999,
-	0.500296, 0.865854, 0.000786,
-	0.865853, -0.500296, 0.001364
+	-0.945926, -0.000002, -0.324383,
+	0.300842, -0.374010, -0.877275,
+	-0.121320, -0.927425, 0.353786
 +SquadReassignName: 242nd Suicide Kings
 +SquadReassignLogo: 242suicide.pcx
 
@@ -502,7 +508,7 @@ $Ship Choices: (
 +Weaponry Pool: (
 	"Subach HL-7"	20
 	"Prometheus R"	20
-	"Tempest"	600
+	"Tempest"	640
 	"Hornet"	260
 	"Harpoon"	164
 )

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Sorrow", -1)
 $Author: X3N0-Life-Form
 $Created: 08/01/10 at 18:47:22
-$Modified: 11/18/11 at 22:08:45
+$Modified: 03/13/12 at 22:08:51
 $Notes:
 $End Notes:
 
@@ -5851,7 +5851,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( true ) 
+   ( is-destroyed-delay 0 "Malkav" ) 
    ( send-message 
       "Kendrick Smith" 
       "High" 
@@ -6209,7 +6209,7 @@ $Name: rabbid wings arrive 1 - ralpha
 $Team: -1
 $MessageNew:  XSTR("211th Rabbid Sharks here, returning to base. The mission was a success. We heard you went into some kind of trouble Olympus Shadow.", -1)
 $end_multi_text
-+AVI Name: Head-CM1
++AVI Name: Head-TP1
 
 $Name: blade arrives - blade 1
 $Team: -1

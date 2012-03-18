@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The King's Gambit", 1178)
 $Author: Brad Johnson
 $Created: 06/04/99 at 17:14:43
-$Modified: 10/16/11 at 11:02:35
+$Modified: 03/09/12 at 18:55:33
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -29,7 +33,7 @@ $end_multi_text
 
 +Viewer pos: -405.659180, 9340.702148, 962.717896
 +Viewer orient:
-	0.999994, -0.000000, -0.003519,
+	0.999994, 0.000000, -0.003519,
 	0.003509, -0.075614, 0.997131,
 	-0.000266, -0.997137, -0.075614
 +SquadReassignName: 64th Raptors
@@ -448,10 +452,10 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	20
+	"Subach HL-7"	16
 	"Akheton SDG"	16
 	"Morning Star"	16
-	"Prometheus S"	26
+	"Prometheus S"	30
 	"Rockeye"	520
 	"Tempest"	2100
 	"Hornet"	820
@@ -499,6 +503,7 @@ $Orientation:
 	0.897028, 0.417595, -0.144762,
 	0.159318, 0.000000, 0.987227
 $AI Behavior: None
++AI Class: Big
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -513,21 +518,25 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
++Secondary Banks: ( "Trebuchet" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret08
++Secondary Banks: ( "Trebuchet" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret09
++Secondary Banks: ( "Trebuchet" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret10
 +Subsystem: turret11
 +Subsystem: turret12
 +AI Class: General
 +Subsystem: turret13
++Secondary Banks: ( "Trebuchet" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret14
 +Subsystem: turret15
 +AI Class: General
-+Primary Banks: ( "SVas" )
++Primary Banks: ( "Mass Driver" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1717,9 +1726,9 @@ $Determination: 10
 +Score: 17
 
 $Name: Epsilon 1		;! Object #36
-$Class: GTF Myrmidon
+$Class: GTF Perseus
 $Team: Friendly
-$Location: 1703.102905, -0.000237, -2199.005127
+$Location: 1443.340820, 0.000066, 297.755402
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1727,11 +1736,10 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1741,13 +1749,12 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Epsilon 2		;! Object #37
-$Class: GTF Myrmidon
+$Class: GTF Perseus
 $Team: Friendly
-$Location: 1599.633545, -0.000263, -2302.534424
+$Location: 1339.871460, 0.000040, 194.226105
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1755,11 +1762,10 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1769,13 +1775,12 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Epsilon 3		;! Object #38
-$Class: GTF Myrmidon
+$Class: GTF Perseus
 $Team: Friendly
-$Location: 1804.020142, -0.000210, -2297.534668
+$Location: 1544.258057, 0.000093, 199.225861
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1783,11 +1788,10 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1797,7 +1801,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Gamma 1		;! Object #39
@@ -1809,10 +1812,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1833,10 +1838,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1857,10 +1864,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1881,10 +1890,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace

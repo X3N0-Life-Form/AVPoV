@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Rebels & Renegades", 44)
 $Author: Jim Boone
 $Created: 03/17/99 at 15:15:05
-$Modified: 09/25/11 at 21:07:06
+$Modified: 03/07/12 at 20:32:46
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 24
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -27,11 +31,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: 1304.300537, 5800.468750, -5592.703613
++Viewer pos: -714.017517, 1288.870605, 2215.387451
 +Viewer orient:
-	1.000000, -0.000001, -0.000752,
-	0.000470, 0.781325, 0.624124,
-	0.000587, -0.624124, 0.781325
+	-0.837967, -0.000003, 0.545721,
+	-0.473424, 0.497407, -0.726950,
+	-0.271444, -0.867517, -0.416812
 +SquadReassignName: Scorpians
 +SquadReassignLogo: scorpsquadc.pcx
 
@@ -419,56 +423,33 @@ $Cargo 1:  XSTR("Misc.", 58)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret02
-+Primary Banks: ( "AAAf" )
 +Subsystem: turret03
-+Primary Banks: ( "Fast Flak" )
 +Subsystem: turret04
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret05
-+Primary Banks: ( "AAAf" )
 +Subsystem: turret06
-+Primary Banks: ( "BGreen" )
 +Subsystem: turret07
-+Primary Banks: ( "BGreen" )
 +Subsystem: turret08
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret09
-+Primary Banks: ( "BGreen" )
 +Subsystem: turret10
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret11a
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret12
-+Primary Banks: ( "AAAf" )
 +Subsystem: turret13
-+Primary Banks: ( "Fast Flak" )
 +Subsystem: turret14
-+Primary Banks: ( "BGreen" )
 +Subsystem: turret15
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret16
 +Sbank Ammo: ( 0 )
 +Subsystem: turret17
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret18
-+Secondary Banks: ( "Tornado" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret19
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret20
 +Sbank Ammo: ( 0 )
 +Subsystem: turret21a
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret22a
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret23a
-+Primary Banks: ( "Wraith" )
 +Subsystem: turret24a
-+Primary Banks: ( "Maxim" )
 +Subsystem: turret25a
-+Secondary Banks: ( "Tornado" )
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -2468,7 +2449,7 @@ $Density: 50
 +Field Type: 0
 +Debris Genre: 0
 +Field Debris Type: 1
-$Average Speed: 5.000000
+$Average Speed: 5.000017
 $Minimum: 2500.000000, -4000.000000, 2500.000000
 $Maximum: 12500.000000, 4000.000000, 13500.000000
 +Inner Bound:

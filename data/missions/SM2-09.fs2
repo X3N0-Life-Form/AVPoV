@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Speaking in Tongues", 1386)
 $Author: Brad Johnson
 $Created: 07/13/99 at 17:25:23
-$Modified: 10/16/11 at 12:18:18
+$Modified: 03/09/12 at 19:29:48
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -19,6 +19,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -333,11 +337,11 @@ $Ship Choices: (
 	"Hayg Mas"	20
 	"Sehku"	20
 	"Rockeye"	500
-	"Tempest"	1460
+	"Tempest"	1940
 	"Hornet"	580
 	"Tornado"	740
 	"Harpoon"	100
-	"TAG-B"	160
+	"TAG-B"	100
 	"Piranha"	100
 	"Stiletto II"	100
 )
@@ -358,7 +362,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "TAG-B" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -505,7 +509,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "TAG-B" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -534,7 +538,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "TAG-B" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -563,7 +567,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "TAG-B" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
