@@ -365,8 +365,8 @@ E_Sathanas_Arc_03.Watch out for the Bear					//ToRework
 
 		"The Sathanas decimated our fleet at the Capella Node"
 		Ships :
-			-GTD Carthage (Orion class)		//
-			-GVD Pharaoh (Typhon class)		//
+			-GTD Carthage (Orion class)		//vital
+			-GVD Pharaoh (Typhon class)		//destroyed
 			-GVD Black Mamba (Hatshepsut class)	//
 			-Lighter RBCs (Mjolnir class)		//destroyed
 			-SC Nyoghta (Rakshasa class)		//destroyed
@@ -375,6 +375,9 @@ E_Sathanas_Arc_03.Watch out for the Bear					//ToRework
 			-SJ Sathanas (Sathanas class)		//vital
 			-GVA Seer (Setekh class)		//vital
 			-GTA Watcher (Charybdis class)		//vital
+			-SCv Kohl'Taar (Moloch class)		//destroyed
+			-SC Danjal (Rakshasa class)		//destroyed
+			-SC Abyzou (Cain class)			//destroyed
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -439,7 +442,7 @@ E_Sathanas_06.We've got company !						//Beta-Ready
 ///////////////////////////////////////////////////////////////////////////////////
 E_Sathanas_07.Sorrow								//
 /////////////////////////////////////////////////////////////////////////////////
-		5th gen mission
+		4th gen mission
 		Background : TODO (Capella node (again))
 		FS2 Timeline : after "Straight, no chaser"
 

@@ -1,5 +1,6 @@
 ending : to be continued ? (like warping out with ... GTD Streaker ?)
-	 post-final/bonus mission : teaser for ASPoV : you get to fly on the 			    shivan's side
+	 post-final/bonus mission : teaser for ASPoV : you get to fly on the
+	    shivan's side
 	 mention bonus missions in mod.ini
 
 
@@ -12,9 +13,13 @@ more delay after Cyaegha's jump
 set elite armor for vampire ; reaper & cyaegha & hellknight + escort
 
 
-Demonic spiders
-
 Fail debriefs on vampire slayers
+
+
+
+
+
+
 
 
 
@@ -27,3 +32,6 @@ Overkill mk2 :
 			which spawn 2 (heat seeking?) cluster warheads#3
 				which spawns high explosive ammunitions
 				
+
+Overkill mk3:
+	
