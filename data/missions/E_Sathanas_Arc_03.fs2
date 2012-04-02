@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Watch out for the bear", -1)
 $Author: X3N0-Life-Form
 $Created: 08/01/10 at 18:47:22
-$Modified: 03/18/12 at 18:05:02
+$Modified: 03/18/12 at 23:46:50
 $Notes:
 Short, You basically don't have to do anything but sit and watch.$End Notes:
 
@@ -28,9 +28,9 @@ $end_multi_text
 
 +Viewer pos: 24.400784, 4829.191406, -3767.410400
 +Viewer orient:
-	-0.032508, -0.000005, 0.999471,
-	-0.384674, 0.922968, -0.012507,
-	-0.922480, -0.384877, -0.030006
+	-0.836291, -0.000005, -0.548286,
+	0.530550, -0.252301, -0.809235,
+	-0.138329, -0.967649, 0.211000
 
 
 $AI Profile: FS2 RETAIL
@@ -2293,7 +2293,7 @@ $Determination: 10
 +Group: 0
 +Score: 16
 
-$Name: Watcher		;! Object #66
+$Name: Seer		;! Object #66
 $Class: GTA Charybdis
 $Team: Friendly
 $Location: -1397.164429, -0.007172, -2307.753906
@@ -2315,9 +2315,10 @@ $Cargo 1:  XSTR("Nothing", -1)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
++Departure delay: 2
+$Departure Cue: ( < ( hits-left "Seer" ) 25 ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "guardian" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 1		;! note that this is a bitfield!!!
@@ -2325,7 +2326,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 150
 
-$Name: Seer		;! Object #67
+$Name: Watcher		;! Object #67
 $Class: GVA Setekh
 $Team: Friendly
 $Location: 1192.272095, 196.484955, -2646.242432
@@ -2343,7 +2344,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
++Departure delay: 4
+$Departure Cue: ( < ( hits-left "Watcher" ) 20 ) 
 $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )

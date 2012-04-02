@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Hit and Run", -1)
 $Author: Adrarsis
 $Created: 07/17/10 at 20:03:16
-$Modified: 12/29/10 at 14:04:31
+$Modified: 03/19/12 at 21:32:13
 $Notes:
 TODO : truc avec TAG$End Notes:
 
@@ -19,6 +19,10 @@ $end_multi_text
 
 +Storm: s_standard
 
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -26,11 +30,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -554.828857, 6911.606445, -554.015808
++Viewer pos: 0.000000, 2409.982178, -975.975647
 +Viewer orient:
-	0.953497, 0.000002, 0.301404,
-	-0.294567, -0.211770, 0.931871,
-	0.063830, -0.977320, -0.201921
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.380173, 0.924915,
+	0.000000, -0.924915, 0.380173
 
 
 $AI Profile: FS2 RETAIL
@@ -50,9 +54,9 @@ $Ani Filename: <default>
 +Wave Filename: none
 
 $Stage Text:
- XSTR("As you may already know, $r Admiral $r Aken $r Bosch has managed to escape into the nebula. A search party is now being organised to apprehend the Rebel leader.
+ XSTR("As you may already know, $r Admiral $r Aken $r Bosch has managed to bypass the Colossus with the help of onboard saboteurs and enter the nebula. A search party, led by the $g GVD $g Psamtik is now being organised to apprehend the Rebel leader.
 
-At 12:45, terran galactic time, the $g GTD $g Olympus $g Shadow and her escort ships will enter the nebula, and join this search party. We will also assist the fleet in her containment operation and engage $h Shivan $h Forces when necessary.", -1)
+At 12:45, terran galactic time, the $g GTD $g Olympus $g Shadow and her escort ships will enter the nebula, and assist the Psamtik in its operations. We will also engage in containment operations and neutralize any $h Shivan $h Forces encountered.", -1)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: none
@@ -66,7 +70,7 @@ $multi_text
 
 This is commander Dupont. To our new vasudan pilot joining us, welcome into the squadron.
 
-Our squadron has been ordered to assit the $g GTCv $g Xeus on her patrol. Since the $r shivan activity in the nebula has increased in the past days, we will be deploying two wings to escort that corvette.", -1)
+Our squadron has been ordered to assit the $g GTCv $g Xeus on her patrol. Since the $r shivan activity in the nebula has increased over the past few days, we will be deploying two wings to escort that corvette.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 2409.982178, -975.975647
@@ -118,9 +122,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $g GTA $g Devil's $g Eye will provide $y awacs cover for this mission. We have also recieved a shipment of $y TAG missiles. Use them at your discretion, though I am not entirely convinced by their effectiveness.
+ XSTR("The $g GTA $g Devil's $g Eye will provide $y awacs cover for this mission. We have also recieved a shipment of $y TAG missiles. Use them at your discretion, but be advised that this technology has had mixed results so far.
 
-Recon has spotted two Cain class cruisers in the vicinity, and possibly a Rakshasa.", -1)
+Recon has spotted two $h Cain class cruisers in the vicinity, and possibly a $h Rakshasa.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 2409.982178, -975.975647
@@ -220,11 +224,11 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Reports also show an increasing use of the $r Nahema bombers by the shivans. These light bombers are capable of outrunning even our interceptors, and have proven to be quite devastating.
+ XSTR("Reports also show an increasing use of the $r Nahema bombers by the shivans to devastating effects. These light bombers are capable of outrunning our interceptors and deliver their payload before being shot down.
 
 If the $g Xeus is destroyed, you will be pulled out immediatly. And try to keep the $g Devil's $g Eye alive. We've lost enough AWACS in the past few days, and we don't have that many of them.
 
-Dismissed.", -1)
+You have your orders pilots. Dismissed.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 2409.982178, -975.975647

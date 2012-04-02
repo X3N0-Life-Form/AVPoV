@@ -260,6 +260,17 @@ Moloch:		Command Corvette (Cyeagha)
 	turret 11:Heavy Flak
 	turret 12:SAAA
 	turret 14:SAAA
+
+Moloch:		Area Denial Corvette
+	turret 01:Long Range Flak
+	turret 02:Suppression Flak
+	turret 03:Long Range Flak
+	turret 04:Trebuchet#Shivan
+	turret 05:Long Range Flak
+	turret 06:Long Range Flak
+	turret 12:Standard Flak
+	turret 13:Trebuchet#Shivan
+	turret 16:Trebuchet#Shivan
 	
 
 Lilith:		Hunter Killer Heavy Cruiser
@@ -391,6 +402,7 @@ Typhon:
 Sobek:
 	turret 01:Wraith/Heavy Flak
 	turret 02:Wraith/Heavy Flak
+	turret 05:Wraith/Heavy Flak
 
 Mentu:		Beam
 	turret 01:Standard Flak/Wraith

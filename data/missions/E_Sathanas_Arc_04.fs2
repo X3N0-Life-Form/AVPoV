@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Waiting Dark", -1)
 $Author: X3N0-Life-Form
 $Created: 08/02/10 at 20:31:11
-$Modified: 11/04/11 at 19:42:12
+$Modified: 03/18/12 at 23:53:11
 $Notes:
 Original music : Exodus$End Notes:
 
@@ -15,6 +15,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -22,11 +26,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1912.221558, 5717.559082, -2406.327393
++Viewer pos: 2596.042236, 1862.462646, 2660.970215
 +Viewer orient:
-	0.999480, 0.000000, -0.032232,
-	0.018570, 0.817344, 0.575851,
-	0.026345, -0.576150, 0.816919
+	-0.245234, -0.000000, 0.969464,
+	-0.486691, 0.864855, -0.123112,
+	-0.838446, -0.502021, -0.212092
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Zeta" "Delta" )
 
@@ -207,9 +211,9 @@ $start_stage
 $multi_text
  XSTR("This corvette is reponsible for the destruction of at least five cruisers and their escort, and acts as a mobile staging facility for shivan fighters and bombers.
 
-Our wing has been ordered to assist the $g GTCv $g Warihu while she engages the $r Cyaegha. $y Command will deploy more reinforcements has they become available.
+Our wing has been ordered to assist the $f GTCv $f Warihu while she engages the $h Cyaegha. $y Command will deploy more reinforcements has they become available.
 
-One more thing, the $g GTD $g Olympus $g Shadow is overextended right now $semicolon that means we might not have many fighter wings to spare, so don't wander too close to the $r Cyaegha. You won't be saving anyone if your hull is buckling.", -1)
+One more thing, most of our battlegroup is busy tracking and engaging the $r SD $r Nix, which means that at he moment, the $g GTD $g Olympus $g Shadow is overextended, which in turn means we don't have many fighter wings to spare to assist you, so don't wander too close to the $h Cyaegha. You will have a hard time defending anything if your fighter is one step away from its own grave.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 2596.042236, 1862.462646, 2660.970215

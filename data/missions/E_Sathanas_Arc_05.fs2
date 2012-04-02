@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("It's Hammer Time", -1)
 $Author: X3N0-Life-Form
 $Created: 10/02/10 at 16:58:31
-$Modified: 11/04/11 at 19:43:11
+$Modified: 03/19/12 at 19:46:45
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -24,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -5202.808105, 5170.617188, 1930.831665
++Viewer pos: 5902.854980, 13024.900391, 3731.816650
 +Viewer orient:
-	0.480969, 0.000000, -0.876738,
-	0.570895, 0.758941, 0.313187,
-	0.665393, -0.651159, 0.365027
+	0.112157, -0.000000, 0.993691,
+	-0.885195, 0.454365, 0.099911,
+	-0.451498, -0.890816, 0.050960
 
 
 $AI Profile: FS2 RETAIL
@@ -157,6 +161,7 @@ $type: 19
 $team: Hostile
 $class: SC Cain
 $pos: 756.670776, -215.583893, 1296.698608
+$label: Shivan Cruisers ?
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -191,6 +196,7 @@ $type: 17
 $team: Friendly
 $class: GTB Artemis
 $pos: 1212.860718, 256.315216, -2353.007080
+$label: Alpha
 +id: 7
 $hlight: 0
 $mirror: 0
@@ -200,7 +206,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("If the $r Shivans do deploy the $r SD $r Nix, or that things aren't going well on the battlefield, $y reinforcements will be send to assist you.", -1)
+ XSTR("If the $r Shivans do deploy the $r SD $r Nix, or that things aren't going well on the battlefield, reinforcements will be send to assist you.
+
+Also keep in mind that, over the past few days, the $r Shivans have been extensively using cruisers in formation of two or three units, similarily to our own combat groups. Specialists are unsure as to why the $r Shivans decided to favor this type of strategy only now, but be prepared for possible cruiser group assaults.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 5880.307617, 9135.610352, 6382.809570
@@ -252,6 +260,7 @@ $type: 19
 $team: Hostile
 $class: SC Cain
 $pos: 756.670776, -215.583893, 1296.698608
+$label: Shivan Cruisers ?
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -286,6 +295,7 @@ $type: 17
 $team: Friendly
 $class: GTB Artemis
 $pos: 1212.860718, 256.315216, -2353.007080
+$label: Alpha
 +id: 7
 $hlight: 0
 $mirror: 0
@@ -333,7 +343,7 @@ $type: 17
 $team: Friendly
 $class: GTB Boanerges
 $pos: 17146.257813, -0.006752, 9606.331055
-$label: Beta wing
+$label: Beta
 +id: 11
 $hlight: 0
 $mirror: 0
@@ -357,7 +367,7 @@ $type: 1
 $team: Friendly
 $class: GTF Hercules Mark II
 $pos: 13139.783203, -0.006845, 12144.422852
-$label: Gamma wing
+$label: Gamma
 +id: 13
 $hlight: 0
 $mirror: 0
@@ -462,7 +472,7 @@ $Ship Choices: (
 	"Prometheus S"	12
 	"Maxim"	12
 	"Rockeye"	200
-	"Tempest"	1200
+	"Tempest"	1280
 	"Hornet"	800
 	"Tornado"	1232
 	"Harpoon"	100
@@ -1760,30 +1770,48 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret06
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret07
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret08
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret09
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret10
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret11
 +Subsystem: turret12
++Primary Banks: ( "Wraith" )
 +Subsystem: turret13
 +Subsystem: turret14
 +Subsystem: turret15
 +Subsystem: turret16
 +Subsystem: turret17
 +Subsystem: turret18
++Primary Banks: ( "Wraith" )
 +Subsystem: turret19
++Primary Banks: ( "Wraith" )
 +Subsystem: turret20
 +Subsystem: turret21
 +Subsystem: turret22
++Primary Banks: ( "Wraith" )
 +Subsystem: turret23
 +Subsystem: turret24
 +Subsystem: turret25
 +Subsystem: turret26
 +Subsystem: turret27
 +Subsystem: turret28
++Primary Banks: ( "Wraith" )
 +Subsystem: turret29
++Primary Banks: ( "Wraith" )
 +Subsystem: turret30
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 18 "Nix" ) 
@@ -1814,10 +1842,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
@@ -1864,10 +1895,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
@@ -3558,7 +3592,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard-wing "Wrath" 50 ) )
 +Flags: ( )
 
-#Events		;! 39 total
+#Events		;! 40 total
 
 $Formula: ( when 
    ( true ) 
@@ -3577,7 +3611,6 @@ $Formula: ( when
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
-+Team: 1042469579
 
 $Formula: ( when 
    ( has-arrived-delay 1 "Wrath" ) 
@@ -3596,7 +3629,6 @@ $Formula: ( when
 +Name: Wrath arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 8413396
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Hammer" ) 
@@ -3620,7 +3652,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Leo", -1)
-+Team: 8409448
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Cancer" ) 
@@ -3731,7 +3762,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 25
-+Team: 65536
 
 $Formula: ( when 
    ( is-event-true-delay 
@@ -3747,7 +3777,6 @@ $Formula: ( when
 +Name: 1st beam refraction
 +Repeat Count: 1
 +Interval: 1
-+Team: 2048
 
 $Formula: ( when 
    ( or 
@@ -3848,7 +3877,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Pisces", -1)
-+Team: 205815860
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Saggitarius" ) 
@@ -3858,7 +3886,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Saggitarius", -1)
-+Team: 5122960
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Blade" ) 
@@ -3887,7 +3914,6 @@ $Formula: ( when
 +Name: heavy strike
 +Repeat Count: 1
 +Interval: 1
-+Team: 158821412
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Taurus" ) 
@@ -3897,7 +3923,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Taurus", -1)
-+Team: 5122960
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Capricorn" ) 
@@ -3907,7 +3932,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Capricorne", -1)
-+Team: 8412268
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Aries" ) 
@@ -3927,7 +3951,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Libra", -1)
-+Team: 8407192
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Nix" ) 
@@ -3952,7 +3975,6 @@ $Formula: ( when
 +Name: SD Nix arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 158821872
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Nix" ) 
@@ -3966,7 +3988,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy SD Nix", -1)
-+Team: 5122960
 
 $Formula: ( when 
    ( has-arrived-delay 0 "GVD Apep" ) 
@@ -3986,7 +4007,6 @@ $Formula: ( when
 +Name: GVD Apep arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 8412832
 
 $Formula: ( when 
    ( true ) 
@@ -4030,7 +4050,6 @@ $Formula: ( when
 +Name: Return to base
 +Repeat Count: 1
 +Interval: 1
-+Team: 2097152
 
 $Formula: ( when 
    ( has-departed-delay 0 "Alpha 1" ) 
@@ -4109,7 +4128,6 @@ $Formula: ( when
 +Name: Hammer fully warped out
 +Repeat Count: 1
 +Interval: 1
-+Team: 2048
 
 $Formula: ( when 
    ( < ( hits-left "Blade 1" ) 10 ) 
@@ -4142,7 +4160,6 @@ $Formula: ( when
 +Name: Blade 2 retreats
 +Repeat Count: 1
 +Interval: 1
-+Team: 138507182
 
 $Formula: ( when 
    ( and 
@@ -4170,7 +4187,6 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 +Objective:  XSTR("Return to base", -1)
-+Team: 285212687
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "GVD Apep" ) 
@@ -4183,7 +4199,6 @@ $Formula: ( when
 +Name: Apep destroyed
 +Repeat Count: 1
 +Interval: 1
-+Team: 1431655765
 
 $Formula: ( when 
    ( has-departed-delay 0 "Alpha 1" ) 
@@ -4195,6 +4210,21 @@ $Formula: ( when
 +Chained: 0
 +Objective:  XSTR("Return to base", -1)
 +Team: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Cyaegha" ) 37 ) 
+   ( add-goal 
+      "Virgo" 
+      ( ai-chase-any 89 ) 
+   )
+   ( add-goal 
+      "Cancer" 
+      ( ai-chase-any 89 ) 
+   )
+)
++Name: Cyaegha in poor shape
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 4 total
 

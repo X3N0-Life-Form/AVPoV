@@ -373,8 +373,8 @@ E_Sathanas_Arc_03.Watch out for the Bear					//ToRework
 			-SC Nergal (Lilith class)		//destroyed
 			-SD Lamashtu (Demon class)		//destroyed
 			-SJ Sathanas (Sathanas class)		//vital
-			-GVA Seer (Setekh class)		//vital
-			-GTA Watcher (Charybdis class)		//vital
+			-GVA Watcher (Setekh class)		//vital
+			-GTA Seer (Charybdis class)		//vital
 			-SCv Kohl'Taar (Moloch class)		//destroyed
 			-SC Danjal (Rakshasa class)		//destroyed
 			-SC Abyzou (Cain class)			//destroyed
@@ -396,6 +396,7 @@ E_Sathanas_Arc_04.The Waiting Dark						//ToRebalance
 			-SC Hellknight (Rakshasa class)		//vital
 		Other :
 			-GTA Seer (Charibdys class) - mentionned during briefing
+			-SD Nix (Demon class) - idem
 
 
 
@@ -449,7 +450,12 @@ E_Sathanas_07.Sorrow								//
 		The Shivans continue their attacks against the Olympus Shadow at the
 		Capella node
 		Ships :
-			GTD Olympus Shadow (Hecate class)	//destroyed
+			-GTD Olympus Shadow (Hecate class)	//destroyed
+			-GTCv Kendrick Smith (Deimos class)	//non-vital
+			-Blade CG (Sobek class)			//non-vital?
+			-SC Lotode (Rakshasa class)		//destroyed
+			-SC Hellknight (Rakshasa class)		//vital
+			-SCv Toffolon (Moloch class)		//destroyed
 
 
 
