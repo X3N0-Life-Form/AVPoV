@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 02/05/12 at 13:45:08
+$Modified: 04/12/12 at 22:43:21
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,9 +30,9 @@ $end_multi_text
 
 +Viewer pos: 3967.312256, 2589.004150, -1007.321045
 +Viewer orient:
-	0.973365, -0.000005, 0.229260,
-	-0.084052, 0.930362, 0.356879,
-	-0.213296, -0.366644, 0.905581
+	0.999032, -0.000005, -0.043992,
+	0.026348, 0.800863, 0.598268,
+	0.035228, -0.598848, 0.800087
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -175,7 +175,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	1800
 )
 
-#Objects		;! 7 total
+#Objects		;! 9 total
 
 $Name: Alpha 1		;! Object #0
 $Class: SF Mara#
@@ -274,7 +274,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret30
 +Primary Banks: ( "Fast Flak" )
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -470,7 +470,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret62
 +Subsystem: turret63
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -542,7 +542,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Secondary Banks: ( "Shivan Subspace Missile#swarm" )
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -600,6 +600,78 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 1000
+
+$Name: GTC Leviathan 7		;! Object #7
+$Class: GTC Leviathan
+$Team: Hostile
+$Location: 3058.281494, -0.001981, 1879.030273
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09a-01-main
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 3
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 200
+
+$Name: GTC Fenris 8		;! Object #8
+$Class: GTC Fenris
+$Team: Hostile
+$Location: 1874.781982, -0.001953, 3622.436035
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09a-01-main
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 1
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
 
 #Wings		;! 1 total
 

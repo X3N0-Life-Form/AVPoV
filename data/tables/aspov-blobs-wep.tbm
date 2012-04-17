@@ -20,7 +20,7 @@ $Name:                                  Shivan Megafunk Turret
 $Damage Type:	ShivanHugeWeapon
 
 ;; new blobs
-
+;; GTVA
 $Name:                              Mass Driver 
 	+Tech Title:		XSTR("Mass Driver",-1)
 	+Tech Description:	XSTR("Allied warship-mounted mass driver turret
@@ -77,10 +77,9 @@ $Pspew:
 $FOF:								1.4
 
 
-
 $Name:								Wraith
 	+Tech Title:		XSTR("Wraith",-1)
-	+Tech Description:	XSTR("
+	+Tech Description:	XSTR("Based on the successful Banshee, the Wraith is capable of inflicting devastating damage on shields, while still being able to inflict significant hull damage to its target at medium range.
 	
 	",-1)
 	$end_multi_text
@@ -117,6 +116,7 @@ $Piercing Impact Particles:			5
 $Muzzleflash: 						Bmuzzle
 
 
+;; Shivan
 $Name:                          Shivan Turret Laser Up
 	+Tech Title:		XSTR("Upgraded Shivan Turret Laser",-1)
 	+Tech Description:	XSTR("

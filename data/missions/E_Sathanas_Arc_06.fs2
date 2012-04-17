@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("We've got company !", -1)
 $Author: X3N0-Life-Form
 $Created: 10/28/10 at 06:01:10
-$Modified: 10/08/11 at 17:46:45
+$Modified: 04/16/12 at 22:48:04
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 131200
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -24,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -2029.574219, 2237.332764, -5689.731445
++Viewer pos: 2534.946777, 11482.492188, 1362.545532
 +Viewer orient:
-	0.672254, 0.000016, -0.740321,
-	0.345071, 0.884720, 0.313364,
-	0.654982, -0.466123, 0.594751
+	-0.946620, 0.000017, 0.322352,
+	-0.304329, 0.329639, -0.893712,
+	-0.106275, -0.944107, -0.312038
 
 
 $AI Profile: myProfile
@@ -350,7 +354,7 @@ $Orientation:
 	0.457382, 0.862807, 0.215327,
 	-0.425939, 0.000000, 0.904752
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase "Lurz" 50 ) )
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -374,7 +378,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 200
@@ -388,6 +392,7 @@ $Orientation:
 	-0.764818, -0.128845, -0.631232,
 	-0.636537, 0.000000, 0.771246
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -411,7 +416,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 200
@@ -1777,7 +1782,7 @@ $Determination: 10
 $Name: Leo 1		;! Object #52
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -1107.635132, -0.000093, 857.598511
+$Location: -5145.840332, -0.001890, -5437.647949
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1788,6 +1793,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Weak Bomb" "Shivan Bomb" "Shivan Megabomb" "Piranha#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1807,7 +1813,7 @@ $Determination: 10
 $Name: Leo 2		;! Object #53
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -1122.054443, -0.000192, 976.350708
+$Location: -5160.260254, -0.001989, -5318.895996
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1818,6 +1824,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Weak Bomb" "Shivan Bomb" "Shivan Megabomb" "Piranha#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1837,7 +1844,7 @@ $Determination: 10
 $Name: Leo 3		;! Object #54
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -1228.131104, 0.000177, 902.227539
+$Location: -5266.336426, -0.001620, -5393.019043
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1848,6 +1855,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Weak Bomb" "Shivan Bomb" "Shivan Megabomb" "Piranha#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1867,7 +1875,7 @@ $Determination: 10
 $Name: Leo 4		;! Object #55
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -1282.734497, 0.000014, 1006.735046
+$Location: -5320.939941, -0.001783, -5288.511230
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1878,6 +1886,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Weak Bomb" "Shivan Bomb" "Shivan Megabomb" "Piranha#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -3187,7 +3196,7 @@ $Ships: (		;! 4 total
 	"Leo 3"
 	"Leo 4"
 )
-$AI Goals: ( goals ( ai-chase "Olympus Shadow" 50 ) )
+$AI Goals: ( goals ( ai-chase "Olympus Shadow" 49 ) ( ai-chase "Monere" 50 ) )
 +Hotkey: 6
 +Flags: ( )
 +Wave Delay Min: 16
@@ -3386,6 +3395,13 @@ $Formula: ( when
       "mission start - Olympus Shadow" 
       2500 
    )
+   ( add-goal 
+      "Julius" 
+      ( ai-waypoints-once 
+         "Lurz starting point" 
+         80 
+      )
+   )
 )
 +Name: mission start
 +Repeat Count: 1
@@ -3420,7 +3436,23 @@ $Formula: ( when
 +Objective:  XSTR("Defend GTD Olympus Shadow", -1)
 +Team: 0
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Lurz" ) 
+   ( add-goal 
+      "Julius" 
+      ( ai-waypoints-once 
+         "Mekleth starting point" 
+         89 
+      )
+   )
+   ( remove-goal 
+      "Julius" 
+      ( ai-waypoints-once 
+         "Lurz starting point" 
+         80 
+      )
+   )
+)
 +Name: Destroy Lurz
 +Repeat Count: 1
 +Interval: 1
@@ -3434,12 +3466,18 @@ $Formula: ( when
       "High" 
       "SC Mekleth destroyed - OS" 
    )
+   ( remove-goal 
+      "Julius" 
+      ( ai-waypoints-once 
+         "Mekleth starting point" 
+         89 
+      )
+   )
 )
 +Name: Destroy Mekleth
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy SC Mekleth", -1)
-+Team: 6144
 
 $Formula: ( when 
    ( < ( hits-left "Julius" ) 20 ) 
@@ -3470,7 +3508,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 8
-+Team: 1440068909
 
 $Formula: ( when 
    ( has-departed-delay 0 "Julius" ) 
@@ -3498,7 +3535,6 @@ $Formula: ( when
 +Name: GTC Axius retreats
 +Repeat Count: 1
 +Interval: 1
-+Team: 65536
 
 $Formula: ( when 
    ( true ) 
@@ -3508,7 +3544,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 11
-+Team: 65536
 
 $Formula: ( when 
    ( has-departed-delay 0 "Axius" ) 
@@ -3518,7 +3553,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Defend GTC Axius", -1)
-+Team: 1879099392
 
 $Formula: ( when 
    ( has-arrived-delay 2 "Tal Niis" ) 
@@ -3548,11 +3582,23 @@ $Formula: ( when
       "turret04" 
       "Axius" 
    )
+   ( set-object-facing-object 
+      "Axius" 
+      "Tal Niis" 
+      8000 
+      1 
+   )
+   ( add-goal 
+      "Julius" 
+      ( ai-waypoints-once 
+         "Julius towards Tal Niis" 
+         50 
+      )
+   )
 )
 +Name: SC Tal Niis arrives
 +Repeat Count: 1
 +Interval: 1
-+Team: 1599468813
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Tal Niis" ) 
@@ -3586,7 +3632,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Aries (F12)", -1)
-+Team: 1431655765
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Ish'Kafel" ) 
@@ -3599,6 +3644,14 @@ $Formula: ( when
       "High" 
       "SCv Ish'Kafel arrives 2 - OS" 
       5000 
+   )
+   ( add-goal 
+      "Julius" 
+      ( ai-chase "Ish'Kafel" 89 ) 
+   )
+   ( add-goal 
+      "Axius" 
+      ( ai-chase "Ish'Kafel" 89 ) 
    )
 )
 +Name: SCv Ish'Kafel arrives
@@ -3661,7 +3714,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Gemini (F8)", -1)
-+Team: 269484046
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Leo" ) 
@@ -3714,7 +3766,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 15
-+Team: 8412268
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Monere" ) 
@@ -3728,7 +3779,6 @@ $Formula: ( when
 +Name: monere destroyed
 +Repeat Count: 1
 +Interval: 1
-+Team: 244398740
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Pandemonium" ) 
@@ -3784,7 +3834,6 @@ $Formula: ( when ( true ) ( red-alert ) )
 +Repeat Count: 1
 +Interval: 1
 +Chained: 3
-+Team: 150994955
 
 $Formula: ( when 
    ( or 
@@ -3810,7 +3859,6 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 +Objective:  XSTR("Return to base", -1)
-+Team: 1431655765
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Pandemonium" ) 
@@ -3858,11 +3906,27 @@ $end_multi_text
 $Formula: ( is-destroyed-delay 0 "Ish'Kafel" ) 
 +Score: 80
 
-#Waypoints		;! 1 lists total
+#Waypoints		;! 4 lists total
 
 $Name: Ish Kafel path
 $List: (		;! 1 points in list
 	( -1373.444824, 1100.526978, -1658.123291 )
+)
+
+$Name: Julius towards Tal Niis
+$List: (		;! 2 points in list
+	( 1445.801758, 0.000973, -1858.798706 )
+	( 1488.318604, 0.002416, -1191.781250 )
+)
+
+$Name: Lurz starting point
+$List: (		;! 1 points in list
+	( 781.000000, -436.000000, -2090.000000 )
+)
+
+$Name: Mekleth starting point
+$List: (		;! 1 points in list
+	( 307.000000, 828.000000, -2830.000000 )
 )
 
 #Messages		;! 18 total
