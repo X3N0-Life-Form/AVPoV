@@ -10,7 +10,7 @@ $Mass:				0.4
 $Velocity:			320.0
 $Fire Wait:			2.0
 $Damage:			50.0
-$Damage Type:		NormalWeapon
+$Damage Type:		ShivanWeapon
 $Blast Force:		0.2
 $Inner Radius:		15.0
 $Outer Radius:		30.0
@@ -64,7 +64,7 @@ $Mass:				35.0
 $Velocity:			165.0
 $Fire Wait:			7.27
 $Damage:			5500
-$Damage Type:		HugeWeapon
+$Damage Type:		ShivanHugeWeapon
 $Arm radius:		400
 $Blast Force:		1600.0
 $Inner Radius:		60.0
@@ -130,7 +130,7 @@ $Mass:				35.0
 $Velocity:			165.0
 $Fire Wait:			21
 $Damage:			5500
-$Damage Type:		HugeWeapon
+$Damage Type:		ShivanHugeWeapon
 $Arm radius:		400
 $Blast Force:		1600.0
 $Inner Radius:		60.0
@@ -195,7 +195,7 @@ $Mass:				35.0
 $Velocity:			165.0
 $Fire Wait:			7.67
 $Damage:			5500
-$Damage Type:		HugeWeapon
+$Damage Type:		ShivanHugeWeapon
 $Arm radius:		400
 $Blast Force:		1600.0
 $Inner Radius:		60.0
