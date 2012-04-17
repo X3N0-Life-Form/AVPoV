@@ -17,7 +17,7 @@ $Mass:									20.0
 $Velocity:								205.0
 $Fire Wait:								4.0
 $Damage:								10
-$Damage Type:							NormalWeapon
+$Damage Type:							ShivanWeapon
 $Blast Force:							10.0
 $Inner Radius:							10.0														;; radius at which damage is full (0 for impact only)
 $Outer Radius:							30.0														;; max radius for attenuated damage (0 for impact only)
@@ -65,7 +65,7 @@ $Mass:									2.0
 $Velocity:								350.0
 $Fire Wait:								2.5
 $Damage:								10
-$Damage Type:							NormalWeapon
+$Damage Type:							ShivanWeapon
 $Blast Force:							10.0
 $Inner Radius:							10.0														;; radius at which damage is full (0 for impact only)
 $Outer Radius:							30.0														;; max radius for attenuated damage (0 for impact only)
