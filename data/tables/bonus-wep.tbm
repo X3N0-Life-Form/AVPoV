@@ -208,5 +208,60 @@ $Anim:                                 Piranha
 $Impact Explosion:							ExpMissileHit1
 $Impact Explosion Radius:					20.0
 
+$Name: Overkill Mk2
+	+Title: XSTR("GTI TAG-Overkill Missile", 3361)
+	+Description:
+	XSTR(
+		"Special Issue
+		Electronic Warfare", 3362)
+	$end_multi_text
+	+Tech Title: XSTR("GTI TAG-C 'Overkill' Mk2 Missile", 3363)
+	+Tech Anim: Tech_GTI_TAG_Missile_C
+	+Tech Description:
+	XSTR(
+		"The TAG-C 'Overkill' is ...", 3364)
+	$end_multi_text
+$Model File: tagc.pof
+$Mass: 			20.0
+$Velocity:		205.0
+$Fire Wait: 	6.0
+$Damage: 		100
+$Damage Type: 	NormalWeapon
+$Blast Force: 	10.0
+$Inner Radius: 	10.0 ;; radius at which damage is full (0 for impact only)
+$Outer Radius: 	30.0 ;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed: 0 ;; velocity of shockwave. 0 for none.
+$Armor Factor: 		1.0
+$Shield Factor: 	0.6
+$Subsystem Factor: 	0.1
+$Lifetime: 			9.0
+$Energy Consumed: 	0.0 ;; Energy used when fired
+$Cargo Size: 		40.0 ;; Amount of space taken up in weapon cargo
+$Homing: 			YES
+;; ;the following indented fields are only required when $Homing is YES
+	+Type: ASPECT ;; Legal: HEAT, ASPECT
+	+Turn Time: 1.75
+	+Min Lock Time: 2.5 ;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec: 60 ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec: 100 ;; Pixels moved per sec while catching up
+	+Catch-up Penalty: 30 ;; Extra pixels to move after catching up
+$LaunchSnd: 	92 ;; The sound it makes when fired
+$ImpactSnd: 	88 ;; The sound it makes when it hits something
+$FlyBySnd: 		-1
+$Rearm Rate: 	0.33 ;; number of missiles/sec that are rearmed
+$Flags: 		( "player allowed" "no dumbfire" )
+$Trail: ;; Trail cannot be set if Exhaust is set
+	+Start Width: 0.25 ;; Width of trail nearest missile
+	+End Width: 0.5 ;; Width of trail before it "evaporates"
+	+Start Alpha: 1.0
+	+End Alpha: 0.0
+	+Max Life: 0.3 ;; how many seconds before trail disappears
+	+Bitmap: MissileTrail04 ;; Bitmap used to draw trail
+$Icon:		iconTagC
+$Anim: 		tagC
+$Impact Explosion: ExpMissileHit1
+$Impact Explosion Radius: 9.0
+$Tag: 		3 10.0
+$SSM: 		3
 
 #End
