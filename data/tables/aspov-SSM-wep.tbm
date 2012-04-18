@@ -303,8 +303,6 @@ $Icon: 						iconHelios
 $Anim:						Helios
 $Impact Explosion: 			ExpMissileHit1
 $Impact Explosion Radius:	34.66
-$Tag: 		3 8.0
-$SSM: 		2
 $Piercing Impact Explosion: exp04
 $Piercing Impact Radius: 17.33
 $Piercing Impact Velocity: 25
@@ -319,6 +317,8 @@ $Pspew:
 	+Life: 0.1
 	+Scale: 0.0
 	+Bitmap: missilespew06
+$Tag: 		3 8.0
+$SSM: 		2
 $Thruster Flame Effect: missilethruster06
 $Thruster Glow Effect: missileglow06
 
