@@ -172,7 +172,7 @@ $Allowed PBanks:
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy anticap Laser" "Shivan Flak Weapon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Scatter Gun")
-$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb")
+$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "Shivan Mordiggian Bomb")
 $Armor Type:			Shivan Bomber Armor
 $Shield Armor Type:		Shivan Bomber Armor
 $Flags:                 ( "bomber" "player_ship" )
