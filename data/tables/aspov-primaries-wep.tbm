@@ -225,22 +225,22 @@ $Model File:									none ;  laser1-1.pof
 @Laser Color:							90, 20, 150
 @Laser Color2:							0, 0, 0
 @Laser Length:							40.0
-@Laser Head Radius:						4.5
+@Laser Head Radius:						8.5
 @Laser Tail Radius:						2.2
 $Mass:                                	0.2
 $Velocity:                            	1500.0
-$Fire Wait:                            	1.55
-$Damage:                               	400
+$Fire Wait:                            	0.85
+$Damage:                               	225
 $Damage Type:							NormalWeapon
 $Blast Force:							0
 $Inner Radius:							5.0
 $Outer Radius:							15.0
 $Shockwave Speed:						0
 $Armor Factor:							0.05
-$Shield Factor:							0.4
+$Shield Factor:							0.7
 $Subsystem Factor:						1.0
 $Lifetime:                             	1.2
-$Energy Consumed:						2.6	
+$Energy Consumed:						2.2	
 $Cargo Size:							0.0
 $Homing:                               NO
 $LaunchSnd:                            77                              ;; The sound it makes when fired
