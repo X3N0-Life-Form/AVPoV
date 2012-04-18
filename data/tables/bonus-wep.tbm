@@ -112,7 +112,7 @@ $Anim:									tagC
 $Impact Explosion:						ExpMissileHit1
 $Impact Explosion Radius:				9.0
 $Tag:									3 10.0
-$SSM:                                   2
+$SSM:                                   3
 
 $Name:                                 Bane
     +Title:                            XSTR("GTM-XLF Bane", 3365)
@@ -262,6 +262,6 @@ $Anim: 		tagC
 $Impact Explosion: ExpMissileHit1
 $Impact Explosion Radius: 9.0
 $Tag: 		3 10.0
-$SSM: 		3
+$SSM: 		4
 
 #End
