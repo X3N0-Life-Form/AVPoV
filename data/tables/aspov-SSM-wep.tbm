@@ -291,7 +291,7 @@ $ImpactSnd: 101
 $FlyBySnd: -1
 $Rearm Rate: 0.02
 +Weapon Range: 5040
-$Flags: ( "Bomb" "Huge" "No Dumbfire" "particle spew" )
+$Flags: ( "Bomb" "Huge" "No Dumbfire" "particle spew" "player allowed" )
 $Trail:
 	+Start Width:	1.4
 	+End Width: 	0.0
@@ -318,7 +318,7 @@ $Pspew:
 	+Scale: 0.0
 	+Bitmap: missilespew06
 $Tag: 		3 8.0
-$SSM: 		2
+$SSM: 		3
 $Thruster Flame Effect: missilethruster06
 $Thruster Glow Effect: missileglow06
 

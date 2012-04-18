@@ -24,6 +24,15 @@ $SSM:
 	+Radius:		1600
 	+Offset:		1
 	+Custom Message:"Inbound Shivan Subspace Missile Barrage"
+	
+$SSM:
+	+Weapon:		Shivan Mordiggian Bomb
+	+Count:			1
+	+WarpRadius:	40
+	+WarpTime:		8
+	+Radius:		1600
+	+Offset:		1
+	+Custom Message:"Inbound Shivan Mordiggian Bomb"
 
 $SSM:
     +Weapon:		Bane

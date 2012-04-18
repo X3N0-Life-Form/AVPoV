@@ -490,7 +490,7 @@ $Expl Propagates:       NO
 $Shockwave Speed:       0.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "Shivan Heavy Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Scatter Gun" "Shivan Sniper Gun" "Shivan Flak Weapon")
 $Default PBanks:        ( "Shivan Anticap Laser" "Shivan Heavy Laser Up" )
-$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan" "Shivan LR Swarm")
+$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan" "Shivan LR Swarm" "Shivan Mordiggian Bomb")
 $Default SBanks:        ( "Tempest Adv#Shivan" "Shivan LR Swarm" )
 $SBank Capacity:        ( 80, 80 )
 $Shields:               1240
