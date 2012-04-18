@@ -15,7 +15,16 @@ $SSM:
 	+Radius:		400
 	+Offset:		1
 	+Custom Message:"Inbound Shivan Anti-Strikecraft Subspace Missile Strike"
-	
+
+$SSM:
+	+Weapon:		Shivan Subspace Missile
+	+Count:			6
+	+WarpRadius:	40
+	+WarpTime:		8
+	+Radius:		1600
+	+Offset:		1
+	+Custom Message:"Inbound Shivan Subspace Missile Barrage"
+
 $SSM:
     +Weapon:		Bane
 	+Count:			3
