@@ -273,6 +273,9 @@ $Name:	257	largeturret_elev.ogg,	0, 0.70, 1, 400, 800		; Very large turret barre
 
 ; my sounds
 $Name:	258 bleeps.ogg,		0, 0.50, 1, 50, 100
+;; look for message sounds
+;; remix shivan weapon sounds for upgraded and heavy variants
+;; & maybe beams as well?
 #Game Sounds End
 
 #Interface Sounds Start
