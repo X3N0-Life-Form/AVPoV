@@ -32,7 +32,7 @@ $Name:	WC3_TragicConfrontation.ogg	72.2	88200		;; Death
 #Soundtrack End
 
 #Soundtrack Start
-$Soundtrack Name:		D_Cyaegha
+$Soundtrack Name:		D_Cyaegha ;; should be changed to E_Cyeagha (D is the NTF arc) in this file & every mission that uses it
 $Name:	HWC_14.ogg					153.0	88200		;; Ambience
 $Name:	FO_metallic-monks.ogg		9.1		88200		;; Allied arrival during normal
 $Name:	TDC_14-arv.ogg				4.1		88200		;; Enemy arrival during normal
@@ -47,5 +47,9 @@ $Name:	HWC_59.ogg					28.7	88200		;; Goal failed
 $Name:	MW_Death.ogg				13.9	88200		;; Death
 
 ;; else D/E HWC_37
+;; F_
+;;  TA for final mission(s) (battle 6 or 7)
+;;  reduce use of FS music to emphasize difference
+;;  other ideas: soul reaver
 
 #Soundtrack End
