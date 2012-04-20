@@ -179,7 +179,7 @@ $Mass:                          100.0
 $Velocity:                      1000.0 
 $Fire Wait:                     25.0 
 $Damage:                        440
-$Damage Type:					HugeWeapon
+$Damage Type:					ShivanHugeWeapon
 $Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
@@ -248,7 +248,7 @@ $Mass:                          100.0
 $Velocity:                      1000.0 
 $Fire Wait:                     25.0 
 $Damage:                        826	
-$Damage Type:					HugeWeapon	
+$Damage Type:					ShivanHugeWeapon	
 $Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
