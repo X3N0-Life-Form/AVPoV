@@ -7,6 +7,13 @@
 
 $Name:                                 	Shivan Swarmer Bomb
 	+Title:								XSTR("Shivan Swarmer Bomb",-1)
+	+Description:
+		XSTR(
+		"Special Issue
+		Defence Saturation Bomb
+		Anti-Capital Ship Warhead
+		", -1)
+		$end_multi_text
 $Model File:							S_Bomb.pof
 $POF target LOD:						0
 $Mass:									25.0
@@ -71,6 +78,13 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:                                 	Shivan Advanced Swarmer Bomb
 	+Title:								XSTR("Shivan Avanced Swarmer Bomb",-1)
+	+Description:
+		XSTR(
+		"Special Issue
+		Defense Saturation Bomb
+		Non-Conventional Warhead
+		", -1)
+		$end_multi_text
 $Model File:							S_Trebuchet.pof
 $POF target LOD:						0
 $Mass:									35.0
@@ -141,6 +155,11 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:                                 	Shivan LR Swarm
 	+Title:								XSTR("Shivan Long Range Swarmer Missile",-1)
+	+Description:
+		XSTR(
+		"Long-Range Anti-Strikecraft
+		High Payload", -1)
+		$end_multi_text
 $Model File:							S_Trebuchet.pof
 $POF target LOD:						0
 $Mass:									3.0
@@ -210,6 +229,11 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:		Tempest Adv#Shivan
 	+title:			XSTR("Shivan Advanced Dumbfire Missile",-1)
+	+Description:
+		XSTR(
+		"Standard Issue
+		High-Payload Dumbfire", -1)
+		$end_multi_text
 $Model File:		S_Hornet.pof
 $POF target LOD:	0
 $Mass:				0.7
@@ -318,8 +342,7 @@ $Name:		Trebuchet#Shivan
 +Title:                                 XSTR("Shivan Long Range Missile", -1)
 +Description:
 XSTR(
-"Prototype
-Long-Range Anti-Bomber
+"Long-Range Anti-Bomber
 High Payload", -1)
 $end_multi_text
 $Damage Type:		ShivanWeapon
