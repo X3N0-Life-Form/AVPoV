@@ -22,7 +22,7 @@ $Damage Type:					ShivanHugeWeapon
 $Name:							SAAA
 	+nocreate ;:
 	+Tech Title:		XSTR("SAAA",-1)
-	+Tech Description:	XSTR("
+	+Tech Description:	XSTR("Shivan Anti-Fighter Beam
 	
 	",-1)
 	$end_multi_text
@@ -32,7 +32,7 @@ $Damage Type:					ShivanHugeWeapon
 
 $Name:                          LRLRed
 	+Tech Title:		XSTR("LRLRed",-1)
-	+Tech Description:	XSTR("Long range large Shivan beam
+	+Tech Description:	XSTR("Long Range Large Shivan Beam
 	
 	While this weapon appears to be identical to the Shivan large beam (LRed), it is capable of achieving beam lock at extreme range, akin to the SD Lucifer's own beam weaponery. So far, the SD Vampire has been the only Shivan destroyer to carry this weapon.
 	",-1)
@@ -132,7 +132,7 @@ $BeamInfo:
 
 $Name:                          MRed
 	+Tech Title:		XSTR("MRed",-1)
-	+Tech Description:	XSTR("Medium Shivan beam
+	+Tech Description:	XSTR("Medium Shivan Beam
 	
 	This weapon is somewhere in between destroyer and cruiser grade beam canons, in terms of firepower. It is mainly found on Shivan corvettes and destroyers.
 	",-1)
@@ -234,7 +234,7 @@ $BeamInfo:
 		
 $Name:                          MRedUp
 	+Tech Title:		XSTR("MRedUp",-1)
-	+Tech Description:	XSTR("Upgraded Shivan medium beam
+	+Tech Description:	XSTR("Upgraded Medium Shivan Beam
 	
 	",-1)
 	$end_multi_text
@@ -336,9 +336,9 @@ $BeamInfo:
 
 $Name:							MGreen
 	+Tech Title:		XSTR("MGreen",-1)
-	+Tech Description:	XSTR("Medium Terran beam
+	+Tech Description:	XSTR("Medium Terran Beam
 	
-	",-1)
+	Once larger ships got equipped with more effective beam weaponery, it became clear that the Small Beam equipped on Leviathan and Aeolus cruisers wasn't up to the task. The Medium Beam research project's aim was to provide the brand new Aeolus cruisers with decent long range anti-warship capabilties, something the aging Leviathan and Fenris designs could achieve with their Fusion Mortar battery. Optimized to be outfitted exclusively into the Aeolus, the Medium Terran Beam is rarely found on other ship classes. Very few Aeolus have themselves been retrofitted with Medium Beams, this privilege being usually reserved for Special Operations units or Combat Groups",-1)
 	$end_multi_text
 $Model File:					none 				; laser1-1.pof
 @Laser Bitmap:               	laserglow01
@@ -431,7 +431,7 @@ $BeamInfo:
 
 $Name:							MGreenUp
 	+Tech Title:		XSTR("MGreenUp",-1)
-	+Tech Description:	XSTR("Upgraded Medium Terrant beam
+	+Tech Description:	XSTR("Upgraded Medium Terran Beam
 	
 	",-1)
 	$end_multi_text
