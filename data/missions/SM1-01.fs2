@@ -48,9 +48,9 @@ $Variables:
 $Stage Text:
  XSTR("Welcome to the Aquitaine
 
-This is Admiral Petrarch, commanding officer of the GTD Aquitaine. For those squadrons joining us here in Vega, welcome aboard. 
+This is Admiral Petrarch, commanding officer of the $g GTD $g Aquitaine. For those squadrons joining us here in $b Vega, welcome aboard. 
 
-With a complement of 150 combat spacecraft, the Aquitaine serves as flagship of the GTVA 3rd Fleet, based in the Capella system. You join an elite crew of 10,000, the finest officers and enlisted personnel serving the Alliance today.", 507)
+With a complement of 150 combat spacecraft, the $g Aquitaine serves as flagship of the GTVA 3rd Fleet, based in the $b Capella system. You join an elite crew of 10,000, the finest officers and enlisted personnel serving the Alliance today.", 507)
 $end_multi_text
 $Ani Filename: cb_sm1-01_a.ani
 +Wave Filename: SM101_CB_01.wav
@@ -58,9 +58,9 @@ $Ani Filename: cb_sm1-01_a.ani
 $Stage Text:
  XSTR("The Neo-Terran Front
 
-After 18 months of fighting, Admiral Bosch's Neo-Terran Front has become the most significant threat to regional security since the Great War ended 32 years ago. 
+After 18 months of fighting, Admiral Bosch's $r Neo-Terran $r Front has become the most significant threat to regional security since the $r Great $r War ended 32 years ago. 
 
-The NTF demands the independence of their systems and the revocation of the Beta Aquilae Convention, or BETAC. The BETAC treaty centralized power in the GTVA as the supreme authority in Terran-Vasudan space.", 508)
+The $r NTF demands the independence of their systems and the revocation of the Beta Aquilae Convention, or BETAC. The BETAC treaty centralized power in the $g GTVA as the supreme authority in Terran-Vasudan space.", 508)
 $end_multi_text
 $Ani Filename: cb_sm1-01_b.ani
 +Wave Filename: SM101_CB_02.wav
@@ -68,9 +68,9 @@ $Ani Filename: cb_sm1-01_b.ani
 $Stage Text:
  XSTR("The Ideology of Neo-Terra
 
-Integral to NTF ideology is Bosch's vision of Neo-Terra, a utopian society where the lost grandeur of Earth will be restored. Bosch and his followers oppose any alliance with the Vasudans as a threat to the future of the human race.
+Integral to $r NTF ideology is Bosch's vision of Neo-Terra, a utopian society where the lost grandeur of Earth will be restored. Bosch and his followers oppose any alliance with the Vasudans as a threat to the future of the human race.
 
-The rebels are entrenched in Polaris, Regulus, and Sirius. But before we hit these strongholds, we must secure Epsilon Pegasi, Alpha Centauri, and Deneb. These contested systems are now the focal point of allied operations.", 509)
+The rebels are entrenched in $b Polaris, $b Regulus, and $b Sirius. But before we hit these strongholds, we must secure $b Epsilon $b Pegasi, $b Alpha $b Centauri, and $b Deneb. These contested systems are now the focal point of allied operations.", 509)
 $end_multi_text
 $Ani Filename: cb_sm1-01_c.ani
 +Wave Filename: SM101_CB_03.wav
@@ -78,9 +78,9 @@ $Ani Filename: cb_sm1-01_c.ani
 $Stage Text:
  XSTR("The Battle of Deneb
 
-Allied Command has ordered the Aquitaine into the Deneb system. There we will reinforce the 13th Vasudan Battle Group, led by the GVD Psamtik. 
+Allied Command has ordered the $g Aquitaine into the $b Deneb system. There we will reinforce the $f 13th $f Vasudan $f Battle $f Group, led by the $g GVD $g Psamtik. 
 
-Both the NTF and the GTVA have sustained heavy casualties in the battle for Deneb. In the past seventy-two hours, we have lost the GVC Andromeda, the GTC Trafalgar, and over 15 fighter wings. Command anticipates the arrival of the Aquitaine and the Psamtik will shift the battle for Deneb in our favor and force the NTF to withdraw to Sirius.", 510)
+Both the $r NTF and the $g GTVA have sustained heavy casualties in the battle for $b Deneb. In the past seventy-two hours, we have lost the $g GVC $g Andromeda, the $g GTC $g Trafalgar, and over 15 fighter wings. Command anticipates the arrival of the $g Aquitaine and the $g Psamtik will shift the battle for $b Deneb in our favor and force the $r NTF to withdraw to $b Sirius.", 510)
 $end_multi_text
 $Ani Filename: cb_sm1-01_d.ani
 +Wave Filename: SM101_CB_04.wav
@@ -90,7 +90,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("This is Captain Loukakis, squadron leader of the 53rd Hammerheads. At 0320 hours, the $f Aquitaine entered the Deneb system. Admiral Petrarch launched fighter and bomber wings as part of an all-out attack against $h NTF positions throughout the system. He has kept the Hammerheads on standby, until now.", 511)
+ XSTR("This is Captain Loukakis, squadron leader of the 53rd Hammerheads. At 0320 hours, the $f Aquitaine entered the $b Deneb system. Admiral Petrarch launched fighter and bomber wings as part of an all-out attack against $h NTF positions throughout the system. He has kept the Hammerheads on standby, until now.", 511)
 $end_multi_text
 $voice: SM101_MB_01.wav
 $camera_pos: -2755.950439, 16520.009766, 16621.408203
