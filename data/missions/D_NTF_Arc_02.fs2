@@ -46,14 +46,14 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Greetings pilots.
+ XSTR("Greetings pilots. This briefing is classified level $E Upsilon.
 
-As some of you might already know $y Special $y Operation $y Command has just commandered us for a special mission, due to our squadron's good performance in the past weeks.
-Our task is to deliver something for one of GTVI's covered agent.
+As some of you might already know, $y Special $y Operations $y Command has just commandered us for a special mission, due to our squadron's good performance in the past weeks.
+Our task is to deliver something for one of GTVI's deep cover agent. Whether it's orders, tools, or a lunch box, is none of our concern. All we need to do is stick a TAG-B on one of their warship.
 
-To be perfectly honest, $y GTVI doesn't know if that agent is still alive or not. His or her cover might well have been completely blown up during a previous operation.
+$y GTVI is unsure whether that agent is still active or not, as his or her cover may or may not have been blown up during a previous operation. SOC hopes this operation will shed some light on this agent's status.
 
-The tricky part is to make the delivery while making the $h NTF believe we are attempting to destroy one of their cruiser.", -1)
+The tricky part will be to make the delivery while making the $h NTF believe we are attempting to destroy one of their cruiser.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -48.033691, 5059.853516, -3143.606445
@@ -120,7 +120,7 @@ $multi_text
 
 As you know, the Fenris cruisers are not exaclty the toughest warships in our fleets. That's what we are counting on to fool the $h NTF.
 
-The $g GTC $g Blair will remain beyond the Alexandria's weapon and beam lock range, while $f Alpha $f 1, equiped with $y TAG-B missiles, is going to tag the NTF cruiser and allow the Blair's main beam to lock on its target.", -1)
+The $g GTC $g Blair will remain beyond the $r Alexandria's weapon and beam lock range, while $f Alpha $f 1, equiped with $y TAG-B missiles, is going to tag the NTF cruiser and allow the Blair's main beam to lock on its target.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -48.033691, 5059.853516, -3143.606445
@@ -183,12 +183,12 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Keep in mind that the $r Alexandria MUST survive this engagement. Once you've tagged the cruiser once, you will head back to the $g Blair and assume escort positions.
+ XSTR("Keep in mind that the $r Alexandria MUST survive this engagement. Once you've tagged the cruiser, you will head back to the $g Blair and assume escort positions.
 
 Your fighters and loadouts have been preset.
 You are to engage any fighter or bomber the $r NTF might send as reinforcements.
 
-Once the $r Alexandria will have departed the field of engagement, you will be pulled back to base.", -1)
+Once the $r Alexandria has departed the field of engagement, you are to return to base.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -48.033691, 5059.853516, -3143.606445
