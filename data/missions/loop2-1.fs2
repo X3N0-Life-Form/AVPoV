@@ -55,7 +55,7 @@ $Ani Filename: Cb_loop-a_e.ani
 $Stage Text:
  XSTR("Lieutenant Commander Snipes
 
-At 0437 reconnaissance units received a coded transmission from Lieutenant Commander Snipes. The Commander's vessel, the NTT Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The Grall was docked to the NTC Alexandria when the cruiser ran our blockade of the Knossos portal in Gamma Draconis.", 171)
+At 0437 reconnaissance units received a coded transmission from Lieutenant Commander Snipes. The Commander's vessel, the $e NTT $e Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The Grall was docked to the $h NTC $h Alexandria when the cruiser ran our blockade of the Knossos portal in $b Gamma $b Draconis.", 171)
 $end_multi_text
 $Ani Filename: Cb_loop-b_b.ani
 +Wave Filename: LP2-1_CB_02a.wav
@@ -73,7 +73,7 @@ $Ani Filename: Cb_loop-b_b.ani
 $Stage Text:
  XSTR("Allied Retreat
 
-As you know, Allied forces are in full retreat to Gamma Draconis, so logistical support will be virtually non-existent. We have no available reinforcements and only one recovery ship. We're operating in a Shivan-infested area, so expect a fierce enemy offensive. The odds are against you on this one, pilot.", 173)
+As you know, Allied forces are in full retreat to $b Gamma $b Draconis, so logistical support will be virtually non-existent. We have no available reinforcements and only one recovery ship. We're operating in a Shivan-infested area, so expect a fierce enemy offensive. The odds are against you on this one, pilot.", 173)
 $end_multi_text
 $Ani Filename: Cb_loop-a_a.ani
 +Wave Filename: LP2-1_CB_04.wav
@@ -83,7 +83,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("You know why you're here, pilot, so let's get down to work. Recon located a Pharos navigation buoy not far from where Snipes's transmission was received. Your wing will be inserted at that position to find the Grall and make contact with Snipes. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
+ XSTR("You know why you're here, pilot, so let's get down to work. Recon located a Pharos navigation buoy not far from where Snipes's transmission was received. Your wing will be inserted at that position to find the $e Grall and make contact with Snipes. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
 $end_multi_text
 $voice: LP2-1_MB_01.wav
 $camera_pos: 420.264740, 13972.686523, 6672.515625
@@ -123,7 +123,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding Snipes and the Grall. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with Tempests and Rockeyes.", 175)
+ XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding Snipes and the $e Grall. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with Tempests and Rockeyes.", 175)
 $end_multi_text
 $voice: LP2-1_MB_02.wav
 $camera_pos: 842.049438, 14636.061523, 5293.390137
@@ -187,7 +187,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once you locate Snipes, call in Lambda 1. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
+ XSTR("Once you locate Snipes, call in $g Lambda $g 1. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the $e Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
 $end_multi_text
 $voice: LP2-1_MB_03.wav
 $camera_pos: 1039.498047, 15408.145508, 6231.711914
