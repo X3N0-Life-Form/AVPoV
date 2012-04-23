@@ -116,7 +116,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command believes the Shivans are preparing for a more aggressive attack on Capella. The $h SC $h Behemoth, a Rakshasa-class cruiser, guards the depot with a wing of Mara fighters. Enemy freighters are entering the system, dropping their cargo, and departing through the portal. Your mission, pilot, is to execute a clean sweep of the area.", 672)
+ XSTR("Command believes the $r Shivans are preparing for a more aggressive attack on $b Capella. The $h SC $h Behemoth, a Rakshasa-class cruiser, guards the depot with a wing of Mara fighters. Enemy freighters are entering the system, dropping their cargo, and departing through the portal. Your mission, pilot, is to execute a clean sweep of the area.", 672)
 $end_multi_text
 $voice: SM104_MB_02.wav
 $camera_pos: -1518.932495, 4444.805176, -2760.300781
