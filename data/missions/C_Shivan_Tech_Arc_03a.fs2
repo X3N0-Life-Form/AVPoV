@@ -1,8 +1,8 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("Untitled", -1)
-$Author: Droguet Adrien
+$Name:  XSTR("The Seraphim's Flight", -1)
+$Author: X3N0-Life-Form
 $Created: 02/16/08 at 15:17:45
 $Modified: 08/15/11 at 22:50:42
 $Notes:
@@ -48,64 +48,21 @@ $Num stages: 0
 
 $Starting Shipname: Gamma 1
 $Ship Choices: (
-	"GTF Ulysses"	5
-	"GTF Hercules"	5
-	"GTF Hercules Mark II"	5
-	"GTF Ares"	5
-	"GTF Erinyes"	5
-	"GTF Loki"	5
-	"GTF Pegasus"	5
-	"GTF Perseus"	5
-	"GTF Myrmidon"	5
-	"SF Mara (terrans)"	5
-	"GTB Artemis"	5
-	"GTB Artemis D.H."	5
-	"GTB Medusa"	5
-	"GTB Ursa"	5
-	"GTB Zeus"	5
-	"GTB Boanerges"	5
-	"GVF Ptah"	5
+	"SF Mara"	4
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	16
-	"Subach HL-D"	16
-	"Mekhu HL-7"	22
-	"Mekhu HL-7D"	16
-	"Akheton SDG"	16
-	"Morning Star"	16
-	"MorningStar D"	16
-	"Prometheus R"	16
-	"Prometheus S"	16
-	"Prometheus D"	16
-	"Maxim"	16
-	"Maxim D"	16
-	"UD-8 Kayser"	16
-	"UD-D Kayser"	16
-	"Circe"	16
-	"Lamprey"	16
-	"Rockeye"	650
-	"Rockeye D"	500
-	"Tempest"	500
-	"Tempest D"	500
-	"Hornet"	500
-	"Hornet D"	500
-	"Tornado"	500
-	"Tornado D"	500
-	"Harpoon"	500
-	"Harpoon D"	500
-	"Trebuchet"	500
-	"TAG-A"	500
-	"TAG-B"	500
-	"TAG-C"	500
-	"Piranha"	500
-	"Stiletto II"	500
-	"Infyrno"	500
-	"Infyrno D"	500
-	"Cyclops"	500
-	"Cyclops#short"	500
-	"Helios"	500
-	"EMP Adv."	500
+	"Mekhu HL-7"	12
+	"Akheton SDG"	8
+	"Morning Star"	8
+	"UD-6"		16
+	"Rockeye"	150
+	"Tempest"	1400
+	"Hornet"	800
+	"Tornado"	400
+	"Harpoon"	120
+	"Piranha"	30
+	"Stiletto II"	120
 )
 
 #Objects		;! 3 total
