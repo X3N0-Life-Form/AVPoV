@@ -43,7 +43,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("Greetings pilots. As you know, a significant portion of our expeditionary force has been recalled to the $y civil $y war front. Despite the destruction of the $rSD $rRavana, the $r shivan forces present in the area are too strong for us to continue our exploration of the $b nebula.
+ XSTR("Greetings pilots. As you know, a significant portion of our expeditionary force has been recalled to the civil war front. Despite the destruction of the $r SD $r Ravana, the $r shivan forces present in the area are too strong for us to continue our exploration of the $h nebula.
 
 However, $g Command has decided not to withdraw the fleet completely.", -1)
 $end_multi_text
@@ -117,9 +117,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Instead of blockading the $y subspace $y portal, which would prevent further studies of the device, we will be defending the node on this end.
+ XSTR("Instead of blockading the $y subspace $y portal, which would prevent further studies of the device, we will defend the node on this end. Several allied capital ships will be patroling the nebula within a relatively small radius around the $b Gamma $b Draconnis node.
 
-Our squadron has been assigned with the task of escorting our capital ships while they sweep the area and engage any hostiles.", -1)
+Our squadron has been assigned with the task of escorting these warships as they sweep the area and engage any hostile forces.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 18.107397, 1514.077759, -497.212982
@@ -213,12 +213,12 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$f Alpha, your task is to escort the $g GVC $g Melek.
+ XSTR("$f Alpha wing, your task is to escort the $g GVC $g Melek.
 $f Beta will be escorting the $g GVCv $g Thebes.
 
 $f Delta and $f Gamma will assist the $g GVD $g Pharaoh in the defence of the jump node.
 
-$fEpsilon and $fIota wings will be standing by to assist at command's discretion.", -1)
+$f Epsilon and $f Iota wings will be standing by to assist at Command's discretion.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 18.107397, 1514.077759, -497.212982
