@@ -42,7 +42,7 @@ $start_stage
 $multi_text
  XSTR("Good evening pilots.
 
-Command is planing an all out assault on $r NTF rallying point. According to $y GTVI, we should be able to take them by surprize before they get the chance to regroup with other capital ships.", -1)
+Command is planing an all out assault on $r NTF rallying points within the system. According to $y GTVI, we should be able to take out $r NTF warships before they regroup with the rest of their fleet", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1082.174683, -540.167358
@@ -82,10 +82,10 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our mission is to assist the $g GTCv $g Lamia while she engages the $r NTCv $r Byzance and any ship that could attempt to join with her.
+ XSTR("Our mission is to assist the $g GTCv $g Lamia while she engages the $r NTCv $r Byzance and destroy any ship that reaches this rallying point.
 
-$f Alpha wing will be flying Sekhmet Heavy Bomber and will assist the $g GTCv $g Lamia in taking down enemy capital ships.
-Beta wing will provide fighter cover.", -1)
+$f Alpha wing will be flying Sekhmet Heavy Bomber and will assist the $g GTCv $g Lamia's assault on $r NTF forces.
+$f Beta wing will provide fighter cover.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1082.174683, -540.167358
@@ -149,9 +149,10 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The is the beginning of the end for the $h NTF, pilots. The Rebels have nowhere to run and with the $f Colossus on our side, victory is only a few days away.
+ XSTR("The is the beginning of the end for the $h NTF, pilots. The Rebels have nowhere to run and with the $f Colossus on our side, total victory is only a matter of days now.
 
-18 months of slaughter are finally coming to an end.", -1)
+18 months of slaughter are finally coming to an end.
+Good hunting, pilots", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1082.174683, -540.167358
