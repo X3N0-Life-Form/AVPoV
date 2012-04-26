@@ -2,7 +2,7 @@
 
 $Version: 0.10
 $Name:  XSTR("A lion is home", -1)
-$Author: Adrarsis
+$Author: X3N0-Life-Form
 $Created: 06/26/10 at 17:23:48
 $Modified: 08/15/11 at 22:48:45
 $Notes:
@@ -42,9 +42,9 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("$g Command has decided to break the shivan blockade at the subspace portal before they deploy more forces there.
+ XSTR("$g Command has decided to try and break the blockade at the subspace portal before the $r Shivans deploy more forces there, and assist allied forces still in system.
 
-Our scouts have spotted 4 $h shivan $h cruisers, designated Doom wing, one $h bomber wing, designated Taurus, and two $h fighter wings, designated Scorpio and Cancer.", -1)
+Our scouts have spotted four Shivan cruisers, designated $h Doom wing, one bomber wing, designated $h Taurus, and two fighter wings, designated $h Scorpio and $h Cancer.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1457.250732, -1029.160400
@@ -191,7 +191,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once the $g Apep is in position, she will deploy $f bombers, additionnal $f fighters and a $f support $f ship to assist you. Then, she'll recharge her subspace drive and clear out as soon as possible to avoid being embushed by the $r Vampire.", -1)
+ XSTR("Once the $g Apep is in position, we will deploy our bombers, additionnal fighter wing and a support ship to assist you. Then, she'll recharge her subspace drive and clear out as soon as possible to avoid being embushed by the $r Vampire.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1457.250732, -1029.160400
@@ -338,8 +338,8 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We won't be deploying more warships until the portal is secured.
-You are ordered to neutralize any $h reinforcements the shivan might deploy until $f epsilon, $f delta and $f gamma wing arrive.", -1)
+ XSTR("No additionnal warship will be deployed until the portal is secured.
+You are ordered to neutralize any reinforcements the $r Shivan might deploy until $f Epsilon, $f Delta and $f Gamma wing arrive.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 1457.250732, -1029.160400
