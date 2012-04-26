@@ -44,7 +44,9 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("All right pilots, we have got the $b Gamma $b Draconnis system secure, so $y Command is sending us back in the nebula.", -1)
+ XSTR("With the destruction of the $r SD $r Vampire, $h Shivan activity within $b Gamma $b Draconnis as diminished significantly. This, and recent victories on the $h Civil $h War front, has prompted $y Command to send our battlegroup back in the nebula.
+With the deployment of the $g GTVA $g Colossus against $r NTF forces, the $E Security $E Council has reached a consensus regarding fleet actions in the nebula: we are to secure the node as tightly as possible, and only engage enemy command ships with overwhelming force.
+This means that our primary objective has switched from a search and destroy policy to a more defensive posture, and limit allied casualties as much as possible.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 539.731201, -185.927917
@@ -72,8 +74,10 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Because of our limited sensor capabilities, our orders are to patrol the nebula within a small perimeter around the $b Gamma $b Draconnis node.
-To this purpose, $y Command deployed the $g Hammer $g Combat $g Group, which will be joined by the $g Blade $g Combat $g Group within 12 hours.", -1)
+ XSTR("Because of our limited sensor capabilities, allied capital ships will be patroling the $b Gamma $b Draconnis node, similarily to the defensive formation assumed against the $r SD $r Vampire, until more reinforcements arrive.
+To this purpose, $y Command deployed the $g Hammer $g Combat $g Group, which will be joined by the $g Blade $g Combat $g Group within 12 hours.
+
+Should another destroyer threaten our positions in the nebula, these $f Combat $f Group $f Units will spearhead any offensive action taken against this threat.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 539.731201, -185.927917
@@ -420,7 +424,7 @@ $end_multi_text
 $Callsign: X3N0-Life-Form
 $Callsign: Atao
 $Callsign: lapie
-$Callsign: Xiøn
+$Callsign: Xiï¿½n
 $Callsign: Pij
 $Callsign: Nyu
 $Callsign: Koda
@@ -1048,7 +1052,7 @@ $Determination: 10
 
 $Name: Manticore Alpha 4		;! Object #20
 $Class: GVF Tauret
-$Callsign: Xiøn
+$Callsign: Xiï¿½n
 
 $Team: Friendly
 $Location: 4850.876465, 113.762787, 3401.352783
