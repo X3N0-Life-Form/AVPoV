@@ -45,7 +45,9 @@ $num_stages: 3
 $start_stage
 $multi_text
  XSTR("Good morning pilots.
-At 2855 Vasudan Galactic Time, the $g Blade $g Combat Group and several $w gas $w miners have crossed the $b subspace $b portal.
+At 2855 Vasudan Galactic Time, the $g Blade $g Combat Group and several $w gas $w miners have crossed the $b subspace $b portal in $b Gamma $b Draconnis.
+These gas miners will be deployed into several mining operations throughout the theatre, and extract rare gases present in large quantity in the nebula.
+
 Command wants our squadron to oversee one of those mining operations.", -1)
 $end_multi_text
 $voice: none.wav
@@ -122,12 +124,11 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$f Alpha and $f beta wings will be deployed to guard the $w Jupiter $w Gas $w Miners.
-Command will also deploy the $g GVCv $g Dahshor to provide fire support.
+ XSTR("$f Alpha and $f Beta wings will be deployed to guard the $w Jupiter mining operation, with the assistance of the $g GVCv $g Dahshor, which will provide fire support and anti-capital ship cover.
 
-Intelligence reports the risk of an engagement as high, so be prepared for anything.
+Although Intelligence believes that the $r Shivans will prioritize allied warships over the gas miners, you orders are to provide cover for the entire operation. In other words, don't sit next to that corvette.
 
-With these mining operations, Command hope to enable mass production of the $y Prometheus $y Standard $y Canon, a modified version of the original Prometheus used during the $r Great $r War.", -1)
+With these mining operations, Command hope to enable mass production of the $e Prometheus $e Standard $e Canon, a modified version of the original Prometheus used during the $h Great $h War, which features a longer range and shield damage, at the cost of a greater power consumption over the original $e Prometheus.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -1842.720337, 2150.418701, -128.988770
@@ -287,7 +288,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("One more thing : because we still have limited military ressources despite the recent victories on the $r Civil $r War front, it is vital that the $g Dahshor survives.
+ XSTR("One more thing : we still have limited military ressources despite the recent victories on the $h Civil $h War front, it is vital that the $g Dahshor survives.
 
 And keep an eye on those gas miners.", -1)
 $end_multi_text
