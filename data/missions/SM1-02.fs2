@@ -45,7 +45,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Command has ordered the 53rd Hammerheads to secure an $h NTF depot in the Deneb asteroid belt. Six sentry guns are positioned around the depot, and rebel freighters are now moving the cargo out of the area. The $h NTF has gone through a lot of trouble to hide these materials.", 565)
+ XSTR("Command has ordered the 53rd Hammerheads to secure an $h NTF depot in the $b Deneb asteroid belt. Six sentry guns are positioned around the depot, and rebel freighters are now moving the cargo out of the area. The $h NTF has gone through a lot of trouble to hide these materials.", 565)
 $end_multi_text
 $voice: SM102_MB_01.wav
 $camera_pos: -2496.588135, 2794.064453, -2112.298828
@@ -401,7 +401,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Subach HL-7" "Subach HL-7" )
-+Secondary Banks: ( "Rockeye" "Rockeye" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -636,7 +636,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Subach HL-7" "Subach HL-7" )
-+Secondary Banks: ( "Rockeye" "Rockeye" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -664,7 +664,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Subach HL-7" "Subach HL-7" )
-+Secondary Banks: ( "Rockeye" "Rockeye" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
