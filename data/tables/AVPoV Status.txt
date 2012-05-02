@@ -173,6 +173,9 @@ B_Vampire_Arc_05.The Vampire Slayers						//Beta-Ready
 			-GVCv Sphinx (Sobek class)	//non-vital
 			-GVC Ennead (Mentu class)	//destroyed
 			-SCv Devil (Moloch class)	//destroyed
+		Other:
+			-GTC Herbert Jung (Leviathan class)//destroyed - mentionned in briefing
+			-GVC Serkp'Pha (Aten class)	//destroyed - mentionned in briefing
 
 
 ///////////////////////////////////////////////////////////////////////////////////
