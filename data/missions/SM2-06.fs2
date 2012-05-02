@@ -44,7 +44,7 @@ $start_briefing
 $num_stages: 6
 $start_stage
 $multi_text
- XSTR("The $h NTF has attacked our warships defending the Knossos. We repelled their first offensive, but the $h NTC $h Alexandria reached the portal and made the jump into the nebula. We believe the rebels are regrouping to launch a second assault. Command has positioned the $f GTA $f Monitor to hold off the attack, and reinforcements are on their way.", 1262)
+ XSTR("The $h NTF has attacked our warships defending the $e Knossos. We repelled their first offensive, but the $h NTC $h Alexandria reached the portal and made the jump into the nebula. We believe the rebels are regrouping to launch a second assault. Command has positioned the $f GTA $f Monitor to hold off the attack, and reinforcements are on their way.", 1262)
 $end_multi_text
 $voice: SM206_MB_01.wav
 $camera_pos: 128.038696, 5814.479004, -3748.433838
@@ -136,7 +136,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Keep an eye out for the $h NTF $h Iceni. If this vessel emerges within range, you are authorized to engage and destroy it. Bosch has eluded our forces since he entered the Gamma Draconis system. Though we anticipate Bosch will either attempt to gain control of the Knossos or enter the portal itself, be prepared for any development.", 1264)
+ XSTR("Keep an eye out for the $h NTF $h Iceni. If this vessel emerges within range, you are authorized to engage and destroy it. Bosch has eluded our forces since he entered the $b Gamma $b Draconis system. Though we anticipate Bosch will either attempt to gain control of the $e Knossos or enter the portal itself, be prepared for any development.", 1264)
 $end_multi_text
 $voice: SM206_MB_03.wav
 $camera_pos: 2652.629395, 6272.645020, -3308.595215
@@ -440,6 +440,7 @@ $Ship Choices: (
 	"GTF Loki"	4
 	"GTF Pegasus"	4
 	"GTF Perseus"	4
+	"GTF Myrmidon"	4
 )
 
 +Weaponry Pool: (
@@ -447,30 +448,33 @@ $Ship Choices: (
 	"Akheton SDG"	16
 	"Morning Star"	16
 	"Prometheus S"	16
-	"Maxim"	16
-	"UD-8 Kayser"	100
-	"Circe"	16
-	"Lamprey"	16
-	"Rockeye"	500
-	"Tempest"	500
+	"Rockeye"	200
+	"Tempest"	1280
 	"Hornet"	580
 	"Tornado"	820
-	"Harpoon"	500
-	"Trebuchet"	500
-	"TAG-A"	500
+	"Harpoon"	240
+	"TAG-A"	5000
 	"Infyrno"	100
-	"EMP Adv."	500
+	"EMP Adv."	80
 )
 
 #Objects		;! 48 total
 
-; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
+; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
 
-; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
 
-; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
 
-; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
+; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
+
+
+
+; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
+
+
+
+; only the die-hard fanatics remain. They'll fight to the death and take as many of us with them as they can. We have every confidence in your ability to get the job done. Good luck.", -1)
+
+
 $Name: Alpha 1		;! Object #0
 $Class: GTF Myrmidon
 $Team: Friendly
@@ -2926,7 +2930,7 @@ $end_multi_text
 
 $Name: Wheres The Iceni
 $Team: -1
-$MessageNew:  XSTR("So where's the Iceni, Command? Let’s end this now.", 3419)
+$MessageNew:  XSTR("So where's the Iceni, Command? Letï¿½s end this now.", 3419)
 $end_multi_text
 +Persona: Wingman 4
 +AVI Name: Head-TP7
