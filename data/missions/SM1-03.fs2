@@ -663,7 +663,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret04
 +Primary Banks: ( "AAAh" )
 +Subsystem: turret05
-+Primary Banks: ( "Standard Flak" )
++Primary Banks: ( "Light Flak" )
 +Subsystem: turret06
 +Primary Banks: ( "Terran Turret" )
 +Subsystem: turret07
@@ -1553,7 +1553,9 @@ $Formula: ( when
    )
    ( beam-free-all "Impervious" ) 
 )
-;( beam-free-all "Glorious" ) 
+;( beam-free-all "Glorious" ) 
+
+
 +Name: Rebels Armed
 +Repeat Count: 1
 +Interval: 1
