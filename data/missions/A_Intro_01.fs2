@@ -42,12 +42,14 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("Good morning pilots.
+ XSTR("Welcome to Gamma Draconnis
+MOVE THIS TO COMMAND BRIEFING
+Good morning pilots, this is Rear Admiral Obster, commanding officer of the $g GVD $g Apep.
 
-As you may already know, the $g GTCv $g Viper has joined the 12th $f Vasudan $f Battlegroup at 0345, Vasudan Galactic Time.
-The $g Viper is a modified $y Deimos class corvette, currently fitted with next generation point-defence turrets.
+To all new pilots joining us here in $b Gamma $b Draconnis, welcome aboard.
+As you may already know, the $f GTCv $f Viper has joined the $f 12th $f Vasudan $f Battlegroup at 0345, Vasudan Galactic Time, as part of a field testing operation of experimental technologies. Based on the Deimos-class corvette chassis, the $f Viper is a combat evaluation vessel, designed to be easily retrofitted with new technology, in order to test the effectiveness of newer weapons or combat doctrine.
 
-This ship was designed to be easily refitable in order to test the efficiency of new systems on allied warships.", -1)
+Currently, the corvette is fitted with next generation point-defence turrets. We will be conducting a series of live combat execices over the next few days, testing various tactics and weapon configuration against $r Shivan targets.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 955.368530, 683.786682, 1161.836182
@@ -101,7 +103,7 @@ $start_stage
 $multi_text
  XSTR("At 0415, two $h Rakshasa cruisers, designted $r SC $r Curse and $r SC $r Black $r Beast, crossed the subspace portal in $b Gamma $b Draconnis and ran our blockade. Though they sustainned heavy damage, they are a threat to any allied ship within the system.
 
-$y Command has ordered the $g Viper and our $f fighter wing to take care of the damaged cruisers", -1)
+Command has ordered the $g Viper and our $f fighter wing to take care of the damaged cruisers", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 955.368530, 683.786682, 1161.836182
