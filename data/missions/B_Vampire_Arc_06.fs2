@@ -41,9 +41,9 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("Because the $g GVD $g Black $g Mamba won't be here until 2 hours, the $g GVD $g Pharaoh, despite its bad condition, is still blocading the $b Capella node.
-During recent engagements, the $g Pharaoh's main reactor overloaded, rendering its $y heavy $y beams inopperative.
-I know that you haven't got much sleep since your last mission, but we need you to guard the $g Pharaoh until we recieve reinforcement from $b Capella.", -1)
+ XSTR("Because the $g GVD $g Black $g Mamba won't be here until 2 hours, the $g GVD $g Pharaoh, despite having suffered significant damage in the last battle, is still leading our blocade of the $b Capella node. During recent engagements, the $g Pharaoh's main reactor overloaded, rendering its heavy beams inopperative, alhough lighter beam weapons remain operationnal.
+
+I am aware that none of you have had much sleep since your last mission, but we need you to guard the $g Pharaoh until reinforcements arrive from $b Capella.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -123.832336, 824.193604, -95.697166
@@ -95,13 +95,11 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $g Apep is hunting the remaining $h capital $h ships in system while most of our fighter and bomber wings are blockading the $y Subspace $y Portal.
+ XSTR("The $g Apep is hunting the remaining $h Shivan capital ships in system while most of our fighter and bomber wings are blockading the $e Subspace $e Portal.
 
-Soon, we will have complete control over $b Gamma $b Draconnis, then we should be able to take a day off.
+With the return of the 3rd Fleet's flagship, the $g Aquitaine and its escorting ships, as well as several $f Combat $f Groups, we should be able to regain full control over $b Gamma $b Draconnis, and resume our operations in the nebula. Our squadron should then have a few days off, as the Apep resupplies and repairs itself.
 
-The $g GVC $g Somtus will provide fire support for this mission.
-
-Keep your eyes open pilots.", -1)
+In the meantime, we have a job to do. The $g GVC $g Somtus will provide fire support for this mission. Keep your eyes open pilots.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -123.832336, 824.193604, -95.697166
