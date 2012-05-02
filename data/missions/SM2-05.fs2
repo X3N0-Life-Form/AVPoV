@@ -45,7 +45,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Reconnaissance has located one of the $h NTF's rallying points within the Gamma Draconis system. The rebels are preparing to execute a coordinated strike to acquire control of the Knossos subspace portal. Intelligence believes the $h NTF has sufficient firepower to mount a credible offensive.", 1223)
+ XSTR("Reconnaissance has located one of the $h NTF's rallying points within the Gamma Draconis system. The rebels are preparing to execute a coordinated strike to acquire control of the $e Knossos subspace portal. Intelligence believes the $h NTF has sufficient firepower to mount a credible offensive.", 1223)
 $end_multi_text
 $voice: SM205_MB_01.wav
 $camera_pos: 1233.178345, 5796.628418, -6345.724609
@@ -291,16 +291,15 @@ $Ship Choices: (
 	"Subach HL-7"	16
 	"Akheton SDG"	16
 	"Morning Star"	16
-	"Prometheus R"	4
 	"Prometheus S"	24
-	"Rockeye"	500
-	"Tempest"	500
+	"Rockeye"	200
+	"Tempest"	1600
 	"Hornet"	1160
-	"Harpoon"	600
-	"Piranha"	412
-	"Stiletto II"	600
+	"Harpoon"	200
+	"Piranha"	40
+	"Stiletto II"	120
 	"Cyclops#short"	62
-	"EMP Adv."	400
+	"EMP Adv."	80
 )
 
 #Objects		;! 54 total
