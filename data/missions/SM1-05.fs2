@@ -43,7 +43,7 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("Research Task Force
 
-With the Gamma Draconis system secure, a task force of Terran and Vasudan scientists is now examining the subspace portal. At this point, the scientists have ruled out the possibility the device is of Shivan origin. 
+With the $b Gamma $b Draconis system secure, a task force of $g Terran and $g Vasudan scientists is now examining the $e subspace $e portal. At this point, the scientists have ruled out the possibility the device is of $r Shivan origin. 
 
 Dr. Mina Hargrove, leader of the research team, has issued a report of its preliminary findings. An excerpt of this report follows.", 722)
 $end_multi_text
@@ -53,7 +53,7 @@ $Ani Filename: cb_sm1-05_a.ani
 $Stage Text:
  XSTR("Dr. Hargrove, Task Force Preliminary Findings (Excerpt)
 
-The subspace portal is unlike any Shivan construction we have yet encountered. Though Shivans demonstrate considerable diversity as a species, all Shivan technology possesses certain distinctive properties. None is present in the subspace device, which means we must look elsewhere for the portal's origin. We do know that the device is very, very old, on the order of several thousand years.", 723)
+The $e subspace $e portal is unlike any $r Shivan construction we have yet encountered. Though $r Shivans demonstrate considerable diversity as a species, all $r Shivan technology possesses certain distinctive properties. None is present in the subspace device, which means we must look elsewhere for the portal's origin. We do know that the device is very, very old, on the order of several thousand years.", 723)
 $end_multi_text
 $Ani Filename: cb_sm1-05_b.ani
 +Wave Filename: SM105_CBH_01.wav
@@ -71,7 +71,7 @@ $Ani Filename: cb_sm1-05_c.ani
 $Stage Text:
  XSTR("A Way Home?
 
-By constructing our own portal, we might be able to reopen the Sol jump node in Delta Serpentis. Since the destruction of the Lucifer caused the node to collapse thirty-two years ago, Earth has remained isolated from the GTVA. 
+By constructing our own portal, we might be able to reopen the $b Sol jump node in $b Delta $b Serpentis. Since the destruction of the $h Lucifer caused the node to collapse thirty-two years ago, $f Earth has remained isolated from the $g GTVA. 
 
 We might also be able to stabilize subspace nodes that are currently too volatile for travel, thus creating routes to systems previously unexplored.", 725)
 $end_multi_text
@@ -81,9 +81,9 @@ $Ani Filename: cb_sm1-05_d.ani
 $Stage Text:
  XSTR("Beyond the Portal
 
-Our military operation will focus on what lies on the other side of the subspace portal. We must determine where the node leads and the extent of the Shivan presence there. Above all, we must prevent the Shivans from returning to Gamma Draconis. 
+Our military operation will focus on what lies on the other side of the subspace portal. We must determine where the node leads and the extent of the $r Shivan presence there. Above all, we must prevent the $r Shivans from returning to $b Gamma $b Draconis. 
 
-Because the portal will remain active while the research team studies the technology, our systems are vulnerable to attack.  Allied Command has deemed this an acceptable risk given the potential benefits.", 726)
+Because the portal will remain active while the research team studies the technology, our systems are vulnerable to attack. $g Allied $g Command has deemed this an acceptable risk given the potential benefits.", 726)
 $end_multi_text
 $Ani Filename: cb_sm1-05_e.ani
 +Wave Filename: SM105_CB_05.wav
@@ -93,7 +93,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("At 1540 hours, the $f GTD $f Aquitaine entered the subspace portal in Gamma Draconis and jumped to our current position. We have entered a nebula, a vast and dense ionized field, and possibly the remnant of a supernova. We have travelled farther than any Terrans in the history of subspace travel. ", 727)
+ XSTR("At 1540 hours, the $f GTD $f Aquitaine entered the subspace portal in $b Gamma $b Draconis and jumped to our current position. We have entered a nebula, a vast and dense ionized field, and possibly the remnant of a supernova. We have travelled farther than any Terrans in the history of subspace travel. ", 727)
 $end_multi_text
 $voice: SM105_MB_01.wav
 $camera_pos: -7268.879395, 2300.503418, -8992.443359
@@ -133,7 +133,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The nebula has severely limited the Aquitaine's long-range sensors. We are deploying our fighter wings to explore the immediate vicinity and determine the extent of the enemy presence. Each fighter squadron will deploy a flight of four wings. ", 728)
+ XSTR("The nebula has severely limited the $f Aquitaine's long-range sensors. We are deploying our fighter wings to explore the immediate vicinity and determine the extent of the enemy presence. Each fighter squadron will deploy a flight of four wings. ", 728)
 $end_multi_text
 $voice: SM105_MB_02.wav
 $camera_pos: -4999.527344, 772.804260, -6795.837891
@@ -209,7 +209,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Alpha, Zeta, Iota, and Kappa will patrol a series of four waypoints. Zeta wing will lead this sortie, so follow Zeta 1 and do not stray. Be advised the nebula could interfere with your on-board systems. The ionized field will compromise your sensors, even within combat range. ", 729)
+ XSTR("Alpha, Zeta, Iota, and Kappa will patrol a series of four waypoints. $f Zeta wing will lead this sortie, so follow Zeta 1 and do not stray. Be advised the nebula could interfere with your on-board systems. The ionized field will compromise your sensors, even within combat range. ", 729)
 $end_multi_text
 $voice: SM105_MB_03.wav
 $camera_pos: -5284.919922, 1679.186523, -7485.259277
