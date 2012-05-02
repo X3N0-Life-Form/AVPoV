@@ -39,7 +39,9 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("Time to strike back. Our scouts have detected a rallying point for damaged ships. Currently, there are several cargo containers and the $h SC $h Kayla, a $r Rakshasa class cruiser and several $r sentry $r guns.", -1)
+ XSTR("In order to soften up the $r SD $r Vampire before our upcoming confrontation with the destroyer, allied units have been harassing $r Shivan warships throughout the system, hoping to track these ships to $r Shivan supply depots in system.
+
+Our scouts managed to identify one of these rallying point. Currently, there are several cargo and the $h SC $h Kayla, a $r Rakshasa class cruiser and several sentry guns in the area. In order to avoid luring out the Ravana-class destroyer $r Vampire too early, no allied warship will be deployed unless absolutely necessary.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -247.353378, 2160.393555, 313.481781
@@ -115,9 +117,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your task is to take down that cargo depot, and destroy any damaged $r shivan vessel that jumps in.
+ XSTR("Your task is to take down that cargo depot, and destroy any damaged $r Shivan vessel that jumps in.
 
-Crippled warships and a few fighters shouldn't be too difficult to handle, but $f Epsilon wing will be standing by just in case you need them. Call them in at your discretion.", -1)
+Crippled warships and a few fighters shouldn't be too difficult to handle, but $f Epsilon wing will be standing by in case you find yourselves in need for backup. Call them in at your discretion.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -247.353378, 2160.393555, 313.481781
@@ -231,7 +233,58 @@ $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
-; don't hesitate to disable the Grelier's own beam cannons.", -1)
+; don't hesitate to disable the Grelier's own beam cannons.", -1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $end_multi_text
 
 $Formula: ( is-goal-incomplete 
