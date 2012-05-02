@@ -48,13 +48,13 @@ $Num stages: 0
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
-	"GVF Seth"	5
-	"GVF Horus"	5
-	"GVF Thoth"	5
-	"GVF Tauret"	5
-	"GVB Bakha"	5
-	"GVF Serapis Elite"	5
-	"GVB Sekhmet Elite"	5
+	"GVF Seth"	8
+	"GVF Horus"	8
+	"GVF Thoth"	8
+	"GVF Tauret"	8
+	"GVB Bakha"	8
+	"GVF Serapis Elite"	8
+	"GVB Sekhmet Elite"	8
 )
 
 +Weaponry Pool: (
@@ -63,22 +63,19 @@ $Ship Choices: (
 	"Morning Star"	16
 	"Prometheus S"	24
 	"Maxim"	20
-	"Circe"	100
+	"Circe"	8
 	"Fire Spitter"	16
 	"Hayg Mas"	16
 	"Sehku"	16
 	"Sahr AS"	16
-	"Rockeye"	500
+	"Rockeye"	200
 	"Tempest"	2740
-	"Hornet"	500
-	"Tornado"	500
-	"Harpoon"	548
-	"Piranha"	500
-	"Cyclops"	540
-	"EMP Adv."	500
-	"Macross"	500
-	"Overkill"	500
-	"Bane"	500
+	"Hornet"	1200
+	"Tornado"	800
+	"Harpoon"	400
+	"Piranha"	40
+	"Cyclops"	40
+	"EMP Adv."	120
 )
 
 #Objects		;! 131 total
