@@ -1313,7 +1313,7 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-chase "Maahes" 89 ) )
 +Flags: ( )
 
-#Events		;! 37 total
+#Events		;! 38 total
 
 $Formula: ( when 
    ( or 
@@ -2216,6 +2216,25 @@ $Formula: ( when
    ( tech-add-ships "GVF Ptah" ) 
 )
 +Name: New Stuff
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-armor-type
+      "Maahes"
+      ( true )
+      "Shivan Bomber Armor"
+      "Hull"
+   )
+   ( set-armor-type
+      "Alpha 1"
+      ( true )
+      "Shivan Bomber Armor"
+      "Hull"
+   )
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 
