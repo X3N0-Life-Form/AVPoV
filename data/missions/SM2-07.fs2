@@ -47,9 +47,9 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("Twilight
 
-This is Admiral Khafre, commanding officer of the GVD Psamtik, 13th Vasudan Battle Group.
+This is Admiral Khafre, commanding officer of the $f GVD $f Psamtik, $g 13th $g Vasudan $g Battle $g Group.
 
-The NTF rebellion is over. Polaris, Regulus, and Sirius are now under allied control, and we begin the process of rebuilding these systems after 18 months of bloodshed. NTF officers responsible for the genocide of Vasudan civilians will face a war crimes tribunal in Beta Aquilae. GTVA warships in the nebula are now hunting down the Iceni and the other blockade runners.", 1308)
+The $r NTF rebellion is over. $b Polaris$|, $b Regulus$|, and $b Sirius are now under allied control, and we begin the process of rebuilding these systems after 18 months of bloodshed. $h NTF $h officers responsible for the genocide of $f Vasudan $f civilians will face a war crimes tribunal in $b Beta $b Aquilae. $f GTVA $f warships in the nebula are now hunting down the $h Iceni and the other blockade runners.", 1308)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM207_CB_01.wav
@@ -57,9 +57,9 @@ $Ani Filename: <default>
 $Stage Text:
  XSTR("Welcome, Terrans
 
-For those Terran pilots joining us in Gamma Draconis, welcome aboard. Your reassignment is part of an officer exchange program to foster better cooperation and understanding. You will serve in Vasudan wings and pilot Vasudan fighters. Our crews have modified our craft to accommodate Terran pilots.
+For those Terran pilots joining us in $b Gamma $b Draconis, welcome aboard. Your reassignment is part of an officer exchange program to foster better cooperation and understanding. You will serve in Vasudan wings and pilot Vasudan fighters. Our crews have modified our craft to accommodate Terran pilots.
 
-We as an alliance have come a long way since the Terran-Vasudan War, and initiatives such as this can only strengthen the bond between our species.", 1309)
+We as an alliance have come a long way since the $y Terran-Vasudan $y War, and initiatives such as this can only strengthen the bond between our species.", 1309)
 $end_multi_text
 $Ani Filename: cb_sm2-07_b.ani
 +Wave Filename: SM207_CB_02.wav
@@ -69,7 +69,7 @@ $Stage Text:
 
 With the rebellion defeated, we are now able to focus on our exploration and containment operation in the nebula. 
 
-We have three objectives in this theatre: to locate uncharted Shivan jump nodes, to destroy all hostiles encountered, and to apprehend Admiral Aken Bosch. 
+We have three objectives in this theatre: to locate uncharted $h Shivan jump nodes, to destroy all hostiles encountered, and to apprehend $r Admiral $r Aken $r Bosch. 
 
 We begin launching our squadrons at 3230, Vasudan Galactic Time.", 1310)
 $end_multi_text
@@ -79,7 +79,7 @@ $Ani Filename: cb_sm2-07_c.ani
 $Stage Text:
  XSTR("Maxim
 
-The Psamtik has received a shipment of the new GTW-66 Maxim Gun. The Maxim is by definition an energy weapon, though it behaves like a mass-driver, accelerating caseless uranium slugs along its smoothbore barrel. The Maxim has difficulty penetrating shield defenses but its effect on hull plating is devastating. 
+The $g Psamtik has received a shipment of the new GTW-66 Maxim Gun. The Maxim is by definition an energy weapon, though it behaves like a mass-driver, accelerating caseless uranium slugs along its smoothbore barrel. The Maxim has difficulty penetrating shield defenses but its effect on hull plating is devastating. 
 
 Use the Maxim at your discretion.", 1311)
 $end_multi_text
@@ -107,7 +107,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Welcome to the 203rd, Terran. I am Commander Habu, squadron leader. Our unit has served the Emperor since the war between our species, nearly five decades ago. I understand you were among the pilots who assisted our counter-insurgency effort in the Deneb system. We are honored to fight by your side, pilot. You will lead Alpha wing.", 1314)
+ XSTR("Welcome to the 203rd, Terran. I am Commander Habu, squadron leader. Our unit has served the Emperor since the war between our species, nearly five decades ago. I understand you were among the pilots who assisted our counter-insurgency effort in the $b Deneb system. We are honored to fight by your side, pilot. You will lead $f Alpha wing.", 1314)
 $end_multi_text
 $voice: SM207_MB_01.wav
 $camera_pos: -159.867294, 2838.896240, -438.951050
@@ -331,7 +331,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Be advised the shockwave of a gas miner explosion will have a destructive radius greater than that of a ship of comparable size. As the hull integrity of your target approaches zero, put as much distance as possible between yourself and the miner. We believe the Shivans are using the nebular gas for energy. Good luck.", 1316)
+ XSTR("Be advised the shockwave of a gas miner explosion will have a destructive radius greater than that of a ship of comparable size. As the hull integrity of your target approaches zero, put as much distance as possible between yourself and the miner. We believe the $r Shivans are using the nebular gas for energy. Good luck.", 1316)
 $end_multi_text
 $voice: SM207_MB_03.wav
 $camera_pos: -1230.560791, 3211.701172, 1166.108398
@@ -542,19 +542,25 @@ $Ship Choices: (
 	"Sehku"	12
 	"Rockeye"	500
 	"Tempest"	5280
-	"Hornet"	700
-	"Tornado"	500
-	"Harpoon"	500
-	"Trebuchet"	500
+	"Hornet"	1000
+	"Tornado"	800
+	"Harpoon"	600
 	"TAG-A"	200
 	"Piranha"	100
 	"Stiletto II"	400
-	"EMP Adv."	300
+	"EMP Adv."	200
 )
 
 #Objects		;! 54 total
 
-; second, to seek and destroy all Shivan vessels; and third, to locate and apprehend Admiral Aken Bosch. We will begin launching our squadrons at 2730, Vasudan Galactic Time.", -1)
+; second, to seek and destroy all Shivan vessels; and third, to locate and apprehend Admiral Aken Bosch. We will begin launching our squadrons at 2730, Vasudan Galactic Time.", -1)
+
+
+
+
+
+
+
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis
 $Team: Friendly
