@@ -10,7 +10,7 @@ Default music : Exodus
 $End Notes:
 
 $Mission Desc:
- XSTR("Pretty much self playing once you've disabled the Vampire's forward beams.", -1)
+ XSTR("", -1)
 $end_multi_text
 
 +Game Type Flags: 1
@@ -40,8 +40,8 @@ $num_stages: 2
 $start_stage
 $multi_text
  XSTR("The $r Vampire has decided to run our blocade at the $b Capella node.
-The battlefield area is a mess, we are trying to regroup our forces to reinforce this position, but the $h shivans are putting the pressure on us.
-Your are being scramble is to assist the ships blockading the node : the $g GVD $g Pharaoh and her escort.", -1)
+Two minutes ago, the destroyer emerged from subspace, engaged and destroyed the $f GTC $f Herbert $f Jung$|. The $r Shivan warship is now moving to engage the $f GVC $f Serkp'Pha, the $f GVC $f Ennead, the $f GVCv $f Sphinx and the $g GVD $g Pharaoh$|.
+The $r Vampire hasn't had time to deploy its fighter wings yet, but by the time you get there, it is likely that you will have to face $h Shivan $h strikecrafts.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 1369.101074, 2099.030518, 4486.562500
@@ -117,7 +117,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $g Pharaoh is actually the only ship capable of blockading the node. If we lose it, we lose $b Gamma $b Draconis. If we lose $b Gamma $b Draconis, $g GTVA space will be wide open to $h shivan attacks.
+ XSTR("One more thing.
+The $g Pharaoh is the key to our node blockade. The damage the $g Apep suffered in its previous engagements, as well as its low supplies, makes it unsuitable for blockade duties.
+If we lose the $g Pharaoh, we lose $b Gamma $b Draconis. If we lose $b Gamma $b Draconis, $g GTVA space will be wide open to $r Shivan attacks.
 
 Suit up pilots, we don't have much time !", -1)
 $end_multi_text
@@ -2926,6 +2928,19 @@ $Formula: ( when
 +Team: 538970656
 
 $Formula: ( when 
+   ( < ( hits-left "Ennead" ) 80 )
+   ( send-message 
+      "Ennead" 
+      "High" 
+      "Ennead heavy damage - ennead" 
+   )
+)
++Name: Ennead last message
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
    ( is-destroyed-delay 0 "Leo" ) 
    ( do-nothing ) 
 )
@@ -3261,7 +3276,7 @@ $List: (		;! 3 points in list
 
 $Name: mission start 1 - cmd
 $Team: -1
-$MessageNew:  XSTR("Alpha, disable the Vampire's forward beam canons before they destroy our warships.", -1)
+$MessageNew:  XSTR("Alpha, the Vampire just destroyed the Serkp'Pha! You must destroy the Vampire's long range beams before reduce the blockade to ashes.", -1)
 $end_multi_text
 +Persona: Terran Command
 +AVI Name: Head-CM2
@@ -3281,23 +3296,27 @@ $end_multi_text
 
 $Name: Pharaoh beams - Pharaoh
 $Team: -1
-$MessageNew:  XSTR("Command, we are experiencing a beam conon malfunction. It appears the main generator overloaded. We are rerouting power from the engines to secondary and anti-fighter beams, but our main batteries are offline.", -1)
-
-; the shivans are trying to secure the node !", -1)
+$MessageNew:  XSTR("Command, we are experiencing a beam canon malfunction. It appears the main generator overloaded. We are rerouting power from the engines to secondary and anti-fighter beams, but our main batteries are offline.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
 $Name: SD Vampire beam disabled
 $Team: -1
-$MessageNew:  XSTR("Good work Alpha Wing, Continue with your attack on the Vampire.", -1)
+$MessageNew:  XSTR("Good work Alpha Wing. You can either continue your attack on the Vampire or assist in the defence of the Pharaoh.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
 $Name: Somtus destroyed - cmd
 $Team: -1
-$MessageNew:  XSTR("The Ennead has been destroyed. Hurry up Alpha, before the Sphinx meets the same fate.", -1)
+$MessageNew:  XSTR("The Ennead has been destroyed. Hurry up Alpha, before the Sphinx suffers the same fate.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
+
+$Name: Ennead heavy damage - ennead
+$Team: -1
+$MessageNew:  XSTR("This is the Ennead: the Vampire has opened fire on us. We are attempting to engage our subspace drive, but engineering rep *static*", -1)
+$end_multi_text
++AVI Name: Head-VC
 
 $Name: Libra arrives - pharaoh
 $Team: -1
