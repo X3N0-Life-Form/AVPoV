@@ -53,7 +53,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("At 3320 Vasudan Galactic Time, we received a distress signal from the $f GTD $f Aquitaine. The destroyer came under attack 4,000 meters from the Gamma Draconis jump node. The $h SC $h Urobach and its fighter escort incapacitated the $f Aquitaine's engines and fighterbay.", 1703)
+ XSTR("At 3320 Vasudan Galactic Time, we received a distress signal from the $f GTD $f Aquitaine. The destroyer came under attack 4,000 meters from the $b Gamma $b Draconis jump node. The $h SC $h Urobach and its fighter escort incapacitated the $f Aquitaine's engines and fighterbay.", 1703)
 $end_multi_text
 $voice: SM305_MB_01.wav
 $camera_pos: -11335.354492, 5441.892090, 4933.421875
@@ -93,7 +93,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Admiral Petrarch reports that his gunners destroyed the $h Urobach and all but one of the fighter wings. With the entire Shivan armada now heading for Terran-Vasudan space, we must get the $f Aquitaine out as soon as possible. Your mission is to defend the $f Aquitaine until its propulsion systems are restored.", 1704)
+ XSTR("$f Admiral $f Petrarch reports that his gunners destroyed the $h Urobach and all but one of the fighter wings. With the entire $r Shivan armada now heading for $g Terran-Vasudan space, we must get the $f Aquitaine out as soon as possible. Your mission is to defend the $f Aquitaine until its propulsion systems are restored.", 1704)
 $end_multi_text
 $voice: SM305_MB_02.wav
 $camera_pos: -5191.928711, 2714.432617, 2955.241943
@@ -133,7 +133,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("A damage control team is currently en route from Gamma Draconis. The $f GTC $f Agrippa, an Aeolus-class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
+ XSTR("A damage control team is currently en route from $b Gamma $b Draconis. The $f GTC $f Agrippa, an Aeolus-class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
 $end_multi_text
 $voice: SM305_MB_03.wav
 $camera_pos: -5912.104980, 3232.332764, 3762.261475
@@ -197,7 +197,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the Shivans sufficient time to launch additional wings and threaten the $f Aquitaine.", 1706)
+ XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the $r Shivans sufficient time to launch additional wings and threaten the $f Aquitaine.", 1706)
 $end_multi_text
 $voice: SM305_MB_04.wav
 $camera_pos: -11255.395508, 5561.112793, 5206.678223
