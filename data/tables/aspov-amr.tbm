@@ -182,7 +182,7 @@ $Name:		Shivan Elite Armor
 		+Weapon Piercing Type: Default
 	$Damage Type:	ShivanHugeWeapon
 		+Calculation:	Multiplicative
-		+Value:			0.05
+		+Value:			0.2
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: Default
 		
