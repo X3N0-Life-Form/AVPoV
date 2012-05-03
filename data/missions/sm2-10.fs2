@@ -44,7 +44,7 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("Sathanas
 
-The Shivan juggernaut Sathanas is now en route to the jump node leading to Terran-Vasudan space. Command ordered all units to rally in Gamma Draconis in three hours' time. Though we have accounted for most of our fleet, at least six warships have failed to reach the rendezvous point. We can wait for them no longer.  The GTVA Security Council has authorized the immediate destruction of the Knossos subspace portal.", 1429)
+The Shivan juggernaut $r Sathanas is now en route to the jump node leading to $g Terran-Vasudan space. Command ordered all units to rally in $b Gamma $b Draconis in three hours' time. Though we have accounted for most of our fleet, at least six warships have failed to reach the rendezvous point. We can wait for them no longer.  The $f GTVA $f Security $f Council has authorized the immediate destruction of the $e Knossos subspace portal.", 1429)
 $end_multi_text
 $Ani Filename: cb_sm2-10_d.ani
 +Wave Filename: SM210_CB_01.wav
@@ -52,7 +52,7 @@ $Ani Filename: cb_sm2-10_d.ani
 $Stage Text:
  XSTR("Meson Bomb
 
-To demolish the Knossos portal, we will detonate the meson bomb, an experimental new weapon under development at the Hideki Institute in the Vega system. Though its specifications are highly classifed, physicists claim the meson bomb has more explosive power than any other warhead in our arsenal, sufficient to destroy any small craft within a three-kilometer radius. The size of the bomb prohibits tactical deployment.", 1430)
+To demolish the $e Knossos portal, we will detonate the meson bomb, an experimental new weapon under development at the Hideki Institute in the $b Vega system. Though its specifications are highly classifed, physicists claim the meson bomb has more explosive power than any other warhead in our arsenal, sufficient to destroy any small craft within a three-kilometer radius. The size of the bomb prohibits tactical deployment.", 1430)
 $end_multi_text
 $Ani Filename: cb_sm2-10_e.ani
 +Wave Filename: SM210_CB_02.wav
@@ -60,7 +60,7 @@ $Ani Filename: cb_sm2-10_e.ani
 $Stage Text:
  XSTR("Allied Strategy
 
-A small task force will oversee the demolition of the Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting Capella, the largest exodus since the Great War. The Colossus will remain in that system to engage the Sathanas should we fail.", 1431)
+A small task force will oversee the demolition of the $e Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated $b Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting $b Capella, the largest exodus since the $h Great $h War. The $g Colossus will remain in that system to engage the $r Sathanas should we fail.", 1431)
 $end_multi_text
 $Ani Filename: 
 +Wave Filename: SM210_CB_03.wav
