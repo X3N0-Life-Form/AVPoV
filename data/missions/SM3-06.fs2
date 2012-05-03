@@ -42,7 +42,7 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("70th Blue Lions
 
-Welcome back to the Aquitaine. Because of your outstanding service to the Alliance, the GTVA has granted you command of your own elite fighter squadron, the 70th Blue Lions. This is quite an honor, pilot. You'll receive all your briefings directly from quarterdeck. 
+Welcome back to the $g Aquitaine. Because of your outstanding service to the Alliance, the GTVA has granted you command of your own elite fighter squadron, the $B 70th $B Blue $B Lions. This is quite an honor, pilot. You'll receive all your briefings directly from quarterdeck. 
 
 As squadron leader of the Blue Lions, you will be granted the highest priority in ship and weapon selection, but choose your ordnance carefully. Review the techroom database if you have any questions.", 1749)
 $end_multi_text
@@ -52,9 +52,9 @@ $Ani Filename: cb_sm3-06_a.ani
 $Stage Text:
  XSTR("The Shivan Armada
 
-Nine Sathanas juggernauts have now entered the Capella system, and Intelligence has sighted even more in the nebula, converging on the jump node to Terran-Vasudan space. 
+Nine $h Sathanas juggernauts have now entered the $b Capella system, and Intelligence has sighted even more in the nebula, converging on the jump node to $g Terran-Vasudan space. 
 
-We are on the threshold of a new apocalypse. Though the juggernauts have not engaged our warships, they have set course for the Capella star. We can only speculate about their intentions, but this development cannot bode well for the Alliance.", 1750)
+We are on the threshold of a new apocalypse. Though the juggernauts have not engaged our warships, they have set course for the $b Capella star. We can only speculate about their intentions, but this development cannot bode well for the Alliance.", 1750)
 $end_multi_text
 $Ani Filename: cb_sm3-06_b.ani
 +Wave Filename: SM306_CB_02.wav
@@ -62,9 +62,9 @@ $Ani Filename: cb_sm3-06_b.ani
 $Stage Text:
  XSTR("Exodus
 
-Allied Command is committed to evacuating all non-essential personnel. A contingency plan is in the works to hold the Shivans here, in Capella, and prevent the expansion of the Shivan incursion to other systems of the GTVA. 
+Allied Command is committed to evacuating all non-essential personnel. A contingency plan is in the works to hold the $r Shivans here, in $b Capella, and prevent the expansion of the $r Shivan incursion to other systems of the GTVA. 
 
-The 70th Blue Lions will provide the fighter cover needed to get our convoys out of the system. Millions of lives are at stake here, pilot. And if we fail, all our worlds and systems will be in jeopardy.", 1751)
+The $B 70th $B Blue $B Lions will provide the fighter cover needed to get our convoys out of the system. Millions of lives are at stake here, pilot. And if we fail, all our worlds and systems will be in jeopardy.", 1751)
 $end_multi_text
 $Ani Filename: cb_sm3-06_c.ani
 +Wave Filename: SM306_CB_03.wav
@@ -82,7 +82,7 @@ $Ani Filename: cb_sm3-06_d.ani
 $Stage Text:
  XSTR("GTW UD-8 Kayser
 
-You have also been issued the GTW UD-08 Kayser. For its limited OpEval period, only select units will be authorized to carry this weapon. The Kayser emits focused wavelets of subatomic particles that bombard the target, causing the wave function of the particles to collapse and emit intense zero-point energy microbursts. The Kayser is the product of our research into Shivan weapon technology.", 1753)
+You have also been issued the GTW UD-08 Kayser. For its limited OpEval period, only select units will be authorized to carry this weapon. The Kayser emits focused wavelets of subatomic particles that bombard the target, causing the wave function of the particles to collapse and emit intense zero-point energy microbursts. The Kayser is the product of our research into $r Shivan weapon technology.", 1753)
 $end_multi_text
 $Ani Filename: Tech_GTW_UD-8_Kayser.ani
 +Wave Filename: SM306_CB_05.wav
@@ -100,7 +100,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("As we speak, convoys of transports, freighters, and medical ships are heading for the jump nodes to Vega and Epsilon Pegasi. The evacuation of civilian personnel proceeds on schedule, but the enemy offensive has intensified. We have blockaded the Gamma Draconis node, though Shivan forces are swarming into the system.", 1755)
+ XSTR("As we speak, convoys of transports, freighters, and medical ships are heading for the jump nodes to $b Vega and $b Epsilon $b Pegasi. The evacuation of civilian personnel proceeds on schedule, but the enemy offensive has intensified. We have blockaded the $b Gamma $b Draconis node, though $r Shivan forces are swarming into the system.", 1755)
 $end_multi_text
 $voice: SM306_mB_01.wav
 $camera_pos: -483.999817, 442.720856, 63353.480469
@@ -128,7 +128,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The 53rd will relieve the 309th at the Gamma Draconis node, and we'll deploy the 19th to hold down the fort at 3rd Fleet Headquarters as we evacuate non-essential personnel. Command needs a closer look at the Juggernauts, so we'll be sending in the 91st.  70th Blue Lions will be sortied to the Epsilon Pegasi node.", 1756)
+ XSTR("The 53rd will relieve the 309th at the $b Gamma $b Draconis node, and we'll deploy the 19th to hold down the fort at $f 3rd $f Fleet $f Headquarters as we evacuate non-essential personnel. Command needs a closer look at the $h Juggernauts, so we'll be sending in the 91st.  70th Blue Lions will be sortied to the $b Epsilon $b Pegasi node.", 1756)
 $end_multi_text
 $voice: SM306_mB_02.wav
 $camera_pos: 59.892708, 7978.801270, 39777.628906
@@ -156,7 +156,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Blue Lions, your mission is to escort a four-ship convoy to Epsilon Pegasi. The group consists of civilian transports $f Lambda $f 1 and $f 2, $f GTFr $f Sulla, and the medical ship $f GTM $f Vesalius. All have minimal armaments and vulnerable hull plating. $f GVCv $f Nebtuu leads the escort.", 1757)
+ XSTR("$B Blue $B Lions, your mission is to escort a four-ship convoy to $b Epsilon $b Pegasi. The group consists of civilian transports $f Lambda $f 1 and $f 2, $f GTFr $f Sulla, and the medical ship $f GTM $f Vesalius. All have minimal armaments and vulnerable hull plating. $f GVCv $f Nebtuu leads the escort.", 1757)
 $end_multi_text
 $voice: SM306_mB_03.wav
 $camera_pos: 9163.455078, 7667.714844, 4125.337402
@@ -292,7 +292,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("At 1415 hours, the Shivan corvette $h Abraxis and a wing of $h Manticore fighters attacked the convoy. The $f Nebtuu called for assistance, so you're going in. Theta wing will stand by to reinforce your position. Call them in at your discretion. Good luck, pilots. The people of Capella are counting on you.", 1758)
+ XSTR("At 1415 hours, the Shivan corvette $h Abraxis and a wing of $h Manticore fighters attacked the convoy. The $f Nebtuu called for assistance, so you're going in. $f Theta wing will stand by to reinforce your position. Call them in at your discretion. Good luck, pilots. The people of $b Capella are counting on you.", 1758)
 $end_multi_text
 $voice: SM306_mB_04.wav
 $camera_pos: -3257.809570, 3173.210938, 4152.482910
@@ -745,10 +745,13 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
