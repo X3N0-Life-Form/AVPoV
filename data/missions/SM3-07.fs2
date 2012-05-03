@@ -44,7 +44,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("At 2345 hours, Allied Command authorized the immediate evacuation of 3rd Fleet Headquarters in the Capella system. The installation has come under heavy fighter and bomber attack. The Shivans are deploying their wings from the $h SD $h Nebiros, a Ravana-class destroyer. The 19th squadron, assigned to defend headquarters, has been wiped out.", 1815)
+ XSTR("At 2345 hours, Allied Command authorized the immediate evacuation of $f 3rd $f Fleet $f Headquarters in the $b Capella system. The installation has come under heavy fighter and bomber attack. The $r Shivans are deploying their wings from the $h SD $h Nebiros, a Ravana-class destroyer. The 19th squadron, assigned to defend headquarters, has been wiped out.", 1815)
 $end_multi_text
 $voice: SM307_MB_01.wav
 $camera_pos: 5.874457, 3355.103271, 713.473145
@@ -112,7 +112,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("After $f Lambda $f 2 has docked with the $f Orion, the $f Messana will leave the system, and you will be authorized to return to base. You will take Alpha and Delta wings and provide fighter cover for this operation. You must protect the installation, the $f Messana, and the two transports. Once evacuated, the installation will be destroyed.", 1817)
+ XSTR("After $f Lambda $f 2 has docked with the $f Orion, the $f Messana will leave the system, and you will be authorized to return to base. You will take $f Alpha and $f Delta wings and provide fighter cover for this operation. You must protect the installation, the $f Messana, and the two transports. Once evacuated, the installation will be destroyed.", 1817)
 $end_multi_text
 $voice: SM307_MB_03.wav
 $camera_pos: -1940.493286, 8573.685547, -2938.200684
@@ -164,7 +164,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We have already extracted non-essential personnel, so the operation should proceed quickly. With the evacuation of Headquarters, the Alliance is preparing to initiate the final phase of its plan to hold the Shivans in Capella.", 1818)
+ XSTR("We have already extracted non-essential personnel, so the operation should proceed quickly. With the evacuation of Headquarters, the $g Alliance is preparing to initiate the final phase of its plan to hold the $r Shivans in $b Capella.", 1818)
 $end_multi_text
 $voice: SM307_MB_04.wav
 $camera_pos: 5.874457, 3355.103271, 713.473145
@@ -445,17 +445,17 @@ $Ship Choices: (
 	"UD-8 Kayser"	20
 	"Circe"	16
 	"Lamprey"	16
-	"Rockeye"	500
-	"Tempest"	1140
-	"Hornet"	860
-	"Tornado"	500
-	"Harpoon"	500
-	"Trebuchet"	524
-	"TAG-B"	500
-	"Piranha"	500
-	"Stiletto II"	500
-	"Infyrno"	500
-	"EMP Adv."	500
+	"Rockeye"	200
+	"Tempest"	2000
+	"Hornet"	1200
+	"Tornado"	800
+	"Harpoon"	400
+	"Trebuchet"	120
+	"TAG-B"	12000
+	"Piranha"	120
+	"Stiletto II"	120
+	"Infyrno"	120
+	"EMP Adv."	200
 )
 
 #Objects		;! 72 total
@@ -765,29 +765,53 @@ $Cargo 1:  XSTR("Personnel", 1830)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
++Primary Banks: ( "Wraith" )
 +Subsystem: turret04
++Primary Banks: ( "Wraith" )
 +Subsystem: turret05
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
++Primary Banks: ( "Wraith" )
 +Subsystem: turret07
++Primary Banks: ( "Wraith" )
 +Subsystem: turret08
++Primary Banks: ( "Wraith" )
 +Subsystem: turret09
++Primary Banks: ( "Wraith" )
 +Subsystem: turret10
++Primary Banks: ( "Wraith" )
 +Subsystem: turret11
++Primary Banks: ( "Wraith" )
 +Subsystem: turret12
++Primary Banks: ( "Wraith" )
 +Subsystem: turret13
++Primary Banks: ( "Wraith" )
 +Subsystem: turret14
++Primary Banks: ( "Wraith" )
 +Subsystem: turret15
++Primary Banks: ( "Wraith" )
 +Subsystem: turret16
++Primary Banks: ( "Wraith" )
 +Subsystem: turret17
++Primary Banks: ( "Wraith" )
 +Subsystem: turret18
++Primary Banks: ( "Wraith" )
 +Subsystem: turret19
++Primary Banks: ( "Wraith" )
 +Subsystem: turret20
++Secondary Banks: ( "Trebuchet" )
 +Subsystem: turret21
++Secondary Banks: ( "Trebuchet" )
 +Subsystem: turret22
++Secondary Banks: ( "Trebuchet" )
 +Subsystem: turret23
++Secondary Banks: ( "Trebuchet" )
 +Subsystem: turret24
++Secondary Banks: ( "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
