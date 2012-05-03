@@ -43,7 +43,7 @@ $start_briefing
 $num_stages: 5
 $start_stage
 $multi_text
- XSTR("Here's the situation. Allied Command has ordered the full retreat of all GTVA forces. They've written off Gamma Draconis, so they're moving the armada into Capella to hold down the system. Meanwhile, SOC needs a unit to fly suicide to check out a second Knossos device the Vasudans found deep in the nebula.", 213)
+ XSTR("Here's the situation. Allied Command has ordered the full retreat of all GTVA forces. They've written off $b Gamma $b Draconis, so they're moving the armada into $b Capella to hold down the system. Meanwhile, SOC needs a unit to fly suicide to check out a second $e Knossos device the Vasudans found deep in the nebula.", 213)
 $end_multi_text
 $voice: LP2-2_MB_01.wav
 $camera_pos: 3663.853027, 15076.041016, 4885.098633
@@ -83,7 +83,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("To give us a fighting chance, our unit will fly a wing of Shivan fighters SOC forces captured early in the nebula campaign. Our engineers have modified and optimized these craft. They'll handle even better than the Shivan original, and if you play it right, you might even avoid enemy detection. ", 214)
+ XSTR("To give us a fighting chance, our unit will fly a wing of $r Shivan fighters SOC forces captured early in the nebula campaign. Our engineers have modified and optimized these craft. They'll handle even better than the Shivan original, and if you play it right, you might even avoid enemy detection. ", 214)
 $end_multi_text
 $voice: LP2-2_MB_02.wav
 $camera_pos: 3663.853027, 15076.041016, 4885.098633
@@ -123,7 +123,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We're going in with a handpicked squad. You'll fly Alpha 1. I've got Alpha 2. Two of our top pilots, Xinny and Zero, will cover Alphas 3 and 4, respectively. Our Maras will be equipped with intersystem jump drives so we can use the node.", 215)
+ XSTR("We're going in with a handpicked squad. You'll fly $f Alpha $f 1. I've got $f Alpha $f 2. Two of our top pilots, $E Xinny and $E Zero, will cover $f Alphas $f 3 and $f 4, respectively. Our Maras will be equipped with intersystem jump drives so we can use the node.", 215)
 $end_multi_text
 $voice: LP2-2_MB_03.wav
 $camera_pos: 6821.267578, 10072.799805, 5038.605469
@@ -215,7 +215,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Here's something else to think about. By the time we launch, we'll be the only allied operatives left in the nebula. There'll be no reinforcement, no support, and no base to run to. That's why this mission has to be carried out by the numbers. We have fifteen minutes. No more. No less.", 217)
+ XSTR("Here's something else to think about. By the time we launch, we'll be the only allied operatives left in the nebula. There'll be no reinforcement, no support, and no base to run to. That's why this mission has to be carried out by the numbers. We have $y fifteen $y minutes. No more. No less.", 217)
 $end_multi_text
 $voice: LP2-2_MB_05.wav
 $camera_pos: 5347.727539, 5366.963379, -2451.401611
@@ -360,21 +360,9 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	16
-	"Akheton SDG"	16
-	"Morning Star"	16
-	"Prometheus S"	16
-	"Maxim"	16
 	"UD-8 Kayser"	24
-	"Circe"	16
-	"Lamprey"	16
-	"Rockeye"	500
-	"Tempest"	3360
-	"Hornet"	500
-	"Tornado"	500
-	"Harpoon"	500
-	"Trebuchet"	500
-	"EMP Adv."	500
+	"Tempest"	4000
+	"Trebuchet"	200
 )
 
 #Objects		;! 60 total
