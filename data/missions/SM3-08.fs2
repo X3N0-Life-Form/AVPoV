@@ -43,7 +43,7 @@ $AI Profile: myProfile
 $Stage Text:
  XSTR("Exodus
 
-With over one hundred thousand casualties and more Shivans incoming, we have no hope of holding Capella. Our only real chance is to seal off the system and prevent the invasion from spreading to other Terran-Vasudan worlds. If we fail to contain the Shivan advance, we will unleash the second Great War, a conflict we have virtually no chance of surviving. The Lucifer fleet we defeated 32 years ago is nothing compared to the strength of this armada. Command is committed to getting every last Terran out of the system.", 1869)
+With over one hundred thousand casualties and more $r Shivans incoming, we have no hope of holding $b Capella. Our only real chance is to seal off the system and prevent the invasion from spreading to other $g Terran-Vasudan worlds. If we fail to contain the $r Shivan advance, we will unleash the second $h Great $h War, a conflict we have virtually no chance of surviving. The $h Lucifer fleet we defeated 32 years ago is nothing compared to the strength of this armada. Command is committed to getting every last Terran out of the system.", 1869)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM308_CB_01.wav
@@ -51,7 +51,7 @@ $Ani Filename: <default>
 $Stage Text:
  XSTR("A Subspace Anomaly
 
-Over 80 Shivan Juggernauts are now in position around the Capella sun. Science vessels monitoring their activity have detected an anomalous subspace field rippling from the Juggernaut fleet. Though we can barely detect the field with our instruments, its intensity has been increasing slowly over the past seventy-two hours. We have known since the Great War that the Shivans possess advanced subspace technologies, but this field goes beyond our wildest speculations. The Shivans may be powering up a new kind of weapon, the likes of which we have never before encountered.", 1870)
+Over 80 $r Shivan $r Juggernauts are now in position around the $b Capella sun. Science vessels monitoring their activity have detected an anomalous subspace field rippling from the $r Juggernaut fleet. Though we can barely detect the field with our instruments, its intensity has been increasing slowly over the past seventy-two hours. We have known since the $h Great $h War that the $r Shivans possess advanced subspace technologies, but this field goes beyond our wildest speculations. The $r Shivans may be powering up a new kind of weapon, the likes of which we have never before encountered.", 1870)
 $end_multi_text
 $Ani Filename: cb_sm3-08_b.ani
 +Wave Filename: SM308_CB_02.wav
@@ -59,7 +59,7 @@ $Ani Filename: cb_sm3-08_b.ani
 $Stage Text:
  XSTR("Sacrifice
 
-Preparations are now underway to collapse the Epsilon Pegasi jump node. A Great-War-era destroyer, the GTD Bastion, will contain multiple meson warheads that will detonate inside the node. Scientists believe an explosion of sufficient magnitude will cause this node to collapse, as evidenced by the destruction of the Lucifer 32 years ago. The detonation of the Lucifer's reactors sealed off the Sol jump node in Delta Serpentis and severed all contact with Earth. The Bastion has completed its modifications in the Vega system and is now entering Capella.", 1871)
+Preparations are now underway to collapse the $b Epsilon $b Pegasi jump node. A Great-War-era destroyer, the $f GTD $f Bastion, will contain multiple meson warheads that will detonate inside the node. Scientists believe an explosion of sufficient magnitude will cause this node to collapse, as evidenced by the destruction of the $h Lucifer 32 years ago. The detonation of the $h Lucifer's reactors sealed off the Sol jump node in $b Delta $b Serpentis and severed all contact with Earth. The $f Bastion has completed its modifications in the $b Vega system and is now entering $b Capella.", 1871)
 $end_multi_text
 $Ani Filename: cb_sm3-08_c.ani
 +Wave Filename: SM308_CB_03.wav
@@ -67,7 +67,7 @@ $Ani Filename: cb_sm3-08_c.ani
 $Stage Text:
  XSTR("Will the Strategy Work?
 
-Skeptics have argued the Shivans made intersystem jumps without using nodes in Ross 128, Ikeya, Vega, and other systems at the outbreak of the Great War. However, scientists assure us this plan will work. Though Shivans have used uncharted nodes and nodes too unstable for Terran and Vasudan vessels, they are as dependent on jump nodes as we are. Nevertheless, we must accept this strategy as nothing more than a temporary measure.", 1872)
+Skeptics have argued the $r Shivans made intersystem jumps without using nodes in $b Ross $b 128, $b Ikeya, $b Vega, and other systems at the outbreak of the $h Great $h War. However, scientists assure us this plan will work. Though $r Shivans have used uncharted nodes and nodes too unstable for Terran and Vasudan vessels, they are as dependent on jump nodes as we are. Nevertheless, we must accept this strategy as nothing more than a temporary measure.", 1872)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM308_CB_04.wav
@@ -75,7 +75,7 @@ $Ani Filename: <default>
 $Stage Text:
  XSTR("Endgame
 
-Once we have evacuated all civilian and military personnel from the Capella system, we will send a second destroyer, also carrying meson warheads, through the Capella jump node in Vega. If we succeed in sealing off both nodes, the Alliance will have trapped the Shivans in this system. If we fail, we face certain annihilation. 
+Once we have evacuated all civilian and military personnel from the $b Capella system, we will send a second destroyer, also carrying meson warheads, through the $b Capella jump node in $b Vega. If we succeed in sealing off both nodes, the $g Alliance will have trapped the $r Shivans in this system. If we fail, we face certain annihilation. 
 
 This is our Alamo, pilots. We hold them here, or we die trying.", 1873)
 $end_multi_text
@@ -87,7 +87,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("The $f GTD $f Bastion will enter the Capella system at 1835 hours. We're sending in the 116th to escort the warship into position. Our forward observer units near the Juggernauts are calling for backup, so we'll send in the 83rd. The 309th will assist with the containment effort at the Vega node, and as for the 70th Blue Lions, we've got something special for you.", 1874)
+ XSTR("The $f GTD $f Bastion will enter the $b Capella system at 1835 hours. We're sending in the 116th to escort the warship into position. Our forward observer units near the Juggernauts are calling for backup, so we'll send in the 83rd. The 309th will assist with the containment effort at the $b Vega node, and as for the $B 70th $B Blue $B Lions, we've got something special for you.", 1874)
 $end_multi_text
 $voice: SM308_MB_01.wav
 $camera_pos: 5744.593262, 7965.049805, -8073.225098
@@ -163,7 +163,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your mission is to create a diversion at the Gamma Draconis node. The operation here will be a feint to lure the Shivan armada. The $f Colossus and its group will form a battle line near the node. By focusing our firepower here, we'll draw the brunt of the Shivan offensive. Meanwhile, on the other side of the system, the $f Bastion will collapse the node to Epsilon Pegasi.", 1875)
+ XSTR("Your mission is to create a diversion at the $b Gamma $b Draconis node. The operation here will be a feint to lure the $r Shivan armada. The $f Colossus and its group will form a battle line near the node. By focusing our firepower here, we'll draw the brunt of the $r Shivan offensive. Meanwhile, on the other side of the system, the $f Bastion will collapse the node to $b Epsilon $b Pegasi.", 1875)
 $end_multi_text
 $voice: SM308_MB_02.wav
 $camera_pos: 5744.593262, 7965.049805, -8073.225098
@@ -385,13 +385,13 @@ $Ship Choices: (
 	"UD-8 Kayser"	32
 	"Circe"	100
 	"Lamprey"	100
-	"Rockeye"	500
-	"Tempest"	3380
-	"Hornet"	500
-	"Tornado"	1204
-	"Harpoon"	500
+	"Rockeye"	400
+	"Tempest"	4000
+	"Hornet"	1200
+	"Tornado"	1200
+	"Harpoon"	600
 	"Trebuchet"	48
-	"TAG-B"	100
+	"TAG-B"	20000
 	"Stiletto II"	100
 )
 
