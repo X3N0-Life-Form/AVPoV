@@ -45,7 +45,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("The $f GTD $f Bastion, loaded with Meson warheads, is now en route to the Epsilon Pegasi jump node. The $f Bastion will be detonated inside the node to create a subspace cataclysm that will seal off the Capella system. If the $f Bastion fails to achieve this objective, the Shivans will swarm into our adjacent systems.", 1911)
+ XSTR("The $f GTD $f Bastion, loaded with Meson warheads, is now en route to the $b Epsilon $b Pegasi jump node. The $f Bastion will be detonated inside the node to create a subspace cataclysm that will seal off the $b Capella system. If the $f Bastion fails to achieve this objective, the $r Shivans will swarm into our adjacent systems.", 1911)
 $end_multi_text
 $voice: sm309_mb_01.wav
 $camera_pos: -8557.589844, 7217.096680, 4393.450684
@@ -85,7 +85,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The task force defending the $f Bastion has been decimated. Three ships remain: the $f Templar, the $f Malta, and the $f Ertanax. All are Aeolus-class cruisers. The Shivans continue to send wave after wave of fighters and bombers. Only a handful of the $f Bastion's original fighter complement have survived the onslaught.", 1912)
+ XSTR("The task force defending the $f Bastion has been decimated. Three ships remain: the $f Templar, the $f Malta, and the $f Ertanax. All are Aeolus-class cruisers. The $r Shivans continue to send wave after wave of fighters and bombers. Only a handful of the $f Bastion's original fighter complement have survived the onslaught.", 1912)
 $end_multi_text
 $voice: SM309_MB_02.wav
 $camera_pos: -8557.589844, 7217.096680, 4393.450684
@@ -173,7 +173,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Alpha, Delta, and Beta wings will fly heavy intercept. Your mission is to take out enemy bombers before they close within targeting distance. You'll be armed with the Trebuchet missile, which has an effective range of four kilometers. Gamma wing will fly the Perseus. Their role will be to engage enemy fighters. ", 1913)
+ XSTR("$f Alpha, $f Delta, and $f Beta wings will fly heavy intercept. Your mission is to take out enemy bombers before they close within targeting distance. You'll be armed with the Trebuchet missile, which has an effective range of four kilometers. $f Gamma wing will fly the Perseus. Their role will be to engage enemy fighters. ", 1913)
 $end_multi_text
 $voice: SM309_MB_03.wav
 $camera_pos: 5042.188965, 11197.233398, -2916.219238
@@ -273,7 +273,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The majority of the fleet is fending off a massive attack at the Vega node. Thousands of civilians await evacuation and the enemy continues to flood in from Gamma Draconis. We will not get a second chance to pull this off. If we fail here, we unleash the Second Shivan War. We must get the $f Bastion through at any cost.", 1914)
+ XSTR("The majority of the fleet is fending off a massive attack at the $b Vega node. Thousands of civilians await evacuation and the enemy continues to flood in from $b Gamma $b Draconis. We will not get a second chance to pull this off. If we fail here, we unleash the $h Second $h Shivan $h War. We must get the $f Bastion through at any cost.", 1914)
 $end_multi_text
 $voice: SM309_MB_04.wav
 $camera_pos: 5042.188965, 11197.233398, -2916.219238
@@ -452,6 +452,9 @@ $Ship Choices: (
 	"GTF Loki"	4
 	"GTF Perseus"	4
 	"GTF Myrmidon"	4
+	"SF Mara (terrans)"	1
+	"GVF Serapis Elite"	1
+	"GVB Sekhmet Elite"	1
 )
 
 +Weaponry Pool: (
@@ -463,6 +466,9 @@ $Ship Choices: (
 	"Maxim"	10
 	"UD-8 Kayser"	22
 	"Circe"	10
+	"Hell Spitter"	1
+	"Fire Spitter"	1
+	"Sahr AS"	2
 	"Lamprey"	10
 	"Rockeye"	100
 	"Tempest"	1880
@@ -470,14 +476,22 @@ $Ship Choices: (
 	"Tornado"	400
 	"Harpoon"	100
 	"Trebuchet"	128
-	"TAG-B"	100
+	"TAG-B"	40000
 	"Infyrno"	140
 	"EMP Adv."	100
 )
 
 #Objects		;! 63 total
 
-; their job is to keep the Shivan fighters off your backs.", -1)
+; their job is to keep the Shivan fighters off your backs.", -1)
+
+
+
+
+
+
+
+
 $Name: Alpha 1		;! Object #0
 $Class: GTF Perseus
 $Team: Friendly
