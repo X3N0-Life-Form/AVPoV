@@ -48,7 +48,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("At 1640 hours, reconnaissance detected the Shivan transport carrying Admiral Bosch and his subordinates deep within a Shivan-controlled zone of the nebula. A wing of $h Maras repelled our recon unit, but we now have an approximate location. Alpha and Beta, your mission is to find and disable the $h Azrael transport.", 1659)
+ XSTR("At 1640 hours, reconnaissance detected the Shivan transport carrying $r Admiral $r Bosch and his subordinates deep within a Shivan-controlled zone of the nebula. A wing of $h Maras repelled our recon unit, but we now have an approximate location. $f Alpha and $f Beta, your mission is to find and disable the $h Azrael transport.", 1659)
 $end_multi_text
 $voice: SM304_MB_01.wav
 $camera_pos: -0.420898, 15215.760742, -7174.290039
@@ -76,7 +76,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The attack must be executed quickly, before the transport escapes. Once its engines are disabled, defend the transport until the recovery team arrives on $f Lambda $f 1. They will dock with the $h Azrael and haul the vessel back to Gamma Draconis. $f Lambda $f 2 will be standing by in case $f Lambda $f 1 should fail.", 1660)
+ XSTR("The attack must be executed quickly, before the transport escapes. Once its engines are disabled, defend the transport until the recovery team arrives on $f Lambda $f 1. They will dock with the $h Azrael and haul the vessel back to $b Gamma $b Draconis. $f Lambda $f 2 will be standing by in case $f Lambda $f 1 should fail.", 1660)
 $end_multi_text
 $voice: SM304_MB_02.wav
 $camera_pos: 189.329575, 11623.538086, -7420.385742
@@ -128,7 +128,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Capturing Bosch and his lieutenants is of the utmost importance. We do not know if they are alive or dead, or what the Shivans intend to do with them.", 1661)
+ XSTR("Capturing $r Bosch and his lieutenants is of the utmost importance. We do not know if they are alive or dead, or what the $r Shivans intend to do with them.", 1661)
 $end_multi_text
 $voice: SM304_MB_03.wav
 $camera_pos: 189.329575, 11623.538086, -7420.385742
@@ -242,21 +242,21 @@ $Ship Choices: (
 	"Maxim"	16
 	"Circe"	16
 	"Lamprey"	16
-	"Fire Spitter"	16
+	"Fire Spitter"	4
+	"Hell Spitter"	4
 	"Hayg Mas"	20
 	"Sehku"	20
 	"Sahr AS"	24
-	"Rockeye"	500
+	"Rockeye"	250
 	"Tempest"	3380
-	"Hornet"	500
-	"Tornado"	500
-	"Harpoon"	500
-	"Trebuchet"	500
-	"TAG-B"	500
-	"Piranha"	500
-	"Stiletto II"	500
-	"Infyrno"	500
-	"EMP Adv."	500
+	"Hornet"	1200
+	"Tornado"	800
+	"Harpoon"	400
+	"TAG-B"	8000
+	"Piranha"	80
+	"Stiletto II"	80
+	"Infyrno"	120
+	"EMP Adv."	60
 )
 
 #Objects		;! 50 total
