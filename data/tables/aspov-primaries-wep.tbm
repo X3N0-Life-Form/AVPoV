@@ -117,6 +117,14 @@ $Pspew:
 	
 $Name:                              Hell Spitter
 	+Title:						XSTR("Hell Spitter",-1)
+	+Description: XSTR("High Rate of Fire Anti-Hull Weapon
+		Uses ammunition",-1)
+	$end_multi_text
+	+Tech Title: XSTR("Hell Spitter", -1)
+	+Tech Anim: Tech_GTW-66_Maxim_Gun
+	+Tech Description: XSTR("Firing 100 20-gram round per second per gunpoint at a velocity of 6 kilo-meters per second, the Hell Spitter was designed for short-duration high-intensity engagement between strikecrafts and capital ships, providing the former the firepower needed for 4-bomber wings to eliminate any threat within seconds.
+	The main drawbacks of this weapon are its extremely high ammo consumption, high energy consumption, high dispertion, its virtual ineffectiveness against shielded targets and limited compatibility with light or older bomber designs.", -1)
+	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						Maxim
 @Laser Glow:						Maxim_Glow
