@@ -188,6 +188,9 @@ $Subsystem:                     turret02,5,1.0
 
 ;; GTVA ships
 
+$Name:					GTB Boanerges
+	+nocreate ;:
+$Allowed PBanks:;TODO: add Hell Spitter to Boa's allowed PBanks
 
 $Name:					GTB Medusa
 	+nocreate ;:
