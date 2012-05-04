@@ -125,7 +125,7 @@ $Model File:						none
 @Laser Length:						18.0
 @Laser Head Radius:					4.0
 @Laser Tail Radius:					2.5
-$Mass:                              0.2
+$Mass:                              0.1
 $Velocity:                          2600.0   
 $Fire Wait:                         0.01 
 $Damage:                            8
@@ -133,7 +133,7 @@ $Damage Type:						HugeWeapon
 $Armor Factor:						1.0
 $Shield Factor:						0.05
 $Subsystem Factor:					0.4
-$Lifetime:                          0.6
+$Lifetime:                          0.2
 $Energy Consumed:					0.09
 $Cargo Size:						0.04
 $Homing:                            NO
