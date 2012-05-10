@@ -190,7 +190,8 @@ $Subsystem:                     turret02,5,1.0
 
 $Name:					GTB Boanerges
 	+nocreate ;:
-$Allowed PBanks:;TODO: add Hell Spitter to Boa's allowed PBanks
+$Allowed PBanks: ("Subach HL-7" "Prometheus R" "UD-8 Kayser" "Prometheus S" "Lamprey" "Circe" "Maxim" "Fire Spitter" "Hell Spitter")
+$PBank Capacity: (200)
 
 $Name:					GTB Medusa
 	+nocreate ;:
@@ -591,7 +592,8 @@ $Shield Armor Type:		LightArmor
 $Name:		GVF Serapis
 	+nocreate ;:
 $Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS")
-						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter")
+						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
+$PBank Capacity:		( 40, 40 )
 $Shield Armor Type:		LightArmor
 
 
