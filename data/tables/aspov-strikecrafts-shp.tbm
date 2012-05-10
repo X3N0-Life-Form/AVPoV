@@ -223,12 +223,85 @@ $Afterburner:           YES
 	+Aburn Burn Rate:   50.0
 	+Aburn Rec Rate:    25.0
 
+
+;; vasudan fighters
+
+$Name:		GVF Seth
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVF Horus
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVF Thoth
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Hayg Mas"  "Sahr AS")
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVF Serapis
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS")
+						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
+$PBank Capacity:		( 40, 40 )
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVF Tauret
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
+						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
+$PBank Capacity:		(80)
+$Shield Armor Type:		LightArmor
+						
+
+$Name:		GVB Sekhmet
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "Hayg Mas" "Sehku" "Sahr AS" "Hell Spitter" "Fire Spitter")
+$PBank Capacity:		(100)
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVB Osiris
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sehku" "Hell Spitter")
+$PBank Capacity:		(80)
+$Default SBanks:        ( "Cyclops" "Tempest" "Trebuchet" )
+$SBank Capacity:        ( 40, 40, 20 )
+$Shield Armor Type:		LightArmor
+$Subsystem:                     Turret01,1,1.0
+	$Default PBanks:        ( "Hayg Mas" )
+	$Flags:					("play fire sound for player")
+$Subsystem:                     Turret02,1,1.0
+	$Default PBanks:        ( "Hayg Mas" )
+	$Flags:					("play fire sound for player")
+
+	
+$Name:		GVB Bakha
+	+nocreate ;:
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Prometheus R" "Prometheus S" "Circe" "Lamprey" "Helios" "Hayg Mas" "Sehku"  "Sahr AS")
+$Default SBanks:        ( "Cyclops" "Trebuchet" )
+$SBank Capacity:        ( 80, 100 )
+$Shield Armor Type:		LightArmor
+
+
+$Name:		GVF Ptah
+	+nocreate ;:
+$Allowed PBanks:		( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Hayg Mas")
+$Shield Armor Type:		LightArmor
+
+
 ;; elite fighters
 
 $Name:					GVF Serapis Elite
 $Short name:            VFight21E
 $Species:				Vasudan
-	+Type:					XSTR("Advanced Interceptor", -1)
+	+Type:					XSTR("Elite Space Superiority", -1)
 	+Maneuverability:       XSTR("Excellent", -1)
 	+Armor:					XSTR("Light", -1)
 	+Manufacturer:          XSTR("Akheton Corporation", -1)
@@ -236,7 +309,10 @@ $Species:				Vasudan
 $end_multi_text
 +Tech Description:
 XSTR(
-"This improved version of the Serapis features improved shielding and armor, as well as a greater weapon compatibility", -1)
+"After the moderate success of the GVF Serapis, Akheton engineers attempted to correct or at least dampen its main flaw: durability. The project, dubbed Serapis Elite, had to follow a harsh set of specification: create a fighter as light weight and agile as the original Serapis, while increasing its hull resistance and shield strength, as well as a broader weapon compatibility.
+
+The result was an expansive fighter, integrating the brand new gliding feature, compatibility with the GTVA's most advanced fighter weaponery and a 50% increase in hull and shield strength over the original Serapis.
+While the Serapis Elite is not quite as expensive as the Terran Ares or Erinyes, its still-low life expectancy in particularly intense combat situation has dissuaded Vasudan Command from committing this fighter for mass-production, and thus the Serapis remained the Vasudan's main Space Superiority fighter, while this model was taken over by Special Operations Command and vasudan aces.", -1)
 $end_multi_text
 +Length:				14 Meters
 +Gun Mounts:			2
@@ -568,76 +644,6 @@ $Subsystem:             engine,                 35,0.0
 $Subsystem:             weapons,                        15,0.0
 $Subsystem:             navigation,              5,0.0
 
-
-;; vasudan fighters
-
-$Name:		GVF Seth
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVF Horus
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVF Thoth
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Hayg Mas"  "Sahr AS")
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVF Serapis
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS")
-						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
-$PBank Capacity:		( 40, 40 )
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVF Tauret
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
-						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
-$PBank Capacity:		(80)
-$Shield Armor Type:		LightArmor
-						
-
-$Name:		GVB Sekhmet
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "Hayg Mas" "Sehku" "Sahr AS" "Hell Spitter" "Fire Spitter")
-$PBank Capacity:		(100)
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVB Osiris
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sehku" "Hell Spitter")
-$Default SBanks:        ( "Cyclops" "Tempest" "Trebuchet" )
-$SBank Capacity:        ( 40, 40, 20 )
-$Shield Armor Type:		LightArmor
-$Subsystem:                     Turret01,1,1.0
-	$Default PBanks:        ( "Hayg Mas" )
-	$Flags:					("play fire sound for player")
-$Subsystem:                     Turret02,1,1.0
-	$Default PBanks:        ( "Hayg Mas" )
-	$Flags:					("play fire sound for player")
-
-	
-$Name:		GVB Bakha
-	+nocreate ;:
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Prometheus R" "Prometheus S" "Circe" "Lamprey" "Helios" "Hayg Mas" "Sehku"  "Sahr AS")
-$Default SBanks:        ( "Cyclops" "Trebuchet" )
-$SBank Capacity:        ( 80, 100 )
-$Shield Armor Type:		LightArmor
-
-
-$Name:		GVF Ptah
-	+nocreate ;:
-$Allowed PBanks:		( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Hayg Mas")
-$Shield Armor Type:		LightArmor
 
 
 #End
