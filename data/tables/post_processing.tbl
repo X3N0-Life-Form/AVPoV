@@ -1,0 +1,63 @@
+#Effects
+
+$Name:		contrast
+$Uniform:	contrast
+$Define:	FLAG_CONTRAST
+$AlwaysOn: 	false
+$Default:	1.0
+$Div:		500
+$Add:		1
+
+$Name:		distort noise
+$Uniform:	noise_amount
+$Define:	FLAG_DISTORT_NOISE
+$AlwaysOn: 	false
+$Default:	0.0
+$Div:		20000
+$Add:		0
+
+$Name:		film grain
+$Uniform:	film_grain
+$Define:	FLAG_GRAIN
+$AlwaysOn: 	false
+$Default:	0.0
+$Div:		100
+$Add:		0
+
+$Name:		saturation
+$Uniform:	saturation
+$Define:	FLAG_SATURATION
+$AlwaysOn: 	false
+$Default:	1.0
+$Div:		100
+$Add:		0
+
+$Name:		stripes
+$Uniform:	tv_stripes
+$Define:	FLAG_STRIPES
+$AlwaysOn:	false
+$Default:	0.0
+$Div:		100
+$Add:		0
+
+#Ship Effects
+
+$Name: 			Cloak
+$Shader Effect:			2
+$Disables Rendering:	YES
+$Invert timer:			YES
+
+$Name:			Decloak
+$Shader Effect:			2
+$Disables Rendering:	NO
+$Invert timer:			NO	
+
+;#Light Shafts
+;$AlwaysOn:		YES
+;$Density:		1.2
+;$Falloff:		1.0
+;$Weight:		0.2
+;$Intensity:		0.5
+;$Sample Number:	50
+
+#End

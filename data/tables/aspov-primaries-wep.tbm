@@ -809,7 +809,6 @@ $Cargo Size:					0.25
 $Homing:						NO
 $LaunchSnd:						116
 $ImpactSnd:						117
-$Rearm Rate:					40.0
 +Weapon Range:					4000			;; Limit to range at which weapon will actively target object
 $Flags:							("Flak" "particle spew" "player allowed")
 $Trail:

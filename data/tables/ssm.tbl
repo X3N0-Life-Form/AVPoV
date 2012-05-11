@@ -5,7 +5,7 @@ $SSM:
 	+WarpTime:		6
 	+Radius:		1200
 	+Offset:		1
-	+Custom Message:"Inbound Shivan Subspace Missile Strike"
+	+Custom Message:"Inbound Shivan SSM Strike"
 
 $SSM:
 	+Weapon:		AntiFighterSSM
@@ -14,7 +14,7 @@ $SSM:
 	+WarpTime:		4
 	+Radius:		400
 	+Offset:		1
-	+Custom Message:"Inbound Shivan Anti-Strikecraft Subspace Missile Strike"
+	+Custom Message:"Inbound Shivan Anti-Strikecraft SSM Strike"
 
 $SSM:
 	+Weapon:		Shivan Subspace Missile
@@ -23,7 +23,7 @@ $SSM:
 	+WarpTime:		8
 	+Radius:		1600
 	+Offset:		1
-	+Custom Message:"Inbound Shivan Subspace Missile Barrage"
+	+Custom Message:"Inbound Shivan SSM Barrage"
 	
 $SSM:
 	+Weapon:		Shivan Mordiggian Bomb
@@ -47,7 +47,7 @@ $SSM:
 	+Weapon:		Overkill Mk2
 	+Count:			1
 	+WarpRadius:	20
-	+WarpTime:		2
+	+WarpTime:		4 ;2
 	+Radius:		400
 	+Offset:		1
 	+Custom Message:"Inbound Overkill Mk2 Strike"

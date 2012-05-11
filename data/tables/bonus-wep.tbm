@@ -65,7 +65,7 @@ XSTR(
 "Special Issue
 Electronic Warfare", 3362)
 $end_multi_text
-+Tech Title:				   XSTR("GTI TAG-C 'Overkill' Missile", 3363)
++Tech Title:				   XSTR("TAG-C 'Overkill' Missile", 3363)
 +Tech Anim:					   Tech_GTI_TAG_Missile_C
 +Tech Description:
 XSTR(
@@ -209,13 +209,13 @@ $Impact Explosion:							ExpMissileHit1
 $Impact Explosion Radius:					20.0
 
 $Name: Overkill Mk2
-	+Title: XSTR("GTI TAG-Overkill Missile", 3361)
+	+Title: XSTR("TAG-Overkill Missile", 3361)
 	+Description:
 	XSTR(
 		"Special Issue
 		Electronic Warfare", 3362)
 	$end_multi_text
-	+Tech Title: XSTR("GTI TAG-C 'Overkill' Mk2 Missile", 3363)
+	+Tech Title: XSTR("TAG-C 'Overkill' Mk2 Missile", 3363)
 	+Tech Anim: Tech_GTI_TAG_Missile_C
 	+Tech Description:
 	XSTR(

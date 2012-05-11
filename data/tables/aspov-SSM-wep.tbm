@@ -264,7 +264,6 @@ $Thruster Flame Effect:				missilethruster06
 $Thruster Glow Effect:				missileglow06
 
 $Name:				Shivan Mordiggian Bomb
-aspov-SSM-wep.tbm
 $Model File:		S_MegaBomb.pof
 $POF target LOD: 	0
 $Mass: 				35.0

@@ -256,7 +256,7 @@ $Name:		GVF Tauret
 	+nocreate ;:
 $Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
 						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Circe" "Lamprey" "Hayg Mas" "Sahr AS")
-$PBank Capacity:		(80)
+$PBank Capacity:		( 80, 40)
 $Shield Armor Type:		LightArmor
 						
 
