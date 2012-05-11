@@ -14,6 +14,9 @@ $Name:                                 	Shivan Swarmer Bomb
 		Anti-Capital Ship Warhead
 		", -1)
 		$end_multi_text
+	+Tech Description:
+		XSTR("A threat that only appeared recently, the Shivan Swarmer Bomb is a light warhead whose main purpose is to confuse capital ships' point defence system. Often mounted on Aeshma Heavy fighter of Nahema Strike Bombers, these bombs are fired in swarms of 2 or 4 in rapid succession, overwhelming a warship's defence system and fighter escort. They have recently earned the nickname of 'corvette's hornet', due to the life expectancy of Alliance corvettes facing Swarmer Bombs being similar to that of a cruiser facing Hornet Swarm Missiles.",-1)
+		$end_multi_text
 $Model File:							S_Bomb.pof
 $POF target LOD:						0
 $Mass:									25.0
