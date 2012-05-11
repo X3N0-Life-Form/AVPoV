@@ -1053,19 +1053,19 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret20-base
 +Subsystem: turret21-base
 +Subsystem: turret22
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
++Secondary Banks: ( "Shivan Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret23
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
++Secondary Banks: ( "Shivan Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret24
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
++Secondary Banks: ( "Shivan Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret25
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
++Secondary Banks: ( "Shivan Bomb" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret26
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
++Secondary Banks: ( "Shivan Bomb" )
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 22 "Thebes" ) 
