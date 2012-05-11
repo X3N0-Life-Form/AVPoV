@@ -30,7 +30,7 @@ $Name:                                 	Vasudan Torpedo
 		XSTR("When the Hatshepsut-class destroyer came out, it became apparent that the old Fusion Mortar and Vasudan Flux Canon had become obsolete in the new beam heavy environment as heavy ship-to-ship missiles. While the Terran decided to develop a Mass Driver gun for their Hecate-class destroyers as a secondary non-beam anti-capital ship weapon, Vasudan Command decided to retrofit the already-existing Fusion Mortar launchers of Hatshesput destroyers into a next-generation anti-capital ship missile launcher.
 
 The resulting weapon is a flexible torpedo system, firing fast torpedoes in swarms of 2, sacrificing payload for speed, making the torpedoes hard to intercept. While the production costs remain relatively high compared to older mainstream designs, the success of this weapon system can be interpreted as a cue that ship-to-ship missiles are still a viable weapon plaform.",-1)
-		$end_multi_line
+		$end_multi_text
 $Model File:							harbinger_big.pof
 $POF target LOD:						1
 $Mass:									25.0
