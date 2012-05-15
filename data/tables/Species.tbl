@@ -159,7 +159,7 @@ The vast majority of subspace nodes are extremely unstable, forming and dissipat
 $end_multi_text
 
 $Entry:
-$Name:				XSTR("-- Armor --",-1)
+$Name:				XSTR("---- Armor ----",-1)
 $Anim:					
 $AlwaysInTechRoom:		1
 $Description:		XSTR("",-1)
@@ -218,7 +218,7 @@ $Entry:
 $Name:				XSTR("Shivan Elite Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
-$Description:		XSTR("no comment",-1)
+$Description:		XSTR("Critical Shivan ships have, on occasions, benefitted from vastly superior hull and shielding compared to the rest of their fleet. Strangely enough, fighters and warships alike have been featuring the same type of armor.",-1)
 $end_multi_text
 
 $Entry:					
@@ -226,4 +226,111 @@ $Name:				XSTR("Hell Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
 $Description:		XSTR("You shouldn't be seeing this.",-1)
+$end_multi_text
+
+$Entry:
+$Name:  			XSTR("---- Notable Ships ----",-1)
+$Anim:					
+$AlwaysInTechRoom:		1
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Entry:
+$Name:    		XSTR("-- Terran Ships --",-1)
+$Anim:					
+$AlwaysInTechRoom:		1
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("GTD Olympus Shadow",-1)
+$Anim:  				
+$AlwaysInTechRoom:		0
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("GTD Streaker",-1)
+$Anim:  				
+$AlwaysInTechRoom:		0
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:      	XSTR("-- Vasudan Ships --",-1)
+$Anim:					
+$AlwaysInTechRoom:		1
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("GVD Apep",-1)
+$Anim:  				
+$AlwaysInTechRoom:		1
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("GVD Pharaoh",-1)
+$Anim:  				
+$AlwaysInTechRoom:		0
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("GVD Black Mamba",-1)
+$Anim:  				
+$AlwaysInTechRoom:		0
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:      	XSTR("-- Shivan Ships --",-1)
+$Anim:					
+$AlwaysInTechRoom:		1
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Vampire",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Long Range Hunter Killer Destroyer
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Reaper",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Command Heavy Cruiser
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SCv Cyaegha",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Command Corvette
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Vorvadoss",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:		XSTR("",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Hellknight",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Hunter Killer Cruiser
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Kohl'Taar",-1)
+$Anim:					
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Battle Destroyer
+
+    ",-1)
 $end_multi_text
