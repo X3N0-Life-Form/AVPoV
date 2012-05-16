@@ -10,14 +10,14 @@ ToDo : on Hammer time : Blade fail RTB + debrief
 more delay after Cyaegha's jump
 
 
-set elite armor for vampire ; reaper & cyaegha & hellknight + escort
+set elite armor on vampire ; reaper & cyaegha & hellknight + escort
 
 
 Fail debriefs on vampire slayers
 
 
 
-
+ask mjn.mixael for techroom/command briefing anims or advice
 
 
 
