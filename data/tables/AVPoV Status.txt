@@ -18,7 +18,8 @@ Refraction rules :
 
 	Respect every beam's RoF
 
-CO : Admiral Obster
+12th Vasudan Battlegroup
+CO : Rear-Admiral Obster
 //Admiral Aramcheck - name on stand by
 
 /********************************************************************************/
