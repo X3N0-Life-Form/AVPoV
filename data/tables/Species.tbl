@@ -325,7 +325,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Command Corvette
 
-    ",-1)
+    The SCv Cyaegha has proven to be a particularly evasive, yet dangerous opponent. Using its superior subspace agility, this corvette has quickly earned a reputation as cruiser hunter, often jumping behind its target and disabling its engines before having a chance to react, and retreating as soon as its initial prey is destroyed. The Cyaegha is also known for its unusual subspace endurance, even by Shivan standard, sometimes hopping between battles throughout the system, making tracking the ship's movements difficult. However, the corvette seems to be needing to take 'breaks', stopping all harassment of allied units for a few hours and being much less jump-happy, allowing allied units to take a few shots at the corvette before she retreats.",-1)
 $end_multi_text
 
 $Name:        XSTR("SD Vorvadoss",-1)
