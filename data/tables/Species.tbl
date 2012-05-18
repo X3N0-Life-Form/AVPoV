@@ -242,11 +242,20 @@ $AlwaysInTechRoom:		1
 $Description:		XSTR("",-1)
 $end_multi_text
 
+$Name:        XSTR("NTD Stalker",-1)
+$Anim:      			
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Rebel Special Operations Destroyer
+
+    ",-1)
+$end_multi_text
+
 $Name:        XSTR("GTD Olympus Shadow",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Battlegroup Flag Destroyer
+    XSTR("Battlegroup Flag DestroyerTODO
 
     Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure",-1)
 $end_multi_text
@@ -292,7 +301,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Combat Destroyer
 
-    ",-1)
+    First deployed in the opening months of the NTF Rebellion, the Black Mamba features the same armament as the GVD Apep, but lacks its logistics and support systems. Nevertheless, the destroyer's crew has shown a remarkable efficiency during the destroyer's operation in Deneb and Epsilon Pegasi, prompting Allied Command to request and obtain its deployment in Gamma Draconnis to assist the GVD Apep and its battlegroup.",-1)
 $end_multi_text
 
 $Name:      	XSTR("-- Shivan Ships --",-1)
