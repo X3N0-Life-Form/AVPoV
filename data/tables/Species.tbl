@@ -468,7 +468,34 @@ $Description:
     It missile launchers are especially versatile, capable of using many different types of ordnance, including cluster bombs, short range swarm missiles, long range swarm missiles, long range missiles, bombs and swarmer bombs.",-1)
 $end_multi_text
 
-$Name:        XSTR("SC Obizoth",-1)
+$Name:        XSTR("Moloch - Carrier Corvette",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("The standard variant of the Moloch class corvette packs 3 medium-sized beam weapons, a forward-facing cannon and a small fighter bay. This allows the Moloch to opperate independently from Shivan destroyers, and has been seen engaging Allied destroyers on its own.
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Moloch - Support Corvette",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("A very recently discovered variant, this Moloch is capable of calling SSM strikes on any ship in the field of engagement, without the need of a TAG beacon. As a result, its point-defences are significantly weaker compared to other variants, only mounting cruiser-grade beams. It is however mounting anti-fighter TAG launchers.
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Moloch - Strike Corvette",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Trading its 3 medium-sized beams for 3 cruiser-grade beams and a forward-mounted upgraded medium beam, the Strike Corvette is often deployed against Allied destroyers and their escort group, spearheading the assault with its superior forward firepower.
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Moloch - Command Corvette (SCv Cyaegha)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
@@ -477,38 +504,11 @@ $Description:
     ",-1)
 $end_multi_text
 
-$Name:        XSTR("SC Obizoth",-1)
+$Name:        XSTR("Moloch - Area Denial Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
-
-    ",-1)
-$end_multi_text
-
-$Name:        XSTR("SC Obizoth",-1)
-$Anim:                	
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
-
-    ",-1)
-$end_multi_text
-
-$Name:        XSTR("SC Obizoth",-1)
-$Anim:                	
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
-
-    ",-1)
-$end_multi_text
-
-$Name:        XSTR("SC Obizoth",-1)
-$Anim:                	
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
+    XSTR("An unsual variant, the Area Denial Corvette trades its anti-capital ship beams and close range missile launchers for long range flak guns and missile launchers. This unsual configuration for a Shivan ship leaves analysists puzzled, as so far Shivans never put emphasis on their warship's anti-fighter defence, let alone field a ship dedicated to this role.
 
     ",-1)
 $end_multi_text
