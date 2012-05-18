@@ -580,16 +580,16 @@ $Name:        XSTR("Cain - Light Support Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Despite its 'Support' classification, this variant is actually better armed and better armored than the standard Cain, trading its anticap lasers with either Multi-Turrets or Flak Turrets, and systematically using swarm missiles.
 
-    ",-1)
+    The support classification actually comes from the fact that it is rarely, if ever, deployed alone. It always accompanies another warship - sometimes another Light Support Cruiser, unless, of course its companion ship is destroyed, in which case it will attempt to complete its objectives alone.",-1)
 $end_multi_text
 
 $Name:        XSTR("Cain - Light Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("
+    XSTR("The standard Cain class cruiser carries a single cruiser-grade beam cannon, supplemented by two anti-capital laser. Its main anti-fighter capabilities come from the aft anti-fighter beam and the two side-mounted missile launcher, which are sometimes capable of firing swarm missiles as well.
 
     ",-1)
 $end_multi_text
@@ -598,7 +598,7 @@ $Name:        XSTR("Cain - Flak Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("
+    XSTR("Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponery.
 
     ",-1)
 $end_multi_text
