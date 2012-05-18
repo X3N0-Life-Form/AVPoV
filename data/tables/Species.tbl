@@ -307,7 +307,9 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Long Range Hunter Killer Destroyer
 
-    ",-1)
+    Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams area capable of succesfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
+
+    The Vampire is also better armed than the initial Ravana, and has different hull composition than the standard Shivan destroyers, hinting that this ship fills a slightly different role, and might be aven more important to the Shivans than the average destroyer.",-1)
 $end_multi_text
 
 $Name:        XSTR("SC Reaper",-1)
@@ -316,7 +318,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Command Heavy Cruiser
 
-    ",-1)
+    The Reaper was first sighted shortly after the destruction of the SD Ravana. The cruiser has been sweeping the nebula ever since, usually leading strikes against Allied capital ships, with one or two other cruisers to assist it. Acting seemingly indenpendently from any Shivan Command Ship present in the nebula at the time, and has never taken any action to cross or secure the Gamma Draconnis node.",-1)
 $end_multi_text
 
 $Name:        XSTR("SCv Cyaegha",-1)
@@ -326,15 +328,6 @@ $Description:
     XSTR("Command Corvette
 
     The SCv Cyaegha has proven to be a particularly evasive, yet dangerous opponent. Using its superior subspace agility, this corvette has quickly earned a reputation as cruiser hunter, often jumping behind its target and disabling its engines before having a chance to react, and retreating as soon as its initial prey is destroyed. The Cyaegha is also known for its unusual subspace endurance, even by Shivan standard, sometimes hopping between battles throughout the system, making tracking the ship's movements difficult. However, the corvette seems to be needing to take 'breaks', stopping all harassment of allied units for a few hours and being much less jump-happy, allowing allied units to take a few shots at the corvette before she retreats.",-1)
-$end_multi_text
-
-$Name:        XSTR("SD Vorvadoss",-1)
-$Anim:					
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
-
-    ",-1)
 $end_multi_text
 
 $Name:        XSTR("SC Hellknight",-1)
@@ -351,6 +344,187 @@ $Anim:
 $AlwaysInTechRoom:		0
 $Description:
     XSTR("Battle Destroyer
+
+    ",-1)
+$end_multi_text
+;; ordinary destroyer + liliths
+$Name:        XSTR("SD Vorvadoss",-1)
+$Anim:    				
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Lamashtu",-1)
+$Anim:        			
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Nergal",-1)
+$Anim:        			
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Nix",-1)
+$Anim:        			
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:            		
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SD Centrab Betz",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+;; cf renewed ships.txt
+$Name:        XSTR("---- Ship variants ----",-1)
+$Anim:                	
+$AlwaysInTechRoom:		1
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Ravana - Battle Destroyer",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Demon - Support Destroyer (SSM Launcher)",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Demon - Combat Destroyer",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("SC Obizoth",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
 
     ",-1)
 $end_multi_text
