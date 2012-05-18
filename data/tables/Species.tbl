@@ -427,7 +427,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("
 
-    ",-1)
+    These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
 $Name:        XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)",-1)
@@ -483,7 +483,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("A very recently discovered variant, this Moloch is capable of calling SSM strikes on any ship in the field of engagement, without the need of a TAG beacon. As a result, its point-defences are significantly weaker compared to other variants, only mounting cruiser-grade beams. It is however mounting anti-fighter TAG launchers.
 
-    ",-1)
+    The Support corvette is considered a high priority target, and should be engaged by any asset currently commited to field of engagement.",-1)
 $end_multi_text
 
 $Name:        XSTR("Moloch - Strike Corvette",-1)
@@ -513,7 +513,16 @@ $Description:
     ",-1)
 $end_multi_text
 
-$Name:        XSTR("SC Obizoth",-1)
+$Name:        XSTR("Lilith - Hunter Killer Heavy Cruiser",-1)
+$Anim:                	
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("Once labelled Destroyer Hunter Heavy Cruiser, the Lilith's standard variant has been reclassified as a Hunter Killer ship. With an exceptionnaly tough hull, the Lilith follow the same attack pattern as other Hunter Killer vessels: jump in, keep firing until all targets in range are destroyed or departed, and jump out before reinforcements arrive.
+
+    With its destroyer-grade beam cannon, Lilith is considered a very high priority target, and should be taken down by any means necessary.",-1)
+$end_multi_text
+
+$Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
@@ -522,8 +531,53 @@ $Description:
     ",-1)
 $end_multi_text
 
-$Name:        XSTR("SC Obizoth",-1)
-$Anim:                	
+$Name:        XSTR("Rakshasa - Strike Cruiser",-1)
+$Anim:                    
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("The most common Rakshasa variant with the Support Cruiser, the Strike Cruiser is capable of obliterating lightly armored cruisers thanks to its 4 forward-facing cruiser-grade beam emitters, and is a serious thread to warships up to corvette class.
+
+    The top and bottom of the cruiser are defended by a pair of anti-fighter beams, while the sides each have a Multi-Turret, offering decent stopping power against incoming bombers and unshielded targets thanks to its fast refire rate.",-1)
+$end_multi_text
+
+$Name:        XSTR("Rakshasa - Support Cruiser",-1)
+$Anim:                    
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("The most common Rakshasa variant with the Strike Cruiser, the Support Cruiser is more versatile than its counter part, trading two of its forward beams with Multi-Turrets instead, its side Multi-Turret and top anti fighter beam with flak gun, providing the cruiser with an overall better anti-fighter defence while retaining a decent anti-capital ship firepower.
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Rakshasa - Hunter Killer Cruiser (Hellknight)",-1)
+$Anim:                    
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("The SC Hellknight is the only known Hunter Killer variant of the Rakshasa. On the outside, the Hunter Killer Cruiser seems identical to the Strike Cruiser, but is actually equipped with 4 corvette-grade beams, instead of the standard cruiser-grade weapons.
+
+    More details are available on the Hellknight's tech description.",-1)
+$end_multi_text
+
+$Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
+$Anim:                    
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("
+
+    ",-1)
+$end_multi_text
+
+$Name:        XSTR("Rakshasa - Heavy Assault Cruiser",-1)
+$Anim:                    
+$AlwaysInTechRoom:		0
+$Description:
+    XSTR("A very recently discovered Rakshasa variant, the Heavy Assault Cruiser retains the Strike Cruiser's front firepower, couple with improved laser turrets, 4 anti-fighter beams and improved armor.
+
+    Though these vessels are considered high priority targets, the Alliance currently doesn't have the ressources to commit assets to hunting these cruisers down.",-1)
+$end_multi_text
+
+$Name:        XSTR("",-1)
+$Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
     XSTR("
