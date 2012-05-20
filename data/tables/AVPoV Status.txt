@@ -269,7 +269,7 @@ C_Shivan_Tech_Arc_03b.The Master of Death	//ToDo
 #										#
 # Losses : none									#
 ///////////////////////////////////////////////////////////////////////////////////
-D_NTF_Arc_01.Card Games								//?
+D_NTF_Arc_01.Card Games								//?+need messages
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		New equipement : prometheus s ; piranha

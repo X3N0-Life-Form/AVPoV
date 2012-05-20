@@ -471,8 +471,8 @@ Deimos:
 	turret 02:Wraith
 	turret 03:Wraith
 	turret 04:Wraith
-	turret 21:Wraith/Fast Flak
-	turret 22:Wraith/Fast Flak
+	turret 21:Wraith/Fast Flak/Mass Driver
+	turret 22:Wraith/Fast Flak/Mass Driver
 
 
 Aeolus:
