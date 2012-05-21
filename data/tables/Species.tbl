@@ -248,7 +248,11 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Rebel Special Operations Destroyer
 
-    ",-1)
+    One of the first Orions to have been seized by the NTF, the Stalker was part of Neo-Terran Special Tasks Force, roughly the equivalent of the Alliance's Special Operations Command. Commanded by Rear-Admiral Lino Dusthoff, the Stalker has been involved in no less than 15 special operations against the GTVA, including the famous raid against the Cortez shipyards in Capella, bypassing Alliance blokades, which ended in the stealing of three Aeolus cruisers present in drydocks at the time, as well as a significant amount of supplies, destroying the shipyards themselves, thus denying the Alliance the ability to refit its own aeolus cruisers with Medium Beams, losing only one leviathan cruiser, 2 bomber wings and 6 fighter wings in the process.
+
+    Having taken part in more joint operations with the Vasudans than most of its fellow officers, without any notable incident, the sudden defection of the then Commodore Dusthoff raised a few eyebrows in the higher circles of the Alliance Navy and the Security Council, prompting GTVI the reconsider the profile of potential defectors. In retrospect, this was also one of the first hints that Bosch's public persona didn't quite match its actual, unknown, motives.
+
+    The later months of the war showed a slow but steady decrease in the Stalker's performance, starting with the fiasco of an intelligence gathering operation in Epsilon Pegasi, which resulted in the loss of two NTF cruisers and the death of Dusthoff's second in command. Analysts suggest that while the Stalker's command crew intially joined Bosch's Neo Terran Front for motives different from Vasudan hatred or other obvious NTF ideologies, 15 months of constant operations against their former comrades and their first hand grasp of how increasingly desperate the NTF's situation was, eventually wore off the non-fanatic officers.",-1)
 $end_multi_text
 
 $Name:        XSTR("GTD Olympus Shadow",-1)
