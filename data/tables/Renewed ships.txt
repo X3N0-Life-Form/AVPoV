@@ -302,11 +302,21 @@ Rakshasa:	Support Cruiser
 	+improved AWACS range (6000)
 
 Rakshasa:	Hunter Killer Cruiser (Hellknight)
+	armor: Shivan Elite Armor
+	turret armor:Hell Armor
 	turret 01:MRed
 	turret 02:MRed
 	turret 03:MRed
 	turret 04:MRed
+	turret 05:Shivan Multi Turret
+	turret 06:Shivan Multi Turret
+	turret 07:SAAA
+	turret 08:SAAA
 	turret 10:SAAA
+	turret 11:Shivan Multi Turret
+	turret 12:Shivan Multi Turret
+	turret 13:Shivan Multi Turret
+	turret 14:Shivan Multi Turret
 
 Rakshasa:	Heavy Assault Cruiser
 	armor: Shivan Elite Armor
