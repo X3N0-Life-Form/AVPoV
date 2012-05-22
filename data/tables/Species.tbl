@@ -262,7 +262,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Special Operations Destroyer
 
-    ",-1)
+    Classified",-1)
 $end_multi_text
 
 $Name:      	XSTR("-- Vasudan Ships --",-1)
@@ -341,7 +341,9 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Hunter Killer Cruiser
 
-    ",-1)
+    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponery. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 to outright hunt and destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
+
+    Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
 
 $Name:        XSTR("SD Kohl'Taar",-1)
