@@ -65,6 +65,7 @@ $Ship Choices: (
 	"Maxim"	20
 	"Circe"	8
 	"Fire Spitter"	16
+	"Hell Spitter"	16
 	"Hayg Mas"	16
 	"Sehku"	16
 	"Sahr AS"	16
@@ -941,16 +942,24 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret04
 +Primary Banks: ( "MRed" )
 +Subsystem: turret05
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret06
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret07
++Primary Banks: ( "SAAA" )
 +Subsystem: turret08
++Primary Banks: ( "SAAA" )
 +Subsystem: turret09
 +Subsystem: turret10
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret12
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret13
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret14
++Primary Banks: ( "Shivan Multi Turret" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( and 
    ( is-destroyed-delay 9 "Tiamat" ) 
@@ -4712,6 +4721,35 @@ $Formula: ( when
       "Hellknight" 
       "<all engines>" 
    )
+   ( set-armor-type
+      "Hellknight"
+      ( true )
+      "Shivan Elite Armor"
+      "Hull"
+   )
+   ( set-armor-type
+      "Hellknight"
+      ( true )
+      "Hell Armor"
+      "engines"
+      "weapons"
+      "sensors"
+      "navigation"
+      "turret01"
+      "turret02"
+      "turret03"
+      "turret04"
+      "turret05"
+      "turret06"
+      "turret07"
+      "turret08"
+      "turret09"
+      "turret10"
+      "turret11"
+      "turret12"
+      "turret13"
+      "turret14"
+   )
 )
 +Name: Path A - Hellknight arrives
 +Repeat Count: 1
@@ -4924,7 +4962,14 @@ $Formula: ( when
       "Trebuchet#Shivan" 
    )
    ( set-secondary-ammo "Alpha 1" 0 500 ) 
-   ( set-secondary-ammo "Alpha 1" 1 500 ) 
+   ( set-secondary-ammo "Alpha 1" 1 500 )
+   ( set-armor-type
+      "Alpha 1"
+      ( true )
+      "Shivan Bomber Armor"
+      "Hull"
+      "Shield"
+   )
 )
 +Name: loadout
 +Repeat Count: 1
