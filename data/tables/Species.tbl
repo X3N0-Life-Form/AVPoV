@@ -1,11 +1,3 @@
-; new format:
-; $Entry:				// begins entry
-; $Anim:				// anim filename, no extension
-; $AlwaysInTechRoom:			// 1 for yes, 0 for no.  if 0, must use a SEXP to make it show up in the TR
-; $Description:				// obvious
-; $end_multi_text			// end of description (and entry)
-
-
 $Entry:
 $Name: XSTR("The Great War",3184)
 $Anim: Intel_Great_War
@@ -374,18 +366,18 @@ $Name:        XSTR("SD Lamashtu",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("A very evasive destroyer, the Lamashtu's usual tactic was to jump outside beam-lock range, then deploying its fighters to soften up its targets before they come in beam range.
 
-    ",-1)
+    This tactic failed the destroyer when it engaged the fleet gathered to confront the SJ Sathanas at the Capella node, which had been specially fitted to fight at long range.",-1)
 $end_multi_text
 
 $Name:        XSTR("SC Nergal",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("First sighted in the nebula, the Nergal has been relatively discret, for Lilith cruiser, occasionally assisting the SD Lamashtu.
 
-    ",-1)
+    It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
 $end_multi_text
 
 $Name:        XSTR("SD Nix",-1)
