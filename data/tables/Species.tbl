@@ -392,7 +392,7 @@ $Name:        XSTR("SD Nix",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The first Support variant of the Demon-class destroyer encountered, the SD Nix used the confusion following the Sathanas' advance in Gamma Draconis to its advantage, slipping through allied defence lines and providing SSM support for other Shivan units in system.
 
     ",-1)
 $end_multi_text
@@ -401,7 +401,7 @@ $Name:        XSTR("SC Obizoth",-1)
 $Anim:            		
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Arriving with the SD Nix, the Lilith-class cruiser Obizoth serves as the Nix's hunt hound. Striking allied warships assisted by the Nix's Subspace Missiles, the Obizoth is responsible for the destruction of two corvettes and three cruisers, making it the second deadliest Lilith cruiser of the current incursion, behind the SC Reaper.
 
     ",-1)
 $end_multi_text
