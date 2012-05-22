@@ -352,12 +352,13 @@ $Description:
 
     ",-1)
 $end_multi_text
-;; ordinary destroyer + liliths
+
+;; ordinary destroyers + liliths
 $Name:        XSTR("SD Vorvadoss",-1)
 $Anim:    				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blocading forces.
 
     ",-1)
 $end_multi_text
@@ -402,9 +403,9 @@ $Name:        XSTR("SD Centrab Betz",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Bypassing Allied defences in Gamma Draconis, Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
 
-    ",-1)
+    Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
 
 ;; cf renewed ships.txt
