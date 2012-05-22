@@ -4750,16 +4750,24 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret04
 +Primary Banks: ( "MRed" )
 +Subsystem: turret05
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret06
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret07
++Primary Banks: ( "SAAA" )
 +Subsystem: turret08
++Primary Banks: ( "SAAA" )
 +Subsystem: turret09
 +Subsystem: turret10
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret12
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret13
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret14
++Primary Banks: ( "Shivan Multi Turret" )
 $Arrival Location: In front of ship
 +Arrival Distance: 3800
 $Arrival Anchor: Olympus Shadow
