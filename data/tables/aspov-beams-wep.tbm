@@ -135,7 +135,8 @@ $Name:                          MRed
 	+Tech Description:	XSTR("Medium Shivan Beam
 	
 	This weapon is somewhere in between destroyer and cruiser grade beam canons, in terms of firepower. It is mainly found on Shivan corvettes and destroyers.
-	",-1)
+	
+	Damage per salvo: 8044",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  laserglow01
@@ -236,7 +237,9 @@ $Name:                          MRedUp
 	+Tech Title:		XSTR("MRedUp",-1)
 	+Tech Description:	XSTR("Upgraded Medium Shivan Beam
 	
-	",-1)
+	blabla
+
+	Damage per salvo: 12066",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  laserglow01
@@ -338,7 +341,9 @@ $Name:							MGreen
 	+Tech Title:		XSTR("MGreen",-1)
 	+Tech Description:	XSTR("Medium Terran Beam
 	
-	Once larger ships got equipped with more effective beam weaponery, it became clear that the Small Beam equipped on Leviathan and Aeolus cruisers wasn't up to the task. The Medium Beam research project's aim was to provide the brand new Aeolus cruisers with decent long range anti-warship capabilties, something the aging Leviathan and Fenris designs could achieve with their Fusion Mortar battery. Optimized to be outfitted exclusively into the Aeolus, the Medium Terran Beam is rarely found on other ship classes. Very few Aeolus have themselves been retrofitted with Medium Beams, this privilege being usually reserved for Special Operations units or Combat Groups",-1)
+	Once larger ships got equipped with more effective beam weaponery, it became clear that the Small Beam equipped on Leviathan and Aeolus cruisers wasn't up to the task. The Medium Beam research project's aim was to provide the brand new Aeolus cruisers with decent long range anti-warship capabilties, something the aging Leviathan and Fenris designs could achieve with their Fusion Mortar battery. Optimized to be outfitted exclusively into the Aeolus, the Medium Terran Beam is rarely found on other ship classes. Very few Aeolus have themselves been retrofitted with Medium Beams, this privilege being usually reserved for Special Operations units or Combat Groups
+
+	Damage per salvo: 4297",-1)
 	$end_multi_text
 $Model File:					none 				; laser1-1.pof
 @Laser Bitmap:               	laserglow01
@@ -433,7 +438,9 @@ $Name:							MGreenUp
 	+Tech Title:		XSTR("MGreenUp",-1)
 	+Tech Description:	XSTR("Upgraded Medium Terran Beam
 	
-	",-1)
+	blabla
+
+	Damage per salvo: 7112",-1)
 	$end_multi_text
 $Model File:					none 				; laser1-1.pof
 @Laser Bitmap:               	laserglow01
@@ -522,7 +529,8 @@ $BeamInfo:
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35
 		+Zadd:			1
-		
+
+;; damage per salvo: 52650
 $Name:							BFVas
 $Model File:					none 				; laser1-1.pof
 @Laser Bitmap:               	laserglow01
