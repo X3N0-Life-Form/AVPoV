@@ -1,11 +1,3 @@
-; new format:
-; $Entry:				// begins entry
-; $Anim:				// anim filename, no extension
-; $AlwaysInTechRoom:			// 1 for yes, 0 for no.  if 0, must use a SEXP to make it show up in the TR
-; $Description:				// obvious
-; $end_multi_text			// end of description (and entry)
-
-
 $Entry:
 $Name: XSTR("The Great War",3184)
 $Anim: Intel_Great_War
@@ -225,7 +217,7 @@ $Entry:
 $Name:				XSTR("Hell Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
-$Description:		XSTR("You shouldn't be seeing this.",-1)
+$Description:		XSTR("You shouldn't be seeing this. Makes ships nigh invulnerable.",-1)
 $end_multi_text
 
 $Entry:
@@ -248,16 +240,20 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Rebel Special Operations Destroyer
 
-    ",-1)
+    One of the first Orions to have been seized by the NTF, the Stalker was part of Neo-Terran Special Tasks Force, roughly the equivalent of the Alliance's Special Operations Command. Commanded by Rear-Admiral Lino Dusthoff, the Stalker has been involved in no less than 15 special operations against the GTVA, including the famous raid against the Cortez shipyards in Capella, bypassing Alliance blokades, which ended in the stealing of three Aeolus cruisers present in drydocks at the time, as well as a significant amount of supplies, destroying the shipyards themselves, thus denying the Alliance the ability to refit its own aeolus cruisers with Medium Beams, losing only one leviathan cruiser, 2 bomber wings and 6 fighter wings in the process.
+
+    Having taken part in more joint operations with the Vasudans than most of its fellow officers, without any notable incident, the sudden defection of the then Commodore Dusthoff raised a few eyebrows in the higher circles of the Alliance Navy and the Security Council, prompting GTVI the reconsider the profile of potential defectors. In retrospect, this was also one of the first hints that Bosch's public persona didn't quite match its actual, unknown, motives.
+
+    The later months of the war showed a slow but steady decrease in the Stalker's performance, starting with the fiasco of an intelligence gathering operation in Epsilon Pegasi, which resulted in the loss of two NTF cruisers and the death of Dusthoff's second in command. Analysts suggest that while the Stalker's command crew intially joined Bosch's Neo Terran Front for motives different from Vasudan hatred or other obvious NTF ideologies, 15 months of constant operations against their former comrades and their first hand grasp of how increasingly desperate the NTF's situation was, eventually wore off the non-fanatic officers.",-1)
 $end_multi_text
 
 $Name:        XSTR("GTD Olympus Shadow",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Battlegroup Flag DestroyerTODO
+    XSTR("Battlegroup Flag Destroyer
 
-    Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure",-1)
+    Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure, the Olympus Shadow in one of the newest Terran destroyers to serve the Alliance today. Following the destruction of the GTD Calvez in Polaris, the Olympus Shadow was appointed flagship of the 8th Terran Battlegroup, 3rd Fleet, Capella. Retaining most of the Calvez's command crew and surviving pilots, the Olympus Shadow and the 8th battlegroup distinguished themselves in Alpha Centauri before being assigned to Gamma Draconis after the end of the Civil War.",-1)
 $end_multi_text
 
 $Name:        XSTR("GTD Streaker",-1)
@@ -266,7 +262,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Special Operations Destroyer
 
-    ",-1)
+    Classified.",-1)
 $end_multi_text
 
 $Name:      	XSTR("-- Vasudan Ships --",-1)
@@ -345,7 +341,9 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Hunter Killer Cruiser
 
-    ",-1)
+    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponery. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 to outright hunt and destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
+
+    Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
 
 $Name:        XSTR("SD Kohl'Taar",-1)
@@ -356,12 +354,13 @@ $Description:
 
     ",-1)
 $end_multi_text
-;; ordinary destroyer + liliths
+
+;; ordinary destroyers + liliths
 $Name:        XSTR("SD Vorvadoss",-1)
 $Anim:    				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blocading forces.
 
     ",-1)
 $end_multi_text
@@ -370,25 +369,25 @@ $Name:        XSTR("SD Lamashtu",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("A very evasive destroyer, the Lamashtu's usual tactic was to jump outside beam-lock range, then deploying its fighters to soften up its targets before they come in beam range.
 
-    ",-1)
+    This tactic failed the destroyer when it engaged the fleet gathered to confront the SJ Sathanas at the Capella node, which had been specially fitted to fight at long range.",-1)
 $end_multi_text
 
 $Name:        XSTR("SC Nergal",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("First sighted in the nebula, the Nergal has been relatively discret, for Lilith cruiser, occasionally assisting the SD Lamashtu.
 
-    ",-1)
+    It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
 $end_multi_text
 
 $Name:        XSTR("SD Nix",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The first Support variant of the Demon-class destroyer encountered, the SD Nix used the confusion following the Sathanas' advance in Gamma Draconis to its advantage, slipping through allied defence lines and providing SSM support for other Shivan units in system.
 
     ",-1)
 $end_multi_text
@@ -397,7 +396,7 @@ $Name:        XSTR("SC Obizoth",-1)
 $Anim:            		
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Arriving with the SD Nix, the Lilith-class cruiser Obizoth serves as the Nix's hunt hound. Striking allied warships assisted by the Nix's Subspace Missiles, the Obizoth is responsible for the destruction of two corvettes and three cruisers, making it the second deadliest Lilith cruiser of the current incursion, behind the SC Reaper.
 
     ",-1)
 $end_multi_text
@@ -406,9 +405,9 @@ $Name:        XSTR("SD Centrab Betz",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Bypassing Allied defences in Gamma Draconis, Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
 
-    ",-1)
+    Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
 
 ;; cf renewed ships.txt
@@ -425,16 +424,16 @@ $Name:        XSTR("Ravana - Battle Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
 
-    ",-1)
+    On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned the title of Archangel of Death.",-1)
 $end_multi_text
 
 $Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponery in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
 
     These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
@@ -565,15 +564,6 @@ $Description:
     XSTR("The SC Hellknight is the only known Hunter Killer variant of the Rakshasa. On the outside, the Hunter Killer Cruiser seems identical to the Strike Cruiser, but is actually equipped with 4 corvette-grade beams, instead of the standard cruiser-grade weapons.
 
     More details are available on the Hellknight's tech description.",-1)
-$end_multi_text
-
-$Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
-$Anim:                    
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
-
-    ",-1)
 $end_multi_text
 
 $Name:        XSTR("Rakshasa - Heavy Assault Cruiser",-1)
