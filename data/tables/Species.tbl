@@ -217,7 +217,7 @@ $Entry:
 $Name:				XSTR("Hell Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
-$Description:		XSTR("You shouldn't be seeing this.",-1)
+$Description:		XSTR("You shouldn't be seeing this. Makes ships nigh invulnerable.",-1)
 $end_multi_text
 
 $Entry:
@@ -251,9 +251,9 @@ $Name:        XSTR("GTD Olympus Shadow",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Battlegroup Flag DestroyerTODO
+    XSTR("Battlegroup Flag Destroyer
 
-    Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure",-1)
+    Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure, the Olympus Shadow in one of the newest Terran destroyers to serve the Alliance today. Following the destruction of the GTD Calvez in Polaris, the Olympus Shadow was appointed flagship of the 8th Terran Battlegroup, 3rd Fleet, Capella. Retaining most of the Calvez's command crew and surviving pilots, the Olympus Shadow and the 8th battlegroup distinguished themselves in Alpha Centauri before being assigned to Gamma Draconis after the end of the Civil War.",-1)
 $end_multi_text
 
 $Name:        XSTR("GTD Streaker",-1)
@@ -262,7 +262,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Special Operations Destroyer
 
-    Classified",-1)
+    Classified.",-1)
 $end_multi_text
 
 $Name:      	XSTR("-- Vasudan Ships --",-1)
@@ -424,16 +424,16 @@ $Name:        XSTR("Ravana - Battle Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
 
-    ",-1)
+    On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned the title of Archangel of Death.",-1)
 $end_multi_text
 
 $Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponery in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
 
     These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
@@ -564,15 +564,6 @@ $Description:
     XSTR("The SC Hellknight is the only known Hunter Killer variant of the Rakshasa. On the outside, the Hunter Killer Cruiser seems identical to the Strike Cruiser, but is actually equipped with 4 corvette-grade beams, instead of the standard cruiser-grade weapons.
 
     More details are available on the Hellknight's tech description.",-1)
-$end_multi_text
-
-$Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
-$Anim:                    
-$AlwaysInTechRoom:		0
-$Description:
-    XSTR("
-
-    ",-1)
 $end_multi_text
 
 $Name:        XSTR("Rakshasa - Heavy Assault Cruiser",-1)
