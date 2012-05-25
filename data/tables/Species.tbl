@@ -415,9 +415,7 @@ $Name:        XSTR("---- Ship variants ----",-1)
 $Anim:                	
 $AlwaysInTechRoom:		1
 $Description:
-    XSTR("
-
-    ",-1)
+    XSTR("",-1)
 $end_multi_text
 
 $Name:        XSTR("Ravana - Battle Destroyer",-1)
@@ -442,9 +440,9 @@ $Name:        XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)",-1
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("So far, the SD Vampire is the only known instance of this Ravana-variant. Akin to beams of the Lucifer, this destroyer is capable of engaging enemies far beyond standard beam lock range, leaving no choice to Allied warships but retreat or be be destroyed.
 
-    ",-1)
+    Future encounters with such a destroyer state that a Trebuchet-equipped fast response team must be ready to deploy at any time to destroy the destroyer's long range beam weapons.",-1)
 $end_multi_text
 
 $Name:        XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)",-1)
@@ -709,4 +707,17 @@ $Description:
     XSTR("Nothing to add.
 
     ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        	XSTR("### mission reports ###",-1)
+$Anim:					
+$AlwaysInTechRoom:		1
+$Description:		XSTR("Concept: write a mission report after some important missions to give more insight to the player
+
+Either do this here or through fiction pieces
+
+Other idea: use fiction pieces to give more info about the GTD Streaker's operations - at least after the first time it is featured
+
+also: use git diff/patch to merge (at least partially) missions with MVP ones",-1)
 $end_multi_text
