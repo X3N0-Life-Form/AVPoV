@@ -234,6 +234,7 @@ $AlwaysInTechRoom:		1
 $Description:		XSTR("",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("NTD Stalker",-1)
 $Anim:      			
 $AlwaysInTechRoom:		0
@@ -247,6 +248,7 @@ $Description:
     The later months of the war showed a slow but steady decrease in the Stalker's performance, starting with the fiasco of an intelligence gathering operation in Epsilon Pegasi, which resulted in the loss of two NTF cruisers and the death of Dusthoff's second in command. Analysts suggest that while the Stalker's command crew intially joined Bosch's Neo Terran Front for motives different from Vasudan hatred or other obvious NTF ideologies, 15 months of constant operations against their former comrades and their first hand grasp of how increasingly desperate the NTF's situation was, eventually wore off the non-fanatic officers.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("GTD Olympus Shadow",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
@@ -256,6 +258,7 @@ $Description:
     Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure, the Olympus Shadow in one of the newest Terran destroyers to serve the Alliance today. Following the destruction of the GTD Calvez in Polaris, the Olympus Shadow was appointed flagship of the 8th Terran Battlegroup, 3rd Fleet, Capella. Retaining most of the Calvez's command crew and surviving pilots, the Olympus Shadow and the 8th battlegroup distinguished themselves in Alpha Centauri before being assigned to Gamma Draconis after the end of the Civil War.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("GTD Streaker",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
@@ -265,12 +268,14 @@ $Description:
     Classified.",-1)
 $end_multi_text
 
+$Entry:
 $Name:      	XSTR("-- Vasudan Ships --",-1)
 $Anim:					
 $AlwaysInTechRoom:		1
 $Description:		XSTR("",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("GVD Apep",-1)
 $Anim:  				
 $AlwaysInTechRoom:		1
@@ -282,6 +287,7 @@ $Description:
     Under the command of Rear-Admiral Obster, the Apep spearheaded the first offensive on Regulus, in the early months of the Civil War. Ambushed by the NTD Repulse and the NTCv La Fayette, the Apep and other surviving allied warships were forced to retreat to Allied-controlled space, and underwent a massive refit, equipping the destroyer, among other things, with the brand new Vasudan Capital Ship Tordedo System, Wraith point defence turrets, Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("GVD Pharaoh",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
@@ -291,6 +297,7 @@ $Description:
     An aging warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most succesfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat detented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("GVD Black Mamba",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
@@ -300,12 +307,14 @@ $Description:
     First deployed in the opening months of the NTF Rebellion, the Black Mamba features the same armament as the GVD Apep, but lacks its logistics and support systems. Nevertheless, the destroyer's crew has shown a remarkable efficiency during the destroyer's operation in Deneb and Epsilon Pegasi, prompting Allied Command to request and obtain its deployment in Gamma Draconnis to assist the GVD Apep and its battlegroup.",-1)
 $end_multi_text
 
+$Entry:
 $Name:      	XSTR("-- Shivan Ships --",-1)
 $Anim:					
 $AlwaysInTechRoom:		1
 $Description:		XSTR("",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SD Vampire",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
@@ -317,6 +326,7 @@ $Description:
     The Vampire is also better armed than the initial Ravana, and has different hull composition than the standard Shivan destroyers, hinting that this ship fills a slightly different role, and might be aven more important to the Shivans than the average destroyer.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SC Reaper",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
@@ -326,6 +336,7 @@ $Description:
     The Reaper was first sighted shortly after the destruction of the SD Ravana. The cruiser has been sweeping the nebula ever since, usually leading strikes against Allied capital ships, with one or two other cruisers to assist it. Acting seemingly indenpendently from any Shivan Command Ship present in the nebula at the time, and has never taken any action to cross or secure the Gamma Draconnis node.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SCv Cyaegha",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
@@ -335,6 +346,7 @@ $Description:
     The SCv Cyaegha has proven to be a particularly evasive, yet dangerous opponent. Using its superior subspace agility, this corvette has quickly earned a reputation as cruiser hunter, often jumping behind its target and disabling its engines before having a chance to react, and retreating as soon as its initial prey is destroyed. The Cyaegha is also known for its unusual subspace endurance, even by Shivan standard, sometimes hopping between battles throughout the system, making tracking the ship's movements difficult. However, the corvette seems to be needing to take 'breaks', stopping all harassment of allied units for a few hours and being much less jump-happy, allowing allied units to take a few shots at the corvette before she retreats.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SC Hellknight",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
@@ -346,6 +358,7 @@ $Description:
     Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SD Kohl'Taar",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
@@ -356,6 +369,7 @@ $Description:
 $end_multi_text
 
 ;; ordinary destroyers + liliths
+$Entry:
 $Name:        XSTR("SD Vorvadoss",-1)
 $Anim:    				
 $AlwaysInTechRoom:		0
@@ -365,6 +379,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SD Lamashtu",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
@@ -374,6 +389,7 @@ $Description:
     This tactic failed the destroyer when it engaged the fleet gathered to confront the SJ Sathanas at the Capella node, which had been specially fitted to fight at long range.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SC Nergal",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
@@ -383,6 +399,7 @@ $Description:
     It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SD Nix",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
@@ -392,6 +409,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SC Obizoth",-1)
 $Anim:            		
 $AlwaysInTechRoom:		0
@@ -401,6 +419,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("SD Centrab Betz",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -411,6 +430,7 @@ $Description:
 $end_multi_text
 
 ;; cf renewed ships.txt
+$Entry:
 $Name:        XSTR("---- Ship variants ----",-1)
 $Anim:                	
 $AlwaysInTechRoom:		1
@@ -418,6 +438,7 @@ $Description:
     XSTR("",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Ravana - Battle Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -427,6 +448,7 @@ $Description:
     On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned the title of Archangel of Death.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -436,6 +458,7 @@ $Description:
     These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -445,6 +468,7 @@ $Description:
     Future encounters with such a destroyer state that a Trebuchet-equipped fast response team must be ready to deploy at any time to destroy the destroyer's long range beam weapons.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -454,6 +478,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Demon - Support Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -465,6 +490,7 @@ $Description:
     Due to their SSM launch capabilities, these vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Demon - Combat Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -474,6 +500,7 @@ $Description:
     It missile launchers are especially versatile, capable of using many different types of ordnance, including cluster bombs, short range swarm missiles, long range swarm missiles, long range missiles, bombs and swarmer bombs.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Moloch - Carrier Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -483,6 +510,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Moloch - Support Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -492,6 +520,7 @@ $Description:
     The Support corvette is considered a high priority target, and should be engaged by any asset currently commited to field of engagement.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Moloch - Strike Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -501,6 +530,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Moloch - Command Corvette (SCv Cyaegha)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -510,6 +540,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Moloch - Area Denial Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -519,6 +550,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Lilith - Hunter Killer Heavy Cruiser",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -528,6 +560,7 @@ $Description:
     With its destroyer-grade beam cannon, Lilith is considered a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
@@ -537,6 +570,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Rakshasa - Strike Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
@@ -546,6 +580,7 @@ $Description:
     The top and bottom of the cruiser are defended by a pair of anti-fighter beams, while the sides each have a Multi-Turret, offering decent stopping power against incoming bombers and unshielded targets thanks to its fast refire rate.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Rakshasa - Support Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
@@ -555,6 +590,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Rakshasa - Hunter Killer Cruiser (Hellknight)",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
@@ -564,6 +600,7 @@ $Description:
     More details are available on the Hellknight's tech description.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Rakshasa - Heavy Assault Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
@@ -573,6 +610,7 @@ $Description:
     Though these vessels are considered high priority targets, the Alliance currently doesn't have the ressources to commit assets to hunting these cruisers down.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Cain - Light Support Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
@@ -582,6 +620,7 @@ $Description:
     The support classification actually comes from the fact that it is rarely, if ever, deployed alone. It always accompanies another warship - sometimes another Light Support Cruiser, unless, of course its companion ship is destroyed, in which case it will attempt to complete its objectives alone.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Cain - Light Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -591,6 +630,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Cain - Flak Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -600,6 +640,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("---- Shivan Strikecraft Classification ----",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -609,6 +650,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Seraphim - Heavy Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -618,6 +660,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Nephilim - Heavy Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -627,6 +670,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Taurvi - Swarm Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -636,6 +680,7 @@ $Description:
     The Taurvi usually mount one of two primary weapon configuration: 1 large cannon for heavy anti-capital ship duty, combined with 2 flak weapons, or 2 heavy anti-capital laser for lighter anti-capital ship duty and the versatile scatter gun.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Nahema - Strike Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -645,6 +690,7 @@ $Description:
     The Nahema is capable of moving on any axis.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Unknown Gunship:Anti Fighter cover",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -654,6 +700,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Aeshma - Swarm Assault Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -664,6 +711,7 @@ $Description:
     The Aeshma is capable of moving in all 3 axis.",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Basilisk - Heavy Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -673,6 +721,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Dragon - Elite Multirole Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -682,6 +731,7 @@ $Description:
     Its high speed and minuscule target profile make this fighter ludicruciously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Mara - Advanced Multirole Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -691,6 +741,7 @@ $Description:
     Pilots should also be aware of the fighter's exceptionnal agility and ability to move in all 3 axis",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Astaroth - Space Superiority Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -700,6 +751,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Name:        XSTR("Manticore - Interceptor",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
@@ -709,6 +761,7 @@ $Description:
     ",-1)
 $end_multi_text
 
+$Entry:
 $Entry:
 $Name:        	XSTR("### mission reports ###",-1)
 $Anim:					
