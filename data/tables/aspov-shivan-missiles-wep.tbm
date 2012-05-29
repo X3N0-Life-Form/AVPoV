@@ -88,6 +88,9 @@ $Name:                                 	Shivan Advanced Swarmer Bomb
 		Non-Conventional Warhead
 		", -1)
 		$end_multi_text
+	+Tech Description:
+		XSTR("Individually weaker but faster than the standard Swarmer Bomb, the Advanced Swarmer Bomb, fielded by the Taurvi bomber is much more dangerous. Fired in swarms of 8, it is faster than any warhead, barring Tempest and TAG-A missiles, and corkscrews as it approaches its target, making it nigh impossible for pilots to intercept the bombs in flight. Any Shivan ship carrying this weapon is to be neutralised as fast as possible.",-1)
+	$end_multi_text
 $Model File:							S_Trebuchet.pof
 $POF target LOD:						0
 $Mass:									35.0
