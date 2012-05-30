@@ -11,7 +11,9 @@ $Damage Type:					ShivanWeapon
 $Name:							UD-6
 	+Title:						XSTR("UD-6",-1)
 	+Description:				XSTR("Experimental weapon",-1)
-$end_multi_text
+	$end_multi_text
+	+Tech Description:			XSTR("The UD-6 weapons were the prototypes of what would become the UD-8 Kayser. All around inferior to its successor, the UD-6 series' most crippling feature was its extremely restricted compatibility with standard Alliance equipment, which was not adressed during the design of the never-fielded UD-7, but thankfully solved by the time the first UD-8 were fielded by SOC squadrons.",-1)
+	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  Alouqua_AniBitmap
 @Laser Glow:					Alouqua_Glow
