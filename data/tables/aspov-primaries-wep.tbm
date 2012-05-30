@@ -376,9 +376,11 @@ $Anim:                              Kayser
 
 $Name:                              Shivan Light Laser Up
 	+Title:							XSTR("Shivan Upgraded Light Laser", -1)
-	+Tech Title:					XSTR("Shivan Light Laser", -1)
+	+Tech Title:					XSTR("Shivan Upgraded Light Laser", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("Since the destruction of the SJ Sathanas, the Shivans seem to finally take the alliance seriously, and started upgrading their weapon systems.
+
+		The Upgraded Light Laser fires much faster than the original weapon, and has increased projectile speed and kinetic effect.", -1)
 	$end_multi_text
 $Model File:                        none ;; laser1-1.pof
 @Laser Bitmap:						Alouqua_AniBitmap
@@ -425,9 +427,11 @@ $Muzzleflash:						Rmuzzle
 
 $Name:                          Shivan Heavy Laser Up
 	+Title:							XSTR("Shivan Upgraded Heavy Laser",-1)
-	+Tech Title:					XSTR("Shivan Light Laser", -1)
+	+Tech Title:					XSTR("Shivan Upgraded Heavy Laser", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("A disturbing fact regarding the recently upgraded Shivan primaries is that the weapon seems identical to its standard variant, as if the Shivan simply decided to change their weapon's settings.
+
+		The upgrades received by the Heavy Laser are basically identical to those of the Light Laser: same projectile damage, but everything else gets an upgrade. However, relative to the original weapon, the Heavy Laser's upgrades are significantly better than the Light Laser's.", -1)
 	$end_multi_text
 $Model File:                    none ;;  laser1-1.pof
 @Laser Bitmap:					Citra_Bitmap
@@ -485,7 +489,7 @@ $Name:                          Shivan Anticap Laser
 	+Description:
 		XSTR("Heavy Hull Damage",-1)
 	$end_multi_text
-	+Tech Title:					XSTR("Shivan Light Laser", -1)
+	+Tech Title:					XSTR("Shivan Anti-Capital Ship Laser", -1)
 	+Tech Description:
 		XSTR("", -1)
 	$end_multi_text
@@ -547,7 +551,7 @@ $Name:                          Shivan Heavy Anticap Laser
 		XSTR("Overpowered laser
 		Use with care",-1)
 	$end_multi_text
-	+Tech Title:					XSTR("Shivan Light Laser", -1)
+	+Tech Title:					XSTR("Shivan Heavy Anti-Capital Ship Laser", -1)
 	+Tech Description:
 		XSTR("", -1)
 	$end_multi_text
