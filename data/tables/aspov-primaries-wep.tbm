@@ -124,8 +124,10 @@ $Name:                              Hell Spitter
 	$end_multi_text
 	+Tech Title: XSTR("Hell Spitter", -1)
 	+Tech Anim: Tech_GTW-66_Maxim_Gun
-	+Tech Description: XSTR("Firing 100 20-gram round per second per gunpoint at a velocity of 6 kilo-meters per second, the Hell Spitter was designed for short-duration high-intensity engagement between strikecrafts and capital ships, providing the former the firepower needed for 4-bomber wings to eliminate any threat within seconds.
-	The main drawbacks of this weapon are its extremely high ammo consumption, high energy consumption, high dispertion, its virtual ineffectiveness against shielded targets and limited compatibility with light or older bomber designs.", -1)
+	+Tech Description:
+		XSTR("Firing 100 20-gram round per second per gunpoint at a velocity of 6 kilo-meters per second, the Hell Spitter was designed for short-duration high-intensity engagement between strikecrafts and capital ships, providing the former the firepower needed for 4-bomber wings to eliminate any threat within seconds.
+
+			The main drawbacks of this weapon are its extremely high ammo consumption, high energy consumption, high dispertion, its virtual ineffectiveness against shielded targets and limited compatibility with light or older bomber designs.", -1)
 	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						Maxim
@@ -172,17 +174,18 @@ $FOF:								3.5
 ;; vasudan primaries
 	
 $Name:                              Hayg Mas
-	+Title:                             XSTR("GVW-63 Hayg Mas", -1)
-+Description:
-XSTR(
-"", -1)
-$end_multi_text
-+Tech Title:				   XSTR("GVW-63 Hayg Mas", -1)
-+Tech Anim:					   Tech_GTW-5a_Prometheus_R
-+Tech Description:
-XSTR(
-"", -1)
-$end_multi_text
+	+Title:                     XSTR("GVW-73 Hayg Mas", -1)
+	+Description:				
+		XSTR("Level 4 Shield Damage
+			Kinetic Effect", -1)
+	$end_multi_text
+	+Tech Title:				   XSTR("GVW-73 Hayg Mas", -1)
+	+Tech Anim:					   Tech_GTW-5a_Prometheus_R
+	+Tech Description:
+		XSTR("Given the mixed results of the GTW ML-70 Morning Star, Vasudan Tactical Command felt that the Alliance needed a more close-combat oriented kinetic primary weapon. Developped by Mekhu Entreprises, the Hayg Mas turned out to be significantly different from the Morning Star: packing significant anti-shield and subsystem capabilities, the Hayg Mas is also more energy efficient, at the cost of range, projectile speed and rate of fire. In order to compensate for its low rate of fire, the Hayg Mas alternates between its firing points to provide a constant stream of projectile between a fighter and its target.
+
+		Currently, the weapon can only be mounted on Vasudan powergrids, limiting its use to Vasudan fighters, although the Security Council has contracted Subach-Innes to create a Terran version of this weapon, given the manufacturer's history with Mekhu Entreprises.", -1)
+	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						PrometheusR_AniBitmap
 @Laser Glow:						Prometheus_Glow
@@ -219,16 +222,19 @@ $Muzzleflash:						Gmuzzle
 	
 	
 $Name:                                  Sehku
-+Title:                                 XSTR("GVW-52 Sehku", -1)
-+Description:
-XSTR(
-"", -1)
-$end_multi_text
-+Tech Title:				    XSTR("GVW-52 Sehku", -1)
-+Tech Anim:					    Tech_Akheton_SDG
-+Tech Description:
-XSTR("", -1)
-$end_multi_text
+	+Title:                             XSTR("GVW-52 Sehku", -1)
+	+Description:
+		XSTR("", -1)
+	$end_multi_text
+	+Tech Title:				    XSTR("GVW-52 Sehku", -1)
+	+Tech Anim:					    Tech_Akheton_SDG
+	+Tech Description:
+		XSTR("Using its Subsystem Disruptor Gun as a template, Akheton developped this weapon to replace the Alliance's Shield Breaker gun. Due to a chaotic developpment and unrealistic demands, Akheton lost its contract for the Alliance's standard Shield Breaker weapon in favor of the GTW-19 Circe.
+
+		The Akheton Corporation wanted to develop a multipurpose weapon capable of replacing the SDG when it would enter the end of its life cycle, in addition of its anti-shield properties, thus adding a whole new set of constraints to an already demanding project, and delaying its entry into service for years. Initial field tests of the weapon were rather unimpressive: pilots judged the fire rate to be too slow for practical use in a dogfight situation. Instead of adressing these issues, Akheton decided to increase the value of each shot fired, causing the company to lose to race with the Circe.
+
+		The final version of the Sehku is a still a slow-firing and high-energy consumption weapon, but compensate with high range and projectile speed, and is now an appreciated anti-bomber weapon, stripping even the strongest shields in a couple of shots.", -1)
+	$end_multi_text
 $Model File:									none ;  laser1-1.pof
 @Laser Bitmap:							Akheton_Bitmap
 @Laser Glow:							Akheton_Glow
@@ -239,8 +245,8 @@ $Model File:									none ;  laser1-1.pof
 @Laser Tail Radius:						2.2
 $Mass:                                	0.2
 $Velocity:                            	1500.0
-$Fire Wait:                            	0.85
-$Damage:                               	225
+$Fire Wait:                            	0.75
+$Damage:                               	245
 $Damage Type:							NormalWeapon
 $Blast Force:							0
 $Inner Radius:							5.0
