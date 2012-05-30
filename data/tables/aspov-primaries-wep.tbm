@@ -288,16 +288,15 @@ $Pspew:
 	
 $Name:                             	Sahr AS
 	+Title:                        		XSTR("GVW Sahr Adv. Sidearm", -1)
-+Description:
-XSTR(
-"Work in progress", -1)
-$end_multi_text
-+Tech Title:				   XSTR("GVW Sahr Adv. Sidearm", -1)
-+Tech Anim:					   Tech_GTW_UD-8_Kayser
-+Tech Description:
-XSTR(
-"", -1)
-$end_multi_text
+	+Description:
+		XSTR("Moderate Hull Damage
+			High Shield Damage", -1)
+	$end_multi_text
+	+Tech Title:				   XSTR("GVW Sahr Advanced Sidearm", -1)
+	+Tech Anim:					   Tech_GTW_UD-8_Kayser
+	+Tech Description:
+		XSTR("Despite the massive success of the Banshee during the Great War, its prohibitive cost and slightly reduced effectiveness against heavily armored target, particularly capital ships, caused the weapon's production cycle to end prematurely, and no replacement was requested for two decades. Developped parallel to its capital ship-mounted twin by the Sahr Corporation, the Advanced Sidearm finally entered production phase in the final month of the Civil War, years after the Wraith itself came out. Optimized for use on Vasudan fighters, the Advanced Sidearm is much more energy efficient than its Great War ancestor and benefits from increased range, speed and refire rate compared to the Banshee.", -1)
+	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						Banshee_Bitmap
 @Laser Glow:						round_glow
@@ -314,8 +313,8 @@ $Armor Factor:						0.4
 $Shield Factor:						1.0
 $Subsystem Factor:					0.25
 $Lifetime:                          1.3
-$Energy Consumed:					1.2												;; Energy used when fired
-$Cargo Size:						0.0												;; Amount of space taken up in weapon cargo
+$Energy Consumed:					1.2	
+$Cargo Size:						0.0	
 $Homing:                            NO
 $LaunchSnd:                         107
 $ImpactSnd:                         85
