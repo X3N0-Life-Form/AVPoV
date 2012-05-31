@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("A lion is home", -1)
 $Author: X3N0-Life-Form
 $Created: 06/26/10 at 17:23:48
-$Modified: 08/15/11 at 22:48:45
+$Modified: 05/28/12 at 19:35:29
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -17,20 +17,24 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
 
-+Disallow Support: 1
++Fog Far Mult: 1.000000
+
+
++Disallow Support: 0
 
 +Hull Repair Ceiling: 0.000000
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 334.873749, 3339.432617, 325.485199
++Viewer pos: -2617.922363, 1666.578369, 4930.241211
 +Viewer orient:
-	0.974622, -0.000000, 0.223857,
-	-0.218118, 0.224977, 0.949637,
-	-0.050363, -0.974364, 0.219267
+	0.071473, -0.000004, -0.997443,
+	0.013169, 0.999913, 0.000940,
+	0.997356, -0.013203, 0.071467
 
-$Starting wing names: ( "Alpha" "Beta" "" )
+$Starting wing names: ( "Alpha" "Beta" "Kappa" )
 $Squadron wing names: ( "Alpha" "Beta" "Zeta" "Sigma" "Kappa" )
 
 $AI Profile: myProfile
@@ -510,7 +514,7 @@ $Recommendation text:
     XSTR("", -1)
 $end_multi_text
 
-$Formula: ( is-destroyed-delay 0 "GVD Apep" ) 
+$Formula: ( is-destroyed-delay 0 "Apep" ) 
 $Multi text
     XSTR("I don't know how you pulled this out, but we've lost the GVD Apep. Get out of my sight.", -1)
 $end_multi_text
@@ -534,18 +538,18 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Mekhu HL-7"	32
+	"Mekhu HL-7"	40
 	"Morning Star"	8
 	"Prometheus R"	16
 	"Rockeye"	200
-	"Tempest"	1920
-	"Hornet"	1280
-	"Harpoon"	272
+	"Tempest"	4240
+	"Hornet"	1680
+	"Harpoon"	200
 	"Stiletto II"	30
 	"Cyclops"	20
 )
 
-#Objects		;! 56 total
+#Objects		;! 61 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis
@@ -607,13 +611,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Major
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -635,13 +639,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Major
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -663,13 +667,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Major
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tempest" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -682,7 +686,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: GVD Apep		;! Object #5
+$Name: Apep		;! Object #5
 $Class: GVD Hatshepsut
 $Team: Friendly
 $Location: 0.000000, -0.001184, 14.275007
@@ -692,7 +696,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: Big
-$AI Goals: ( goals ( ai-waypoints "Apep" 50 ) ( ai-warp-out 40 ) )
+$AI Goals: ( goals ( ai-waypoints "Apep path" 50 ) ( ai-warp-out 40 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -722,33 +726,40 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Sbank Ammo: ( 0 )
 +Subsystem: turret11
 +Subsystem: turret12
++Primary Banks: ( "Wraith" )
 +Subsystem: turret13
 +Subsystem: turret14
 +Subsystem: turret15
 +Subsystem: turret16
 +Subsystem: turret17
 +Subsystem: turret18
++Primary Banks: ( "Wraith" )
 +Subsystem: turret19
++Primary Banks: ( "Wraith" )
 +Subsystem: turret20
 +Subsystem: turret21
 +Subsystem: turret22
++Primary Banks: ( "Wraith" )
 +Subsystem: turret23
 +Subsystem: turret24
 +Subsystem: turret25
 +Subsystem: turret26
 +Subsystem: turret27
 +Subsystem: turret28
++Primary Banks: ( "Wraith" )
 +Subsystem: turret29
++Primary Banks: ( "Wraith" )
 +Subsystem: turret30
 $Arrival Location: Hyperspace
 +Arrival Delay: 80
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-destroyed-delay 11 "Doom" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "special-warp" )
++Flags: ( "cargo-known" "no-shields" "escort" "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 30
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -796,7 +807,7 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 2
++Escort priority: 5
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -844,7 +855,7 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 3
++Escort priority: 1
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -889,7 +900,7 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 1
++Escort priority: 2
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -934,7 +945,7 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 1
++Escort priority: 3
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1385,6 +1396,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1412,6 +1424,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1439,6 +1452,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1466,6 +1480,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1484,7 +1499,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: SC Iron Maiden		;! Object #30
+$Name: Iron Maiden		;! Object #30
 $Class: SC Lilith
 $Team: Hostile
 $Location: -1583.614868, 257.969910, 4262.210449
@@ -1508,7 +1523,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret08
 +Subsystem: turret09
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-departed-delay 6 "GVD Apep" ) 
+$Arrival Cue: ( has-departed-delay 6 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -1630,12 +1645,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	-0.525401, 0.000000, 0.850856
 $AI Behavior: None
-+AI Class: Cap_Killer
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1658,12 +1673,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	-0.525400, 0.000000, 0.850855
 $AI Behavior: None
-+AI Class: Cap_Killer
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1686,12 +1701,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	-0.525400, 0.000000, 0.850855
 $AI Behavior: None
-+AI Class: Cap_Killer
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1714,12 +1729,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	-0.525400, 0.000000, 0.850855
 $AI Behavior: None
-+AI Class: Cap_Killer
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1736,17 +1751,18 @@ $Determination: 10
 $Name: Kappa 1		;! Object #39
 $Class: GVF Tauret
 $Team: Friendly
-$Location: -260.519012, 0.000003, -861.104675
+$Location: -260.500000, 800.000000, -861.099976
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1762,17 +1778,18 @@ $Determination: 10
 $Name: Kappa 2		;! Object #40
 $Class: GVF Tauret
 $Team: Friendly
-$Location: -186.669632, 0.000022, -840.622742
+$Location: -186.650620, 800.000000, -840.618042
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1788,17 +1805,18 @@ $Determination: 10
 $Name: Kappa 3		;! Object #41
 $Class: GVF Tauret
 $Team: Friendly
-$Location: -242.703049, -0.000026, -790.689087
+$Location: -242.684036, 800.000000, -790.684387
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1814,17 +1832,18 @@ $Determination: 10
 $Name: Kappa 4		;! Object #42
 $Class: GVF Tauret
 $Team: Friendly
-$Location: -290.756378, -0.000030, -801.715332
+$Location: -290.737366, 800.000000, -801.710632
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1837,34 +1856,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Support 1		;! Object #43
-$Class: GVS Nephthys
-$Team: Friendly
-$Location: 139.233124, -0.000054, -750.772522
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-$Arrival Location: Docking Bay
-+Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 18 "GVD Apep" ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Use Table Score:
-+Score: 10
-
-$Name: Epsilon 1		;! Object #44
+$Name: Epsilon 1		;! Object #43
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -671.298462, -164.911133, 11.023554
@@ -1889,7 +1881,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 2		;! Object #45
+$Name: Epsilon 2		;! Object #44
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -615.315674, -135.259415, 7.622848
@@ -1914,7 +1906,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 3		;! Object #46
+$Name: Epsilon 3		;! Object #45
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -562.682373, -42.959736, 7.622858
@@ -1939,7 +1931,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 4		;! Object #47
+$Name: Epsilon 4		;! Object #46
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -631.308838, -43.572163, 8.756533
@@ -1964,7 +1956,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Gamma 1		;! Object #48
+$Name: Gamma 1		;! Object #47
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 350.072113, 69.283073, 11.023560
@@ -1990,7 +1982,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 2		;! Object #49
+$Name: Gamma 2		;! Object #48
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 321.471405, 10.353015, 11.023544
@@ -2016,7 +2008,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 3		;! Object #50
+$Name: Gamma 3		;! Object #49
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 383.287994, 148.346725, 8.756517
@@ -2042,7 +2034,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 4		;! Object #51
+$Name: Gamma 4		;! Object #50
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 437.085083, 59.030724, 7.622874
@@ -2068,7 +2060,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 1		;! Object #52
+$Name: Delta 1		;! Object #51
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -327.632935, 468.174591, 8.154502
@@ -2093,7 +2085,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 2		;! Object #53
+$Name: Delta 2		;! Object #52
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -407.660217, 471.693024, 10.980037
@@ -2118,7 +2110,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 3		;! Object #54
+$Name: Delta 3		;! Object #53
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -370.941956, 441.447205, 10.038200
@@ -2143,7 +2135,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 4		;! Object #55
+$Name: Delta 4		;! Object #54
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -357.764740, 491.717438, 15.689320
@@ -2168,7 +2160,175 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-#Wings		;! 14 total
+$Name: Iota 1		;! Object #55
+$Class: GTF Myrmidon
+$Team: Friendly
+$Location: -1813.150391, 1685.506226, 4860.706055
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.059169, 0.998248,
+	0.000000, -0.998248, -0.059169
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Iota 2		;! Object #56
+$Class: GTF Myrmidon
+$Team: Friendly
+$Location: -1880.283936, 1685.506226, 4831.525391
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.188077, 0.982155,
+	0.000000, -0.982155, -0.188077
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Iota 3		;! Object #57
+$Class: GTF Myrmidon
+$Team: Friendly
+$Location: -1875.485229, 1685.506470, 4914.832031
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 0.179813, 0.983701,
+	0.000000, -0.983701, 0.179813
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Iota 4		;! Object #58
+$Class: GTF Myrmidon
+$Team: Friendly
+$Location: -1922.475708, 1685.506104, 4885.263672
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 0.380925, 0.924606,
+	0.000000, -0.924606, 0.380925
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Upsilon 1		;! Object #59
+$Class: GTF Perseus
+$Team: Friendly
+$Location: -1887.417969, 1560.935181, 4972.854492
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.332736, 0.943020,
+	0.000000, -0.943020, -0.332736
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Upsilon 2		;! Object #60
+$Class: GTF Perseus
+$Team: Friendly
+$Location: -1948.192993, 1603.747437, 4987.962402
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.332736, 0.943020,
+	0.000000, -0.943020, -0.332736
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 14
+
+#Wings		;! 16 total
 
 $Name: Alpha
 $Waves: 1
@@ -2258,7 +2418,7 @@ $Ships: (		;! 4 total
 	"Taurus 3"
 	"Taurus 4"
 )
-$AI Goals: ( goals ( ai-chase "GVD Apep" 50 ) ( ai-stay-near-ship "Doom 3" 48 ) )
+$AI Goals: ( goals ( ai-chase "Apep" 50 ) ( ai-stay-near-ship "Doom 3" 48 ) )
 +Flags: ( )
 
 $Name: Scorpio
@@ -2286,15 +2446,15 @@ $Special Ship: 0		;! Zeta 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 24 "GVD Apep" ) 
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 24 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 8 "Epsilon" ) 
 $Ships: (		;! 2 total
 	"Zeta 1"
 	"Zeta 2"
 )
-$AI Goals: ( goals ( ai-chase "Doom 3" 50 ) ( ai-chase "Doom 1" 45 ) ( ai-chase "SC Iron Maiden" 44 ) )
+$AI Goals: ( goals ( ai-chase "Doom 3" 50 ) ( ai-chase "Doom 1" 45 ) ( ai-chase "Iron Maiden" 44 ) )
 +Flags: ( )
 
 $Name: Sigma
@@ -2304,15 +2464,15 @@ $Special Ship: 0		;! Sigma 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 16 "GVD Apep" ) 
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 16 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 8 "Epsilon" ) 
 $Ships: (		;! 2 total
 	"Sigma 1"
 	"Sigma 2"
 )
-$AI Goals: ( goals ( ai-chase "Doom 2" 50 ) ( ai-chase "Doom 4" 45 ) ( ai-chase "SC Iron Maiden" 44 ) )
+$AI Goals: ( goals ( ai-chase "Doom 2" 50 ) ( ai-chase "Doom 4" 45 ) ( ai-chase "Iron Maiden" 44 ) )
 +Flags: ( )
 
 $Name: Libra
@@ -2321,10 +2481,7 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Libra 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 
-   0 
-   "SC Iron Maiden" 
-)
+$Arrival Cue: ( has-arrived-delay 0 "Iron Maiden" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -2342,10 +2499,7 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 
-   0 
-   "SC Iron Maiden" 
-)
+$Arrival Cue: ( has-arrived-delay 0 "Iron Maiden" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -2364,8 +2518,8 @@ $Special Ship: 0		;! Kappa 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 18 "GVD Apep" ) 
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 18 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 8 "Epsilon" ) 
 $Ships: (		;! 4 total
@@ -2383,10 +2537,7 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Epsilon 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( is-destroyed-delay 
-   12 
-   "SC Iron Maiden" 
-)
+$Arrival Cue: ( is-destroyed-delay 12 "Iron Maiden" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -2431,7 +2582,48 @@ $Ships: (		;! 4 total
 )
 +Flags: ( )
 
-#Events		;! 14 total
+$Name: Iota
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Iota 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( has-arrived-delay 38 "Iron Maiden" ) 
+   ( is-destroyed-delay 
+      24 
+      "Zeta" 
+      "Sigma" 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Iota 1"
+	"Iota 2"
+	"Iota 3"
+	"Iota 4"
+)
+$AI Goals: ( goals ( ai-chase "Iron Maiden" 50 ) ( ai-chase-any 49 ) )
++Flags: ( )
+
+$Name: Upsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Upsilon 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 7 "Iron Maiden" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Upsilon 1"
+	"Upsilon 2"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+#Events		;! 19 total
 
 $Formula: ( when 
    ( true ) 
@@ -2445,11 +2637,14 @@ $Formula: ( when
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
-+Team: 2048
 
 $Formula: ( when 
    ( has-time-elapsed 24 ) 
-   ( send-message "Beta 1" "High" "EMP" ) 
+   ( send-message 
+      "Beta 1" 
+      "High" 
+      "EMP - beta 1" 
+   )
 )
 +Name: EMP
 +Repeat Count: 1
@@ -2457,10 +2652,11 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 4 "Doom" ) 
-   ( add-goal 
-      "GVD Apep" 
-      ( ai-warp-out 89 ) 
+   ( is-destroyed-delay 1 "Doom" ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "doom destroyed - apep" 
    )
 )
 +Name: Destroy Doom
@@ -2489,15 +2685,26 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Scorpio", -1)
 +Team: 0
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
-+Name: GVD Apep arriving
+$Formula: ( when 
+   ( has-time-elapsed 65 ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "apep inbound - cmd" 
+   )
+)
++Name: apep inbound
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "GVD Apep" ) 
-   ( add-remove-escort "GVD Apep" 1 ) 
+   ( has-arrived-delay 0 "Apep" ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "Apep arrives - apep" 
+   )
 )
 +Name: GVD Apep arrives
 +Repeat Count: 1
@@ -2507,12 +2714,12 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( fire-beam 
-      "GVD Apep" 
+      "Apep" 
       "turret03" 
       "Doom 3" 
    )
    ( fire-beam 
-      "GVD Apep" 
+      "Apep" 
       "turret02" 
       "Doom 3" 
    )
@@ -2521,12 +2728,23 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 12
-+Team: 755717461
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Kappa" ) 
+   ( send-message 
+      "Kappa 1" 
+      "High" 
+      "apep deploys fighters - kappa1" 
+   )
+)
++Name: Apep deploys fighters
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( has-arrived-delay 16 "Sigma" ) 
    ( fire-beam 
-      "GVD Apep" 
+      "Apep" 
       "turret04" 
       "Doom 2" 
    )
@@ -2537,7 +2755,7 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( has-departed-delay 0 "GVD Apep" ) 
+   ( has-departed-delay 0 "Apep" ) 
    ( do-nothing ) 
 )
 +Name: Defend GVD Apep
@@ -2557,19 +2775,13 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( has-arrived-delay 
-      1 
-      "SC Iron Maiden" 
-   )
+   ( has-arrived-delay 1 "Iron Maiden" ) 
    ( send-message 
       "Kappa 1" 
       "High" 
-      "SC Iron Maiden arrives" 
+      "SC Iron Maiden arrives - kappa" 
    )
-   ( add-remove-escort 
-      "SC Iron Maiden" 
-      1 
-   )
+   ( add-remove-escort "Iron Maiden" 1 ) 
 )
 +Name: SC Iron maiden arrives
 +Repeat Count: 1
@@ -2577,14 +2789,11 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 
-      0 
-      "SC Iron Maiden" 
-   )
+   ( is-destroyed-delay 0 "Iron Maiden" ) 
    ( send-message 
       "#Command" 
       "High" 
-      "SC Iron Maiden destroyed" 
+      "SC Iron Maiden destroyed - cmd" 
    )
 )
 +Name: Destroy SC Iron Maiden
@@ -2594,11 +2803,29 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
+   ( is-destroyed-delay 0 "Libra" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Libra
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Libra", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gemini" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Gemini
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Gemini", -1)
+
+$Formula: ( when 
    ( has-arrived-delay 2 "Epsilon" ) 
    ( send-message 
       "#Command" 
       "High" 
-      "Reinforcements arrives" 
+      "Reinforcements arrives - cmd" 
    )
    ( allow-warp "Alpha 1" ) 
 )
@@ -2606,6 +2833,18 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: RTB
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Return to base", -1)
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: Iota arrives
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 4 total
 
@@ -2620,17 +2859,14 @@ $Type: Primary
 +Name: Defend GVD Apep
 $MessageNew:  XSTR("Defend the GVD Apep", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "GVD Apep" ) 
+$Formula: ( has-departed-delay 0 "Apep" ) 
 
 $Type: Secondary
 +Name: Destroy reinforcement
 $MessageNew:  XSTR("Destroy any shivan reinforcements", -1)
 $end_multi_text
 $Formula: ( and 
-   ( is-destroyed-delay 
-      0 
-      "SC Iron Maiden" 
-   )
+   ( is-destroyed-delay 0 "Iron Maiden" ) 
    ( is-destroyed-delay 0 "Gemini" ) 
 )
 
@@ -2642,12 +2878,12 @@ $Formula: ( has-arrived-delay 0 "Epsilon" )
 
 #Waypoints		;! 1 lists total
 
-$Name: Apep
+$Name: Apep path
 $List: (		;! 1 points in list
 	( -41.614571, 21.600725, 7191.380859 )
 )
 
-#Messages		;! 5 total
+#Messages		;! 9 total
 
 
 $Name: Clear the area - cmd
@@ -2656,29 +2892,53 @@ $MessageNew:  XSTR("Clear the area of hostile fighters and bombers before the Ap
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: EMP
+$Name: EMP - beta 1
 $Team: -1
-$MessageNew:  XSTR("The shivans are using EMP missiles ! Watch out for Cancer wing.", -1)
+$MessageNew:  XSTR("The shivans are using EMP missiles! Watch out for Doom 4.", -1)
 $end_multi_text
 +AVI Name: Head-VP2
 
-$Name: SC Iron Maiden arrives
+$Name: SC Iron Maiden arrives - kappa
 $Team: -1
-$MessageNew:  XSTR("They WERE going to embush the Apep ! We've got a Lilith class cruiser, a fighter escort and a wing of bombers.", -1)
+$MessageNew:  XSTR("Looks like they intended to catch the Apep. We've got a Lilith class cruiser, with fighter escort and a wing of bombers.", -1)
 $end_multi_text
 +AVI Name: Head-VP1
 
-$Name: Reinforcements arrives
+$Name: Reinforcements arrives - cmd
 $Team: -1
 $MessageNew:  XSTR("Epsilon, Gamma and Delta wings are now in position. First wave, return to base.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: SC Iron Maiden destroyed
+$Name: SC Iron Maiden destroyed - cmd
 $Team: -1
-$MessageNew:  XSTR("The Iron Maiden has been destroyed. Reinforcements should arrive momenteraly. Hang in there pilots !", -1)
+$MessageNew:  XSTR("The Iron Maiden has been destroyed. Reinforcements should arrive momenteraly. Hang in there pilots.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
+
+$Name: Apep arrives - apep
+$Team: -1
+$MessageNew:  XSTR("This is the Apep. We have corssed the portal and are now recharching our subspace drives.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: doom destroyed - apep
+$Team: -1
+$MessageNew:  XSTR("Doom Combat Group neutralized. Our subspace drive has just finished charging. We'd better jump out something dangerous arrives.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: apep inbound - cmd
+$Team: -1
+$MessageNew:  XSTR("The Apep should be exiting the portal momentarily. All pilots, get out of the way.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: apep deploys fighters - kappa1
+$Team: -1
+$MessageNew:  XSTR("This is Kappa wing launching from the Apep. Now engaging Shivan targets.", -1)
+$end_multi_text
++AVI Name: Head-VP2
 
 #Reinforcements		;! 0 total
 

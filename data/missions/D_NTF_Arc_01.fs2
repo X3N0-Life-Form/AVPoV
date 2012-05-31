@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Card Games", -1)
 $Author: X3N0-Life-Form
 $Created: 06/30/10 at 15:31:21
-$Modified: 05/19/12 at 15:57:58
+$Modified: 05/26/12 at 17:42:56
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -290,21 +290,24 @@ $end_briefing
 
 #Debriefing_info
 
-$Num stages: 3
+$Num stages: 4
 
 $Formula: ( is-destroyed-delay 0 "Stalker" ) 
 $Multi text
     XSTR("Good job taking down the NTD Stalker and the other NTF warships. Other operations throughout the system reports similar victories.
 
-The NTF's final assault against the Knossos is imminent. Command has asked our squadron to assist the SOC in a single mission.", -1)
+The NTF's final assault against the Knossos is imminent. Command has asked our squadron to assist Special Operations Comand in a single mission before the NTF attempt to cross the portal.", -1)
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
 $end_multi_text
 
-$Formula: ( not 
-   ( is-destroyed-delay 0 "Stalker" ) 
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Stalker" ) 
+   )
+   ( false ) 
 )
 $Multi text
     XSTR("Though the mission didn't exactly go as expected, you managed to come back alive. Other strikes in the system have been more succesful than us.
@@ -323,6 +326,17 @@ $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("Destroy the NTD Stalker's heavy beam canons as soon as you can. There are also several bombers that jump in with the 2 Fenris", -1)
+$end_multi_text
+
+$Formula: ( not 
+   ( is-destroyed-delay 0 "Stalker" ) 
+)
+$Multi text
+    XSTR("You did not have permission to return to base pilot.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
 $end_multi_text
 
 #Players		;! 1 total
