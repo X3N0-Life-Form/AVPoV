@@ -126,7 +126,7 @@ $Glide: YES
 ;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		
-	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Scatter Gun" "Shivan Large Canon")
+	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Scatter Gun" "Shivan Large Cannon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Flak Weapon")
 $Allowed SBanks:		("Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Shivan Advanced Swarmer Bomb" "Shivan LR Swarm" "Tempest Adv#Shivan")
 $Armor Type:			Shivan Bomber Armor
