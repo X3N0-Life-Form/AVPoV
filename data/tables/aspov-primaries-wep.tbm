@@ -778,7 +778,7 @@ $Name:								Shivan Large Cannon
 	+Title:							XSTR("Shivan Large Cannon",-1)
 	+Tech Title:					XSTR("Shivan Large Cannon", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("The Shivan's most powerful bomber-mounted primary weapon - and sometimes warship-mounted, the Large Cannon is thankfully relatively rare. Limited to short bursts of three every 6 seconds, each shot is about as dangerous as a light torpedo, meaning that a wing of Taurvi bombers, known for their limited ordnance capacity, are capable of bringing down even destroyers in a matter of minutes if left unchecked. Capital ship turrets mounting this weapon are to beam considered as dangerous as a Small Beam Cannon, while bombers are to be engaged and destroyed as quickly as possible.", -1)
 	$end_multi_text
 $Model File:                        none ;; laser1-1.pof
 @Laser Bitmap:						Shivan_Megafunk
@@ -842,7 +842,7 @@ $Name:							Shivan Flak Weapon
 	$end_multi_text
 	+Tech Title:					XSTR("Shivan Flak Weapon", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("Shortly after the first uses of the Fire Spitter against Shivan targets, this weapon appeared on some Taurvis and Seraphims. Its tactical role is identical to the Fire Spitter's: to provide a flak screen between bombers and incoming interceptor, clearing the way to their targets. Taurvi bombers, however,  are agile enough to bring this weapon to bear against medium and heavy fighters, making this bomber a viable anti-fighter platform in some circumstances.", -1)
 	$end_multi_text
 $Model File:					wep_maxim_tech.pof
 $Mass:							0.2
