@@ -2777,7 +2777,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Large Canon" "Shivan Heavy Laser Up" )
++Primary Banks: ( "Shivan Large Cannon" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan Advanced Swarmer Bomb" "Shivan Advanced Swarmer Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -2806,7 +2806,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Large Canon" "Shivan Heavy Laser Up" )
++Primary Banks: ( "Shivan Large Cannon" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan Advanced Swarmer Bomb" "Shivan Advanced Swarmer Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -2835,7 +2835,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Large Canon" "Shivan Heavy Laser Up" )
++Primary Banks: ( "Shivan Large Cannon" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan Advanced Swarmer Bomb" "Shivan Advanced Swarmer Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -2864,7 +2864,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Large Canon" "Shivan Heavy Laser Up" )
++Primary Banks: ( "Shivan Large Cannon" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan Advanced Swarmer Bomb" "Shivan Advanced Swarmer Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -2893,7 +2893,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Large Canon" "Shivan Heavy Laser Up" )
++Primary Banks: ( "Shivan Large Cannon" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan Advanced Swarmer Bomb" "Shivan Advanced Swarmer Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
