@@ -610,7 +610,7 @@ $Name:                              Shivan Scatter Gun
 	+Title:							XSTR("Shivan Scatter Gun",-1)
 	+Tech Title:					XSTR("Shivan Scatter Gun", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("Mounted on Taurvi and Seraphim bombers, the Scatter gun is close range-multipurpose weapon that fires three bolts at once. Thanks to its high refire rate, the scatter gun is an effective dogfighting weapon, though its low accuracy reduces its effectiveness at medium range. Larger targets such as cruisers and freighters, however, take the full brunt of each salvo, making this weapon particularly dangerous when mounted in packs of three on Seraphim bombers.", -1)
 	$end_multi_text
 $Model File:                        none ;; laser1-1.pof
 @Laser Bitmap:						Alouqua_AniBitmap
@@ -661,7 +661,7 @@ $Name:                              Shivan Light Scatter Gun
 	+Title:							XSTR("Shivan Light Scatter Gun",-1)
 	+Tech Title:					XSTR("Shivan Light Scatter Gun", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("Used for close range anti-fighter duty on Dragons and some Maras, the Light Scatter gun is essentially a toned down version of the scatter gun, sacrificing some of its firepower for improved accuracy.", -1)
 	$end_multi_text
 $Model File:                        none ;; laser1-1.pof
 @Laser Bitmap:						Citra_Bitmap
@@ -720,7 +720,7 @@ $Name:                          Shivan Sniper Gun
 	+Title:						XSTR("Shivan Sniper Gun",-1)
 	+Tech Title:					XSTR("Shivan Sniper Gun", -1)
 	+Tech Description:
-		XSTR("", -1)
+		XSTR("Mounted on various Shivan strikecrafts and capital ships alike, the sniper gun is slow firing, but has a very long range and deals significant damage against unshielded targets. This weapon has some difficulty penetrating shielded targets however, and is inefficient at disrupting subsystems.", -1)
 	$end_multi_text
 $Model File:                    none ;;  laser1-1.pof
 @Laser Bitmap:						Phanuel_Bitmap
@@ -732,8 +732,8 @@ $Model File:                    none ;;  laser1-1.pof
 @Laser Tail Radius:					3.2
 $Mass:                          0.5
 $Velocity:                      2400.0
-$Fire Wait:                     3.5
-$Damage:                        100
+$Fire Wait:                     2.5
+$Damage:                        150
 $Damage Type:					ShivanWeapon
 $Armor Factor:                  1.0
 $Shield Factor:                 0.40
