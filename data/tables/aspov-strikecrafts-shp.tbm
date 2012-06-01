@@ -1,4 +1,6 @@
 #Ship Classes
+;; true hit points calculations: x*armor_value = normal_hp
+
 
 $Name: SF Dragon
 	+nocreate ;:
@@ -9,8 +11,8 @@ $Glide: YES
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Sniper Gun")
 						("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Shivan Disruptor" "Tempest Adv#Shivan" )
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 941
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 1143
 $Flags: ( "player_ship" "fighter" )
 
 $Name: SF Basilisk
@@ -20,8 +22,8 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb")
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 1235
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 1500
 $Flags: ( "player_ship" "fighter" )
 
 $Name: SF Manticore
@@ -31,8 +33,8 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "EMP Adv.#Shivan")
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 705
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 857
 $Flags: ( "player_ship" "fighter" )
 
 $Name: SF Mara
@@ -44,8 +46,8 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Sniper Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan")
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 965
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 1171
 $Flags: ( "player_ship" "fighter" )
 $Afterburner:           YES
 	+Aburn Max Vel:		135.0, 135.0, 135.0
@@ -70,8 +72,8 @@ $Allowed PBanks:
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Sniper Gun" "Shivan Heavy Anticap Laser" "Shivan Flak Weapon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Sniper Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Swarmer Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Shivan LR Swarm" "Tempest Adv#Shivan")
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 1147
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 1393
 $Flags:                 ( "fighter" "player_ship" )
 $Afterburner:           YES
 	+Aburn Max Vel: 95.0, 95.0, 110.0
@@ -90,8 +92,8 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "EMP Adv.#Shivan")
-$Armor Type:			Shivan Fighter Armor
-$Shield Armor Type:		Shivan Fighter Armor
+$Armor Type:			Shivan Fighter Armor	; hits vs normal= 647
+$Shield Armor Type:		Shivan Fighter Armor	; hits vs huge	= 786
 $Flags:                 ( "fighter" "player_ship" )
 $Afterburner:           YES
 	+Aburn Max Vel: 135.0, 135.0, 155.0
@@ -107,8 +109,8 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" )
-$Armor Type:			Shivan Bomber Armor
-$Shield Armor Type:		Shivan Bomber Armor
+$Armor Type:			Shivan Bomber Armor			; hits vs normal= 3000
+$Shield Armor Type:		Shivan Bomber Armor			; hits vs huge	= 5250
 $Flags:					("player_ship" "bomber")
 $Countermeasures:       20
 $Subsystem:                     turret01,5,1.0
@@ -129,8 +131,8 @@ $Allowed PBanks:
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Scatter Gun" "Shivan Large Cannon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Flak Weapon")
 $Allowed SBanks:		("Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Shivan Advanced Swarmer Bomb" "Shivan LR Swarm" "Tempest Adv#Shivan")
-$Armor Type:			Shivan Bomber Armor
-$Shield Armor Type:		Shivan Bomber Armor
+$Armor Type:			Shivan Bomber Armor			; hits vs normal= 2286
+$Shield Armor Type:		Shivan Bomber Armor			; hits vs huge	= 4000
 $Flags:                 ( "bomber" "player_ship" )
 $Afterburner:           YES
 	+Aburn Max Vel: 85.0, 85.0, 95.0
@@ -151,8 +153,8 @@ $Glide: YES
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "TAG-C#Shivan" )
 $Max Oclk Speed:		120.0
-$Armor Type:			Shivan Bomber Armor
-$Shield Armor Type:		Shivan Bomber Armor
+$Armor Type:			Shivan Bomber Armor			; hits vs normal= 1714
+$Shield Armor Type:		Shivan Bomber Armor			; hits vs huge	= 3000
 $Flags:                 ( "bomber" "player_ship" )
 $Afterburner:           YES
 	+Aburn Max Vel: 140.0, 140.0, 150.0
@@ -173,8 +175,8 @@ $Allowed PBanks:
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy anticap Laser" "Shivan Flak Weapon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Scatter Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "Shivan Mordiggian Bomb")
-$Armor Type:			Shivan Bomber Armor
-$Shield Armor Type:		Shivan Bomber Armor
+$Armor Type:			Shivan Bomber Armor			; hits vs normal= 3000
+$Shield Armor Type:		Shivan Bomber Armor			; hits vs huge	= 5250
 $Flags:                 ( "bomber" "player_ship" )
 $Countermeasures:       20
 $Subsystem:                     turret01,5,1.0
@@ -212,8 +214,8 @@ $Rear Velocity:			70.0
 $Glide: YES
 	;; +Dynamic Glide Cap:	YES
 	+Glide Accel Mult:	1.0
-$Armor Type:			Shivan Elite Armor
-$Shield Armor Type:		Shivan Elite Armor
+$Armor Type:			Shivan Elite Armor	; hits vs normal= 2938	| 1679
+$Shield Armor Type:		Shivan Elite Armor	; hits vs normal= 1958	| 5875
 $Afterburner:           YES
 	+Aburn Max Vel:		135.0, 135.0, 135.0
 	+Aburn For accel:   0.7
@@ -583,9 +585,9 @@ $Max Weapon Eng:        250.0
 $Hitpoints:             400
 $Hull Repair Rate:				0.08
 $Subsystem Repair Rate:			0.15
-$Armor Type:			Shivan Elite Armor ;; HellArmor
-$Shield Armor Type:		Shivan Elite Armor ;; HellArmor
-$Flags:                 ( "fighter" "player_ship" )
+$Armor Type:			Shivan Elite Armor ;; Hell Armor ; hits vs normal= 4100	| 2343	;; hits vs normal= 16400 | 8200
+$Shield Armor Type:		Shivan Elite Armor ;; Hell Armor ; hits vs huge  = 2733	| 8200	;; hits vs huge  = 32800 | 164000
+$Flags:                 ( "fighter" "player_ship" )		 ; huge vs hull only = 667 | 2000 ;; 8000 | 40000
 $AI Class:              Demon
 $Afterburner:           YES
 	+Aburn Max Vel:		135.0, 135.0, 135.0
