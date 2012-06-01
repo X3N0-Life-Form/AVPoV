@@ -766,6 +766,65 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
+$Name: Noliun		;! Object #14
+$Class GVCv Sobek
+$Team: Friendly
+$Location: 5000.0, -600.0, 26000.0
+$Orientation:
+	-0.995162, 0.000000, 0.098248,
+	0.000000, 1.000000, 0.000000,
+	-0.098248, 0.000000, -0.995162
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 0
++Initial Hull: 100
++Initial Hull: 76
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Wraith" )
++Subsystem: turret02
++Primary Banks: ( "Wraith" )
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Primary Banks: ( "Wraith" )
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-previous-event-true 
+   "sm3-01" 
+   "All beams dead" 
+   ( false ) 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false )
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 6
++Orders Accepted: 0 ;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 400
+
 #Wings		;! 3 total
 
 $Name: Alpha
@@ -1765,7 +1824,15 @@ $MessageNew:  XSTR("We have eliminated Cancer wing.", 1591)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_18.wav
-;t be good.", -1)
+;t be good.", -1)
+
+
+
+
+
+
+
+
 
 #Reinforcements		;! 0 total
 
