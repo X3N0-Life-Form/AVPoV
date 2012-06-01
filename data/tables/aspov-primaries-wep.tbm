@@ -64,7 +64,7 @@ Uses ammunition",-1)
 $end_multi_text
 	+Tech Title:				XSTR("Fire Spitter", -1)
 	+Tech Anim:					Tech_GTW-66_Maxim_Gun
-	+Tech Description:			XSTR("", -1)
+	+Tech Description:			XSTR("As bombers became more and more vulnerable to interception, the pressure for more bomber-dedicated anti fighter armament became high enough to warrant the development of this expansive but highly effective weapon. Based on capital ship mounted flak guns, the fire spitter cycle through its firing points to create a constant flak shield between the bomber and incoming fighters, forcing these to break off and be picked by the bomber's escort. Due to its high ammunition consumption, this weapon it largely ineffective against capital ships.", -1)
 $end_multi_text
 $Model File:					wep_maxim_tech.pof
 $Mass:							0.2
