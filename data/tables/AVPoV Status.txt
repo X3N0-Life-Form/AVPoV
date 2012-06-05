@@ -361,7 +361,7 @@ E_Sathanas_Arc_02.Welcome to Trapper Town					//?
 			-SC Garbad (Cain class)			//destroyed
 
 //////////////////////////////////////////////////////////////////////////////////
-E_Sathanas_Arc_03.Watch out for the Bear					//ToRework
+E_Sathanas_Arc_03.Watch out for the Bear					//ToRework - add allied corvettes + off range mjollnir firing + downgrade sath to LRLRed?
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		Background : done
