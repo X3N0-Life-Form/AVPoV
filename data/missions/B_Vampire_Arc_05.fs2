@@ -579,13 +579,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret02
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
