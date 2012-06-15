@@ -5,7 +5,7 @@
 $Name:							BFRed
 	+nocreate ;:
 	+Tech Title:		XSTR("BFRed",-1)
-	+Tech Description:	XSTR("Juggernaught class Shivan beam
+	+Tech Description:	XSTR("Juggernaught grade Shivan beam
 	
 	",-1)
 	$end_multi_text
@@ -237,7 +237,7 @@ $Name:                          MRedUp
 	+Tech Title:		XSTR("MRedUp",-1)
 	+Tech Description:	XSTR("Upgraded Medium Shivan Beam
 	
-	blabla
+	Several Shivan warships (mostly command variants) have been shown to be able to increase the firepower and refire rate of their Medium Beams. The resulting weapon, while not as devastating as the destroyer-grade Large Shivan Beam, is actually on par with the Alliance's own destroyer beams in terms of damage dealt over time.
 
 	Damage per salvo: 12066",-1)
 	$end_multi_text
