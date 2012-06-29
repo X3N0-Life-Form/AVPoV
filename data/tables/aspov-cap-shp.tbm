@@ -768,7 +768,7 @@ $Subsystem:                     turret24a,0.833,1.0
 		+Use firingpoints ;:
 	$Flags:			 			( "check hull" "reset when idle" )
 $Subsystem:                     turret25a,0.833,1.0
-	$Default SBanks:        ( "Trebuchet" ) ; 2 barrels/MX-52
+	$Default SBanks:        ( "Cyclops" ) ; 2 barrels/MX-52
 	$ROF:
 		+Use firingpoints ;:
 	$Flags:			 			( "check hull" "reset when idle" )

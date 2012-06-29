@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Battle of the Wilderness", 1032)
 $Author: James @ V
 $Created: 07/06/99 at 18:26:05
-$Modified: 03/08/12 at 19:46:23
+$Modified: 06/24/12 at 18:10:34
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -35,11 +35,11 @@ $end_multi_text
 +Player Entry Delay:
 1.000000
 
-+Viewer pos: -1297.151123, 7462.630859, 13397.551758
++Viewer pos: 1136.876709, 21339.244141, 6772.349121
 +Viewer orient:
-	-0.997409, 0.000002, -0.071946,
-	0.042367, 0.808244, -0.587322,
-	0.058149, -0.588848, -0.806149
+	0.005218, 0.000002, -0.999986,
+	0.998399, -0.056324, 0.005210,
+	-0.056323, -0.998413, -0.000296
 +SquadReassignName: 134th Barracuda
 +SquadReassignLogo: barracudas.pcx
 
@@ -876,10 +876,10 @@ $Determination: 10
 $Name: TC 28		;! Object #6
 $Class: TC-TRI
 $Team: Friendly
-$Location: -453.806244, -136.768906, -803.244690
+$Location: -453.806732, -136.768936, -803.244690
 $Orientation:
-	1.000000, -0.000018, 0.000004,
-	0.000015, 0.896267, 0.443514,
+	1.000000, 0.000009, 0.000018,
+	-0.000016, 0.896267, 0.443514,
 	-0.000011, -0.443514, 0.896267
 $AI Behavior: None
 $Cargo 1:  XSTR("TAG Missiles", 1054)
@@ -1424,6 +1424,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Rockeye#Shivan" "Piranha#Shivan" "Rockeye#Shivan" "Rockeye#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1451,6 +1452,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Rockeye#Shivan" "Piranha#Shivan" "Rockeye#Shivan" "Rockeye#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -2447,7 +2449,7 @@ $Name: LUCID-Presto
 $Team: -1
 $MessageNew:  XSTR("Warspite, this is the Lucidity. We are nearing the rendezvous point. Please activate your IFF transponder.", 1063)
 
-; please activate your IFF transponder.", -1)
+; please activate your IFF transponder.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 +Wave Name: sm201_lu_02.wav
@@ -2519,7 +2521,7 @@ $Name: COM- All Clear
 $Team: -1
 $MessageNew:  XSTR("All detected enemy craft have been neutralized. Alpha wing, return to base.", 1073)
 
-; we'll take it from here.", -1)
+; we'll take it from here.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_04.wav

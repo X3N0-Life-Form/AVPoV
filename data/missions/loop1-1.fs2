@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Rebels & Renegades", 44)
 $Author: Jim Boone
 $Created: 03/17/99 at 15:15:05
-$Modified: 03/07/12 at 20:32:46
+$Modified: 06/21/12 at 21:23:28
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -31,11 +31,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: -714.017517, 1288.870605, 2215.387451
++Viewer pos: -779.391785, 3106.297607, 2115.012695
 +Viewer orient:
-	-0.837967, -0.000003, 0.545721,
-	-0.473424, 0.497407, -0.726950,
-	-0.271444, -0.867517, -0.416812
+	0.330506, -0.000004, -0.943804,
+	0.933624, 0.146482, 0.326940,
+	0.138249, -0.989213, 0.048417
 +SquadReassignName: Scorpians
 +SquadReassignLogo: scorpsquadc.pcx
 
@@ -997,7 +997,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase "NTF Iceni" 50 ) )
+$AI Goals: ( goals ( ai-chase "NTF Iceni" 50 ) ( ai-waypoints-once "Asar path" 53 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
@@ -1604,7 +1604,7 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 44 total
+#Events		;! 47 total
 
 $Formula: ( when 
    ( < ( hits-left "Alpha 2" ) 45 ) 
@@ -2099,6 +2099,46 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( < ( hits-left "NTF Iceni" ) 15 ) 
+   ( set-armor-type 
+      "NTF Iceni" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+)
++Name: Iceni inf 15
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "NTF Iceni" ) 5 ) 
+   ( set-armor-type 
+      "NTF Iceni" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+)
++Name: final 5
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-armor-type 
+      "NTF Iceni" 
+      ( true ) 
+      "Hell Armor" 
+      "turret01a" 
+      "turret11a" 
+   )
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 4 total
 
 $Type: Primary
@@ -2131,7 +2171,7 @@ $end_multi_text
 $Formula: ( has-departed-delay 0 "NTSC Hinton" ) 
 +Invalid
 
-#Waypoints		;! 1 lists total
+#Waypoints		;! 2 lists total
 
 
 $Jump Node: 10104.724609, 0.002874, 5064.228027
@@ -2139,6 +2179,12 @@ $Jump Node Name: Jump Node 0
 $Name: Waypoint path 1
 $List: (		;! 1 points in list
 	( 8717.643555, 0.002272, 4983.057617 )
+)
+
+$Name: Asar path
+$List: (		;! 2 points in list
+	( 5462.425293, -0.002940, 4032.885010 )
+	( 6597.765625, -0.000594, 4598.332520 )
 )
 
 #Messages		;! 16 total
@@ -2449,7 +2495,7 @@ $Density: 50
 +Field Type: 0
 +Debris Genre: 0
 +Field Debris Type: 1
-$Average Speed: 5.000017
+$Average Speed: 5.002211
 $Minimum: 2500.000000, -4000.000000, 2500.000000
 $Maximum: 12500.000000, 4000.000000, 13500.000000
 +Inner Bound:
