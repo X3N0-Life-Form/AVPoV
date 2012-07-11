@@ -31,7 +31,7 @@ $Name:                                 	Vasudan Torpedo
 
 The resulting weapon is a flexible torpedo system, firing fast torpedoes in swarms of 2, sacrificing payload for speed, making the torpedoes hard to intercept. While the production costs remain relatively high compared to older mainstream designs, the success of this weapon system can be interpreted as a cue that ship-to-ship missiles are still a viable weapon plaform.",-1)
 		$end_multi_text
-$Model File:							harbinger_big.pof
+$Model File:							vas_torp.pof
 $POF target LOD:						1
 $Mass:									25.0
 $Velocity:								220.0

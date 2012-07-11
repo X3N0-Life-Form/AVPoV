@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Argonautica", 1701)
 $Author: Brad Johnson
 $Created: 07/28/99 at 22:41:28
-$Modified: 01/30/12 at 20:27:10
+$Modified: 07/03/12 at 22:21:41
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -35,11 +35,11 @@ $end_multi_text
 +Player Entry Delay:
 1.000000
 
-+Viewer pos: -4632.556641, 5374.410156, 3027.183594
++Viewer pos: -4948.567871, 5374.417969, 441.463867
 +Viewer orient:
-	0.022774, -0.000001, -0.999741,
-	0.984262, 0.175286, 0.022421,
-	0.175241, -0.984518, 0.003993
+	0.808042, -0.000002, -0.589125,
+	0.462762, 0.618854, 0.634721,
+	0.364581, -0.785506, 0.500061
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -311,14 +311,14 @@ $Ship Choices: (
 	"Mekhu HL-7"	100
 	"Akheton SDG"	16
 	"Morning Star"	16
-	"Prometheus S"	32
+	"Prometheus S"	28
 	"Maxim"	16
 	"Circe"	16
 	"Lamprey"	16
 	"Fire Spitter"	1
 	"Hell Spitter"	1
 	"Hayg Mas"	8
-	"Sehku"	20
+	"Sehku"	24
 	"Sahr AS"	12
 	"Rockeye"	120
 	"Tempest"	3280
@@ -347,7 +347,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Prometheus S" "Sehku" )
 +Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -473,7 +473,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Prometheus S" "Sehku" )
 +Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -501,7 +501,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Prometheus S" "Sehku" )
 +Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -529,7 +529,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Prometheus S" "Sehku" )
 +Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -722,7 +722,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
 +Subsystem: turret02
-+Primary Banks: ( "Shivan Large Canon" )
++Primary Banks: ( "ÿÿÿÿ" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Sbank Ammo: ( 0 )
@@ -1173,7 +1173,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" "Shivan Scatter Gun" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Light Laser" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1199,7 +1199,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" "Shivan Scatter Gun" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Light Laser" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1225,7 +1225,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" "Shivan Scatter Gun" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Light Laser" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1251,7 +1251,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" "Shivan Scatter Gun" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Light Laser" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1865,8 +1865,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "Shivan Bomb" )
++Primary Banks: ( "Shivan Light Laser" "Shivan Mega Laser" )
++Secondary Banks: ( "Shivan Weak Bomb" "Shivan Weak Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1892,8 +1892,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "Shivan Bomb" )
++Primary Banks: ( "Shivan Light Laser" "Shivan Mega Laser" )
++Secondary Banks: ( "Shivan Weak Bomb" "Shivan Weak Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1919,8 +1919,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "Shivan Bomb" )
++Primary Banks: ( "Shivan Light Laser" "Shivan Mega Laser" )
++Secondary Banks: ( "Shivan Weak Bomb" "Shivan Weak Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1946,8 +1946,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "Shivan Bomb" )
++Primary Banks: ( "Shivan Light Laser" "Shivan Mega Laser" )
++Secondary Banks: ( "Shivan Weak Bomb" "Shivan Weak Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1973,8 +1973,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "Shivan Bomb" )
++Primary Banks: ( "Shivan Light Laser" "Shivan Mega Laser" )
++Secondary Banks: ( "Shivan Weak Bomb" "Shivan Weak Bomb" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2126,10 +2126,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.816056, 0.000000, -0.577973
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2150,10 +2153,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.802172, 0.000000, -0.597094
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2174,10 +2180,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.823929, 0.000000, -0.566693
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2198,10 +2207,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2222,10 +2234,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2246,10 +2261,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace

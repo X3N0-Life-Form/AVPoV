@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Exodus", 1747)
 $Author: James Agay @ V
 $Created: 06/16/99 at 09:51:43
-$Modified: 10/22/11 at 23:35:43
+$Modified: 07/04/12 at 10:24:07
 $Notes:
 Hello to the FDL gang.$End Notes:
 
@@ -15,6 +15,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -27,9 +31,9 @@ $end_multi_text
 
 +Viewer pos: -5555.774902, 3594.327881, -242.663467
 +Viewer orient:
-	-0.689853, -0.000001, 0.723949,
-	-0.279633, 0.922390, -0.266462,
-	-0.667763, -0.386260, -0.636314
+	0.805135, -0.000001, -0.593091,
+	0.362651, 0.791277, 0.492305,
+	0.469299, -0.611458, 0.637086
 +SquadReassignName: 70th Blue Lions
 +SquadReassignLogo: lion1.pcx
 
@@ -738,6 +742,7 @@ $Orientation:
 	0.067128, 0.996234, 0.054888,
 	-0.771240, 0.086711, -0.630611
 $AI Behavior: None
++AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Jump right" 50 ) ( ai-chase "Abraxis" 66 ) ( ai-chase "Gibborim" 55 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 90
@@ -912,7 +917,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Bomb" "" "" )
++Secondary Banks: ( "Shivan Bomb" "ÿÿÿÿ" "ÿÿÿÿ" )
 +Sbank Ammo: ( 100 0 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -940,7 +945,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Bomb" "" "" )
++Secondary Banks: ( "Shivan Bomb" "ÿÿÿÿ" "ÿÿÿÿ" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1216,7 +1221,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "" "" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "ÿÿÿÿ" "ÿÿÿÿ" )
 +Sbank Ammo: ( 100 100 0 0 )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1246,7 +1251,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "" "" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "ÿÿÿÿ" "ÿÿÿÿ" )
 +Sbank Ammo: ( 100 100 40 100 )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1303,7 +1308,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Rockeye" "" )
++Secondary Banks: ( "Rockeye" "ÿÿÿÿ" )
 +Sbank Ammo: ( 50 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1332,7 +1337,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Rockeye" "" )
++Secondary Banks: ( "Rockeye" "ÿÿÿÿ" )
 +Sbank Ammo: ( 50 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1413,11 +1418,11 @@ $Determination: 10
 $Name: TC-TRI 32		;! Object #25
 $Class: TC-TRI
 $Team: Friendly
-$Location: -32.424561, 525.075806, 3908.978760
+$Location: -32.424103, 525.075806, 3908.978271
 $Orientation:
-	0.620802, -0.000046, -0.783968,
-	-0.100249, -0.991795, -0.079325,
-	-0.777532, 0.127837, -0.615713
+	0.620799, -0.000074, -0.783970,
+	-0.100266, -0.991795, -0.079303,
+	-0.777532, 0.127836, -0.615714
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Velocity: 33
@@ -1705,7 +1710,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Bomb" "" "" )
++Secondary Banks: ( "Shivan Bomb" "ÿÿÿÿ" "ÿÿÿÿ" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace

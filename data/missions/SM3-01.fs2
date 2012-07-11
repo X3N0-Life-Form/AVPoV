@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Bearbaiting", 1494)
 $Author: James Agay
 $Created: 08/13/99 at 10:40:35
-$Modified: 03/12/12 at 22:35:15
+$Modified: 06/28/12 at 21:59:46
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -32,9 +32,9 @@ $end_multi_text
 
 +Viewer pos: -5050.512207, 9551.056641, -2709.371582
 +Viewer orient:
-	-0.963279, -0.000001, -0.268501,
-	0.225857, 0.540760, -0.810289,
-	0.145195, -0.841177, -0.520903
+	-0.716339, -0.000000, -0.697752,
+	0.690130, 0.147407, -0.708514,
+	0.102853, -0.989076, -0.105593
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -972,7 +972,6 @@ $Orientation:
 	-0.357872, -0.447047, -0.819803
 $AI Behavior: None
 +AI Class: Big
-$AI Goals: ( goals ( ai-chase "Beleth" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 04/12/12 at 22:43:21
+$Modified: 06/23/12 at 09:08:04
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,16 +28,23 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3967.312256, 2589.004150, -1007.321045
++Viewer pos: 2171.135742, 2589.004150, -928.231750
 +Viewer orient:
-	0.999032, -0.000005, -0.043992,
-	0.026348, 0.800863, 0.598268,
-	0.035228, -0.598848, 0.800087
+	0.999785, -0.000005, -0.020746,
+	0.009511, 0.888826, 0.458145,
+	0.018437, -0.458244, 0.888635
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
 
 $AI Profile: myProfile
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"fov"		"0"		"number"
+)
 
 #Command Briefing
 
@@ -126,25 +133,25 @@ $Ship Choices: (
 	"Shivan Mega Laser"	100
 	"UD-6"	20
 	"Fire Spitter"	100
-	"Hell Spitter"	100
+	"Hell Spitter"	101
 	"Hayg Mas"	100
 	"Sehku"	100
 	"Sahr AS"	100
 	"Shivan Light Laser Up"	100
 	"Shivan Heavy Laser Up"	100
 	"Shivan Anticap Laser"	100
-	"Shivan Heavy Anticap Laser"	102
+	"Shivan Heavy Anticap Laser"	100
 	"Shivan Scatter Gun"	100
 	"Shivan Light Scatter Gun"	100
 	"Shivan Sniper Gun"	100
-	"Shivan Large Canon"	100
+	"Shivan Large Cannon"	100
 	"Shivan Flak Weapon"	100
 	"Rockeye"	100
 	"Tempest"	320
-	"Hornet"	660
+	"Hornet"	700
 	"Tornado"	500
 	"Harpoon"	468
-	"Trebuchet"	520
+	"Trebuchet"	546
 	"TAG-A"	500
 	"TAG-B"	500
 	"TAG-C"	516
@@ -171,14 +178,14 @@ $Ship Choices: (
 	"AntiFighterTAG#Shivan"	100
 	"Shivan Swarmer Bomb"	100
 	"Shivan Advanced Swarmer Bomb"	100
-	"Shivan LR Swarm"	140
-	"Tempest Adv#Shivan"	1800
+	"Shivan LR Swarm"	100
+	"Tempest Adv#Shivan"	1000
 )
 
 #Objects		;! 9 total
 
 $Name: Alpha 1		;! Object #0
-$Class: SF Mara#
+$Class: GTB Boanerges
 $Team: Friendly
 $Location: 1597.023804, 1614.215942, 2878.767578
 $Orientation:
@@ -189,7 +196,8 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Heavy Anticap Laser" )
++Primary Banks: ( "Hell Spitter" )
++Secondary Banks: ( "Hornet" "Trebuchet" "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -340,7 +348,7 @@ $Determination: 10
 
 $Name: Actium		;! Object #3
 $Class: GTCv Deimos
-$Team: Friendly
+$Team: Hostile
 $Location: 2731.292969, -0.000104, 2804.506836
 $Orientation:
 	-0.443234, 0.000000, -0.896406,
@@ -379,7 +387,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret25
 +Subsystem: turret26
 $Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
+$Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -503,9 +511,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret04-base
 +Subsystem: turret05-base
 +Subsystem: turret06a-base
-+Primary Banks: ( "Shivan Large Canon" )
++Primary Banks: ( "ÿÿÿÿ" )
 +Subsystem: turret07a-base
-+Primary Banks: ( "Shivan Large Canon" )
++Primary Banks: ( "ÿÿÿÿ" )
 +Subsystem: turret08-base
 +Subsystem: turret09-base
 +Subsystem: turret10-base
@@ -690,7 +698,7 @@ $Ships: (		;! 1 total
 +Hotkey: 0
 +Flags: ( )
 
-#Events		;! 4 total
+#Events		;! 6 total
 
 $Formula: ( when 
    ( true ) 
@@ -732,11 +740,33 @@ $Formula: ( when
       "turret29" 
       "turret30" 
    )
+   ( modify-variable @fov[0] ( get-fov ) ) 
 )
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( training-msg "fov" ) 
+   ( ship-invulnerable "Alpha 1" ) 
+   ( set-subsystem-strength 
+      "Alpha 1" 
+      "Hull" 
+      ( get-fov ) 
+   )
+)
++Name: fov
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when ( true ) ( set-fov 60 ) ) 
++Name: change fov
++Repeat Count: 1
++Interval: 1
++Chained: 3
 
 $Formula: ( when 
    ( key-pressed "Alt-J" ) 
@@ -824,12 +854,17 @@ $Formula: ( when
 #Waypoints		;! 0 lists total
 
 
-#Messages		;! 1 total
+#Messages		;! 2 total
 
 
 $Name: mission start
 $Team: -1
 $MessageNew:  XSTR("Welcome to the testing arena", -1)
+$end_multi_text
+
+$Name: fov
+$Team: -1
+$MessageNew:  XSTR("fov = $fov", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total

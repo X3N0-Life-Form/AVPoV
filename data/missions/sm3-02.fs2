@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("High Noon", 1558)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 03/12/12 at 22:46:11
+$Modified: 07/03/12 at 20:57:40
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -33,9 +33,9 @@ $end_multi_text
 
 +Viewer pos: -6950.979004, 14286.835938, 21613.533203
 +Viewer orient:
-	-0.015610, 0.000002, -0.999878,
-	0.507290, 0.861739, -0.007919,
-	0.861634, -0.507351, -0.013453
+	-0.078116, 0.000001, -0.996944,
+	0.758403, 0.649071, -0.059424,
+	0.647087, -0.760728, -0.050704
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -252,7 +252,7 @@ $Ship Choices: (
 	"Tempest"	1600
 )
 
-#Objects		;! 14 total
+#Objects		;! 15 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVB Bakha
@@ -440,7 +440,7 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 3
++Escort priority: 30
 +Group: 0
 +Use Table Score:
 +Score: 10000
@@ -553,7 +553,7 @@ $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 5
++Escort priority: 15
 +Group: 0
 +Use Table Score:
 +Score: 10000
@@ -767,9 +767,9 @@ $Determination: 10
 +Score: 10
 
 $Name: Noliun		;! Object #14
-$Class GVCv Sobek
+$Class: GVCv Sobek
 $Team: Friendly
-$Location: 5000.0, -600.0, 26000.0
+$Location: 5000.000000, -600.000000, 26000.000000
 $Orientation:
 	-0.995162, 0.000000, 0.098248,
 	0.000000, 1.000000, 0.000000,
@@ -777,8 +777,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 0
-+Initial Hull: 100
 +Initial Hull: 76
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -814,13 +812,13 @@ $Arrival Cue: ( is-previous-event-true
    ( false ) 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( false )
+$Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 6
-+Orders Accepted: 0 ;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 400
@@ -1824,15 +1822,7 @@ $MessageNew:  XSTR("We have eliminated Cancer wing.", 1591)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_18.wav
-;t be good.", -1)
-
-
-
-
-
-
-
-
+;t be good.", -1)
 
 #Reinforcements		;! 0 total
 
