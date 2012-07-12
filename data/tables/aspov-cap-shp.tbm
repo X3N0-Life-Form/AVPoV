@@ -821,4 +821,91 @@ $Subsystem:                     turret05, 2, 1.0
 	$Flags:			 			( "check hull" "use multiple guns" )
 $Subsystem:                     turret06, 2, 1.0
 	$Flags:			 			( "check hull" "use multiple guns" )
+	
+$Name:                          GVC Mentu Enforcer
+$Short name:					HTL-Mentu-b.pof
+$Species:                       Vasudan
++Tech Description:
+XSTR(
+"A very recent redesign of the Mentu cruiser, the Enforcer variant has been created to integrate the Alliance's newest weaponery, such as the Wraith turret or the Vasudan Upgraded Medium Beam. Though it looks almost identical to the original Mentu, the Enforcer's internal structure is significantly different from its older brother, meaning classic Mentus cannot be retrofitted into Enforcers, just like Fenreis cannot be transformed into Leviathans.
+
+Although its next generation beam cannon gives the enforcer enough firepower to challenge corvettes, its hull and subsystem strength is much lower than the Mentu.", -1)
+$end_multi_text
+$POF file:                      cruiser2v-01.pof
+$Detail distance:				(0, 1000, 1600, 11000)
+$Show damage:					YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.0
+$Max Velocity:					0.0, 0.0, 35.0
+$Rotation time:					100.0, 100.0, 65.0
+$Rear Velocity:					0.0
+$Forward accel:					8.0
+$Forward decel:					4.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				150.0
+$Expl outer rad:				650.0
+$Expl damage:					200.0
+$Expl blast:					10000.0
+$Expl Propagates:				YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:				500.0                                           ;; speed shockwave expands at, 0 means no shockwave
+$Shockwave Count:	2
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       0
+$Power Output:					100.0
+$Max Oclk Speed:				60.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     45000
+$Flags:                         ( "cruiser" "in tech database")
+$AI Class:                      Captain
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						137                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -317
+$Closeup_zoom:					0.75
+$Score:							100
+$Subsystem:                     turret01,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret02,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret03,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret04,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret05,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret06,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret07,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret08,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret09,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret10,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret11,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret12,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret13,0.833,1.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret14,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret15,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret16,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret17,0.833,1.0
+	$Default PBanks:			( "MVasUp" )
+$Subsystem:                     engine,    15, 0.0
+	$Engine Wash:	Default150
+$Subsystem:                     communications,  5,0.0
+$Subsystem:                     sensors,                                 5,0.0
+$Subsystem:                     navigation,                      5,0.0
+$Subsystem:                     weapons,                                 5,0.0
 #End
