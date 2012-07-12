@@ -530,6 +530,8 @@ $BeamInfo:
 		+Flicker:		0.35
 		+Zadd:			1
 
+;; Vasudan beams
+		
 ;; damage per salvo: 52650
 $Name:							BFVas
 $Model File:					none 				; laser1-1.pof
@@ -619,6 +621,165 @@ $BeamInfo:
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35
 		+Zadd:			1
+
+;; damage per salvo: 9508		
+$Name:							MVas
+$Model File:					none 				; laser1-1.pof
+@Laser Bitmap:               	laserglow01
+@Laser Color:					255, 200, 67
+; Puke pale green 				R 192	G 255	B 200
+@Laser Length:					0.0
+@Laser Head Radius:				0.3
+@Laser Tail Radius:				0.3
+$Mass:                          100.0
+$Velocity:                      1600.0				;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     18.0
+$Damage:                        490
+$Damage Type:					HugeWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      3.3
+$Energy Consumed:               0.30        	    ;; Energy used when fired
+$Cargo Size:                    0.0         	    ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124
+$ImpactSnd:                     88              	;; The sound it makes when it hits something
++Weapon Range:					4000				;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       40.0
+$BeamInfo:
+	+Radius:								70.0
+	+PCount:								50
+	+PRadius:								3.0
+	+PAni:									particle_yellow
+	+Muzzleglow:							beamglow6
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						21.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					24.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Index:			0
+		+Width:			24.0
+		+Texture:		VasBeam2Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			6
+		+Tile Factor:	10, 1
+		+Translation:	-25
+	$Section:
+		+Index:			1
+		+Width:			35.0
+		+Texture:		VasBeam2Glow
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	10, 1
+		+Translation:	-15
+	$Section:
+		+Index:			2
+		+Width:			50.0
+		+Texture:		VasBeam2GlowHaze
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.4
+		+Zadd:			2
+		+Tile Factor:	14, 1
+		+Translation:	-10
+	$Section:
+		+Width:			107.0
+		+Texture:		OrangeFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
 		
+;; damage per salvo: 12224.5		
+$Name:							MVasUp
+$Model File:					none 				; laser1-1.pof
+@Laser Bitmap:               	laserglow01
+@Laser Color:					255, 200, 67
+; Puke pale green 				R 192	G 255	B 200
+@Laser Length:					0.0
+@Laser Head Radius:				0.3
+@Laser Tail Radius:				0.3
+$Mass:                          100.0
+$Velocity:                      1600.0				;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     18.0
+$Damage:                        630
+$Damage Type:					HugeWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      3.3
+$Energy Consumed:               0.30        	    ;; Energy used when fired
+$Cargo Size:                    0.0         	    ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124
+$ImpactSnd:                     88              	;; The sound it makes when it hits something
++Weapon Range:					4000				;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       40.0
+$BeamInfo:
+	+Radius:								72.0
+	+PCount:								50
+	+PRadius:								3.0
+	+PAni:									particle_yellow
+	+Muzzleglow:							beamglow6
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						23.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					25.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Index:			0
+		+Width:			26.0
+		+Texture:		VasBeam2Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			6
+		+Tile Factor:	10, 1
+		+Translation:	-25
+	$Section:
+		+Index:			1
+		+Width:			37.0
+		+Texture:		VasBeam2Glow
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	10, 1
+		+Translation:	-15
+	$Section:
+		+Index:			2
+		+Width:			53.0
+		+Texture:		VasBeam2GlowHaze
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.4
+		+Zadd:			2
+		+Tile Factor:	14, 1
+		+Translation:	-10
+	$Section:
+		+Width:			112.0
+		+Texture:		OrangeFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
 
 #End
