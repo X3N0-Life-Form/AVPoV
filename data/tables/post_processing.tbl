@@ -52,12 +52,12 @@ $Shader Effect:			2
 $Disables Rendering:	NO
 $Invert timer:			NO	
 
-;#Light Shafts
-;$AlwaysOn:		YES
-;$Density:		1.2
-;$Falloff:		1.0
-;$Weight:		0.2
-;$Intensity:		0.5
-;$Sample Number:	50
+#Light Shafts
+$AlwaysOn:		YES
+$Density:		0.4
+$Falloff:		1.0
+$Weight:		0.01
+$Intensity:		0.4
+$Sample Number:	50
 
 #End
