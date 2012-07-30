@@ -37,22 +37,22 @@ $Mass:									25.0
 $Velocity:								220.0
 $Fire Wait:								12.0
 ;; note, damage toned down until ai and turrets start shooting at bombs.
-$Damage:                                460
+$Damage:                                620
 $Damage Type:							HugeWeapon
 $Shockwave Damage Type:					HugeWeapon
 $Blast Force:							1000.0
 $Inner Radius:							70.0
 $Outer Radius:							160.0
 $Shockwave Speed:						80                                      
-$Armor Factor:							1.2
+$Armor Factor:							1.0
 $Shield Factor:							0.02
-$Subsystem Factor:						0.75	
+$Subsystem Factor:						1.2	
 $Lifetime:								15.0
 $Energy Consumed:						0.0
 $Cargo Size:							15.0
 $Homing:								YES
 	+Type:                              ASPECT	
-	+Turn Time:                         4.0
+	+Turn Time:                         3.5
 	+View Cone:							180.0
 	+Min Lock Time:						5.0	
 	+Lock Pixels/Sec:					35	
