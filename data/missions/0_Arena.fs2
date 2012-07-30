@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 06/23/12 at 09:08:04
+$Modified: 07/30/12 at 18:01:12
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2171.135742, 2589.004150, -928.231750
++Viewer pos: 3236.658203, 162.640564, 4291.795898
 +Viewer orient:
-	0.999785, -0.000005, -0.020746,
-	0.009511, 0.888826, 0.458145,
-	0.018437, -0.458244, 0.888635
+	-0.349156, -0.000003, 0.937065,
+	-0.397445, 0.905598, -0.148087,
+	-0.848603, -0.424137, -0.316196
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -133,13 +133,13 @@ $Ship Choices: (
 	"Shivan Mega Laser"	100
 	"UD-6"	20
 	"Fire Spitter"	100
-	"Hell Spitter"	101
+	"Hell Spitter"	100
 	"Hayg Mas"	100
 	"Sehku"	100
 	"Sahr AS"	100
 	"Shivan Light Laser Up"	100
-	"Shivan Heavy Laser Up"	100
-	"Shivan Anticap Laser"	100
+	"Shivan Heavy Laser Up"	101
+	"Shivan Anticap Laser"	101
 	"Shivan Heavy Anticap Laser"	100
 	"Shivan Scatter Gun"	100
 	"Shivan Light Scatter Gun"	100
@@ -148,10 +148,10 @@ $Ship Choices: (
 	"Shivan Flak Weapon"	100
 	"Rockeye"	100
 	"Tempest"	320
-	"Hornet"	700
+	"Hornet"	660
 	"Tornado"	500
 	"Harpoon"	468
-	"Trebuchet"	546
+	"Trebuchet"	520
 	"TAG-A"	500
 	"TAG-B"	500
 	"TAG-C"	516
@@ -178,14 +178,14 @@ $Ship Choices: (
 	"AntiFighterTAG#Shivan"	100
 	"Shivan Swarmer Bomb"	100
 	"Shivan Advanced Swarmer Bomb"	100
-	"Shivan LR Swarm"	100
-	"Tempest Adv#Shivan"	1000
+	"Shivan LR Swarm"	140
+	"Tempest Adv#Shivan"	1800
 )
 
-#Objects		;! 9 total
+#Objects		;! 4 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GTB Boanerges
+$Class: SF Mara#
 $Team: Friendly
 $Location: 1597.023804, 1614.215942, 2878.767578
 $Orientation:
@@ -196,8 +196,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Hell Spitter" )
-+Secondary Banks: ( "Hornet" "Trebuchet" "Trebuchet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -296,96 +294,29 @@ $Determination: 10
 +Use Table Score:
 +Score: 670
 
-$Name: Dahshor		;! Object #2
-$Class: GVCv Sobek
+$Name: GVC Hemsut 2		;! Object #2
+$Class: GVC Hemsut
 $Team: Friendly
-$Location: 2287.279297, 0.000369, 2110.661377
+$Location: 2633.221680, -0.000040, 3868.869385
 $Orientation:
-	-0.019202, 0.000000, -0.999816,
-	0.000000, 1.000000, 0.000000,
-	0.999816, 0.000000, -0.019202
+	1.000000, 0.000000, 0.000000,
+	0.000000, 0.939372, 0.342897,
+	0.000000, -0.342897, 0.939372
 $AI Behavior: None
-+AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 5
-+Orders Accepted: 1		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 400
-
-$Name: Actium		;! Object #3
-$Class: GTCv Deimos
-$Team: Hostile
-$Location: 2731.292969, -0.000104, 2804.506836
-$Orientation:
-	-0.443234, 0.000000, -0.896406,
-	0.000000, 1.000000, 0.000000,
-	0.896406, 0.000000, -0.443234
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
-+Subsystem: turret25
-+Subsystem: turret26
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
+$Damage: 100
++Subsystem: Turret04
+$Damage: 100
++Subsystem: Turret05
+$Damage: 100
++Subsystem: Turret06
+$Damage: 100
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -398,16 +329,16 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
-+Score: 800
++Score: 75
 
-$Name: Colossus		;! Object #4
-$Class: GTVA Colossus
+$Name: GVC Aten 3		;! Object #3
+$Class: GVC Aten
 $Team: Hostile
-$Location: 6608.841309, -0.000039, 6158.858887
+$Location: 2679.620605, -284.025513, 4425.915039
 $Orientation:
-	-0.648779, -0.086583, 0.756035,
-	0.094595, 0.976624, 0.193020,
-	-0.755075, 0.196745, -0.625423
+	-0.999209, -0.032015, 0.023662,
+	-0.033527, 0.997222, -0.066536,
+	-0.021467, -0.067277, -0.997504
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -415,222 +346,14 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret02a
-+Subsystem: turret03a
-+Subsystem: turret04a
-+Subsystem: turret05a
-+Subsystem: turret06a
-+Subsystem: turret07a
-+Subsystem: turret08a
-+Subsystem: turret09a
-+Subsystem: turret10a
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
-+Subsystem: turret25
-+Subsystem: turret26
-+Subsystem: turret27
-+Subsystem: turret28
-+Subsystem: turret29
-+Subsystem: turret30
-+Subsystem: turret31
-+Subsystem: turret32
-+Subsystem: turret33
-+Subsystem: turret34
-+Subsystem: turret35
-+Subsystem: turret36
-+Subsystem: turret37
-+Subsystem: turret38
-+Subsystem: turret39
-+Subsystem: turret40
-+Subsystem: turret41
-+Subsystem: turret42
-+Subsystem: turret43
-+Subsystem: turret44
-+Subsystem: turret45
-+Subsystem: turret46
-+Subsystem: turret47
-+Subsystem: turret48
-+Subsystem: turret49
-+Subsystem: turret50
-+Subsystem: turret51
-+Subsystem: turret52
-+Subsystem: turret53
-+Subsystem: turret54
-+Subsystem: turret55
-+Subsystem: turret56
-+Subsystem: turret57
-+Subsystem: turret58
-+Subsystem: turret59
-+Subsystem: turret60
-+Subsystem: turret61
-+Subsystem: turret62
-+Subsystem: turret63
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 100
-+Group: 0
-+Use Table Score:
-+Score: 10000
-
-$Name: Vorvadoss		;! Object #5
-$Class: SD Demon
-$Team: Friendly
-$Location: 4007.431396, 683.994812, 1943.122681
-$Orientation:
-	0.324796, 0.000000, 0.945784,
-	-0.928622, 0.189641, 0.318902,
-	-0.179359, -0.981854, 0.061595
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01-base
-+Subsystem: turret02-base
-+Subsystem: turret03a-base
-+Primary Banks: ( "MRedUp" )
-+Subsystem: turret04-base
-+Subsystem: turret05-base
-+Subsystem: turret06a-base
-+Primary Banks: ( "ÿÿÿÿ" )
-+Subsystem: turret07a-base
-+Primary Banks: ( "ÿÿÿÿ" )
-+Subsystem: turret08-base
-+Subsystem: turret09-base
-+Subsystem: turret10-base
-+Subsystem: turret11-base
-+Subsystem: turret12-base
-+Subsystem: turret13-base
-+Subsystem: turret14-base
-+Subsystem: turret15-base
-+Subsystem: turret16-base
-+Primary Banks: ( "Shivan Multi Turret" )
-+Subsystem: turret17-base
-+Primary Banks: ( "Shivan Multi Turret" )
-+Subsystem: turret18-base
-+Primary Banks: ( "Shivan Multi Turret" )
-+Subsystem: turret19-base
-+Primary Banks: ( "Shivan Multi Turret" )
-+Subsystem: turret20-base
-+Primary Banks: ( "Standard Flak" )
-+Subsystem: turret21-base
-+Primary Banks: ( "Standard Flak" )
-+Subsystem: turret22
-+Secondary Banks: ( "Shivan Subspace Missile#swarm" )
-+Sbank Ammo: ( 0 )
-+Subsystem: turret23
-+Secondary Banks: ( "Shivan Subspace Missile#swarm" )
-+Sbank Ammo: ( 0 )
-+Subsystem: turret24
-+Secondary Banks: ( "Shivan Subspace Missile#swarm" )
-+Sbank Ammo: ( 0 )
-+Subsystem: turret25
-+Secondary Banks: ( "Shivan Subspace Missile#swarm" )
-+Sbank Ammo: ( 0 )
-+Subsystem: turret26
-+Secondary Banks: ( "Shivan Subspace Missile#swarm" )
-+Sbank Ammo: ( 0 )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 9
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 840
-
-$Name: SD Lucifer		;! Object #6
-$Class: SD Lucifer
-$Team: Hostile
-$Location: 4407.404785, -0.000024, 1674.709717
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
 +Subsystem: turret03
+$Damage: 100
 +Subsystem: turret04
+$Damage: 100
 +Subsystem: turret05
 +Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 20
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 1000
-
-$Name: GTC Leviathan 7		;! Object #7
-$Class: GTC Leviathan
-$Team: Hostile
-$Location: 3058.281494, -0.001981, 1879.030273
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09a-01-main
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -639,47 +362,11 @@ $Determination: 10
 +Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 3
++Escort priority: 5
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
-+Score: 200
-
-$Name: GTC Fenris 8		;! Object #8
-$Class: GTC Fenris
-$Team: Hostile
-$Location: 1874.781982, -0.001953, 3622.436035
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09a-01-main
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 1
-+Orders Accepted: 1		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 100
++Score: 90
 
 #Wings		;! 1 total
 
