@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Hit and Run", -1)
 $Author: Adrarsis
 $Created: 07/17/10 at 20:03:16
-$Modified: 03/19/12 at 21:32:13
+$Modified: 07/15/12 at 22:16:33
 $Notes:
 TODO : truc avec TAG$End Notes:
 
@@ -38,6 +38,10 @@ $end_multi_text
 
 
 $AI Profile: FS2 RETAIL
+
+#Fiction Viewer
+
+$File: E01_nebula_spec_ops.txt
 
 #Command Briefing
 
@@ -2290,6 +2294,7 @@ $Ambient light level: 7895160
 
 $Event Music: 2: Exodus
 $Briefing Music: Brief6
+$Fiction Viewer Music: Brief1
 
 #End
 

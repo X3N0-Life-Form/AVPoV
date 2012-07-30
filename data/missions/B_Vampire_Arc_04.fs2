@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Great Hunt", -1)
 $Author: X3N0-Life-Form
 $Created: 06/27/10 at 13:07:01
-$Modified: 08/15/11 at 22:49:03
+$Modified: 07/30/12 at 17:26:47
 $Notes:
 Self playing if you call epsilon right away.$End Notes:
 
@@ -16,6 +16,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -25,9 +29,9 @@ $end_multi_text
 
 +Viewer pos: -514.814148, 10107.666016, -2128.396240
 +Viewer orient:
-	0.986593, -0.000001, 0.163199,
-	-0.052217, 0.947430, 0.315672,
-	-0.154620, -0.319962, 0.934728
+	0.999974, -0.000000, 0.007271,
+	-0.006995, 0.273057, 0.961972,
+	-0.001986, -0.961998, 0.273050
 
 
 $AI Profile: myProfile
@@ -233,58 +237,7 @@ $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
-; don't hesitate to disable the Grelier's own beam cannons.", -1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+; don't hesitate to disable the Grelier's own beam cannons.", -1)
 $end_multi_text
 
 $Formula: ( is-goal-incomplete 
@@ -343,8 +296,8 @@ $Ship Choices: (
 	"Akheton SDG"	8
 	"Morning Star"	8
 	"Hayg Mas"	12
-	"Rockeye"	130
-	"Tempest"	1360
+	"Rockeye"	100
+	"Tempest"	1840
 	"Hornet"	920
 	"Harpoon"	160
 )
@@ -1207,7 +1160,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1234,7 +1187,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1261,7 +1214,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1637,29 +1590,31 @@ $Orientation:
 	0.227977, 0.940941, -0.250310,
 	0.000000, 0.257080, 0.966390
 $AI Behavior: None
++AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
++Subsystem: Turret01
++Primary Banks: ( "Wraith" )
++Subsystem: Turret02
 +Primary Banks: ( "Standard Flak" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "SVas" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "SVas" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 18 "Grelier" ) 
@@ -1911,11 +1866,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Harpoon" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1937,11 +1893,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Harpoon" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1963,11 +1920,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Harpoon" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1989,11 +1947,12 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Harpoon" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2533,7 +2492,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 10
-+Team: 65536
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Harakhti" ) 
