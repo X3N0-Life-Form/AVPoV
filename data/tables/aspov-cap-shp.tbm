@@ -908,4 +908,66 @@ $Subsystem:                     communications,  5,0.0
 $Subsystem:                     sensors,                                 5,0.0
 $Subsystem:                     navigation,                      5,0.0
 $Subsystem:                     weapons,                                 5,0.0
+
+$Name:                          GVC Hemsut
+$Short name:					VTorpCruiser
+$Species:                       Vasudan
++Tech Description:
+XSTR("TODO", -1)
+$end_multi_text
+$POF file:                      VasGS.pof
+$Detail distance:				(0, 400, 1200, 2500)
+$Show damage:					YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.0
+$Max Velocity:					0.0, 0.0, 45.0
+$Rotation time:					12.0, 12.0, 12.0
+$Rear Velocity:					0.0
+$Forward accel:					12.0
+$Forward decel:					7.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				255.0
+$Expl outer rad:				550.0
+$Expl damage:					220.0
+$Expl blast:					2500.0
+$Expl Propagates:				YES				;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:				500.0			;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       		0
+$Shield Color:					100 100 255
+$Power Output:					90.0
+$Max Oclk Speed:				35.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     17500
+$Flags:                         ( "cruiser" "in tech database" )
+$AI Class:                      Captain
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						137                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -195
+$Closeup_zoom:					0.5
+$Score:							75
+$Subsystem:                     turret01, 10, 2.0
+	$Default SBanks:			( "Vasudan Torpedo" )
+$Subsystem:                     turret02, 10, 2.0
+	$Default SBanks:			( "Vasudan Torpedo" )
+$Subsystem:                     turret03, 5, 1.2
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret04, 5, 2.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret05, 5, 2.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret06, 5, 2.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     sensors,                         7, 0
+$Subsystem:                     communication,  7, 0.0
+$Subsystem:                     navigation,              7, 0.0
+$Subsystem:                     weapons,                         7, 0.0
+$Subsystem:                     engine,                 30, 0.0
+	$Engine Wash:				Default100
 #End
