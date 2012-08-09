@@ -332,6 +332,20 @@ Rakshasa:	Heavy Assault Cruiser
 	turret 13:Shivan Turret Laser Up
 	turret 14:Shivan Turret Laser Up
 
+Rakshasa:	Heavy Flak Cruiser
+	armor: Shivan Elite Armor
+	turret 03:SAAA
+	turret 04:SAAA
+	turret 05:Standard Flak
+	turret 06:Standard Flak
+	turret 07:SAAA
+	turret 08:SAAA
+	turret 10:SAAA
+	turret 11:Standard Flak
+	turret 12:Standard Flak
+	turret 13:Standard Flak
+	turret 14:Standard Flak
+
 
 Cain:		Light Support Cruiser
 	hull:  32k
