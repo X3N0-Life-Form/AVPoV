@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Great Hunt", -1)
 $Author: X3N0-Life-Form
 $Created: 06/27/10 at 13:07:01
-$Modified: 07/30/12 at 17:26:47
+$Modified: 07/31/12 at 17:30:35
 $Notes:
 Self playing if you call epsilon right away.$End Notes:
 
@@ -27,7 +27,7 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -514.814148, 10107.666016, -2128.396240
++Viewer pos: -1418.612061, 740.280457, 627.019836
 +Viewer orient:
 	0.999974, -0.000000, 0.007271,
 	-0.006995, 0.273057, 0.961972,
@@ -237,7 +237,7 @@ $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
-; don't hesitate to disable the Grelier's own beam cannons.", -1)
+; don't hesitate to disable the Grelier's own beam cannons.", -1)
 $end_multi_text
 
 $Formula: ( is-goal-incomplete 
@@ -1582,24 +1582,21 @@ $Determination: 10
 +Score: 12
 
 $Name: Harakhti		;! Object #43
-$Class: GVC Mentu
+$Class: GVC Mentu Enforcer
 $Team: Friendly
 $Location: -1419.909302, 111.903023, 805.376221
 $Orientation:
 	0.973666, -0.220315, 0.058608,
-	0.227977, 0.940941, -0.250310,
-	0.000000, 0.257080, 0.966390
+	0.158833, 0.839977, 0.518852,
+	-0.163540, -0.495880, 0.852852
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: Turret01
-+Primary Banks: ( "Wraith" )
 +Subsystem: Turret02
-+Primary Banks: ( "Standard Flak" )
 +Subsystem: Turret03
 +Subsystem: Turret04
 +Subsystem: Turret05
@@ -1613,9 +1610,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Turret13
 +Subsystem: Turret14
 +Subsystem: Turret15
-+Primary Banks: ( "SVas" )
 +Subsystem: Turret16
-+Primary Banks: ( "SVas" )
++Subsystem: Turret17
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 18 "Grelier" ) 
 $Departure Location: Hyperspace
