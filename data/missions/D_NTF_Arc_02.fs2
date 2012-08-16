@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Bluff", -1)
 $Author: X3N0-Life-Form
 $Created: 07/16/10 at 22:51:34
-$Modified: 10/07/11 at 21:26:55
+$Modified: 08/16/12 at 21:35:37
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -16,6 +16,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 131072
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -4856,6 +4860,7 @@ $Formula: ( when
       ( true ) 
    )
    ( nebula-change-storm "s_medium" ) 
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: change to nebula
 +Repeat Count: 1
@@ -4884,7 +4889,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
-+Team: 1536
 
 $Formula: ( when 
    ( true ) 
@@ -4978,7 +4982,7 @@ $Formula: ( when
    )
    ( awacs-set-radius 
       "Streaker" 
-      "communications" 
+      "navigation" 
       8000 
    )
    ( set-armor-type 
@@ -5000,7 +5004,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 3
-+Team: 393216
 
 $Formula: ( when 
    ( true ) 
@@ -5032,7 +5035,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("call in more strikecrafts", -1)
-+Team: 536895488
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5047,7 +5049,6 @@ $Formula: ( when
 +Name: escort wing#1
 +Repeat Count: 1
 +Interval: 1
-+Team: 134217728
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5062,7 +5063,6 @@ $Formula: ( when
 +Name: escort wing#2
 +Repeat Count: 1
 +Interval: 1
-+Team: 134217728
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5077,7 +5077,6 @@ $Formula: ( when
 +Name: escort wing#3
 +Repeat Count: 1
 +Interval: 1
-+Team: 134217728
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5107,7 +5106,6 @@ $Formula: ( when
 +Name: swarmer strike wing
 +Repeat Count: 1
 +Interval: 1
-+Team: 34015233
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5167,7 +5165,6 @@ $Formula: ( when
 +Name: heavy bombers
 +Repeat Count: 1
 +Interval: 1
-+Team: 252707595
 
 $Formula: ( when 
    ( has-arrived-delay 
@@ -5215,7 +5212,6 @@ $Formula: ( when
 +Name: streaker departed - fade out
 +Repeat Count: 1
 +Interval: 1
-+Team: 3
 
 $Formula: ( when ( true ) ( end-mission ) ) 
 +Name: end mission
@@ -5247,7 +5243,6 @@ $Formula: ( when
 +Name: mara#armor
 +Repeat Count: 1
 +Interval: 1
-+Team: 268443648
 
 $Formula: ( when 
    ( and 
