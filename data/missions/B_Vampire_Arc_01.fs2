@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Fangs in the Mist", -1)
 $Author: X3N0-Life-Form
 $Created: 04/03/10 at 21:24:44
-$Modified: 08/15/11 at 22:47:39
+$Modified: 08/16/12 at 20:43:56
 $Notes:
 Fairly easy.$End Notes:
 
@@ -18,6 +18,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_standard
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -714,26 +718,26 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +AI Class: Colonel
 +Primary Banks: ( "Standard Flak" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "SVas" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "SVas" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -1999,6 +2003,7 @@ $AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 $Formula: ( when 
    ( true ) 
    ( never-warp "Alpha 1" ) 
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1
@@ -2030,7 +2035,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 4
-+Team: 274864387
 
 $Formula: ( when 
    ( has-departed-delay 0 "Melek" ) 

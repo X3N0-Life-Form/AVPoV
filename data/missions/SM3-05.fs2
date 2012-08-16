@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Argonautica", 1701)
 $Author: Brad Johnson
 $Created: 07/28/99 at 22:41:28
-$Modified: 07/03/12 at 22:21:41
+$Modified: 08/16/12 at 21:15:06
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -722,7 +722,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
 +Subsystem: turret02
-+Primary Banks: ( "ÿÿÿÿ" )
++Primary Banks: ( "" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Sbank Ammo: ( 0 )
@@ -2725,7 +2725,7 @@ $AI Goals: ( goals ( ai-guard "Aquitaine" 50 ) ( ai-chase-any 23 ) )
 +Hotkey: 1
 +Flags: ( )
 
-#Events		;! 63 total
+#Events		;! 64 total
 
 $Formula: ( when 
    ( true ) 
@@ -3392,6 +3392,12 @@ $Formula: ( when
       "High" 
       "Aquitaine In Pain" 
    )
+   ( set-armor-type 
+      "Aquitaine" 
+      ( true ) 
+      "Shivan Capital Ship Armor" 
+      "Hull" 
+   )
 )
 +Name: Aquitaine In Pain
 +Repeat Count: 1
@@ -3584,6 +3590,14 @@ $Formula: ( when
    )
 )
 +Name: New Stuff
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

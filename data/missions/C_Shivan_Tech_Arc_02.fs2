@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Here comes the Grim Reaper", -1)
 $Author: X3N0-Life-Form
 $Created: 02/08/08 at 13:55:23
-$Modified: 08/15/11 at 22:50:28
+$Modified: 08/16/12 at 20:54:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -591,7 +595,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -2037,6 +2041,7 @@ $Formula: ( when
       "Alpha 4d" 
       2750 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: Start messages
 +Repeat Count: 1

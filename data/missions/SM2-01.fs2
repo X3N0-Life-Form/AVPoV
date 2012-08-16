@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Battle of the Wilderness", 1032)
 $Author: James @ V
 $Created: 07/06/99 at 18:26:05
-$Modified: 06/24/12 at 18:10:34
+$Modified: 08/16/12 at 21:05:25
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -37,8 +37,8 @@ $end_multi_text
 
 +Viewer pos: 1136.876709, 21339.244141, 6772.349121
 +Viewer orient:
-	0.005218, 0.000002, -0.999986,
-	0.998399, -0.056324, 0.005210,
+	0.005219, 0.000002, -0.999986,
+	0.998399, -0.056324, 0.005211,
 	-0.056323, -0.998413, -0.000296
 +SquadReassignName: 134th Barracuda
 +SquadReassignLogo: barracudas.pcx
@@ -876,10 +876,10 @@ $Determination: 10
 $Name: TC 28		;! Object #6
 $Class: TC-TRI
 $Team: Friendly
-$Location: -453.806732, -136.768936, -803.244690
+$Location: -453.806244, -136.768906, -803.244690
 $Orientation:
-	1.000000, 0.000009, 0.000018,
-	-0.000016, 0.896267, 0.443514,
+	1.000000, -0.000018, 0.000004,
+	0.000015, 0.896267, 0.443514,
 	-0.000011, -0.443514, 0.896267
 $AI Behavior: None
 $Cargo 1:  XSTR("TAG Missiles", 1054)
@@ -935,10 +935,10 @@ $Determination: 10
 $Name: TC 27		;! Object #8
 $Class: TC-TRI
 $Team: Friendly
-$Location: 659.038147, -117.434677, -795.480347
+$Location: 659.039124, -117.434624, -795.480286
 $Orientation:
-	1.000000, 0.000007, 0.000017,
-	-0.000015, 0.868060, 0.496461,
+	1.000000, -0.000046, -0.000013,
+	0.000046, 0.868060, 0.496461,
 	-0.000011, -0.496461, 0.868060
 $AI Behavior: None
 $Cargo 1:  XSTR("TAG Missiles", 1054)
@@ -1691,7 +1691,7 @@ $AI Goals: ( goals ( ai-guard-wing "Virgo" 50 ) ( ai-chase "Warspite" 12 ) )
 +Wave Delay Min: 3
 +Wave Delay Max: 5
 
-#Events		;! 38 total
+#Events		;! 39 total
 
 $Formula: ( when 
    ( has-time-elapsed 1 ) 
@@ -2335,6 +2335,14 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 3 total
 
 $Type: Secondary
@@ -2449,7 +2457,7 @@ $Name: LUCID-Presto
 $Team: -1
 $MessageNew:  XSTR("Warspite, this is the Lucidity. We are nearing the rendezvous point. Please activate your IFF transponder.", 1063)
 
-; please activate your IFF transponder.", -1)
+; please activate your IFF transponder.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 +Wave Name: sm201_lu_02.wav
@@ -2521,7 +2529,7 @@ $Name: COM- All Clear
 $Team: -1
 $MessageNew:  XSTR("All detected enemy craft have been neutralized. Alpha wing, return to base.", 1073)
 
-; we'll take it from here.", -1)
+; we'll take it from here.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_04.wav

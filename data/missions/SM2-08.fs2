@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("A Monster in the Mist", 1343)
 $Author: Brad Johnson
 $Created: 07/06/99 at 17:38:41
-$Modified: 08/16/11 at 12:14:59
+$Modified: 08/16/12 at 21:09:51
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -19,6 +19,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_active
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -455,13 +459,13 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret51
 +Subsystem: turret52
 +Subsystem: turret53
-+Subsystem: navigation
++Subsystem: Navigation
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: communication
++Subsystem: Communication
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: weapons
++Subsystem: Weapons
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: sensors
++Subsystem: Sensors
 +Cargo Name: XSTR("Scanned", 1357)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -2221,18 +2225,19 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( set-armor-type
-      "Maahes"
-      ( true )
-      "Shivan Bomber Armor"
-      "Hull"
+   ( set-armor-type 
+      "Maahes" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
    )
-   ( set-armor-type
-      "Alpha 1"
-      ( true )
-      "Shivan Bomber Armor"
-      "Hull"
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1

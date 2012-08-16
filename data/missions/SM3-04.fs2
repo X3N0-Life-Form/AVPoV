@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Straight, No Chaser", 1657)
 $Author: Brad Johnson
 $Created: 07/28/99 at 22:17:59
-$Modified: 10/16/11 at 14:29:16
+$Modified: 08/16/12 at 21:12:48
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -19,6 +19,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_active
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -1884,7 +1888,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) )
 +Flags: ( )
 
-#Events		;! 55 total
+#Events		;! 56 total
 
 $Formula: ( when 
    ( > ( is-ship-visible "Scorpio 1" ) 1 ) 
@@ -2617,6 +2621,14 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Capricorn", 963)
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 4 total
 

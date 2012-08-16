@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("A Game of TAG", 1081)
 $Author: James Agay @ V
 $Created: 07/06/99 at 18:26:05
-$Modified: 03/08/12 at 20:24:17
+$Modified: 08/16/12 at 21:06:45
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -2144,8 +2144,9 @@ $Formula: ( when
       "<all engines>" 
       "weapons" 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
-+Name: guardian stuff
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

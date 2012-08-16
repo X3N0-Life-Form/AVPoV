@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Fog of War", 1306)
 $Author: Brad Johnson
 $Created: 06/28/99 at 11:00:05
-$Modified: 10/16/11 at 12:06:10
+$Modified: 08/16/12 at 21:08:49
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -553,14 +557,7 @@ $Ship Choices: (
 
 #Objects		;! 54 total
 
-; second, to seek and destroy all Shivan vessels; and third, to locate and apprehend Admiral Aken Bosch. We will begin launching our squadrons at 2730, Vasudan Galactic Time.", -1)
-
-
-
-
-
-
-
+; second, to seek and destroy all Shivan vessels; and third, to locate and apprehend Admiral Aken Bosch. We will begin launching our squadrons at 2730, Vasudan Galactic Time.", -1)
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis
 $Team: Friendly
@@ -2307,7 +2304,7 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-chase "Tatenen" 89 ) )
 +Flags: ( )
 
-#Events		;! 41 total
+#Events		;! 42 total
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Tatenen" ) 
@@ -2867,6 +2864,14 @@ $Formula: ( when
    )
 )
 +Name: New Stuff
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

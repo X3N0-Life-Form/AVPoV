@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Proving Grounds", 1126)
 $Author: Brad Johnson
 $Created: 06/01/99 at 16:22:29
-$Modified: 03/09/12 at 18:17:05
+$Modified: 08/16/12 at 21:07:42
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -2361,6 +2361,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( training-msg "ToDie" ) 
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1

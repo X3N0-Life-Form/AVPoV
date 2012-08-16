@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("You shall not pass !", -1)
 $Author: X3N0-Life-Form
 $Created: 06/25/10 at 15:23:00
-$Modified: 08/15/11 at 22:48:17
+$Modified: 08/16/12 at 20:52:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -19,6 +19,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_standard
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -305,7 +309,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret18
 +Subsystem: turret19
 +Subsystem: turret20
-+Primary Banks: ( "LRBG" )
++Primary Banks: ( "" )
 +Subsystem: turret21
 +Subsystem: turret22
 +Subsystem: turret23
@@ -2899,6 +2903,7 @@ $Formula: ( when
       "Olorin" 
       "turret24" 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1
@@ -3265,7 +3270,6 @@ $Formula: ( when
 +Name: Glamdring pulling out
 +Repeat Count: 1
 +Interval: 1
-+Team: 276965701
 
 $Formula: ( when 
    ( and 
@@ -3300,7 +3304,6 @@ $Formula: ( when
 +Name: Olorin escapes
 +Repeat Count: 1
 +Interval: 1
-+Team: 2097152
 
 #Goals		;! 2 total
 

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Slaying Ravana", 866)
 $Author: Brad Johnson
 $Created: 05/08/99 at 20:44:47
-$Modified: 06/11/12 at 21:51:46
+$Modified: 08/16/12 at 21:03:40
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -492,7 +492,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "ÿÿÿÿ" )
++Primary Banks: ( "" )
 +Subsystem: turret02
 +Primary Banks: ( "Terran Turret" )
 +Subsystem: turret03
@@ -774,28 +774,28 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Primary Banks: ( "Standard Flak" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Standard Flak" )
-+Subsystem: turret03
++Subsystem: Turret03
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret04
++Subsystem: Turret04
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret05
-+Primary Banks: ( "ÿÿÿÿ" )
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret05
++Primary Banks: ( "" )
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "Terran Huge Turret" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "Terran Huge Turret" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 14
@@ -1761,7 +1761,7 @@ $AI Goals: ( goals ( ai-chase "Ravana" 50 ) )
 +Hotkey: 1
 +Flags: ( )
 
-#Events		;! 45 total
+#Events		;! 46 total
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Ravana" ) 
@@ -2254,6 +2254,14 @@ $Formula: ( when
    ( allow-ship "GTF Perseus" ) 
 )
 +Name: New Stuff
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Great Hunt", 815)
 $Author: Brad Johnson
 $Created: 05/06/99 at 17:51:09
-$Modified: 06/11/12 at 21:36:14
+$Modified: 08/16/12 at 21:02:19
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -1632,7 +1632,7 @@ $AI Goals: ( goals ( ai-guard "Actium" 89 ) ( ai-guard "Lysander" 50 ) )
 +Hotkey: 1
 +Flags: ( )
 
-#Events		;! 76 total
+#Events		;! 77 total
 
 $Formula: ( when 
    ( or 
@@ -2708,6 +2708,14 @@ $Formula: ( when
    ( tech-add-weapons "Hell Spitter" ) 
 )
 +Name: Add Tech
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

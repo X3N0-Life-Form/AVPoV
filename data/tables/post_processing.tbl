@@ -53,7 +53,7 @@ $Disables Rendering:	NO
 $Invert timer:			NO	
 
 #Light Shafts
-$AlwaysOn:		YES
+$AlwaysOn:		NO
 $Density:		0.4
 $Falloff:		1.0
 $Weight:		0.01

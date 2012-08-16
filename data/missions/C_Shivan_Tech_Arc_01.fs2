@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Red Bath", -1)
 $Author: Adrarsis
 $Created: 02/01/08 at 22:28:40
-$Modified: 08/15/11 at 22:50:10
+$Modified: 08/16/12 at 20:53:53
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -787,7 +791,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -812,7 +816,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -837,7 +841,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -862,7 +866,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1634,6 +1638,7 @@ $Formula: ( when
       "Mission start 5 - hammer 1" 
       6000 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1

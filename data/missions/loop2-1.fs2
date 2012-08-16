@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("As Lightning Fall", 168)
 $Author: Jim Boone
 $Created: 07/26/99 at 10:00:59
-$Modified: 10/16/11 at 14:41:41
+$Modified: 08/16/12 at 20:58:56
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -20,6 +20,10 @@ $end_multi_text
 +NebAwacs: 2500.000000
 
 +Storm: s_emp
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 
 +Disallow Support: 1
@@ -1964,7 +1968,7 @@ $Ships: (		;! 6 total
 $AI Goals: ( goals ( ai-chase "GTT Lambda 1" 50 ) )
 +Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
 
-#Events		;! 35 total
+#Events		;! 36 total
 
 $Formula: ( when 
    ( < 
@@ -2436,6 +2440,14 @@ $Formula: ( when
    ( grant-medal "SOC Unit Crest" ) 
 )
 +Name: Give medal
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: mission start
 +Repeat Count: 1
 +Interval: 1
 

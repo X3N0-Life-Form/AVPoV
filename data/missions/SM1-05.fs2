@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Mystery of the Trinity", 720)
 $Author: James Agay @ Volition
 $Created: 05/06/99 at 11:51:58
-$Modified: 08/15/11 at 21:06:56
+$Modified: 08/16/12 at 21:01:13
 $Notes:
 Welcome to our nebula$End Notes:
 
@@ -19,9 +19,15 @@ $end_multi_text
 
 +Storm: none
 
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 1
+
 +Hull Repair Ceiling: 0.000000
+
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -29,9 +35,9 @@ $end_multi_text
 
 +Viewer pos: -4999.527344, 772.804260, -6795.837891
 +Viewer orient:
-	-0.001724, 0.000002, -0.999999,
-	0.346097, 0.938198, -0.000595,
-	0.938197, -0.346098, -0.001618
+	0.862355, 0.000002, -0.506304,
+	0.114188, 0.974235, 0.194493,
+	0.493259, -0.225536, 0.840136
 +SquadReassignName: 107th Ravens
 +SquadReassignLogo: ravens.pcx
 
@@ -1659,7 +1665,7 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( "no-arrival-warp" )
 
-#Events		;! 106 total
+#Events		;! 107 total
 
 $Formula: ( when 
    ( has-time-elapsed 2 ) 
@@ -3057,6 +3063,14 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: missions start
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 3 total
 
 $Type: Primary
@@ -3789,7 +3803,7 @@ $Density: 30
 +Field Debris Type: 4
 +Field Debris Type: 4
 +Field Debris Type: 4
-$Average Speed: 1.000000
+$Average Speed: 0.999909
 $Minimum: 5100.000000, 1200.000000, 14000.000000
 $Maximum: 7600.000000, 2300.000000, 17700.000000
 

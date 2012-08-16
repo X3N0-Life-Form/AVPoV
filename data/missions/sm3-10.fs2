@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Apocalypse", 1942)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 03/05/12 at 21:12:35
+$Modified: 08/16/12 at 21:23:47
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -1045,11 +1045,11 @@ $Determination: 10
 $Name: TSC 2 60		;! Object #26
 $Class: TC-TRI
 $Team: Friendly
-$Location: -532.491028, -234.196335, -11361.703125
+$Location: -532.496887, -234.196640, -11361.701172
 $Orientation:
-	0.904147, 0.090070, -0.417622,
-	0.081717, -0.995936, -0.037883,
-	-0.419337, 0.000126, -0.907831
+	0.904172, 0.089758, -0.417633,
+	0.081434, -0.995964, -0.037752,
+	-0.419337, 0.000125, -0.907832
 $AI Behavior: None
 $Cargo 1:  XSTR("Dravis' diary", 1948)
 +Initial Hull: 100
@@ -1147,11 +1147,11 @@ $Determination: 10
 $Name: TSC 2 79		;! Object #29
 $Class: TSC 2
 $Team: Friendly
-$Location: -5800.721191, -67.705025, -11191.193359
+$Location: -5800.720703, -67.705025, -11191.193359
 $Orientation:
-	-0.961731, 0.000001, -0.273995,
-	-0.001349, 0.999988, 0.004740,
-	0.273992, 0.004928, -0.961719
+	-0.961655, 0.000001, -0.274261,
+	-0.001350, 0.999988, 0.004740,
+	0.274258, 0.004928, -0.961643
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Velocity: 33
@@ -1270,27 +1270,27 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret03
++Subsystem: Turret03
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret04
-+Subsystem: turret05
++Subsystem: Turret04
++Subsystem: Turret05
 +Primary Banks: ( "Subach HL-7" )
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "Wraith" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -1435,9 +1435,9 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay 
    "Second wave" 
@@ -1462,11 +1462,11 @@ $Determination: 10
 $Name: VAC 4 61		;! Object #37
 $Class: VAC 4
 $Team: Friendly
-$Location: -427.663208, -80.176224, -11684.155273
+$Location: -428.898254, -80.314514, -11686.136719
 $Orientation:
-	-0.928074, -0.012988, 0.372171,
-	0.012990, 0.997654, 0.067210,
-	-0.372171, 0.067210, -0.925728
+	-0.927763, -0.013029, 0.372942,
+	0.013004, 0.997654, 0.067205,
+	-0.372943, 0.067199, -0.925418
 $AI Behavior: None
 $Cargo 1:  XSTR("Abbot Laurent's Journal", 1949)
 +Initial Velocity: 33
@@ -1503,9 +1503,9 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1528,11 +1528,11 @@ $Determination: 10
 $Name: VAC 4 80		;! Object #39
 $Class: VAC 4
 $Team: Friendly
-$Location: -5598.111328, 110.518501, -11283.126953
+$Location: -5597.916992, 110.288025, -11285.446289
 $Orientation:
-	-0.966195, -0.000002, -0.257813,
-	-0.006391, 0.999693, 0.023940,
-	0.257734, 0.024778, -0.965898
+	-0.965947, 0.000005, -0.258741,
+	-0.006407, 0.999693, 0.023936,
+	0.258662, 0.024778, -0.965650
 $AI Behavior: None
 $Cargo 1:  XSTR("Orenian koi", 1950)
 +Initial Velocity: 33
@@ -1569,9 +1569,9 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay 
    "Second wave" 
@@ -1597,11 +1597,11 @@ $Determination: 10
 $Name: VAC 4 30		;! Object #41
 $Class: VAC 4
 $Team: Friendly
-$Location: -526.236633, -81.021072, -11655.302734
+$Location: -527.715820, -81.227188, -11657.103516
 $Orientation:
-	-0.872380, -0.000257, 0.488828,
-	0.017102, 0.999372, 0.031047,
-	-0.488529, 0.035444, -0.871828
+	-0.872523, -0.000252, 0.488574,
+	0.017097, 0.999372, 0.031049,
+	-0.488275, 0.035444, -0.871970
 $AI Behavior: None
 $Cargo 1:  XSTR("Parker's Boots", 1947)
 +Initial Velocity: 33
@@ -1838,9 +1838,9 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -4053,7 +4053,7 @@ $Ships: (		;! 2 total
 $AI Goals: ( goals ( ai-guard "Zollner" 50 ) ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( )
 
-#Events		;! 54 total
+#Events		;! 55 total
 
 $Formula: ( when 
    ( has-time-elapsed 3 ) 
@@ -4796,6 +4796,15 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( true ) 
+   ( set-post-effect "lightshafts" 100 ) 
+   ( set-post-effect "saturation" 45 ) 
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Bane" ) 
    ( set-armor-type 
       "Bane" 
@@ -4943,7 +4952,7 @@ $Name: 2 Cains
 $Team: -1
 $MessageNew:  XSTR("The Shivans have sortied two Cain-class warships, the Bane and the Melchom. Intercept these cruisers before they make the jump to Vega.", 1960)
 
-;t be good.", -1)
+;t be good.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 +Wave Name: sm310_ac_05.WAV
