@@ -50,6 +50,7 @@ A_Intro_01.The Viper's Sting							//ToRecheck
 			prometheus r ; lamprey ; harpoon ; hornet
 		New ships : GVF Horus ; GVF Seth ; GVF Toth
 		Background to improve (same as several other missions in gamma draconnis)
+		Has a fiction piece
 
 		-
 		Ships :
@@ -184,6 +185,7 @@ B_Vampire_Arc_06.Healing the Wounds						//?
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
 		Background : done
+		Has a fiction piece
 		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
 
 		The GVD Pharaoh is still blockading the Node until reinforcements
@@ -274,6 +276,7 @@ D_NTF_Arc_01.Card Games								//Beta-Ready/toTestFurther
 		2nd gen mission
 		New equipement : prometheus s ; piranha
 		Background : done (toRework)
+		Has a fiction piece
 		FS2 Timeline : during "The Sicilian Defense"
 
 		Bomber mission. Alpha wing & GTCv Lamia attack a NTF rallying point.
@@ -333,6 +336,7 @@ E_Sathanas_Arc_01.Hit and Run							//?
 		2nd gen mission
 		New equipement : maxim
 		Background : todo
+		Has a fiction piece
 		FS2 Timeline : during "The Fog of War"
 
 		Alpha wing escorts the GTCv Xeus while it engages shivan
@@ -351,6 +355,7 @@ E_Sathanas_Arc_02.Welcome to Trapper Town					//?
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		Background : todo
+		Has a fiction piece
 		FS2 Timeline : during "Speaking in Tongues"
 
 		GTVA forces attempt to lure the Sathanas
@@ -390,6 +395,7 @@ E_Sathanas_Arc_04.The Waiting Dark						//ToRebalance
 		3rd gen mission
 		New equipement : infyrno ; circe
 		Background : done (toRework)
+		Has a fiction piece
 		FS2 Timeline : during "High Noon"
 
 		The GTCv Warihu engages the SCv Cyaegha ; Cyaegha pulls back in the end
@@ -429,6 +435,7 @@ E_Sathanas_06.We've got company !						//Beta-Ready
 /////////////////////////////////////////////////////////////////////////////////
 		3rd gen mission
 		Background : todo
+		Has a fiction piece
 		FS2 Timeline : during "Straight, no chaser"
 
 		The GTD Olympus Shadow is under attack !

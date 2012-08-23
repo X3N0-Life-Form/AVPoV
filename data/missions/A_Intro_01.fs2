@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Viper's Sting", -1)
 $Author: X3N0-Life-Form
 $Created: 01/19/08 at 15:37:34
-$Modified: 08/15/11 at 22:49:37
+$Modified: 08/23/12 at 21:37:20
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -34,6 +38,10 @@ $Starting wing names: ( "Alpha" "Beta" "Epsilon" )
 $Squadron wing names: ( "Alpha" "Beta" "Epsilon" "Delta" "Gamma" )
 
 $AI Profile: myProfile
+
+#Fiction Viewer
+
+$File: A01.txt
 
 #Command Briefing
 
@@ -264,7 +272,7 @@ $Orientation:
 	0.296281, 0.000000, 0.955101,
 	0.000000, 1.000000, 0.000000,
 	-0.955101, 0.000000, 0.296281
-$AI Behavior: Stay Near
+$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -288,7 +296,7 @@ $Orientation:
 	0.296281, 0.000000, 0.955101,
 	0.000000, 1.000000, 0.000000,
 	-0.955101, 0.000000, 0.296281
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -313,7 +321,7 @@ $Orientation:
 	0.296281, 0.000000, 0.955101,
 	0.000000, 1.000000, 0.000000,
 	-0.955101, 0.000000, 0.296281
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100

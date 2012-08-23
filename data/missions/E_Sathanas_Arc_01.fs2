@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Hit and Run", -1)
 $Author: Adrarsis
 $Created: 07/17/10 at 20:03:16
-$Modified: 08/16/12 at 20:55:38
+$Modified: 08/23/12 at 21:40:07
 $Notes:
 TODO : truc avec TAG$End Notes:
 
@@ -40,7 +40,7 @@ $end_multi_text
 $AI Profile: FS2 RETAIL
 #Fiction Viewer
 
-$File: E01_nebula_spec_ops.txt
+$File: E01.txt
 
 #Command Briefing
 
