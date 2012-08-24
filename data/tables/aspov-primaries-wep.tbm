@@ -566,13 +566,13 @@ $Model File:                    none ;;  laser1-1.pof
 $Mass:                          1.5
 $Velocity:                      420.0
 $Fire Wait:                     0.80
-$Damage:                        125
+$Damage:                        145
 $Damage Type:					ShivanHugeWeapon
 $Armor Factor:                  1.0
 $Shield Factor:                 0.1
 $Subsystem Factor:              0.35
 $Lifetime:                      3.5
-$Energy Consumed:               2.8
+$Energy Consumed:               2.4
 $Cargo Size:                    0.0
 $Homing:                                NO
 $LaunchSnd:                             108
@@ -863,7 +863,7 @@ $Cargo Size:					0.25
 $Homing:						NO
 $LaunchSnd:						116
 $ImpactSnd:						117
-+Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+; +Weapon Range:					4000			;; Limit to range at which weapon will actively target object
 $Flags:							("Flak" "particle spew" "player allowed")
 $Trail:
 	+Start Width:	3.5
