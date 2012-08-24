@@ -679,7 +679,7 @@ $Damage Type:						ShivanWeapon
 $Armor Factor:                  	1.0
 $Shield Factor:         			1.0
 $Subsystem Factor:      			1.0
-$Lifetime:                          1.4 
+$Lifetime:                          1.4
 $Energy Consumed:               	0.30
 $Cargo Size:                    	0.0 
 $Homing:                            NO
@@ -735,10 +735,10 @@ $Velocity:                      2400.0
 $Fire Wait:                     2.5
 $Damage:                        150
 $Damage Type:					ShivanWeapon
-$Armor Factor:                  1.0
-$Shield Factor:                 0.40
-$Subsystem Factor:              0.25
-$Lifetime:                      1.5
+$Armor Factor:                  0.4
+$Shield Factor:                 1.0
+$Subsystem Factor:              0.75
+$Lifetime:                      1.0
 $Energy Consumed:               3.2
 $Cargo Size:                    0.0 
 $Homing:                        NO
