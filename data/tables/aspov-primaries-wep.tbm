@@ -546,12 +546,12 @@ $Pspew:
 ;; new primaries
 	
 $Name:                          Shivan Heavy Anticap Laser
-	+Title:						XSTR("Shivan Heavy Anti-Capital Ship Laser",-1)
+	+Title:						XSTR("Shivan Heavy Anti-Capship Laser",-1)
 	+Description:
 		XSTR("Overpowered laser
 		Use with care",-1)
 	$end_multi_text
-	+Tech Title:					XSTR("Shivan Heavy Anti-Capital Ship Laser", -1)
+	+Tech Title:					XSTR("Shivan Heavy Anti-Capship Laser", -1)
 	+Tech Description:
 		XSTR("Somewhere between the Anticap Laser and the Superior Defence turret, the Heavy Anti-Capital Laser is capable of tearing through capital ship armor with ease, making this weapon capable of bringing down even corvettes and destroyers, given enough time.", -1)
 	$end_multi_text

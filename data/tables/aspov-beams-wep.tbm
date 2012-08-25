@@ -665,7 +665,6 @@ $BeamInfo:
 	+Beam Piercing Splash Effect Velocity:	-10
 	+Beam Piercing Effect Variance:			0.01
 	$Section:
-		+Index:			0
 		+Width:			24.0
 		+Texture:		VasBeam2Core
 		+RGBA Inner:	255 255 255 255
@@ -675,7 +674,6 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-25
 	$Section:
-		+Index:			1
 		+Width:			35.0
 		+Texture:		VasBeam2Glow
 		+RGBA Inner:	160 160 0 255
@@ -685,7 +683,6 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-15
 	$Section:
-		+Index:			2
 		+Width:			50.0
 		+Texture:		VasBeam2GlowHaze
 		+RGBA Inner:	255 0 0 255
@@ -745,7 +742,6 @@ $BeamInfo:
 	+Beam Piercing Splash Effect Velocity:	-10
 	+Beam Piercing Effect Variance:			0.01
 	$Section:
-		+Index:			0
 		+Width:			26.0
 		+Texture:		VasBeam2Core
 		+RGBA Inner:	255 255 255 255
@@ -755,7 +751,6 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-25
 	$Section:
-		+Index:			1
 		+Width:			37.0
 		+Texture:		VasBeam2Glow
 		+RGBA Inner:	160 160 0 255
@@ -765,7 +760,6 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-15
 	$Section:
-		+Index:			2
 		+Width:			53.0
 		+Texture:		VasBeam2GlowHaze
 		+RGBA Inner:	255 0 0 255

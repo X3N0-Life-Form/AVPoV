@@ -1,400 +1,1324 @@
 #Ship Classes
+;; --------------------------------------------------------------------------- ;;
+;; Shivan ships
+;; --------------------------------------------------------------------------- ;;
+$Name:                          ST Azrael
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     turret01a,5,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02a,5,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03a,5,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
 
+;; ================================================================================================ ;;
+$Name:                          SFr Dis
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     turret01,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
 
+;; ================================================================================================ ;;
+$Name:                          SAC 3
+	+nocreate ;:
+$Armor Type:				Shivan Fighter Armor
+
+;; ================================================================================================ ;;
+$Name:                          SFr Mephisto
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     turret01,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          SC 5
+	+nocreate ;:
+$Armor Type:				Shivan Fighter Armor
+
+;; ================================================================================================ ;;
+$Name:                  SFr Asmodeus
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     a-turret01,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     a-turret02,2,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     a-turret03,2,1.0
+	; $Default PBanks:        ( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     a-turret04,2,1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          SAC 2
+	+nocreate ;:
+$Armor Type:				Shivan Fighter Armor
+
+;; ================================================================================================ ;;
 $Name:		SC Lilith
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
-$Subsystem:                     navigation,              2.5,0.0
-	$AWACS:			4800
+$Subsystem:                     turret01,1,1.0
+	; $Default PBanks:        ( "SAAA" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07,3,1.0
+	; $Default PBanks:        ( "LRed" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08,4,1.0
+	; $Default SBanks:        ( "Shivan Cluster" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret09,4,1.0
+	; $Default SBanks:        ( "Shivan Cluster" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,              2.5,0.0
+	$AWACS:			7200
 
-
+;; ================================================================================================ ;;
 $Name:		SC Rakshasa
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
-$Flags:                 ( "cruiser" "awacs")
-$Subsystem:                     navigation,              2.5,0.0
-	$AWACS:			3600
+$Subsystem:                     turret01,2,1.0
+	; $Default PBanks:        ( "SRed" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02,2,1.0
+	; $Default PBanks:        ( "SRed" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03,2,1.0
+	; $Default PBanks:        ( "SRed" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07,3,1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08,2,1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret09,2,1.0
+	; $Default PBanks:        ( "SAAA" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret10,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret11,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret12,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret13,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret14,1,1.0
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,              2.5,0.0
+	$AWACS:			7200
 
-
+;; ================================================================================================ ;;
 $Name:		SC Cain
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
-$Subsystem:                     navigation,              5,0.0
-	$AWACS:			2400
+$Subsystem:					    turret01,1,1.0
+	; $Default PBanks:				( "SAAA" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02,1,1.0
+	; $Default PBanks:				( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03,1,1.0
+	; $Default PBanks:				( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04,1,1.0
+	; $Default PBanks:				( "Shivan Light Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05,1,1.0
+	; $Default PBanks:				( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06,1,1.0
+	; $Default PBanks:				( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07,2.0,1.0
+	; $Default PBanks:				( "SRed" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08,2.5,1.0
+	; $Default SBanks:				( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret09,2.5,1.0
+	; $Default SBanks:				( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,              5,0.0
+	$AWACS:			3800
 
-
+;; ================================================================================================ ;;
 $Name:		SD Demon
 	+nocreate ;:
 $Armor Type:				Shivan Destroyer Armor
+$Subsystem:                     turret01-base,3,0.5
+	; $Default PBanks:        ( "LRED" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02-base,3,0.5
+	; $Default PBanks:        ( "LRED" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03a-base,3,0.5
+	; $Default PBanks:        ( "SRED" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret04-base,1.2,0.5
+	; $Default PBanks:        ( "SAAA" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret05-base,1.2,0.5
+	; $Default PBanks:        ( "SAAA" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret06a-base,0.6,0.5
+	; $Default PBanks:        ( "Shivan Megafunk Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret07a-base,0.6,0.5
+	; $Default PBanks:        ( "Shivan Megafunk Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret08-base,0.4,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret09-base,0.4,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret10-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret11-base,0.4,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret12-base,0.4,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret13-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret14-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret15-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret16-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret17-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret18-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret19-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret20-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret21-base,0.4,0.5
+	; $Default PBanks:        ( "Shivan Turret Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret22,0.5,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret23,0.5,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret24,0.5,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret25,0.5,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret26,0.5,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,       4,0.0
+	$AWACS:			9200
 
-
+;; ================================================================================================ ;;
 $Name:		SD Ravana
 	+nocreate ;:
 $Armor Type:				Shivan Destroyer Armor
 $Subsystem: 	turret01, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret02, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret03, 			0.6, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			0.6, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret07, 			0.6, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret08, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret09, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret10, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret11, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret12, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret13, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret14, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret15, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret16, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret17, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret18, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret19, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret20, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret21, 			0.4, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret22, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret23, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret24, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret25, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret26, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret27, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret28, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret29, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret30, 			0.5, 0.5
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,         4,0.0
+	$AWACS:			9200
 
-
+;; ================================================================================================ ;;
 $Name:		SD Lucifer
 	+nocreate ;:
 $Armor Type:				Shivan Destroyer Armor
 $Subsystem: 	turret01, 			1.0, 6.5
 	$Armor Type:				Hell Armor
 	$Default PBanks:		 	( "LRLRed" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret02, 			1.0, 6.5
 	$Armor Type:				Hell Armor
 	$Default PBanks:		 	( "LRLRed" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret03, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Advanced Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Advanced Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Advanced Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret07, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Advanced Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret08, 			0.25, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret09, 			1.0, 6.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Suppression Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret10, 			0.25, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret11, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret12, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret13, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret14, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret15, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Suppression Flak" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret16, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret17, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
 	$Default PBanks:		 	( "Shivan Turret Laser Up" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret18, 			1.0, 6.5
 	$Armor Type:				Hell Armor
 	$Default PBanks:		 	( "MRedUp" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret19, 			1.0, 6.5
 	$Armor Type:				Hell Armor
 	$Default PBanks:		 	( "MRedUp" )
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,         4,0.0
+	$AWACS:			12000
 
-
+;; ================================================================================================ ;;
 $Name:		SSG Trident
 	+nocreate ;:
 $Armor Type:				Shivan Fighter Armor
 
-
+;; ================================================================================================ ;;
 $Name:		SSG Belial
 	+nocreate ;:
 $Armor Type:				Shivan Fighter Armor
 
+;; ================================================================================================ ;;
+$Name:                          SSG Rahu
+	+nocreate ;:
+$Armor Type:				Shivan Capital Ship Armor
+$Subsystem:                     turret01, 5, 1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret02, 5, 1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     turret03, 5, 1.0
+	; $Default PBanks:        ( "Shivan Heavy Laser" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem:                     sensors,                        2, 0.0
+	$AWACS:			3800
 
+;; ================================================================================================ ;;
 $Name:		SCv Moloch
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
 $Flags:             ( "big damage" "corvette" "awacs" )
 $Subsystem: 	turret01, 			0.500, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret02, 		 	0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret03, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret07, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret08, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret09, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret10, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret11, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret12, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret13, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret14, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret15, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret16, 			0.150, 1.0
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem:                     sensors,     5,0.0
 	$AWACS:		10000.0
 
-
-
+;; ================================================================================================ ;;
 $Name:		SJ Sathanas
 	+nocreate ;:
 ;; $AI Class:              Elite
 $Armor Type:				Shivan Elite Armor
 $Subsystem: 	turret01, 			2.0, 1.0
 	;; BFRed
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret02, 			2.0, 1.0
 	;; BFRed
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret03, 			2.0, 1.0
 	;; BFRed
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			2.0, 1.0
 	;; BFRed
+	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			1.0, 0.4
 	$Default PBanks:       		( "MRed" )
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			1.0, 0.4
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret07, 			1.0, 0.4
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret08, 			1.0, 0.4
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret09, 			1.0, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret10, 			1.0, 0.4
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret11, 			1.0, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret12, 			0.3, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret13, 			0.3, 0.4
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret14, 			0.3, 1.0
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret15, 			0.3, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret16, 			0.3, 1.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret17, 			0.3, 0.4
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret18, 			0.3, 1.4
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret19, 			0.3, 1.0
 	;; SAAA
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret20, 			0.3, 1.0
 	;; SAAA
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret21, 			0.3, 0.4
 	$Default PBanks:        	( "MRedUp" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret22, 			0.3, 0.4
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret23, 			0.3, 1.0
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret24, 			0.3, 1.0
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret25, 			0.3, 1.0
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret26, 			0.3, 1.0
 	$Default PBanks:        	( "MRedUp" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret27, 			0.3, 1.0
 	$Default PBanks:        	( "Fast Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret28, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret29, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret30, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret31, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret32, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret33, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret34, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret35, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret36, 			0.3, 1.0
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret37, 			0.3, 1.0
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret38, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret39, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret40, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret41, 			0.3, 1.0
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret42, 			0.3, 1.4
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret43, 			0.3, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret44, 			0.3, 0.4
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret45, 			0.3, 0.4
 	$Default PBanks:        	( "SAAA" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret46, 			0.3, 1.0
 	$Default PBanks:        	( "MRed" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret47, 			0.3, 1.0
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret48, 			0.3, 1.0
 	$Default PBanks:        	( "Long Range Flak" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret49, 			0.4, 3.0
 	$Default PBanks:        	( "Suppression Flak" ) ;; LR Flak
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret50, 			0.4, 3.0
 	$Default PBanks:        	( "Suppression Flak" ) ;; LR Flak
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret51, 			0.3, 2.0
 	;; LRed
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret52, 			0.9, 1.4
 	$Default PBanks:        	( "MRedUp" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem: 	turret53, 			0.3, 0.4
 	$Default PBanks:        	( "MRedUp" )
-	$Flags:			 			( "check hull" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     communication,		3, 0.0
+    $AWACS:			1.0 12500.0		;; intensity, radius - intensity is currently ignored
 
+;; ================================================================================================ ;;
 $Name:		Shivan Comm Node
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
 
+;; -------------------------------------------------------------------- ;;
 ;; GTVA ships
+;; -------------------------------------------------------------------- ;;
 
+$Name:						GTFR Triton
+	+nocreate ;:
+$Subsystem:					turret01,1,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02,1,1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ==================================================================================
+$Name:                      GTFR Poseidon
+	+nocreate ;:
+$Subsystem:                     turret01,1,1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02,1,1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03,1,1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04,1,1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          @GTC Fenris
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret07, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret08, 2, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GTM Hippocrates
+	+nocreate ;:
+$Subsystem:                     turret01, 1, 5.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02, 1, 5.0
+	; $Default PBanks:			( "LTerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03, 1, 5.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04, 1, 5.0
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05, 1, 5.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                  GTC Leviathan
+	+nocreate ;:
+$Subsystem:                     turret01, 1, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03, .5, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04, .5, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05, .5, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06, .5, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret07, 1, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret08, 1, 5.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GTSC Faustus
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Akheton SDG" )
+	; $Default SBanks:        ( "Tempest" "Rockeye" )
+	; $SBank Capacity:        ( 50,50 )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret04, 2, 1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05, 2, 1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06, 2, 1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:						GTG Zephyrus
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret02, 2, 1.0
+	; $Default PBanks:        ( "Standard Flak" "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret03, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret04, 2, 1.0
+	; $Default PBanks:        ( "Subach HL-7" "Subach HL-7")
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret05, 2, 1.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+
+;; ================================================================================================ ;;
+$Name:						GTA Charybdis
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret02, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret03, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret04, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret05, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret06, 2, 1.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+	
+;; ================================================================================================ ;;
+$Name:							GTD Orion
+	+nocreate ;:
+$Subsystem:                     Turret01a, 1.875, 3.0
+	; $Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret02a, 1.875, 3.0
+	; $Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "reset when idle" "use multiple guns" "check hull" )
+$Subsystem:                     Turret03a, 1.875, 3.0
+	; $Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "reset when idle" "use multiple guns" "check hull" )
+$Subsystem:                     Turret04a, 1.875, 3.0
+	; $Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "reset when idle" "use multiple guns" "check hull" )
+$Subsystem:                     Turret05a, 1.875, 3.0
+	; $Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "reset when idle" "use multiple guns" "check hull" )
+$Subsystem:                     Turret06, 0.625, 2.0
+	; $Default PBanks:        ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret07, 0.625, 2.0
+	; $Default PBanks:        ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret08, 0.625, 2.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret09, 0.625, 2.0
+	; $Default PBanks:        ( "Bgreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret10, 0.625, 2.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret11, 0.625, 2.0
+	; $Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret12, 0.625, 2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret13, 0.625, 2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret14, 0.625, 2.0
+	; $Default PBanks:        ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret15, 0.625, 2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret16, 0.625, 2.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GTD Hecate
+	+nocreate ;:
+$Subsystem: 	turret01, 			1.875, 3.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret02, 			1.875, 3.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret03, 			1.875, 3.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret04, 			1.875, 3.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret05, 			1.875, 3.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret06, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret07, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret08, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem: 	turret09, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret10, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret11, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret12, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret13, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret14, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret15, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret16, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret17, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret18, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret19, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret20, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret21, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret22, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret23, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret24, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret25, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret26, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem: 	turret27, 			0.625, 2.0
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     sensors,  5, 0.0
+	$AWACS:			1.0	4000.0
+	
+;; Orion#2
+;; GTD Hades
+;; ================================================================================================ ;;
+$Name:                          GTI Arcadia
+	+nocreate ;:
+$Subsystem:                     Turret01,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret02,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret03,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret04,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret05,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret06,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret07,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret08,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret09,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret10,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret11,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret12,               1,2.0
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret13,               1,3.0
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret14,               1,3.0
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret15,               1,3.0
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret16,               1,3.0
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret17,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret18,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret19,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret20,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret21,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret22,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret23,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     Turret24,               1,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
 $Name:                          GTVA Colossus
 	+nocreate ;:
 
@@ -402,426 +1326,1162 @@ $Name:                          GTVA Colossus
 
 $Subsystem:                     Turret01a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:					( "use multiple guns" "check hull" )
 $Subsystem:                     Turret02a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:					( "use multiple guns" "check hull" )
 $Subsystem:                     Turret03a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret04a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret05a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret06a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret07a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret08a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret09a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 $Subsystem:                     Turret10a, 1.0, 3.0
 	$Default PBanks:        ( "Mass Driver" "Mass Driver" )
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:					("use multiple guns")
+	$Flags:				( "use multiple guns" "check hull" )
 
 ;Flak type turrets
 
 $Subsystem:                     Turret11, 1.0, 3.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret12, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret13, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret14, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret15, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret16, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret17, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret18, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret19, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret20, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret21, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret22, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret23, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret24, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret25, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret26, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret27, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret28, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret29, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret30, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 
-;Small flat turrets (suitable for anti-fighter beams or missiles)
+; Small flat turrets (suitable for anti-fighter beams or missiles)
 
 $Subsystem:                     Turret31, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret32, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret33, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret34, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret35, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret36, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret37, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret38, 0.3, 2.0
 	$Default PBanks:        ( "Piranha" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret39, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret40, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret41, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret42, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret43, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret44, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret45, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret46, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret47, 0.3, 2.0
 	$Default PBanks:        ( "Piranha" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret48, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret49, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret50, 0.3, 2.0
 	$Default PBanks:        ( "Tornado" )
-	$Flags:					("check hull")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 
 ;Beam Turrets
 
 $Subsystem:                     Turret51, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret52, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret53, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret54, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret55, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret56, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret57, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret58, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret59, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret60, 0.3, 2.0
 	$Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret61, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret62, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 $Subsystem:                     Turret63, 0.3, 2.0
 	$Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 	
-	
-	
-$Name:                          GTD Hecate
+;; ================================================================================================ ;;
+$Name:                          GTCv Deimos
 	+nocreate ;:
-$Flags:						( "capital" "big damage" "in tech database" "awacs" )
-$Subsystem: 	turret01, 			1.875, 3.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret02, 			1.875, 3.0
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret03, 			1.875, 3.0
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret04, 			1.875, 3.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret05, 			1.875, 3.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret06, 			0.625, 2.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret07, 			0.625, 2.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret08, 			0.625, 2.0
-	$ROF:
-		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-$Subsystem: 	turret09, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret10, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret11, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret12, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret13, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret14, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret15, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret16, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret17, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret18, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret19, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret20, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret21, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret22, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret23, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret24, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret25, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret26, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem: 	turret27, 			0.625, 2.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     navigation,  5, 0.0
-	$AWACS:			1.0 3000.0
+$Subsystem:                     turret01,0.833,1.0
+    ; $Default PBanks:                                ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret02,0.833,1.0
+    ; $Default PBanks:                                ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret03,0.833,1.0
+    ; $Default PBanks:                                ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret04,0.833,1.0
+    ; $Default PBanks:                                ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret05,0.833,1.0
+    ; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret06,0.833,1.0
+    ; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret07,0.833,1.0
+	; $Default PBanks:                                ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret08,0.833,1.0
+	; $Default PBanks:                                ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret09,0.833,1.0
+	; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret10,0.833,1.0
+	; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret11,0.833,1.0
+	; $Default PBanks:                                ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret12,0.833,1.0
+	; $Default PBanks:                                ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret13,0.833,1.0
+	; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret14,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret15,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret16,0.833,1.0
+	; $Default PBanks:                                ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret17,0.833,1.0
+	; $Default PBanks:                                ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret18,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret19,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret20,0.833,1.0
+	; $Default PBanks:                                ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret21,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret22,0.833,1.0
+	; $Default PBanks:                                ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret23,0.833,1.0
+	; $Default PBanks:                                ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret24,0.833,1.0
+	; $Default PBanks:                                ( "TerSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret25,0.833,1.0
+	; $Default SBanks:                                ( "Piranha" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret26,0.833,1.0
+    ; $Default SBanks:                                ( "Piranha" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 
-	
-$Name:							GTD Orion
+;; ================================================================================================ ;;
+$Name:                          GTC Aeolus
 	+nocreate ;:
-$Subsystem:                     Turret02a, 1.875, 3.0
-	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
-	$Flags:					("reset when idle" "use multiple guns")
-$Subsystem:                     Turret03a, 1.875, 3.0
-	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
-	$Flags:					("reset when idle" "use multiple guns")
-$Subsystem:                     Turret04a, 1.875, 3.0
-	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
-	$Flags:					("reset when idle" "use multiple guns")
-$Subsystem:                     Turret05a, 1.875, 3.0
-	$Default PBanks:        ( "Terran Huge Turret" "Terran Huge Turret" "Terran Huge Turret" )
-	$Flags:					("reset when idle" "use multiple guns")
-	
+$Subsystem:                     turret01,2.0,1.0
+	; $Default PBanks:				( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret02,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret03,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret04,2.0,1.0
+	; $Default PBanks:				( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "reset when idle" )
+$Subsystem:                     turret05,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret06,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret07,2.0,1.0
+	; $Default PBanks:				( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret08,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret09,2.0,1.0
+	; $Default PBanks:				( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret10,2.0,1.0
+	; $Default PBanks:				( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret11,2.0,1.0
+	; $Default PBanks:				( "SGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret12,2.0,1.0
+	; $Default PBanks:				( "SGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
 $Name:						NTF Iceni
 	+nocreate ;:
 $Subsystem:                     turret01a,0.833,1.0
 	$Default PBanks:        ( "Mass Driver" ) ; 2 barrels/terran huge turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-; $Subsystem:                     turret02,0.833,1.0
-;	$Default PBanks:        ( "BGreen" )
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                     turret02,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret03,0.833,1.0
 	$Default PBanks:        ( "Wraith" ) ; terran huge turret
 $Subsystem:                     turret04,0.833,1.0
 	$Default PBanks:        ( "Wraith" ) ; terran huge turret
 $Subsystem:                     turret05,0.833,1.0
 	$Default PBanks:        ( "Wraith" ) ; terran huge turret
-; $Subsystem:                     turret06,0.833,1.0
-;	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret06,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret07,0.833,1.0
 	$Default PBanks:        ( "Wraith" ) ; terran huge turret
-; $Subsystem:                     turret08,0.833,1.0
-;	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     turret08,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret09,0.833,1.0
 	$Default PBanks:        ( "Wraith" ) ; terran huge turret
-; $Subsystem:                     turret10,0.833,1.0
-;	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret10,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret11a,0.833,1.0
 	$Default PBanks:        ( "Mass Driver" ) ; 2 barrels/terran huge turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-; $Subsystem:                     turret12,0.833,1.0
-;	$Default PBanks:        ( "BGreen" )
-; $Subsystem:                     turret13,0.833,1.0
-;	$Default PBanks:        ( "Terran Turret" )
-; $Subsystem:                     turret14,0.833,1.0
-;	$Default PBanks:        ( "Terran Turret" )
-; $Subsystem:                     turret15,0.833,1.0
-;	$Default PBanks:        ( "Terran Turret" )
-; $Subsystem:                     turret16,0.833,1.0
-;	$Default SBanks:        ( "Piranha" )
-; $Subsystem:                     turret17,0.833,1.0
-;	$Default PBanks:        ( "Terran Turret" )
-; $Subsystem:                     turret18,0.833,1.0
-;	$Default SBanks:        ( "MX-52" )
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                     turret12,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret13,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret14,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret15,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret16,0.833,1.0
+	; $Default SBanks:        ( "Piranha" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret17,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret18,0.833,1.0
+	; $Default SBanks:        ( "MX-52" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret19,0.833,1.0
 	$Default PBanks:        ( "Standard Flak" ) ; 2 barrels/terran turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
+	$Flags:		 				( "check hull" "reset when idle" )
 ; $Subsystem:                     turret20,0.833,1.0
 ;	$Default SBanks:        ( "Piranha" )
 $Subsystem:                     turret21a,0.833,1.0
 	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
+	$Flags:		 				( "check hull" "reset when idle" )
 $Subsystem:                     turret22a,0.833,1.0
 	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
+	$Flags:		 				( "check hull" "reset when idle" )
 $Subsystem:                     turret23a,0.833,1.0
 	$Default PBanks:        ( "Heavy Flak" ) ; 3 barrels/terran turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
+	$Flags:		 				( "check hull" "reset when idle" )
 $Subsystem:                     turret24a,0.833,1.0
 	$Default PBanks:        ( "Standard Flak" ) ; 2 barrels/terran turret
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
+	$Flags:		 				( "check hull" "reset when idle" )
 $Subsystem:                     turret25a,0.833,1.0
 	$Default SBanks:        ( "Cyclops" ) ; 2 barrels/MX-52
+	$Max Turrets per Bomb:		1
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "check hull" "reset when idle" )
-	
-$Name:                          @GTC Fenris
+	$Flags:		 				( "check hull" "reset when idle" )
+
+;; ================================================================================================ ;;
+$Name:                          NTF Boadicea
 	+nocreate ;:
-$Subsystem:                     turret01, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret03, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret04, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret05, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret06, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret07, 2, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret08, 2, 5.0
-	$Flags:			 			( "check hull" )
-	
-$Name:                  GTC Leviathan
+; $Subsystem:                     turret01,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret02,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+; $Subsystem:                     turret03,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret04,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret05,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret06,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+; $Subsystem:                     turret07,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret08,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+; $Subsystem:                     turret09,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret10,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+; $Subsystem:                     turret11,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+; $Subsystem:                     turret12,0.833,1.0
+	; $Default PBanks:        ( "BGreen" )
+; $Subsystem:                     turret13,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret14,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret15,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret16,0.833,1.0
+	; $Default SBanks:        ( "Piranha" )
+; $Subsystem:                     turret17,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret18,0.833,1.0
+	; $Default SBanks:        ( "MX-52" )
+; $Subsystem:                     turret19,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret20,0.833,1.0
+	; $Default SBanks:        ( "Piranha" )
+; $Subsystem:                     turret21a,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret22a,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret23a,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret24a,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret25a,0.833,1.0
+	; $Default SBanks:        ( "MX-52" )
+; $Subsystem:                     turret26a,0.833,1.0
+	; $Default SBanks:        ( "MX-52" )
+; $Subsystem:                     turret27a,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret28,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret29,0.833,1.0
+	; $Default SBanks:        ( "Piranha" )
+; $Subsystem:                     turret30,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret31,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret32,0.833,1.0
+	; $Default SBanks:        ( "Piranha" )
+; $Subsystem:                     turret33,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret34,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret35,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret36,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret37,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret38,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret39,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+; $Subsystem:                     turret40,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+
+
+;; ================================================================================================ ;;
+$Name:                          @GTT Elysium
 	+nocreate ;:
-$Subsystem:                     turret01, 1, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret03, .5, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret04, .5, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret05, .5, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret06, .5, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret07, 1, 5.0
-	$Flags:			 			( "check hull" )
-$Subsystem:                     turret08, 1, 5.0
-	$Flags:			 			( "check hull" )
+$Subsystem:                     turret01,                5, 20.0
+	; $Default PBanks:        ( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                  @GTT Argo
+	+nocreate ;:
+$Subsystem:                     turret01,               5, 20.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret02,               5, 20.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
 	
-$Name:						GTA Charybdis
+;; ------------------------------------------------------------------------- ;;	
+;; Vasudan ships
+;; ------------------------------------------------------------------------- ;;
+
+$Name:                          GVT Isis
+	+nocreate ;:
+$Subsystem:                     turret01,1,1.0
+	; $Default PBanks:        ( "Mekhu HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret02,1,1.0
+	; $Default PBanks:        ( "Mekhu HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          @PVFR Ma'at
+	+nocreate ;:
+$Subsystem:                     turret01,       3,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret02,       3,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret03,                3,1.0
+	; $Default PBanks:        ( "Mekhu HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GVFr Bes
+	+nocreate ;:
+$Subsystem:                     turret01,       3,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret02,       3,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GVFr Satis
+	+nocreate ;:
+$Subsystem:                     Turret01-main,3,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     Turret02,3,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     Turret03,3,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     Turret04,3,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     Turret05,3,2.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GVG Anuket
 	+nocreate ;:
 $Subsystem:                     turret01, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
+	; $Default PBanks:				( "Terran Turret Weak" "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "use multiple guns" )
 $Subsystem:                     turret02, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
+	; $Default PBanks:				( "Standard Flak" "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "use multiple guns" )
 $Subsystem:                     turret03, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
+	; $Default PBanks:				( "Terran Turret Weak" "Akheton SDG" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "use multiple guns" )
 $Subsystem:                     turret04, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
+	; $Default PBanks:				( "Subach HL-7" "Terran Turret Weak")
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" "use multiple guns" )
 $Subsystem:                     turret05, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
-$Subsystem:                     turret06, 2, 1.0
-	$Flags:			 			( "check hull" "use multiple guns" )
-	
+	; $Default PBanks:				( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                          GVC Aten
+	+nocreate ;:
+$Subsystem:                     turret01a,0.833,1.0
+	; $Default PBanks:				( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret02a,0.833,1.0
+	; $Default PBanks:				( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret03,0.833,1.0
+	; $Default PBanks:				( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret04,0.833,1.0
+	; $Default PBanks:				( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret05,0.833,1.0
+	; $Default PBanks:				( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+$Subsystem:                     turret06,0.833,1.0
+	; $Default PBanks:				( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:				( "check hull" )
+
+
+;; ================================================================================================ ;;
+$Name:							GVC Mentu
+	+nocreate ;:
+$Subsystem:                     turret01,0.833,1.0
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02,0.833,1.0
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03,0.833,1.0
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04,0.833,1.0
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05,0.833,1.0
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06,0.833,1.0
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret07,0.833,1.0
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret08,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret09,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret10,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret11,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret12,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret13,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret14,0.833,1.0
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret15,0.833,1.0
+	; $Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret16,0.833,1.0
+	; $Default PBanks:			( "Subach HL-7" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                  GVCv Sobek
+	+nocreate ;:
+$Subsystem:                     turret01,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05,0.833,1.0
+	; $Default PBanks:        ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06,0.833,1.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret07,0.833,1.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret08,0.833,1.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret09,0.833,1.0
+	; $Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret10,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret11,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret12,0.833,1.0
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret13,0.833,1.0
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret14,0.833,1.0
+	; $Default PBanks:        ( "VSlash" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret15,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret16,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret17,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret18,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret19,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret20,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret21,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret22,0.833,1.0
+	; $Default PBanks:        ( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; ================================================================================================ ;;
+$Name:                  GVD Typhon
+	+nocreate ;:
+$Subsystem:                     turret01,0.125,0.5
+	; $Default PBanks:        ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret02,0.125,0.5
+	; $Default PBanks:        ( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret03,0.125,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret04,0.125,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret05,0.125,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret06,0.125,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret07,0.125,0.5
+	$Default SBanks:        ( "Vasudan Flux Cannon" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+	;should be VasudanFlux
+$Subsystem:                     turret08,0.125,0.5
+	$Default SBanks:        ( "Vasudan Flux Cannon" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+	;should be VasudanFlux
+$Subsystem:                     turret09,0.125,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret10,0.375,0.5
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret11,0.375,0.5
+	; $Default PBanks:        ( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret12,0.375,0.5
+	; $Default PBanks:        ( "BVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret13,0.375,0.5
+	; $Default SBanks:        ( "FighterKiller" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret14,0.375,0.5
+	; $Default PBanks:        ( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                     turret15,0.375,0.5
+	; $Default PBanks:        ( "BVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+
+;; ================================================================================================ ;;
+$Name:                  GVA Setekh
+	+nocreate ;:
+$Subsystem:                     turret01, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret02, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Terran Turret Weak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+$Subsystem:                     turret03, 2, 1.0
+	; $Default PBanks:        ( "Terran Turret Weak" "Akheton SDG" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "use multiple guns" )
+
+;; ================================================================================================ ;;
+$Name:						GVD Hatshepsut
+	+nocreate ;:
+$Subsystem:                 turret01,0.125,0.5
+	; $Default PBanks:			( "SVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret02,0.125,0.5
+	; $Default PBanks:			( "BVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret03,0.125,0.5
+	; $Default PBanks:			( "BVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret04,0.125,0.5
+	; $Default PBanks:			( "BVas" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret05,0.125,0.5
+	; $Default SBanks:			( "Fusion Mortar" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret06,0.125,0.5
+	; $Default SBanks:			( "Fusion Mortar" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret07,0.125,0.5
+	; $Default SBanks:			( "Fusion Mortar" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret08,0.125,0.5
+	; $Default SBanks:			( "Fusion Mortar" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret09,0.125,0.5
+	; $Default SBanks:			( "Fusion Mortar" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret10,0.125,0.5
+	; $Default SBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+ $Subsystem:                turret11,0.125,0.5
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret12,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret13,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret14,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret15,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret16,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret17,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret18,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret19,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret20,0.125,0.5
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret21,0.125,0.5
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret22,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret23,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret24,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret25,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret26,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret27,0.125,0.5
+	; $Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+$Subsystem:                 turret28,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret29,0.125,0.5
+	; $Default PBanks:			( "Terran Huge Turret" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Use firingpoints ;:
+	$Flags:		 				( "check hull" "reset when idle" )
+$Subsystem:                 turret30,0.125,0.5
+	; $Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
+
+;; -------------------------------------------------------------- ;;
+;; New Ships
+;; -------------------------------------------------------------- ;;
+
 $Name:                          GVC Mentu Enforcer
 $Short name:					HTL-Mentu-b.pof
 $Species:                       Vasudan
@@ -870,38 +2530,72 @@ $Closeup_zoom:					0.75
 $Score:							100
 $Subsystem:                     turret01,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret02,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret03,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret04,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret05,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret06,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret07,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret08,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret09,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret10,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret11,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret12,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret13,0.833,1.0
 	$Default PBanks:			( "Terran Turret" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret14,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret15,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret16,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     turret17,0.833,1.0
 	$Default PBanks:			( "MVasUp" )
+	$Max Turrets per Bomb:		1
+	$Flags:		 				( "check hull" )
 $Subsystem:                     engine,    15, 0.0
 	$Engine Wash:	Default150
 $Subsystem:                     communications,  5,0.0
@@ -909,6 +2603,7 @@ $Subsystem:                     sensors,                                 5,0.0
 $Subsystem:                     navigation,                      5,0.0
 $Subsystem:                     weapons,                                 5,0.0
 
+;; ================================================================================================ ;;
 $Name:                          GVC Hemsut
 $Short name:					VTorpCruiser
 $Species:                       Vasudan
@@ -954,16 +2649,22 @@ $Closeup_zoom:					0.5
 $Score:							75
 $Subsystem:                     turret01, 10, 2.0
 	$Default SBanks:			( "Vasudan Torpedo" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret02, 10, 2.0
 	$Default SBanks:			( "Vasudan Torpedo" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret03, 5, 1.2
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret04, 5, 2.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret05, 5, 2.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret06, 5, 2.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     sensors,                         7, 0
 $Subsystem:                     communication,  7, 0.0
 $Subsystem:                     navigation,              7, 0.0
