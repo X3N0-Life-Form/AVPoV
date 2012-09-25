@@ -1,0 +1,16 @@
+FROM: Rear Admiral Rosenberg, GTD Artemis, 4th Fleet, Delta Serpentis
+TO: 3rd Fleet Terran Command
+OBJECT: Problems in Gamma Draconis
+MESSAGE BEGINS
+What the hell is going on out there? We've diverted vital assets to Gamma Draconis to assist with containment operations, but I keep getting reports about destroyed or damaged ships due to a single destroyer. Now that the Colossus has been deployed, it is only a matter of time before Bosch makes his move. When that happens, if Gamma Draconis is not fully under our control, the Iceni will either escape, or be destroyed by the Shivans. Special Operations Command reports that the exact nature of Bosch's ETAK project is still unknown. What we do know is that he intends to test it in the Nebula, which he won't be able to do if he gets jumped by the Shivans as soon as he reaches Gamma Draconis.
+
+In any case, we are sending a series of Combat Groups to back up our forces in Gamma Draconis, namely:
+    -The Hammer CG (3 Aeolus-class cruisers)
+    -The Blade CG (2 Sobek-class corvettes)
+    -The Spear CG (2 Deimos-class corvettes)
+    -The Javelin CG (3 Mentu-class corvettes, Enforcer variant)
+    -The 
+
+The Hammer and Blade groups will be deployed within a day, followed by Spear and Javelin next week, and the week after that.
+
+MESSAGE ENDS
