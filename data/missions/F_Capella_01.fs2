@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 09/28/12 at 19:35:57
+$Modified: 09/28/12 at 20:01:46
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2137.419922, -784.601013, 7343.109863
++Viewer pos: -1444.197876, 2757.254150, 8357.957031
 +Viewer orient:
-	0.077080, -0.000000, -0.997025,
-	-0.222657, 0.974745, -0.017214,
-	0.971845, 0.223321, 0.075133
+	-0.015657, -0.000002, -0.999877,
+	0.985570, 0.168563, -0.015433,
+	0.168543, -0.985691, -0.002638
 
 
 $AI Profile: myProfile
@@ -616,7 +616,7 @@ $Determination: 10
 $Name: Aquarius 1		;! Object #14
 $Class: SB Nephilim
 $Team: Hostile
-$Location: -687.902466, 0.000017, 5292.648926
+$Location: -687.902466, -204.879913, 5292.648926
 $Orientation:
 	0.424596, -0.863210, -0.273108,
 	-0.725994, -0.504846, 0.466972,
@@ -644,7 +644,7 @@ $Determination: 10
 $Name: Aquarius 2		;! Object #15
 $Class: SB Nephilim
 $Team: Hostile
-$Location: -799.053345, 118.132217, 5247.579590
+$Location: -799.053345, -86.747696, 5247.579590
 $Orientation:
 	0.424596, -0.863210, -0.273107,
 	-0.725994, -0.504846, 0.466972,
@@ -672,7 +672,7 @@ $Determination: 10
 $Name: Aquarius 3		;! Object #16
 $Class: SB Nephilim
 $Team: Hostile
-$Location: -755.221985, -77.454750, 5104.257324
+$Location: -755.221985, -282.334747, 5104.257324
 $Orientation:
 	0.424596, -0.863210, -0.273107,
 	-0.725994, -0.504846, 0.466972,
@@ -700,7 +700,7 @@ $Determination: 10
 $Name: Aquarius 4		;! Object #17
 $Class: SB Nephilim
 $Team: Hostile
-$Location: -740.715881, 104.286301, 5323.297363
+$Location: -740.715881, -100.593613, 5323.297363
 $Orientation:
 	0.424596, -0.863210, -0.273107,
 	-0.725994, -0.504846, 0.466972,
@@ -728,7 +728,7 @@ $Determination: 10
 $Name: Virgo 1		;! Object #18
 $Class: SF Mara
 $Team: Hostile
-$Location: -465.458954, 0.000103, 5295.778809
+$Location: -465.458954, -204.879837, 5295.778809
 $Orientation:
 	-0.446030, -0.824886, 0.347306,
 	-0.650847, 0.565299, 0.506789,
@@ -754,7 +754,7 @@ $Determination: 10
 $Name: Virgo 2		;! Object #19
 $Class: SF Mara
 $Team: Hostile
-$Location: -517.474365, 10.238466, 5217.557617
+$Location: -517.474365, -194.641464, 5217.557617
 $Orientation:
 	-0.446030, -0.824886, 0.347306,
 	-0.650847, 0.565300, 0.506789,
@@ -780,7 +780,7 @@ $Determination: 10
 $Name: Virgo 3		;! Object #20
 $Class: SF Mara
 $Team: Hostile
-$Location: -517.347412, -98.898918, 5339.463379
+$Location: -517.347412, -303.778900, 5339.463379
 $Orientation:
 	-0.446030, -0.824886, 0.347306,
 	-0.650847, 0.565300, 0.506789,
@@ -3474,6 +3474,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 15
++Hotkey: 2
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -4234,6 +4235,7 @@ $Ships: (		;! 4 total
 	"Taurus 4"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) ( ai-guard "Susl'Arh Morc" 49 ) ( ai-chase-any 48 ) )
++Hotkey: 7
 +Flags: ( )
 
 $Name: Libra
@@ -4334,6 +4336,7 @@ $Ships: (		;! 5 total
 	"Gemini 5"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) ( ai-chase-any 48 ) )
++Hotkey: 6
 +Flags: ( )
 
 $Name: Leo
@@ -4391,6 +4394,7 @@ $Ships: (		;! 2 total
 	"Vor 1"
 	"Vor 2"
 )
++Hotkey: 5
 +Flags: ( )
 
 $Name: Barracuda Alpha
@@ -4506,6 +4510,7 @@ $Ships: (		;! 4 total
 	"Imp 4"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) ( ai-guard "Susl'Arh Morc" 48 ) )
++Hotkey: 4
 +Flags: ( )
 
 $Name: Devil
@@ -4526,6 +4531,7 @@ $Ships: (		;! 4 total
 	"Devil 4"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) ( ai-guard "Susl'Arh Morc" 48 ) )
++Hotkey: 4
 +Flags: ( )
 
 $Name: Durga
@@ -4553,6 +4559,7 @@ $Ships: (		;! 6 total
 	"Durga 6"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) ( ai-guard "Susl'Arh Morc" 48 ) )
++Hotkey: 3
 +Flags: ( )
 
 $Name: Arjuna
@@ -4613,6 +4620,7 @@ $Ships: (		;! 6 total
 	"Indra 6"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) )
++Hotkey: 1
 +Flags: ( )
 
 $Name: Krishna
@@ -4633,6 +4641,7 @@ $Ships: (		;! 6 total
 	"Krishna 6"
 )
 $AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) )
++Hotkey: 1
 +Flags: ( )
 
 $Name: Bheema
@@ -4653,7 +4662,17 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 11 total
+#Events		;! 30 total
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: Blade 1 destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: Blade 2 destroyed
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( true ) 
@@ -4708,6 +4727,28 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Aries" 
+      "Cancer" 
+   )
+   ( do-nothing ) 
+)
++Name: Destroy escort wings
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy escort wings", -1)
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Fox" ) 
+   ( do-nothing ) 
+)
++Name: Defend the Fox
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Defend the Fox", -1)
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Blade" ) 
    ( do-nothing ) 
 )
@@ -4737,11 +4778,13 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( set-object-facing-object 
+   ( ship-rot-maneuver 
       "Blade 1" 
-      "Susl'Arh Morc" 
-      2000 
-      1 
+      1000 
+      -100 
+      0 
+      0 
+      ( true ) 
    )
 )
 +Name: Blade 1 maneuver
@@ -4749,15 +4792,23 @@ $Formula: ( when
 +Interval: 1
 +Chained: 2
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
-+Name: Blade 1 destroyed
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Taurus" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Taurus
 +Repeat Count: 1
 +Interval: 1
++Objective:  XSTR("Destroy Taurus (F12)", -1)
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
-+Name: Blade 2 destroyed
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Libra" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Libra
 +Repeat Count: 1
 +Interval: 1
++Objective:  XSTR("Destroy Libra", -1)
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Gemini" ) 
@@ -4766,6 +4817,33 @@ $Formula: ( when
 +Name: 85 percent
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gemini" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Gemini
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Gemini (F11)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Saggitarius" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Saggitarius
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Saggitarius", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Leo" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Leo
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Leo", -1)
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Vor" ) 
@@ -4787,6 +4865,33 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-destroyed-delay 0 "Vor" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Vor
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Vor (F10)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Pandemonium" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Pandemonium
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Pandemonium", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Oblivion" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Oblivion
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Oblivion", -1)
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Skeksis" ) 
    ( do-nothing ) 
 )
@@ -4795,12 +4900,77 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-destroyed-delay 0 "Skeksis" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Skeksis
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Skeksis", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Imp" "Devil" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Nahema Bombers
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Nahema Bombers (F9)", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Durga" ) 
+   ( do-nothing ) 
+)
++Name: Second wave
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Durga" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Durga
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Durga (F8)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Arjuna" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Arjuna
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Arjuna", -1)
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Ragnarok" ) 
    ( do-nothing ) 
 )
 +Name: 38 percent
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Ragnarok" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Ragnarok
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Ragnarok (F7)", -1)
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Desperation" 
+   )
+   ( do-nothing ) 
+)
++Name: Destroy Desperation
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Desperation", -1)
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Bheema" ) 
@@ -4951,7 +5121,29 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-#Goals		;! 3 total
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Indra" 
+      "Krishna" 
+   )
+   ( do-nothing ) 
+)
++Name: Destroy Bombers
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Bombers (F6)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Bheema" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Bheema
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Bheema", -1)
+
+#Goals		;! 2 total
 
 $Type: Primary
 +Name: Destroy Susl'Arh Morc
@@ -4961,13 +5153,6 @@ $Formula: ( is-destroyed-delay
    0 
    "Susl'Arh Morc" 
 )
-
-$Type: Secondary
-+Name: Defend Fox
-$MessageNew:  XSTR("Protect the GTA Fox", -1)
-$end_multi_text
-$Formula: ( has-departed-delay 0 "Fox" ) 
-+Score: 20
 
 $Type: Bonus
 +Name: Destroy Ragnarok
