@@ -5,7 +5,7 @@ $SSM:
 	+WarpTime:		6
 	+Radius:		1200
 	+Offset:		1
-	+Custom Message:"Inbound Shivan SSM Strike"
+	+Custom Message:*Inbound Shivan SSM Strike*
 
 $SSM:
 	+Weapon:		AntiFighterSSM
@@ -14,7 +14,7 @@ $SSM:
 	+WarpTime:		4
 	+Radius:		400
 	+Offset:		1
-	+Custom Message:"Inbound Anti-Strikecraft SSMs"
+	+Custom Message:*Inbound Anti-Strikecraft SSMs*
 
 $SSM:
 	+Weapon:		Shivan Subspace Missile
@@ -23,7 +23,7 @@ $SSM:
 	+WarpTime:		8
 	+Radius:		1600
 	+Offset:		1
-	+Custom Message:"Inbound Shivan SSM Barrage"
+	+Custom Message:*Inbound Shivan SSM Barrage*
 	
 $SSM:
 	+Weapon:		Shivan Mordiggian Bomb
@@ -32,7 +32,7 @@ $SSM:
 	+WarpTime:		8
 	+Radius:		1600
 	+Offset:		1
-	+Custom Message:"Inbound Mordiggian Bomb"
+	+Custom Message:*Inbound Mordiggian Bomb*
 
 ; $SSM:
 ;    +Weapon:		Bane

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 09/28/12 at 20:01:46
+$Modified: 09/28/12 at 20:35:26
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,8 +30,8 @@ $end_multi_text
 
 +Viewer pos: -1444.197876, 2757.254150, 8357.957031
 +Viewer orient:
-	-0.015657, -0.000002, -0.999877,
-	0.985570, 0.168563, -0.015433,
+	-0.015684, -0.000006, -0.999877,
+	0.985570, 0.168564, -0.015461,
 	0.168543, -0.985691, -0.002638
 
 
@@ -4662,7 +4662,85 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 30 total
+#Events		;! 39 total
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 1" ) 65 ) 
+   ( set-armor-type 
+      "Blade 1" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 1 < 65%
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 2" ) 65 ) 
+   ( set-armor-type 
+      "Blade 2" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 2 < 65%
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 1" ) 45 ) 
+   ( set-armor-type 
+      "Blade 1" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 1 < 45%
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 2" ) 45 ) 
+   ( set-armor-type 
+      "Blade 2" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 2 < 45%
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 1" ) 25 ) 
+   ( set-armor-type 
+      "Blade 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 1 < 25%
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Blade 2" ) 25 ) 
+   ( set-armor-type 
+      "Blade 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+)
++Name: Blade 2 < 25%
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when ( true ) ( do-nothing ) ) 
 +Name: Blade 1 destroyed
@@ -4727,6 +4805,49 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( has-arrived-delay 6 "Fox" ) 
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+)
++Name: subspace strike vs Fox
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( is-destroyed-delay 
       0 
       "Aries" 
@@ -4747,6 +4868,49 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Defend the Fox", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 22 "Fox" ) 
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+)
++Name: 2nd ssm vs Fox
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Blade" ) 
@@ -4778,6 +4942,50 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "Fox" ) 
+      ( get-object-y "Fox" ) 
+      ( - ( get-object-z "Fox" ) 50 ) 
+      ( get-object-pitch "Fox" ) 
+      ( get-object-bank "Fox" ) 
+      ( get-object-heading "Fox" ) 
+      "Fox" 
+      "engine01" 
+   )
+)
++Name: 3rd ssm vs fox
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
    ( ship-rot-maneuver 
       "Blade 1" 
       1000 
@@ -4790,7 +4998,7 @@ $Formula: ( when
 +Name: Blade 1 maneuver
 +Repeat Count: 1
 +Interval: 1
-+Chained: 2
++Chained: 4
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Taurus" ) 
@@ -4961,10 +5169,7 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Ragnarok (F7)", -1)
 
 $Formula: ( when 
-   ( destroyed-or-departed-delay 
-      0 
-      "Desperation" 
-   )
+   ( is-destroyed-delay 0 "Desperation" ) 
    ( do-nothing ) 
 )
 +Name: Destroy Desperation
