@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 09/28/12 at 20:35:26
+$Modified: 09/28/12 at 22:38:29
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1444.197876, 2757.254150, 8357.957031
++Viewer pos: -2930.180664, 270.348877, 7095.421875
 +Viewer orient:
-	-0.015684, -0.000006, -0.999877,
-	0.985570, 0.168564, -0.015461,
-	0.168543, -0.985691, -0.002638
+	0.082980, -0.000008, 0.996551,
+	-0.442642, 0.895940, 0.036864,
+	-0.892851, -0.444174, 0.074342
 
 
 $AI Profile: myProfile
@@ -162,7 +162,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	500
 )
 
-#Objects		;! 131 total
+#Objects		;! 136 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Seth
@@ -851,7 +851,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 13
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 400
@@ -904,7 +904,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 12
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 400
@@ -1433,7 +1433,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Hell Spitter" )
 +Secondary Banks: ( "Cyclops" "Piranha" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1461,7 +1461,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Hell Spitter" )
 +Secondary Banks: ( "Cyclops" "Piranha" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1489,7 +1489,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Hell Spitter" )
 +Secondary Banks: ( "Cyclops" "Piranha" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1517,7 +1517,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Hell Spitter" )
 +Secondary Banks: ( "Cyclops" "Piranha" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -4056,7 +4056,148 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-#Wings		;! 30 total
+$Name: Delta 1		;! Object #131
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3495.487793, 228.784653, 7531.154297
+$Orientation:
+	0.016610, -0.988652, 0.149304,
+	0.109315, 0.150225, 0.982590,
+	-0.993868, 0.000000, 0.110570
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Delta 2		;! Object #132
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3433.838379, 235.015152, 7537.060059
+$Orientation:
+	0.016610, -0.988652, 0.149304,
+	0.109315, 0.150225, 0.982590,
+	-0.993868, 0.000000, 0.110570
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Delta 3		;! Object #133
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3466.962402, 154.614288, 7545.667480
+$Orientation:
+	0.016610, -0.988652, 0.149304,
+	0.109315, 0.150225, 0.982590,
+	-0.993868, 0.000000, 0.110570
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Delta 4		;! Object #134
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3460.736572, 315.004395, 7521.838867
+$Orientation:
+	0.016610, -0.988652, 0.149304,
+	0.109315, 0.150225, 0.982590,
+	-0.993868, 0.000000, 0.110570
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: SF Mara# 135		;! Object #135
+$Class: SF Mara#
+$Team: Hostile
+$Location: 4245.944336, 0.000018, 7062.532715
+$Orientation:
+	-0.019202, 0.000000, 0.999816,
+	0.000000, 1.000000, 0.000000,
+	-0.999816, 0.000000, -0.019202
+$AI Behavior: None
+$AI Goals: ( goals ( ai-chase-wing "Blade" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Flak Weapon" )
++Secondary Banks: ( "TAG-C#Barrage" "TAG-C#Barrage" )
+$Arrival Location: Hyperspace
++Arrival Delay: 7
+$Arrival Cue: ( or 
+   ( < ( hits-left "Susl'Arh Morc" ) 10 ) 
+   ( is-disarmed-delay 0 "Susl'Arh Morc" ) 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-destroyed-delay 0 "Blade" ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+#Wings		;! 31 total
 
 $Name: Alpha
 $Waves: 1
@@ -4662,7 +4803,25 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 39 total
+$Name: Delta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Delta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Blade" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Delta 1"
+	"Delta 2"
+	"Delta 3"
+	"Delta 4"
+)
+$AI Goals: ( goals ( ai-guard-wing "Blade" 50 ) ( ai-chase-any 40 ) )
++Flags: ( )
+
+#Events		;! 49 total
 
 $Formula: ( when 
    ( < ( hits-left "Blade 1" ) 65 ) 
@@ -4698,6 +4857,9 @@ $Formula: ( when
       "Shivan Destroyer Armor" 
       "Hull" 
    )
+   ( validate-goal 
+      "Inflict heavy damage" 
+   )
 )
 +Name: Blade 1 < 45%
 +Repeat Count: 1
@@ -4710,6 +4872,9 @@ $Formula: ( when
       ( true ) 
       "Shivan Destroyer Armor" 
       "Hull" 
+   )
+   ( validate-goal 
+      "Inflict heavy damage" 
    )
 )
 +Name: Blade 2 < 45%
@@ -4749,6 +4914,56 @@ $Formula: ( when ( true ) ( do-nothing ) )
 
 $Formula: ( when ( true ) ( do-nothing ) ) 
 +Name: Blade 2 destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Susl'Arh Morc" 
+      "engine" 
+      20 
+   )
+   ( repair-subsystem 
+      "Susl'Arh Morc" 
+      "engine" 
+      10 
+   )
+   ( ship-subsys-guardian-threshold 
+      0 
+      "Susl'Arh Morc" 
+      "engine" 
+   )
+)
++Name: SAM-engine destroyed
++Repeat Count: 10
++Interval: 5
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Susl'Arh Morc" 
+      "weapons" 
+      20 
+   )
+   ( repair-subsystem 
+      "Susl'Arh Morc" 
+      "weapons" 
+      10 
+   )
+   ( ship-subsys-guardian-threshold 
+      0 
+      "Susl'Arh Morc" 
+      "weapons" 
+   )
+)
++Name: SAM-weapons destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-disarmed-delay 0 "Susl'Arh Morc" ) 
+   ( do-nothing ) 
+)
++Name: SAM-all turrets destroyed
 +Repeat Count: 1
 +Interval: 1
 
@@ -4803,6 +5018,16 @@ $Formula: ( when
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( close-sound-from-file ( true ) ) 
+   ( change-soundtrack "B_Vampire" ) 
+)
++Name: set-soundtrack
++Repeat Count: 1
++Interval: 1
++Chained: 177
 
 $Formula: ( when 
    ( has-arrived-delay 6 "Fox" ) 
@@ -4914,7 +5139,67 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Blade" ) 
-   ( do-nothing ) 
+   ( set-object-position 
+      "SAM position path:1" 
+      ( get-object-x "SAM position path:1" ) 
+      ( - 
+         ( get-object-y "SAM position path:1" ) 
+         1500 
+      )
+      ( get-object-z "SAM position path:1" ) 
+   )
+   ( set-armor-type 
+      "Beta 1" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Beta 2" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Beta 3" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Beta 4" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Delta 1" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Delta 2" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Delta 3" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Delta 4" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Shields" 
+   )
 )
 +Name: Blade arrives
 +Repeat Count: 1
@@ -4986,19 +5271,102 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( ship-rot-maneuver 
+   ( add-goal 
       "Blade 1" 
-      1000 
-      -100 
-      0 
-      0 
-      ( true ) 
+      ( ai-waypoints "SAM position path" 89 ) 
    )
+   ( cap-waypoint-speed "Blade 1" 1 ) 
 )
 +Name: Blade 1 maneuver
 +Repeat Count: 1
 +Interval: 1
 +Chained: 4
+
+$Formula: ( when-argument 
+   ( random-of "<any friendly>" ) 
+   ( destroyed-or-departed-delay 
+      32 
+      "Fox" 
+   )
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "<argument>" ) 
+      ( get-object-y "<argument>" ) 
+      ( - ( get-object-z "<argument>" ) 50 ) 
+      ( get-object-pitch "<argument>" ) 
+      ( get-object-bank "<argument>" ) 
+      ( get-object-heading "<argument>" ) 
+      "<argument>" 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Periodic ssm strikes
++Repeat Count: 80
++Interval: 22
+
+$Formula: ( when-argument 
+   ( random-of "<any friendly>" ) 
+   ( true ) 
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "<argument>" ) 
+      ( get-object-y "<argument>" ) 
+      ( - ( get-object-z "<argument>" ) 50 ) 
+      ( get-object-pitch "<argument>" ) 
+      ( get-object-bank "<argument>" ) 
+      ( get-object-heading "<argument>" ) 
+      "<argument>" 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: pssms2
++Repeat Count: -1
++Trigger Count: 80
++Interval: 22
++Chained: 0
+
+$Formula: ( when-argument 
+   ( random-of "<any friendly>" ) 
+   ( true ) 
+   ( weapon-create 
+      "Susl'Arh Morc" 
+      "AntiFighterTAG#Shivan" 
+      ( get-object-x "<argument>" ) 
+      ( get-object-y "<argument>" ) 
+      ( - ( get-object-z "<argument>" ) 50 ) 
+      ( get-object-pitch "<argument>" ) 
+      ( get-object-bank "<argument>" ) 
+      ( get-object-heading "<argument>" ) 
+      "<argument>" 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: pssms3
++Repeat Count: -1
++Trigger Count: 80
++Interval: 22
++Chained: 0
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Susl'Arh Morc" 
+      "turret02-base" 
+      5 
+   )
+   ( ship-rot-maneuver 
+      "Susl'Arh Morc" 
+      24000 
+      0 
+      -100 
+      -100 
+      ( true ) 
+   )
+)
++Name: SAM-turret2 disabled
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Taurus" ) 
@@ -5153,7 +5521,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Ragnarok" ) 
-   ( do-nothing ) 
+   ( validate-goal "Destroy Ragnarok" ) 
 )
 +Name: 38 percent
 +Repeat Count: 1
@@ -5348,7 +5716,32 @@ $Formula: ( when
 +Interval: 1
 +Objective:  XSTR("Destroy Bheema", -1)
 
-#Goals		;! 2 total
+$Formula: ( when 
+   ( < ( hits-left "Susl'Arh Morc" ) 10 ) 
+   ( ship-guardian "Susl'Arh Morc" ) 
+)
++Name: 10 percent
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "SF Mara# 135" ) 
+   ( ship-create 
+      "SF Mara#2" 
+      "SF Mara#" 
+      ( - ( get-object-x "Alpha 1" ) 1500 ) 
+      ( - ( get-object-y "Alpha 1" ) 1500 ) 
+      ( - ( get-object-z "Alpha 1" ) 1500 ) 
+      ( get-object-pitch "Alpha 1" ) 
+      ( get-object-bank "Alpha 1" ) 
+      ( get-object-heading "Alpha 1" ) 
+   )
+)
++Name: mara destroyed
++Repeat Count: 80
++Interval: 30
+
+#Goals		;! 9 total
 
 $Type: Primary
 +Name: Destroy Susl'Arh Morc
@@ -5364,11 +5757,83 @@ $Type: Bonus
 $MessageNew:  XSTR("Destroy the SC Ragnarok", -1)
 $end_multi_text
 $Formula: ( is-destroyed-delay 0 "Ragnarok" ) 
++Invalid
++No music
++Score: 100
+
+$Type: Bonus
++Name: Inflict critical damage
+$MessageNew:  XSTR("Inflict critical damage to the Susl'Arh Morc", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay "20 percent" 0 ) 
 +No music
 +Score: 200
 
-#Waypoints		;! 0 lists total
+$Type: Primary
++Name: Inflict heavy damage
+$MessageNew:  XSTR("Inflict heavy damage to the Susl'Arh Morc", -1)
+$end_multi_text
+$Formula: ( < ( hits-left "Susl'Arh Morc" ) 50 ) 
++Invalid
 
+$Type: Bonus
++Name: Disable SAM
+$MessageNew:  XSTR("Disable the Susl'Arh Morc", -1)
+$end_multi_text
+$Formula: ( is-subsystem-destroyed-delay 
+   "Susl'Arh Morc" 
+   "engine" 
+   0 
+)
++No music
++Score: 100
+
+$Type: Bonus
++Name: SAM weapons destroyed
+$MessageNew:  XSTR("Destroy the Susl'Arh Morc's weapons subsystem", -1)
+$end_multi_text
+$Formula: ( is-subsystem-destroyed-delay 
+   "Susl'Arh Morc" 
+   "weapons" 
+   0 
+)
++No music
++Score: 100
+
+$Type: Bonus
++Name: Disarm SAM
+$MessageNew:  XSTR("Disarm the Susl'Arh Morc", -1)
+$end_multi_text
+$Formula: ( is-disarmed-delay 0 "Susl'Arh Morc" ) 
++No music
++Score: 200
+
+$Type: Bonus
++Name: Cripple SAM
+$MessageNew:  XSTR("Leave the Susl'Arh Morc crippled", -1)
+$end_multi_text
+$Formula: ( < ( hits-left "Susl'Arh Morc" ) 10 ) 
++Score: 500
+
+$Type: Bonus
++Name: Do the impossible
+$MessageNew:  XSTR("Do the impossible", -1)
+$end_multi_text
+$Formula: ( or 
+   ( is-destroyed-delay 
+      0 
+      "Susl'Arh Morc" 
+   )
+   ( is-destroyed-delay 0 "SF Mara# 135" ) 
+)
++Score: 1000
+
+#Waypoints		;! 1 lists total
+
+$Name: SAM position path
+$List: (		;! 1 points in list
+	( -850.000000, -390.000000, 7000.000000 )
+)
 
 #Messages		;! 0 total
 
