@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 07/30/12 at 18:01:12
+$Modified: 10/12/12 at 22:50:04
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3236.658203, 162.640564, 4291.795898
++Viewer pos: 3103.369385, 165.265152, 4970.077148
 +Viewer orient:
-	-0.349156, -0.000003, 0.937065,
-	-0.397445, 0.905598, -0.148087,
-	-0.848603, -0.424137, -0.316196
+	-0.843062, 0.000002, 0.537816,
+	-0.171618, 0.947720, -0.269026,
+	-0.509699, -0.319104, -0.798986
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -182,7 +182,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	1800
 )
 
-#Objects		;! 4 total
+#Objects		;! 6 total
 
 $Name: Alpha 1		;! Object #0
 $Class: SF Mara#
@@ -367,6 +367,91 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 90
+
+$Name: SC Lilith 4		;! Object #4
+$Class: SC Lilith
+$Team: Unknown
+$Location: 3125.472656, 0.000040, 4168.190430
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 210
+$Texture Replace:
++old: lilith_1-glow
++new: lilith_1_cmd-glow
++old: lilith_2-glow
++new: lilith_2_cmd-glow
+
+$Name: SC Rakshasa 5		;! Object #5
+$Class: SC Rakshasa
+$Team: Hostile
+$Location: 2839.394531, -0.000000, 4556.279785
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+$Texture Replace:
++old: rak_01-glow
++new: rak_01_cmd-glow
++old: rak_02-glow
++new: rak_02_cmd-glow
 
 #Wings		;! 1 total
 

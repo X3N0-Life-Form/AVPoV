@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Sorrow", -1)
 $Author: X3N0-Life-Form
 $Created: 08/01/10 at 18:47:22
-$Modified: 03/30/12 at 20:54:54
+$Modified: 10/12/12 at 22:56:37
 $Notes:
 $End Notes:
 
@@ -28,8 +28,8 @@ $end_multi_text
 
 +Viewer pos: 9210.465820, 9947.568359, -4591.297363
 +Viewer orient:
-	-0.334035, 0.000002, 0.942561,
-	-0.942473, 0.013633, -0.334004,
+	-0.334049, 0.000002, 0.942556,
+	-0.942468, 0.013633, -0.334018,
 	-0.012851, -0.999907, -0.004552
 
 
@@ -326,22 +326,22 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 36
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -4795,6 +4795,11 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 300
+$Texture Replace:
++old: rak_01-glow
++new: rak_01_cmd-glow
++old: rak_02-glow
++new: rak_02_cmd-glow
 
 $Name: Oblivion 1		;! Object #154
 $Class: SF Mara#

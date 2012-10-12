@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Waiting Dark", -1)
 $Author: X3N0-Life-Form
 $Created: 08/02/10 at 20:31:11
-$Modified: 10/12/12 at 20:43:30
+$Modified: 10/12/12 at 22:53:29
 $Notes:
 Original music : Exodus$End Notes:
 
@@ -28,9 +28,9 @@ $end_multi_text
 
 +Viewer pos: -466.493134, 1082.308594, 2549.444336
 +Viewer orient:
-	0.992320, 0.000001, 0.123695,
-	-0.059827, 0.875260, 0.479939,
-	-0.108265, -0.483653, 0.868538
+	-0.624613, 0.000002, 0.780935,
+	-0.132111, 0.985587, -0.105668,
+	-0.769679, -0.169172, -0.615610
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Zeta" "Delta" )
 
@@ -1904,6 +1904,11 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 300
+$Texture Replace:
++old: rak_01-glow
++new: rak_01_cmd-glow
++old: rak_02-glow
++new: rak_02_cmd-glow
 
 #Wings		;! 12 total
 

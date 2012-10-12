@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("We've got company !", -1)
 $Author: X3N0-Life-Form
 $Created: 10/28/10 at 06:01:10
-$Modified: 08/23/12 at 21:43:47
+$Modified: 10/12/12 at 22:55:48
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,15 +28,14 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2534.946777, 11482.492188, 1362.545532
++Viewer pos: 170.047943, -3070.758057, -490.189636
 +Viewer orient:
-	-0.946620, 0.000017, 0.322352,
-	-0.304329, 0.329639, -0.893712,
-	-0.106275, -0.944107, -0.312038
+	-0.499665, 0.000000, 0.866219,
+	0.795806, -0.394926, 0.459049,
+	0.342092, 0.918713, 0.197331
 
 
 $AI Profile: myProfile
-
 #Fiction Viewer
 
 $File: E06.txt
@@ -2476,6 +2475,11 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 300
+$Texture Replace:
++old: rak_01-glow
++new: rak_01_cmd-glow
++old: rak_02-glow
++new: rak_02_cmd-glow
 
 $Name: Oblivion 1		;! Object #76
 $Class: SF Dragon
