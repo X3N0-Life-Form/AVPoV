@@ -555,7 +555,7 @@ $Species:                       Shivan
 +Tech Description:
 XSTR("", -1)
 $end_multi_text
-$POF file:              fighter2s-02.pof
+$POF file:              fighter2s-02_elite.pof
 $Detail distance:       (0, 80, 220, 900)
 $Show damage:           YES
 $Density:               1
