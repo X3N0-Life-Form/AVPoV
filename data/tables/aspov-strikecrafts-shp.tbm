@@ -465,7 +465,7 @@ $SBank Capacity:        ( 80, 80, 80 )
 $Shields:               850
 $Shield Color:			100 255 100
 $Power Output:          3.0
-$Max Oclk Speed:        64.0
+$Max Oclk Speed:        84.0
 $Max Weapon Eng:        100.0
 $Hitpoints:             500
 $Armor Type:			LightArmor

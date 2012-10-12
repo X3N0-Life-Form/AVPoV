@@ -161,21 +161,21 @@ $Entry:
 $Name:				XSTR("Light Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		1
-$Description:		XSTR("Standard armor plating on every Alliance fighter. Lightweight without sacrificing durability, it is known to have a weaker resistance to Shivan weaponery.",-1)
+$Description:		XSTR("Standard armor plating on every Alliance fighter. Lightweight without sacrificing durability, it is known to have a weaker resistance to Shivan weaponry.",-1)
 $end_multi_text
 
 $Entry:					
 $Name:				XSTR("Medium Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		1
-$Description:		XSTR("Standard hull plating for large civilian ships and non-combatant military units, this armor is designed to be highly durable against stellar dust and solar wind. However, is doesn't offer any particular resistance against Terran or Vasudan weaponery, and has been shown to be particularly vulnerable to Shivan weaponery.",-1)
+$Description:		XSTR("Standard hull plating for large civilian ships and non-combatant military units, this armor is designed to be highly durable against stellar dust and solar wind. However, is doesn't offer any particular resistance against Terran or Vasudan weaponry, and has been shown to be particularly vulnerable to Shivan weaponry.",-1)
 $end_multi_text
 
 $Entry:					
 $Name:				XSTR("Heavy Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		1
-$Description:		XSTR("The standard Alliance capital ship armor features an increased resistance against lighter weapons, but is vulnerable against Shivan anti-capital ship weaponery.",-1)
+$Description:		XSTR("The standard Alliance capital ship armor features an increased resistance against lighter weapons, but is vulnerable against Shivan anti-capital ship weaponry.",-1)
 $end_multi_text
 
 $Entry:					
@@ -282,7 +282,7 @@ $AlwaysInTechRoom:		1
 $Description:
     XSTR("Battlegroup Flag Destroyer
     
-    Acting as Flagship of the 12th Vasudan Battlegroup, the GVD Apep entered its 5th year of service at the time of the Shivan incursion in Gamma Draconnis. Due to its above average performance during the NTF conflict, the Apep and the 12th VBG were selected to assist in the containment operations in the nebula and Gamma Draconnis. Fitted with top-of-the-line equipment and weaponery, the ship's combat and logistical performance exceeds that of most Hatshepsut-class destroyers.
+    Acting as Flagship of the 12th Vasudan Battlegroup, the GVD Apep entered its 5th year of service at the time of the Shivan incursion in Gamma Draconnis. Due to its above average performance during the NTF conflict, the Apep and the 12th VBG were selected to assist in the containment operations in the nebula and Gamma Draconnis. Fitted with top-of-the-line equipment and weaponry, the ship's combat and logistical performance exceeds that of most Hatshepsut-class destroyers.
 
     Under the command of Rear-Admiral Obster, the Apep spearheaded the first offensive on Regulus, in the early months of the Civil War. Ambushed by the NTD Repulse and the NTCv La Fayette, the Apep and other surviving allied warships were forced to retreat to Allied-controlled space, and underwent a massive refit, equipping the destroyer, among other things, with the brand new Vasudan Capital Ship Tordedo System, Wraith point defence turrets, Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure.",-1)
 $end_multi_text
@@ -353,7 +353,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Hunter Killer Cruiser
 
-    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponery. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 to outright hunt and destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
+    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 to outright hunt and destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
 
     Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
@@ -453,7 +453,7 @@ $Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponery in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
+    XSTR("The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponry in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
 
     These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
@@ -635,7 +635,7 @@ $Name:        XSTR("Cain - Flak Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponery.
+    XSTR("Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponry.
 
     ",-1)
 $end_multi_text
