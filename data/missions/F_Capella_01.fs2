@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 10/11/12 at 20:05:39
+$Modified: 10/12/12 at 20:11:12
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 718.524719, 1729.854980, 5743.817383
++Viewer pos: 3634.787842, 413.587769, 5647.137207
 +Viewer orient:
-	0.727048, -0.000007, -0.686586,
-	0.503193, 0.680351, 0.532840,
-	0.467116, -0.732886, 0.494652
+	0.925754, -0.000000, 0.378127,
+	-0.118088, 0.949984, 0.289111,
+	-0.359215, -0.312297, 0.879451
 
 
 $AI Profile: myProfile
@@ -68,30 +68,30 @@ $Ship Choices: (
 +Weaponry Pool: (
 	"Mekhu HL-7"	16
 	"Morning Star"	16
-	"Prometheus S"	32
+	"Prometheus S"	28
 	"Maxim"	16
 	"UD-8 Kayser"	16
 	"Circe"	100
 	"Fire Spitter"	12
 	"Hell Spitter"	8
 	"Hayg Mas"	20
-	"Sehku"	16
+	"Sehku"	20
 	"Sahr AS"	20
 	"Rockeye"	400
-	"Tempest"	5520
+	"Tempest"	5840
 	"Hornet"	1200
 	"Tornado"	1120
 	"Harpoon"	320
-	"Trebuchet"	192
+	"Trebuchet"	224
 	"TAG-B"	4000
 	"Piranha"	30
 	"Cyclops"	60
 )
 
-#Objects		;! 148 total
+#Objects		;! 150 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GVF Seth
+$Class: GVF Tauret
 $Team: Friendly
 $Location: 0.000000, 0.000000, 0.000000
 $Orientation:
@@ -102,7 +102,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Sehku" "Prometheus S" )
 +Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -116,7 +116,7 @@ $Determination: 10
 +Score: 8
 
 $Name: Alpha 2		;! Object #1
-$Class: GVF Seth
+$Class: GVF Tauret
 $Team: Friendly
 $Location: -30.505060, 0.000000, -23.709394
 $Orientation:
@@ -126,10 +126,9 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Sehku" "Prometheus S" )
 +Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -140,11 +139,10 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 3		;! Object #2
-$Class: GVF Seth
+$Class: GVF Tauret
 $Team: Friendly
 $Location: 44.342419, 0.000000, -28.694843
 $Orientation:
@@ -154,10 +152,9 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Sehku" "Prometheus S" )
 +Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -168,11 +165,10 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 4		;! Object #3
-$Class: GVF Seth
+$Class: GVF Tauret
 $Team: Friendly
 $Location: 68.784981, 0.000003, -57.855278
 $Orientation:
@@ -182,10 +178,9 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
++Primary Banks: ( "Sehku" "Prometheus S" )
 +Secondary Banks: ( "Trebuchet" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -196,7 +191,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Fox		;! Object #4
@@ -4479,7 +4473,63 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-#Wings		;! 34 total
+$Name: Theta 1		;! Object #148
+$Class: GVB Sekhmet
+$Team: Friendly
+$Location: 3882.583252, -82.797302, 6854.206543
+$Orientation:
+	0.005537, 0.983701, 0.179728,
+	-0.030290, 0.179813, -0.983235,
+	-0.999526, 0.000000, 0.030791
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Theta 2		;! Object #149
+$Class: GVB Sekhmet
+$Team: Friendly
+$Location: 3898.312012, -15.689728, 6865.994141
+$Orientation:
+	0.012719, 0.983701, 0.179363,
+	-0.069584, 0.179813, -0.981237,
+	-0.997495, 0.000000, 0.070737
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+#Wings		;! 35 total
 
 $Name: Alpha
 $Waves: 1
@@ -4628,7 +4678,13 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Zeta 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 2 "Blade" ) 
+$Arrival Cue: ( and 
+   ( has-arrived-delay 2 "Blade" ) 
+   ( is-event-true-delay 
+      "theta's targets are destroyed" 
+      6 
+   )
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -5173,7 +5229,23 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard-wing "Blade" 50 ) )
 +Flags: ( )
 
-#Events		;! 53 total
+$Name: Theta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Theta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 5 "Blade" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Theta 1"
+	"Theta 2"
+)
+$AI Goals: ( goals ( ai-destroy-subsystem "Susl'Arh Morc" "turret20-base" 50 ) ( ai-destroy-subsystem "Susl'Arh Morc" "turret21-base" 49 ) ( ai-destroy-subsystem "Susl'Arh Morc" "turret15-base" 48 ) ( ai-destroy-subsystem "Susl'Arh Morc" "turret16-base" 47 ) ( ai-destroy-subsystem "Susl'Arh Morc" "turret17-base" 46 ) )
++Flags: ( )
+
+#Events		;! 59 total
 
 $Formula: ( when 
    ( < ( hits-left "Blade 1" ) 65 ) 
@@ -5446,6 +5518,120 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Alpha 1" "Susl'Arh Morc" ) 
+         5600 
+      )
+      ( < 
+         ( distance "Alpha 2" "Susl'Arh Morc" ) 
+         5600 
+      )
+      ( < 
+         ( distance "Alpha 3" "Susl'Arh Morc" ) 
+         5600 
+      )
+      ( < 
+         ( distance "Alpha 4" "Susl'Arh Morc" ) 
+         5600 
+      )
+   )
+   ( good-secondary-time 
+      "Friendly" 
+      100 
+      "Trebuchet" 
+      "Susl'Arh Morc" 
+   )
+   ( add-goal 
+      "Alpha" 
+      ( ai-chase "Susl'Arh Morc" 200 ) 
+   )
+)
++Name: Alpha close to SAM
++Repeat Count: 4
++Interval: 10
+
+$Formula: ( when 
+   ( true ) 
+   ( clear-goals "Alpha" ) 
+)
++Name: reset orders
++Repeat Count: -1
++Trigger Count: 4
++Interval: 10
++Chained: 4
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Theta" ) 
+   ( set-subsystem-strength 
+      "Theta 1" 
+      "Engine" 
+      1 
+   )
+   ( set-subsystem-strength 
+      "Theta 2" 
+      "Engine" 
+      1 
+   )
+)
++Name: theta slows down
++Repeat Count: 80
++Interval: 5
+
+$Formula: ( when 
+   ( and 
+      ( is-subsystem-destroyed-delay 
+         "Susl'Arh Morc" 
+         "turret15-base" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Susl'Arh Morc" 
+         "turret16-base" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Susl'Arh Morc" 
+         "turret17-base" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Susl'Arh Morc" 
+         "turret20-base" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Susl'Arh Morc" 
+         "turret21-base" 
+         0 
+      )
+   )
+   ( add-goal 
+      "Theta" 
+      ( ai-destroy-subsystem 
+         "Susl'Arh Morc" 
+         "turret03a-base" 
+         50 
+      )
+   )
+   ( add-goal 
+      "Theta" 
+      ( ai-destroy-subsystem 
+         "Susl'Arh Morc" 
+         "turret07a-base" 
+         49 
+      )
+   )
+   ( add-goal 
+      "Theta" 
+      ( ai-chase "Susl'Arh Morc" 48 ) 
+   )
+)
++Name: theta's targets are destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( true ) 
    ( set-armor-type 
       "Susl'Arh Morc" 
@@ -5640,13 +5826,13 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 0 "Blade" ) 
    ( set-object-position 
-      "SAM position path:1" 
-      ( get-object-x "SAM position path:1" ) 
+      "SAM position - mod:1" 
+      ( get-object-x "SAM position - mod:1" ) 
       ( - 
-         ( get-object-y "SAM position path:1" ) 
+         ( get-object-y "SAM position - mod:1" ) 
          1500 
       )
-      ( get-object-z "SAM position path:1" ) 
+      ( get-object-z "SAM position - mod:1" ) 
    )
    ( set-armor-type 
       "Beta 1" 
@@ -5854,7 +6040,10 @@ $Formula: ( when
    ( true ) 
    ( add-goal 
       "Blade 1" 
-      ( ai-waypoints "SAM position path" 89 ) 
+      ( ai-waypoints 
+         "SAM position - mod" 
+         89 
+      )
    )
    ( cap-waypoint-speed "Blade 1" 1 ) 
 )
@@ -5903,7 +6092,7 @@ $Formula: ( when-argument
    ( invalidate-argument "<argument>" ) 
 )
 +Name: pssms2
-+Repeat Count: 1
++Repeat Count: -1
 +Trigger Count: 80
 +Interval: 22
 +Chained: 0
@@ -5925,7 +6114,7 @@ $Formula: ( when-argument
    ( invalidate-argument "<argument>" ) 
 )
 +Name: pssms3
-+Repeat Count: 1
++Repeat Count: -1
 +Trigger Count: 80
 +Interval: 22
 +Chained: 0
@@ -5974,7 +6163,7 @@ $Formula: ( when
    ( has-arrived-delay 0 "Gemini" ) 
    ( do-nothing ) 
 )
-+Name: 85 percent
++Name: 85 percent - gemini arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -6019,10 +6208,97 @@ $Formula: ( when
       "Shivan Elite Armor" 
       "Hull" 
    )
+   ( set-object-position 
+      "Blade 1 position:1" 
+      ( + ( get-object-x "Blade 1" ) 300 ) 
+      ( get-object-y "Blade 1" ) 
+      ( get-object-z "Blade 1" ) 
+   )
+   ( set-object-position 
+      "Blade 2 position:1" 
+      ( + ( get-object-x "Blade 2" ) 300 ) 
+      ( get-object-y "Blade 2" ) 
+      ( get-object-z "Blade 2" ) 
+   )
 )
-+Name: 60 percent
++Name: 60 percent - Vor arrives
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 0 "Blade 1" ) 
+      )
+      ( add-goal 
+         "Vor 1" 
+         ( ai-waypoints-once 
+            "Blade 1 position" 
+            89 
+         )
+      )
+      ( add-goal 
+         "Vor 1" 
+         ( ai-waypoints-once 
+            "Blade 2 position" 
+            89 
+         )
+      )
+   )
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 0 "Blade 2" ) 
+      )
+      ( add-goal 
+         "Vor 2" 
+         ( ai-waypoints-once 
+            "Blade 2 position" 
+            89 
+         )
+      )
+      ( add-goal 
+         "Vor 2" 
+         ( ai-waypoints-once 
+            "Blade 1 position" 
+            89 
+         )
+      )
+   )
+   ( cap-waypoint-speed "Vor 2" 30 ) 
+   ( cap-waypoint-speed "Vor 1" 30 ) 
+)
++Name: Vor engages the corvettes
++Repeat Count: 1
++Interval: 1
++Chained: 8
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance-ship-subsystem 
+            "Blade 1 position:1" 
+            "Vor 1" 
+            "turret01" 
+         )
+         3800 
+      )
+      ( < 
+         ( distance-ship-subsystem 
+            "Blade 2 position:1" 
+            "Vor 2" 
+            "turret01" 
+         )
+         3800 
+      )
+   )
+   ( cap-waypoint-speed "Vor 1" 5 ) 
+   ( cap-waypoint-speed "Vor 2" 5 ) 
+)
++Name: Vor slows down
++Repeat Count: 1
++Interval: 1
++Chained: 0
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Vor" ) 
@@ -6055,7 +6331,7 @@ $Formula: ( when
    ( has-arrived-delay 0 "Skeksis" ) 
    ( do-nothing ) 
 )
-+Name: 52 percent
++Name: 52 percent - skeksis arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -6081,7 +6357,7 @@ $Formula: ( when
    ( has-arrived-delay 0 "Durga" ) 
    ( do-nothing ) 
 )
-+Name: Second wave
++Name: Second wave - Durga arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -6107,7 +6383,7 @@ $Formula: ( when
    ( has-arrived-delay 0 "Ragnarok" ) 
    ( validate-goal "Destroy Ragnarok" ) 
 )
-+Name: 38 percent
++Name: 38 percent - ragnarok arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -6274,7 +6550,7 @@ $Formula: ( when
       "Hull" 
    )
 )
-+Name: 20 percent
++Name: 20 percent - Bheema arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -6304,7 +6580,7 @@ $Formula: ( when
    ( < ( hits-left "Susl'Arh Morc" ) 10 ) 
    ( ship-guardian "Susl'Arh Morc" ) 
 )
-+Name: 10 percent
++Name: 10 percent - guardian
 +Repeat Count: 1
 +Interval: 1
 
@@ -6349,7 +6625,10 @@ $Type: Bonus
 +Name: Inflict critical damage
 $MessageNew:  XSTR("Inflict critical damage to the Susl'Arh Morc", -1)
 $end_multi_text
-$Formula: ( is-event-true-delay "20 percent" 0 ) 
+$Formula: ( is-event-true-delay 
+   "20 percent - Bheema arrives" 
+   0 
+)
 +No music
 +Score: 200
 
@@ -6396,7 +6675,7 @@ $Type: Bonus
 +Name: Cripple SAM
 $MessageNew:  XSTR("Leave the Susl'Arh Morc crippled", -1)
 $end_multi_text
-$Formula: ( < ( hits-left "Susl'Arh Morc" ) 10 ) 
+$Formula: ( < ( hits-left "Susl'Arh Morc" ) 11 ) 
 +Score: 500
 
 $Type: Bonus
@@ -6412,9 +6691,24 @@ $Formula: ( or
 )
 +Score: 1000
 
-#Waypoints		;! 1 lists total
+#Waypoints		;! 4 lists total
 
-$Name: SAM position path
+$Name: SAM position - mod
+$List: (		;! 1 points in list
+	( -850.000000, -390.000000, 7000.000000 )
+)
+
+$Name: Blade 1 position
+$List: (		;! 1 points in list
+	( 1656.584229, 0.000519, 6986.531738 )
+)
+
+$Name: Blade 2 position
+$List: (		;! 1 points in list
+	( 1435.760498, 0.000411, 6936.804688 )
+)
+
+$Name: SAM position - static
 $List: (		;! 1 points in list
 	( -850.000000, -390.000000, 7000.000000 )
 )
