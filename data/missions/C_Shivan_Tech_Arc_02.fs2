@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Here comes the Grim Reaper", -1)
 $Author: X3N0-Life-Form
 $Created: 02/08/08 at 13:55:23
-$Modified: 08/16/12 at 20:54:47
+$Modified: 10/12/12 at 22:34:15
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -32,10 +32,10 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1842.720337, 2150.418701, -128.988770
++Viewer pos: -1706.283447, 2683.600098, -567.687805
 +Viewer orient:
 	-0.260184, 0.000005, -0.965559,
-	0.492161, 0.860344, -0.132615,
+	0.492161, 0.860343, -0.132615,
 	0.830712, -0.509715, -0.223850
 
 
@@ -1046,6 +1046,11 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 210
+$Texture Replace:
++old: lilith_1-glow
++new: lilith_1_cmd-glow
++old: lilith_2-glow
++new: lilith_2_cmd-glow
 
 $Name: Leo 1		;! Object #14
 $Class: SB Nephilim
