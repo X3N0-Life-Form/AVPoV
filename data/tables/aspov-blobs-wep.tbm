@@ -127,7 +127,7 @@ $Piercing Impact Velocity:			10
 $Piercing Impact Splash Velocity:	-2.5
 $Piercing Impact Variance:			0.01
 $Piercing Impact Particles:			5
-$Muzzleflash: 						Bmuzzle
+$Muzzleflash: 						WraithMuzzle
 
 
 ;; Shivan
