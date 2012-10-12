@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Waiting Dark", -1)
 $Author: X3N0-Life-Form
 $Created: 08/02/10 at 20:31:11
-$Modified: 03/18/12 at 23:53:11
+$Modified: 10/12/12 at 20:43:30
 $Notes:
 Original music : Exodus$End Notes:
 
@@ -26,11 +26,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2596.042236, 1862.462646, 2660.970215
++Viewer pos: -466.493134, 1082.308594, 2549.444336
 +Viewer orient:
-	-0.245234, -0.000000, 0.969464,
-	-0.486691, 0.864855, -0.123112,
-	-0.838446, -0.502021, -0.212092
+	0.992320, 0.000001, 0.123695,
+	-0.059827, 0.875260, 0.479939,
+	-0.108265, -0.483653, 0.868538
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Zeta" "Delta" )
 
@@ -601,6 +601,19 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 440
+$Texture Replace:
++old: corvstile1
++new: corvstile1_cmd
++old: corvstile2
++new: corvstile2_cmd
++old: corvstile3
++new: corvstile3_cmd
++old: corvstile3-glow
++new: corvstile3_cmd-glow
++old: corvstile4
++new: corvstile4_cmd
++old: minertile2-glow
++new: minertile2_cmd-glow
 
 $Name: Cancer 1		;! Object #3
 $Class: SF Manticore
@@ -1280,6 +1293,19 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 440
+$Texture Replace:
++old: corvstile1
++new: corvstile1_cmd
++old: corvstile2
++new: corvstile2_cmd
++old: corvstile3
++new: corvstile3_cmd
++old: corvstile3-glow
++new: corvstile3_cmd-glow
++old: corvstile4
++new: corvstile4_cmd
++old: minertile2-glow
++new: minertile2_cmd-glow
 
 $Name: Libra 1		;! Object #26
 $Class: SF Basilisk
@@ -2511,34 +2537,34 @@ $Formula: ( when
       "High" 
       "Hellknight arrives - Warihu" 
    )
-   ( set-armor-type
-      "Hellknight"
-      ( true )
-      "Shivan Elite Armor"
-      "Hull"
+   ( set-armor-type 
+      "Hellknight" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
    )
-   ( set-armor-type
-      "Hellknight"
-      ( true )
-      "Hell Armor"
-      "engines"
-      "weapons"
-      "sensors"
-      "navigation"
-      "turret01"
-      "turret02"
-      "turret03"
-      "turret04"
-      "turret05"
-      "turret06"
-      "turret07"
-      "turret08"
-      "turret09"
-      "turret10"
-      "turret11"
-      "turret12"
-      "turret13"
-      "turret14"
+   ( set-armor-type 
+      "Hellknight" 
+      ( true ) 
+      "Hell Armor" 
+      "engines" 
+      "weapons" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret14" 
    )
 )
 +Name: SC Hellknight arrives
