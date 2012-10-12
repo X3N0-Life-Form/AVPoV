@@ -182,7 +182,7 @@ $Entry:
 $Name:				XSTR("Shivan Fighter Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
-$Description:		XSTR("The shielding and hull plating present on all Shivan fighter is known to be more resilient than its Alliance equivalents against lighter armaments. In theory, however, it should offer no particular resistance to the Shivans' own weapon systems.",-1)
+$Description:		XSTR("The shielding and hull plating present on all Shivan fighter is known to be more resilient than its Alliance equivalents against lighter armaments. However, it should in theory offer no particular resistance to the Shivans' own weapon systems.",-1)
 $end_multi_text
 
 $Entry:					
@@ -321,9 +321,9 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Long Range Hunter Killer Destroyer
 
-    Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams area capable of succesfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
+    Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams are capable of succesfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
 
-    The Vampire is also better armed than the initial Ravana, and has different hull composition than the standard Shivan destroyers, hinting that this ship fills a slightly different role, and might be aven more important to the Shivans than the average destroyer.",-1)
+    The Vampire is also better armed than the initial Ravana, and has different hull composition than the standard Shivan destroyers, hinting that this ship fills a slightly different role, and might be even more important to the Shivans than the average destroyer.",-1)
 $end_multi_text
 
 $Entry:
@@ -353,7 +353,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Hunter Killer Cruiser
 
-    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 to outright hunt and destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
+    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 outright hunt to destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
 
     Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
@@ -424,7 +424,7 @@ $Name:        XSTR("SD Centrab Betz",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Bypassing Allied defences in Gamma Draconis, Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
+    XSTR("Bypassing Allied defences in Gamma Draconis, the Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
 
     Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
@@ -483,9 +483,9 @@ $Name:        XSTR("Demon - Support Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("A new variant of the Demon-class destroyer, this ship's role is mostly to support other Shivan units, usually by serving as a staging ground for strikecrafts while other destroyers go toe to toe with our ships, and providing SSM support.
+    XSTR("A new variant of the Demon-class destroyer, this ship's role is mostly to support other Shivan units, mostly by serving as a staging ground for strikecrafts while other destroyers go toe to toe with our ships, and providing SSM support.
 
-    These destroyers are usally fiercly defended, opperate far from the front line and tend to avoid direct combat compared to other Shivan destroyers, making them difficult to take down. Their ability to launch subspace missile seem to have cost the Demon's missile launchers' versatility, significanlty diminishing the destroyer's anti-fighter screen.
+    These destroyers are usually fiercly defended, opperate far from the front line and tend to avoid direct combat compared to other Shivan destroyers, making them difficult to take down. Their ability to launch subspace missile seem to have cost the Demon's missile launchers' versatility, significanlty diminishing the destroyer's anti-fighter screen.
 
     Due to their SSM launch capabilities, these vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
@@ -555,7 +555,7 @@ $Name:        XSTR("Lilith - Hunter Killer Heavy Cruiser",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Once labelled Destroyer Hunter Heavy Cruiser, the Lilith's standard variant has been reclassified as a Hunter Killer ship. With an exceptionnaly tough hull, the Lilith follow the same attack pattern as other Hunter Killer vessels: jump in, keep firing until all targets in range are destroyed or departed, and jump out before reinforcements arrive.
+    XSTR("Once labelled Destroyer Hunter Heavy Cruiser, the Lilith's standard variant has been reclassified as a Hunter Killer ship. With an exceptionally tough hull, the Lilith follow the same attack pattern as other Hunter Killer vessels: jump in, keep firing until all targets in range are destroyed or departed, and jump out before reinforcements arrive.
 
     With its destroyer-grade beam cannon, Lilith is considered a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
