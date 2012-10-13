@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Fangs in the Mist", -1)
 $Author: X3N0-Life-Form
 $Created: 04/03/10 at 21:24:44
-$Modified: 08/16/12 at 20:43:56
+$Modified: 10/13/12 at 12:03:00
 $Notes:
 Fairly easy.$End Notes:
 
@@ -32,9 +32,9 @@ $end_multi_text
 
 +Viewer pos: -6853.439453, 3878.870117, -327.092987
 +Viewer orient:
-	0.209731, 0.000006, -0.977759,
-	0.386823, 0.918413, 0.082980,
-	0.897987, -0.395623, 0.192617
+	0.943679, 0.000006, -0.330864,
+	0.134977, 0.912996, 0.384993,
+	0.302080, -0.407969, 0.861574
 
 $Starting wing names: ( "Alpha" "Epsilon" "Gamma" )
 
@@ -1001,6 +1001,19 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 670
+$Texture Replace:
++old: capital04-01
++new: capital04-01_cmd
++old: capital04-03-glow
++new: capital04-03_cmd-glow
++old: corvstile2
++new: corvstile2_cmd
++old: htlravana-glow
++new: htlravana_cmd-glow
++old: scap02-glow
++new: scap02_cmd-glow
++old: supertile1-glow
++new: supertile1_cmd-glow
 
 $Name: Aries 1		;! Object #14
 $Class: SF Manticore

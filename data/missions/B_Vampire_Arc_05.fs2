@@ -456,6 +456,19 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 670
+$Texture Replace:
++old: capital04-01
++new: capital04-01_cmd
++old: capital04-03-glow
++new: capital04-03_cmd-glow
++old: corvstile2
++new: corvstile2_cmd
++old: htlravana-glow
++new: htlravana_cmd-glow
++old: scap02-glow
++new: scap02_cmd-glow
++old: supertile1-glow
++new: supertile1_cmd-glow
 
 $Name: Alpha 2		;! Object #2
 $Class: GVB Bakha

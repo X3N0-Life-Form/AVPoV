@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/12/12 at 22:50:04
+$Modified: 10/13/12 at 11:57:59
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3103.369385, 165.265152, 4970.077148
++Viewer pos: 1257.949219, 3804.795898, 6170.107422
 +Viewer orient:
-	-0.843062, 0.000002, 0.537816,
-	-0.171618, 0.947720, -0.269026,
-	-0.509699, -0.319104, -0.798986
+	-0.756512, -0.000000, -0.653980,
+	0.343287, 0.851151, -0.397109,
+	0.556636, -0.524921, -0.643906
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -182,7 +182,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	1800
 )
 
-#Objects		;! 6 total
+#Objects		;! 7 total
 
 $Name: Alpha 1		;! Object #0
 $Class: SF Mara#
@@ -207,7 +207,7 @@ $Determination: 10
 +Group: 0
 +Score: 8
 
-$Name: Ravana 18		;! Object #1
+$Name: Battle Destroyer		;! Object #1
 $Class: SD Ravana
 $Team: Friendly
 $Location: 5292.624023, -0.000315, 1502.870605
@@ -368,7 +368,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 90
 
-$Name: SC Lilith 4		;! Object #4
+$Name: Command Heavy Cruiser		;! Object #4
 $Class: SC Lilith
 $Team: Unknown
 $Location: 3125.472656, 0.000040, 4168.190430
@@ -408,9 +408,9 @@ $Texture Replace:
 +old: lilith_2-glow
 +new: lilith_2_cmd-glow
 
-$Name: SC Rakshasa 5		;! Object #5
+$Name: Hunter Killer Cruiser		;! Object #5
 $Class: SC Rakshasa
-$Team: Hostile
+$Team: Unknown
 $Location: 2839.394531, -0.000000, 4556.279785
 $Orientation:
 	1.000000, 0.000000, 0.000000,
@@ -453,6 +453,75 @@ $Texture Replace:
 +old: rak_02-glow
 +new: rak_02_cmd-glow
 
+$Name: Hunter Killer Destroyer		;! Object #6
+$Class: SD Ravana
+$Team: Unknown
+$Location: 4646.900879, 0.000032, 5783.501465
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 670
+$Texture Replace:
++old: capital04-01
++new: capital04-01_cmd
++old: capital04-03-glow
++new: capital04-03_cmd-glow
++old: corvstile2
++new: corvstile2_cmd
++old: htlravana-glow
++new: htlravana_cmd-glow
++old: scap02-glow
++new: scap02_cmd-glow
++old: supertile1-glow
++new: supertile1_cmd-glow
+
 #Wings		;! 1 total
 
 $Name: Alpha
@@ -476,7 +545,7 @@ $Formula: ( when
    ( true ) 
    ( training-msg "mission start" ) 
    ( set-armor-type 
-      "Ravana 18" 
+      "Battle Destroyer" 
       ( true ) 
       "Shivan Elite Armor" 
       "Hull" 
