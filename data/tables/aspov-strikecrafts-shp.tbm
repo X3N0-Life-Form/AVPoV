@@ -199,7 +199,7 @@ $Subsystem:                     b05-turreta,1,1.0
 
 $Name:					GTF Myrmidon
 	+nocreate ;:
-$Allowed PBanks:		( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Fire Spitter" "Hell Spitter" "Sekhu" )
+$Allowed PBanks:		( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Fire Spitter" "Hell Spitter" "Sehku" )
 						( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" )
 $PBank Capacity: ( 40, 40 )
 $Shield Armor Type:		LightArmor

@@ -439,51 +439,59 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Ravana - Battle Destroyer",-1)
+$Name:        XSTR("Battle Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
+    XSTR("Ravana - Battle Destroyer
+	
+	The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
 
     On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned the title of Archangel of Death.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Ravana - Hunter Killer Destroyer",-1)
+$Name:        XSTR("Hunter Killer Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponry in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
+    XSTR("Ravana - Hunter Killer Destroyer
+	
+	The appearance of the Ravana and Vampire destroyers spawned the Hunter Killer capital ship classification, as even Strike-type capital ships, the previously most aggressive designation, didn't possess and relied solely on massive frontal firepower. The Ravana-class Hunter Killer Destroyer is the single most dreaded Shivan capital ship encountered in the nebula so far. Its massive forward weapon array is capable of destroying any GTVA capital ship up to destroyer class in less than 30 seconds. However, its secondary weaponry in insufficient to allow the destroyer to properly defend itself if attacked from another angle, prompting GTVA commanders to engage Ravanas at very close range to prevent the Shivan destroyer from aiming its beams at Allied warships.
 
     These vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)",-1)
+$Name:        XSTR("Long Range HK Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("So far, the SD Vampire is the only known instance of this Ravana-variant. Akin to beams of the Lucifer, this destroyer is capable of engaging enemies far beyond standard beam lock range, leaving no choice to Allied warships but retreat or be be destroyed.
+    XSTR("Ravana - Long Range Hunter Killer Destroyer (SD Vampire)
+	
+	So far, the SD Vampire is the only known instance of this Ravana-variant. Akin to beams of the Lucifer, this destroyer is capable of engaging enemies far beyond standard beam lock range, leaving no choice to Allied warships but retreat or be be destroyed.
 
     Future encounters with such a destroyer state that a Trebuchet-equipped fast response team must be ready to deploy at any time to destroy the destroyer's long range beam weapons.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)",-1)
+$Name:        XSTR("Command Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Demon - Support Destroyer",-1)
+$Name:        XSTR("Support Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("A new variant of the Demon-class destroyer, this ship's role is mostly to support other Shivan units, mostly by serving as a staging ground for strikecrafts while other destroyers go toe to toe with our ships, and providing SSM support.
+    XSTR("Demon - Support Destroyer
+	
+	A new variant of the Demon-class destroyer, this ship's role is mostly to support other Shivan units, mostly by serving as a staging ground for strikecrafts while other destroyers go toe to toe with our ships, and providing SSM support.
 
     These destroyers are usually fiercly defended, opperate far from the front line and tend to avoid direct combat compared to other Shivan destroyers, making them difficult to take down. Their ability to launch subspace missile seem to have cost the Demon's missile launchers' versatility, significanlty diminishing the destroyer's anti-fighter screen.
 
@@ -491,153 +499,167 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Demon - Combat Destroyer",-1)
+$Name:        XSTR("Combat Destroyer",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The standard variant of the Demon class destroyer is capable of projecting firepower in almost all direction, making is a much more effective destroyer in a fluid combat environment than the Ravana.
+    XSTR("Demon - Combat Destroyer
+	
+	The standard variant of the Demon class destroyer is capable of projecting firepower in almost all direction, making is a much more effective destroyer in a fluid combat environment than the Ravana.
 
     It missile launchers are especially versatile, capable of using many different types of ordnance, including cluster bombs, short range swarm missiles, long range swarm missiles, long range missiles, bombs and swarmer bombs.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Moloch - Carrier Corvette",-1)
+$Name:        XSTR("Carrier Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The standard variant of the Moloch class corvette packs 3 medium-sized beam weapons, a forward-facing cannon and a small fighter bay. This allows the Moloch to opperate independently from Shivan destroyers, and has been seen engaging Allied destroyers on its own.
-
-    ",-1)
+    XSTR("Moloch - Carrier Corvette
+	
+	The standard variant of the Moloch class corvette packs 3 medium-sized beam weapons, a forward-facing cannon and a small fighter bay. This allows the Moloch to opperate independently from Shivan destroyers, and has been seen engaging Allied destroyers on its own.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Moloch - Support Corvette",-1)
+$Name:        XSTR("Support Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("A very recently discovered variant, this Moloch is capable of calling SSM strikes on any ship in the field of engagement, without the need of a TAG beacon. As a result, its point-defences are significantly weaker compared to other variants, only mounting cruiser-grade beams. It is however mounting anti-fighter TAG launchers.
+    XSTR("Moloch - Support Corvette
+	
+	A very recently discovered variant, this Moloch is capable of calling SSM strikes on any ship in the field of engagement, without the need of a TAG beacon. As a result, its point-defences are significantly weaker compared to other variants, only mounting cruiser-grade beams. It is however mounting anti-fighter TAG launchers.
 
     The Support corvette is considered a high priority target, and should be engaged by any asset currently commited to field of engagement.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Moloch - Strike Corvette",-1)
+$Name:        XSTR("Strike Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Trading its 3 medium-sized beams for 3 cruiser-grade beams and a forward-mounted upgraded medium beam, the Strike Corvette is often deployed against Allied destroyers and their escort group, spearheading the assault with its superior forward firepower.
-
-    ",-1)
+    XSTR("Moloch - Strike Corvette
+	
+	Trading its 3 medium-sized beams for 3 cruiser-grade beams and a forward-mounted upgraded medium beam, the Strike Corvette is often deployed against Allied destroyers and their escort group, spearheading the assault with its superior forward firepower.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Moloch - Command Corvette (SCv Cyaegha)",-1)
+$Name:        XSTR("Command Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Command corvettes are similar to the standard carrier corvette, though they display increased subspace agility compared to other Moloch variants and, Like all other command variants, this corvette is much more resilient. When engaged by allied warships, it will occasionnally overdrive its beam weapons for short periods of time, giving the corvette the edge it needs to quickly mop up Alliance capital ships pinning it down.
-
-    ",-1)
+    XSTR("Moloch - Command Corvette (SCv Cyaegha)
+	
+	Command corvettes are similar to the standard carrier corvette, though they display increased subspace agility compared to other Moloch variants and, Like all other command variants, this corvette is much more resilient. When engaged by allied warships, it will occasionnally overdrive its beam weapons for short periods of time, giving the corvette the edge it needs to quickly mop up Alliance capital ships pinning it down.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Moloch - Area Denial Corvette",-1)
+$Name:        XSTR("Area Denial Corvette",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("An unsual variant, the Area Denial Corvette trades its anti-capital ship beams and close range missile launchers for long range flak guns and missile launchers. This unsual configuration for a Shivan ship leaves analysts puzzled, as so far Shivans never put emphasis on their warship's anti-fighter defence, let alone field a ship dedicated to this role.
-
-    ",-1)
+    XSTR("Moloch - Area Denial Corvette
+	
+	An unsual variant, the Area Denial Corvette trades its anti-capital ship beams and close range missile launchers for long range flak guns and missile launchers. This unsual configuration for a Shivan ship leaves analysts puzzled, as so far Shivans never put emphasis on their warship's anti-fighter defence, let alone field a ship dedicated to this role.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Lilith - Hunter Killer Heavy Cruiser",-1)
+$Name:        XSTR("Hunter Killer Heavy Cruiser",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Once labelled Destroyer Hunter Heavy Cruiser, the Lilith's standard variant has been reclassified as a Hunter Killer ship. With an exceptionally tough hull, the Lilith follow the same attack pattern as other Hunter Killer vessels: jump in, keep firing until all targets in range are destroyed or departed, and jump out before reinforcements arrive.
+    XSTR("Lilith - Hunter Killer Heavy Cruiser
+	
+	Once labelled Destroyer Hunter Heavy Cruiser, the Lilith's standard variant has been reclassified as a Hunter Killer ship. With an exceptionally tough hull, the Lilith follow the same attack pattern as other Hunter Killer vessels: jump in, keep firing until all targets in range are destroyed or departed, and jump out before reinforcements arrive.
 
     With its destroyer-grade beam cannon, Lilith is considered a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Lilith - Command Heavy Cruiser (Reaper)",-1)
+$Name:        XSTR("Command Heavy Cruiser",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("
+    XSTR("Lilith - Command Heavy Cruiser (Reaper)
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Rakshasa - Strike Cruiser",-1)
+$Name:        XSTR("Strike Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The most common Rakshasa variant with the Support Cruiser, the Strike Cruiser is capable of obliterating lightly armored cruisers thanks to its 4 forward-facing cruiser-grade beam emitters, and is a serious thread to warships up to corvette class.
+    XSTR("Rakshasa - Strike Cruiser
+	
+	The most common Rakshasa variant with the Support Cruiser, the Strike Cruiser is capable of obliterating lightly armored cruisers thanks to its 4 forward-facing cruiser-grade beam emitters, and is a serious thread to warships up to corvette class.
 
     The top and bottom of the cruiser are defended by a pair of anti-fighter beams, while the sides each have a Multi-Turret, offering decent stopping power against incoming bombers and unshielded targets thanks to its fast refire rate.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Rakshasa - Support Cruiser",-1)
+$Name:        XSTR("Support Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The most common Rakshasa variant with the Strike Cruiser, the Support Cruiser is more versatile than its counter part, trading two of its forward beams with Multi-Turrets instead, its side Multi-Turret and top anti fighter beam with flak gun, providing the cruiser with an overall better anti-fighter defence while retaining a decent anti-capital ship firepower.
-
-    ",-1)
+    XSTR("Rakshasa - Support Cruiser
+	
+	The most common Rakshasa variant with the Strike Cruiser, the Support Cruiser is more versatile than its counter part, trading two of its forward beams with Multi-Turrets instead, its side Multi-Turret and top anti fighter beam with flak gun, providing the cruiser with an overall better anti-fighter defence while retaining a decent anti-capital ship firepower. ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Rakshasa - Hunter Killer Cruiser (Hellknight)",-1)
+$Name:        XSTR("Hunter Killer Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The SC Hellknight is the only known Hunter Killer variant of the Rakshasa. On the outside, the Hunter Killer Cruiser seems identical to the Strike Cruiser, but is actually equipped with 4 corvette-grade beams, instead of the standard cruiser-grade weapons.
+    XSTR("Rakshasa - Hunter Killer Cruiser (Hellknight)
+	
+	The SC Hellknight is the only known Hunter Killer variant of the Rakshasa. On the outside, the Hunter Killer Cruiser seems identical to the Strike Cruiser, but is actually equipped with 4 corvette-grade beams, instead of the standard cruiser-grade weapons.
 
     More details are available on the Hellknight's tech description.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Rakshasa - Heavy Assault Cruiser",-1)
+$Name:        XSTR("Heavy Assault Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("A very recently discovered Rakshasa variant, the Heavy Assault Cruiser retains the Strike Cruiser's front firepower, couple with improved laser turrets, 4 anti-fighter beams and improved armor.
+    XSTR("Rakshasa - Heavy Assault Cruiser
+	
+	A very recently discovered Rakshasa variant, the Heavy Assault Cruiser retains the Strike Cruiser's front firepower, couple with improved laser turrets, 4 anti-fighter beams and improved armor.
 
     Though these vessels are considered high priority targets, the Alliance currently doesn't have the ressources to commit assets to hunting these cruisers down.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Cain - Light Support Cruiser",-1)
+$Name:        XSTR("Light Support Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Despite its 'Support' classification, this variant is actually better armed and better armored than the standard Cain, trading its anticap lasers with either Multi-Turrets or Flak Turrets, and systematically using swarm missiles.
+    XSTR("Cain - Light Support Cruiser
+	
+	Despite its 'Support' classification, this variant is actually better armed and better armored than the standard Cain, trading its anticap lasers with either Multi-Turrets or Flak Turrets, and systematically using swarm missiles.
 
     The support classification actually comes from the fact that it is rarely, if ever, deployed alone. It always accompanies another warship - sometimes another Light Support Cruiser, unless, of course its companion ship is destroyed, in which case it will attempt to complete its objectives alone.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Cain - Light Cruiser",-1)
+$Name:        XSTR("Light Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("The standard Cain class cruiser carries a single cruiser-grade beam cannon, supplemented by two anti-capital laser. Its main anti-fighter capabilities come from the aft anti-fighter beam and the two side-mounted missile launcher, which are sometimes capable of firing swarm missiles as well.
-
-    ",-1)
+    XSTR("Cain - Light Cruiser
+	
+	The standard Cain class cruiser carries a single cruiser-grade beam cannon, supplemented by two anti-capital laser. Its main anti-fighter capabilities come from the aft anti-fighter beam and the two side-mounted missile launcher, which are sometimes capable of firing swarm missiles as well.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Cain - Flak Cruiser",-1)
+$Name:        XSTR("Flak Cruiser",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponry.
-
-    ",-1)
+    XSTR("Cain - Flak Cruiser
+	
+	Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponry.",-1)
 $end_multi_text
 
 $Entry:
@@ -651,112 +673,134 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Seraphim - Heavy Bomber",-1)
+$Name:        XSTR("Advanced Heavy Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Though some people refer to the Seraphim as a 'Mobile Fortress' more than a bomber, the Seraphim is much more versatile than the Nephilim, supporting a larger number a gun ports and types.
+    XSTR("Seraphim - Advanced Heavy Bomber
+	
+	Though some people refer to the Seraphim as a 'Mobile Fortress' more than a bomber, the Seraphim is much more versatile than the Nephilim, supporting a larger number a gun ports and types.
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Nephilim - Heavy Bomber",-1)
+$Name:        XSTR("Heavy Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Nothing to add.
+    XSTR("Nephilim - Heavy Bomber
+	
+	Nothing to add.
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Taurvi - Swarm Bomber",-1)
+$Name:        XSTR("Swarm Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Capable of carrying large numbers of Advanced Swarmer Bombs, the Taurvi's capabilities are similar to the Seraphim's in terms of versatility, but with a significantly reduced firepower in most cases. Capable of moving in all 3 axis, the Taurvi falls right behind the Nahema in close range combat agility.
+    XSTR("Taurvi - Swarm Bomber
+	
+	Capable of carrying large numbers of Advanced Swarmer Bombs, the Taurvi's capabilities are similar to the Seraphim's in terms of versatility, but with a significantly reduced firepower in most cases. Capable of moving in all 3 axis, the Taurvi falls right behind the Nahema in close range combat agility.
 
     The Taurvi usually mount one of two primary weapon configuration: 1 large cannon for heavy anti-capital ship duty, combined with 2 flak weapons, or 2 heavy anti-capital laser for lighter anti-capital ship duty and the versatile scatter gun.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Nahema - Strike Bomber",-1)
+$Name:        XSTR("Strike Bomber",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("An interceptor's nightmare, the Nahema bomber is compatible with a large array of warheads, including Mega Bombs and Swarmer Bombs.
+    XSTR("Nahema - Strike Bomber
+	
+	An interceptor's nightmare, the Nahema bomber is compatible with a large array of warheads, including Mega Bombs and Swarmer Bombs.
 
     The Nahema is capable of moving on any axis.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Unknown Gunship: Fire Support",-1)
+$Name:        XSTR("Fire Support",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("No information is available at this point.
+    XSTR("Unknown Gunship: Fire Support
+	
+	No information is available at this point.
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Aeshma - Swarm Assault Fighter",-1)
+$Name:        XSTR("Swarm Assault Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Somewhere between the light bomber and the heavy fighter, the Aeshma is a versatile weapon platform, known to be capable of carrying the Swarmer Bomb and the Long Range Swarm Missile, hence his classification as a Swarm Fighter.
+    XSTR("Aeshma - Swarm Assault Fighter
+	
+	Somewhere between the light bomber and the heavy fighter, the Aeshma is a versatile weapon platform, known to be capable of carrying the Swarmer Bomb and the Long Range Swarm Missile, hence his classification as a Swarm Fighter.
 
     The Assault part of its classification comes from the fact that it is also capable of mounting the Shivan Heavy Anti-Capital Laser, as well as the Advanced Dumbfire Rocket.
     The Aeshma is capable of moving in all 3 axis.",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Basilisk - Heavy Fighter",-1)
+$Name:        XSTR("Heavy Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Nothing to add.
+    XSTR("Basilisk - Heavy Fighter
+	
+	Nothing to add.
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Dragon - Elite Multirole Fighter",-1)
+$Name:        XSTR("Elite Multirole Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Extremely rare fighter, the Dragon is akin to a miniature Mara in terms of size, agility and weapon compatibility, though it is better armed and faster, although it carries a much smaller ordnance.
+    XSTR("Dragon - Elite Multirole Fighter
+	
+	Extremely rare fighter, the Dragon is akin to a miniature Mara in terms of size, agility and weapon compatibility, though it is better armed and faster, although it carries a much smaller ordnance.
 
     Its high speed and minuscule target profile make this fighter ludicruciously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Mara - Advanced Multirole Fighter",-1)
+$Name:        XSTR("Advanced Multirole Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("The bread and butter of the Shivan fighter force, the Mara fighter is capable of mounting most weapons in the Shivan arsenal, allowing it to fulfill almost any mission.
+    XSTR("Mara - Advanced Multirole Fighter
+	
+	The bread and butter of the Shivan fighter force, the Mara fighter is capable of mounting most weapons in the Shivan arsenal, allowing it to fulfill almost any mission.
 
     Pilots should also be aware of the fighter's exceptionnal agility and ability to move in all 3 axis",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Astaroth - Space Superiority Fighter",-1)
+$Name:        XSTR("Space Superiority Fighter",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Although the Astaroth fits the qualification of Advanced Space Superiority due to its agility and fragility, its poor performance in the field led analysts to class this fighter as simple Space Superiority.
+    XSTR("Astaroth - Space Superiority Fighter
+	
+	Although the Astaroth fits the qualification of Advanced Space Superiority due to its agility and fragility, its poor performance in the field led analysts to class this fighter as simple Space Superiority.
 
     ",-1)
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Manticore - Interceptor",-1)
+$Name:        XSTR("Interceptor",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Nothing to add.
+    XSTR("Manticore - Interceptor
+	
+	Nothing to add.
 
     ",-1)
 $end_multi_text
