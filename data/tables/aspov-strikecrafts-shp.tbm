@@ -6,7 +6,6 @@ $Name: SF Dragon
 	+nocreate ;:
 $Max Velocity:          70.0, 70.0, 75.0
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Sniper Gun")
 						("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun")
@@ -18,7 +17,6 @@ $Flags: ( "player_ship" "fighter" )
 $Name: SF Basilisk
 	+nocreate ;:
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb")
@@ -29,7 +27,6 @@ $Flags: ( "player_ship" "fighter" )
 $Name: SF Manticore
 	+nocreate ;:
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "EMP Adv.#Shivan")
@@ -42,7 +39,6 @@ $Name: SF Mara
 $Max Velocity:          70.0, 70.0, 70.0
 $Rear Velocity:         70.0
 $Glide: YES
-;;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Sniper Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan" "TAG-C#Barrage")
@@ -66,7 +62,6 @@ $Name: SF Aeshma
 $Max Velocity:          55.0, 55.0, 68.0
 $Rear Velocity:         20.0
 $Glide: YES
-;;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Sniper Gun" "Shivan Heavy Anticap Laser" "Shivan Flak Weapon")
@@ -88,7 +83,6 @@ $Name: SF Astaroth
 	+nocreate ;:
 $Max Velocity:          60.0, 60.0, 80.0
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "EMP Adv.#Shivan")
@@ -105,7 +99,6 @@ $Afterburner:           YES
 $Name: SB Nephilim
 	+nocreate ;:
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" )
@@ -125,7 +118,6 @@ $Name: SB Taurvi
 $Max Velocity:          55.0, 55.0, 65.0
 $Rear Velocity:         65.0
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Sniper Gun" "Shivan Scatter Gun" "Shivan Large Cannon")
@@ -148,7 +140,6 @@ $Name: SB Nahema
 	+nocreate ;:
 $Max Velocity:          80.0, 80.0, 90.0
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "TAG-C#Shivan" )
@@ -168,7 +159,6 @@ $Name: SB Seraphim
 	+nocreate ;:
 $Max Velocity:			40.0, 40.0, 60.0
 $Glide: YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
@@ -209,7 +199,7 @@ $Subsystem:                     b05-turreta,1,1.0
 
 $Name:					GTF Myrmidon
 	+nocreate ;:
-$Allowed PBanks:		( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Fire Spitter" "Hell Spitter" )
+$Allowed PBanks:		( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Fire Spitter" "Hell Spitter" "Sekhu" )
 						( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" )
 $PBank Capacity: ( 40, 40 )
 $Shield Armor Type:		LightArmor
@@ -219,7 +209,6 @@ $Name:					SF Mara (terrans)
 $Max Velocity:          70.0, 70.0, 75.0
 $Rear Velocity:			70.0
 $Glide: YES
-	;; +Dynamic Glide Cap:	YES
 	+Glide Accel Mult:	1.0
 $Armor Type:			Shivan Elite Armor	; hits vs normal= 2938	| 1679
 $Shield Armor Type:		Shivan Elite Armor	; hits vs normal= 1958	| 5875
@@ -340,7 +329,6 @@ $Forward decel:         1.5
 $Slide accel:           2.0
 $Slide decel:           2.0
 $Glide:					YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Expl inner rad:        25.0
 $Expl outer rad:        55.0
@@ -446,7 +434,6 @@ $Forward decel:         2.0
 $Slide accel:           0.0
 $Slide decel:           0.0
 $Glide:					YES
-;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Expl inner rad:        55.0
 $Expl outer rad:        105.0
@@ -569,7 +556,6 @@ $Forward decel:         1.0
 $Slide accel:           2.0
 $Slide decel:           2.0
 $Glide: YES
-;;	+Dynamic Glide Cap: YES
 	+Glide Accel Mult:	1.0
 $Expl inner rad:        33.0
 $Expl outer rad:        66.0
