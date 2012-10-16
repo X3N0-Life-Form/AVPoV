@@ -1708,11 +1708,11 @@ $Subsystem:                     turret24,0.833,1.0
 $Subsystem:                     turret25,0.833,1.0
 	; $Default SBanks:                                ( "Piranha" )
 	$Max Turrets per Bomb:		1
-	$Flags:				( "check hull" )
+	$Flags:				( "check hull" "fire down normals" )
 $Subsystem:                     turret26,0.833,1.0
     ; $Default SBanks:                                ( "Piranha" )
 	$Max Turrets per Bomb:		1
-	$Flags:				( "check hull" )
+	$Flags:				( "check hull" "fire down normals" )
 
 ;; ================================================================================================ ;;
 $Name:                          GTC Aeolus

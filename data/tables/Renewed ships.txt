@@ -252,15 +252,17 @@ Moloch:		Command Corvette (Cyeagha)
 	armor: Shivan Elite Armor
 	turret 01:MRed/MRedUp
 	turret 02:Suppression Flak
+	turret 03:Shivan Multi Turret
 	turret 05:MRed/MRedUp
 	turret 06:MRed/MRedUp
 	turret 07:Fast Flak
 	turret 08:Fast Flak
 	turret 09:Fast Flak
-	turret 10:Heavy Flak
-	turret 11:Heavy Flak
+	turret 10:Shivan Multi Turret
+	turret 11:Shivan Multi Turret
 	turret 12:SAAA
 	turret 14:SAAA
+	turret 15:Shivan Multi Turret
 
 Moloch:		Area Denial Corvette
 	turret 01:Long Range Flak

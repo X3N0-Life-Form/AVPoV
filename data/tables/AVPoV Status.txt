@@ -402,7 +402,7 @@ E_Sathanas_Arc_04.The Waiting Dark						//ToRebalance
 		Ships :
 			-GTCv Warihu (Deimos class)		//destroyed
 			-SCv Cyaegha (Moloch class)		//vital
-			-GTC Lexington (Leviathan class)	//destroyed
+			-GTC Lexington (Leviathan class)	//non-vital
 			-SC Hellknight (Rakshasa class)		//vital
 		Other :
 			-GTA Seer (Charibdys class) - mentionned during briefing
@@ -484,7 +484,14 @@ E_Sathanas_07.Sorrow								//
 #
 #
 
-F_Capella_01.Nightmare
+///////////////////////////////////////////////////////////////////////////////////
+F_Capella_01.Nightmare								//
+/////////////////////////////////////////////////////////////////////////////////
+	5th gen mission
+	Background: Capella
+
+	
+
 
 F_Capella_02.Exodus
 
