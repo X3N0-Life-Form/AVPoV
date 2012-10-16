@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", 1867)
 $Author: James Agay
 $Created: 06/04/99 at 14:09:31
-$Modified: 10/23/11 at 15:00:27
+$Modified: 10/16/12 at 18:17:54
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -823,10 +827,8 @@ $Damage: 14
 +Sbank Ammo: ( 0 )
 +Subsystem: turret51
 $Damage: 13
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret52
 $Damage: 3
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret53
 $Damage: 22
 +Primary Banks: ( "LRBGreen" )
@@ -835,10 +837,8 @@ $Damage: 2
 +Primary Banks: ( "LRBGreen" )
 +Subsystem: turret55
 $Damage: 22
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret56
 $Damage: 22
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret57
 $Damage: 4
 +Primary Banks: ( "LRBGreen" )
@@ -853,13 +853,10 @@ $Damage: 6
 +Primary Banks: ( "LRBGreen" )
 +Subsystem: turret61
 $Damage: 6
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret62
 $Damage: 10
-+Primary Banks: ( "VSlash" )
 +Subsystem: turret63
 $Damage: 1
-+Primary Banks: ( "VSlash" )
 +Subsystem: radardish01
 $Damage: 22
 +Subsystem: radardish02
@@ -1166,25 +1163,25 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Primary Banks: ( "Mass Driver" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Mass Driver" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "Mass Driver" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "Mass Driver" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 1 "Khepri" ) 
@@ -3688,6 +3685,7 @@ $Starbitmap: SunSathanas01
 
 $Event Music: 2: Exodus
 $Briefing Music: Brief2
+$Debriefing Success Music: Average
 
 #End
 

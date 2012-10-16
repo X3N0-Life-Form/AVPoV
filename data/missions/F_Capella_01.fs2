@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 10/12/12 at 20:11:12
+$Modified: 10/12/12 at 22:17:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3634.787842, 413.587769, 5647.137207
++Viewer pos: -3739.338135, -1302.970459, 8326.945313
 +Viewer orient:
-	0.925754, -0.000000, 0.378127,
-	-0.118088, 0.949984, 0.289111,
-	-0.359215, -0.312297, 0.879451
+	-0.428151, 0.000001, -0.903707,
+	-0.248467, 0.961461, 0.117717,
+	0.868879, 0.274942, -0.411650
 
 
 $AI Profile: myProfile
