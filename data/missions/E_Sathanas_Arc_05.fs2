@@ -611,10 +611,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "MRed-Refractor" )
++Primary Banks: ( "MRed" )
 +Subsystem: turret02
 +Primary Banks: ( "Suppression Flak" )
 +Subsystem: turret03
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret04
 +Sbank Ammo: ( 0 )
 +Subsystem: turret05
@@ -628,9 +629,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 +Primary Banks: ( "Fast Flak" )
 +Subsystem: turret10
-+Primary Banks: ( "Heavy Flak" )
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret11
-+Primary Banks: ( "Heavy Flak" )
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret12
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret13
@@ -638,6 +639,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret14
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret15
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret16
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace

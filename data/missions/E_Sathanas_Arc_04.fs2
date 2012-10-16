@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Waiting Dark", -1)
 $Author: X3N0-Life-Form
 $Created: 08/02/10 at 20:31:11
-$Modified: 10/13/12 at 14:12:19
+$Modified: 10/16/12 at 18:22:33
 $Notes:
 Original music : Exodus$End Notes:
 
@@ -26,11 +26,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1023.863525, 4735.932617, 2498.790527
++Viewer pos: -429.045593, 2153.034668, 2967.483154
 +Viewer orient:
-	-0.933665, 0.000003, -0.358148,
-	0.275565, 0.638753, -0.718372,
-	0.228766, -0.769412, -0.596382
+	-0.573575, -0.000000, -0.819153,
+	0.601435, 0.678916, -0.421128,
+	0.556136, -0.734216, -0.389410
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Zeta" "Delta" )
 
@@ -448,7 +448,7 @@ $Ship Choices: (
 	"Prometheus S"	16
 )
 
-#Objects		;! 51 total
+#Objects		;! 54 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Perseus
@@ -469,7 +469,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "player-start" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -560,6 +560,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret02
 +Primary Banks: ( "Suppression Flak" )
 +Subsystem: turret03
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret04
 +Sbank Ammo: ( 0 )
 +Subsystem: turret05
@@ -573,9 +574,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 +Primary Banks: ( "Fast Flak" )
 +Subsystem: turret10
-+Primary Banks: ( "Heavy Flak" )
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret11
-+Primary Banks: ( "Heavy Flak" )
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret12
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret13
@@ -583,13 +584,14 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret14
 +Primary Banks: ( "SAAA" )
 +Subsystem: turret15
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret16
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
-   ( > 10 ( hits-left "Cyaegha#1" ) ) 
+   ( > ( hits-left "Cyaegha#1" ) 57 ) 
    ( is-destroyed-delay 4 "Warihu" ) 
 )
 $Determination: 10
@@ -1118,19 +1120,26 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Standard Flak" )
 +Subsystem: turret02
++Primary Banks: ( "MGreen" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
++Primary Banks: ( "Morning Star" )
 +Subsystem: turret08
++Primary Banks: ( "Morning Star" )
 +Subsystem: turret09a-01-main
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-destroyed-delay 16 "Zeta" ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( or 
+   ( has-departed-delay 9 "Cyaegha#2" ) 
+   ( has-departed-delay 7 "Hellknight" ) 
+)
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
@@ -1154,7 +1163,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
++Primary Banks: ( "Shivan Anticap Laser" "Shivan Heavy Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Area Bomb" "Tornado#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1184,7 +1193,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
++Primary Banks: ( "Shivan Anticap Laser" "Shivan Heavy Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Area Bomb" "Tornado#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1214,7 +1223,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
++Primary Banks: ( "Shivan Anticap Laser" "Shivan Heavy Laser" "Shivan Light Laser" )
 +Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Area Bomb" "Tornado#Shivan" )
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1277,10 +1286,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret16
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
-$Arrival Cue: ( and 
-   ( has-departed-delay 1 "Cyaegha#1" ) 
-   ( is-destroyed-delay 0 "Lexington" ) 
-)
+$Arrival Cue: ( is-event-true-delay "short jump" 15 ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( < ( hits-left "Cyaegha#2" ) 0 ) 
@@ -2025,7 +2031,89 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-#Wings		;! 13 total
+$Name: Delta 3		;! Object #51
+$Class: GTF Myrmidon
+$Team: Friendly
+$Location: 2139.452637, 1800.000000, 534.474792
+$Orientation:
+	-0.990437, -0.113209, 0.078856,
+	-0.137966, 0.812713, -0.566096,
+	0.000000, -0.571561, -0.820560
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Fire Spitter" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Kappa 1		;! Object #52
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: 844.500000, -370.000000, 2105.199951
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 0.100626, -0.994924,
+	0.000000, 0.994924, 0.100626
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Morning Star" )
++Secondary Banks: ( "Tempest" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Kappa 2		;! Object #53
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: 915.968201, -298.157257, 2112.466309
+$Orientation:
+	1.000000, -0.000000, 0.000000,
+	0.000000, 0.100626, -0.994924,
+	0.000000, 0.994924, 0.100626
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Morning Star" )
++Secondary Banks: ( "Tempest" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+#Wings		;! 14 total
 
 $Name: Cancer
 $Waves: 1
@@ -2159,21 +2247,22 @@ $Ships: (		;! 4 total
 	"Libra 3"
 	"Libra 4"
 )
-$AI Goals: ( goals ( ai-chase "Lexington" 50 ) ( ai-guard-wing "Gemini" 49 ) )
+$AI Goals: ( goals ( ai-chase "Lexington" 50 ) ( ai-guard-wing "Gemini" 49 ) ( ai-chase-any 46 ) )
 +Flags: ( )
 
 $Name: Delta
 $Waves: 1
 $Wave Threshold: 0
-$Special Ship: 0		;! Delta 1
+$Special Ship: 2		;! Delta 3
 
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 0 "Lexington" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 2 total
+$Ships: (		;! 3 total
 	"Delta 1"
 	"Delta 2"
+	"Delta 3"
 )
 $AI Goals: ( goals ( ai-guard "Lexington" 50 ) )
 +Flags: ( )
@@ -2291,7 +2380,25 @@ $AI Goals: ( goals ( ai-guard "Warihu" 50 ) )
 +Hotkey: 2
 +Flags: ( )
 
-#Events		;! 32 total
+$Name: Kappa
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Kappa 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 200
+$Arrival Anchor: Zeta 1
+$Arrival Cue: ( has-arrived-delay 1 "Zeta" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Kappa 1"
+	"Kappa 2"
+)
+$AI Goals: ( goals ( ai-guard-wing "Zeta" 50 ) ( ai-guard "Warihu" 48 ) ( ai-chase-wing "Leo" 51 ) )
++Flags: ( )
+
+#Events		;! 34 total
 
 $Formula: ( when 
    ( true ) 
@@ -2357,7 +2464,7 @@ $Formula: ( when
    ( set-armor-type 
       "Warihu" 
       ( true ) 
-      "Shivan Elite Armor" 
+      "Hell Armor" 
       "weapons" 
       "turret01" 
       "turret02" 
@@ -2584,10 +2691,38 @@ $Formula: ( when
       "Trebuchet" 
       "Cyaegha#1" 
    )
+   ( set-armor-type 
+      "Zeta 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Zeta 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Zeta 3" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Zeta 4" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
 )
 +Name: zeta wing arrives
 +Repeat Count: 1
-+Interval: 8
++Interval: 1
 
 $Formula: ( when 
    ( true ) 
@@ -2648,7 +2783,7 @@ $Formula: ( when
    ( send-message 
       "Lexington" 
       "High" 
-      "Lexington arrives" 
+      "Lexington arrives - lexi" 
    )
    ( fire-beam 
       "Cyaegha#1" 
@@ -2716,10 +2851,21 @@ $Formula: ( when
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Lexington" ) 
-   ( send-message 
-      "Warihu" 
-      "High" 
-      "Lexington destroyed -Warihu" 
+   ( if-then-else 
+      ( is-event-true-delay 
+         "lexi not destroyed" 
+         0 
+      )
+      ( send-message 
+         "Warihu" 
+         "High" 
+         "lexi destroyed after repairsW" 
+      )
+      ( send-message 
+         "Warihu" 
+         "High" 
+         "Lexington destroyed -Warihu" 
+      )
    )
 )
 +Name: Lexington destroyed
@@ -2734,6 +2880,7 @@ $Formula: ( when
       "High" 
       "heavy strike 1 - Warihu" 
    )
+   ( change-ai-class "Demon" "Warihu" ) 
 )
 +Name: heavy strike
 +Repeat Count: 1
@@ -2745,7 +2892,7 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Virgo" ) 
       ( is-destroyed-delay 0 "Aries" ) 
    )
-   ( do-nothing ) 
+   ( change-ai-class "Big" "Warihu" ) 
 )
 +Name: Destroy Virgo & Aries
 +Repeat Count: 1
@@ -2754,7 +2901,10 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 7 "Lexington" ) 
+   ( or 
+      ( is-destroyed-delay 7 "Lexington" ) 
+      ( has-arrived-delay 40 "Lexington" ) 
+   )
    ( repair-subsystem 
       "Warihu" 
       "turret23" 
@@ -2777,7 +2927,20 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 36 "Lexington" ) 
+   ( true ) 
+   ( send-message 
+      "Warihu" 
+      "High" 
+      "Beam repaired lnd - Warihu" 
+   )
+)
++Name: lexi not destroyed
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Cyaegha#1" ) 67 ) 
    ( add-goal 
       "Cyaegha#1" 
       ( ai-warp-out 89 ) 
@@ -2825,6 +2988,12 @@ $Formula: ( when
       100 
    )
    ( add-remove-escort "Cyaegha#2" 1 ) 
+   ( set-object-position 
+      "cya2 course:1" 
+      ( get-object-x "Warihu" ) 
+      ( + ( get-object-y "Warihu" ) 1500 ) 
+      ( get-object-z "Warihu" ) 
+   )
 )
 +Name: Cyaegha#2 arrives
 +Repeat Count: 1
@@ -2846,7 +3015,7 @@ $Formula: ( when
    ( beam-free-all "Cyaegha#2" ) 
    ( add-goal 
       "Cyaegha#2" 
-      ( ai-chase "Warihu" 89 ) 
+      ( ai-waypoints-once "cya2 course" 89 ) 
    )
 )
 +Name: Cyaegha fires MRedUp
@@ -2856,12 +3025,31 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
+   ( not 
+      ( is-destroyed-delay 0 "Warihu" ) 
+   )
+   ( set-object-position 
+      "cya2 course:1" 
+      ( get-object-x "Warihu" ) 
+      ( + ( get-object-y "Warihu" ) 1500 ) 
+      ( get-object-z "Warihu" ) 
+   )
+)
++Name: update warihu's position
++Repeat Count: -1
++Trigger Count: 80
++Interval: 5
++Chained: 0
+
+$Formula: ( when 
    ( is-destroyed-delay 0 "Warihu" ) 
    ( send-message 
       "#Command" 
       "High" 
       "Warihu destroyed - cmd" 
    )
+   ( change-soundtrack "<No Music>" ) 
+   ( play-sound-from-file "HWC_59.ogg" ) 
 )
 +Name: Warihu destroyed
 +Repeat Count: 1
@@ -2916,6 +3104,10 @@ $Formula: ( when
       "turret13" 
       "turret14" 
    )
+   ( change-soundtrack "<No Music>" ) 
+   ( play-sound-from-file 
+      "PST_Fortress-arv.ogg" 
+   )
 )
 +Name: SC Hellknight arrives
 +Repeat Count: 1
@@ -2955,7 +3147,7 @@ $Formula: ( or
    ( is-destroyed-delay 0 "Cyaegha#2" ) 
 )
 
-#Waypoints		;! 3 lists total
+#Waypoints		;! 4 lists total
 
 $Name: Cyeagha path
 $List: (		;! 4 points in list
@@ -2977,7 +3169,12 @@ $List: (		;! 1 points in list
 	( 1253.132935, -0.000093, 3215.691895 )
 )
 
-#Messages		;! 18 total
+$Name: cya2 course
+$List: (		;! 1 points in list
+	( -820.874023, -0.003276, 659.304565 )
+)
+
+#Messages		;! 20 total
 
 
 $Name: mission start 1 - Warihu
@@ -3028,7 +3225,7 @@ $MessageNew:  XSTR("Zeta wing has arrived to assist you, they should buy you som
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Lexington arrives
+$Name: Lexington arrives - lexi
 $Team: -1
 $MessageNew:  XSTR("This is the GTC Lexington. We've emerged dangerously close to the Cyaegha! Gunnery control, target this thing's dorsal beam before she starts pounding us.", -1)
 $end_multi_text
@@ -3042,7 +3239,7 @@ $end_multi_text
 
 $Name: short jump 1 - Warihu
 $Team: -1
-$MessageNew:  XSTR("Wait ... she's jumping out ! Attempting to vector its course ... Wait, something is wrong.", -1)
+$MessageNew:  XSTR("Wait ... she's jumping out ! Attempting to vector its course ... Wait, something is wrong. We'll get back to you Command. All fighters, stay alert.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
@@ -3072,7 +3269,7 @@ $end_multi_text
 
 $Name: heavy strike 1 - Warihu
 $Team: -1
-$MessageNew:  XSTR("More Seraphims just jumped in at close range ! Destroy those bombs, our hull has taken some serious hits already.", -1)
+$MessageNew:  XSTR("Shivan bombers emerging at close range! All batteries, fire at will.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
@@ -3084,9 +3281,21 @@ $end_multi_text
 
 $Name: Cyaegha disables 3rd beam3-win
 $Team: -1
-$MessageNew:  XSTR("Zeta wing is without fighter escort! Sir, should we move in to assist them?", -1)
+$MessageNew:  XSTR("Zeta wing only has minimal fighter escort! Sir, should we move in to assist them?", -1)
 $end_multi_text
 +AVI Name: Head-TP1
+
+$Name: Beam repaired lnd - Warihu
+$Team: -1
+$MessageNew:  XSTR("Our engineers tell us our beam should be able to fire again. We can still make it, maintain a tight formation, we're coming on their aft side.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: lexi destroyed after repairsW
+$Team: -1
+$MessageNew:  XSTR("Command, we've just lost the Lexington.", -1)
+$end_multi_text
++AVI Name: Head-CM1
 
 #Reinforcements		;! 0 total
 
