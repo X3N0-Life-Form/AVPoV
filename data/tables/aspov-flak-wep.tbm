@@ -3,7 +3,7 @@
 ;; new flaks
 
 $Name:							Light Flak
-$Model File:					hornet.pof				;; flak weapons are invisible until they hit or explode, so this doesn't really matter	
+$Model File:					none
 $Mass:							0.2
 $Velocity:						700.0					;; really fast - like AA fire
 $Fire Wait:						0.2					;; 
@@ -52,7 +52,7 @@ $Pspew:
 	+Bitmap:	Cmuzzle_0001
 
 $Name:							Fast Flak
-$Model File:					hornet.pof				;; flak weapons are invisible until they hit or explode, so this doesn't really matter	
+$Model File:					none
 $Mass:							0.2
 $Velocity:						900.0					;; really fast - like AA fire
 $Fire Wait:						0.10					;; 
@@ -102,7 +102,7 @@ $Pspew:
 
 
 $Name:							Advanced Flak
-$Model File:					hornet.pof				;; flak weapons are invisible until they hit or explode, so this doesn't really matter	
+$Model File:					none	
 $Mass:							0.5
 $Velocity:						900.0					;; really fast - like AA fire
 $Fire Wait:						0.10					;; 
@@ -159,7 +159,7 @@ $Name:							Suppression Flak
 	Mounted on the front of the Sathanas Juggernaught, the Suppression Flak fills a similar role to the alliance's Long Range Flak cannons, namely harassing bombers at long range to make the kill easier for close range point defense systems. The Suppression Flak, however is significantly more dangerous than a regular Long Range Flak, boasting an increased range, projectile speed, and damage output per projectile.
 	",-1)
 	$end_multi_text
-$Model File:					hornet.pof				;; flak weapons are invisible until they hit or explode, so this doesn't really matter	
+$Model File:					none
 $Mass:							1.2
 $Velocity:						850.0
 $Fire Wait:						0.35

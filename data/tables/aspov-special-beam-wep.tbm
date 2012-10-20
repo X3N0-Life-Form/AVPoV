@@ -26,7 +26,7 @@ $ImpactSnd:                     88
 $Flags:                         ("Big Ship" "huge" "beam")
 $Icon:                          icongun05
 $Anim:                          LoadGun07
-$Impact Explosion:              thrusterglow01
+$Impact Explosion:              none
 $Impact Explosion Radius:       50.0
 $BeamInfo:
 	+Type:						0	
@@ -117,7 +117,7 @@ $ImpactSnd:                     88             ;; The sound it makes when it hit
 $Flags:                         ("Big Ship" "huge" "beam")
 $Icon:                          icongun05
 $Anim:                          LoadGun07
-$Impact Explosion:              thrusterglow01
+$Impact Explosion:              none
 $Impact Explosion Radius:       50.0
 $BeamInfo:
 	+Type:						0				;; 0 - 4 are valid #'s
