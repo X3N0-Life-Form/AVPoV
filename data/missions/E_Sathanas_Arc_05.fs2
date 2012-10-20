@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("It's Hammer Time", -1)
 $Author: X3N0-Life-Form
 $Created: 10/02/10 at 16:58:31
-$Modified: 10/12/12 at 21:22:16
+$Modified: 10/20/12 at 19:44:28
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 650.236206, 781.973877, 6560.794922
++Viewer pos: 924.151794, 4213.263184, 6037.243652
 +Viewer orient:
-	0.112157, -0.000000, 0.993691,
-	-0.885195, 0.454365, 0.099911,
-	-0.451498, -0.890816, 0.050960
+	-0.876015, -0.000001, 0.482284,
+	-0.481078, -0.070672, -0.873825,
+	0.034085, -0.997500, 0.061909
 
 
 $AI Profile: FS2 RETAIL
@@ -606,12 +606,11 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 82
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "MRed" )
++Primary Banks: ( "SRed-Refractor" )
 +Subsystem: turret02
 +Primary Banks: ( "Suppression Flak" )
 +Subsystem: turret03
@@ -647,9 +646,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 20
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1018,9 +1018,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
++Primary Banks: ( "Wraith" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
@@ -1036,9 +1038,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 7
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1061,9 +1064,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
++Primary Banks: ( "Wraith" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
@@ -1079,9 +1084,10 @@ $Arrival Cue: ( has-arrived-delay 0 "Hammer 1" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 6
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1104,9 +1110,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
++Primary Banks: ( "Wraith" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
@@ -1122,9 +1130,10 @@ $Arrival Cue: ( has-arrived-delay 0 "Hammer 1" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 5
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1227,7 +1236,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1254,7 +1263,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1281,7 +1290,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1308,7 +1317,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2547,7 +2556,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2575,7 +2584,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2603,7 +2612,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2836,7 +2845,7 @@ $Determination: 10
 $Name: Wrath 1		;! Object #77
 $Class: SC Cain
 $Team: Hostile
-$Location: -713.214417, -215.583344, 5308.315430
+$Location: -713.214417, -215.583344, 5227.335449
 $Orientation:
 	0.984389, -0.091465, -0.150380,
 	-0.090416, -0.995808, 0.013812,
@@ -2867,9 +2876,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 10
 +Hotkey: 3
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
@@ -2879,7 +2889,7 @@ $Determination: 10
 $Name: Wrath 2		;! Object #78
 $Class: SC Cain
 $Team: Hostile
-$Location: -117.831299, -770.321777, 6151.058105
+$Location: -117.831299, -770.321777, 6070.078125
 $Orientation:
 	0.918066, 0.239249, -0.316095,
 	0.226217, -0.970958, -0.077887,
@@ -2910,9 +2920,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 9
 +Hotkey: 3
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
@@ -2922,7 +2933,7 @@ $Determination: 10
 $Name: Wrath 3		;! Object #79
 $Class: SC Cain
 $Team: Hostile
-$Location: -184.289261, 562.305847, 5885.392578
+$Location: -184.289261, 562.305847, 5804.412598
 $Orientation:
 	-0.998295, 0.000000, 0.058374,
 	0.000000, 1.000000, 0.000000,
@@ -2954,9 +2965,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 8
 +Hotkey: 3
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
@@ -3038,7 +3050,7 @@ $Determination: 10
 $Name: Leo 1		;! Object #83
 $Class: SF Mara
 $Team: Hostile
-$Location: 56.704693, 0.000085, 4951.059082
+$Location: 56.704693, 0.000085, 4604.412109
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3066,7 +3078,7 @@ $Determination: 10
 $Name: Leo 2		;! Object #84
 $Class: SF Mara
 $Team: Hostile
-$Location: -35.941822, 0.000130, 5036.966797
+$Location: -35.941822, 0.000130, 4690.319824
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3094,7 +3106,7 @@ $Determination: 10
 $Name: Leo 3		;! Object #85
 $Class: SF Mara
 $Team: Hostile
-$Location: 183.138245, 0.000076, 5074.082031
+$Location: 183.138245, 0.000076, 4727.435059
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3122,7 +3134,7 @@ $Determination: 10
 $Name: Leo 4		;! Object #86
 $Class: SF Mara
 $Team: Hostile
-$Location: -7.510289, -0.000082, 5180.449707
+$Location: -7.510289, -0.000082, 4833.802734
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3445,7 +3457,7 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Taurus 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( < ( hits-left "Cyaegha" ) 61 ) 
+$Arrival Cue: ( < ( hits-left "Cyaegha" ) 37 ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -3567,7 +3579,6 @@ $Ships: (		;! 3 total
 	"Wrath 2"
 	"Wrath 3"
 )
-$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) )
 +Flags: ( )
 
 $Name: Saggitarius
@@ -3621,7 +3632,18 @@ $Formula: ( when
       "mission start 2 - cmd" 
       2200 
    )
-   ( add-remove-escort "Cyaegha" 4 ) 
+   ( if-then-else 
+      ( is-previous-event-true 
+         "E_Sathanas_Arc_04" 
+         "cya retreating" 
+      )
+      ( set-subsystem-strength 
+         "Cyaegha" 
+         "Hull" 
+         57 
+      )
+      ( do-nothing ) 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
@@ -3634,12 +3656,10 @@ $Formula: ( when
       "High" 
       "Wrath arrives - alpha 2" 
    )
-   ( add-remove-escort "Wrath 1" 1 ) 
-   ( add-remove-escort "Wrath 2" 2 ) 
-   ( add-remove-escort "Wrath 3" 3 ) 
    ( beam-lock "Wrath 1" "turret07" ) 
    ( beam-lock "Wrath 2" "turret07" ) 
    ( beam-lock "Wrath 3" "turret07" ) 
+   ( add-remove-escort "Cyaegha" 0 ) 
 )
 +Name: Wrath arrives
 +Repeat Count: 1
@@ -3652,7 +3672,6 @@ $Formula: ( when
       "High" 
       "Hammer CG arrives - hammer 1" 
    )
-   ( add-remove-escort "Hammer 1" 1 ) 
 )
 +Name: Hammer CG arrives
 +Repeat Count: 1
@@ -3686,8 +3705,7 @@ $Formula: ( when
       "High" 
       "Wrath destroyed - hammer 1" 
    )
-   ( add-remove-escort "Hammer 2" 1 ) 
-   ( add-remove-escort "Hammer 3" 1 ) 
+   ( add-remove-escort "Cyaegha" 20 ) 
 )
 +Name: Destroy Wrath
 +Repeat Count: 1
@@ -3708,9 +3726,59 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( < 
-      ( distance "Hammer 1" "Wrath 1" ) 
-      4000 
+   ( and 
+      ( or 
+         ( < 
+            ( distance "Hammer 1" "Wrath 1" ) 
+            4000 
+         )
+         ( < 
+            ( distance "Alpha 1" "Wrath 1" ) 
+            2000 
+         )
+         ( < 
+            ( distance "Alpha 2" "Wrath 1" ) 
+            2000 
+         )
+         ( < 
+            ( distance "Alpha 3" "Wrath 1" ) 
+            2000 
+         )
+         ( < 
+            ( distance "Alpha 4" "Wrath 1" ) 
+            2000 
+         )
+      )
+      ( and 
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Wrath 1" 
+               "turret07" 
+               0 
+            )
+         )
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Wrath 2" 
+               "turret07" 
+               0 
+            )
+         )
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Wrath 3" 
+               "turret07" 
+               0 
+            )
+         )
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Cyaegha" 
+               "turret01" 
+               0 
+            )
+         )
+      )
    )
    ( fire-beam 
       "Cyaegha" 
@@ -3742,11 +3810,34 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( not 
-      ( is-subsystem-destroyed-delay 
-         "Wrath 1" 
-         "turret07" 
-         0 
+   ( and 
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Wrath 1" 
+            "turret07" 
+            0 
+         )
+      )
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Wrath 2" 
+            "turret07" 
+            0 
+         )
+      )
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Wrath 3" 
+            "turret07" 
+            0 
+         )
+      )
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Cyaegha" 
+            "turret01" 
+            0 
+         )
       )
    )
    ( fire-beam 
@@ -4417,7 +4508,7 @@ $end_multi_text
 
 $Name: Wrath arrives - alpha 2
 $Team: -1
-$MessageNew:  XSTR("Three Cain class cruisers have entered the fray. designation Wrath CG. I guess things are never easy.", -1)
+$MessageNew:  XSTR("Three Cain class cruisers have entered the fray. designation Wrath. It's never easy, is it?", -1)
 $end_multi_text
 +AVI Name: Head-TP1
 
