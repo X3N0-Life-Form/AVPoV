@@ -138,10 +138,10 @@ $Name:                          Shivan Turret Laser Up
 	Like other Shivan weapons, the Standard All-Purpose Defence Turret underwent an upgrade after the destruction of the SJ Sathanas. Firing almost twice as fast and dealing almost twice as much damage as the Standard version, this turret has proven to be a significant threat to allied fighter and gives Shivans a significant boost in their ship-to-ship non-frontal engagement capabilities.",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
-@Laser Bitmap:                  Vepar_Bitmap
+@Laser Bitmap:                  Vepar_Bitmap_up
 @Laser Glow:					Vapula_Glow
-@Laser Color:								   250, 30, 30
-@Laser Color2:								   250, 30, 30
+@Laser Color:								   250, 170, 100
+@Laser Color2:								   250, 170, 100
 @Laser Length:       			14.0
 @Laser Head Radius:  			8.0
 @Laser Tail Radius:  			8.0

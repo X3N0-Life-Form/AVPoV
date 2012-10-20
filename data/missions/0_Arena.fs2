@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/16/12 at 18:49:24
+$Modified: 10/20/12 at 17:33:38
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -16,7 +16,7 @@ $end_multi_text
 
 +Game Type Flags: 1
 
-+Flags: 262280
++Flags: 263304
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1257.949219, 3804.795898, 6170.107422
++Viewer pos: 3460.045898, 528.207581, 4277.531250
 +Viewer orient:
-	-0.884596, 0.000002, -0.466357,
-	0.427279, 0.400715, -0.810469,
-	0.186875, -0.916203, -0.354472
+	-0.001058, -0.000000, 0.999999,
+	-0.741829, 0.670588, -0.000785,
+	-0.670588, -0.741830, -0.000710
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -83,116 +83,22 @@ $Num stages: 0
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
-	"GTF Ulysses"	5
-	"GTF Hercules"	5
-	"GTF Hercules Mark II"	5
-	"GTF Ares"	5
-	"GTF Erinyes"	5
-	"GTF Loki"	5
-	"GTF Pegasus"	5
-	"GTF Perseus"	5
-	"GTF Myrmidon"	5
-	"SF Mara (terrans)"	5
-	"GTB Artemis"	5
-	"GTB Artemis D.H."	5
-	"GTB Medusa"	5
-	"GTB Ursa"	5
-	"GTB Zeus"	5
-	"GTB Boanerges"	5
-	"GVF Seth"	5
-	"GVF Horus"	5
-	"GVF Thoth"	5
-	"GVF Serapis"	5
-	"GVF Tauret"	5
 	"GVB Sekhmet"	5
-	"GVB Osiris"	5
-	"GVB Bakha"	5
-	"GVF Ptah"	5
-	"SF Dragon"	5
-	"SF Basilisk"	5
-	"SF Manticore"	5
-	"SF Aeshma"	5
-	"SF Mara"	5
-	"SF Astaroth"	5
-	"SB Nephilim"	5
-	"SB Taurvi"	5
-	"SB Nahema"	5
-	"SB Seraphim"	5
-	"GVF Serapis Elite"	5
-	"GVB Sekhmet Elite"	5
-	"SF Mara#"	5
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	14
-	"Mekhu HL-7"	16
-	"Akheton SDG"	16
-	"Morning Star"	16
-	"Prometheus R"	2
-	"Prometheus S"	16
-	"Maxim"	16
-	"UD-8 Kayser"	16
-	"Circe"	16
-	"Lamprey"	16
-	"Shivan Light Laser"	102
-	"Shivan Heavy Laser"	100
-	"Shivan Mega Laser"	101
-	"UD-6"	20
-	"Fire Spitter"	100
-	"Hell Spitter"	100
 	"Hayg Mas"	100
-	"Sehku"	100
-	"Sahr AS"	100
-	"Shivan Light Laser Up"	100
-	"Shivan Heavy Laser Up"	100
-	"Shivan Anticap Laser"	100
-	"Shivan Heavy Anticap Laser"	100
-	"Shivan Scatter Gun"	100
-	"Shivan Light Scatter Gun"	100
-	"Shivan Sniper Gun"	100
 	"Shivan Large Cannon"	100
-	"Shivan Flak Weapon"	100
-	"Rockeye"	100
-	"Tempest"	320
-	"Hornet"	660
-	"Tornado"	500
-	"Harpoon"	468
-	"Trebuchet"	520
-	"TAG-A"	500
-	"TAG-B"	500
-	"TAG-C"	516
-	"Piranha"	507
-	"Stiletto II"	500
-	"Infyrno"	500
-	"Cyclops"	500
-	"Helios"	500
-	"EMP Adv."	500
-	"Tempest#Shivan"	1000
-	"Hornet#Shivan"	600
-	"Tornado#Shivan"	600
-	"Trebuchet#Shivan"	50
-	"EMP Adv.#Shivan"	100
-	"Piranha#Shivan"	103
-	"Shivan Disruptor"	100
-	"Shivan Area Bomb"	100
-	"Shivan Bomb"	100
-	"Shivan Megabomb"	100
-	"Macross"	100
-	"Overkill"	100
-	"Bane"	100
-	"TAG-C#Shivan"	85
-	"AntiFighterTAG#Shivan"	100
-	"Shivan Swarmer Bomb"	100
-	"Shivan Advanced Swarmer Bomb"	100
-	"Shivan LR Swarm"	100
-	"Tempest Adv#Shivan"	1000
-	"Rockeye#Shivan"	30
+	"Shivan Heavy Laser"	1
+	"Shivan Mega Laser"	1
+	"Hornet#Shivan"	80
+	"Trebuchet#Shivan"	10
 )
 
-#Objects		;! 4 total
+#Objects		;! 5 total
 
 $Name: Alpha 1		;! Object #0
-$Class: SB Seraphim
+$Class: SF Mara
 $Team: Friendly
 $Location: 2071.403076, 352.738953, 3920.311523
 $Orientation:
@@ -203,9 +109,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Light Laser" "Shivan Light Laser" )
-+Subsystem: turret01
-+Subsystem: turret02
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -307,17 +210,21 @@ $Determination: 10
 $Name: GVC Hemsut 2		;! Object #2
 $Class: GVC Hemsut
 $Team: Friendly
-$Location: 2633.221680, -0.000040, 3868.869385
+$Location: 2751.058105, -0.000055, 4140.722168
 $Orientation:
 	1.000000, 0.000000, 0.000000,
-	0.000000, 0.939372, 0.342897,
-	0.000000, -0.342897, 0.939372
+	0.000000, -0.615002, -0.788524,
+	0.000000, 0.788524, -0.615002
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: Turret01
++Secondary Banks: ( "Hornet" )
++Sbank Ammo: ( 0 )
 +Subsystem: Turret02
++Secondary Banks: ( "Hornet" )
++Sbank Ammo: ( 0 )
 +Subsystem: Turret03
 $Damage: 100
 +Subsystem: Turret04
@@ -354,12 +261,12 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
-+Primary Banks: ( "Mass Driver" )
++Primary Banks: ( "Shivan Turret Laser Up" )
 +Subsystem: turret02a
 +Subsystem: turret03
-$Damage: 100
++Primary Banks: ( "Shivan Turret Laser" )
 +Subsystem: turret04
-$Damage: 100
++Primary Banks: ( "Shivan Turret Laser" )
 +Subsystem: turret05
 +Subsystem: turret06
 $Arrival Location: Hyperspace
@@ -375,6 +282,48 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 90
+
+$Name: SC Cain 4		;! Object #4
+$Class: SC Cain
+$Team: Friendly
+$Location: 2836.072998, 74.043411, 4334.258789
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Shivan Turret Laser" )
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Primary Banks: ( "Shivan Turret Laser" )
++Subsystem: turret06
++Primary Banks: ( "Shivan Turret Laser" )
++Subsystem: turret07
++Primary Banks: ( "Shivan Turret Laser Up" )
++Subsystem: turret08
++Sbank Ammo: ( 0 )
++Subsystem: turret09
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 2
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
 
 #Wings		;! 1 total
 
