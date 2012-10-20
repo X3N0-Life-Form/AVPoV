@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/13/12 at 11:57:59
+$Modified: 10/16/12 at 18:49:24
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,9 +30,9 @@ $end_multi_text
 
 +Viewer pos: 1257.949219, 3804.795898, 6170.107422
 +Viewer orient:
-	-0.756512, -0.000000, -0.653980,
-	0.343287, 0.851151, -0.397109,
-	0.556636, -0.524921, -0.643906
+	-0.884596, 0.000002, -0.466357,
+	0.427279, 0.400715, -0.810469,
+	0.186875, -0.916203, -0.354472
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -43,7 +43,13 @@ $AI Profile: myProfile
 
 $Variables:
 (
-		0		"fov"		"0"		"number"
+		0		"b_aten"		"0"		"number"
+		1		"b_hemsut"		"0"		"number"
+		2		"fov"		"0"		"number"
+		3		"h_aten"		"0"		"number"
+		4		"h_hemsut"		"0"		"number"
+		5		"p_aten"		"0"		"number"
+		6		"p_hemsut"		"0"		"number"
 )
 
 #Command Briefing
@@ -128,9 +134,9 @@ $Ship Choices: (
 	"UD-8 Kayser"	16
 	"Circe"	16
 	"Lamprey"	16
-	"Shivan Light Laser"	100
+	"Shivan Light Laser"	102
 	"Shivan Heavy Laser"	100
-	"Shivan Mega Laser"	100
+	"Shivan Mega Laser"	101
 	"UD-6"	20
 	"Fire Spitter"	100
 	"Hell Spitter"	100
@@ -138,8 +144,8 @@ $Ship Choices: (
 	"Sehku"	100
 	"Sahr AS"	100
 	"Shivan Light Laser Up"	100
-	"Shivan Heavy Laser Up"	101
-	"Shivan Anticap Laser"	101
+	"Shivan Heavy Laser Up"	100
+	"Shivan Anticap Laser"	100
 	"Shivan Heavy Anticap Laser"	100
 	"Shivan Scatter Gun"	100
 	"Shivan Light Scatter Gun"	100
@@ -164,9 +170,9 @@ $Ship Choices: (
 	"Tempest#Shivan"	1000
 	"Hornet#Shivan"	600
 	"Tornado#Shivan"	600
-	"Trebuchet#Shivan"	40
+	"Trebuchet#Shivan"	50
 	"EMP Adv.#Shivan"	100
-	"Piranha#Shivan"	100
+	"Piranha#Shivan"	103
 	"Shivan Disruptor"	100
 	"Shivan Area Bomb"	100
 	"Shivan Bomb"	100
@@ -178,16 +184,17 @@ $Ship Choices: (
 	"AntiFighterTAG#Shivan"	100
 	"Shivan Swarmer Bomb"	100
 	"Shivan Advanced Swarmer Bomb"	100
-	"Shivan LR Swarm"	140
-	"Tempest Adv#Shivan"	1800
+	"Shivan LR Swarm"	100
+	"Tempest Adv#Shivan"	1000
+	"Rockeye#Shivan"	30
 )
 
-#Objects		;! 7 total
+#Objects		;! 4 total
 
 $Name: Alpha 1		;! Object #0
-$Class: SF Mara#
+$Class: SB Seraphim
 $Team: Friendly
-$Location: 1597.023804, 1614.215942, 2878.767578
+$Location: 2071.403076, 352.738953, 3920.311523
 $Orientation:
 	0.426660, 0.000000, -0.904412,
 	0.488050, 0.841901, 0.230239,
@@ -196,12 +203,15 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Shivan Mega Laser" "Shivan Light Laser" "Shivan Light Laser" )
++Subsystem: turret01
++Subsystem: turret02
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" "guardian" )
++Flags: ( "cargo-known" "protect-ship" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -304,7 +314,6 @@ $Orientation:
 	0.000000, -0.342897, 0.939372
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: Turret01
@@ -342,7 +351,6 @@ $Orientation:
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
@@ -368,160 +376,6 @@ $Determination: 10
 +Use Table Score:
 +Score: 90
 
-$Name: Command Heavy Cruiser		;! Object #4
-$Class: SC Lilith
-$Team: Unknown
-$Location: 3125.472656, 0.000040, 4168.190430
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 210
-$Texture Replace:
-+old: lilith_1-glow
-+new: lilith_1_cmd-glow
-+old: lilith_2-glow
-+new: lilith_2_cmd-glow
-
-$Name: Hunter Killer Cruiser		;! Object #5
-$Class: SC Rakshasa
-$Team: Unknown
-$Location: 2839.394531, -0.000000, 4556.279785
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 300
-$Texture Replace:
-+old: rak_01-glow
-+new: rak_01_cmd-glow
-+old: rak_02-glow
-+new: rak_02_cmd-glow
-
-$Name: Hunter Killer Destroyer		;! Object #6
-$Class: SD Ravana
-$Team: Unknown
-$Location: 4646.900879, 0.000032, 5783.501465
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
-+Subsystem: turret25
-+Subsystem: turret26
-+Subsystem: turret27
-+Subsystem: turret28
-+Subsystem: turret29
-+Subsystem: turret30
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 670
-$Texture Replace:
-+old: capital04-01
-+new: capital04-01_cmd
-+old: capital04-03-glow
-+new: capital04-03_cmd-glow
-+old: corvstile2
-+new: corvstile2_cmd
-+old: htlravana-glow
-+new: htlravana_cmd-glow
-+old: scap02-glow
-+new: scap02_cmd-glow
-+old: supertile1-glow
-+new: supertile1_cmd-glow
-
 #Wings		;! 1 total
 
 $Name: Alpha
@@ -539,7 +393,7 @@ $Ships: (		;! 1 total
 +Hotkey: 0
 +Flags: ( )
 
-#Events		;! 6 total
+#Events		;! 10 total
 
 $Formula: ( when 
    ( true ) 
@@ -589,7 +443,7 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( true ) 
+   ( false ) 
    ( training-msg "fov" ) 
    ( ship-invulnerable "Alpha 1" ) 
    ( set-subsystem-strength 
@@ -689,13 +543,75 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 
+$Formula: ( when 
+   ( true ) 
+   ( modify-variable 
+      @h_aten[0] 
+      ( get-object-heading "GVC Aten 3" ) 
+   )
+   ( modify-variable 
+      @p_aten[0] 
+      ( get-object-pitch "GVC Aten 3" ) 
+   )
+   ( modify-variable 
+      @b_aten[0] 
+      ( get-object-bank "GVC Aten 3" ) 
+   )
+   ( modify-variable 
+      @h_hemsut[0] 
+      ( get-object-heading "GVC Hemsut 2" ) 
+   )
+   ( modify-variable 
+      @p_hemsut[0] 
+      ( get-object-pitch "GVC Hemsut 2" ) 
+   )
+   ( modify-variable 
+      @b_hemsut[0] 
+      ( get-object-bank "GVC Hemsut 2" ) 
+   )
+)
++Name: get hpb
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( training-msg "hpb - aten" ) 
+)
++Name: hpb aten
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( training-msg "hpb - hemsut" ) 
+)
++Name: hbp hemsut
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( true ) 
+   ( if-then-else 
+      ( > 0 0 ) 
+      ( do-nothing ) 
+      ( do-nothing ) 
+   )
+)
++Name: aten rotates
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
 #Goals		;! 0 total
 
 
 #Waypoints		;! 0 lists total
 
 
-#Messages		;! 2 total
+#Messages		;! 4 total
 
 
 $Name: mission start
@@ -706,6 +622,22 @@ $end_multi_text
 $Name: fov
 $Team: -1
 $MessageNew:  XSTR("fov = $fov", -1)
+$end_multi_text
+
+$Name: hpb - aten
+$Team: -1
+$MessageNew:  XSTR("Aten
+Heading = $h_aten
+Pitch = $p_aten
+Bank = $b_aten", -1)
+$end_multi_text
+
+$Name: hpb - hemsut
+$Team: -1
+$MessageNew:  XSTR("Hemsut
+Heading = $h_hemsut
+Pitch = $p_hemsut
+Bank = $b_hemsut", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total

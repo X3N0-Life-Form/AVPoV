@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Waiting Dark", -1)
 $Author: X3N0-Life-Form
 $Created: 08/02/10 at 20:31:11
-$Modified: 10/16/12 at 18:22:33
+$Modified: 10/20/12 at 16:07:04
 $Notes:
 Original music : Exodus$End Notes:
 
@@ -28,9 +28,9 @@ $end_multi_text
 
 +Viewer pos: -429.045593, 2153.034668, 2967.483154
 +Viewer orient:
-	-0.573575, -0.000000, -0.819153,
-	0.601435, 0.678916, -0.421128,
-	0.556136, -0.734216, -0.389410
+	0.634935, 0.000000, -0.772565,
+	0.335401, 0.900845, 0.275651,
+	0.695962, -0.434140, 0.571978
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Zeta" "Delta" )
 
@@ -591,7 +591,7 @@ $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
-   ( > ( hits-left "Cyaegha#1" ) 57 ) 
+   ( < ( hits-left "Cyaegha#1" ) 57 ) 
    ( is-destroyed-delay 4 "Warihu" ) 
 )
 $Determination: 10
@@ -1286,7 +1286,12 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret16
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "short jump" 15 ) 
+$Arrival Cue: ( and 
+   ( is-event-true-delay "short jump" 15 ) 
+   ( not 
+      ( has-arrived-delay 0 "Hellknight" ) 
+   )
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( < ( hits-left "Cyaegha#2" ) 0 ) 
@@ -2398,7 +2403,7 @@ $Ships: (		;! 2 total
 $AI Goals: ( goals ( ai-guard-wing "Zeta" 50 ) ( ai-guard "Warihu" 48 ) ( ai-chase-wing "Leo" 51 ) )
 +Flags: ( )
 
-#Events		;! 34 total
+#Events		;! 35 total
 
 $Formula: ( when 
    ( true ) 
@@ -3036,6 +3041,19 @@ $Formula: ( when
    )
 )
 +Name: update warihu's position
++Repeat Count: -1
++Trigger Count: 80
++Interval: 5
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( < ( get-object-pitch "Warihu" ) 0 ) 
+      ( true ) 
+   )
+   ( do-nothing ) 
+)
++Name: rotate cyaegha#2
 +Repeat Count: -1
 +Trigger Count: 80
 +Interval: 5
