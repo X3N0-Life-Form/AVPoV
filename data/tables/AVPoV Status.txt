@@ -390,7 +390,7 @@ E_Sathanas_Arc_03.Watch out for the Bear					//ToRework - add allied corvettes +
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-E_Sathanas_Arc_04.The Waiting Dark						//ToRebalance
+E_Sathanas_Arc_04.The Waiting Dark						//Beta-Ready
 /////////////////////////////////////////////////////////////////////////////////
 		3rd gen mission
 		New equipement : infyrno ; circe
