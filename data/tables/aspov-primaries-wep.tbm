@@ -191,8 +191,8 @@ $Model File:						none
 @Laser Glow:						Prometheus_Glow
 @Laser Color:						20, 150, 81
 @Laser Color2:						20, 150, 20
-@Laser Head Radius:					1.2
-@Laser Tail Radius:					1.2
+@Laser Head Radius:					0.8
+@Laser Tail Radius:					0.4
 $Mass:                              3.8
 $Velocity:                          650.0
 $Fire Wait:                         0.35
