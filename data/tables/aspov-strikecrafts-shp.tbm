@@ -184,6 +184,7 @@ $Name:					GTB Boanerges
 	+nocreate ;:
 $Allowed PBanks: ("Subach HL-7" "Prometheus R" "UD-8 Kayser" "Prometheus S" "Lamprey" "Circe" "Maxim" "Fire Spitter" "Hell Spitter")
 $PBank Capacity: (200)
+$Allowed SBanks: ( "Rockeye" "Hornet" "Tornado" "Trebuchet" "Stiletto II" "Piranha" "Cyclops" "Cyclops#short" "Hornet#Weak" "EMP Adv." "Infyrno" "Helios" "Crossbow" )
 
 $Name:					GTB Medusa
 	+nocreate ;:
@@ -202,6 +203,9 @@ $Name:					GTF Myrmidon
 $Allowed PBanks:		( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" "Fire Spitter" "Hell Spitter" "Sehku" )
 						( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "UD-8 Kayser" )
 $PBank Capacity: ( 40, 40 )
+$Allowed SBanks:		( "Rockeye" "Hornet" "Tornado" "Tempest" "Trebuchet" "Stiletto II" "Hornet#Weak" "EMP Adv." "Infyrno" "Helios" )
+						( "Rockeye" "Hornet" "Tornado" "Tempest" "Trebuchet" "Stiletto II" "Hornet#Weak" "EMP Adv." "Infyrno" "Helios" )
+						( "Rockeye" "Hornet" "Tornado" "Tempest" "Trebuchet" "Stiletto II" "Hornet#Weak" "EMP Adv." "Infyrno" "Helios" "Crossbow" )
 $Shield Armor Type:		LightArmor
 	
 $Name:					SF Mara (terrans)
@@ -247,6 +251,8 @@ $Name:		GVF Serapis
 $Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS")
 						( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Maxim" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" "Fire Spitter")
 $PBank Capacity:		( 40, 40 )
+$Allowed SBanks:        ( "Rockeye"  "Tempest" "Harpoon" "Hornet" "TAG-B" "Tornado" "Hornet#Weak" "EMP Adv." "Crossbow" )
+						( "Rockeye"  "Tempest" "Harpoon" "Hornet" "TAG-B" "Tornado" "Hornet#Weak" "EMP Adv." )
 $Shield Armor Type:		LightArmor
 
 
@@ -262,6 +268,7 @@ $Name:		GVB Sekhmet
 	+nocreate ;:
 $Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "Hayg Mas" "Sehku" "Sahr AS" "Hell Spitter" "Fire Spitter")
 $PBank Capacity:		(100)
+$Allowed SBanks:        ( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" "Crossbow" )
 $Shield Armor Type:		LightArmor
 
 

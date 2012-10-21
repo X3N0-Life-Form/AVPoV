@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/20/12 at 17:33:38
+$Modified: 10/21/12 at 14:15:29
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3460.045898, 528.207581, 4277.531250
++Viewer pos: 3816.019043, 2523.398193, 4277.911133
 +Viewer orient:
-	-0.001058, -0.000000, 0.999999,
-	-0.741829, 0.670588, -0.000785,
-	-0.670588, -0.741830, -0.000710
+	0.025577, -0.000001, 0.999673,
+	-0.898527, 0.438316, 0.022989,
+	-0.438173, -0.898821, 0.011210
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -89,16 +89,19 @@ $Ship Choices: (
 +Weaponry Pool: (
 	"Hayg Mas"	100
 	"Shivan Large Cannon"	100
-	"Shivan Heavy Laser"	1
-	"Shivan Mega Laser"	1
-	"Hornet#Shivan"	80
-	"Trebuchet#Shivan"	10
+	"Shivan Heavy Laser"	0
+	"Shivan Mega Laser"	0
+	"Hornet#Shivan"	0
+	"Trebuchet#Shivan"	0
+	"Hell Spitter"	1
+	"Crossbow"	80
+	"Hornet"	40
 )
 
 #Objects		;! 5 total
 
 $Name: Alpha 1		;! Object #0
-$Class: SF Mara
+$Class: GTB Boanerges
 $Team: Friendly
 $Location: 2071.403076, 352.738953, 3920.311523
 $Orientation:
@@ -109,6 +112,8 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Hell Spitter" )
++Secondary Banks: ( "Hornet" "Crossbow" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace

@@ -21,6 +21,71 @@ $Shockwave Damage Type:					HugeWeapon
 
 ;; new missiles
 
+;; Heavy bomber missiles
+
+$Name:                                  Crossbow
+	+Title:                                 XSTR("GTM-26 Crossbow", -1)
+	+Description:
+		XSTR(
+		"Standard Issue
+		Fast Target Lock", -1)
+	$end_multi_text ;:
+	+Tech Title:				   XSTR("GTM-26 Crossbow", -1)
+	+Tech Anim:					   Tech_Harpoon
+	+Tech Description:
+		XSTR(
+		"", -1)
+	$end_multi_text
+$Model File:							crossbow.pof
+$Mass:									15.0
+$Velocity:								450.0
+$Fire Wait:								3.0
+$Damage:								50
+$Damage Type:							NormalWeapon
+$Shockwave Damage Type:					NormalWeapon
+$Blast Force:							80.0
+$Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
+$Outer Radius:							200.0                                       ;; max radius for attenuated damage 
+$Shockwave Speed:						120
+$Armor Factor:							0.7
+$Shield Factor:							1.0
+$Subsystem Factor:						0.5
+$Lifetime:								3.0
+$Energy Consumed:						0.0													;; Energy used when fired
+$Cargo Size:							2.5
+$Homing:								YES
+	+Type:								ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:							0.8
+	+Min Lock Time:						1.5													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					70                                        ;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				100													;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					30
+$Swarm:									3
+	+SwarmWait:						0.3
+$LaunchSnd:								91                                        ;; The sound it makes when fired
+$ImpactSnd:								88                                        ;; The sound it makes when it hits something
+$FlyBySnd:								-1
+$Rearm Rate:							2.0													;; number of missiles/sec that are rearmed
+$Flags:									( "player allowed")
+$Trail:
+	+Start Width:	0.3
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		2.5
+	+Bitmap:		missiletrail06										;; Bitmap used to draw trail
+$Icon:									iconCrossbow
+$Anim:									cross
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:			9.92
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			4.96
+$Piercing Impact Velocity:			20
+$Piercing Impact Splash Velocity:	-5
+$Piercing Impact Variance:			0.1
+$Piercing Impact Particles:			5
+$Thruster Flame Effect:				missilethruster06
+$Thruster Glow Effect:				missileglow06
 
 
 ;; Vasudan ship to ship torpedo
