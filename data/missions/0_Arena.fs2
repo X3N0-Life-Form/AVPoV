@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/21/12 at 14:15:29
+$Modified: 10/23/12 at 21:35:21
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3816.019043, 2523.398193, 4277.911133
++Viewer pos: 3328.197754, 147.860092, 4477.601563
 +Viewer orient:
-	0.025577, -0.000001, 0.999673,
-	-0.898527, 0.438316, 0.022989,
-	-0.438173, -0.898821, 0.011210
+	-0.279651, 0.000001, 0.960102,
+	-0.724491, 0.656187, -0.211025,
+	-0.630006, -0.754599, -0.183503
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -98,7 +98,7 @@ $Ship Choices: (
 	"Hornet"	40
 )
 
-#Objects		;! 5 total
+#Objects		;! 4 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTB Boanerges
@@ -212,48 +212,8 @@ $Determination: 10
 +Use Table Score:
 +Score: 670
 
-$Name: GVC Hemsut 2		;! Object #2
-$Class: GVC Hemsut
-$Team: Friendly
-$Location: 2751.058105, -0.000055, 4140.722168
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, -0.615002, -0.788524,
-	0.000000, 0.788524, -0.615002
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Subsystem: Turret01
-+Secondary Banks: ( "Hornet" )
-+Sbank Ammo: ( 0 )
-+Subsystem: Turret02
-+Secondary Banks: ( "Hornet" )
-+Sbank Ammo: ( 0 )
-+Subsystem: Turret03
-$Damage: 100
-+Subsystem: Turret04
-$Damage: 100
-+Subsystem: Turret05
-$Damage: 100
-+Subsystem: Turret06
-$Damage: 100
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 4
-+Orders Accepted: 1		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 75
-
-$Name: GVC Aten 3		;! Object #3
-$Class: GVC Aten
+$Name: Bad Guy		;! Object #2
+$Class: GVC Mentu
 $Team: Hostile
 $Location: 2679.620605, -284.025513, 4425.915039
 $Orientation:
@@ -265,15 +225,27 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Subsystem: turret01a
-+Primary Banks: ( "Shivan Turret Laser Up" )
-+Subsystem: turret02a
-+Subsystem: turret03
-+Primary Banks: ( "Shivan Turret Laser" )
-+Subsystem: turret04
-+Primary Banks: ( "Shivan Turret Laser" )
-+Subsystem: turret05
-+Subsystem: turret06
++Subsystem: Turret01
++Primary Banks: ( "Mass Driver" )
++Subsystem: Turret02
++Primary Banks: ( "Mass Driver" )
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Primary Banks: ( "Heavy Flak" )
++Subsystem: Turret07
++Primary Banks: ( "Heavy Flak" )
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Primary Banks: ( "Heavy Flak" )
++Subsystem: Turret15
++Subsystem: Turret16
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -285,37 +257,37 @@ $Determination: 10
 +Escort priority: 5
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 90
 
-$Name: SC Cain 4		;! Object #4
-$Class: SC Cain
+$Name: Friend		;! Object #3
+$Class: SC Rakshasa
 $Team: Friendly
 $Location: 2836.072998, 74.043411, 4334.258789
 $Orientation:
 	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.000000, 0.353019, 0.935616,
+	0.000000, -0.935616, 0.353019
 $AI Behavior: None
++AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "Shivan Turret Laser" )
++Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
++Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret05
-+Primary Banks: ( "Shivan Turret Laser" )
 +Subsystem: turret06
-+Primary Banks: ( "Shivan Turret Laser" )
 +Subsystem: turret07
-+Primary Banks: ( "Shivan Turret Laser Up" )
 +Subsystem: turret08
-+Sbank Ammo: ( 0 )
 +Subsystem: turret09
-+Sbank Ammo: ( 0 )
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -327,7 +299,6 @@ $Determination: 10
 +Escort priority: 2
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 150
 
 #Wings		;! 1 total
@@ -347,7 +318,7 @@ $Ships: (		;! 1 total
 +Hotkey: 0
 +Flags: ( )
 
-#Events		;! 10 total
+#Events		;! 6 total
 
 $Formula: ( when 
    ( true ) 
@@ -390,6 +361,11 @@ $Formula: ( when
       "turret30" 
    )
    ( modify-variable @fov[0] ( get-fov ) ) 
+   ( beam-lock 
+      "Friend" 
+      "turret02" 
+      "turret03" 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
@@ -496,68 +472,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
-
-$Formula: ( when 
-   ( true ) 
-   ( modify-variable 
-      @h_aten[0] 
-      ( get-object-heading "GVC Aten 3" ) 
-   )
-   ( modify-variable 
-      @p_aten[0] 
-      ( get-object-pitch "GVC Aten 3" ) 
-   )
-   ( modify-variable 
-      @b_aten[0] 
-      ( get-object-bank "GVC Aten 3" ) 
-   )
-   ( modify-variable 
-      @h_hemsut[0] 
-      ( get-object-heading "GVC Hemsut 2" ) 
-   )
-   ( modify-variable 
-      @p_hemsut[0] 
-      ( get-object-pitch "GVC Hemsut 2" ) 
-   )
-   ( modify-variable 
-      @b_hemsut[0] 
-      ( get-object-bank "GVC Hemsut 2" ) 
-   )
-)
-+Name: get hpb
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( training-msg "hpb - aten" ) 
-)
-+Name: hpb aten
-+Repeat Count: 1
-+Interval: 1
-+Chained: 0
-
-$Formula: ( when 
-   ( true ) 
-   ( training-msg "hpb - hemsut" ) 
-)
-+Name: hbp hemsut
-+Repeat Count: 1
-+Interval: 1
-+Chained: 2
-
-$Formula: ( when 
-   ( true ) 
-   ( if-then-else 
-      ( > 0 0 ) 
-      ( do-nothing ) 
-      ( do-nothing ) 
-   )
-)
-+Name: aten rotates
-+Repeat Count: 1
-+Interval: 1
-+Chained: 2
 
 #Goals		;! 0 total
 

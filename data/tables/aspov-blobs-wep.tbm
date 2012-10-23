@@ -230,5 +230,61 @@ $FOF:								1.7
 $Burst Shots:						5
 $Burst Delay:						100
 $Burst Flags:						()
+
+
+$Name:                          Shivan Multi Turret Up
+	+Tech Title:		XSTR("Shivan Multi Turret",-1)
+	+Tech Description:	XSTR("Upgraded Shivan warship mounted multi-shot turret
 	
+	",-1)
+	$end_multi_text
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  Vepar_Bitmap_up
+@Laser Glow:					Vapula_Glow
+@Laser Color:								   250, 170, 100
+@Laser Color2:								   250, 170, 100
+@Laser Length:       			12.0
+@Laser Head Radius:  			7.0
+@Laser Tail Radius:  			7.0
+$Mass:                          1.6
+$Velocity:                      624.0
+$Fire Wait:                     0.4
+$Damage:                        48
+$Damage Type:					ShivanWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      3.3
+$Energy Consumed:               0.30                            ;; Energy used when fired
+$Cargo Size:                    0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                                NO
+$LaunchSnd:                             114                             ;; The sound it makes when fired
+$ImpactSnd:                             85                                      ;; The sound it makes when it hits something
+	+Weapon range:				1560
+$Flags:                                 ("Big Ship")
+$Trail:
+	+Start Width:	0.2
+	+End Width:		0.3
+	+Start Alpha:	0.25
+	+End Alpha:		0.0
+	+Max Life:		0.4
+	+Bitmap:		Alouqua_Trail
+$Icon:                                  icongun05
+$Anim:                                  LoadGun07
+$Impact Explosion:      		Shivan_Impact01
+$Impact Explosion Radius:			14.0
+$Piercing Impact Explosion:			exp06
+$Piercing Impact Radius:			7.0
+$Piercing Impact Velocity:			10
+$Piercing Impact Splash Velocity:	-2.5
+$Piercing Impact Variance:			0.01
+$Piercing Impact Particles:			5
+$Muzzleflash:						Cmuzzle_small
+$FOF:								1.7
+;; $Shots:								5
+$Burst Shots:						5
+$Burst Delay:						100
+$Burst Flags:						()
+
+
 #End
