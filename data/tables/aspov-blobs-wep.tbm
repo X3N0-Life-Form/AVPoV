@@ -39,7 +39,10 @@ $Name:                              Mass Driver
 	
 	Before the Terran Navy decided to replace these expansive weapons with cheaper flak systems, the Mass Driver gave the Hecate punishing anti-warship firepower from almost any direction, backed up by the ship's beam weapons, delivering a near-constant stream of armor-piercing accelerated uranium slugs.
 	
-	While the lighter versions of this gun have a much light refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts heavier versions of this weapon, with a much greater refire rate, transforming these turrets into corvette-killing weapons.",-1)
+	While the lighter versions of this gun have a much light refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts heavier versions of this weapon, with a much greater refire rate, transforming these turrets into corvette-killing weapons.
+	
+	Damage per second vs hull:   333
+	Damage per second vs shield: 67",-1)
 	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						Maxim
@@ -95,7 +98,8 @@ $Name:								Wraith
 	+Tech Title:		XSTR("Wraith",-1)
 	+Tech Description:	XSTR("Based on the successful Banshee, the Wraith is capable of inflicting devastating damage on shields, while still being able to inflict significant hull damage to its target at medium range.
 	
-	",-1)
+	Damage per second vs hull:   42
+	Damage per second vs shield: 126",-1)
 	$end_multi_text
 $Model File: 						none
 @Laser Bitmap:						Banshee_Bitmap
@@ -135,7 +139,9 @@ $Name:                          Shivan Turret Laser Up
 	+Tech Title:		XSTR("Upgraded Shivan Turret Laser",-1)
 	+Tech Description:	XSTR("Advanced All-Purpose Point Defence Turret
 	
-	Like other Shivan weapons, the Standard All-Purpose Defence Turret underwent an upgrade after the destruction of the SJ Sathanas. Firing almost twice as fast and dealing almost twice as much damage as the Standard version, this turret has proven to be a significant threat to allied fighter and gives Shivans a significant boost in their ship-to-ship non-frontal engagement capabilities.",-1)
+	Like other Shivan weapons, the Standard All-Purpose Defence Turret underwent an upgrade after the destruction of the SJ Sathanas. Firing almost twice as fast and dealing almost twice as much damage as the Standard version, this turret has proven to be a significant threat to allied fighter and gives Shivans a significant boost in their ship-to-ship non-frontal engagement capabilities.
+	
+	Damage per second: 136",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  Vepar_Bitmap_up
@@ -181,7 +187,9 @@ $Name:                          Shivan Multi Turret
 	
 	Conflicting reports exist concerning the exact nature and behavior of this weapon. Early mission reports established it as a very deadly anti-capital weapon capable of firing 5 shots at once, posing a serious threat against warships and bombers, limited effectiveness against fighters.
 	
-	More recent encounters describe it as a weapon firing 5 shots in a short burst. Detailled scans of Shivan warships revealed that these two seemingly different weapons, are actually the same weapon system. The reason behind this weapon's change of behavior is still up for debate.",-1)
+	More recent encounters describe it as a weapon firing 5 shots in a short burst. Detailled scans of Shivan warships revealed that these two seemingly different weapons, are actually the same weapon system. The reason behind this weapon's change of behavior is still up for debate.
+	
+	Damage per second: 215",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  Vepar_Bitmap
@@ -236,7 +244,7 @@ $Name:                          Shivan Multi Turret Up
 	+Tech Title:		XSTR("Shivan Multi Turret",-1)
 	+Tech Description:	XSTR("Upgraded Shivan warship mounted multi-shot turret
 	
-	",-1)
+	Damage per second: 600",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  Vepar_Bitmap_up
