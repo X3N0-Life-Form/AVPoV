@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("It's Hammer Time", -1)
 $Author: X3N0-Life-Form
 $Created: 10/02/10 at 16:58:31
-$Modified: 10/20/12 at 19:44:28
+$Modified: 10/24/12 at 22:02:20
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 924.151794, 4213.263184, 6037.243652
++Viewer pos: -5889.786133, 4148.633789, -1060.234619
 +Viewer orient:
-	-0.876015, -0.000001, 0.482284,
-	-0.481078, -0.070672, -0.873825,
-	0.034085, -0.997500, 0.061909
+	0.694044, -0.000002, -0.719933,
+	0.456790, 0.772933, 0.440361,
+	0.556459, -0.634488, 0.536450
 
 
 $AI Profile: FS2 RETAIL
@@ -470,21 +470,21 @@ $Ship Choices: (
 	"Akheton SDG"	16
 	"Morning Star"	16
 	"Prometheus S"	12
-	"Maxim"	12
+	"Maxim"	16
 	"Rockeye"	200
-	"Tempest"	1280
+	"Tempest"	2560
 	"Hornet"	800
-	"Tornado"	1232
+	"Tornado"	976
 	"Harpoon"	100
 	"Piranha"	40
 	"Stiletto II"	80
 	"Infyrno"	20
 	"Cyclops"	216
 	"EMP Adv."	120
-	"Circe"	4
+	"Circe"	0
 )
 
-#Objects		;! 87 total
+#Objects		;! 99 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTB Artemis
@@ -498,7 +498,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Maxim" )
 +Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -525,7 +525,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Maxim" )
 +Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -553,7 +553,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Maxim" )
 +Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -581,7 +581,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Maxim" )
 +Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1236,7 +1236,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1263,7 +1263,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1290,7 +1290,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1317,7 +1317,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1435,7 +1435,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: SC Obizoth		;! Object #31
+$Name: Obizoth		;! Object #31
 $Class: SC Lilith
 $Team: Hostile
 $Location: 980.990112, 3972.338623, 1290.164063
@@ -1444,7 +1444,7 @@ $Orientation:
 	0.000000, 0.296281, 0.955101,
 	0.000000, -0.955101, 0.296281
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "GVD Apep" 50 ) ( ai-chase-wing "Blade" 50 ) )
+$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "Apep" 50 ) ( ai-chase-wing "Blade" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1475,9 +1475,10 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 5
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1609,8 +1610,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Maxim" "Circe" )
-+Secondary Banks: ( "Tornado" "Tornado" )
++Primary Banks: ( "Maxim" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1637,8 +1638,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Maxim" "Circe" )
-+Secondary Banks: ( "Tornado" "Tornado" )
++Primary Banks: ( "Maxim" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1665,8 +1666,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Maxim" "Circe" )
-+Secondary Banks: ( "Tornado" "Tornado" )
++Primary Banks: ( "Maxim" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1693,8 +1694,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Maxim" "Circe" )
-+Secondary Banks: ( "Tornado" "Tornado" )
++Primary Banks: ( "Maxim" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1766,15 +1767,16 @@ $Arrival Cue: ( < ( hits-left "Cyaegha" ) 30 )
 $Departure Location: Hyperspace
 $Departure Cue: ( < ( hits-left "Nix" ) 15 ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 30
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 840
 
-$Name: GVD Apep		;! Object #41
+$Name: Apep		;! Object #41
 $Class: GVD Hatshepsut
 $Team: Friendly
 $Location: -3008.919678, -1025.516235, -585.162231
@@ -1842,9 +1844,10 @@ $Arrival Cue: ( has-arrived-delay 18 "Nix" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 35
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1895,9 +1898,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 26
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1948,9 +1952,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 25
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -2185,7 +2190,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2212,7 +2217,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2239,7 +2244,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2266,7 +2271,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Tornado#Shivan" "Hornet#Shivan" )
++Secondary Banks: ( "Tempest#Shivan" "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -3159,7 +3164,351 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-#Wings		;! 23 total
+$Name: Apep Beta 1		;! Object #87
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -3299.509033, -0.000007, -2031.718384
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Hell Spitter" "Mekhu HL-7" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Apep Beta 2		;! Object #88
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -3301.905029, 0.000165, -2257.537598
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Hell Spitter" "Mekhu HL-7" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Apep Beta 3		;! Object #89
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -3469.427490, -0.000114, -2034.492676
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Hell Spitter" "Mekhu HL-7" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Apep Beta 4		;! Object #90
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -3465.298096, 0.000023, -2315.489258
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Hell Spitter" "Mekhu HL-7" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Apep Alpha 1		;! Object #91
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -3063.154785, -0.000065, -1931.677124
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Sehku" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Alpha 2		;! Object #92
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -3153.192383, -0.000182, -2006.513428
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Sehku" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Alpha 3		;! Object #93
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -3113.309082, 0.000108, -1888.007202
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Sehku" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Alpha 4		;! Object #94
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -3203.448730, -0.000093, -1930.739136
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Sehku" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Gamma 1		;! Object #95
+$Class: GVB Bakha
+$Team: Friendly
+$Location: -3709.261475, -0.000208, -1970.349121
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Apep Gamma 2		;! Object #96
+$Class: GVB Bakha
+$Team: Friendly
+$Location: -3794.775391, 0.000169, -2096.087158
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Apep Gamma 3		;! Object #97
+$Class: GVB Bakha
+$Team: Friendly
+$Location: -3813.509766, 0.000040, -2034.298706
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Apep Gamma 4		;! Object #98
+$Class: GVB Bakha
+$Team: Friendly
+$Location: -3800.003662, 0.000113, -1926.098999
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Dog_Fighter
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+#Wings		;! 26 total
 
 $Name: Alpha
 $Waves: 1
@@ -3176,7 +3525,7 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
-$AI Goals: ( goals ( ai-guard "Alpha 1" 49 ) ( ai-chase "SC Obizoth" 50 ) )
+$AI Goals: ( goals ( ai-guard "Alpha 1" 49 ) ( ai-chase "Obizoth" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -3202,7 +3551,7 @@ $Ships: (		;! 4 total
 	"Beta 3"
 	"Beta 4"
 )
-$AI Goals: ( goals ( ai-chase "Cyaegha" 50 ) ( ai-chase "SC Obizoth" 51 ) ( ai-chase-wing "Wrath" 52 ) )
+$AI Goals: ( goals ( ai-chase "Cyaegha" 50 ) ( ai-chase "Obizoth" 51 ) ( ai-chase-wing "Wrath" 52 ) )
 +Hotkey: 1
 +Flags: ( )
 
@@ -3322,7 +3671,7 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Pisces 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 0 "SC Obizoth" ) 
+$Arrival Cue: ( has-arrived-delay 0 "Obizoth" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -3331,7 +3680,7 @@ $Ships: (		;! 4 total
 	"Pisces 3"
 	"Pisces 4"
 )
-$AI Goals: ( goals ( ai-guard "SC Obizoth" 50 ) )
+$AI Goals: ( goals ( ai-guard "Obizoth" 50 ) )
 +Flags: ( )
 
 $Name: Gamma
@@ -3342,7 +3691,7 @@ $Special Ship: 0		;! Gamma 1
 $Arrival Location: Hyperspace
 +Arrival delay: 12
 $Arrival Cue: ( or 
-   ( has-arrived-delay 0 "SC Obizoth" ) 
+   ( has-arrived-delay 0 "Obizoth" ) 
    ( has-arrived-delay 0 "Nix" ) 
 )
 $Departure Location: Hyperspace
@@ -3353,7 +3702,7 @@ $Ships: (		;! 4 total
 	"Gamma 3"
 	"Gamma 4"
 )
-$AI Goals: ( goals ( ai-destroy-subsystem "SC Obizoth" "turret07" 51 ) ( ai-chase "SC Obizoth" 50 ) ( ai-disarm-ship "Nix" 49 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Obizoth" "turret07" 51 ) ( ai-chase "Obizoth" 50 ) ( ai-disarm-ship "Nix" 49 ) )
 +Hotkey: 2
 +Flags: ( )
 
@@ -3378,7 +3727,7 @@ $Arrival Cue: ( or
          "Hammer 3" 
       )
    )
-   ( < ( hits-left "GVD Apep" ) 22 ) 
+   ( < ( hits-left "Apep" ) 22 ) 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3424,7 +3773,7 @@ $Ships: (		;! 4 total
 	"Aquarius 3"
 	"Aquarius 4"
 )
-$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase-wing "Blade" 49 ) ( ai-chase "GVD Apep" 46 ) )
+$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase-wing "Blade" 49 ) ( ai-chase "Apep" 46 ) )
 +Flags: ( )
 +Wave Delay Min: 16
 +Wave Delay Max: 24
@@ -3466,7 +3815,7 @@ $Ships: (		;! 4 total
 	"Taurus 3"
 	"Taurus 4"
 )
-$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "GVD Apep" 48 ) ( ai-chase-wing "Blade" 48 ) )
+$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "Apep" 48 ) ( ai-chase-wing "Blade" 48 ) )
 +Flags: ( )
 
 $Name: Aries
@@ -3500,7 +3849,7 @@ $Ships: (		;! 3 total
 	"Capricorn 2"
 	"Capricorn 3"
 )
-$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "GVD Apep" 48 ) )
+$AI Goals: ( goals ( ai-chase-wing "Hammer" 50 ) ( ai-chase "Apep" 48 ) )
 +Flags: ( )
 
 $Name: Libra
@@ -3527,8 +3876,8 @@ $Special Ship: 0		;! Sigma 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 32 "GVD Apep" ) 
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 32 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -3549,8 +3898,8 @@ $Special Ship: 0		;! Lambda 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: GVD Apep
-$Arrival Cue: ( has-arrived-delay 34 "GVD Apep" ) 
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 34 "Apep" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
@@ -3616,6 +3965,66 @@ $Ships: (		;! 4 total
 	"Leo 4"
 )
 $AI Goals: ( goals ( ai-guard-wing "Wrath" 50 ) )
++Flags: ( )
+
+$Name: Apep Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Apep Alpha 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 18 "Apep" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Apep Alpha 1"
+	"Apep Alpha 2"
+	"Apep Alpha 3"
+	"Apep Alpha 4"
+)
+$AI Goals: ( goals ( ai-guard "Apep" 50 ) )
++Flags: ( )
+
+$Name: Apep Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Apep Beta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 3 "Apep Alpha" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Apep Beta 1"
+	"Apep Beta 2"
+	"Apep Beta 3"
+	"Apep Beta 4"
+)
+$AI Goals: ( goals ( ai-chase "Nix" 80 ) ( ai-guard "Apep" 48 ) )
++Flags: ( )
+
+$Name: Apep Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Apep Gamma 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 7 "Apep Gamma" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Apep Gamma 1"
+	"Apep Gamma 2"
+	"Apep Gamma 3"
+	"Apep Gamma 4"
+)
+$AI Goals: ( goals ( ai-chase "Nix" 50 ) ( ai-guard "Apep" 49 ) )
 +Flags: ( )
 
 #Events		;! 40 total
@@ -3943,13 +4352,12 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "SC Obizoth" ) 
+   ( has-arrived-delay 0 "Obizoth" ) 
    ( send-message 
       "#Command" 
       "High" 
       "Obizoth arrives - cmd" 
    )
-   ( add-remove-escort "SC Obizoth" 1 ) 
 )
 +Name: Obizoth arrives
 +Repeat Count: 1
@@ -3957,7 +4365,7 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "SC Obizoth" ) 
+   ( is-destroyed-delay 0 "Obizoth" ) 
    ( send-message 
       "#Command" 
       "High" 
@@ -4085,7 +4493,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-destroyed-delay 0 "Nix" ) 
    ( send-message 
-      "GVD Apep" 
+      "Apep" 
       "High" 
       "SD Nix destroyed - Apep" 
    )
@@ -4096,15 +4504,15 @@ $Formula: ( when
 +Objective:  XSTR("Destroy SD Nix", -1)
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "GVD Apep" ) 
+   ( has-arrived-delay 0 "Apep" ) 
    ( send-message 
-      "GVD Apep" 
+      "Apep" 
       "High" 
       "GVD Apep arrives - Apep" 
    )
-   ( add-remove-escort "GVD Apep" 1 ) 
+   ( add-remove-escort "Apep" 1 ) 
    ( fire-beam 
-      "GVD Apep" 
+      "Apep" 
       "turret03" 
       "Nix" 
       "turret02-base" 
@@ -4117,7 +4525,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "GVD Apep" 
+      "Apep" 
       "High" 
       "ship-to-ship torpedoes - Apep" 
    )
@@ -4131,7 +4539,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-departed-delay 0 "Nix" ) 
    ( send-message-list 
-      "GVD Apep" 
+      "Apep" 
       "High" 
       "Nix retreats 1 - Apep" 
       2400 
@@ -4179,6 +4587,12 @@ $Formula: ( when
       "Hammer 1" 
       ( ai-warp-out 89 ) 
    )
+   ( set-armor-type 
+      "Hammer 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
 )
 +Name: Hammer 1 retreats
 +Repeat Count: 1
@@ -4196,6 +4610,12 @@ $Formula: ( when
       "Hammer 2" 
       ( ai-warp-out 89 ) 
    )
+   ( set-armor-type 
+      "Hammer 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
 )
 +Name: Hammer 2 retreats
 +Repeat Count: 1
@@ -4212,6 +4632,12 @@ $Formula: ( when
    ( add-goal 
       "Hammer 3" 
       ( ai-warp-out 89 ) 
+   )
+   ( set-armor-type 
+      "Hammer 3" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
    )
 )
 +Name: Hammer 3 retreats
@@ -4295,7 +4721,7 @@ $Formula: ( when
 +Objective:  XSTR("Return to base", -1)
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "GVD Apep" ) 
+   ( is-destroyed-delay 0 "Apep" ) 
    ( send-message 
       "#Command" 
       "High" 
