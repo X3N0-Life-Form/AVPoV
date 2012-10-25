@@ -189,11 +189,11 @@ $Name:                              Hayg Mas
 $Model File:						none
 @Laser Bitmap:						PrometheusR_AniBitmap
 @Laser Glow:						Prometheus_Glow
-@Laser Color:						20, 150, 81
-@Laser Color2:						20, 150, 20
+@Laser Color:						200, 150, 81
+@Laser Color2:						200, 150, 20
 @Laser Head Radius:					0.8
 @Laser Tail Radius:					0.4
-$Mass:                              3.8
+$Mass:                              3.2
 $Velocity:                          650.0
 $Fire Wait:                         0.35
 $Damage:                            28
@@ -252,11 +252,11 @@ $Blast Force:							0
 $Inner Radius:							5.0
 $Outer Radius:							15.0
 $Shockwave Speed:						0
-$Armor Factor:							0.05
+$Armor Factor:							0.03
 $Shield Factor:							0.7
 $Subsystem Factor:						1.0
 $Lifetime:                             	1.2
-$Energy Consumed:						2.2	
+$Energy Consumed:						2.6	
 $Cargo Size:							0.0
 $Homing:                               NO
 $LaunchSnd:                            77                              ;; The sound it makes when fired

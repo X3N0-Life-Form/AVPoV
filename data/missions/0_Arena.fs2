@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/25/12 at 19:34:21
+$Modified: 10/25/12 at 20:42:49
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3328.197754, 147.860092, 4477.601563
++Viewer pos: 3425.418213, 1164.816650, 4474.119629
 +Viewer orient:
-	0.035799, 0.000001, 0.999359,
-	-0.685996, 0.727190, 0.024573,
-	-0.726724, -0.686436, 0.026033
+	0.035798, 0.000001, 0.999359,
+	-0.485422, 0.874107, 0.017388,
+	-0.873547, -0.485733, 0.031292
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -93,15 +93,19 @@ $Ship Choices: (
 	"Shivan Mega Laser"	0
 	"Hornet#Shivan"	0
 	"Trebuchet#Shivan"	0
-	"Hell Spitter"	1
-	"Crossbow"	80
-	"Hornet"	40
+	"Hell Spitter"	0
+	"Crossbow"	0
+	"Hornet"	0
+	"Tempest"	360
+	"Mekhu HL-7"	0
+	"Sehku"	0
+	"Sahr AS"	2
 )
 
-#Objects		;! 8 total
+#Objects		;! 10 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GTB Boanerges
+$Class: GVF Serapis
 $Team: Friendly
 $Location: 2071.403076, 352.738953, 3920.311523
 $Orientation:
@@ -112,8 +116,8 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Hell Spitter" )
-+Secondary Banks: ( "Hornet" "Crossbow" "Crossbow" )
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -405,7 +409,59 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-#Wings		;! 2 total
+$Name: Baddies 1		;! Object #8
+$Class: SF Mara
+$Team: Hostile
+$Location: 1939.481689, -0.000035, 4166.578613
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Baddies 2		;! Object #9
+$Class: SF Mara
+$Team: Hostile
+$Location: 2026.812012, -0.000008, 4150.781250
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+#Wings		;! 3 total
 
 $Name: Alpha
 $Waves: 1
@@ -439,6 +495,21 @@ $Ships: (		;! 4 total
 )
 $AI Goals: ( goals ( ai-chase "Bad Guy" 50 ) )
 +Flags: ( )
+
+$Name: Baddies
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Baddies 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Baddies 1"
+	"Baddies 2"
+)
++Flags: ( "reinforcement" )
 
 #Events		;! 6 total
 
@@ -630,23 +701,29 @@ Pitch = $p_hemsut
 Bank = $b_hemsut", -1)
 $end_multi_text
 
-#Reinforcements		;! 0 total
+#Reinforcements		;! 1 total
 
+$Name: Baddies
+$Type: Attack/Protect
+$Num times: 1
++Arrival Delay: 0
++No Messages: ( )
++Yes Messages: ( )
 
 #Background bitmaps		;! 20 total
 
-$Num stars: 800
+$Num stars: 250
 $Ambient light level: 10526880
 
 $Bitmap List:
 $Sun: SunEnif
-+Angles: 1.047197 0.872664 0.000000
++Angles: 1.029744 0.855211 0.000000
 +Scale: 1.000000
 $Sun: SunWhite
 +Angles: 0.000000 0.000000 4.764745
 +Scale: 3.000000
 $Starbitmap: dneb18
-+Angles: 0.261799 0.000000 0.000000
++Angles: 0.244346 0.000000 0.000000
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1

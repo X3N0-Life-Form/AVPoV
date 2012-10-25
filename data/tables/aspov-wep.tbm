@@ -45,8 +45,8 @@ $Damage Type:							NormalWeapon
 $Shockwave Damage Type:					NormalWeapon
 $Blast Force:							80.0
 $Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
-$Outer Radius:							40.0                                       ;; max radius for attenuated damage 
-$Shockwave Speed:						120
+$Outer Radius:							120.0                                       ;; max radius for attenuated damage 
+$Shockwave Speed:						80
 $Armor Factor:							1.0
 $Shield Factor:							0.1
 $Subsystem Factor:						0.5
