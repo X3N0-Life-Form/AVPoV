@@ -746,11 +746,11 @@ $LaunchSnd:                    108                                     ;;      T
 $ImpactSnd:                    85                                      ;; The sound it makes when it hits something
 $Flags:						   ( "particle spew" "player allowed" "no pierce shield" )
 $Trail:
-	+Start Width:	0.2
+	+Start Width:	0.7
 	+End Width:		0.3
 	+Start Alpha:	0.25
 	+End Alpha:		0.0
-	+Max Life:		0.1
+	+Max Life:		0.7
 	+Bitmap:		Alouqua_Trail
 $Icon:                              iconLich
 $Anim:                              Lich

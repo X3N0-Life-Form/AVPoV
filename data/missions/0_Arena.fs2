@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/23/12 at 21:35:21
+$Modified: 10/25/12 at 19:34:21
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,9 +30,9 @@ $end_multi_text
 
 +Viewer pos: 3328.197754, 147.860092, 4477.601563
 +Viewer orient:
-	-0.279651, 0.000001, 0.960102,
-	-0.724491, 0.656187, -0.211025,
-	-0.630006, -0.754599, -0.183503
+	0.035799, 0.000001, 0.999359,
+	-0.685996, 0.727190, 0.024573,
+	-0.726724, -0.686436, 0.026033
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -98,7 +98,7 @@ $Ship Choices: (
 	"Hornet"	40
 )
 
-#Objects		;! 4 total
+#Objects		;! 8 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTB Boanerges
@@ -301,7 +301,111 @@ $Determination: 10
 +Group: 0
 +Score: 150
 
-#Wings		;! 1 total
+$Name: Snipers 1		;! Object #4
+$Class: SF Dragon
+$Team: Friendly
+$Location: 3170.600098, -2800.000000, 4429.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Snipers 2		;! Object #5
+$Class: SF Dragon
+$Team: Friendly
+$Location: 3177.561768, -2800.000000, 4449.144043
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Snipers 3		;! Object #6
+$Class: SF Dragon
+$Team: Friendly
+$Location: 3187.702148, -2800.000000, 4430.195801
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Snipers 4		;! Object #7
+$Class: SF Dragon
+$Team: Friendly
+$Location: 3183.177979, -2800.000000, 4412.848145
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+#Wings		;! 2 total
 
 $Name: Alpha
 $Waves: 1
@@ -316,6 +420,24 @@ $Ships: (		;! 1 total
 	"Alpha 1"
 )
 +Hotkey: 0
++Flags: ( )
+
+$Name: Snipers
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Snipers 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Snipers 1"
+	"Snipers 2"
+	"Snipers 3"
+	"Snipers 4"
+)
+$AI Goals: ( goals ( ai-chase "Bad Guy" 50 ) )
 +Flags: ( )
 
 #Events		;! 6 total

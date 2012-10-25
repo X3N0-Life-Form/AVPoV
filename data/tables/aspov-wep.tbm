@@ -45,12 +45,12 @@ $Damage Type:							NormalWeapon
 $Shockwave Damage Type:					NormalWeapon
 $Blast Force:							80.0
 $Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
-$Outer Radius:							200.0                                       ;; max radius for attenuated damage 
+$Outer Radius:							40.0                                       ;; max radius for attenuated damage 
 $Shockwave Speed:						120
-$Armor Factor:							0.7
-$Shield Factor:							1.0
+$Armor Factor:							1.0
+$Shield Factor:							0.1
 $Subsystem Factor:						0.5
-$Lifetime:								3.0
+$Lifetime:								2.5
 $Energy Consumed:						0.0													;; Energy used when fired
 $Cargo Size:							2.5
 $Homing:								YES
@@ -61,12 +61,12 @@ $Homing:								YES
 	+Catch-up Pixels/Sec:				100													;; Pixels moved per sec while catching up
 	+Catch-up Penalty:					30
 $Swarm:									3
-	+SwarmWait:						0.3
+	+SwarmWait:						0.4
 $LaunchSnd:								91                                        ;; The sound it makes when fired
 $ImpactSnd:								88                                        ;; The sound it makes when it hits something
 $FlyBySnd:								-1
 $Rearm Rate:							2.0													;; number of missiles/sec that are rearmed
-$Flags:									( "player allowed")
+$Flags:									( "player allowed" "bomb" "huge" )
 $Trail:
 	+Start Width:	0.3
 	+End Width:		0
