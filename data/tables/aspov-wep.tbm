@@ -40,7 +40,7 @@ $Model File:							crossbow.pof
 $Mass:									15.0
 $Velocity:								450.0
 $Fire Wait:								3.0
-$Damage:								50
+$Damage:								250
 $Damage Type:							NormalWeapon
 $Shockwave Damage Type:					NormalWeapon
 $Blast Force:							80.0
