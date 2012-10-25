@@ -727,7 +727,7 @@ $Model File:                    none ;;  laser1-1.pof
 @Laser Glow:						Alouqua_Glow
 @Laser Color:						0, 0, 200
 @Laser Color2:						91, 50, 00
-@Laser Length:						4.0
+@Laser Length:						7.0
 @Laser Head Radius:					3.2
 @Laser Tail Radius:					3.2
 $Mass:                          0.5
@@ -735,8 +735,8 @@ $Velocity:                      2400.0
 $Fire Wait:                     2.5
 $Damage:                        150
 $Damage Type:					ShivanWeapon
-$Armor Factor:                  0.4
-$Shield Factor:                 1.0
+$Armor Factor:                  1.0
+$Shield Factor:                 0.2
 $Subsystem Factor:              0.75
 $Lifetime:                      1.0
 $Energy Consumed:               3.2
@@ -744,7 +744,7 @@ $Cargo Size:                    0.0
 $Homing:                        NO
 $LaunchSnd:                    108                                     ;;      The sound it makes when fired
 $ImpactSnd:                    85                                      ;; The sound it makes when it hits something
-$Flags:						   ( "particle spew" "player allowed" )
+$Flags:						   ( "particle spew" "player allowed" "no pierce shield" )
 $Trail:
 	+Start Width:	0.2
 	+End Width:		0.3
