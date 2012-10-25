@@ -651,11 +651,22 @@ $Anim:                          LoadGun07
 $Impact Explosion:              exp04
 $Impact Explosion Radius:       40.0
 $BeamInfo:
+	+Type:						0					;; 0 - 4 are valid #'s
+	+Life:		  				3.3
+	+Warmup:		  			1500				;; warmup time in ms
+	+Warmdown:					3000				;; warmdown time in ms
 	+Radius:								70.0
 	+PCount:								50
 	+PRadius:								3.0
 	+PAni:									particle_yellow
+	+Miss Factor:				1.0 1.1 1.1 1.1 1.4				;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					121					;; the looping beam-firing sound
+	+WarmupSound:				122					;; associated warmup sound
+	+WarmdownSound:				123					;; associated warmdown sound
 	+Muzzleglow:							beamglow6
+	+Shots:						0					;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						21.0
 	+Beam Piercing Effect:					exp06
@@ -728,11 +739,22 @@ $Anim:                          LoadGun07
 $Impact Explosion:              exp04
 $Impact Explosion Radius:       40.0
 $BeamInfo:
+	+Type:						0					;; 0 - 4 are valid #'s
+	+Life:		  				3.3
+	+Warmup:		  			1500				;; warmup time in ms
+	+Warmdown:					3000				;; warmdown time in ms
 	+Radius:								72.0
 	+PCount:								50
 	+PRadius:								3.0
 	+PAni:									particle_yellow
+	+Miss Factor:				1.0 1.1 1.1 1.1 1.4				;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					121					;; the looping beam-firing sound
+	+WarmupSound:				122					;; associated warmup sound
+	+WarmdownSound:				123					;; associated warmdown sound
 	+Muzzleglow:							beamglow6
+	+Shots:						0					;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						23.0
 	+Beam Piercing Effect:					exp06
