@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Healing the Wounds", -1)
 $Author: X3N0-Life-Form
 $Created: 02/02/08 at 21:35:41
-$Modified: 08/15/11 at 22:49:19
+$Modified: 11/04/12 at 17:36:50
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -17,6 +17,10 @@ $end_multi_text
 +Game Type Flags: 1
 
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 
 +Disallow Support: 0
 
@@ -26,9 +30,9 @@ $end_multi_text
 
 +Viewer pos: -8278.111328, 4953.229980, -80.230141
 +Viewer orient:
-	-0.152266, 0.000001, 0.988340,
-	-0.968742, 0.198152, -0.149247,
-	-0.195842, -0.980171, -0.030171
+	0.879603, 0.000001, -0.475708,
+	0.318176, 0.743399, 0.588322,
+	0.353641, -0.668848, 0.653896
 
 $Starting wing names: ( "Alpha" "Beta" "Delta" )
 
@@ -272,7 +276,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -552,25 +556,25 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 62
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
 +Primary Banks: ( "SVas" )
-+Subsystem: turret16
++Subsystem: Turret16
 +Primary Banks: ( "SVas" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -812,7 +816,7 @@ $Orientation:
 	-0.963345, 0.000000, 0.268266,
 	0.000000, 1.000000, 0.000000,
 	-0.268266, 0.000000, -0.963345
-$AI Behavior: Stay Near
+$AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-chase "Pharaoh" 47 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1393,6 +1397,9 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 800
+$Texture Replace:
++old: nameplate
++new: gtcv_viper
 
 $Name: Gemini 1		;! Object #36
 $Class: SF Mara
@@ -2782,7 +2789,6 @@ $Formula: ( when
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
-+Team: 65536
 
 $Formula: ( when 
    ( has-time-elapsed 2 ) 
@@ -2875,7 +2881,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 3
-+Team: 65536
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Kraken" ) 

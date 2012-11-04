@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Viper's Sting", -1)
 $Author: X3N0-Life-Form
 $Created: 01/19/08 at 15:37:34
-$Modified: 08/23/12 at 21:37:20
+$Modified: 11/04/12 at 17:34:53
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,17 +28,16 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 879.375854, 138.260391, 1421.575195
++Viewer pos: 1565.766113, 138.260559, 1348.020142
 +Viewer orient:
-	-0.977316, 0.000002, 0.211784,
-	-0.032678, 0.988023, -0.150806,
-	-0.209248, -0.154306, -0.965611
+	-0.985682, 0.000002, 0.168613,
+	-0.026016, 0.988023, -0.152097,
+	-0.166594, -0.154306, -0.973877
 
 $Starting wing names: ( "Alpha" "Beta" "Epsilon" )
 $Squadron wing names: ( "Alpha" "Beta" "Epsilon" "Delta" "Gamma" )
 
 $AI Profile: myProfile
-
 #Fiction Viewer
 
 $File: A01.txt
@@ -347,6 +346,7 @@ $Orientation:
 	-0.039989, 0.999200, 0.000000,
 	-0.998727, -0.039970, 0.030791
 $AI Behavior: None
++AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Viper" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -430,6 +430,9 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 800
+$Texture Replace:
++old: nameplate
++new: gtcv_viper
 
 $Name: Cancer 1		;! Object #4
 $Class: SB Taurvi
