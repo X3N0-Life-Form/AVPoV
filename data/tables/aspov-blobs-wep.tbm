@@ -95,8 +95,9 @@ $FOF:								1.4
 
 
 $Name:								Wraith
-	+Tech Title:		XSTR("Wraith",-1)
+	+Tech Title:		XSTR("Wraith Point Defence Turret",-1)
 	+Tech Description:	XSTR("Based on the successful Banshee, the Wraith is capable of inflicting devastating damage on shields, while still being able to inflict significant hull damage to its target at medium range.
+	This pride of Terran design is expected to replace the old Heavy Point Defence Turrets on Alliance warships in the coming years.
 	
 	Damage per second vs hull:   42
 	Damage per second vs shield: 126",-1)
