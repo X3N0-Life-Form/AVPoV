@@ -2671,4 +2671,88 @@ $Subsystem:                     navigation,              7, 0.0
 $Subsystem:                     weapons,                         7, 0.0
 $Subsystem:                     engine,                 30, 0.0
 	$Engine Wash:				Default100
+
+
+$Name: 		@GVC Newet
+$Short name:            Vcruiser
+$Species:                       Vasudan
+	+Tech Description:
+		XSTR("The Newet class saw its beginnings shortly after the outbreak of the NTF Rebellion in 2366, impressed by the combat effectiveness of the GVC Aeolus class in the conflict and recognizing the need for a compact flak platform equivalent, Vasudan Command comissoned Akheton Corporation and RNI Shipyards to construct a cruiser of simlar function. RNI would supply the weapons systems and their signature smoothbarreled Slug Flak cannon platforms. While Akheton would be resposible for proving the main design and construction.
+
+		The Newet is currently used exclusively by Special Operations forces, and is packed with the most advanced tech available, making it an incredibly verstaile warship, if expensive for the time being. Akheton used this spaceframe as a (succesful) testbed for their cut down version of its mk 3 sensor suite, electronic warfare package and targeting systems. Special Operations Command also requested the cruiser to be equipped with a full array of Wraith Point Defence Turrets and a GTssd-07 'Power Horse' subspace drive. The Newet's main drawback is its anti-capital ship weapon array, composed of a single Small Beam. It therefore lacks the firepower of the Mentu 'Enforcer''s upgraded Medium Beam, though SOC believes it to be an acceptable trade off for superior anti-fighter defence and subspace agility.", -1)
+	$end_multi_text
+$POF file:                      GVC_Newet.pof
+$Detail distance:       (0, 300, 550, 1000)
+$Show damage:           YES
+$Rotdamp:                       1.0
+$Max Velocity:					0.0, 0.0, 35.0
+$Rotation time:					100.0, 100.0, 65.0
+$Rear Velocity:					0.0
+$Forward accel:					8.0
+$Forward decel:					4.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				170.0
+$Expl outer rad:				625.0
+$Expl damage:					250.0
+$Expl blast:					10000.0
+$Expl Propagates:				YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:				500.0                                           ;; speed shockwave expands at, 0 means no shockwave
+$Shockwave Count:	2
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       0
+$Power Output:					100.0
+$Max Oclk Speed:				60.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     45000
+$Flags:                         ( "cruiser" )
+$AI Class:                      Big
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						137                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -317
+$Closeup_zoom:					0.75
+$Score:							100
+$Subsystem:                     turret01,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret02,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret03,0.833,1.0
+	$Default PBanks:			( "SVas" )
+$Subsystem:                     turret04,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret05,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret06,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret07,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret08,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret09,0.833,1.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret10,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret11,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret12,0.833,1.0
+	$Default PBanks:			( "Standard Flak" )
+$Subsystem:                     turret13,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret14,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret15,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     turret16,0.833,1.0
+	$Default PBanks:			( "Wraith" )
+$Subsystem:                     engine,    15, 0.0
+	$Engine Wash:	Default150
+$Subsystem:                     communication,  5,0.0
+$Subsystem:                     sensors,                                 5,0.0
+	$AWACS:			3500
+$Subsystem:                     navigation,                      5,0.0
+$Subsystem:                     weapons,                                 5,0.0
 #End
