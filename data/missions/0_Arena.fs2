@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 10/25/12 at 21:09:30
+$Modified: 11/06/12 at 21:14:04
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2540.491455, 512.987732, 3149.789795
++Viewer pos: 3569.463135, 476.956573, 4589.648438
 +Viewer orient:
-	0.980085, 0.000001, -0.198577,
-	0.132261, 0.745910, 0.652782,
-	0.148121, -0.666047, 0.731056
+	0.028835, 0.000001, 0.999584,
+	-0.665769, 0.745911, 0.019205,
+	-0.745601, -0.666046, 0.021509
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Virgo" "Gemini" "Pisces" "Libra" )
@@ -217,7 +217,7 @@ $Determination: 10
 +Score: 670
 
 $Name: Bad Guy		;! Object #2
-$Class: GVC Mentu Enforcer
+$Class: GVC Newet
 $Team: Hostile
 $Location: 2679.620605, -284.025513, 4425.915039
 $Orientation:
@@ -225,7 +225,6 @@ $Orientation:
 	-0.033527, 0.997222, -0.066536,
 	-0.021467, -0.067277, -0.997504
 $AI Behavior: None
-+AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -245,7 +244,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Turret14
 +Subsystem: Turret15
 +Subsystem: Turret16
-+Subsystem: Turret17
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -260,34 +258,32 @@ $Determination: 10
 +Score: 90
 
 $Name: Friend		;! Object #3
-$Class: SC Rakshasa
+$Class: SC Cain
 $Team: Friendly
-$Location: 2668.241699, -260.655396, 4099.164063
+$Location: 2668.241699, -117.792343, 4099.164063
 $Orientation:
 	1.000000, 0.000000, 0.000000,
-	0.000000, 0.777573, -0.628793,
-	0.000000, 0.628793, 0.777573
+	0.000000, 0.999200, 0.039989,
+	0.000000, -0.039989, 0.999200
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
-+Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret05
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
 +Subsystem: turret06
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
 +Subsystem: turret07
++Primary Banks: ( "MRed" )
 +Subsystem: turret08
++Sbank Ammo: ( 0 )
 +Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
++Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -299,6 +295,7 @@ $Determination: 10
 +Escort priority: 2
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 150
 
 $Name: Snipers 1		;! Object #4
@@ -550,11 +547,6 @@ $Formula: ( when
       "turret30" 
    )
    ( modify-variable @fov[0] ( get-fov ) ) 
-   ( beam-lock 
-      "Friend" 
-      "turret02" 
-      "turret03" 
-   )
 )
 +Name: mission start
 +Repeat Count: 1

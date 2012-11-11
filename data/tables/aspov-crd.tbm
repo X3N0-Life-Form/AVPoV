@@ -1,28 +1,32 @@
 XSTR("A Vasudan Point of View",-1)
 
+OUTDATED - still needs to be updated
+
+XSTR("FREDding, Tabling, Texture and Effect palette swaps",-1)
+
 X3N0-Life-Form
-
-
-OUTDATED - switch to aspov-crd.tbm + update stuff
-
-
-XSTR("AI",-1)
-
-ai_profiles.tbl and ai.tbl were written by X3N0-Life-Form
 
 XSTR("Backgrounds",-1)
 
-They all come from FS2 retail
+Most of them come from or are inspired by FS2 retail's backgrounds
 
 XSTR("Models",-1)
 
-harbinger model, effects from the banshee were extracted from the Freespace Port MVPs
-
+GVC Hemsut by ???
+GVC Newet by Oddgrim
 
 XSTR("Soundtracks",-1)
 
-TODO
+TODO - make sure everything is mentionned
 
+
+XSTR("Scripting",-1)
+
+TODO - get turret swap script to work (ask nuke or one of the script wizards for help)
+
+XSTR("Hosting and version control",-1)
+
+github.com
 
 XSTR("Special thanks",-1)
 
@@ -33,7 +37,7 @@ The HLP community for their useful advices & tips
 The SCP team, for their incredible work over the years
 The FSU team, for their beautiful  work over the years
 The Blue Planet team, for reminding me that SSM were fully fonctionnal, and some other good ideas
-Axem and his short jump warp effect
+Axem and his short jump warp thingy
 
 And many others
 
