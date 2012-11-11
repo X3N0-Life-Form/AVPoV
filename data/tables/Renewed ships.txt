@@ -376,12 +376,54 @@ Cain:		Flak Cruiser
 	turret 09:Shivan Area Bomb
 
 
+Belial: 	Anti-Fighter Defence
+	turret 01:Shivan Light Laser/Up
+	turret 02:Shivan Light Laser/Up
+	turret 03:Shivan Light Laser/Up
+	turret 04:Shivan Light Laser/Up
+
+Belial:		Anti-Capital Defence
+	turret 01:Shivan Heavy Anticap Laser
+	turret 02:Shivan Light Laser/Up
+	turret 03:Shivan Heavy Anticap Laser
+	turret 04:Shivan Light Laser/Up
+
+Belial:		Area Denial Defence
+	turret 01:Shivan Sniper Gun
+	turret 02:Shivan Scatter Gun
+	turret 03:Shivan Sniper Gun
+	turret 04:Shivan Scatter Gun
+
+Belial:		Long Range Defence
+	turret 01:Shivan Sniper Gun
+	turret 02:Shivan Sniper Gun
+	turret 03:Shivan Sniper Gun
+	turret 04:Shivan Sniper Gun
+
+Belial:		Close Range Defence
+	turret 01:Shivan Flak Weapon
+	turret 02:Shivan Flak Weapon
+	turret 03:Shivan Flak Weapon
+	turret 04:Shivan Flak Weapon
+
+Belial:		Anti-Capital Specialist
+	turret 01:Shivan Heavy Anticap Laser
+	turret 02:Shivan Heavy Anticap Laser
+	turret 03:Shivan Heavy Anticap Laser
+	turret 04:Shivan Heavy Anticap Laser
+
+Belial:		Multirole Defence
+	turret 01:Shivan Heavy Anticap Laser
+	turret 02:Shivan Sniper Gun
+	turret 03:Shivan Scatter Gun
+	turret 04:Shivan Light Laser Up
+
 Seraphim:	Heavy Bomber
 Nephilim:	Heavy Bomber
 Taurvi:		Swarm Bomber
 Nahema:		Strike Bomber
 
-Unknown Gunship:Anti Fighter cover
+Unknown Gunship:Anti Fighter cover/Fire support
 
 Aeshma:		Swarm Assault Fighter
 Basilisk:	Heavy Fighter

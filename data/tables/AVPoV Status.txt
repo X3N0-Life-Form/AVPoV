@@ -145,7 +145,7 @@ B_Vampire_Arc_03.A Lion is Home							//need more messages & events
 			
 
 ///////////////////////////////////////////////////////////////////////////////////
-B_Vampire_Arc_04.The Great Hunt							//?
+B_Vampire_Arc_04.The Great Hunt							//ToTestFurther
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		Background : done
@@ -154,7 +154,7 @@ B_Vampire_Arc_04.The Great Hunt							//?
 		Vasudan forces attack a Shivan depot
 		Ships :
 			-SD Vampire (Ravana class)		//vital
-			-GVC Harakhti (Mentu class)		//destroyed
+			-GVC Harakhti (Mentu class)		//non-vital
 			-SC Kayla (Rakshasa class)		//destroyed
 			-SC Abel (Cain class)			//destroyed
 			-SCv Grelier (Moloch class)		//destroyed
