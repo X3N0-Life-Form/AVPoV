@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 11/21/12 at 22:59:09
+$Modified: 11/22/12 at 00:19:04
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -212,7 +212,7 @@ $Determination: 10
 +Score: 670
 
 $Name: Bad Guy		;! Object #2
-$Class: GTC Leviathan
+$Class: GTCv Sparta
 $Team: Hostile
 $Location: 2679.620605, -284.025513, 4425.915039
 $Orientation:
@@ -220,7 +220,6 @@ $Orientation:
 	-0.038767, 0.917699, -0.395382,
 	-0.009057, -0.395986, -0.918212
 $AI Behavior: None
-+AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -232,7 +231,20 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
-+Subsystem: turret09a-01-main
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -247,7 +259,7 @@ $Determination: 10
 +Score: 90
 
 $Name: Friend		;! Object #3
-$Class: GVC Hemsut
+$Class: SC Rakshasa
 $Team: Friendly
 $Location: 2668.241699, -117.792343, 4099.164063
 $Orientation:
@@ -259,15 +271,21 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Subsystem: Turret01
-+Sbank Ammo: ( 0 )
-+Subsystem: Turret02
-+Secondary Banks: ( "Crossbow" )
-+Sbank Ammo: ( 0 )
-+Subsystem: Turret03
-+Subsystem: Turret04
-+Subsystem: Turret05
-+Subsystem: Turret06
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Primary Banks: ( "SRed" )
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace

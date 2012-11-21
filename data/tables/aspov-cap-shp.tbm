@@ -2758,36 +2758,52 @@ $Closeup_zoom:					0.75
 $Score:							100
 $Subsystem:                     turret01,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret02,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret03,0.833,1.0
 	$Default PBanks:			( "SVas" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret04,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret05,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret06,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret07,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret08,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret09,0.833,1.0
 	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret10,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret11,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret12,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret13,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret14,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret15,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     turret16,0.833,1.0
 	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
 $Subsystem:                     engine,    15, 0.0
 	$Engine Wash:	Default150
 $Subsystem:                     communication,  5,0.0
@@ -2795,4 +2811,191 @@ $Subsystem:                     sensors,                                 5,0.0
 	$AWACS:			3500
 $Subsystem:                     navigation,                      5,0.0
 $Subsystem:                     weapons,                                 5,0.0
+
+
+$Name:		GTCv Sparta
+$Short name:				TStrCorv
+$Species:					Terran
+	; +Tech Description:		XSTR( "Conceptualized early in the Threat Exigency Initiative warship program, the Diomedes-class strike corvette was shaped by the necessities of two worlds: the tactical realities of the post-Capella battlefield and the political turmoil of a Fleet in crisis. 
+
+	; GTVA designers conceived the Chimera and Bellerophon-class corvettes hand in hand with new doctrines of of massive force application. These designs were intentionally overspecialized to neutralize Shivan destroyers and juggernauts with beam alpha strikes. Strike craft support, aggressive subspace maneuvering, and sheer shock would, it was argued, allow the Chimera and Bellerophon to outrun their own design weaknesses.
+
+	; But more conservative factions of the GTVA military agitated for a less specialized next-generation design, a successor to and improvement upon the still-young Deimos corvette. Politically, they needed a warship that would fit the operational profile of line as well as elite units, but they also offered compelling tactical reasoning. Agile, aggressive combatants lacked the staying power for prolonged defensive operations at hardpoints, nodes, or convoys. A cheaper, more all-round design could supplement Deimos production with a powerful corvette leader or a supporting element to cover the flanks of destroyers or sister corvettes. Other camps in the Fleet added their own requirements: the addition of a fighterbay would open up possibilities as an SOC platform, or in the independent strike role through organic escorts or bombers. Missile launchers and magazines would allow for selectable munition loads.
+
+	; The notional Diomedes became a rallying point for design schools who had been pushed out of the main thrust of Threat Exigency Initiative work. The design went forward, but these competing requirements should have produced a catastrophic compromise.
+
+	; Instead, GTVA designers produced a fascinating warship, one whose weaknesses are addressed by carefully counterpointed strengths. Armed with four Bull Frost next-generation anti-warship beams in a pair of twinned lateral batteries, the Diomedes relies on its startling agility to bring its firepower to bear. Designed to engage targets abeam, the class rewards flanking tactics and circling engagements against larger hostiles and aggressive action against multiple lighter opponents. Considerable sacrifices were made to operationalize the ship's fighterbay, but the potency of an on-board interceptor or bomber unit justified the cost, particularly in the areas of point defense and counter-air.
+
+	; Even as the GTVA has cracked down on its own patronage system, dissolving the lines of influence that connected warship designers and commanders to particular schools, the Diomedes has acquired a reputation for scrappy flexibility and solitary pluck. Neglected by formal doctrine on the eve of the UEF-GTVA conflict except as a general 'flank escort' and 'fast response expedient', Diomedes captains drilled their own tactics and built a quiet professional community. 
+
+	; The ongoing conflict has found the Diomedes thrown into the fire, often alone, often undersupported, acting on sketchy intelligence to provide decisive force at key moments. Casualties among the Diomedes class exceed that of any other next-generation warship, but GTVA commanders have taken note of the design's successes, and of the discipline and capability of her crews. Once seen as the ugly duckling of the TEI warship line, the Diomedes now finds itself in strategic and tactical demand.", -1 )
+; $end_multi_text
+$POF file:					diomedes.pof
+$Detail distance:			(0, 5000, 5000, 10000)
+$Damp:						0.2
+$Rotdamp:					0.6
+$Max Velocity:				0.0, 0.0, 25.0
+$Rotation time:				48.0, 52.0, 42.0
+$Rear Velocity:				0.0
+$Forward accel:				2.0
+$Forward decel:				1.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			75.0
+$Expl outer rad:			750.0
+$Expl damage:				500.0
+$Expl blast:				1300.0
+$Expl Propagates:			yes
+$Shockwave Speed:			190.0
+$Shockwave Count:			3
+$Shields:					0
+$Power Output:				38.0
+$Max Oclk Speed:			35.0
+$Max Weapon Eng:			0.0
+$Hitpoints:					85000
+$Armor Type: 				Heavy Armor
+$Flags:						( "corvette" "big damage" )
+$AI Class:					Big
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, -25, -1050
+$Closeup_zoom:				0.5
+$Score:						40
+$Subsystem:		turret01,			5.5, 20.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret02, 			5.5, 20.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret03, 			5.5, 20.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret04, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret05, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret06, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret07, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret08, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret09, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret10, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret11, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret12, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret13, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret14, 			5, 20.0
+	$Default SBanks:			( "Piranha" "Piranha" )
+	$Flags: 					( "use multiple guns" )
+$Subsystem:		turret15, 			5, 20.0
+	$Default SBanks:			( "Piranha" "Piranha" )
+	$Flags: 					( "use multiple guns" )
+$Subsystem:		turret16, 			5.5, 20.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret17, 			5.5, 20.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret18, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret19, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret20, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret21, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret22, 			3, 20.0
+	$Default PBanks:			( "Wraith" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+
 #End
