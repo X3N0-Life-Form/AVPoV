@@ -2686,9 +2686,13 @@ $Score:							75
 $Subsystem:                     turret01, 10, 2.0
 	$Default SBanks:			( "Vasudan Torpedo" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 $Subsystem:                     turret02, 10, 2.0
 	$Default SBanks:			( "Vasudan Torpedo" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 $Subsystem:                     turret03, 5, 1.2
 	$Default PBanks:			( "Wraith" )
 	$Max Turrets per Bomb:		1
