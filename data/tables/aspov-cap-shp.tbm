@@ -1398,6 +1398,8 @@ $Subsystem:                     Turret12, 0.3, 2.0
 $Subsystem:                     Turret13, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret14, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1406,6 +1408,8 @@ $Subsystem:                     Turret14, 0.3, 2.0
 $Subsystem:                     Turret15, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret16, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1414,6 +1418,8 @@ $Subsystem:                     Turret16, 0.3, 2.0
 $Subsystem:                     Turret17, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret18, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1422,6 +1428,8 @@ $Subsystem:                     Turret18, 0.3, 2.0
 $Subsystem:                     Turret19, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret20, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1430,6 +1438,8 @@ $Subsystem:                     Turret20, 0.3, 2.0
 $Subsystem:                     Turret21, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret22, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1442,6 +1452,8 @@ $Subsystem:                     Turret23, 0.3, 2.0
 $Subsystem:                     Turret24, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret25, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1450,6 +1462,8 @@ $Subsystem:                     Turret25, 0.3, 2.0
 $Subsystem:                     Turret26, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret27, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1458,6 +1472,8 @@ $Subsystem:                     Turret27, 0.3, 2.0
 $Subsystem:                     Turret28, 0.3, 2.0
 	$Default PBanks:        ( "Wraith" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret29, 0.3, 2.0
 	$Default PBanks:        ( "Advanced Flak" )
@@ -1473,81 +1489,101 @@ $Subsystem:                     Turret30, 0.3, 2.0
 $Subsystem:                     Turret31, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret32, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret33, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret34, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret35, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret36, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret37, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret38, 0.3, 2.0
-	$Default PBanks:        ( "Piranha" )
+	$Default SBanks:        ( "Piranha" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret39, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret40, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret41, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret42, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret43, 0.3, 2.0
 	$Default PBanks:        ( "AAAf" )
 	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.5
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret44, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret45, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret46, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret47, 0.3, 2.0
-	$Default PBanks:        ( "Piranha" )
+	$Default SBanks:        ( "Piranha" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret48, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret49, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret50, 0.3, 2.0
-	$Default PBanks:        ( "Tornado" )
+	$Default SBanks:        ( "Tornado" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 
