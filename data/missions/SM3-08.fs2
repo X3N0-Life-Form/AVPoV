@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", 1867)
 $Author: James Agay
 $Created: 06/04/99 at 14:09:31
-$Modified: 10/16/12 at 18:17:54
+$Modified: 11/21/12 at 21:23:30
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -31,11 +31,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: 11470.727539, 4981.135742, 13640.962891
++Viewer pos: 3454.479248, 4907.051758, 93.710396
 +Viewer orient:
-	-0.866026, -0.000002, 0.499999,
-	-0.258453, 0.856043, -0.447652,
-	-0.428020, -0.516905, -0.741356
+	0.726291, -0.000003, -0.687387,
+	0.380401, 0.832916, 0.401927,
+	0.572535, -0.553399, 0.604941
 +SquadReassignName: 70th Blue Lions
 +SquadReassignLogo: lion1.pcx
 
@@ -377,7 +377,10 @@ $Ship Choices: (
 	"GTF Hercules Mark II"	8
 	"GTF Ares"	8
 	"GTF Loki"	8
+	"GTF Pegasus"	1
 	"GTF Perseus"	8
+	"GVF Serapis Elite"	1
+	"GVB Sekhmet Elite"	1
 )
 
 +Weaponry Pool: (
@@ -394,9 +397,9 @@ $Ship Choices: (
 	"Hornet"	1200
 	"Tornado"	1200
 	"Harpoon"	600
-	"Trebuchet"	48
 	"TAG-B"	20000
 	"Stiletto II"	100
+	"Trebuchet"	48
 )
 
 #Objects		;! 56 total
@@ -702,7 +705,7 @@ $Orientation:
 	0.757787, -0.324674, 0.565992
 $AI Behavior: None
 +AI Class: Elite
-$AI Goals: ( goals ( ai-chase "Sathanas" 1 ) )
+$AI Goals: ( goals ( ai-waypoints-once "C Path" 1 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 66
@@ -877,20 +880,8 @@ $Damage: 2
 $Damage: 1
 +Subsystem: sensors
 $Damage: 11
-+Subsystem: engines ctr
-$Damage: 100
-+Subsystem: engines frt
-$Damage: 100
-+Subsystem: engines main
-$Damage: 100
 +Subsystem: fighterbay
 $Damage: 69
-+Subsystem: enginelarge01
-$Damage: 100
-+Subsystem: enginelarge02
-$Damage: 100
-+Subsystem: enginelarge03
-$Damage: 100
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -2368,6 +2359,7 @@ $Ships: (		;! 4 total
 	"Beta 3"
 	"Beta 4"
 )
+$AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 +Hotkey: 1
 +Flags: ( )
 
@@ -2532,7 +2524,7 @@ $Ships: (		;! 4 total
 )
 +Flags: ( )
 
-#Events		;! 48 total
+#Events		;! 54 total
 
 $Formula: ( when 
    ( has-time-elapsed 10 ) 
@@ -2676,6 +2668,25 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( true ) 
+   ( add-goal 
+      "Beast" 
+      ( ai-waypoints-once 
+         "Colly position" 
+         100 
+      )
+   )
+   ( add-goal 
+      "Colossus" 
+      ( ai-waypoints-once "Death point" 100 ) 
+   )
+)
++Name: fight stuff
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Hela" ) 
    ( add-goal 
       "Colossus" 
@@ -2772,6 +2783,13 @@ $Formula: ( when
    ( clear-goals "Stalwart" ) 
    ( clear-goals "Heket" ) 
    ( clear-goals "Khepri" ) 
+   ( add-goal 
+      "Sathanas" 
+      ( ai-waypoints-once 
+         "Colly position" 
+         100 
+      )
+   )
 )
 +Name: Shivan Sup Cap jumps in
 +Repeat Count: 1
@@ -2849,6 +2867,20 @@ $Formula: ( when
       "Colossus" 
       "High" 
       "Lilith Arrives" 
+   )
+   ( add-goal 
+      "Heket" 
+      ( ai-waypoints-once 
+         "Shiv Cruiser Pos Top" 
+         100 
+      )
+   )
+   ( add-goal 
+      "Khepri" 
+      ( ai-waypoints-once 
+         "Shiv Cruiser Pos Bot" 
+         100 
+      )
    )
 )
 +Name: Lilith Armed and ready
@@ -2975,7 +3007,7 @@ $Formula: ( when
    ( has-arrived-delay 0 "Orcus" ) 
    ( add-goal 
       "Colossus" 
-      ( ai-waypoints-once "C Path" 34 ) 
+      ( ai-waypoints-once "C target" 100 ) 
    )
 )
 +Name: Colossus on track
@@ -3156,6 +3188,127 @@ $Formula: ( when
 +Interval: 1
 +Objective:  XSTR("Destroy Baal", 1881)
 
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Hela" ) 
+      ( not ( is-destroyed-delay 0 "Hela" ) ) 
+   )
+   ( set-object-position 
+      "Shiv Cruiser Pos Top:1" 
+      ( get-object-x "Hela" ) 
+      ( + ( get-object-y "Hela" ) 1000 ) 
+      ( get-object-z "Hela" ) 
+   )
+   ( set-object-position 
+      "Shiv Cruiser Pos Bot:1" 
+      ( get-object-x "Hela" ) 
+      ( - ( get-object-y "Hela" ) 1000 ) 
+      ( get-object-z "Hela" ) 
+   )
+)
++Name: update lilith pos
++Repeat Count: 1
++Trigger Count: 200
++Interval: 5
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Hela" ) 
+   ( remove-goal 
+      "Heket" 
+      ( ai-waypoints-once 
+         "Shiv Cruiser Pos Top" 
+         100 
+      )
+   )
+   ( remove-goal 
+      "Khepri" 
+      ( ai-waypoints-once 
+         "Shiv Cruiser Pos Bot" 
+         100 
+      )
+   )
+)
++Name: Hela destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Beast" ) 
+   ( set-object-position 
+      "Colly position:1" 
+      ( get-object-x "Colossus" ) 
+      ( get-object-y "Colossus" ) 
+      ( get-object-z "Colossus" ) 
+   )
+)
++Name: update colly position
++Repeat Count: 200
++Interval: 5
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Demogorgon" 
+      "Baal" 
+      "Hela" 
+      "Orcus" 
+   )
+   ( has-been-tagged-delay 
+      0 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret53" 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret54" 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret57" 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret58" 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret59" 
+      "<argument>" 
+   )
+   ( fire-beam 
+      "Colossus" 
+      "turret60" 
+      "<argument>" 
+   )
+)
++Name: TAG
++Repeat Count: 1
++Trigger Count: 800
++Interval: 30
+
+$Formula: ( when 
+   ( < 
+      ( distance 
+         "Colossus" 
+         "Behind the node:1" 
+      )
+      7000 
+   )
+   ( add-goal 
+      "Colossus" 
+      ( ai-waypoints-once "C target" 90 ) 
+   )
+)
++Name: Colly closing on the node
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 2 total
 
 $Type: Secondary
@@ -3170,7 +3323,7 @@ $MessageNew:  XSTR("Neutralize all enemy fighters that enter the field of engage
 $end_multi_text
 $Formula: ( has-departed-delay 0 "Alpha 1" ) 
 
-#Waypoints		;! 11 lists total
+#Waypoints		;! 14 lists total
 
 
 $Jump Node: 8560.556641, -0.003340, 5746.738770
@@ -3243,6 +3396,21 @@ $List: (		;! 3 points in list
 	( -3275.657471, 0.002274, 10714.554688 )
 	( -5710.872559, 0.000709, 14152.305664 )
 	( 4509.100098, 0.001360, -531.216125 )
+)
+
+$Name: Colly position
+$List: (		;! 1 points in list
+	( -10272.912109, -0.001013, 14718.546875 )
+)
+
+$Name: Shiv Cruiser Pos Top
+$List: (		;! 1 points in list
+	( -10766.208984, -0.000922, 14902.069336 )
+)
+
+$Name: Shiv Cruiser Pos Bot
+$List: (		;! 1 points in list
+	( -10609.018555, -0.000835, 15297.879883 )
 )
 
 #Messages		;! 27 total
