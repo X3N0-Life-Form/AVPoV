@@ -150,6 +150,10 @@ Second, ships can jump from system to system via nodes. Until the Great War, onl
 The vast majority of subspace nodes are extremely unstable, forming and dissipating in nanoseconds. Other nodes have a longer lifespan, existing for centuries or millennia before collapsing. The jump nodes sanctioned by the GTVA for interstellar travel are expected to remain stable for many years.", 3203)
 $end_multi_text
 
+;: ;; =====================================================
+;: ;;					My stuff - Armor
+;: ;; =====================================================
+
 $Entry:
 $Name:				XSTR("---- Armor ----",-1)
 $Anim:					
@@ -220,6 +224,10 @@ $AlwaysInTechRoom:		0
 $Description:		XSTR("You shouldn't be seeing this. Makes ships nigh invulnerable.",-1)
 $end_multi_text
 
+;: ;; =====================================================
+;: ;;					My stuff - Notable Ships
+;: ;; =====================================================
+
 $Entry:
 $Name:  			XSTR("---- Notable Ships ----",-1)
 $Anim:					
@@ -265,7 +273,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Special Operations Destroyer
 
-    Classified.",-1)
+    CLASSIFIED - level Mu",-1)
 $end_multi_text
 
 $Entry:
@@ -294,7 +302,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Support Destroyer
 
-    An aging warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most succesfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat detented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
+    An aging warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most succesfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat dented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
 $end_multi_text
 
 $Entry:
@@ -365,7 +373,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Battle Destroyer
 
-    ",-1)
+    CLASSIFIED - level Omega",-1)
 $end_multi_text
 
 ;; ordinary destroyers + liliths
@@ -429,6 +437,10 @@ $Description:
     Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
 
+;: ;; =====================================================
+;: ;;					My stuff - Ship Variants
+;: ;; =====================================================
+
 ;; cf renewed ships.txt
 $Entry:
 $Name:        XSTR("---- Ship variants ----",-1)
@@ -447,7 +459,7 @@ $Description:
 	
 	The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
 
-    On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned the title of Archangel of Death.",-1)
+    On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned among Alliance officers and crew the title of 'Archangel of Death'.",-1)
 $end_multi_text
 
 $Entry:
@@ -662,14 +674,16 @@ $Description:
 	Almost as rare as the Area Denial corvette, this cruiser fills a similar role, carrying multiple flak guns instead of anti-warship weaponry.",-1)
 $end_multi_text
 
-$Entry:
-$Name:        XSTR("---- Shivan Strikecraft Classification ----",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("
+;: ;; ==============================================================
+;: ;;					My stuff - Strikecraft Classification
+;: ;; ==============================================================
 
-    ",-1)
+$Entry:
+$Name:        XSTR("---- Shivan Strikecrafts ----",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	1
+$Description:
+    XSTR("Shivan Strikecraft Classification",-1)
 $end_multi_text
 
 $Entry:
@@ -691,9 +705,7 @@ $AlwaysInTechRoom:    	0
 $Description:
     XSTR("Nephilim - Heavy Bomber
 	
-	Nothing to add.
-
-    ",-1)
+	Nothing to add.",-1)
 $end_multi_text
 
 $Entry:
@@ -804,6 +816,119 @@ $Description:
 
     ",-1)
 $end_multi_text
+
+;: ;; =====================================================
+;: ;;					My stuff - Additonal Information
+;: ;; =====================================================
+
+$Entry:
+$Name:        XSTR("---- Additional Info ----",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	1
+$Description:
+    XSTR("Description of various technologies, standards and tactics used by the GTVA and the Shivans.",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("-- Alliance --",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	1
+$Description:
+    XSTR("Description of various technologies and standards used by the GTVA.",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("space asset generation thingy - definition",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("& put descriptions of the various generations (in different articles)
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Akheton - Advanced Sensor Suite mk3",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("TODO
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Trition Dynamics - Fast Refuel and Repair",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("TODO
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Lance Weapon Systems",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("CLASSIFIED - level Omega
+
+    ",-1)
+$end_multi_text
+
+;: ;; =====================================================
+$Entry:
+$Name:        XSTR("-- Shivan --",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	1
+$Description:
+    XSTR("Description of various technologies and tactics used by the Shivans.",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Beam Refraction",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("CLASSIFIED - level Mu
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Subspace Missiles",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("CLASSIFIED - level Mu
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Upgraded Weaponery",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("CLASSIFIED - level Rho
+
+    ",-1)
+$end_multi_text
+
+$Entry:
+$Name:        XSTR("Command Vessels",-1)
+$Anim:                    
+$AlwaysInTechRoom:    	0
+$Description:
+    XSTR("CLASSIFIED - level Rho
+
+    ",-1)
+$end_multi_text
+
+;: ;; =====================================================
+;: ;;					My stuff - Notes to self
+;: ;; =====================================================
 
 $Entry:
 $Name:        	XSTR("### mission reports ###",-1)
