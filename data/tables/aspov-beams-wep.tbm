@@ -835,7 +835,7 @@ $Flags:                         ("Big Ship" "beam" "no pierce shield")
 $Icon:                          icongun05
 $Anim:                          LoadGun07
 $Impact Explosion:					exp04
-$Impact Explosion Radius:			40
+$Impact Explosion Radius:			10
 $BeamInfo:
 	+Type:						0				;; 0 - 4 are valid #'s
 	+Life:			  			1.0

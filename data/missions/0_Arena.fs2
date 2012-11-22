@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 11/22/12 at 15:49:05
+$Modified: 11/22/12 at 15:52:44
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -686,6 +686,21 @@ $Formula: ( when
       "turret30" 
    )
    ( modify-variable @fov[0] ( get-fov ) ) 
+   ( beam-lock 
+      "Bad Guy" 
+      "turret08" 
+      "turret09" 
+      "turret18" 
+      "turret19" 
+   )
+   ( turret-lock 
+      "Bad Guy" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret16" 
+      "turret17" 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
