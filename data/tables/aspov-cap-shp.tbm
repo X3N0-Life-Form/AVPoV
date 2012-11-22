@@ -2845,7 +2845,7 @@ $Power Output:				38.0
 $Max Oclk Speed:			35.0
 $Max Weapon Eng:			0.0
 $Hitpoints:					85000
-$Armor Type: 				Heavy Armor
+$Armor Type: 				HeavyArmor
 $Flags:						( "corvette" "big damage" )
 $AI Class:					Big
 $Afterburner:				NO

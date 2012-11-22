@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 11/22/12 at 15:52:44
+$Modified: 11/22/12 at 16:59:28
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -267,7 +267,7 @@ $Determination: 10
 +Score: 90
 
 $Name: Friend		;! Object #3
-$Class: SC Rakshasa
+$Class: GTC Fenris
 $Team: Friendly
 $Location: 2668.241699, -117.792343, 4099.164063
 $Orientation:
@@ -283,17 +283,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
-+Primary Banks: ( "SRed" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
++Subsystem: turret09a-01-main
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -303,6 +297,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
++Special Hitpoints: 40000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 150
@@ -643,7 +638,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Alpha 1" 47 ) ( ai-chase "Bad Guy" 49 ) ( ai-chase-wing "Baddies" 50 ) )
 +Flags: ( "reinforcement" )
 
-#Events		;! 6 total
+#Events		;! 7 total
 
 $Formula: ( when 
    ( true ) 
@@ -700,6 +695,11 @@ $Formula: ( when
       "turret03" 
       "turret16" 
       "turret17" 
+   )
+   ( beam-lock 
+      "Bad Guy" 
+      "turret04" 
+      "turret05" 
    )
 )
 +Name: mission start
@@ -807,6 +807,14 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( turret-lock-all "Friend" ) 
+)
++Name: lock all
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 0 total
 

@@ -744,7 +744,7 @@ $Cargo Size:                    0.0
 $Homing:                        NO
 $LaunchSnd:                    108                                     ;;      The sound it makes when fired
 $ImpactSnd:                    85                                      ;; The sound it makes when it hits something
-$Flags:						   ( "particle spew" "player allowed" "no pierce shield" )
+$Flags:						   ( "particle spew" "player allowed" "no pierce shields" )
 $Trail:
 	+Start Width:	0.7
 	+End Width:		0.3
