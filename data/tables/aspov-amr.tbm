@@ -23,6 +23,11 @@ $Name: HeavyArmor
 		+Value:			1.2
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: Default
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			5.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
 
 $Name: MediumArmor
 	$Damage Type: NormalWeapon
@@ -43,6 +48,11 @@ $Name: MediumArmor
 	$Damage Type:	ShivanHugeWeapon
 		+Calculation:	Multiplicative
 		+Value:			1.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			1.0
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: Default
 
@@ -67,7 +77,11 @@ $Name: LightArmor
 		+Value:			1.3
 		+Weapon Piercing Effect Start Limit: 10
 		+Weapon Piercing Type: None
-
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			1.0
+		+Weapon Piercing Effect Start Limit: 15
+		+Weapon Piercing Type: Default
 		
 ;; new armor types
 
@@ -92,7 +106,11 @@ $Name:		Shivan Fighter Armor
 		+Value:			1.05
 		+Weapon Piercing Effect Start Limit: 10
 		+Weapon Piercing Type: None
-
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			1.0
+		+Weapon Piercing Effect Start Limit: 10
+		+Weapon Piercing Type: Default
 		
 $Name:		Shivan Bomber Armor
 	$Damage Type: NormalWeapon
@@ -115,7 +133,11 @@ $Name:		Shivan Bomber Armor
 		+Value:			0.8
 		+Weapon Piercing Effect Start Limit: 10
 		+Weapon Piercing Type: None
-		
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			2.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
 		
 ;; corvettes & cruisers
 $Name:		Shivan Capital Ship Armor
@@ -139,7 +161,12 @@ $Name:		Shivan Capital Ship Armor
 		+Value:			1.1
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: default		
-
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			5.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+		
 		
 $Name:				Shivan Destroyer Armor
 	$Damage Type:	NormalWeapon
@@ -162,6 +189,11 @@ $Name:				Shivan Destroyer Armor
 		+Value:			1.0
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: default
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			3.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
 		
 		
 $Name:		Shivan Elite Armor
@@ -185,6 +217,11 @@ $Name:		Shivan Elite Armor
 		+Value:			0.2
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: Default
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
 		
 ;; plot armor
 $Name: Hell Armor
@@ -206,6 +243,11 @@ $Name: Hell Armor
 	$Damage Type:	ShivanHugeWeapon
 		+Calculation:	Multiplicative
 		+Value:			0.01
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type:	PulsarLance
+		+Calculation:	Multiplicative
+		+Value:			0.05
 		+Weapon Piercing Effect Start Limit: 5
 		+Weapon Piercing Type: Default
 

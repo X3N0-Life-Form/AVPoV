@@ -130,6 +130,9 @@ $BeamInfo:
 
 ;; new beams
 
+;; =========================================================================
+;;						Shivan Anti-Capital Beams
+;; =========================================================================
 $Name:                          MRed
 	+Tech Title:		XSTR("MRed",-1)
 	+Tech Description:	XSTR("Medium Shivan Beam
@@ -333,7 +336,9 @@ $BeamInfo:
 		
 
 
-
+;; =========================================================================
+;;						Terran Anti-Capital Beams
+;; =========================================================================
 
 
 $Name:							MGreen
@@ -529,7 +534,9 @@ $BeamInfo:
 		+Flicker:		0.35
 		+Zadd:			1
 
-;; Vasudan beams
+;; =========================================================================
+;;						Vasudan Anti-Capital Beams
+;; =========================================================================
 		
 ;; damage per salvo: 52650
 $Name:							BFVas
@@ -792,6 +799,102 @@ $BeamInfo:
 	$Section:
 		+Width:			112.0
 		+Texture:		OrangeFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+		
+;; =========================================================================
+;;						Alliance Joint Beams
+;; =========================================================================
+
+$Name:		Pulsar Lance
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					255, 200, 67
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          20.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     2.0
+$Damage:                        30
+$Damage Type:					PulsarLance
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      30.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88              ;; The sound it makes when it hits something
++Weapon Range:					2500
+$Flags:                         ("Big Ship" "beam" "no pierce shield")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:					exp04
+$Impact Explosion Radius:			40
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			1.0
+	+Warmup:		  			500
+	+Warmdown:					500
+	+Radius:		  			10.0			;; muzzle glow radius in meters
+	+PCount:					24			;; particles spewed every interval
+	+PRadius:					2.4			;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_purple
+	+Miss Factor:				0.5 0.975 1.35 1.875 2.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					145			;; the looping beam-firing sound
+	+WarmupSound:				151
+	+WarmdownSound:				157			;; associated warmdown sound
+	+Muzzleglow:				beamglow6_purple
+	+Shots:						0			;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						10.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					5.0
+	+Beam Piercing Effect Velocity:			100
+	+Beam Piercing Splash Effect Velocity:	-5
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Index:			0
+		+Width:			4.0
+		+Texture:		VasBeam2Core_purple
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			6.0
+		+Tile Factor:	10, 1
+		+Translation:	-20
+	$Section:
+		+Index:			1
+		+Width:			8.0
+		+Texture:		VasBeam2Glow_purple
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.2
+		+Zadd:			3.0
+		+Tile Factor:	10, 1
+		+Translation:	-16
+	$Section:
+		+Index:			2
+		+Width:			10.0
+		+Texture:		VasBeam2GlowHaze_purple
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.4
+		+Zadd:			0.0
+		+Tile Factor:	12, 1
+		+Translation:	-10
+	$Section:
+		+Index:			3
+		+Width:			12.0
+		+Texture:		PurpleFade
 		+RGBA Inner:	255 255 255 255
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35
