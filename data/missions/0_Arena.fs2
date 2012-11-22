@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 11/22/12 at 16:59:28
+$Modified: 11/22/12 at 22:32:52
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,7 +30,7 @@ $end_multi_text
 	-0.569083, -0.822116, 0.016417
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
-$Squadron wing names: ( "Alpha" "Friendlies" "Gemini" "Pisces" "Libra" )
+$Squadron wing names: ( "Alpha" "Friendlies" "Gemini" "Snipers" "Libra" )
 
 $AI Profile: myProfile
 
@@ -233,13 +233,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret08
 +Subsystem: turret09
 +Subsystem: turret10
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 +Subsystem: turret11
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 +Subsystem: turret12
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 +Subsystem: turret13
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 +Subsystem: turret14
 +Sbank Ammo: ( 0 0 )
 +Subsystem: turret15
@@ -250,9 +250,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret19
 +Subsystem: turret20
 +Subsystem: turret21
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 +Subsystem: turret22
-+Primary Banks: ( "Pulsar Lance" )
++Primary Banks: ( "Binary Lance" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -289,7 +289,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret08
 +Subsystem: turret09a-01-main
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -297,7 +297,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
-+Special Hitpoints: 40000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 150
@@ -700,6 +699,11 @@ $Formula: ( when
       "Bad Guy" 
       "turret04" 
       "turret05" 
+   )
+   ( turret-lock 
+      "Bad Guy" 
+      "turret14" 
+      "turret15" 
    )
 )
 +Name: mission start
