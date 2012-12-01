@@ -139,6 +139,7 @@ $BeamInfo:
 	+Shots:						0			;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Range:						2000
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						5.0
 	+Beam Piercing Effect:					exp06
@@ -188,6 +189,7 @@ $Burst Shots:		5
 $Burst Delay:		10
 $Burst Flags:		( "fast firing" )
 
+
 $Name:		Pulsar Lance
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  laserglow01
@@ -233,6 +235,7 @@ $BeamInfo:
 	+Shots:						0			;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Range:						2500
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						10.0
 	+Beam Piercing Effect:					exp06
@@ -325,6 +328,7 @@ $BeamInfo:
 	+Shots:						0			;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Range:						4000
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						20.0
 	+Beam Piercing Effect:					exp06
@@ -417,6 +421,7 @@ $BeamInfo:
 	+Shots:						0			;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Range:						2500
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						10.0
 	+Beam Piercing Effect:					exp06
