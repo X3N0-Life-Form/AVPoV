@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Bluff", -1)
 $Author: X3N0-Life-Form
 $Created: 07/16/10 at 22:51:34
-$Modified: 08/16/12 at 21:35:37
+$Modified: 12/01/12 at 13:12:39
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -12,26 +12,21 @@ $End Notes:
 $Mission Desc:
  XSTR("Quite short. Not very difficult.", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 131072
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1817.295410, 4453.420410, 27707.718750
++Viewer pos: 7489.200195, 258.990387, 29718.003906
 +Viewer orient:
-	-0.998795, -0.000004, 0.049081,
-	-0.011137, 0.973933, -0.226563,
-	-0.047801, -0.226836, -0.972759
+	-0.039737, -0.000004, 0.999210,
+	-0.198021, 0.980166, -0.007871,
+	-0.979392, -0.198177, -0.038950
 
 
 $AI Profile: myProfile
@@ -391,7 +386,6 @@ $Ship Choices: (
 	"Tornado D"	500
 	"Harpoon"	564
 	"Harpoon D"	500
-	"Harpoon#Weak"	500
 	"Trebuchet"	500
 	"TAG-A"	500
 	"TAG-B"	520
@@ -405,7 +399,7 @@ $Ship Choices: (
 	"EMP Adv."	500
 )
 
-#Objects		;! 123 total
+#Objects		;! 124 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Horus
@@ -3164,9 +3158,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 +Subsystem: turret10
 +Subsystem: turret11
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "MGreen" )
 +Subsystem: turret12
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "MGreen" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
    0 
@@ -3185,7 +3179,7 @@ $Determination: 10
 +Score: 500
 
 $Name: Hashimen		;! Object #95
-$Class: GVC Aten
+$Class: GVC Newet
 $Team: Hostile
 $Location: 4948.561523, -430.583893, 31160.945313
 $Orientation:
@@ -3193,22 +3187,26 @@ $Orientation:
 	-0.008868, -0.002462, 0.999957,
 	-0.963517, -0.267487, -0.009204
 $AI Behavior: None
-+AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01a
-+Primary Banks: ( "SVas" )
-+Subsystem: turret02a
-+Primary Banks: ( "Fast Flak" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Primary Banks: ( "Wraith" )
-+Subsystem: turret06
-+Primary Banks: ( "Wraith" )
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
    0 
@@ -3223,7 +3221,6 @@ $Determination: 10
 +Escort priority: 3
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 90
 
 $Name: Strike Cruiser Cruiser 01		;! Object #96
@@ -3999,6 +3996,47 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 10
+
+$Name: Hemephit		;! Object #123
+$Class: GVC Hemsut
+$Team: Hostile
+$Location: 5893.967773, 0.011873, 30131.714844
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.039194, -0.999232,
+	0.000000, 0.999232, -0.039194
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Secondary Banks: ( "Crossbow" )
++Sbank Ammo: ( 0 )
++Subsystem: Turret02
++Secondary Banks: ( "Crossbow" )
++Sbank Ammo: ( 0 )
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 
+   0 
+   "mission switch" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 2
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 75
 
 #Wings		;! 28 total
 
@@ -4977,12 +5015,12 @@ $Formula: ( when
    ( fade-in ) 
    ( awacs-set-radius 
       "Support Cruiser 01" 
-      "navigation" 
+      "sensors" 
       6000 
    )
    ( awacs-set-radius 
       "Streaker" 
-      "navigation" 
+      "sensors" 
       8000 
    )
    ( set-armor-type 
@@ -4995,7 +5033,7 @@ $Formula: ( when
    ( ship-vulnerable "Alpha 1" ) 
    ( awacs-set-radius 
       "Strike Cruiser Cruiser 01" 
-      "navigation" 
+      "sensors" 
       4000 
    )
    ( ship-stealthy "Alpha 1" ) 
