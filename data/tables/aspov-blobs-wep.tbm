@@ -35,11 +35,11 @@ $Damage Type:	ShivanHugeWeapon
 ;; GTVA
 $Name:                              Mass Driver 
 	+Tech Title:		XSTR("Mass Driver",-1)
-	+Tech Description:	XSTR("Initially developped for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and has proven to be particularly popular in the Vasudan Navy, which equipped lighter versions on its warships.
+	+Tech Description:	XSTR("Initially developped for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and is particularly popular in the Vasudan Navy, which now often equips lighter variants on its warships.
 	
 	Before the Terran Navy decided to replace these expansive weapons with cheaper flak systems, the Mass Driver gave the Hecate punishing anti-warship firepower from almost any direction, backed up by the ship's beam weapons, delivering a near-constant stream of armor-piercing accelerated uranium slugs.
 	
-	While the lighter versions of this gun have a much light refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts heavier versions of this weapon, with a much greater refire rate, transforming these turrets into corvette-killing weapons.
+	While the lighter versions of this gun have a much lighter refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts heavier versions of this weapon, with a much greater refire rate, transforming these turrets into true corvette-killing weapons.
 	
 	Damage per second vs hull:   333
 	Damage per second vs shield: 67",-1)
