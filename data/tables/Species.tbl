@@ -493,7 +493,12 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)
 
-    ",-1)
+    Extremely resilient, Demon Command Destroyers act as fleet hubs for Shivan forces. Their complex sensor array allows these ship to track any ship and subspace activity within a 120 Astronomical Units radius in free space (exact efficiency in nebula environment unknown). Using this intel, the ship coordinates strikes accross an entire theatre of operation, using Moloch support corvettes to form a communication and sensor network to vector incredibly precise shock strikes (even by Shivan standards) against Allied installations and warships. It has also been observed that the presence of a Command Destroyer within a specific solar system marked a drastic increase in Shivan SSM strikes, though the destroyer itself rarely launched Subspace Missiles.
+	
+	These ships rarely engage in direct combat, and seem to either have less subspace agility compared to other Shivan destroyers, or be more reluctant to use its subspace drives. A possible explaination is that the ship needs to remain in normal space to properly coordinate other Shivan forces and maintain its Moloch 'web'. However, its hull strength and the alarming speed at which a Command Destroyer is capable of repairing itself makes it difficult to take down.
+	
+	CLASSIFIED - level Mu
+	Detailed scans of the ship revealed a powerful communication device, seemingly a cut down version of the Communications Nodes found beyond the second Knossos device. Its exact purpose remains unknown, though analysts believe it may enable communication accross extreme distance. The scans also revealed multiple 'black spots' within the ship - areas impervious to sensor probing, an anomaly only shared with the Sathanas Juggernaught. An unsettling observation: the Command Destroyer appears to be able to field and maintain a far greater force than it should be able to. It is unclear where the extra couple hundred of strikecrafts come from.",-1)
 $end_multi_text
 
 $Entry:
@@ -564,6 +569,7 @@ $Description:
 	Command corvettes are similar to the standard carrier corvette, though they display increased subspace agility compared to other Moloch variants and, Like all other command variants, this corvette is much more resilient. When engaged by allied warships, it will occasionnally overdrive its beam weapons for short periods of time, giving the corvette the edge it needs to quickly mop up Alliance capital ships pinning it down.",-1)
 $end_multi_text
 
+;: ;; remove it for good? When exactly is it used?
 $Entry:
 $Name:        XSTR("Area Denial Corvette",-1)
 $Anim:                	
@@ -593,7 +599,9 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Lilith - Command Heavy Cruiser (Reaper)
 
-    ",-1)
+    Only two Command Lilith have ever been encountered by Alliance forces, the Reaper and the Scythe. Each time, these cruisers led capital ship strike teams in attacks against GTVA warships, composed of a few other cruisers and corvettes. GTVI reports indicate that these ships tend to operate independently from other Shivan forces, but have authority to enroll other capital ships in their strike operations.
+	
+	While the Reaper was always exclusively on the offensive, the Scythe only ever attacked GTVA forces engaging other Shivan assets. It is unusual, though not unheard of, to see the Shivans act so defensively.",-1)
 $end_multi_text
 
 $Entry:
