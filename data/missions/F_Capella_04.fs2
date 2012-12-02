@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 12/02/12 at 18:46:48
+$Modified: 12/02/12 at 23:34:38
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -169.860550, 11160.952148, -3193.986084
++Viewer pos: -421.177460, 5959.774414, -4420.023926
 +Viewer orient:
-	0.997646, -0.000001, 0.068580,
-	-0.062621, 0.407698, 0.910967,
-	-0.027961, -0.913117, 0.406738
+	0.997108, 0.000001, -0.075993,
+	0.053696, 0.707614, 0.704556,
+	0.053774, -0.706599, 0.705568
 
 
 $Skybox Model: Starfield.pof
@@ -64,7 +64,7 @@ In order to put a stop to these attacks, I have decided to ignore the $y General
 
 By statying out of the Sathanas' main firing arc, overdriving the Apep's beams and using our advanced electronics and targeting suite, we should be able to hold our own for a few minutes against the juggernaught.
 
-During that time, our bombers will attempt to disable the ship's engines and point defences. At the very least, we should get the Sathanas' attention.
+During that time, our bombers will attempt to disable as many beam cannons as possible. At the very least, we should get the Sathanas' attention.
 
 All pilots, report to your squadron leaders for specific instruction.", -1)
 $end_multi_text
@@ -107,7 +107,7 @@ $Ship Choices: (
 +Weaponry Pool: (
 	"Mekhu HL-7"	16
 	"Morning Star"	16
-	"Prometheus S"	24
+	"Prometheus S"	32
 	"Maxim"	16
 	"UD-8 Kayser"	16
 	"Circe"	16
@@ -120,16 +120,16 @@ $Ship Choices: (
 	"Hornet"	1200
 	"Tornado"	600
 	"Harpoon"	240
-	"Trebuchet"	112
+	"Trebuchet"	152
 	"TAG-A"	500
 	"TAG-B"	500
 	"Piranha"	30
-	"Cyclops"	500
+	"Cyclops"	528
 	"Helios"	500
 	"Crossbow"	120
 )
 
-#Objects		;! 97 total
+#Objects		;! 129 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -406,7 +406,7 @@ $Team: Unknown
 $Location: 8739.858398, -42.109093, 9201.695313
 $Orientation:
 	0.074547, 0.928340, -0.364180,
-	0.631052, 0.238858, 0.738052,
+	0.631051, 0.238858, 0.738052,
 	0.772151, -0.284837, -0.568024
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
@@ -431,11 +431,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704032, 9213.975586
+$Location: 8706.747070, 12.704017, 9213.975586
 $Orientation:
-	-0.074363, -0.928412, 0.364037,
+	-0.074363, -0.928412, 0.364036,
 	0.670575, 0.223638, 0.707329,
-	-0.738105, 0.296714, 0.605939
+	-0.738105, 0.296713, 0.605939
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -577,11 +577,11 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.464844, 14.504875, 11767.515625
+$Location: 13005.473633, 14.504845, 11767.513672
 $Orientation:
-	0.176804, 0.000024, -0.984291,
-	0.984298, 0.000032, 0.176805,
-	0.000036, -1.000000, -0.000017
+	0.177339, 0.000022, -0.984194,
+	0.984201, 0.000032, 0.177340,
+	0.000036, -1.000000, -0.000016
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -3148,7 +3148,958 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-#Wings		;! 18 total
+$Name: Hellknight		;! Object #97
+$Class: SC Rakshasa
+$Team: Hostile
+$Location: 5291.392578, -1638.142700, 8048.411133
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 0.343646, -0.939100,
+	0.000000, 0.939100, 0.343646
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-chase "Searing Fate" 50 ) ( ai-chase "Crixalis" 48 ) ( ai-chase "Apep" 46 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "MRed" )
++Subsystem: turret02
++Primary Banks: ( "MRed" )
++Subsystem: turret03
++Primary Banks: ( "MRed" )
++Subsystem: turret04
++Primary Banks: ( "MRed" )
++Subsystem: turret05
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret06
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret07
++Primary Banks: ( "SAAA" )
++Subsystem: turret08
++Primary Banks: ( "SAAA" )
++Subsystem: turret09
++Subsystem: turret10
++Primary Banks: ( "SAAA" )
++Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret12
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret13
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret14
++Primary Banks: ( "Shivan Multi Turret" )
+$Arrival Location: Near Ship
++Arrival Distance: 4000
+$Arrival Anchor: Searing Fate
+$Arrival Cue: ( is-event-true-delay 
+   "1st wave destroyed" 
+   9 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+$Texture Replace:
++old: rak_01-glow
++new: rak_01_cmd-glow
++old: rak_01-normal
++new: rak_01_cmd-glow
++old: rak_02-normal
++new: rak_02_cmd-glow
+
+$Name: Oblivion 1		;! Object #98
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5911.550781, -0.000323, 7896.161621
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Oblivion 2		;! Object #99
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5836.375488, -0.000401, 7816.245605
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Oblivion 3		;! Object #100
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5653.545898, -0.000259, 7851.347168
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Oblivion 4		;! Object #101
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5743.596680, -0.000265, 8008.373535
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Oblivion 5		;! Object #102
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5796.695801, -0.000103, 7749.229004
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Oblivion 6		;! Object #103
+$Class: SF Manticore
+$Team: Hostile
+$Location: 5872.651367, -0.000164, 7963.934082
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" )
++Secondary Banks: ( "Tempest#Shivan" "Tempest#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Iota 1		;! Object #104
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 6466.601563, -0.000241, 7975.514648
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Iota 2		;! Object #105
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 6682.426758, -0.000286, 8123.866211
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Iota 3		;! Object #106
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 6654.313477, -0.000270, 7978.596680
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Iota 4		;! Object #107
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 6566.957031, -0.000129, 7871.517090
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Theta 1		;! Object #108
+$Class: GVF Seth
+$Team: Friendly
+$Location: 6728.898438, -0.000203, 8593.875000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Theta 2		;! Object #109
+$Class: GVF Seth
+$Team: Friendly
+$Location: 6871.714355, -0.000348, 8588.267578
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Theta 3		;! Object #110
+$Class: GVF Seth
+$Team: Friendly
+$Location: 6815.259277, -0.000168, 8512.798828
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Theta 4		;! Object #111
+$Class: GVF Seth
+$Team: Friendly
+$Location: 6723.250000, -0.000364, 8532.164063
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Hornet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Upsilon 1		;! Object #112
+$Class: GVF Seth
+$Team: Friendly
+$Location: 7019.520020, -0.000186, 7844.288574
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Upsilon 2		;! Object #113
+$Class: GVF Seth
+$Team: Friendly
+$Location: 7081.606934, -0.000277, 7841.513672
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Upsilon 3		;! Object #114
+$Class: GVF Seth
+$Team: Friendly
+$Location: 7085.194824, -0.000226, 7771.578613
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Upsilon 4		;! Object #115
+$Class: GVF Seth
+$Team: Friendly
+$Location: 7026.276367, -0.000313, 7770.310547
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Omega 1		;! Object #116
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3432.374023, 0.000561, 792.299438
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omega 2		;! Object #117
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3517.815674, 0.000378, 830.487427
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omega 3		;! Object #118
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3569.903564, 0.000474, 738.315369
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omega 4		;! Object #119
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3484.266357, 0.000424, 715.353394
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omicron 1		;! Object #120
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3918.098389, 0.000488, 840.457703
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omicron 2		;! Object #121
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 4015.940918, 0.000518, 841.367859
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omicron 3		;! Object #122
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 3984.345703, 0.000442, 783.663574
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Omicron 4		;! Object #123
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: 4004.326172, 0.000556, 889.919434
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Sehku" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Gamma 1		;! Object #124
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 487.503204, -0.000026, 4494.062500
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Gamma 2		;! Object #125
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 624.007202, 0.000064, 4670.852051
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Gamma 3		;! Object #126
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 736.428894, 0.000001, 4539.832520
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Gamma 4		;! Object #127
+$Class: GVB Bakha
+$Team: Friendly
+$Location: 625.529175, -0.000123, 4403.750488
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Stone of Dovka		;! Object #128
+$Class: GVC Hemsut
+$Team: Friendly
+$Location: 742.592163, -0.002869, 1394.374390
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-waypoints "Stone of Dovka path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Secondary Banks: ( "Trebuchet" )
++Sbank Ammo: ( 0 )
++Subsystem: Turret02
++Secondary Banks: ( "Trebuchet" )
++Sbank Ammo: ( 0 )
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Apep" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 8
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 75
+
+#Wings		;! 25 total
 
 $Name: Alpha
 $Waves: 1
@@ -3266,7 +4217,7 @@ $Ships: (		;! 4 total
 	"Epsilon 3"
 	"Epsilon 4"
 )
-$AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "enginesctr" 50 ) ( ai-destroy-subsystem "Sathanas" "engineslwleft" 49 ) ( ai-destroy-subsystem "Sathanas" "engineslwright" 48 ) ( ai-chase "Sathanas" 47 ) )
+$AI Goals: ( goals ( ai-chase "Sathanas" 47 ) )
 +Flags: ( )
 
 $Name: Delta
@@ -3289,7 +4240,7 @@ $Ships: (		;! 4 total
 	"Delta 3"
 	"Delta 4"
 )
-$AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "enginesmain" 50 ) ( ai-destroy-subsystem "Sathanas" "enginesupleft" 49 ) ( ai-destroy-subsystem "Sathanas" "enginesupright" 48 ) ( ai-chase "Sathanas" 47 ) )
+$AI Goals: ( goals ( ai-chase "Sathanas" 47 ) )
 +Flags: ( )
 
 $Name: Lambda
@@ -3544,7 +4495,151 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase-wing "Libra" 50 ) ( ai-chase-wing "Virgo" 49 ) ( ai-chase-wing "Gemini" 48 ) ( ai-chase-wing "Taurus" 47 ) ( ai-chase-any 46 ) )
 +Flags: ( )
 
-#Events		;! 33 total
+$Name: Oblivion
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Oblivion 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 1500
+$Arrival Anchor: Hellknight
+$Arrival Cue: ( has-arrived-delay 1 "Hellknight" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( destroyed-or-departed-delay 
+   3 
+   "Hellknight" 
+)
+$Ships: (		;! 6 total
+	"Oblivion 1"
+	"Oblivion 2"
+	"Oblivion 3"
+	"Oblivion 4"
+	"Oblivion 5"
+	"Oblivion 6"
+)
+$AI Goals: ( goals ( ai-guard "Hellknight" 50 ) )
++Flags: ( )
+
+$Name: Iota
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Iota 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 3 "Hellknight" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Iota 1"
+	"Iota 2"
+	"Iota 3"
+	"Iota 4"
+)
+$AI Goals: ( goals ( ai-chase "Hellknight" 50 ) ( ai-chase "Sathanas" 49 ) )
++Flags: ( )
+
+$Name: Upsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Upsilon 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 2 "Iota" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Upsilon 1"
+	"Upsilon 2"
+	"Upsilon 3"
+	"Upsilon 4"
+)
+$AI Goals: ( goals ( ai-guard-wing "Iota" 50 ) ( ai-chase-any 49 ) )
++Flags: ( )
+
+$Name: Theta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Theta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( has-arrived-delay 4 "Iota" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Theta 1"
+	"Theta 2"
+	"Theta 3"
+	"Theta 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Oblivion" 50 ) ( ai-chase "Hellknight" 49 ) ( ai-guard-wing "Iota" 48 ) ( ai-guard "Apep" 47 ) ( ai-chase-any 46 ) )
++Flags: ( )
+
+$Name: Omicron
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Omicron 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( is-event-true-delay "Apep < 29" 0 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Omicron 1"
+	"Omicron 2"
+	"Omicron 3"
+	"Omicron 4"
+)
+$AI Goals: ( goals ( ai-guard "Apep" 50 ) ( ai-chase-any 48 ) )
++Flags: ( )
+
+$Name: Omega
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Omega 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( is-event-true-delay "Apep < 29" 0 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Omega 1"
+	"Omega 2"
+	"Omega 3"
+	"Omega 4"
+)
+$AI Goals: ( goals ( ai-guard "Apep" 50 ) ( ai-chase-any 48 ) )
++Flags: ( )
+
+$Name: Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+	"Gamma 4"
+)
+$AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
++Hotkey: 2
++Flags: ( )
+
+#Events		;! 39 total
 
 $Formula: ( when 
    ( has-arrived-delay 60 "Apep" ) 
@@ -3564,7 +4659,83 @@ $Formula: ( when
 +Interval: 10
 
 $Formula: ( when 
-   ( has-arrived-delay 20 "Crixalis" ) 
+   ( has-arrived-delay 
+      22 
+      "Stone of Dovka" 
+   )
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( if-then-else 
+         ( not ( is-destroyed-delay 0 "Apep" ) ) 
+         ( set-object-position 
+            "Stone of Dovka path:1" 
+            ( get-object-x "Apep" ) 
+            ( + ( get-object-y "Apep" ) 1000 ) 
+            ( - ( get-object-z "Apep" ) 500 ) 
+         )
+         ( set-object-position 
+            "Stone of Dovka path:1" 
+            ( get-object-x "Sathanas" ) 
+            ( get-object-y "Sathanas" ) 
+            ( get-object-z "Sathanas" ) 
+         )
+      )
+      ( do-nothing ) 
+   )
+)
++Name: update stone path
++Repeat Count: 200
++Interval: 10
+
+$Formula: ( when 
+   ( and 
+      ( >= 
+         ( distance 
+            "Stone of Dovka" 
+            "Stone of Dovka path:1" 
+         )
+         1500 
+      )
+      ( not ( is-destroyed-delay 0 "Apep" ) ) 
+   )
+   ( cap-waypoint-speed 
+      "Stone of Dovka" 
+      -1 
+   )
+)
++Name: stone - max speed
++Repeat Count: -1
++Trigger Count: 200
++Interval: 20
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance 
+            "Stone of Dovka" 
+            "Stone of Dovka path:1" 
+         )
+         1500 
+      )
+      ( not ( is-destroyed-delay 0 "Apep" ) ) 
+   )
+   ( cap-waypoint-speed 
+      "Stone of Dovka" 
+      15 
+   )
+)
++Name: stone - reduced speed
++Repeat Count: -1
++Trigger Count: 200
++Interval: 20
+
+$Formula: ( when 
+   ( has-arrived-delay 21 "Crixalis" ) 
    ( if-then-else 
       ( not 
          ( is-destroyed-delay 0 "Crixalis" ) 
@@ -3721,10 +4892,65 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Apep" ) 29 ) 
    ( set-armor-type 
-      "Apep" 
+      "Omega 1" 
       ( true ) 
       "Shivan Elite Armor" 
       "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omega 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omega 3" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omega 4" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omicron 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omicron 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omicron 3" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Omicron 4" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( change-soundtrack "<No Music>" ) 
+   ( play-sound-from-file 
+      "FS2_Cinema2.ogg" 
+      1 
    )
 )
 +Name: Apep < 29
@@ -3885,6 +5111,19 @@ $Formula: ( when
 +Chained: 30
 
 $Formula: ( when 
+   ( <= ( hits-left "Alpha 1" ) 10 ) 
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+)
++Name: player < 10
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( true ) 
    ( set-object-position 
       "Ballard dockpoints:1" 
@@ -3949,6 +5188,17 @@ $Formula: ( when
       "turret28" 
       "turret29" 
       "turret30" 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "engine" 
+      "weapons" 
+      "sensors" 
+      "communications" 
+      "Hull" 
+      "Shields" 
    )
 )
 +Name: mission start
@@ -4446,6 +5696,12 @@ $Formula: ( when
       "turret03" 
       "turret04" 
    )
+   ( turret-set-rate-of-fire 
+      "Stone of Dovka" 
+      0 
+      "Turret01" 
+      "Turret02" 
+   )
 )
 +Name: Apep arrives
 +Repeat Count: 1
@@ -4761,10 +6017,30 @@ $Formula: ( when
 +Repeat Count: 8
 +Interval: 6
 
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Hellknight" ) 
+      ( is-destroyed-delay 0 "Searing Fate" ) 
+   )
+   ( do-nothing ) 
+)
++Name: Hellknight going against Apep
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Hellknight" ) 
+   ( do-nothing ) 
+)
++Name: destroy hellknight
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy the SC Hellknight", -1)
+
 #Goals		;! 0 total
 
 
-#Waypoints		;! 7 lists total
+#Waypoints		;! 8 lists total
 
 $Name: Pretty Lady path
 $List: (		;! 1 points in list
@@ -4804,6 +6080,11 @@ $List: (		;! 1 points in list
 	( -760.536865, -1142.848877, 6462.508789 )
 )
 
+$Name: Stone of Dovka path
+$List: (		;! 1 points in list
+	( 816.856018, -0.002694, 4015.731445 )
+)
+
 #Messages		;! 0 total
 
 
@@ -4819,8 +6100,8 @@ $Ambient light level: 7895160
 
 #Music
 
-$Event Music: None
-$Briefing Music: Cinema
+$Event Music: 6: Joshua
+$Briefing Music: Brief6
 $Fiction Viewer Music: Failure
 
 #End
