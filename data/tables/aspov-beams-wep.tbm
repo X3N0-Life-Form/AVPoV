@@ -857,7 +857,6 @@ $BeamInfo:
 	+Shots:						0				;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.1			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					1.6			;; what percentage of max width we subtract per second
-;;	+Range:						8000
 	+Beam Flash Effect:						capflash
 	+Beam Flash Radius:						40.0
 	+Beam Piercing Effect:					exp06

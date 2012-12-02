@@ -141,5 +141,71 @@ $Anim:                                 belial
 $Impact Explosion:                     ExpMissileHit1
 $Impact Explosion Radius:					15.0
 
+
+$Name:									Catapult ;; used on Arcadia installations
+	+Tech Title:				   XSTR("'Catapult' Long Range Torpedo", -1)
+	+Tech Anim:					   Tech_Helios
+	+Tech Description: 
+		XSTR("TODO", -1)
+	$end_multi_text
+$Model File:							helios.pof
+$Mass:									35.0
+$Velocity:								280.0
+$Fire Wait:								20.0
+$Damage:                                12800
+$Damage Type:							HugeWeapon
+$Shockwave Damage Type:					HugeWeapon
+$Blast Force:                           1000.0
+$Inner Radius:							250.0
+$Outer Radius:							500.0
+$Shockwave Speed:						150
+$Shockwave name:						shockwave01
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:                      0.85
+$Lifetime:								30.0
+$Energy Consumed:						0.0
+$Cargo Size:							25.0
+$Homing:								YES
+	+Type:                              ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:                         3.0
+	+View Cone:							360.0
+	+Min Lock Time:						1.0
+	+Lock Pixels/Sec:					25														;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				0														;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					15														;; Extra pixels to move after catching up
+$LaunchSnd:								97
+$ImpactSnd:								101													;;      shockwave impact sound
+$FlyBySnd:								-1
+$Rearm Rate:							0.02
+$Flags:									( "Bomb" "Huge" "No Dumbfire" "particle spew" )
+$Trail:
+	+Start Width:	2.0
+	+End Width:		0
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		2.6
+	+Bitmap:		missiletrail02									;; Bitmap used to draw trail
+$Icon:                                 iconHelios
+$Anim:                                 Helios
+$Impact Explosion:                     ExpMissileHit1
+$Impact Explosion Radius:			39.32
+$Piercing Impact Explosion:			exp04
+$Piercing Impact Radius:			19.66
+$Piercing Impact Velocity:			25
+$Piercing Impact Splash Velocity:	-25
+$Piercing Impact Variance:			20000
+$Piercing Impact Particles:			10
+$Pspew:
+	+Count:		1
+	+Time:		1
+	+Vel:		0.0
+	+Radius:	1.0
+	+Life:		0.1
+	+Scale:		0.0
+	+Bitmap:	missilespew02
+$Thruster Flame Effect:				missilethruster02
+$Thruster Glow Effect:				missileglow02
+
 #End
 
