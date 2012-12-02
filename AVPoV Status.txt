@@ -500,6 +500,7 @@ F_Capella_03.The Lost Generation
 
 
 F_Capella_04.Their Finest Hour
+	5th gen mission
 
 F_Capella_05.Final Round
 
