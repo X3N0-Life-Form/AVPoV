@@ -1,0 +1,348 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Their Finest Hour", -1)
+$Author: X3N0-Life-Form
+$Created: 12/02/12 at 10:51:47
+$Modified: 12/02/12 at 11:19:18
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 0.000000, 739.023071, -835.602600
++Viewer orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.838119, 0.545488,
+	0.000000, -0.545488, 0.838119
+
+
+$AI Profile: myProfile
+#Fiction Viewer
+
+$File: F04.txt
+
+#Command Briefing
+
+$Stage Text:
+ XSTR("General Retreat
+
+$h Attention, $h to $h all $h GTVA $h forces: the $f Colossus is down, and the blocade of the $b Gamma $b Draconis node has been lifted. All units are to finish their current objective then proceed to the $b Vega node and cover the civilians' evacuation. All destroyers are to pull out of the system. Non committed fighters are to assist with the escort of the $f Bastion.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+$Stage Text:
+ XSTR("The end of Capella
+
+To the officers and crew of the $f GVD $f Apep, this is admiral Obster. Ten minutes ago, a $h Sathanas juggernaught engaged and destroyed the $f GTVA $f Colossus, killing its 30,000 crewmembers and officers in the process. Following this, Command ordered all units to fall back to the $b Vega node and assist with the evacuation.
+
+Meanwhile, the $h Sathanas that destroyed the $f Colossus started engaging other Alliance assets and refugee convoys, killing over 20,000 people in the last 5 minutes.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+$Stage Text:
+ XSTR("Counter Offensive
+
+In order to put a stop to these attacks, I have decided to ignore the $y General $y Retreat order, and put this ship's ressources to halting this rampage until civilian evacuation is complete.
+
+By statying out of the Sathanas' main firing arc, overdriving the Apep's beams and using our advanced electronics and targeting suite, we should be able to hold our own for a few minutes against the juggernaught.
+
+During that time, our bombers will attempt to disable the ship's engines and point defences. At the very least, we should get the Sathanas' attention.
+
+All pilots, report to your squadron leaders for specific instruction.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+$Stage Text:
+ XSTR("End of the line
+
+This is the end of the line. This mission will likely be the last flight of the $g GVD $g Apep. The $s Lost $s Generation's darkest, but also maybe finest hour. Fly with pride. Fight with the fury of Vasuda.
+
+Good luck.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Players		;! 1 total
+
+$Starting Shipname: Alpha 1
+$Ship Choices: (
+	"GTF Ulysses"	5
+	"GTF Hercules"	5
+	"GTF Hercules Mark II"	5
+	"GTF Ares"	5
+	"GTF Erinyes"	5
+	"GTF Loki"	5
+	"GTF Pegasus"	5
+	"GTF Perseus"	5
+	"GTF Myrmidon"	5
+	"SF Mara (terrans)"	5
+	"GTB Artemis"	5
+	"GTB Artemis D.H."	5
+	"GTB Medusa"	5
+	"GTB Ursa"	5
+	"GTB Zeus"	5
+	"GTB Boanerges"	5
+	"GVF Ptah"	5
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	16
+	"Subach HL-D"	16
+	"Mekhu HL-7"	24
+	"Mekhu HL-7D"	16
+	"Akheton SDG"	16
+	"Morning Star"	16
+	"MorningStar D"	16
+	"Prometheus R"	16
+	"Prometheus S"	16
+	"Prometheus D"	16
+	"Maxim"	16
+	"Maxim D"	16
+	"UD-8 Kayser"	16
+	"UD-D Kayser"	16
+	"Circe"	16
+	"Lamprey"	16
+	"Shivan Light Laser"	16
+	"Shivan Heavy Laser"	16
+	"Shivan Mega Laser"	16
+	"UD-6"	16
+	"Fire Spitter"	16
+	"Hell Spitter"	16
+	"Hayg Mas"	16
+	"Sehku"	16
+	"Sahr AS"	16
+	"Shivan Light Laser Up"	16
+	"Shivan Heavy Laser Up"	16
+	"Shivan Anticap Laser"	16
+	"Shivan Heavy Anticap Laser"	16
+	"Shivan Scatter Gun"	16
+	"Shivan Light Scatter Gun"	16
+	"Shivan Sniper Gun"	16
+	"Shivan Large Cannon"	16
+	"Shivan Flak Weapon"	16
+	"Rockeye"	700
+	"Rockeye D"	500
+	"Tempest"	500
+	"Tempest D"	500
+	"Hornet"	500
+	"Hornet D"	500
+	"Tornado"	500
+	"Tornado D"	500
+	"Harpoon"	500
+	"Harpoon D"	500
+	"Trebuchet"	500
+	"TAG-A"	500
+	"TAG-B"	500
+	"TAG-C"	500
+	"Piranha"	500
+	"Stiletto II"	500
+	"Infyrno"	500
+	"Infyrno D"	500
+	"Cyclops"	500
+	"Cyclops#short"	500
+	"Helios"	500
+	"EMP Adv."	500
+	"Rockeye#Shivan"	500
+	"Tempest#Shivan"	500
+	"Hornet#Shivan"	500
+	"Tornado#Shivan"	500
+	"Harpoon#Shivan"	500
+	"Trebuchet#Shivan"	500
+	"EMP Adv.#Shivan"	500
+	"Piranha#Shivan"	500
+	"Shivan Disruptor"	500
+	"Shivan Area Bomb"	500
+	"Shivan Bomb"	500
+	"Shivan Bomb#Short"	500
+	"Shivan Megabomb"	500
+	"Crossbow"	500
+	"TAG-C#Shivan"	500
+	"AntiFighterTAG#Shivan"	500
+	"TAG-C#Barrage"	500
+	"Shivan Mordiggian Bomb"	500
+	"Shivan Swarmer Bomb"	500
+	"Shivan Advanced Swarmer Bomb"	500
+	"Shivan LR Swarm"	500
+	"Tempest Adv#Shivan"	500
+)
+
+#Objects		;! 4 total
+
+$Name: Alpha 1		;! Object #0
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Alpha 2		;! Object #1
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -40.308674, -0.000030, -64.096603
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Alpha 3		;! Object #2
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 90.820587, -0.000003, -65.313652
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Alpha 4		;! Object #3
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 143.976135, 0.000006, -135.330582
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+#Wings		;! 1 total
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
++Hotkey: 0
++Flags: ( )
+
+#Events		;! 0 total
+
+
+#Goals		;! 0 total
+
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 500
+$Ambient light level: 7895160
++Nebula: Nebula01
++Color: Blue
++Pitch: 1
++Bank: 76
++Heading: 219
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+
