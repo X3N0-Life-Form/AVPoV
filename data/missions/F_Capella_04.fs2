@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 12/02/12 at 23:34:38
+$Modified: 12/03/12 at 16:54:03
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,16 +23,23 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -421.177460, 5959.774414, -4420.023926
++Viewer pos: -5642.968750, 10203.265625, 2386.748779
 +Viewer orient:
-	0.997108, 0.000001, -0.075993,
-	0.053696, 0.707614, 0.704556,
-	0.053774, -0.706599, 0.705568
+	0.998535, 0.000001, 0.054114,
+	-0.039742, 0.678718, 0.733323,
+	-0.036728, -0.734399, 0.677723
 
 
 $Skybox Model: Starfield.pof
 
 $AI Profile: myProfile
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"stone_target"		"1"		"number"
+)
 #Fiction Viewer
 
 $File: F04.txt
@@ -129,7 +136,7 @@ $Ship Choices: (
 	"Crossbow"	120
 )
 
-#Objects		;! 129 total
+#Objects		;! 147 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -403,11 +410,11 @@ $Dockee Point: Dock01
 $Name: Dockpoint dummies 1		;! Object #6
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8739.858398, -42.109093, 9201.695313
+$Location: 8739.858398, -42.109104, 9201.695313
 $Orientation:
-	0.074547, 0.928340, -0.364180,
-	0.631051, 0.238858, 0.738052,
-	0.772151, -0.284837, -0.568024
+	0.074549, 0.928340, -0.364181,
+	0.631052, 0.238857, 0.738051,
+	0.772150, -0.284839, -0.568024
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -431,11 +438,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704017, 9213.975586
+$Location: 8706.747070, 12.704034, 9213.975586
 $Orientation:
-	-0.074363, -0.928412, 0.364036,
-	0.670575, 0.223638, 0.707329,
-	-0.738105, 0.296713, 0.605939
+	-0.074362, -0.928412, 0.364036,
+	0.670575, 0.223639, 0.707329,
+	-0.738105, 0.296712, 0.605939
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -459,11 +466,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.632813, -2.463068, 9187.411133
+$Location: 8741.633789, -2.463104, 9187.411133
 $Orientation:
-	0.755452, -0.290064, -0.587500,
-	0.652743, 0.255538, 0.713180,
-	-0.056739, -0.922261, 0.382384
+	0.755391, -0.290824, -0.587202,
+	0.652760, 0.255532, 0.713167,
+	-0.057357, -0.922023, 0.382864
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -487,11 +494,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.361328, -30.218004, 9229.858398
+$Location: 8704.363281, -30.218550, 9229.856445
 $Orientation:
-	0.755422, -0.290431, -0.587357,
-	0.652752, 0.255536, 0.713173,
-	-0.057036, -0.922146, 0.382616
+	0.755427, -0.290369, -0.587381,
+	0.652750, 0.255536, 0.713174,
+	-0.056987, -0.922165, 0.382577
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -577,11 +584,11 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.473633, 14.504845, 11767.513672
+$Location: 13005.466797, 14.504860, 11767.515625
 $Orientation:
-	0.177339, 0.000022, -0.984194,
-	0.984201, 0.000032, 0.177340,
-	0.000036, -1.000000, -0.000016
+	0.177686, 0.000023, -0.984132,
+	0.984139, 0.000032, 0.177687,
+	0.000036, -1.000000, -0.000017
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1369,6 +1376,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1399,6 +1407,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1429,6 +1438,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1459,6 +1469,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1489,6 +1500,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1519,6 +1531,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
 +Secondary Banks: ( "Shivan LR Swarm" )
 $Arrival Location: Hyperspace
++Arrival Delay: 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -4099,6 +4112,552 @@ $Determination: 10
 +Use Table Score:
 +Score: 75
 
+$Name: Escape Pod 1		;! Object #129
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -593.060242, -0.000098, -3436.872070
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 2		;! Object #130
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -641.511536, -0.000001, -3481.542725
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 3		;! Object #131
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -485.958282, 0.000057, -3541.609131
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 4		;! Object #132
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -434.545319, -0.000056, -3463.192627
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 5		;! Object #133
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -518.940308, 0.000045, -3637.870850
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 6		;! Object #134
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -701.500732, 0.000066, -3570.416260
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 4 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 7		;! Object #135
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -562.218140, -0.000121, -3760.624756
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 8		;! Object #136
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -513.571960, -0.000047, -3814.458252
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 9		;! Object #137
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -457.255981, 0.000121, -3874.250000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 10		;! Object #138
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -488.469727, 0.000006, -3916.122559
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 11		;! Object #139
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -554.579163, -0.000071, -3875.139648
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 12		;! Object #140
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -620.848083, 0.000020, -3834.057861
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 8 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 13		;! Object #141
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -838.759094, -0.000021, -3650.019775
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 14		;! Object #142
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -927.718018, -0.000099, -3643.239746
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 15		;! Object #143
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -1016.676880, 0.000038, -3636.459717
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 16		;! Object #144
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -1018.314392, -0.000029, -3706.324707
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 17		;! Object #145
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -932.704407, -0.000073, -3718.434570
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Escape Pod 18		;! Object #146
+$Class: GVEP Ra
+$Team: Friendly
+$Location: -822.174133, -0.000112, -3732.441650
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 12 ) 
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
+)
+$Departure Location: Hyperspace
++Departure delay: 12
+$Departure Cue: ( true ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
 #Wings		;! 25 total
 
 $Name: Alpha
@@ -4639,7 +5198,246 @@ $AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 +Hotkey: 2
 +Flags: ( )
 
-#Events		;! 39 total
+#Events		;! 51 total
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "1" ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( modify-variable @stone_target[1] 1 ) 
+   ( key-reset "1" ) 
+)
++Name: stone mode 1 - fire at will
++Repeat Count: -1
++Trigger Count: 400
++Interval: 3
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "2" ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( modify-variable @stone_target[1] 2 ) 
+   ( key-reset "2" ) 
+)
++Name: stone mode 2 - fighters
++Repeat Count: -1
++Trigger Count: 400
++Interval: 3
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "3" ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( modify-variable @stone_target[1] 3 ) 
+   ( key-reset "3" ) 
+)
++Name: stone mode 3 - bombers
++Repeat Count: -1
++Trigger Count: 400
++Interval: 3
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "4" ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( modify-variable @stone_target[1] 4 ) 
+   ( key-reset "4" ) 
+)
++Name: stone mode 4 - sathanas
++Repeat Count: -1
++Trigger Count: 400
++Interval: 3
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Leo 1" 
+      "Leo 2" 
+      "Leo 3" 
+      "Leo 4" 
+      "Leo 5" 
+      "Leo 6" 
+      "Cancer 1" 
+      "Cancer 2" 
+      "Cancer 3" 
+      "Cancer 4" 
+      "Cancer 5" 
+      "Cancer 6" 
+      "Virgo 1" 
+      "Virgo 2" 
+      "Virgo 3" 
+      "Virgo 4" 
+      "Libra 1" 
+      "Libra 2" 
+      "Libra 3" 
+      "Libra 4" 
+   )
+   ( and 
+      ( = @stone_target[1] 2 ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( ship-tag "<argument>" 2 5 ) 
+)
++Name: stone tag 2
++Repeat Count: -1
++Trigger Count: 400
++Interval: 5
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Gemini 1" 
+      "Gemini 2" 
+      "Gemini 3" 
+      "Gemini 4" 
+      "Gemini 5" 
+      "Gemini 6" 
+      "Taurus 1" 
+      "Taurus 2" 
+      "Taurus 3" 
+      "Taurus 4" 
+      "Taurus 5" 
+      "Taurus 6" 
+   )
+   ( and 
+      ( = @stone_target[1] 3 ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( ship-tag "<argument>" 2 5 ) 
+)
++Name: stone tag 3
++Repeat Count: -1
++Trigger Count: 400
++Interval: 5
+
+$Formula: ( when-argument 
+   ( every-of "Sathanas" ) 
+   ( and 
+      ( = @stone_target[1] 4 ) 
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( ship-tag "<argument>" 2 5 ) 
+)
++Name: stone tag 4
++Repeat Count: -1
++Trigger Count: 400
++Interval: 5
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 
+         0 
+         "Stone of Dovka" 
+      )
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Stone of Dovka" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "1st wave destroyed" 
+            0 
+         )
+      )
+   )
+   ( if-then-else 
+      ( = @stone_target[1] 1 ) 
+      ( turret-tagged-clear 
+         "Stone of Dovka" 
+      )
+      ( turret-tagged-specific 
+         "Stone of Dovka" 
+         "Turret01" 
+         "Turret02" 
+      )
+   )
+   ( training-msg "stone targetting" ) 
+)
++Name: stone print mode
++Repeat Count: -1
++Trigger Count: 400
++Interval: 5
 
 $Formula: ( when 
    ( has-arrived-delay 60 "Apep" ) 
@@ -4671,21 +5469,158 @@ $Formula: ( when
          )
       )
       ( if-then-else 
-         ( not ( is-destroyed-delay 0 "Apep" ) ) 
-         ( set-object-position 
-            "Stone of Dovka path:1" 
-            ( get-object-x "Apep" ) 
-            ( + ( get-object-y "Apep" ) 1000 ) 
-            ( - ( get-object-z "Apep" ) 500 ) 
+         ( and 
+            ( not ( is-destroyed-delay 0 "Apep" ) ) 
+            ( or 
+               ( = @stone_target[1] 1 ) 
+               ( = @stone_target[1] 4 ) 
+            )
          )
-         ( set-object-position 
-            "Stone of Dovka path:1" 
-            ( get-object-x "Sathanas" ) 
-            ( get-object-y "Sathanas" ) 
-            ( get-object-z "Sathanas" ) 
+         ( if-then-else 
+            ( and 
+               ( has-arrived-delay 0 "Hellknight" ) 
+               ( not 
+                  ( is-destroyed-delay 0 "Hellknight" ) 
+               )
+            )
+            ( set-object-position 
+               "Stone of Dovka path:1" 
+               ( get-object-x "Hellknight" ) 
+               ( get-object-y "Hellknight" ) 
+               ( get-object-z "Hellknight" ) 
+            )
+            ( set-object-position 
+               "Stone of Dovka path:1" 
+               ( get-object-x "Apep" ) 
+               ( + ( get-object-y "Apep" ) 1000 ) 
+               ( - ( get-object-z "Apep" ) 500 ) 
+            )
+         )
+         ( if-then-else 
+            ( is-destroyed-delay 0 "Apep" ) 
+            ( if-then-else 
+               ( and 
+                  ( has-arrived-delay 0 "Hellknight" ) 
+                  ( not 
+                     ( is-destroyed-delay 0 "Hellknight" ) 
+                  )
+               )
+               ( set-object-position 
+                  "Stone of Dovka path:1" 
+                  ( get-object-x "Hellknight" ) 
+                  ( get-object-y "Hellknight" ) 
+                  ( get-object-z "Hellknight" ) 
+               )
+               ( set-object-position 
+                  "Stone of Dovka path:1" 
+                  ( get-object-x "Sathanas" ) 
+                  ( get-object-y "Sathanas" ) 
+                  ( get-object-z "Sathanas" ) 
+               )
+            )
+            ( if-then-else 
+               ( = @stone_target[1] 2 ) 
+               ( set-object-position 
+                  "Stone of Dovka path:1" 
+                  ( avg 
+                     ( get-object-x "Cancer" ) 
+                     ( get-object-x "Leo" ) 
+                     ( get-object-x "Libra" ) 
+                     ( get-object-x "Virgo" ) 
+                  )
+                  ( avg 
+                     ( get-object-y "Cancer" ) 
+                     ( get-object-y "Leo" ) 
+                     ( get-object-y "Libra" ) 
+                     ( get-object-y "Virgo" ) 
+                  )
+                  ( avg 
+                     ( get-object-z "Cancer" ) 
+                     ( get-object-z "Leo" ) 
+                     ( get-object-z "Libra" ) 
+                     ( get-object-z "Virgo" ) 
+                  )
+               )
+               ( if-then-else 
+                  ( = @stone_target[1] 3 ) 
+                  ( set-object-position 
+                     "Stone of Dovka path:1" 
+                     ( avg 
+                        ( get-object-x "Gemini" ) 
+                        ( get-object-x "Taurus" ) 
+                     )
+                     ( avg 
+                        ( get-object-y "Gemini" ) 
+                        ( get-object-y "Taurus" ) 
+                     )
+                     ( avg 
+                        ( get-object-z "Gemini" ) 
+                        ( get-object-z "Taurus" ) 
+                     )
+                  )
+                  ( do-nothing ) 
+               )
+            )
          )
       )
       ( do-nothing ) 
+   )
+   ( if-then-else 
+      ( and 
+         ( not 
+            ( is-destroyed-delay 
+               0 
+               "Stone of Dovka" 
+            )
+         )
+         ( < 
+            ( distance 
+               "Stone of Dovka" 
+               "Stone of Dovka path:1" 
+            )
+            2000 
+         )
+         ( or 
+            ( = @stone_target[1] 2 ) 
+            ( = @stone_target[1] 3 ) 
+         )
+      )
+      ( if-then-else 
+         ( false ) 
+         ( do-nothing ) 
+         ( turret-change-weapon 
+            "Stone of Dovka" 
+            "Turret01" 
+            "Piranha" 
+            0 
+            1 
+         )
+         ( turret-change-weapon 
+            "Stone of Dovka" 
+            "Turret02" 
+            "Piranha" 
+            0 
+            1 
+         )
+      )
+      ( if-then-else 
+         ( false ) 
+         ( do-nothing ) 
+         ( turret-change-weapon 
+            "Stone of Dovka" 
+            "Turret01" 
+            "Trebuchet" 
+            0 
+            1 
+         )
+         ( turret-change-weapon 
+            "Stone of Dovka" 
+            "Turret02" 
+            "Trebuchet" 
+            0 
+            1 
+         )
+      )
    )
 )
 +Name: update stone path
@@ -4952,6 +5887,16 @@ $Formula: ( when
       "FS2_Cinema2.ogg" 
       1 
    )
+   ( turret-set-rate-of-fire 
+      "Apep" 
+      250 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+   )
 )
 +Name: Apep < 29
 +Repeat Count: 1
@@ -5040,31 +5985,10 @@ $Formula: ( when
       0 
       0 
    )
-   ( ship-rot-maneuver 
-      "Sathanas" 
-      300000 
-      0 
-      0 
-      -100 
-      ( true ) 
-   )
-   ( clear-goals "Sathanas" ) 
 )
 +Name: Repair Sath big beams
 +Repeat Count: 1
 +Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( add-goal 
-      "Sathanas" 
-      ( ai-waypoints "Sathanas path" 50 ) 
-   )
-)
-+Name: end rotation
-+Repeat Count: 1
-+Interval: 1
-+Chained: 30
 
 $Formula: ( when 
    ( is-destroyed-delay 
@@ -5122,6 +6046,71 @@ $Formula: ( when
 +Name: player < 10
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( <= ( hits-left "Sathanas" ) 55 ) 
+   ( clear-goals "Sathanas" ) 
+   ( ship-rot-maneuver 
+      "Sathanas" 
+      300000 
+      0 
+      0 
+      -100 
+      ( true ) 
+   )
+)
++Name: sath < 55
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "sath < 55" 0 ) 
+   ( if-then-else 
+      ( is-destroyed-delay 
+         0 
+         "Ganymede Alpha" 
+      )
+      ( do-nothing ) 
+      ( weapon-create 
+         "Sathanas" 
+         "TAG-C#Barrage" 
+         ( get-object-x "Ganymede Alpha" ) 
+         ( - 
+            ( get-object-y "Ganymede Alpha" ) 
+            2500 
+         )
+         ( get-object-z "Ganymede Alpha" ) 
+         0 
+         -90 
+         0 
+         "Ganymede Alpha" 
+      )
+   )
+   ( if-then-else 
+      ( is-destroyed-delay 
+         0 
+         "Ganymede Beta" 
+      )
+      ( do-nothing ) 
+      ( weapon-create 
+         "Sathanas" 
+         "TAG-C#Barrage" 
+         ( get-object-x "Ganymede Beta" ) 
+         ( - 
+            ( get-object-y "Ganymede Beta" ) 
+            2500 
+         )
+         ( get-object-z "Ganymede Beta" ) 
+         0 
+         -90 
+         0 
+         "Ganymede Beta" 
+      )
+   )
+)
++Name: blast ganymedes
++Repeat Count: 8
++Interval: 15
 
 $Formula: ( when 
    ( true ) 
@@ -5660,6 +6649,15 @@ $Formula: ( when
 +Chained: 1
 
 $Formula: ( when 
+   ( is-destroyed-delay 0 "Aquarius" ) 
+   ( do-nothing ) 
+)
++Name: destroy aquarius
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Aquarius", -1)
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Apep" ) 
    ( turret-set-rate-of-fire 
       "Apep" 
@@ -5701,6 +6699,14 @@ $Formula: ( when
       0 
       "Turret01" 
       "Turret02" 
+   )
+   ( turret-set-rate-of-fire 
+      "Apep" 
+      200 
+      "turret11" 
+      "turret21" 
+      "turret22" 
+      "turret30" 
    )
 )
 +Name: Apep arrives
@@ -5745,28 +6751,28 @@ $Formula: ( when
       "Apep" 
       "turret01" 
       "MVasUp" 
-      0 
+      1 
       0 
    )
    ( turret-change-weapon 
       "Apep" 
       "turret02" 
       "BFVas" 
-      0 
+      1 
       0 
    )
    ( turret-change-weapon 
       "Apep" 
       "turret03" 
       "BFVas" 
-      0 
+      1 
       0 
    )
    ( turret-change-weapon 
       "Apep" 
       "turret04" 
       "BFVas" 
-      0 
+      1 
       0 
    )
    ( beam-free-all "Apep" ) 
@@ -5897,7 +6903,7 @@ $Formula: ( when
       "Taurus" 
       "Gemini" 
    )
-   ( do-nothing ) 
+   ( modify-variable @stone_target[1] 1 ) 
 )
 +Name: 1st wave destroyed
 +Repeat Count: 1
@@ -6037,8 +7043,50 @@ $Formula: ( when
 +Interval: 1
 +Objective:  XSTR("Destroy the SC Hellknight", -1)
 
-#Goals		;! 0 total
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Oblivion" ) 
+   ( do-nothing ) 
+)
++Name: destroy oblivion
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Oblivion", -1)
 
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Sathanas" ) 
+   ( close-sound-from-file ( true ) ) 
+   ( play-sound-from-file 
+      "FS2_Vict_B02.ogg" 
+   )
+)
++Name: Sathanas destroyed
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 3 total
+
+$Type: Secondary
++Name: heavy damage
+$MessageNew:  XSTR("Inflict heavy damage to the Sathanas", -1)
+$end_multi_text
+$Formula: ( < ( hits-left "Sathanas" ) 50 ) 
++No music
++Score: 250
+
+$Type: Bonus
++Name: big damage
+$MessageNew:  XSTR("Inflict tremendous damage to the Sathanas", -1)
+$end_multi_text
+$Formula: ( < ( hits-left "Sathanas" ) 30 ) 
++Score: 2500
+
+$Type: Bonus
++Name: destroy
+$MessageNew:  XSTR("Destroy the Sathanas", -1)
+$end_multi_text
+$Formula: ( is-destroyed-delay 0 "Sathanas" ) 
++No music
++Score: 12500
 
 #Waypoints		;! 8 lists total
 
@@ -6085,8 +7133,22 @@ $List: (		;! 1 points in list
 	( 816.856018, -0.002694, 4015.731445 )
 )
 
-#Messages		;! 0 total
+#Messages		;! 2 total
 
+
+$Name: stone targetting
+$Team: -1
+$MessageNew:  XSTR("Target mode: $stone_target 
+$1$ - Fire at will
+$2$ - Target fighters
+$3$ - Target bombers
+$4$ - Target Sathanas", -1)
+$end_multi_text
+
+$Name: <new message>
+$Team: -1
+$MessageNew:  XSTR("<put description here>", -1)
+$end_multi_text
 
 #Reinforcements		;! 0 total
 
