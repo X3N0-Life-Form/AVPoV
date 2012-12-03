@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 12/03/12 at 16:54:03
+$Modified: 12/03/12 at 18:09:15
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -5642.968750, 10203.265625, 2386.748779
++Viewer pos: 2831.583008, 10203.265625, 2846.007080
 +Viewer orient:
-	0.998535, 0.000001, 0.054114,
-	-0.039742, 0.678718, 0.733323,
-	-0.036728, -0.734399, 0.677723
+	0.998535, 0.000000, 0.054114,
+	-0.032583, 0.798412, 0.601230,
+	-0.043205, -0.602112, 0.797242
 
 
 $Skybox Model: Starfield.pof
@@ -136,7 +136,7 @@ $Ship Choices: (
 	"Crossbow"	120
 )
 
-#Objects		;! 147 total
+#Objects		;! 148 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -412,9 +412,9 @@ $Class: GTT Elysium
 $Team: Unknown
 $Location: 8739.858398, -42.109104, 9201.695313
 $Orientation:
-	0.074549, 0.928340, -0.364181,
-	0.631052, 0.238857, 0.738051,
-	0.772150, -0.284839, -0.568024
+	0.074547, 0.928341, -0.364179,
+	0.631052, 0.238857, 0.738052,
+	0.772151, -0.284836, -0.568024
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -438,11 +438,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704034, 9213.975586
+$Location: 8706.747070, 12.704032, 9213.975586
 $Orientation:
-	-0.074362, -0.928412, 0.364036,
-	0.670575, 0.223639, 0.707329,
-	-0.738105, 0.296712, 0.605939
+	-0.074363, -0.928412, 0.364037,
+	0.670575, 0.223638, 0.707329,
+	-0.738105, 0.296714, 0.605939
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -466,11 +466,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.633789, -2.463104, 9187.411133
+$Location: 8741.631836, -2.462777, 9187.413086
 $Orientation:
-	0.755391, -0.290824, -0.587202,
-	0.652760, 0.255532, 0.713167,
-	-0.057357, -0.922023, 0.382864
+	0.755422, -0.290428, -0.587358,
+	0.652752, 0.255536, 0.713173,
+	-0.057034, -0.922146, 0.382615
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -494,11 +494,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.363281, -30.218550, 9229.856445
+$Location: 8704.362305, -30.218332, 9229.856445
 $Orientation:
-	0.755427, -0.290369, -0.587381,
-	0.652750, 0.255536, 0.713174,
-	-0.056987, -0.922165, 0.382577
+	0.755390, -0.290828, -0.587201,
+	0.652760, 0.255532, 0.713167,
+	-0.057360, -0.922021, 0.382867
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -584,10 +584,10 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.466797, 14.504860, 11767.515625
+$Location: 13005.460938, 14.504875, 11767.516602
 $Orientation:
-	0.177686, 0.000023, -0.984132,
-	0.984139, 0.000032, 0.177687,
+	0.176623, 0.000023, -0.984323,
+	0.984330, 0.000032, 0.176624,
 	0.000036, -1.000000, -0.000017
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
@@ -4658,6 +4658,65 @@ $Determination: 10
 +Use Table Score:
 +Score: 5
 
+$Name: Babylon		;! Object #147
+$Class: GTCv Sparta
+$Team: Friendly
+$Location: 4188.000000, 7000.000000, 12904.799805
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints "babylon path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Secondary Banks: ( "Catapult" "Catapult" )
++Sbank Ammo: ( 0 0 )
++Subsystem: turret15
++Secondary Banks: ( "Catapult" "Catapult" )
++Sbank Ammo: ( 0 0 )
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay "Apep < 29" 3 ) 
+   ( not 
+      ( facing-waypoint "babylon path" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 30
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
 #Wings		;! 25 total
 
 $Name: Alpha
@@ -5198,7 +5257,7 @@ $AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 +Hotkey: 2
 +Flags: ( )
 
-#Events		;! 51 total
+#Events		;! 53 total
 
 $Formula: ( when 
    ( and 
@@ -5419,6 +5478,10 @@ $Formula: ( when
             "1st wave destroyed" 
             0 
          )
+      )
+      ( is-event-true-delay 
+         "1st wave armor swaps" 
+         0 
       )
    )
    ( if-then-else 
@@ -5897,10 +5960,139 @@ $Formula: ( when
       "turret09" 
       "turret10" 
    )
+   ( set-object-position 
+      "babylon path:1" 
+      ( get-object-x "Sathanas" ) 
+      ( + ( get-object-y "Sathanas" ) 6000 ) 
+      ( get-object-z "Sathanas" ) 
+   )
 )
 +Name: Apep < 29
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Babylon" ) 
+   ( set-object-position 
+      "Babylon" 
+      ( get-object-x "babylon path:1" ) 
+      ( + 
+         ( get-object-y "babylon path:1" ) 
+         1000 
+      )
+      ( get-object-z "babylon path:1" ) 
+   )
+   ( set-object-facing-object 
+      "Babylon" 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( + ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( get-object-z "Babylon" ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( get-object-x "Babylon" ) 
+      ( get-object-y "Babylon" ) 
+      ( + ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( - ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( get-object-z "Babylon" ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( get-object-x "Babylon" ) 
+      ( get-object-y "Babylon" ) 
+      ( - ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( do-nothing ) 
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( + ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( + ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( + ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( + ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( - ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( - ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+   ( weapon-create 
+      "Babylon" 
+      "Catapult" 
+      ( - ( get-object-x "Babylon" ) 250 ) 
+      ( get-object-y "Babylon" ) 
+      ( - ( get-object-z "Babylon" ) 250 ) 
+      ( get-object-pitch "Babylon" ) 
+      ( get-object-bank "Babylon" ) 
+      ( get-object-heading "Babylon" ) 
+      "Sathanas" 
+   )
+)
++Name: babylon arrives
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 5 "Babylon" ) 
+   ( set-object-position 
+      "babylon path:1" 
+      ( get-object-x "Sathanas" ) 
+      ( + ( get-object-y "Sathanas" ) 1000 ) 
+      ( + ( get-object-z "Sathanas" ) 3500 ) 
+   )
+)
++Name: update babylon path
++Repeat Count: 200
++Interval: 10
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Apep" ) 
@@ -7069,7 +7261,7 @@ $Type: Secondary
 +Name: heavy damage
 $MessageNew:  XSTR("Inflict heavy damage to the Sathanas", -1)
 $end_multi_text
-$Formula: ( < ( hits-left "Sathanas" ) 50 ) 
+$Formula: ( < ( hits-left "Sathanas" ) 45 ) 
 +No music
 +Score: 250
 
@@ -7077,7 +7269,7 @@ $Type: Bonus
 +Name: big damage
 $MessageNew:  XSTR("Inflict tremendous damage to the Sathanas", -1)
 $end_multi_text
-$Formula: ( < ( hits-left "Sathanas" ) 30 ) 
+$Formula: ( < ( hits-left "Sathanas" ) 20 ) 
 +Score: 2500
 
 $Type: Bonus
@@ -7088,7 +7280,7 @@ $Formula: ( is-destroyed-delay 0 "Sathanas" )
 +No music
 +Score: 12500
 
-#Waypoints		;! 8 lists total
+#Waypoints		;! 9 lists total
 
 $Name: Pretty Lady path
 $List: (		;! 1 points in list
@@ -7131,6 +7323,11 @@ $List: (		;! 1 points in list
 $Name: Stone of Dovka path
 $List: (		;! 1 points in list
 	( 816.856018, -0.002694, 4015.731445 )
+)
+
+$Name: babylon path
+$List: (		;! 1 points in list
+	( 4190.000000, 6000.000000, 12900.000000 )
 )
 
 #Messages		;! 2 total
