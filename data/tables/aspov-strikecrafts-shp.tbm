@@ -398,6 +398,7 @@ $Trail:
 	+Max Life:			1.0
 	+Spew Time:			120
 	+Bitmap:			Contrail01
+$Radar Image 2D:    radar-fighter
 $Subsystem:				weapons,        15,0.0
 $Subsystem:				sensors,        5,0.0
 $Subsystem:				communications, 5,0.0
@@ -536,6 +537,7 @@ $Trail:
 	+Max Life:	1.0
 	+Spew Time:	60
 	+Bitmap:	Contrail01
+$Radar Image 2D:    radar-bomber
 $Subsystem:                     weapons,                        8,0.0
 $Subsystem:                     sensors,                         5,0.0
 $Subsystem:                     navigation,              5,0.0
@@ -640,6 +642,7 @@ $Trail:
 	+Max Life:			1.0
 	+Spew Time:			120
 	+Bitmap:			Contrail01
+$Radar Image 2D:    radar-fighter
 $Subsystem:             sensors,                        10,0.0
 $Subsystem:             communications, 10,0.0
 $Subsystem:             engine,                 35,0.0

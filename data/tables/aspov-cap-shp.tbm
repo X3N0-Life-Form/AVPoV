@@ -2683,6 +2683,7 @@ $EngineSnd:						137                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -195
 $Closeup_zoom:					0.5
 $Score:							75
+$Radar Image 2D:    radar-cruiser
 $Subsystem:                     turret01, 10, 2.0
 	$Default SBanks:			( "Vasudan Torpedo" )
 	$Max Turrets per Bomb:		1
@@ -2756,6 +2757,7 @@ $EngineSnd:						137                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -317
 $Closeup_zoom:					0.75
 $Score:							100
+$Radar Image 2D:    radar-cruiser
 $Subsystem:                     turret01,0.833,1.0
 	$Default PBanks:			( "Standard Flak" )
 	$Max Turrets per Bomb:		1
@@ -2855,6 +2857,7 @@ $EngineSnd:					128
 $Closeup_pos:				0.0, -25, -1050
 $Closeup_zoom:				0.5
 $Score:						40
+$Radar Image 2D:    radar-corvette
 $Subsystem:		turret01,			5.5, 20.0
 	$Default PBanks:			( "Mass Driver" )
 	$Turret Base RotationSnd: 	254
