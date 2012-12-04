@@ -463,7 +463,7 @@ E_Sathanas_07.Sorrow								//
 		Ships :
 			-GTD Olympus Shadow (Hecate class)	//destroyed
 			-GTCv Kendrick Smith (Deimos class)	//non-vital
-			-Blade CG (Sobek class)			//non-vital?
+			-Blade CG (2xSobek class)			//non-vital?
 			-SC Lotode (Rakshasa class)		//destroyed
 			-SC Hellknight (Rakshasa class)		//vital
 			-SCv Toffolon (Moloch class)		//destroyed
@@ -490,7 +490,13 @@ F_Capella_01.Nightmare								//
 	5th gen mission
 	Background: Capella
 
-	
+	The Blade CG engages a Demon class destroyer
+	Ships:
+		-Blade CG (2xSobek class)	//destroyed
+		-SD Susl'Arh Mork (Demon class)	//vital
+		-GTA Fox (Charybdis class)	//non-vital
+		-SC Ragnarok (Lilith class)	//non-vital
+		-Vor CG (2xRakshasa class)	//non-vital
 
 
 F_Capella_02.Exodus
@@ -498,9 +504,32 @@ F_Capella_02.Exodus
 
 F_Capella_03.The Lost Generation
 
-
-F_Capella_04.Their Finest Hour
+///////////////////////////////////////////////////////////////////////////////////
+F_Capella_04.Their Finest Hour							//Need more testing
+/////////////////////////////////////////////////////////////////////////////////
 	5th gen mission
+	Background: TODO
+	FS2 Timeline: right after "Their Finest Hour"
+
+	The Apep engages a rampaging Sathanas juggernaught to prevent it from
+	striking refugee convoy and other fleet assets
+	Ships:
+		-SJ Sathanas (Sathanas class)		//non-vital
+		-GTI Paxton Shipyards (Arcadia class)	//destroyed
+		-GTI Ganymede Alpha			//destroyed
+		-GTI Ganymede Beta			//destroyed
+		-GTD Ballard (Hecate class)		//destroyed
+		-GVCv Eb'Siliss (Sobek class)		//destroyed
+		-GTCv Babylon (Sparta class)		//non-vital
+		-GVD Apep (Hatshepsut class)		//destroyed
+		-GVC Searing Fate(Mentu Enforcer class)	//destroyed
+		-GVC Crixalis (Aten class)		//destroyed
+		-GVC Stone of Dovka (Hemsut class)	//destroyed
+		-SC Hellknight (Rakshasa class)		//non-vital
+		-SC Plague (Cain class)			//non-vital
+- also: Restore failsafes?
+		-Apocalypse BG (Ravana + 2xLilith)	//vital
+
 
 F_Capella_05.Final Round
 
