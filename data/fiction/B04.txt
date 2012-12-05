@@ -1,0 +1,26 @@
+Outbound broadcast transmissions log, GTCv Nohort:
+LOG BEGINS
+    Mayday, this is the GTCv Nohort, we are under attack from the Ravana-class destroyer Vampire, the GTC Fabulous has been destroyed, and the GVC Naa'Hen has sustained critical damage. We have managed to get on the Vampire's broadside, but we lack the firepower to take down that destroyer before its bombers take us down.
+
+    Repeat, this is the GTCv Nohort under attack from the SD Vampire. The GTC Fabulous and GVC Naa'Hen have been destroyed and we have sustained moderate damage. Requesting fighter support ASAP.
+
+    Command, we can't hold much longer, what's the status on those reinforcements?
+
+    Command, the Vampire is pulling out! Requesting repair teams to patch up our hull and hunt the Vampire.
+
+    Mayday! The SD Vampire is back, requesting immediate assistance! Repeat, this is the GTCv Nohort, reques -
+LOG ENDS
+
+Outbound broadcast transmissions log, GVC Tulmarel:
+LOG BEGINS
+    Attention, to all Alliance units, the SD Vampire has entered our field of engagement and started attacking our forces. The Shivan warship is damaged, but in ideal position to engage our cruiser group.
+
+    Mayday, this is the GVC Tulmarel, the GVC The'e'e'ret has been destroyed. We are now attempting to depart the field of engagement. Requesting fighter support to cover our escape.
+
+    This is the Tulmarel, our escape was succesful, but our escort fighters report that the Shivan destroyer has jumped out again.
+LOG ENDS
+
+These two logs illustrate perfectly the level of threat presented by the SD Vampire to our efforts in the Gamma Draconis system. While the Nohort managed to pin down the Shivan Hunter-Killer destroyer, it jumped out to engage the Tulmarel and The'e'e'ret, and jump back to the Nohort to finish her off. Officers responsible for asset deployment within the Gamma Draconis system should keep in mind that the SD Vampire can, has, and will pull off that kind of subspace stunt.
+Furthermore, despite taking heavy loses during these two parallel engagements, that destroyer was able to fully resupply within the following 2 hours, as evidenced by the destruction of the GVCv Ehlef and the attack on the GTD Carthage later that day. Special Operations have revealed the the SD Vampire rotates it squadrons with various Moloch-class corvettes present in system, as well as from frequent Shivan incursions at the Subpace Portal itself.
+
+So far, our efforts to pin down the Vampire have had limited success at best. The ship has sufficient firepower to destroy or incapacitate most Alliance warships in its initial salvo, and its long range heavy beams give allows it to "snipe" our vessels from afar.
