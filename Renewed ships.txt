@@ -543,7 +543,25 @@ Deimos:
 	turret 21:Wraith/Fast Flak/Mass Driver
 	turret 22:Wraith/Fast Flak/Mass Driver
 
-
+Deimos:		Viper
+	turret 01:Long Range Flak
+	turret 02:Long Range Flak
+	turret 03:Long Range Flak
+	turret 04:Long Range Flak
+	turret 05:Long Range Flak
+	turret 06:Long Range Flak
+	turret 09:Long Range Flak
+	turret 10:Long Range Flak
+	turret 11:Green Beam
+	turret 12:Green Beam
+	turret 13:Long Range Flak
+	turret 17:Long Range Flak
+	turret 21:Morning Star
+	turret 22:Morning Star
+	turret 23:Green Beam
+	turret 24:Green Beam
+	turret 25:Trebuchet
+	turret 26:Trebuchet
 Aeolus:
 	turret 01:Terran Huge Turret/Prom S/Wraith
 	turret 04:Terran Huge Turret/Prom S/Wraith
