@@ -69,15 +69,15 @@ $end_multi_text
 $Model File:					wep_maxim_tech.pof
 $Mass:							0.2
 $Velocity:						700.0
-$Fire Wait:						0.45
-$Damage:						20
+$Fire Wait:						0.25
+$Damage:						25
 $Damage Type:					NormalWeapon
 $Blast Force:              		40.0
-$Inner Radius:					20.0                                    ;; radius at which damage is full
-$Outer Radius:					30.0                                    ;; max radius for attenuated damage
+$Inner Radius:					15.0                                    ;; radius at which damage is full
+$Outer Radius:					20.0                                    ;; max radius for attenuated damage
 $Shockwave Speed:				0.0                                     ;; velocity of shockwave.  0 for none.
 $Armor Factor:					1.0
-$Shield Factor:					1.0
+$Shield Factor:					2.0
 $Subsystem Factor:				0.2
 $Lifetime:						1.5
 $Energy Consumed:				0.0
@@ -86,7 +86,6 @@ $Homing:						NO
 $LaunchSnd:						116
 $ImpactSnd:						117
 $Rearm Rate:					40.0
-+Weapon Range:					4000			;; Limit to range at which weapon will actively target object
 $Flags:							("Flak" "particle spew" "cycle" "player allowed" "ballistic")
 $Trail:
 	+Start Width:	3.5
