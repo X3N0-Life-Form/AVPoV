@@ -25,8 +25,7 @@ CO : Rear-Admiral Obster
 /********************************************************************************/
 /*				Introduction					*/
 /*										*/
-/*Those were among my very first missions. They will introduce the campaign once*/
-/*I find the time to remake them						*/
+/*Those were among my very first missions. These are very small scale missions.	*/
 /********************************************************************************/
 # 				Fleet status					#
 # Player's base of operations :	GVD Apep (Hatshepsut class)			#
@@ -60,12 +59,13 @@ A_Intro_01.The Viper's Sting							//ToRecheck
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-A_Intro_02.Blue Storm								//ToRemake
+A_Intro_02.Blue Storm								//Needs messages
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
-		TODO : Background ; Briefing ; debriefing ; msgs ; mission ;
+		Background: green + blue + red nebs
+		FS2 Timeline: After "Slaying Ravana"
 
-		-
+		Assist the Warspite while it tests ULTRA-AAA. Small scale mission.
 		Ships :
 			-GTCv Warspite (Deimos class)		//vital
 			-SC Xana (Cain class)			//destroyed

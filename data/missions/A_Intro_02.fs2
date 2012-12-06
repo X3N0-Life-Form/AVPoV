@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 08/15/11 at 22:49:55
+$Modified: 12/06/12 at 14:30:12
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -13,62 +13,278 @@ $Mission Desc:
  XSTR("Put mission description here
 ", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
 
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -607.484253, 3122.834229, 339.808960
++Viewer pos: -1883.705933, 9215.499023, -2901.959473
 +Viewer orient:
-	0.986489, 0.000001, 0.163830,
-	-0.124900, 0.647138, 0.752072,
-	-0.106020, -0.762373, 0.638395
+	0.996892, -0.000012, -0.078786,
+	0.060428, 0.641769, 0.764513,
+	0.050553, -0.766898, 0.639775
 
 
 $AI Profile: myProfile
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"shots"		"0"		"number"
+)
 
 #Command Briefing
 
 #Briefing
 $start_briefing
-$num_stages: 0
+$num_stages: 3
+$start_stage
+$multi_text
+ XSTR("Good morning pilots. Today is our final tour as a $y Combat $y Evaluation $y Unit, we will return to normal duties tomorrow.
+
+Our mission is to provide escort for the $f GTCv $f Warspite while it tests a new Anti-Fighter beam system. In theory, these new beams should have more than twice the damage output of regular AA beams, making them able to vaporize even bombers within a few seconds.
+
+The downside is that due to their increased power consumption, they are mounted in place of the corvette's anti-capital beam.", -1)
+$end_multi_text
+$voice: none.wav
+$camera_pos: -1883.705933, 9215.499023, -2901.959473
+$camera_orient:
+	0.999980, -0.000011, 0.006398,
+	-0.006277, 0.192048, 0.981366,
+	-0.001240, -0.981386, 0.192044
+$camera_time: 500
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: GTCv Deimos
+$pos: -1341.289673, 278.241211, -1876.198242
+$label: Warspite
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: GVF Horus
+$pos: -4507.235352, 215.485306, -1281.567993
+$label: Alpha
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Our target is the Cain-class cruiser $h Xana and her escort wing. Command believes that attacking such a small target won't provoke the $r Shivans into committing a large force.
+
+For this mission, the $f Warspite will also be mounting Mass Drivers on its dorsal turrets, giving the corvette sufficient firepower to engage and destroy the $h Xana on its own. However, I expect you to assist the $f Warspite by taking out the cruiser's main beam.", -1)
+$end_multi_text
+$voice: none.wav
+$camera_pos: -1883.705933, 9215.499023, -2901.959473
+$camera_orient:
+	0.999980, -0.000011, 0.006398,
+	-0.005996, 0.347209, 0.937769,
+	-0.002232, -0.937788, 0.347202
+$camera_time: 500
+$num_lines: 0
+$num_icons: 4
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: GTCv Deimos
+$pos: -1341.289673, 278.241211, -1876.198242
+$label: Warspite
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: SC Cain
+$pos: -3295.390381, 547.653198, 2467.684082
+$label: Xana
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: GVF Horus
+$pos: -4507.235352, 215.485306, -1281.567993
+$label: Alpha
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: SF Astaroth
+$pos: -5653.694336, 177.615402, 1573.410400
+$label: Escort Wing
++id: 4
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("The mission is simple: The $f Warspite jumps in, starts firing its beam at the enemy fighters while moving to engage the cruiser with its Mass Drivers.
+
+Once Command decides that they have collected enough data, they'll call in $f Beta wing to finish the cruiser.
+
+Once all $r Shivan forces are destroyed, we will return to base.", -1)
+$end_multi_text
+$voice: none.wav
+$camera_pos: -1883.705933, 9215.499023, -2901.959473
+$camera_orient:
+	0.999980, -0.000012, 0.006396,
+	-0.005994, 0.347209, 0.937769,
+	-0.002232, -0.937788, 0.347202
+$camera_time: 500
+$num_lines: 0
+$num_icons: 5
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: GTCv Deimos
+$pos: 451.362671, 278.241333, -1245.603760
+$label: Warspite
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: SC Cain
+$pos: -2955.644531, 547.652893, -1316.871216
+$label: Xana
++id: 2
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: GVF Horus
+$pos: 3048.241943, 215.485687, 343.139740
+$label: Alpha
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: SF Astaroth
+$pos: 567.437256, 177.614853, 1197.237549
+$label: Escort Wing
++id: 4
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: GVF Seth
+$pos: -4900.711426, 0.000329, 924.511414
+$label: Beta
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
 $end_briefing
 
 #Debriefing_info
 
-$Num stages: 2
+$Num stages: 4
 
 $Formula: ( is-goal-true-delay 
    "Protect the Warspite" 
    0 
 )
 $Multi text
-    XSTR("The GTCv Warspite completed its weapon testing and succesfully returned from this mission. You did an outsanding job out here, pilot. This is exactly what command expect CEUs to do under these circumstances.
+    XSTR("Well done pilot. Though the new anti-fighter beam system proved to be unreliable against fast moving targets, you successfully engaged and destroy an enemy cruiser and its escort.
 
-The testing of the new beams was succesfull : despite an higher energy consumption compared to standard AAA beams, these heavy beams showed an improved accuracy, range, and exeptionnal powe. I wouldn't be surprised if command planed to adapt them on Hecate-class and Hatshepsut-class destroyer.", -1)
+I have been informed that Command is looking for alternatives to improve the beam weapon's accuracy, and that a solution is likely to be found within a couple of weeks.", -1)
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
 $end_multi_text
 
-$Formula: ( is-destroyed-delay 
-   0 
-   "GTCv Warspite" 
-)
+$Formula: ( is-destroyed-delay 0 "Warspite" ) 
 $Multi text
-    XSTR("The Warspite was destroyed, and so were the prototypes of the new anti-fighter beams. Our unit is supposed to defend any capital we are asked to monitor. Command had its reason for dedicating entire squadrons to weapon testing, and your faillure is unacceptable.
-I'm affraid you won't fly for several month pilot. Dismissed", -1)
+    XSTR("The Warspite was destroyed, and so were the weapons prototypes. This mission was planed so that the corvette would be at minimum risk while testing the beams against live targets. And yet you failed to succesfully defend the Warspite.
+I regret to inform you that the Rear-Admiral has decided to reassign you to one of the support squadrons for the next 4 months to set an exemple.", -1)
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
-    XSTR("Don't bother with the fighters, focus on bombers and disable enemy beams.", -1)
+    XSTR("Have your wingmen focus on enemy fighters, while you disable the Xana's beam and destroy incoming bombers.", -1)
+$end_multi_text
+
+$Formula: ( is-goal-true-delay "good defence" 0 ) 
+$Multi text
+    XSTR("The captain of the Warspite also commends you for your outstanding defence.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( not 
+   ( is-event-true-delay 
+      "mission complete" 
+      0 
+   )
+)
+$Multi text
+    XSTR("You left the field of engagement without proper authorization. You have therefore been suspended from flight operations impending your trial. You are a disgrace to this squadron, and this ship.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
 $end_multi_text
 
 #Players		;! 1 total
@@ -81,23 +297,26 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Mekhu HL-7"	24
+	"Mekhu HL-7"	30
 	"Prometheus R"	16
 	"Rockeye"	150
 	"Tempest"	1280
+	"Tornado"	256
+	"Harpoon"	128
+	"Hornet"	360
 )
 
-#Objects		;! 15 total
+#Objects		;! 18 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Horus
 $Team: Friendly
-$Location: -1384.270630, 215.485489, 1241.516357
+$Location: -1413.877563, 215.485687, 2320.388916
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: Stay Near
+$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -117,7 +336,7 @@ $Determination: 10
 $Name: Alpha 2		;! Object #1
 $Class: GVF Horus
 $Team: Friendly
-$Location: -1475.651489, 215.485367, 1330.903809
+$Location: -1505.258423, 215.485565, 2409.776367
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -144,7 +363,7 @@ $Determination: 10
 $Name: Alpha 3		;! Object #2
 $Class: GVF Horus
 $Team: Friendly
-$Location: -1303.250244, 215.485367, 1189.306030
+$Location: -1332.857178, 215.485565, 2268.178711
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -171,7 +390,7 @@ $Determination: 10
 $Name: Alpha 4		;! Object #3
 $Class: GVF Horus
 $Team: Friendly
-$Location: -1456.407104, 215.485367, 1173.929077
+$Location: -1486.014038, 215.485565, 2252.801514
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -195,28 +414,30 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: GTCv Warspite		;! Object #4
+$Name: Warspite		;! Object #4
 $Class: GTCv Deimos
 $Team: Friendly
-$Location: -1827.955811, 278.240967, 1128.933350
+$Location: -1855.547485, 278.241119, 968.241516
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
+$AI Goals: ( goals ( ai-waypoints "Warspite path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret02
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret03
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret04
-+Primary Banks: ( "Prometheus S" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
@@ -224,9 +445,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 +Subsystem: turret10
 +Subsystem: turret11
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret12
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret13
 +Subsystem: turret14
 +Subsystem: turret15
@@ -238,9 +459,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret21
 +Subsystem: turret22
 +Subsystem: turret23
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret24
-+Primary Banks: ( "Green Beam" )
++Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret25
 +Sbank Ammo: ( 0 )
 +Subsystem: turret26
@@ -249,12 +470,15 @@ $Arrival Location: Hyperspace
 +Arrival Delay: 2
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "mission complete" 
+   7 
+)
 $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 1
++Escort priority: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -341,7 +565,7 @@ $Determination: 10
 $Name: Gemini 1		;! Object #8
 $Class: SB Seraphim
 $Team: Hostile
-$Location: 753.457397, 597.633545, 4172.231934
+$Location: 384.006287, 3840.963867, 3151.557617
 $Orientation:
 	-0.697849, 0.000000, -0.716246,
 	0.000000, 1.000000, 0.000000,
@@ -370,7 +594,7 @@ $Determination: 10
 $Name: Gemini 2		;! Object #9
 $Class: SB Seraphim
 $Team: Hostile
-$Location: 1139.354370, 597.633545, 3950.920410
+$Location: 546.534851, 3840.963867, 2938.049072
 $Orientation:
 	-0.697849, 0.000000, -0.716245,
 	0.000000, 1.000000, 0.000000,
@@ -399,7 +623,7 @@ $Determination: 10
 $Name: Gemini 3		;! Object #10
 $Class: SB Seraphim
 $Team: Hostile
-$Location: 1497.378052, 597.633423, 4343.993652
+$Location: 788.170410, 3840.963867, 3215.102295
 $Orientation:
 	-0.697849, 0.000000, -0.716245,
 	0.000000, 1.000000, 0.000000,
@@ -428,7 +652,7 @@ $Determination: 10
 $Name: Aquarius 1		;! Object #11
 $Class: SF Manticore
 $Team: Hostile
-$Location: 2461.663574, 925.839111, 4294.373535
+$Location: 1602.097046, 4169.169922, 3418.475342
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -454,7 +678,7 @@ $Determination: 10
 $Name: Aquarius 2		;! Object #12
 $Class: SF Manticore
 $Team: Hostile
-$Location: 2152.704102, 925.839111, 4883.962402
+$Location: 1559.884644, 4169.169922, 3871.091553
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -480,7 +704,7 @@ $Determination: 10
 $Name: Aquarius 3		;! Object #13
 $Class: SF Manticore
 $Team: Hostile
-$Location: 938.809509, 925.839111, 5303.444824
+$Location: 981.528870, 4169.169922, 3844.626953
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -503,7 +727,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: SC Xana		;! Object #14
+$Name: Xana		;! Object #14
 $Class: SC Cain
 $Team: Hostile
 $Location: -1225.133789, 547.653503, 5802.980957
@@ -512,8 +736,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.532535, 0.000000, -0.846408
 $AI Behavior: None
-+AI Class: Big
-$AI Goals: ( goals ( ai-chase "GTCv Warspite" 50 ) )
++AI Class: Lieutenant
+$AI Goals: ( goals ( ai-waypoints "Xana path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -524,9 +748,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
-+Primary Banks: ( "Standard Flak" )
++Primary Banks: ( "Light Flak" )
 +Subsystem: turret06
-+Primary Banks: ( "Standard Flak" )
++Primary Banks: ( "Light Flak" )
 +Subsystem: turret07
 +Primary Banks: ( "MRed" )
 +Subsystem: turret08
@@ -543,14 +767,95 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 2
++Escort priority: 5
 +Special Hitpoints: 32000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 150
 
-#Wings		;! 4 total
+$Name: Beta 1		;! Object #15
+$Class: GVF Seth
+$Team: Friendly
+$Location: -2889.435059, 0.000270, 3013.257568
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Beta 2		;! Object #16
+$Class: GVF Seth
+$Team: Friendly
+$Location: -2705.711670, -0.000149, 2945.693604
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Beta 3		;! Object #17
+$Class: GVF Seth
+$Team: Friendly
+$Location: -2802.408447, -0.000254, 2807.404053
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+#Wings		;! 5 total
 
 $Name: Alpha
 $Waves: 1
@@ -567,18 +872,16 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
-$AI Goals: ( goals ( ai-guard "GTCv Warspite" 50 ) )
+$AI Goals: ( goals ( ai-guard "Warspite" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
 $Name: Leo
-$Waves: 3
+$Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Leo 1
 
-$Arrival Location: Near Ship
-+Arrival Distance: 400
-$Arrival Anchor: SC Xana
+$Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -587,20 +890,18 @@ $Ships: (		;! 3 total
 	"Leo 2"
 	"Leo 3"
 )
-$AI Goals: ( goals ( ai-guard "SC Xana" 50 ) )
+$AI Goals: ( goals ( ai-guard "Xana" 50 ) )
 +Flags: ( )
-+Wave Delay Min: 14
-+Wave Delay Max: 16
 
 $Name: Gemini
-$Waves: 2
+$Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1500
-$Arrival Anchor: GTCv Warspite
-$Arrival Cue: ( < ( hits-left "SC Xana" ) 80 ) 
+$Arrival Anchor: Warspite
+$Arrival Cue: ( < ( hits-left "Xana" ) 80 ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 3 total
@@ -608,7 +909,7 @@ $Ships: (		;! 3 total
 	"Gemini 2"
 	"Gemini 3"
 )
-$AI Goals: ( goals ( ai-chase "GTCv Warspite" 50 ) )
+$AI Goals: ( goals ( ai-chase "Warspite" 50 ) )
 +Flags: ( )
 +Wave Delay Min: 5
 +Wave Delay Max: 8
@@ -634,26 +935,294 @@ $AI Goals: ( goals ( ai-guard-wing "Gemini" 50 ) )
 +Wave Delay Min: 2
 +Wave Delay Max: 6
 
-#Events		;! 0 total
+$Name: Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Beta 1
 
+$Arrival Location: Near Ship
++Arrival Distance: 2500
+$Arrival Anchor: Xana
+$Arrival Cue: ( is-goal-true-delay 
+   "Test ULTRA-AAA" 
+   15 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Beta 1"
+	"Beta 2"
+	"Beta 3"
+)
+$AI Goals: ( goals ( ai-chase "Xana" 50 ) ( ai-guard "Warspite" 48 ) )
++Hotkey: 1
++Flags: ( )
++Wave Delay Min: 5
++Wave Delay Max: 10
 
-#Goals		;! 1 total
+#Events		;! 12 total
+
+$Formula: ( when-argument 
+   ( random-of "Leo 1" "Leo 2" "Leo 3" ) 
+   ( not 
+      ( is-destroyed-delay 0 "<argument>" ) 
+   )
+   ( set-object-position 
+      "miss path1:1" 
+      ( + 
+         ( get-object-x "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+      ( - 
+         ( get-object-y "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+      ( + 
+         ( get-object-z "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+   )
+)
++Name: leo - update miss path1
++Repeat Count: -1
++Trigger Count: 200
++Interval: 3
+
+$Formula: ( when-argument 
+   ( random-of "Leo 1" "Leo 2" "Leo 3" ) 
+   ( not 
+      ( is-destroyed-delay 0 "<argument>" ) 
+   )
+   ( set-object-position 
+      "miss path2:1" 
+      ( - 
+         ( get-object-x "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+      ( + 
+         ( get-object-y "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+      ( - 
+         ( get-object-z "<argument>" ) 
+         ( rand -75 75 ) 
+      )
+   )
+)
++Name: leo - update miss path2
++Repeat Count: 200
++Interval: 3
+
+$Formula: ( when-argument 
+   ( any-of "Leo" "Gemini" "Aquarius" ) 
+   ( < 
+      ( distance "Warspite" "<argument>" ) 
+      2500 
+   )
+   ( fire-beam-at-coordinates 
+      "Warspite" 
+      "turret11" 
+      ( get-object-x "miss path1:1" ) 
+      ( get-object-y "miss path1:1" ) 
+      ( get-object-z "miss path1:1" ) 
+   )
+   ( fire-beam-at-coordinates 
+      "Warspite" 
+      "turret12" 
+      ( get-object-x "miss path2:1" ) 
+      ( get-object-y "miss path2:1" ) 
+      ( get-object-z "miss path2:1" ) 
+   )
+   ( fire-beam-at-coordinates 
+      "Warspite" 
+      "turret23" 
+      ( get-object-x "miss path1:1" ) 
+      ( get-object-y "miss path1:1" ) 
+      ( get-object-z "miss path1:1" ) 
+   )
+   ( fire-beam-at-coordinates 
+      "Warspite" 
+      "turret24" 
+      ( get-object-x "miss path2:1" ) 
+      ( get-object-y "miss path2:1" ) 
+      ( get-object-z "miss path2:1" ) 
+   )
+   ( modify-variable 
+      @shots[0] 
+      ( + @shots[0] 1 ) 
+   )
+)
++Name: fire shots of ULTRA-AAA
++Repeat Count: -1
++Trigger Count: 200
++Interval: 6
+
+$Formula: ( when 
+   ( not ( is-destroyed-delay 0 "Xana" ) ) 
+   ( set-object-position 
+      "Xana path:1" 
+      ( get-object-x "Warspite" ) 
+      ( + ( get-object-y "Warspite" ) 750 ) 
+      ( get-object-z "Warspite" ) 
+   )
+   ( if-then-else 
+      ( < 
+         ( distance "Warspite" "Xana" ) 
+         2000 
+      )
+      ( cap-waypoint-speed "Xana" 5 ) 
+      ( cap-waypoint-speed "Xana" -1 ) 
+   )
+)
++Name: update Xana path
++Repeat Count: -1
++Trigger Count: 200
++Interval: 5
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Warspite" ) 
+   ( beam-lock 
+      "Warspite" 
+      "turret11" 
+      "turret12" 
+      "turret23" 
+      "turret24" 
+   )
+)
++Name: Warspite arrives
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Leo" ) 
+   ( do-nothing ) 
+)
++Name: destroy leo
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Leo", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Xana" ) 
+   ( do-nothing ) 
+)
++Name: destroy SC Xana
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy the SC Xana", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gemini" ) 
+   ( do-nothing ) 
+)
++Name: destroy gemini
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Gemini", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Aquarius" ) 
+   ( do-nothing ) 
+)
++Name: destroy aquarius
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Aquarius", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Xana" 
+      "Leo" 
+      "Gemini" 
+      "Aquarius" 
+   )
+   ( do-nothing ) 
+)
++Name: mission complete
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Alpha 1" ) 
+   ( do-nothing ) 
+)
++Name: RTB
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Return to base", -1)
+
+#Goals		;! 4 total
 
 $Type: Primary
 +Name: Protect the Warspite
-$MessageNew:  XSTR("GTCv Warspite must survive", -1)
+$MessageNew:  XSTR("The Warspite must survive", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 
-   2 
-   "GTCv Warspite" 
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Warspite" ) 
+   )
+   ( is-event-true-delay 
+      "mission complete" 
+      2 
+   )
 )
 +Score: 100
 
-#Waypoints		;! 1 lists total
+$Type: Secondary
++Name: Test ULTRA-AAA
+$MessageNew:  XSTR("Test the new weapon system", -1)
+$end_multi_text
+$Formula: ( > @shots[0] 5 ) 
++No music
 
-$Name: Warspite
+$Type: Bonus
++Name: good defence
+$MessageNew:  XSTR("Warspite sustained little damage", -1)
+$end_multi_text
+$Formula: ( and 
+   ( is-goal-true-delay 
+      "Protect the Warspite" 
+      0 
+   )
+   ( > ( hits-left "Warspite" ) 50 ) 
+)
+
+$Type: Secondary
++Name: Destroy shivans
+$MessageNew:  XSTR("Destroy all Shivan forces", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "mission complete" 
+   2 
+)
+
+#Waypoints		;! 4 lists total
+
+$Name: Warspite path
 $List: (		;! 1 points in list
 	( 165.532166, -0.001449, 7953.732422 )
+)
+
+$Name: miss path1
+$List: (		;! 1 points in list
+	( -3867.187256, 0.000296, 4885.983398 )
+)
+
+$Name: miss path2
+$List: (		;! 1 points in list
+	( -2786.973877, 0.000383, 4950.930664 )
+)
+
+$Name: Xana path
+$List: (		;! 1 points in list
+	( -3173.876709, -0.000465, 1807.934814 )
 )
 
 #Messages		;! 0 total
@@ -662,17 +1231,321 @@ $List: (		;! 1 points in list
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 0 total
+#Background bitmaps		;! 51 total
 
 $Num stars: 500
 $Ambient light level: 7895160
-+Nebula: Nebula01
-+Color: Blue
-+Pitch: 152
-+Bank: 313
-+Heading: 259
 
 $Bitmap List:
+$Sun: SunWhite
++Angles: 0.000000 0.383972 1.570796
++Scale: 1.000000
+$Starbitmap: dneb16
++Angles: 0.436332 0.000000 0.296706
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb15
++Angles: 0.122173 0.104720 5.829400
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC2-Main
++Angles: 0.541052 0.541052 0.000000
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC10-Whisp
++Angles: 0.575959 5.969026 0.226893
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC6-Whisp
++Angles: 0.226893 0.000000 5.811946
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb05
++Angles: 6.248279 0.000000 5.829400
++ScaleX: 1.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF9-Whisp
++Angles: 0.349066 0.157080 5.969026
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD7-Whisp
++Angles: 5.899213 0.191986 0.157080
++ScaleX: 1.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD10-Whisp
++Angles: 5.811946 0.715585 0.069813
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD14-Whisp
++Angles: 5.742134 0.785398 0.000000
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb06
++Angles: 5.986479 0.349066 0.296706
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC4-Whisp
++Angles: 6.126106 0.000000 0.383972
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC4-Whisp
++Angles: 6.073746 3.141593 0.157080
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC13-Whisp
++Angles: 6.091199 5.567600 0.017453
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC12-Whisp
++Angles: 6.021386 0.157080 6.143559
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC11-Whisp
++Angles: 6.038839 0.000000 6.056293
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC3-Whisp
++Angles: 6.143559 0.174533 5.969026
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb05
++Angles: 6.143559 1.570796 5.864306
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb10
++Angles: 5.916667 0.523599 5.899213
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 5.794493 2.949606 6.213372
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD12-Whisp
++Angles: 5.777040 0.000000 6.091199
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD7-Whisp
++Angles: 5.707227 0.680678 6.126106
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb10
++Angles: 6.178466 5.480334 0.506145
++ScaleX: 1.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC5-Whisp
++Angles: 6.161013 0.000000 0.575959
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC4-Whisp
++Angles: 5.969026 5.602507 0.506145
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulC2-Main
++Angles: 5.916667 6.056293 0.698132
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb17
++Angles: 5.777040 0.000000 0.628319
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb17
++Angles: 5.724680 0.000000 0.610865
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb05
++Angles: 5.637414 0.000000 0.767945
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb06
++Angles: 5.532694 0.000000 0.785398
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb08
++Angles: 5.637414 1.727876 0.541052
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD2-Main
++Angles: 5.515241 0.000000 0.506145
++ScaleX: 1.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulD3-Whisp
++Angles: 5.462881 0.000000 0.418879
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF11-Whisp
++Angles: 5.323255 0.000000 0.366519
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 6.021386 0.000000 3.141593
++ScaleX: 3.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 6.108653 0.000000 3.124140
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb01
++Angles: 6.161013 0.279253 3.141593
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb02
++Angles: 5.969026 0.000000 3.141593
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb03
++Angles: 5.934120 0.000000 3.019420
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA14-Whisp
++Angles: 6.178466 0.000000 3.246313
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA14-Whisp
++Angles: 6.178466 0.872665 3.228859
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 6.021386 0.000000 3.368485
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: dneb01
++Angles: 6.038839 0.872665 3.316126
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA5-Whisp
++Angles: 6.003933 0.541052 3.281219
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 6.073746 5.881760 3.420846
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 6.178466 0.000000 3.420846
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA2-Main
++Angles: 0.052360 1.099557 3.473205
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA1-Main
++Angles: 0.174533 5.794493 3.351032
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 6.161013 1.343904 3.508112
++ScaleX: 1.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 0.052360 1.570796 3.630285
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulG8-Whisp
++Angles: 0.104720 6.073746 3.682645
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
 
 #Asteroid Fields
 
