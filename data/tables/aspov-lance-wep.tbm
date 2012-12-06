@@ -481,7 +481,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Length:					0.0
 @Laser Head Radius:				0.30
 @Laser Tail Radius:				0.30
-$Mass:                          100.0
+$Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
 $Fire Wait:                     0.5
 $Damage:                        60
@@ -574,7 +574,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Length:					0.0
 @Laser Head Radius:				0.30
 @Laser Tail Radius:				0.30
-$Mass:                          100.0
+$Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
 $Fire Wait:                     5.0
 $Damage:                        180
@@ -668,7 +668,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Length:					0.0
 @Laser Head Radius:				0.30
 @Laser Tail Radius:				0.30
-$Mass:                          100.0
+$Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
 $Fire Wait:                     1.0
 $Damage:                        80
