@@ -20,6 +20,7 @@ Refraction rules :
 
 12th Vasudan Battlegroup
 CO : Rear-Admiral Obster
+Squadron: 456th Dust Bringers
 //Admiral Aramcheck - name on stand by
 
 /********************************************************************************/
@@ -41,17 +42,17 @@ A_Intro_00.									//ToDo
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-A_Intro_01.The Viper's Sting							//ToRecheck
+A_Intro_01.The Viper's Sting							//BetaReady
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
-		TODO : command briefing
 		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;
 			prometheus r ; lamprey ; harpoon ; hornet
 		New ships : GVF Horus ; GVF Seth ; GVF Toth
 		Background to improve (same as several other missions in gamma draconnis)
 		Has a fiction piece
 
-		-
+		The GTCv Viper tests its long range flak against sniper gun equipped
+		sentry guns and two cruisers.
 		Ships :
 			-GTCv Viper (Deimos class)		//vital
 			-SC Curse (Rakshasa class)		//destroyed
