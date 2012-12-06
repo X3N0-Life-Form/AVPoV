@@ -1,6 +1,10 @@
 Campaign name :		A Vasudan Point of View (find a new name)
 Author : 		X3N0-Life-Form
-Goal :			Learn how to use FRED :P
+Goal :			Learn how to use FRED :P - done
+			Learn how to table - done
+			Extend modding skillset - under way
+			Do something good - ?
+			Release - lol
 
 
 ToDo : 	nameplates
@@ -8,6 +12,7 @@ ToDo : 	nameplates
 	Capella arc
 	more msgs
 	SOC loop
+	more tech entries
 
 Refraction rules :
 	original beam dmg tick
@@ -48,7 +53,7 @@ A_Intro_01.The Viper's Sting							//BetaReady
 		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;
 			prometheus r ; lamprey ; harpoon ; hornet
 		New ships : GVF Horus ; GVF Seth ; GVF Toth
-		Background to improve (same as several other missions in gamma draconnis)
+		Background to improve (same as several other missions in gamma draconis)
 		Has a fiction piece
 
 		The GTCv Viper tests its long range flak against sniper gun equipped
@@ -464,7 +469,7 @@ E_Sathanas_07.Sorrow								//
 		Ships :
 			-GTD Olympus Shadow (Hecate class)	//destroyed
 			-GTCv Kendrick Smith (Deimos class)	//non-vital
-			-Blade CG (2xSobek class)			//non-vital?
+			-Blade CG (2xSobek class)		//non-vital?
 			-SC Lotode (Rakshasa class)		//destroyed
 			-SC Hellknight (Rakshasa class)		//vital
 			-SCv Toffolon (Moloch class)		//destroyed
