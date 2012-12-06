@@ -23,7 +23,7 @@ $Homing:                        NO
 $LaunchSnd:                     124             ;; The sound it makes when fired
 $ImpactSnd:                     88              ;; The sound it makes when it hits something
 +Weapon Range:					1500
-$Flags:                         ( "beam" "no pierce shields")
+$Flags:                         ( "beam" "no pierce shields" )
 $Icon:                          icongun05
 $Anim:                          LoadGun07
 $Impact Explosion:					exp04
@@ -467,4 +467,288 @@ $BeamInfo:
 		+RGBA Outer:	150 150 150 10
 		+Flicker:		0.35
 		+Zadd:			1
+		
+;; =====================================================
+;; 						Shivan Lance
+;; =====================================================
+$Name:					Shivan Lance
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     0.5
+$Damage:                        60
+$Damage Type:					LanceWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					2500
+$Flags:                         ("Big Ship" "beam" "no pierce shields" )
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       15.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			0.5
+	+Warmup:		  			250
+	+Warmdown:					250
+	+Radius:		  			20.0
+	+PCount:					24				;; particles spewed every interval
+	+PRadius:					2.8				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_white
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					178
+	+WarmupSound:				182
+	+WarmdownSound:				189
+	+Muzzleglow:				SbeamAglow_white
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
+	+Range:						2500
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						13.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					13.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			2.0
+		+Texture:		SbeamAA_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			1.0
+		+Tile Factor:	90, 1
+		+Translation:	-2
+	$Section:
+		+Width:			4.0
+		+Texture:		SbeamAB_white
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			2.0
+	$Section:
+		+Width:			8.0
+		+Texture:		SbeamAC_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.001
+		+Zadd:			1.0
+		+Tile Factor:	10, 1
+		+Translation:	-2
+	$Section:
+		+Width:			12.0
+		+Texture:		SbeamAD_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			16.0
+		+Texture:		SbeamAE_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+
+$Name:					Shivan Huge Lance
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     5.0
+$Damage:                        180
+$Damage Type:					LanceWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					4000
+$Flags:                         ("Big Ship" "beam" "no pierce shields" )
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       30.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			5.0
+	+Warmup:		  			2500
+	+Warmdown:					250
+	+Radius:		  			28.0
+	+PCount:					24				;; particles spewed every interval
+	+PRadius:					2.8				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_white
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					178
+	+WarmupSound:				184
+	+WarmdownSound:				188
+	+Muzzleglow:				SbeamAglow_white
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
+	+Range:						4000
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						13.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					13.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			4.0
+		+Texture:		SbeamAA_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			1.0
+		+Tile Factor:	90, 1
+		+Translation:	-2
+	$Section:
+		+Width:			8.0
+		+Texture:		SbeamAB_white
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			2.0
+	$Section:
+		+Width:			16.0
+		+Texture:		SbeamAC_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.001
+		+Zadd:			1.0
+		+Tile Factor:	10, 1
+		+Translation:	-2
+	$Section:
+		+Width:			24.0
+		+Texture:		SbeamAD_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			32.0
+		+Texture:		SbeamAE_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+
+		
+$Name:					Shivan Multi Lance
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     1.0
+$Damage:                        80
+$Damage Type:					LanceWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					2500
+$Flags:                         ("Big Ship" "beam" "no pierce shields" )
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       15.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			20.0
+	+Warmup:		  			250
+	+Warmdown:					250
+	+Radius:		  			20.0
+	+PCount:					24				;; particles spewed every interval
+	+PRadius:					2.8				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_white
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					178
+	+WarmupSound:				182
+	+WarmdownSound:				189
+	+Muzzleglow:				SbeamAglow_white
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
+	+Range:						2500
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						13.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					13.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:	-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			2.0
+		+Texture:		SbeamAA_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			1.0
+		+Tile Factor:	90, 1
+		+Translation:	-2
+	$Section:
+		+Width:			4.0
+		+Texture:		SbeamAB_white
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			2.0
+	$Section:
+		+Width:			8.0
+		+Texture:		SbeamAC_white
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.001
+		+Zadd:			1.0
+		+Tile Factor:	10, 1
+		+Translation:	-2
+	$Section:
+		+Width:			12.0
+		+Texture:		SbeamAD_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			16.0
+		+Texture:		SbeamAE_white
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+		
 #End
