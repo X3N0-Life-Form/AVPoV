@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 12/06/12 at 20:14:45
+$Modified: 12/06/12 at 21:49:36
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -243,7 +243,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret11
 +Primary Banks: ( "Pulsar Lance" )
 +Subsystem: turret12
-+Primary Banks: ( "Shivan Lance" )
++Primary Banks: ( "Pulsar Lance" )
 +Subsystem: turret13
 +Primary Banks: ( "Pulsar Lance" )
 +Subsystem: turret14
