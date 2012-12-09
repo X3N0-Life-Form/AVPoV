@@ -371,7 +371,7 @@ $Name:        XSTR("SD Kohl'Taar",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Battle Destroyer
+    XSTR("Ravana-class Battle Destroyer
 
     CLASSIFIED - level Omega",-1)
 $end_multi_text
@@ -382,9 +382,9 @@ $Name:        XSTR("SD Vorvadoss",-1)
 $Anim:    				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blocading forces.
-
-    ",-1)
+    XSTR("Demon-class Combat Destroyer
+	
+	Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blocading forces.",-1)
 $end_multi_text
 
 $Entry:
@@ -392,9 +392,9 @@ $Name:        XSTR("SD Lamashtu",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("A very evasive destroyer, the Lamashtu's usual tactic was to jump outside beam-lock range, then deploying its fighters to soften up its targets before they come in beam range.
-
-    This tactic failed the destroyer when it engaged the fleet gathered to confront the SJ Sathanas at the Capella node, which had been specially fitted to fight at long range.",-1)
+    XSTR("Demon-class Combat Destroyer
+	
+	A very evasive destroyer, the Lamashtu's usual tactic was to jump outside beam-lock range, then deploying its fighters to soften up its targets before they come in beam range. This tactic failed the destroyer when it engaged the fleet gathered to confront the SJ Sathanas at the Capella node, which had been specially fitted to fight at extreme range.",-1)
 $end_multi_text
 
 $Entry:
@@ -402,9 +402,9 @@ $Name:        XSTR("SC Nergal",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("First sighted in the nebula, the Nergal has been relatively discret, for Lilith cruiser, occasionally assisting the SD Lamashtu.
-
-    It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
+    XSTR("Lilith-class Heavy Cruiser
+	
+	First sighted in the nebula, the Nergal has been relatively discret, for Lilith cruiser, occasionally assisting the SD Lamashtu. It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
 $end_multi_text
 
 $Entry:
@@ -412,9 +412,9 @@ $Name:        XSTR("SD Nix",-1)
 $Anim:        			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("The first Support variant of the Demon-class destroyer encountered, the SD Nix used the confusion following the Sathanas' advance in Gamma Draconis to its advantage, slipping through allied defence lines and providing SSM support for other Shivan units in system.
-
-    ",-1)
+    XSTR("Demon-class Support Destroyer
+	
+	The first Support variant of the Demon-class destroyer encountered, the SD Nix used the confusion following the Sathanas' advance in Gamma Draconis to its advantage, slipping through allied defence lines and providing SSM support for other Shivan units in system.",-1)
 $end_multi_text
 
 $Entry:
@@ -422,9 +422,9 @@ $Name:        XSTR("SC Obizoth",-1)
 $Anim:            		
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Arriving with the SD Nix, the Lilith-class cruiser Obizoth serves as the Nix's hunt hound. Striking allied warships assisted by the Nix's Subspace Missiles, the Obizoth is responsible for the destruction of two corvettes and three cruisers, making it the second deadliest Lilith cruiser of the current incursion, behind the SC Reaper.
-
-    ",-1)
+    XSTR("Lilith-class Heavy Cruiser
+	
+	Arriving with the SD Nix, the Lilith-class cruiser Obizoth serves as the Nix's hunt hound. Striking allied warships assisted by the Nix's Subspace Missiles, the Obizoth is responsible for the destruction of two corvettes and three cruisers, making it the second deadliest Lilith cruiser of the current incursion, behind the SC Reaper.",-1)
 $end_multi_text
 
 $Entry:
@@ -432,7 +432,9 @@ $Name:        XSTR("SD Centrab Betz",-1)
 $Anim:                	
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Bypassing Allied defences in Gamma Draconis, the Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
+    XSTR("Ravana-class Hunter Killer Destroyer
+	
+	Bypassing Allied defences in Gamma Draconis, the Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
 
     Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
