@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 12/06/12 at 14:30:12
+$Modified: 12/09/12 at 20:28:45
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -26,7 +26,7 @@ $end_multi_text
 +Viewer pos: -1883.705933, 9215.499023, -2901.959473
 +Viewer orient:
 	0.996892, -0.000012, -0.078786,
-	0.060428, 0.641769, 0.764513,
+	0.060428, 0.641769, 0.764514,
 	0.050553, -0.766898, 0.639775
 
 
@@ -483,6 +483,9 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 800
+$Texture Replace:
++old: nameplate
++new: gtcv_warspite
 
 $Name: Leo 1		;! Object #5
 $Class: SF Astaroth
