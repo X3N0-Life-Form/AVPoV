@@ -185,6 +185,7 @@ $Name:                              Hayg Mas
 
 		Currently, the weapon can only be mounted on Vasudan powergrids, limiting its use to Vasudan fighters, although the Security Council has contracted Subach-Innes to create a Terran version of this weapon, given the manufacturer's history with Mekhu Entreprises.", -1)
 	$end_multi_text
+$Tech Model:						hayg_mas.pof
 $Model File:						none
 @Laser Bitmap:						PrometheusR_AniBitmap
 @Laser Glow:						Prometheus_Glow
