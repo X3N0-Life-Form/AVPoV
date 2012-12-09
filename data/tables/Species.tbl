@@ -247,7 +247,7 @@ $Name:        XSTR("NTD Stalker",-1)
 $Anim:      			
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Rebel Special Operations Destroyer
+    XSTR("Orion-class Rebel Special Operations Destroyer
 
     One of the first Orions to have been seized by the NTF, the Stalker was part of Neo-Terran Special Tasks Force, roughly the equivalent of the Alliance's Special Operations Command. Commanded by Rear-Admiral Lino Dusthoff, the Stalker has been involved in no less than 15 special operations against the GTVA, including the famous raid against the Cortez shipyards in Capella, bypassing Alliance blokades, which ended in the stealing of three Aeolus cruisers present in drydocks at the time, as well as a significant amount of supplies, destroying the shipyards themselves, thus denying the Alliance the ability to refit its own aeolus cruisers with Medium Beams, losing only one leviathan cruiser, 2 bomber wings and 6 fighter wings in the process.
 
@@ -261,7 +261,7 @@ $Name:        XSTR("GTD Olympus Shadow",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Battlegroup Flag Destroyer
+    XSTR("Hecate-class Battlegroup Flag Destroyer
 
     Equipped with Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure, the Olympus Shadow in one of the newest Terran destroyers to serve the Alliance today. Following the destruction of the GTD Calvez in Polaris, the Olympus Shadow was appointed flagship of the 8th Terran Battlegroup, 3rd Fleet, Capella. Retaining most of the Calvez's command crew and surviving pilots, the Olympus Shadow and the 8th battlegroup distinguished themselves in Alpha Centauri before being assigned to Gamma Draconis after the end of the Civil War.",-1)
 $end_multi_text
@@ -271,7 +271,7 @@ $Name:        XSTR("GTD Streaker",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Special Operations Destroyer
+    XSTR("Hecate-class Special Operations Destroyer
 
     CLASSIFIED - level Mu",-1)
 $end_multi_text
@@ -288,7 +288,7 @@ $Name:        XSTR("GVD Apep",-1)
 $Anim:  				
 $AlwaysInTechRoom:		1
 $Description:
-    XSTR("Battlegroup Flag Destroyer
+    XSTR("Hatshepsut-class Battlegroup Flag Destroyer
     
     Acting as Flagship of the 12th Vasudan Battlegroup, the GVD Apep entered its 5th year of service at the time of the Shivan incursion in Gamma Draconis. Due to its above average performance during the NTF conflict, the Apep and the 12th VBG were selected to assist in the containment operations in the nebula and Gamma Draconnis. Fitted with top-of-the-line equipment and weaponry, the ship's combat and logistical performance exceeds that of most Hatshepsut-class destroyers.
 
@@ -300,7 +300,7 @@ $Name:        XSTR("GVD Pharaoh",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Support Destroyer
+    XSTR("Typhon-class Support Destroyer
 
     An aging warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most succesfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat dented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
 $end_multi_text
@@ -310,7 +310,7 @@ $Name:        XSTR("GVD Black Mamba",-1)
 $Anim:  				
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Combat Destroyer
+    XSTR("Hatshepsut-class Combat Destroyer
 
     First deployed in the opening months of the NTF Rebellion, the Black Mamba features the same armament as the GVD Apep, but lacks its logistics and support systems. Nevertheless, the destroyer's crew has shown a remarkable efficiency during the destroyer's operation in Deneb and Epsilon Pegasi, prompting Allied Command to request and obtain its deployment in Gamma Draconnis to assist the GVD Apep and its battlegroup.",-1)
 $end_multi_text
@@ -327,7 +327,7 @@ $Name:        XSTR("SD Vampire",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Long Range Hunter Killer Destroyer
+    XSTR("Ravana-class Long Range Hunter Killer Destroyer
 
     Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams are capable of succesfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
 
@@ -339,7 +339,7 @@ $Name:        XSTR("SC Reaper",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Command Heavy Cruiser
+    XSTR("Lilith-class Command Heavy Cruiser
 
     The Reaper was first sighted shortly after the destruction of the SD Ravana. The cruiser has been sweeping the nebula ever since, usually leading strikes against Allied capital ships, with one or two other cruisers to assist it. Acting seemingly indenpendently from any Shivan Command Ship present in the nebula at the time, and has never taken any action to cross or secure the Gamma Draconnis node.",-1)
 $end_multi_text
@@ -349,7 +349,7 @@ $Name:        XSTR("SCv Cyaegha",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Command Corvette
+    XSTR("Moloch-class Command Corvette
 
     The SCv Cyaegha has proven to be a particularly evasive, yet dangerous opponent. Using its superior subspace agility, this corvette has quickly earned a reputation as cruiser hunter, often jumping behind its target and disabling its engines before having a chance to react, and retreating as soon as its initial prey is destroyed. The Cyaegha is also known for its unusual subspace endurance, even by Shivan standard, sometimes hopping between battles throughout the system, making tracking the ship's movements difficult. However, the corvette seems to be needing to take 'breaks', stopping all harassment of allied units for a few hours and being much less jump-happy, allowing allied units to take a few shots at the corvette before she retreats.",-1)
 $end_multi_text
@@ -359,7 +359,7 @@ $Name:        XSTR("SC Hellknight",-1)
 $Anim:					
 $AlwaysInTechRoom:		0
 $Description:
-    XSTR("Hunter Killer Cruiser
+    XSTR("Rakshasa-class Hunter Killer Cruiser
 
     The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 outright hunt to destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
 
@@ -743,7 +743,7 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Fire Support",-1)
+$Name:        XSTR("Fire Support Gunship",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
