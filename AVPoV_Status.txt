@@ -44,6 +44,17 @@ Squadron: 456th Dust Bringers
 A_Intro_00.									//ToDo
 /////////////////////////////////////////////////////////////////////////////////
 		Cutscene mission
+		5th gen mission
+
+		The GVD Apep arrives in Gamma Draconis.
+		Ships:
+			-GTD Carthage (Orion class)		//vital
+			-GVCv Dahshor (Sobek class)		//vital
+			-SC Fallen (Cain class)			//destroyed
+			-SC Hadji (Rakshasa class)		//destroyed
+			-SCv Cyaegha (Moloch class)		//vital
+			-GVD Apep (Hatshepsut class)		//vital
+			-GVC Searing Fate (Mentu Enforcer class)//vital
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -528,7 +539,7 @@ F_Capella_04.Their Finest Hour							//Need more testing
 		-GVCv Eb'Siliss (Sobek class)		//destroyed
 		-GTCv Babylon (Sparta class)		//non-vital
 		-GVD Apep (Hatshepsut class)		//destroyed
-		-GVC Searing Fate(Mentu Enforcer class)	//destroyed
+		-GVC Searing Fate (Mentu Enforcer class)//destroyed
 		-GVC Crixalis (Aten class)		//destroyed
 		-GVC Stone of Dovka (Hemsut class)	//destroyed
 		-SC Hellknight (Rakshasa class)		//non-vital

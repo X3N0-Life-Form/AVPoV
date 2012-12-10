@@ -1,0 +1,2681 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Gamma Draconis", -1)
+$Author: X3N0-Life-Form
+$Created: 04/30/99 at 17:09:33
+$Modified: 12/10/12 at 01:58:50
+$Notes:
+This is a FRED created mission
+$End Notes:
+
+$Mission Desc:
+ XSTR("Intro cutscene", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 787592
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Player Entry Delay:
+1.000000
+
++Viewer pos: 3855.221191, 6870.924316, -4391.755371
++Viewer orient:
+	0.049941, -0.000009, 0.998752,
+	-0.972348, 0.228418, 0.048623,
+	-0.228133, -0.973563, 0.011399
+
+
+$AI Profile: myProfile
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Alternate Types:
+$Alt: Subspace Portal
+$Alt: Unknown
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Alpha 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"Shivan Heavy Laser Up"	1
+	"Shivan Anticap Laser"	1
+	"Shivan LR Swarm"	40
+	"Tempest Adv#Shivan"	800
+)
+
+#Objects		;! 41 total
+
+$Name: Alpha 1		;! Object #0
+$Class: SF Mara#
+$Team: Friendly
+$Location: 6901.898438, 774.900208, -4495.539063
+$Orientation:
+	0.792091, 0.000000, 0.610403,
+	-0.143675, 0.971904, 0.186441,
+	-0.593253, -0.235378, 0.769836
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" "player-start" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Carthage		;! Object #1
+$Class: GTD Orion
+$Team: Friendly
+$Location: -729.664917, 1889.853149, -2224.970703
+$Orientation:
+	0.886995, 0.000000, 0.461779,
+	0.000000, 1.000000, 0.000000,
+	-0.461779, 0.000000, 0.886995
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Primary Banks: ( "Standard Flak" "Terran Huge Turret" "Terran Huge Turret" )
++Subsystem: turret03a
++Primary Banks: ( "Standard Flak" "Terran Huge Turret" "Terran Huge Turret" )
++Subsystem: turret04a
++Primary Banks: ( "Standard Flak" "Terran Huge Turret" "Terran Huge Turret" )
++Subsystem: turret05a
++Primary Banks: ( "Standard Flak" "Terran Huge Turret" "Terran Huge Turret" )
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Primary Banks: ( "Green Beam" )
++Subsystem: turret12
++Primary Banks: ( "AAAf" )
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1000
+
+$Name: Dahshor		;! Object #2
+$Class: GVCv Sobek
+$Team: Friendly
+$Location: -4301.064941, -241.765060, -268.728882
+$Orientation:
+	0.462486, 0.000000, -0.886628,
+	0.432831, 0.872744, 0.225775,
+	0.773799, -0.488177, 0.403632
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "dahshor warps out" 
+   0 
+)
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 400
+
+$Name: Subspace Portal		;! Object #3
+$Class: Knossos
+$Alt: Unknown
+
+$Team: Friendly
+$Location: -1614.278564, 0.000173, 963.520691
+$Orientation:
+	0.857709, 0.000000, -0.514136,
+	0.000000, 1.000000, 0.000000,
+	0.514136, 0.000000, 0.857709
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 1000
+
+$Name: Fallen		;! Object #4
+$Class: SC Cain
+$Team: Hostile
+$Location: -3004.155518, -215.028793, -226.239655
+$Orientation:
+	0.150225, 0.000000, 0.988652,
+	0.235005, 0.971338, -0.035709,
+	-0.960315, 0.237703, 0.145920
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
++Subsystem: turret06
++Primary Banks: ( "Shivan Heavy Anticap Laser" )
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
+$Name: Hadji		;! Object #5
+$Class: SC Rakshasa
+$Team: Hostile
+$Location: -1510.332275, 824.338623, -754.925110
+$Orientation:
+	0.038916, -0.806967, -0.589314,
+	-0.922144, 0.198160, -0.332240,
+	0.384884, 0.556361, -0.736428
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Primary Banks: ( "Standard Flak" )
++Subsystem: turret08
++Primary Banks: ( "Standard Flak" )
++Subsystem: turret09
++Subsystem: turret10
++Primary Banks: ( "SAAA" )
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+
+$Name: Cyaegha		;! Object #6
+$Class: SCv Moloch
+$Team: Hostile
+$Location: -1614.000000, 0.000000, 963.000000
+$Orientation:
+	-0.807088, 0.000000, 0.590431,
+	0.000000, 1.000000, 0.000000,
+	-0.590431, 0.000000, -0.807088
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-waypoints "Cyaegha path" 50 ) )
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "MRed" )
++Subsystem: turret02
++Primary Banks: ( "Suppression Flak" )
++Subsystem: turret03
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret04
++Secondary Banks: ( "Piranha#Shivan" )
++Sbank Ammo: ( 0 )
++Subsystem: turret05
++Primary Banks: ( "MRed" )
++Subsystem: turret06
++Primary Banks: ( "MRed" )
++Subsystem: turret07
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret08
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret09
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret10
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret12
++Primary Banks: ( "SAAA" )
++Subsystem: turret13
++Sbank Ammo: ( 0 )
++Subsystem: turret14
++Primary Banks: ( "SAAA" )
++Subsystem: turret15
++Primary Banks: ( "Shivan Multi Turret" )
++Subsystem: turret16
++Secondary Banks: ( "Piranha#Shivan" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "cyaegha warps in" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "cyaegha warps out" 
+   0 
+)
+$Determination: 10
++Flags: ( "guardian" "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 440
+$Texture Replace:
++old: corvstile1
++new: corvstile1_cmd
++old: corvstile2
++new: corvstile2_cmd
++old: corvstile3
++new: corvstile3_cmd
++old: corvstile3-glow
++new: corvstile3_cmd-glow
++old: corvstile4
++new: corvstile4_cmd
++old: minertile2-glow
++new: minertile2_cmd-glow
+
+$Name: Carthage Alpha 1		;! Object #7
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: -547.567688, 1899.999756, -1536.799683
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Carthage Alpha 2		;! Object #8
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: -415.333801, 1899.999756, -1534.407593
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Carthage Alpha 3		;! Object #9
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: -461.124084, 1899.999634, -1625.184204
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Carthage Alpha 4		;! Object #10
+$Class: GTF Hercules Mark II
+$Team: Friendly
+$Location: -572.676880, 1900.000122, -1623.689575
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Pharaoh Beta 1		;! Object #11
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -1350.000000, 1500.000000, -3250.000000
+$Orientation:
+	0.480124, 0.000000, 0.877200,
+	0.000000, 1.000000, 0.000000,
+	-0.877200, 0.000000, 0.480124
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Trebuchet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pharaoh Beta 2		;! Object #12
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -1283.435425, 1473.437744, -3145.024414
+$Orientation:
+	0.480124, -0.000000, 0.877200,
+	0.000000, 1.000000, 0.000000,
+	-0.877200, 0.000000, 0.480124
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Trebuchet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pharaoh Beta 3		;! Object #13
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -1319.357056, 1450.948975, -3201.601563
+$Orientation:
+	0.480124, -0.000000, 0.877200,
+	0.000000, 1.000000, 0.000000,
+	-0.877200, 0.000000, 0.480124
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Trebuchet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pharaoh Beta 4		;! Object #14
+$Class: GVF Tauret
+$Team: Friendly
+$Location: -1323.223755, 1528.406494, -3211.142578
+$Orientation:
+	0.480124, -0.000000, 0.877200,
+	0.000000, 1.000000, 0.000000,
+	-0.877200, 0.000000, 0.480124
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Trebuchet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Gemini 1		;! Object #15
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -3871.906738, -249.999603, 789.947083
+$Orientation:
+	-0.873521, 0.000000, 0.486787,
+	0.000000, 1.000000, 0.000000,
+	-0.486787, 0.000000, -0.873521
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Gemini 2		;! Object #16
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -3804.707031, -249.999420, 745.594604
+$Orientation:
+	-0.873521, 0.000000, 0.486787,
+	0.000000, 1.000000, 0.000000,
+	-0.486787, 0.000000, -0.873521
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Gemini 3		;! Object #17
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -4058.477539, -249.999603, 866.604187
+$Orientation:
+	-0.873521, 0.000000, 0.486787,
+	0.000000, 1.000000, 0.000000,
+	-0.486787, 0.000000, -0.873521
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Gemini 4		;! Object #18
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -4216.576660, -249.999420, 796.125549
+$Orientation:
+	-0.873521, 0.000000, 0.486787,
+	0.000000, 1.000000, 0.000000,
+	-0.486787, 0.000000, -0.873521
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Cyaegha Aquarius 1		;! Object #19
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1664.417603, 350.000000, 985.356445
+$Orientation:
+	-0.789015, 0.000000, 0.614375,
+	0.000000, 1.000000, 0.000000,
+	-0.614375, 0.000000, -0.789015
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Trebuchet#Shivan" "Shivan Swarmer Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Cyaegha Aquarius 2		;! Object #20
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1628.911255, 300.000000, 957.708435
+$Orientation:
+	-0.789015, 0.000000, 0.614374,
+	0.000000, 1.000000, 0.000000,
+	-0.614374, 0.000000, -0.789015
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Trebuchet#Shivan" "Shivan Swarmer Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Cyaegha Aquarius 3		;! Object #21
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1593.404175, 350.000000, 930.061279
+$Orientation:
+	-0.789015, 0.000000, 0.614374,
+	0.000000, 1.000000, 0.000000,
+	-0.614374, 0.000000, -0.789015
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Trebuchet#Shivan" "Shivan Swarmer Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Cyaegha Aquarius 4		;! Object #22
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1628.911255, 399.999634, 957.708435
+$Orientation:
+	-0.789015, 0.000000, 0.614374,
+	0.000000, 1.000000, 0.000000,
+	-0.614374, 0.000000, -0.789015
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Trebuchet#Shivan" "Shivan Swarmer Bomb" "Shivan Bomb" "Shivan Bomb" )
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Cyaegha Virgo 1		;! Object #23
+$Class: SF Mara
+$Team: Hostile
+$Location: -1348.999390, -0.000035, 772.783936
+$Orientation:
+	-0.863612, 0.000000, 0.504159,
+	0.000000, 1.000000, 0.000000,
+	-0.504159, 0.000000, -0.863612
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Cyaegha Virgo 2		;! Object #24
+$Class: SF Mara
+$Team: Hostile
+$Location: -1369.729370, -12.000041, 784.885986
+$Orientation:
+	-0.863611, 0.000000, 0.504158,
+	0.000000, 1.000000, 0.000000,
+	-0.504158, 0.000000, -0.863611
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Cyaegha Virgo 3		;! Object #25
+$Class: SF Mara
+$Team: Hostile
+$Location: -1369.729370, 11.999959, 784.885986
+$Orientation:
+	-0.863611, 0.000000, 0.504158,
+	0.000000, 1.000000, 0.000000,
+	-0.504158, 0.000000, -0.863611
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Cyaegha Virgo 4		;! Object #26
+$Class: SF Mara
+$Team: Hostile
+$Location: -1383.550049, -0.000035, 792.953186
+$Orientation:
+	-0.863611, 0.000000, 0.504158,
+	0.000000, 1.000000, 0.000000,
+	-0.504158, 0.000000, -0.863611
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Tempest#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Cyaegha Gemini 1		;! Object #27
+$Class: SB Nahema
+$Team: Hostile
+$Location: -1811.433838, -0.000035, 1080.460083
+$Orientation:
+	-0.666276, 0.000000, 0.745706,
+	0.000000, 1.000000, 0.000000,
+	-0.745706, 0.000000, -0.666276
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" "Shivan Bomb" "Piranha#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Cyaegha Gemini 2		;! Object #28
+$Class: SB Nahema
+$Team: Hostile
+$Location: -1798.107300, -25.000021, 1065.544800
+$Orientation:
+	-0.666276, 0.000000, 0.745705,
+	0.000000, 1.000000, 0.000000,
+	-0.745705, 0.000000, -0.666276
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" "Shivan Bomb" "Piranha#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Cyaegha Gemini 3		;! Object #29
+$Class: SB Nahema
+$Team: Hostile
+$Location: -1798.107300, 24.999979, 1065.544800
+$Orientation:
+	-0.666276, 0.000000, 0.745705,
+	0.000000, 1.000000, 0.000000,
+	-0.745705, 0.000000, -0.666276
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" "Shivan Bomb" "Piranha#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Cyaegha Gemini 4		;! Object #30
+$Class: SB Nahema
+$Team: Hostile
+$Location: -1784.780762, -0.000035, 1050.630615
+$Orientation:
+	-0.666276, 0.000000, 0.745705,
+	0.000000, 1.000000, 0.000000,
+	-0.745705, 0.000000, -0.666276
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" "Shivan Bomb" "Piranha#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "special-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Searing Fate		;! Object #31
+$Class: GVC Mentu Enforcer
+$Team: Friendly
+$Location: -689.317810, 1652.443237, -4035.377441
+$Orientation:
+	0.462485, -0.886627, 0.000000,
+	0.654746, 0.341531, 0.674288,
+	-0.597842, -0.311848, 0.738469
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-waypoints-once "viewpoint 05" 50 ) )
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 5 "Apep" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: Apep		;! Object #32
+$Class: GVD Hatshepsut
+$Team: Friendly
+$Location: 1917.197876, 3533.645264, -5346.170898
+$Orientation:
+	0.425674, -0.757843, 0.494445,
+	0.494445, 0.652438, 0.574325,
+	-0.757843, 0.000000, 0.652438
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret06
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret07
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret08
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret09
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret10
++Secondary Banks: ( "Vasudan Torpedo" )
++Sbank Ammo: ( 0 )
++Subsystem: turret11
++Subsystem: turret12
++Primary Banks: ( "Wraith" )
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Primary Banks: ( "Wraith" )
++Subsystem: turret19
++Primary Banks: ( "Wraith" )
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Primary Banks: ( "Wraith" )
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Primary Banks: ( "Wraith" )
++Subsystem: turret29
++Primary Banks: ( "Wraith" )
++Subsystem: turret30
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "cyaegha counter fires" 
+   7 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 1400
+
+$Name: Crixalis		;! Object #33
+$Class: GVC Aten
+$Team: Friendly
+$Location: -655.361816, -0.037238, -1923.347412
+$Orientation:
+	-0.023713, 0.730676, 0.682312,
+	-0.761627, 0.428898, -0.485768,
+	-0.647582, -0.531186, 0.546333
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Primary Banks: ( "Long Range Flak" )
++Subsystem: turret02a
++Primary Banks: ( "Long Range Flak" )
++Subsystem: turret03
++Primary Banks: ( "Wraith" )
++Subsystem: turret04
++Primary Banks: ( "Wraith" )
++Subsystem: turret05
++Primary Banks: ( "AAAf" )
++Subsystem: turret06
++Primary Banks: ( "AAAf" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 2 "Apep" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 90
+
+$Name: Stone of Dovka		;! Object #34
+$Class: GVC Hemsut
+$Team: Friendly
+$Location: -3115.594727, -0.037252, -3065.500977
+$Orientation:
+	0.597834, 0.801620, 0.000000,
+	-0.764186, 0.569916, -0.302023,
+	-0.242108, 0.180561, 0.953301
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Sbank Ammo: ( 0 )
++Subsystem: Turret02
++Sbank Ammo: ( 0 )
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 2 "Apep" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "guardian" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 75
+
+$Name: Apep Alpha 1		;! Object #35
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 971.792114, -0.001173, -4536.052246
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Alpha 2		;! Object #36
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 1030.579834, -0.001005, -4514.483398
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Alpha 3		;! Object #37
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 1058.300415, -0.000762, -4599.494141
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Beta 1		;! Object #38
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 1196.601929, -0.000963, -4885.041016
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Beta 2		;! Object #39
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 1243.438477, -0.000813, -4832.919434
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Apep Beta 3		;! Object #40
+$Class: GVF Serapis
+$Team: Friendly
+$Location: 1227.268066, -0.001124, -4903.827637
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+#Wings		;! 9 total
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Alpha 1"
+)
++Hotkey: 0
++Flags: ( )
+
+$Name: Carthage Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Carthage Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Carthage Alpha 1"
+	"Carthage Alpha 2"
+	"Carthage Alpha 3"
+	"Carthage Alpha 4"
+)
+$AI Goals: ( goals ( ai-chase "Hadji" 50 ) ( ai-chase "Cyaegha" 48 ) )
++Flags: ( )
+
+$Name: Pharaoh Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Pharaoh Beta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "go to viewpoint 03" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Pharaoh Beta 1"
+	"Pharaoh Beta 2"
+	"Pharaoh Beta 3"
+	"Pharaoh Beta 4"
+)
+$AI Goals: ( goals ( ai-chase "Hadji" 50 ) ( ai-chase "Cyaegha" 48 ) ( ai-chase-wing "Gemini" 49 ) )
++Flags: ( )
+
+$Name: Gemini
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gemini 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gemini 1"
+	"Gemini 2"
+	"Gemini 3"
+	"Gemini 4"
+)
+$AI Goals: ( goals ( ai-chase "Dahshor" 50 ) )
++Flags: ( )
+
+$Name: Cyaegha Gemini
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Cyaegha Gemini 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Cyaegha" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Cyaegha Gemini 1"
+	"Cyaegha Gemini 2"
+	"Cyaegha Gemini 3"
+	"Cyaegha Gemini 4"
+)
+$AI Goals: ( goals ( ai-chase "Dahshor" 50 ) ( ai-chase "Carthage" 48 ) )
++Flags: ( )
+
+$Name: Cyaegha Aquarius
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Cyaegha Aquarius 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Cyaegha" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Cyaegha Aquarius 1"
+	"Cyaegha Aquarius 2"
+	"Cyaegha Aquarius 3"
+	"Cyaegha Aquarius 4"
+)
+$AI Goals: ( goals ( ai-chase "Carthage" 50 ) )
++Flags: ( )
+
+$Name: Cyaegha Virgo
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Cyaegha Virgo 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Cyaegha" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Cyaegha Virgo 1"
+	"Cyaegha Virgo 2"
+	"Cyaegha Virgo 3"
+	"Cyaegha Virgo 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+$Name: Apep Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Apep Alpha 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( is-event-true-delay 
+   "cut to viewpoint 07" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Apep Alpha 1"
+	"Apep Alpha 2"
+	"Apep Alpha 3"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+$Name: Apep Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Apep Beta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Apep
+$Arrival Cue: ( is-event-true-delay 
+   "cut to viewpoint 07" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Apep Beta 1"
+	"Apep Beta 2"
+	"Apep Beta 3"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+#Events		;! 34 total
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Gemini 1" 
+      "Gemini 2" 
+      "Gemini 3" 
+      "Gemini 4" 
+   )
+   ( has-arrived-delay 0 "Pharaoh Beta" ) 
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 0 "<argument>" ) 
+      )
+      ( good-secondary-time 
+         "Friendly" 
+         100 
+         "Trebuchet" 
+         "<argument>" 
+      )
+      ( good-secondary-time 
+         "Friendly" 
+         100 
+         "Trebuchet" 
+         "Hadji" 
+      )
+   )
+)
++Name: beta good secondary time
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( fade-out ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 01:1" ) 
+      ( get-object-y "viewpoint 01:1" ) 
+      ( get-object-z "viewpoint 01:1" ) 
+   )
+   ( set-camera-facing-object 
+      "viewpoint 01:2" 
+   )
+   ( add-goal 
+      "Alpha 1" 
+      ( ai-play-dead 200 ) 
+   )
+   ( beam-lock 
+      "Carthage" 
+      "turret01a" 
+      "turret09" 
+      "turret06" 
+      "turret14" 
+   )
+   ( beam-lock "Fallen" "turret07" ) 
+   ( beam-lock 
+      "Hadji" 
+      "turret02" 
+      "turret03" 
+   )
+   ( beam-lock 
+      "Dahshor" 
+      "turret09" 
+      "turret14" 
+   )
+   ( set-armor-type 
+      "Dahshor" 
+      ( true ) 
+      "Hell Armor" 
+      "engine" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret14" 
+      "turret15" 
+      "turret16" 
+      "turret17" 
+      "turret18" 
+      "turret19" 
+      "turret20" 
+      "turret21" 
+      "turret22" 
+   )
+)
++Name: mission start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( fade-in 3000 ) ) 
++Name: fade in to viewpoint 01
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "Subspace Portal" 
+      3500 
+      750 
+      250 
+   )
+   ( beam-free-all "Fallen" ) 
+)
++Name: pan toward battle
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Carthage" 
+      "turret01a" 
+      "Hadji" 
+   )
+)
++Name: carthage fires at hadji
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 02:1" ) 
+      ( get-object-y "viewpoint 02:1" ) 
+      ( get-object-z "viewpoint 02:1" ) 
+      6000 
+      750 
+      1500 
+   )
+   ( beam-free-all "Dahshor" ) 
+)
++Name: go to to viewpoint 02
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "viewpoint 02:2" 
+      3000 
+      500 
+      500 
+   )
+)
++Name: pan to viewpoint 02
++Repeat Count: 1
++Interval: 1
++Chained: 6
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Carthage" 
+      "turret09" 
+      "Fallen" 
+   )
+   ( ship-no-guardian "Fallen" ) 
+)
++Name: carthage finishes fallen
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "Carthage" 
+      2500 
+      750 
+      500 
+   )
+   ( beam-free 
+      "Carthage" 
+      "turret06" 
+      "turret14" 
+   )
+)
++Name: pan to carthage
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Hadji" 
+      "turret02" 
+      "Carthage" 
+   )
+   ( fire-beam 
+      "Hadji" 
+      "turret03" 
+      "Carthage" 
+   )
+)
++Name: Hadji fires at Carthage
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 03:1" ) 
+      ( get-object-y "viewpoint 03:1" ) 
+      ( get-object-z "viewpoint 03:1" ) 
+      4000 
+      750 
+      1500 
+   )
+)
++Name: go to viewpoint 03
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "viewpoint 03:2" 
+      2000 
+      500 
+   )
+)
++Name: pan to viewpoint 03
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-no-guardian "Hadji" ) 
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( get-object-x "viewpoint 03:1" ) 
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         25 
+      )
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         75 
+      )
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         50 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         100 
+      )
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         50 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         75 
+      )
+      ( - 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         100 
+      )
+      ( - 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( play-sound-from-file "m_angel.wav" ) 
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         125 
+      )
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+   ( weapon-create 
+      "Alpha 1" 
+      "Trebuchet" 
+      ( + 
+         ( get-object-x "viewpoint 03:1" ) 
+         150 
+      )
+      ( + 
+         ( get-object-y "viewpoint 03:1" ) 
+         25 
+      )
+      ( - 
+         ( get-object-z "viewpoint 03:1" ) 
+         50 
+      )
+      0 
+      0 
+      0 
+      "Hadji" 
+   )
+)
++Name: offscreen trebs
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( is-destroyed-delay 5 "Hadji" ) 
+   ( set-armor-type 
+      "Dahshor" 
+      ( true ) 
+      "HeavyArmor" 
+      "engine" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret14" 
+      "turret15" 
+      "turret16" 
+      "turret17" 
+      "turret18" 
+      "turret19" 
+      "turret20" 
+      "turret21" 
+      "turret22" 
+   )
+)
++Name: cyaegha warps in
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Cyaegha" ) 
+   ( set-camera-facing-object 
+      "Cyaegha" 
+      3000 
+      1000 
+      250 
+   )
+   ( good-secondary-time 
+      "Friendly" 
+      100 
+      "Trebuchet" 
+      "Cyaegha" 
+   )
+   ( set-armor-type 
+      "Cyaegha" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+   ( ship-subsys-guardian-threshold 
+      0 
+      "Cyaegha" 
+      "turret01" 
+      "turret05" 
+      "turret06" 
+   )
+)
++Name: pan to cyaegha
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "Cyaegha" 
+      1000 
+   )
+)
++Name: focus on cyaegha
++Repeat Count: 10
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( has-arrived-delay 7 "Cyaegha" ) 
+   ( fire-beam 
+      "Carthage" 
+      "turret01a" 
+      "Cyaegha" 
+   )
+)
++Name: carthage fires on cyaegha
++Repeat Count: 1
++Interval: 1
++Chained: 7
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 04:1" ) 
+      ( get-object-y "viewpoint 04:1" ) 
+      ( get-object-z "viewpoint 04:1" ) 
+      5000 
+      750 
+   )
+)
++Name: go to viewpoint 04
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "viewpoint 04:2" 
+      1000 
+      250 
+   )
+   ( sabotage-subsystem 
+      "Dahshor" 
+      "turret05" 
+      100 
+   )
+   ( sabotage-subsystem 
+      "Dahshor" 
+      "turret10" 
+      100 
+   )
+   ( sabotage-subsystem 
+      "Dahshor" 
+      "turret17" 
+      100 
+   )
+   ( fire-beam 
+      "Cyaegha" 
+      "turret05" 
+      "Carthage" 
+   )
+)
++Name: pan to viewpoint 04
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 05:1" ) 
+      ( get-object-y "viewpoint 05:1" ) 
+      ( get-object-z "viewpoint 05:1" ) 
+   )
+   ( set-camera-facing-object "Dahshor" ) 
+   ( ship-rot-maneuver 
+      "Dahshor" 
+      5000 
+      100 
+      0 
+      -100 
+      ( true ) 
+   )
+)
++Name: cut to viewpoint 05/dahshor
++Repeat Count: 1
++Interval: 1
++Chained: 8
+
+$Formula: ( when 
+   ( true ) 
+   ( set-subsystem-strength 
+      "Dahshor" 
+      "Hull" 
+      1 
+   )
+   ( fire-beam 
+      "Cyaegha" 
+      "turret01" 
+      "Dahshor" 
+   )
+   ( fire-beam 
+      "Cyaegha" 
+      "turret06" 
+      "Dahshor" 
+   )
+   ( beam-lock 
+      "Cyaegha" 
+      "turret01" 
+      "turret06" 
+   )
+)
++Name: dahshor warps out
++Repeat Count: 1
++Interval: 1
++Chained: 10
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-rotation 
+      35 
+      0 
+      95 
+      5000 
+      250 
+      750 
+   )
+)
++Name: pan towards warp out
++Repeat Count: 10
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Dahshor" ) 
+   ( set-camera-facing-object 
+      "Carthage" 
+      2000 
+      500 
+   )
+   ( set-object-position 
+      "Cyaegha path:1" 
+      ( get-object-x "Cyaegha path:2" ) 
+      ( get-object-y "Cyaegha path:2" ) 
+      ( get-object-z "Cyaegha path:2" ) 
+   )
+)
++Name: pan towards carthage
++Repeat Count: 1
++Interval: 1
++Chained: 6
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Carthage" 
+      "turret09" 
+      "Cyaegha" 
+   )
+   ( turret-change-weapon 
+      "Cyaegha" 
+      "turret05" 
+      "MRedUp" 
+      1 
+      0 
+   )
+)
++Name: carthage fires again
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Cyaegha" 
+      "turret05" 
+      "Carthage" 
+      "turret09" 
+   )
+)
++Name: cyaegha counter fires
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Apep" ) 
+   ( set-camera-facing-object 
+      "Apep" 
+      1500 
+      500 
+   )
+   ( beam-lock "Apep" "turret01" ) 
+)
++Name: Apep arrives
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 06:1" ) 
+      ( get-object-y "viewpoint 06:1" ) 
+      ( get-object-z "viewpoint 06:1" ) 
+   )
+   ( set-camera-facing-object "Apep" ) 
+   ( set-immobile "Apep" ) 
+)
++Name: cut to viewpoint 06
++Repeat Count: 1
++Interval: 1
++Chained: 15
+
+$Formula: ( when 
+   ( true ) 
+   ( fire-beam 
+      "Apep" 
+      "turret01" 
+      "Cyaegha" 
+   )
+)
++Name: Apep fires
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( is-event-true-msecs-delay 
+      "Apep fires" 
+      1500 
+   )
+   ( set-camera-facing-object 
+      "Cyaegha" 
+      1250 
+   )
+   ( set-mobile "Apep" ) 
+)
++Name: pan to cyaegha
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 06:2" ) 
+      ( get-object-y "viewpoint 06:2" ) 
+      ( get-object-z "viewpoint 06:2" ) 
+      2500 
+   )
+)
++Name: move to viewpoint 06-2
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: cyaegha warps out
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "Cyaegha" 
+      1000 
+   )
+)
++Name: pan to warp out
++Repeat Count: 10
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( has-departed-delay 5 "Cyaegha" ) 
+   ( set-camera-position 
+      ( get-object-x "viewpoint 07:1" ) 
+      ( get-object-y "viewpoint 07:1" ) 
+      ( get-object-z "viewpoint 07:1" ) 
+   )
+   ( set-camera-facing-object 
+      "viewpoint 07:2" 
+   )
+)
++Name: cut to viewpoint 07
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( set-camera-facing-object 
+      "Subspace Portal" 
+      8000 
+      2000 
+      500 
+   )
+)
++Name: pan to subspace portal
++Repeat Count: 1
++Interval: 1
++Chained: 11
+
+#Goals		;! 0 total
+
+
+#Waypoints		;! 8 lists total
+
+$Name: viewpoint 01
+$List: (		;! 2 points in list
+	( 2750.123779, -0.010658, 2448.980225 )
+	( 2758.034180, -0.014230, 3654.386719 )
+)
+
+$Name: viewpoint 02
+$List: (		;! 2 points in list
+	( -5255.183594, 623.718811, 444.595520 )
+	( -3862.929199, -0.001224, 153.446671 )
+)
+
+$Name: Cyaegha path
+$List: (		;! 2 points in list
+	( -4597.899902, 500.000000, -3845.100098 )
+	( -2503.500000, 1000.000000, -5220.600098 )
+)
+
+$Name: viewpoint 03
+$List: (		;! 2 points in list
+	( -1439.886719, 1482.661865, -3158.545654 )
+	( -1599.971069, 1307.886841, -2425.848145 )
+)
+
+$Name: viewpoint 04
+$List: (		;! 2 points in list
+	( -2131.754150, 500.000031, 865.613831 )
+	( -2925.179443, -0.001442, 55.446445 )
+)
+
+$Name: viewpoint 05
+$List: (		;! 1 points in list
+	( -4453.514648, -0.000803, 199.409561 )
+)
+
+$Name: viewpoint 06
+$List: (		;! 2 points in list
+	( -337.329681, 2533.897217, -3991.252441 )
+	( -1730.389893, 1145.805176, -3548.342041 )
+)
+
+$Name: viewpoint 07
+$List: (		;! 2 points in list
+	( 1439.199951, 3500.000000, -3662.500000 )
+	( -4552.078613, 960.431519, -2096.863037 )
+)
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 34 total
+
+$Num stars: 500
+$Ambient light level: 7895160
+
+$Bitmap List:
+$Sun: SunWhite
++Angles: 0.000000 0.000000 0.000000
++Scale: 1.000000
+$Starbitmap: neb04
++Angles: 0.000000 2.321286 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 0.401425 0.663225 0.139626
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 0.820304 4.834558 0.000000
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 0.000000 1.308996 0.558505
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 2
+$Starbitmap: neb04
++Angles: 6.021381 0.890117 5.794488
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 5.951568 2.740165 5.602502
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 0.000000 0.000000 5.951568
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 5.881755 5.009091 5.532689
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 2
++DivY: 1
+$Starbitmap: neb04
++Angles: 5.585049 0.383972 5.393063
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 0.558505 0.628318 6.126101
++ScaleX: 3.000000
++ScaleY: 5.000000
++DivX: 2
++DivY: 1
+$Starbitmap: neb15
++Angles: 5.218530 0.000000 5.218530
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 5.009091 5.585049 5.218530
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb04
++Angles: 5.585049 5.585049 0.925024
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 5.777035 2.321286 0.802851
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 6.021381 4.468040 0.628318
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 5.585049 0.575958 0.925024
++ScaleX: 3.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 2
+$Starbitmap: neb04
++Angles: 5.358157 2.740165 0.628318
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 5.131264 5.951568 0.506145
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 4.991638 0.855211 0.418879
++ScaleX: 3.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 2
+$Starbitmap: neb06
++Angles: 4.764745 1.692968 0.191986
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 2
++DivY: 2
+$Starbitmap: neb04
++Angles: 5.253437 3.455749 1.117010
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 5.078904 1.256636 1.308996
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 4.886918 1.867501 1.553342
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 3.508109 0.383972 1.378809
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb04
++Angles: 3.385936 1.570795 1.169370
++ScaleX: 4.000000
++ScaleY: 3.000000
++DivX: 2
++DivY: 1
+$Starbitmap: neb16
++Angles: 4.799652 1.797688 1.815141
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 4.886918 4.276053 2.076940
++ScaleX: 2.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb06
++Angles: 4.345866 0.366519 2.216566
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb04
++Angles: 3.874628 1.570795 2.408552
++ScaleX: 4.000000
++ScaleY: 3.000000
++DivX: 2
++DivY: 1
+$Starbitmap: neb16
++Angles: 4.031707 0.558505 0.959930
++ScaleX: 4.000000
++ScaleY: 3.000000
++DivX: 2
++DivY: 1
+$Starbitmap: neb15
++Angles: 4.345866 1.797688 0.715584
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb04
++Angles: 4.520399 2.146753 0.541052
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb16
++Angles: 3.577922 0.366519 0.663225
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: neb15
++Angles: 3.961894 1.570795 0.506145
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 2
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: Brief4
+
+#End
+
