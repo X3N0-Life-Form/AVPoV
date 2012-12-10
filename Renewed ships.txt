@@ -248,11 +248,12 @@ Moloch:		Strike Corvette
 	turret 14:SAAA
 	turret 16:Pirahna#Shivan
 
-Moloch:		Command Corvette (Cyeagha)
+Moloch:		Command Corvette (Cyaegha)
 	armor: Shivan Elite Armor
 	turret 01:MRed/MRedUp
 	turret 02:Suppression Flak
 	turret 03:Shivan Multi Turret
+	turret 04:Piranha#Shivan
 	turret 05:MRed/MRedUp
 	turret 06:MRed/MRedUp
 	turret 07:Fast Flak
@@ -263,7 +264,9 @@ Moloch:		Command Corvette (Cyeagha)
 	turret 12:SAAA
 	turret 14:SAAA
 	turret 15:Shivan Multi Turret
+	turret 16:Piranha#Shivan
 
+;; remove it?
 Moloch:		Area Denial Corvette
 	turret 01:Long Range Flak
 	turret 02:Suppression Flak
