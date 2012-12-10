@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Gamma Draconis", -1)
 $Author: X3N0-Life-Form
 $Created: 04/30/99 at 17:09:33
-$Modified: 12/10/12 at 01:58:50
+$Modified: 12/10/12 at 16:54:55
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -1693,6 +1693,9 @@ $Formula: ( when
       "turret21" 
       "turret22" 
    )
+   ( play-sound-from-file 
+      "FS2_Amb_A01.wav" 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
@@ -1743,6 +1746,10 @@ $Formula: ( when
       1500 
    )
    ( beam-free-all "Dahshor" ) 
+   ( close-sound-from-file ( true ) ) 
+   ( play-sound-from-file 
+      "FS2_Arv_A01.wav" 
+   )
 )
 +Name: go to to viewpoint 02
 +Repeat Count: 1
@@ -1756,6 +1763,9 @@ $Formula: ( when
       3000 
       500 
       500 
+   )
+   ( play-sound-from-file 
+      "FS2_Btl_A03.wav" 
    )
 )
 +Name: pan to viewpoint 02
@@ -2011,6 +2021,9 @@ $Formula: ( when
       0 
       "Hadji" 
    )
+   ( play-sound-from-file 
+      "FS2_Btl_B02.wav" 
+   )
 )
 +Name: offscreen trebs
 +Repeat Count: 1
@@ -2203,6 +2216,9 @@ $Formula: ( when
       "turret01" 
       "turret06" 
    )
+   ( play-sound-from-file 
+      "FS2_Btl_B03.wav" 
+   )
 )
 +Name: dahshor warps out
 +Repeat Count: 1
@@ -2286,6 +2302,10 @@ $Formula: ( when
       500 
    )
    ( beam-lock "Apep" "turret01" ) 
+   ( close-sound-from-file ( true ) ) 
+   ( play-sound-from-file 
+      "HW2_005_nis03_aifr.ogg" 
+   )
 )
 +Name: Apep arrives
 +Repeat Count: 1
@@ -2377,6 +2397,10 @@ $Formula: ( when
    )
    ( set-camera-facing-object 
       "viewpoint 07:2" 
+   )
+   ( close-sound-from-file ( true ) ) 
+   ( play-sound-from-file 
+      "Aquitaine.ogg" 
    )
 )
 +Name: cut to viewpoint 07
