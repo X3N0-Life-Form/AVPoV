@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Gamma Draconis", -1)
 $Author: X3N0-Life-Form
 $Created: 04/30/99 at 17:09:33
-$Modified: 12/10/12 at 16:54:55
+$Modified: 12/13/12 at 13:44:28
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -1600,7 +1600,7 @@ $Ships: (		;! 3 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 34 total
+#Events		;! 36 total
 
 $Formula: ( when-argument 
    ( any-of 
@@ -2398,10 +2398,6 @@ $Formula: ( when
    ( set-camera-facing-object 
       "viewpoint 07:2" 
    )
-   ( close-sound-from-file ( true ) ) 
-   ( play-sound-from-file 
-      "Aquitaine.ogg" 
-   )
 )
 +Name: cut to viewpoint 07
 +Repeat Count: 1
@@ -2421,6 +2417,18 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 11
+
+$Formula: ( when ( true ) ( fade-out 5000 ) ) 
++Name: fade out
++Repeat Count: 1
++Interval: 1
++Chained: 12
+
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: mission end
++Repeat Count: 1
++Interval: 1
++Chained: 6
 
 #Goals		;! 0 total
 
