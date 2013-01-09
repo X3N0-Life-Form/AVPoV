@@ -1,0 +1,6 @@
+FROM:	3rd Fleet Terran Command
+TO:	Nebula Theater Expeditionary Force
+	Gamma Draconis Defence Force
+	Security Council-notifications:medium
+
+OBJECT:Gas miners
