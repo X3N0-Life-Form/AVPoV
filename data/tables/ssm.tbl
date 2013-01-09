@@ -6,6 +6,7 @@ $SSM:
 	+Radius:		1200
 	+Offset:		1
 	+Custom Message:*Inbound Shivan SSM Strike*
+	+Custom Sound:	185 ;; comnode
 
 $SSM:
 	+Weapon:		AntiFighterSSM
@@ -15,6 +16,7 @@ $SSM:
 	+Radius:		400
 	+Offset:		1
 	+Custom Message:*Inbound Anti-Strikecraft SSMs*
+	+Custom Sound:	185
 
 $SSM:
 	+Weapon:		Shivan Subspace Missile
@@ -24,6 +26,7 @@ $SSM:
 	+Radius:		1600
 	+Offset:		1
 	+Custom Message:*Inbound Shivan SSM Barrage*
+	+Custom Sound:	185
 	
 $SSM:
 	+Weapon:		Shivan Mordiggian Bomb
@@ -33,6 +36,7 @@ $SSM:
 	+Radius:		1600
 	+Offset:		1
 	+Custom Message:*Inbound Mordiggian Bomb*
+	+Custom Sound:	185
 
 ; $SSM:
 ;    +Weapon:		Bane
