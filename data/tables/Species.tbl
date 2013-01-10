@@ -851,7 +851,7 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("space asset generation thingy - definition",-1)
+$Name:        XSTR("space asset ",-1) ; generation thingy - definition
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
@@ -863,21 +863,25 @@ $end_multi_text
 $Entry:
 $Name:        XSTR("Advanced Sensor Suite mk3",-1)
 $Anim:                    
-$AlwaysInTechRoom:    	0
+$AlwaysInTechRoom:    	1
 $Description:
     XSTR("Akheton - Advanced Sensor Suite mk3
 
-    ",-1)
+    Part of the Alliance's newest destroyer systems' package, the Advanced Sensor Suite grants the newest Terran and Vasudan destroyers unparalleled detection range and accuracy, as well as improved subspace vectoring capabilities. These systems can be network between destroyers operating in the same system, allowing pinpoint accurate strikecraft jumps. Though jamming, subspace shadowing and other counter-measures are in development, it will be several years until the mk3 Adv. Sensor Suite's performance can be impaired by GTVA technology.
+	
+	CLASSIFIED - level Mu
+	
+	System-wide Sensor Suite networking is part of the Alliance's research into subspace weaponry. Current systems already provide a dramatic increase in strikecraft jump accuracy, allowing bombers to jump in close proximity to their target.",-1)
 $end_multi_text
 
 $Entry:
 $Name:        XSTR("Fast Refuel and Repair",-1)
 $Anim:                    
-$AlwaysInTechRoom:    	0
+$AlwaysInTechRoom:    	1
 $Description:
     XSTR("Trition Dynamics - Fast Refuel and Repair
 
-    ",-1)
+    Part of the Alliance's newest destroyer systems' package, the FR&R platform's purpose is to allow modern destroyers and installations to operate their strikecraft compliment efficiently in high intensity environment. This highly automated infrastructure is designed to bring exhausted fighters and bombers back to frontline as quickly as possible, and can in a pinch be used as an onboard factory. Over the past 10 years, Terran-Vasudan engineers have been trying to make Alliance warships as autonomous as possible, making ships more and more able to survive in hostile environments, on the front or behind enemy lines.",-1)
 $end_multi_text
 
 $Entry:
