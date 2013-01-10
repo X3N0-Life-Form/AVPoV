@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Nightmare", -1)
 $Author: X3N0-Life-Form
 $Created: 07/15/12 at 22:17:26
-$Modified: 01/09/13 at 20:58:29
+$Modified: 01/10/13 at 19:25:26
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -5719,42 +5719,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 6 "Fox" ) 
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
 )
 +Name: subspace strike vs Fox
 +Repeat Count: 1
@@ -5784,42 +5751,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 22 "Fox" ) 
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
 )
 +Name: 2nd ssm vs Fox
 +Repeat Count: 1
@@ -5996,42 +5930,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "Fox" ) 
-      ( get-object-y "Fox" ) 
-      ( - ( get-object-z "Fox" ) 50 ) 
-      ( get-object-pitch "Fox" ) 
-      ( get-object-bank "Fox" ) 
-      ( get-object-heading "Fox" ) 
-      "Fox" 
-      "engine01" 
-   )
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Fox" "Hostile" ) 
 )
 +Name: 3rd ssm vs fox
 +Repeat Count: 1
@@ -6060,16 +5961,10 @@ $Formula: ( when-argument
       32 
       "Fox" 
    )
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "<argument>" ) 
-      ( get-object-y "<argument>" ) 
-      ( - ( get-object-z "<argument>" ) 50 ) 
-      ( get-object-pitch "<argument>" ) 
-      ( get-object-bank "<argument>" ) 
-      ( get-object-heading "<argument>" ) 
+   ( call-ssm-strike 
+      1 
       "<argument>" 
+      "Hostile" 
    )
    ( invalidate-argument "<argument>" ) 
 )
@@ -6080,16 +5975,10 @@ $Formula: ( when-argument
 $Formula: ( when-argument 
    ( random-of "<any friendly>" ) 
    ( true ) 
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "<argument>" ) 
-      ( get-object-y "<argument>" ) 
-      ( - ( get-object-z "<argument>" ) 50 ) 
-      ( get-object-pitch "<argument>" ) 
-      ( get-object-bank "<argument>" ) 
-      ( get-object-heading "<argument>" ) 
+   ( call-ssm-strike 
+      1 
       "<argument>" 
+      "Hostile" 
    )
    ( invalidate-argument "<argument>" ) 
 )
@@ -6102,16 +5991,10 @@ $Formula: ( when-argument
 $Formula: ( when-argument 
    ( random-of "<any friendly>" ) 
    ( true ) 
-   ( weapon-create 
-      "Susl'Arh Morc" 
-      "AntiFighterTAG#Shivan" 
-      ( get-object-x "<argument>" ) 
-      ( get-object-y "<argument>" ) 
-      ( - ( get-object-z "<argument>" ) 50 ) 
-      ( get-object-pitch "<argument>" ) 
-      ( get-object-bank "<argument>" ) 
-      ( get-object-heading "<argument>" ) 
+   ( call-ssm-strike 
+      1 
       "<argument>" 
+      "Hostile" 
    )
    ( invalidate-argument "<argument>" ) 
 )
