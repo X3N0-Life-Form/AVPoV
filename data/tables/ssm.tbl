@@ -1,4 +1,4 @@
-$SSM:
+$SSM:				; 0
 	+Weapon:		Shivan Subspace Missile
 	+Count:			3
 	+WarpRadius:	40
@@ -8,7 +8,7 @@ $SSM:
 	+Custom Message:*Inbound Shivan SSM Strike*
 	+Custom Sound:	185 ;; comnode
 
-$SSM:
+$SSM:				; 1
 	+Weapon:		AntiFighterSSM
 	+Count:			8 ;12
 	+WarpRadius:	15
@@ -18,7 +18,7 @@ $SSM:
 	+Custom Message:*Inbound Anti-Strikecraft SSMs*
 	+Custom Sound:	185
 
-$SSM:
+$SSM:				; 2
 	+Weapon:		Shivan Subspace Missile
 	+Count:			6
 	+WarpRadius:	40
@@ -28,7 +28,7 @@ $SSM:
 	+Custom Message:*Inbound Shivan SSM Barrage*
 	+Custom Sound:	185
 	
-$SSM:
+$SSM:				; 3
 	+Weapon:		Shivan Mordiggian Bomb
 	+Count:			1
 	+WarpRadius:	40
