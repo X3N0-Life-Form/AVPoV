@@ -46,7 +46,7 @@ $LaunchSnd:								92
 $ImpactSnd:								88
 $FlyBySnd:								-1
 $Rearm Rate:							0.33
-$Flags:									( "no dumbfire" "player allowed" "capital+" )
+$Flags:									( "no dumbfire" "player allowed" "Huge" "capital+" )
 $Trail:																										;; Trail cannot be set if Exhaust is set
 	+Start Width:						0.25                                         ;; Width of trail nearest missile
 	+End Width:							0.5                                          ;; Width of trail before it "evaporates"
@@ -145,7 +145,7 @@ $LaunchSnd:								92
 $ImpactSnd:								88
 $FlyBySnd:								-1
 $Rearm Rate:							0.33
-$Flags:									( "no dumbfire" "player allowed" "capital+" )
+$Flags:									( "no dumbfire" "player allowed" "Huge" "capital+" )
 $Trail:																										;; Trail cannot be set if Exhaust is set
 	+Start Width:						0.25                                         ;; Width of trail nearest missile
 	+End Width:							0.5                                          ;; Width of trail before it "evaporates"
