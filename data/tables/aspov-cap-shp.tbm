@@ -2993,4 +2993,192 @@ $Subsystem:		turret22, 			3, 20.0
 	$Max Turrets per Bomb:		1
 	$Flags: 					( "check hull" )
 
+	
+$Name:		GTCv Sparta#Original
+$Short name:				TStrCorv
+$Species:					Terran
+	+Tech Description:		XSTR("CLASSIFIED - level Omega
+	
+	Mounting the 'Pulsar Lance' weapon system, the original Sparta design was meant to be tha Alliance's response to the Shivan threat, providing an extremely versatile platform for both special assignments and front line duties. By the end of the Battle of Capella, only one of the original prototypes remained unchanged, and was deployed to assist the GTD Streaker on its final assignment, marking the first combat deployment of a Lance-capable warship.", -1)
+	$end_multi_text
+$POF file:					diomedes.pof
+$Detail distance:			(0, 5000, 5000, 10000)
+$Damp:						0.2
+$Rotdamp:					0.6
+$Max Velocity:				0.0, 0.0, 25.0
+$Rotation time:				48.0, 52.0, 42.0
+$Rear Velocity:				0.0
+$Forward accel:				2.0
+$Forward decel:				1.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			75.0
+$Expl outer rad:			750.0
+$Expl damage:				500.0
+$Expl blast:				1300.0
+$Expl Propagates:			yes
+$Shockwave Speed:			190.0
+$Shockwave Count:			3
+$Shields:					0
+$Power Output:				38.0
+$Max Oclk Speed:			35.0
+$Max Weapon Eng:			0.0
+$Hitpoints:					85000
+$Armor Type: 				HeavyArmor
+$Flags:						( "corvette" "big damage" )
+$AI Class:					Big
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, -25, -1050
+$Closeup_zoom:				0.5
+$Score:						40
+$Radar Image 2D:    radar-corvette
+$Subsystem:		turret01,			5.5, 20.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret02, 			5.5, 20.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret03, 			5.5, 20.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret04, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret05, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret06, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret07, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret08, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret09, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret10, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret11, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret12, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret13, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret14, 			5, 20.0
+	$Default SBanks:			( "Piranha" "Piranha" )
+	$Flags: 					( "use multiple guns" )
+$Subsystem:		turret15, 			5, 20.0
+	$Default SBanks:			( "Piranha" "Piranha" )
+	$Flags: 					( "use multiple guns" )
+$Subsystem:		turret16, 			5.5, 20.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret17, 			5.5, 20.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret18, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret19, 			5, 20.0
+	$Default PBanks:			( "MGreen" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	1.75
+	$Flags: 					( "check hull" )
+$Subsystem:		turret20, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret21, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )
+$Subsystem:		turret22, 			3, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" )	
+
+
 #End
