@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Final Round", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:45:13
-$Modified: 01/13/13 at 03:40:28
+$Modified: 01/13/13 at 20:01:24
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2843.380371, 13505.318359, 7298.314453
++Viewer pos: 2280.602539, 7379.641602, -3695.515625
 +Viewer orient:
-	-0.808025, -0.000005, 0.589148,
-	-0.482124, 0.574739, -0.661235,
-	-0.338603, -0.818337, -0.464405
+	0.688195, -0.000002, 0.725526,
+	0.046159, 0.997974, -0.043781,
+	-0.724056, 0.063619, 0.686801
 
 
 $AI Profile: myProfile
@@ -41,7 +41,7 @@ $Variables:
 		2		"center-z"		"0"		"number"
 		3		"convoy-min-speed"		"500"		"number"
 		4		"convoy-size"		"7"		"number"
-		5		"distort-noise-level"		"100"		"number"
+		5		"distort-noise-level"		"0"		"number"
 		6		"lambda-1-x"		"0"		"number"
 		7		"lambda-1-z"		"0"		"number"
 		8		"lambda-2-x"		"0"		"number"
@@ -180,7 +180,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	500
 )
 
-#Objects		;! 112 total
+#Objects		;! 130 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis Elite
@@ -1820,6 +1820,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1848,6 +1849,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1876,6 +1878,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1904,6 +1907,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1932,6 +1936,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 15
@@ -1960,6 +1965,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 15
@@ -1988,6 +1994,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 15
@@ -2016,6 +2023,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 15
@@ -2310,6 +2318,7 @@ $Determination: 10
 +Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
++Hotkey: 7
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -2336,6 +2345,7 @@ $Determination: 10
 +Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
++Hotkey: 7
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -3110,7 +3120,7 @@ $Arrival Cue: ( is-destroyed-delay
    "Cancer" 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( < ( hits-left "Qwar Jet" ) 17 ) 
 $Determination: 10
 +Flags: ( "no-shields" "escort" )
 +Flags2: ( )
@@ -3707,7 +3717,7 @@ $Determination: 10
 
 $Name: Reaper		;! Object #111
 $Class: SC Lilith
-$Team: Hostile
+$Team: Friendly
 $Location: -8881.361328, 6000.000977, 10314.693359
 $Orientation:
 	-0.899754, 0.000000, -0.436399,
@@ -3715,6 +3725,7 @@ $Orientation:
 	0.436399, 0.000000, -0.899754
 $AI Behavior: None
 +AI Class: Big
+$AI Goals: ( goals ( ai-chase "Qwar Jet" 50 ) ( ai-chase "Hell Bringer" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -3743,15 +3754,583 @@ $Departure Cue: ( is-event-true-delay
    22 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 40
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 210
 
-#Wings		;! 21 total
+$Name: Pisces 1		;! Object #112
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1559.190918, 8135.108398, -1349.340820
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 2		;! Object #113
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1137.474731, 7883.306641, -1240.881592
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 3		;! Object #114
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1158.103516, 8163.388672, -1290.298096
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 4		;! Object #115
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1330.784668, 7815.963867, -1222.161865
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Mara		;! Object #116
+$Class: SF Mara#
+$Team: Hostile
+$Location: -1404.459839, 7943.873047, -1508.051758
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
+$AI Goals: ( goals ( ai-chase-any 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Scatter Gun" "Shivan Flak Weapon" )
++Secondary Banks: ( "Tempest Adv#Shivan" "TAG-C#Barrage" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 250
++Hotkey: 6
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Hell Bringer		;! Object #117
+$Class: SC Rakshasa
+$Team: Hostile
+$Location: -1572.130127, 7117.158691, -1558.024414
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-chase "Reaper" 50 ) ( ai-chase "Sparta" 49 ) ( ai-chase "Streaker" 46 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Huge Lance" )
++Subsystem: turret03
++Primary Banks: ( "Shivan Huge Lance" )
++Subsystem: turret04
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret05
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret06
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret07
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret08
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret09
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret10
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret12
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret13
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret14
++Primary Banks: ( "Shivan Multi Turret Up" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 400
++Special Hitpoints: 80000
++Hotkey: 5
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+
+$Name: Streaker Alpha 1		;! Object #118
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: -11806.736328, 0.000224, 20688.958984
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Streaker Alpha 2		;! Object #119
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: -11137.140625, 0.000361, 20389.818359
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Streaker Alpha 3		;! Object #120
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: -11064.504883, -0.000201, 19762.531250
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Streaker Alpha 4		;! Object #121
+$Class: GVF Serapis Elite
+$Team: Friendly
+$Location: -11766.827148, -0.000238, 19892.220703
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 18
+
+$Name: Streaker Beta 1		;! Object #122
+$Class: SF Dragon
+$Team: Friendly
+$Location: -9860.397461, -0.010788, 18911.914063
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Streaker Beta 2		;! Object #123
+$Class: SF Dragon
+$Team: Friendly
+$Location: -9496.953125, -0.010505, 19139.751953
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Streaker Beta 3		;! Object #124
+$Class: SF Dragon
+$Team: Friendly
+$Location: -9373.872070, -0.010927, 18811.289063
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Streaker Beta 4		;! Object #125
+$Class: SF Dragon
+$Team: Friendly
+$Location: -9691.544922, -0.010494, 18666.478516
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Streaker Gamma 1		;! Object #126
+$Class: GTF Ares
+$Team: Friendly
+$Location: -7898.997559, -0.010866, 18155.640625
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Morning Star" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Streaker Gamma 2		;! Object #127
+$Class: GTF Ares
+$Team: Friendly
+$Location: -7466.039551, -0.010843, 18125.384766
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Morning Star" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Streaker Gamma 3		;! Object #128
+$Class: GTF Ares
+$Team: Friendly
+$Location: -7646.304199, -0.010116, 17741.199219
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Morning Star" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Streaker Gamma 4		;! Object #129
+$Class: GTF Ares
+$Team: Friendly
+$Location: -8104.858398, -0.010987, 17844.789063
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Elite
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Morning Star" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+#Wings		;! 25 total
 
 $Name: Alpha
 $Waves: 1
@@ -4129,7 +4708,10 @@ $Arrival Cue: ( and
       "Saggitarius" 
    )
    ( not 
-      ( is-destroyed-delay 0 "Qwar Jet" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Qwar Jet" 
+      )
    )
 )
 $Departure Location: Hyperspace
@@ -4163,13 +4745,140 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Sparta" 50 ) ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( )
 
-#Events		;! 56 total
+$Name: Pisces
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Pisces 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( destroyed-or-departed-delay 
+   5 
+   "Qwar Jet" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Pisces 1"
+	"Pisces 2"
+	"Pisces 3"
+	"Pisces 4"
+)
+$AI Goals: ( goals ( ai-chase "Sparta" 50 ) ( ai-chase "Reaper" 49 ) ( ai-chase "Streaker" 47 ) ( ai-chase-any 45 ) )
++Flags: ( )
+
+$Name: Streaker Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Streaker Alpha 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Streaker
+$Arrival Cue: ( has-arrived-delay 14 "Streaker" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( has-departed-delay 0 "Streaker" ) 
+$Ships: (		;! 4 total
+	"Streaker Alpha 1"
+	"Streaker Alpha 2"
+	"Streaker Alpha 3"
+	"Streaker Alpha 4"
+)
+$AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
++Flags: ( )
+
+$Name: Streaker Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Streaker Beta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Streaker
+$Arrival Cue: ( has-arrived-delay 
+   4 
+   "Streaker Alpha" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( has-departed-delay 0 "Streaker" ) 
+$Ships: (		;! 4 total
+	"Streaker Beta 1"
+	"Streaker Beta 2"
+	"Streaker Beta 3"
+	"Streaker Beta 4"
+)
+$AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
++Flags: ( )
+
+$Name: Streaker Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Streaker Gamma 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Streaker
+$Arrival Cue: ( has-arrived-delay 4 "Streaker Beta" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( has-departed-delay 0 "Streaker" ) 
+$Ships: (		;! 4 total
+	"Streaker Gamma 1"
+	"Streaker Gamma 2"
+	"Streaker Gamma 3"
+	"Streaker Gamma 4"
+)
+$AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
++Flags: ( )
+
+#Events		;! 81 total
+
+$Formula: ( when 
+   ( < ( shields-left "Alpha 1" ) 50 ) 
+   ( if-then-else 
+      ( skill-level-at-least "Insane" ) 
+      ( set-shield-energy 
+         ( + ( shields-left "Alpha 1" ) 3 ) 
+         "Alpha 1" 
+      )
+      ( if-then-else 
+         ( skill-level-at-least "Hard" ) 
+         ( set-shield-energy 
+            ( + ( shields-left "Alpha 1" ) 5 ) 
+            "Alpha 1" 
+         )
+         ( if-then-else 
+            ( skill-level-at-least "Medium" ) 
+            ( set-shield-energy 
+               ( + ( shields-left "Alpha 1" ) 8 ) 
+               "Alpha 1" 
+            )
+            ( if-then-else 
+               ( skill-level-at-least "Easy" ) 
+               ( set-shield-energy 
+                  ( + ( shields-left "Alpha 1" ) 12 ) 
+                  "Alpha 1" 
+               )
+               ( set-shield-energy 
+                  ( + ( shields-left "Alpha 1" ) 16 ) 
+                  "Alpha 1" 
+               )
+            )
+         )
+      )
+   )
+)
++Name: regen player shield
++Repeat Count: -1
++Trigger Count: 8000
++Interval: 1
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Sparta" ) 
    ( if-then-else 
       ( not 
-         ( is-destroyed-delay 0 "Qwar Jet" ) 
+         ( destroyed-or-departed-delay 
+            0 
+            "Qwar Jet" 
+         )
       )
       ( set-object-position 
          "Sparta path:1" 
@@ -4177,7 +4886,16 @@ $Formula: ( when
          ( - ( get-object-y "Qwar Jet" ) 3500 ) 
          ( get-object-z "Qwar Jet" ) 
       )
-      ( do-nothing ) 
+      ( if-then-else 
+         ( has-arrived-delay 0 "Hell Bringer" ) 
+         ( set-object-position 
+            "Sparta path:1" 
+            ( get-object-x "Hell Bringer" ) 
+            ( get-object-y "Hell Bringer" ) 
+            ( get-object-z "Hell Bringer" ) 
+         )
+         ( do-nothing ) 
+      )
    )
 )
 +Name: update sparta path
@@ -4348,19 +5066,30 @@ $Formula: ( when
          "Hand of Truth" 
       )
    )
-   ( set-object-position 
-      "Hand of Truth path:1" 
-      ( + 
-         ( get-object-x "convoy center path:1" ) 
-         1000 
+   ( if-then-else 
+      ( not 
+         ( has-arrived-delay 0 "Qwar Jet" ) 
       )
-      ( + 
-         ( get-object-y "convoy center path:1" ) 
-         2000 
+      ( set-object-position 
+         "Hand of Truth path:1" 
+         ( + 
+            ( get-object-x "convoy center path:1" ) 
+            1000 
+         )
+         ( + 
+            ( get-object-y "convoy center path:1" ) 
+            2000 
+         )
+         ( - 
+            ( get-object-z "convoy center path:1" ) 
+            500 
+         )
       )
-      ( - 
-         ( get-object-z "convoy center path:1" ) 
-         500 
+      ( set-object-position 
+         "Hand of Truth path:1" 
+         ( + ( get-object-x "Qwar Jet" ) 1000 ) 
+         ( + ( get-object-y "Qwar Jet" ) 2000 ) 
+         ( - ( get-object-z "Qwar Jet" ) 500 ) 
       )
    )
    ( cap-waypoint-speed 
@@ -4374,10 +5103,7 @@ $Formula: ( when
 +Interval: 5
 
 $Formula: ( when 
-   ( and 
-      ( has-time-elapsed 33 ) 
-      ( false ) 
-   )
+   ( has-time-elapsed 33 ) 
    ( do-nothing ) 
 )
 +Name: ssm start cue
@@ -5147,7 +5873,7 @@ $Formula: ( when
 +Name: destroy oblivion
 +Repeat Count: 5
 +Interval: 1
-+Objective:  XSTR("Destroy Oblivion", -1)
++Objective:  XSTR("Destroy Oblivion (F12)", -1)
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Rakshasa 246" ) 
@@ -5244,6 +5970,24 @@ $Formula: ( when
    ( add-goal 
       "Kappa" 
       ( ai-chase-any 150 ) 
+   )
+   ( set-object-position 
+      "Hammer 1 path:1" 
+      ( get-object-x "Gemini 1" ) 
+      ( + ( get-object-y "Gemini 1" ) 1500 ) 
+      ( get-object-z "Gemini 1" ) 
+   )
+   ( set-object-position 
+      "Hammer 2 path:1" 
+      ( + ( get-object-x "Gemini 1" ) 1500 ) 
+      ( get-object-y "Gemini 1" ) 
+      ( get-object-z "Gemini 1" ) 
+   )
+   ( set-object-position 
+      "Hammer 3 path:1" 
+      ( - ( get-object-x "Gemini 1" ) 1500 ) 
+      ( get-object-y "Gemini 1" ) 
+      ( get-object-z "Gemini 1" ) 
    )
 )
 +Name: gemini arrives
@@ -5353,10 +6097,7 @@ $Formula: ( when-argument
       "Hammer 2" 
       "Hammer 3" 
    )
-   ( and 
-      ( has-arrived-delay 8 "Gemini" ) 
-      ( false ) 
-   )
+   ( has-arrived-delay 8 "Gemini" ) 
    ( if-then-else 
       ( not 
          ( is-destroyed-delay 0 "<argument>" ) 
@@ -5443,10 +6184,54 @@ $Formula: ( when
       "turret03" 
       "turret04" 
    )
+   ( set-object-position 
+      "Hammer 1 path:1" 
+      ( get-object-x "Qwar Jet" ) 
+      ( get-object-y "Qwar Jet" ) 
+      ( get-object-z "Qwar Jet" ) 
+   )
+   ( set-object-position 
+      "Hammer 2 path:1" 
+      ( get-object-x "Qwar Jet" ) 
+      ( get-object-y "Qwar Jet" ) 
+      ( - ( get-object-z "Qwar Jet" ) 1500 ) 
+   )
+   ( set-object-position 
+      "Hammer 3 path:1" 
+      ( get-object-x "Qwar Jet" ) 
+      ( get-object-y "Qwar Jet" ) 
+      ( + ( get-object-z "Qwar Jet" ) 1500 ) 
+   )
 )
 +Name: qwar jet arrives
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Sigma 3" 
+      "Sigma 2" 
+      "Sigma 3" 
+      "Lambda 1" 
+      "Lambda 1" 
+      "Zeta 1" 
+      "Zeta 1" 
+   )
+   ( true ) 
+   ( if-then-else 
+      ( is-destroyed-delay 0 "<argument>" ) 
+      ( invalidate-argument "<argument>" ) 
+      ( call-ssm-strike 
+         1 
+         "<argument>" 
+         "Hostile" 
+      )
+   )
+)
++Name: af ssm vs convoy
++Repeat Count: 10
++Interval: 8
++Chained: 7
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Qwar Jet" ) 
@@ -5472,18 +6257,74 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( true ) 
+   ( weapon-create 
+      "Sparta" 
+      "Catapult" 
+      ( get-object-x "Sparta" "turret14" ) 
+      ( get-object-y "Sparta" "turret14" ) 
+      ( get-object-z "Sparta" "turret14" ) 
+      ( - ( get-object-pitch "Sparta" ) 90 ) 
+      ( get-object-bank "Sparta" ) 
+      ( get-object-heading "Sparta" ) 
+      "Qwar Jet" 
+      "turret01" 
+   )
+   ( weapon-create 
+      "Sparta" 
+      "Catapult" 
+      ( get-object-x "Sparta" "turret14" ) 
+      ( get-object-y "Sparta" "turret14" ) 
+      ( get-object-z "Sparta" "turret14" ) 
+      ( - ( get-object-pitch "Sparta" ) 90 ) 
+      ( get-object-bank "Sparta" ) 
+      ( get-object-heading "Sparta" ) 
+      "Qwar Jet" 
+      "turret02" 
+   )
+   ( weapon-create 
+      "Sparta" 
+      "Catapult" 
+      ( get-object-x "Sparta" "turret15" ) 
+      ( get-object-y "Sparta" "turret15" ) 
+      ( get-object-z "Sparta" "turret15" ) 
+      ( + ( get-object-pitch "Sparta" ) 90 ) 
+      ( get-object-bank "Sparta" ) 
+      ( get-object-heading "Sparta" ) 
+      "Qwar Jet" 
+      "turret01" 
+   )
+   ( weapon-create 
+      "Sparta" 
+      "Catapult" 
+      ( get-object-x "Sparta" "turret15" ) 
+      ( get-object-y "Sparta" "turret15" ) 
+      ( get-object-z "Sparta" "turret15" ) 
+      ( + ( get-object-pitch "Sparta" ) 90 ) 
+      ( get-object-bank "Sparta" ) 
+      ( get-object-heading "Sparta" ) 
+      "Qwar Jet" 
+      "turret02" 
+   )
+)
++Name: sparta fires catapults
++Repeat Count: 5
++Interval: 8
++Chained: 4
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Sparta" ) 
    ( set-post-effect 
       "distort noise" 
-      @distort-noise-level[100] 
+      @distort-noise-level[0] 
    )
    ( modify-variable 
-      @distort-noise-level[100] 
-      ( - @distort-noise-level[100] 1 ) 
+      @distort-noise-level[0] 
+      ( + @distort-noise-level[0] 1 ) 
    )
 )
 +Name: distort-noise#1
-+Repeat Count: 20
++Repeat Count: 2
 +Interval: 1
 
 $Formula: ( when 
@@ -5501,28 +6342,562 @@ $Formula: ( when
 +Repeat Count: 10
 +Interval: 1
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
+$Formula: ( when 
+   ( has-arrived-delay 0 "Streaker" ) 
+   ( do-nothing ) 
+)
 +Name: Streaker arrives
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
+   ( true ) 
+   ( weapon-create 
+      "Streaker" 
+      "Catapult" 
+      ( + 
+         ( get-object-x 
+            "Streaker" 
+            "fighterbay" 
+         )
+         20 
+      )
+      ( get-object-y 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( get-object-z 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( - 
+         ( get-object-pitch "Streaker" ) 
+         90 
+      )
+      ( get-object-bank "Streaker" ) 
+      ( get-object-heading "Streaker" ) 
+      "Qwar Jet" 
+      "turret01" 
+   )
+   ( weapon-create 
+      "Streaker" 
+      "Catapult" 
+      ( - 
+         ( get-object-x 
+            "Streaker" 
+            "fighterbay" 
+         )
+         20 
+      )
+      ( get-object-y 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( get-object-z 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( - 
+         ( get-object-pitch "Streaker" ) 
+         90 
+      )
+      ( get-object-bank "Streaker" ) 
+      ( get-object-heading "Streaker" ) 
+      "Qwar Jet" 
+      "turret02" 
+   )
+   ( weapon-create 
+      "Streaker" 
+      "Catapult" 
+      ( get-object-x 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( get-object-y 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( + 
+         ( get-object-z 
+            "Streaker" 
+            "fighterbay" 
+         )
+         20 
+      )
+      ( - 
+         ( get-object-pitch "Streaker" ) 
+         90 
+      )
+      ( get-object-bank "Streaker" ) 
+      ( get-object-heading "Streaker" ) 
+      "Qwar Jet" 
+      "turret01" 
+   )
+   ( weapon-create 
+      "Streaker" 
+      "Catapult" 
+      ( get-object-x 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( get-object-y 
+         "Streaker" 
+         "fighterbay" 
+      )
+      ( - 
+         ( get-object-z 
+            "Streaker" 
+            "fighterbay" 
+         )
+         20 
+      )
+      ( - 
+         ( get-object-pitch "Streaker" ) 
+         90 
+      )
+      ( get-object-bank "Streaker" ) 
+      ( get-object-heading "Streaker" ) 
+      "Qwar Jet" 
+      "turret01" 
+   )
+)
++Name: Streaker fires catapults
++Repeat Count: 10
++Interval: 4
++Chained: 12
+
+$Formula: ( when 
    ( has-arrived-delay 12 "Streaker" ) 
    ( set-post-effect 
       "distort noise" 
-      @distort-noise-level[100] 
+      @distort-noise-level[0] 
    )
    ( modify-variable 
-      @distort-noise-level[100] 
-      ( - @distort-noise-level[100] 1 ) 
+      @distort-noise-level[0] 
+      ( + @distort-noise-level[0] 1 ) 
    )
 )
 +Name: distort-noise#2
-+Repeat Count: 20
++Repeat Count: 3
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 70 "Streaker" ) 
+   ( has-arrived-delay 
+      0 
+      "Pisces" 
+      "Mara" 
+      "Hell Bringer" 
+   )
+   ( set-armor-type 
+      "Mara" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communications" 
+      "sensors" 
+      "navigation" 
+   )
+   ( set-armor-type 
+      "Pisces 1" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 2" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 3" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 4" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( deactivate-glow-maps 
+      "Pisces 1" 
+      "Pisces 2" 
+      "Pisces 3" 
+      "Pisces 4" 
+      "Mara" 
+      "Hell Bringer" 
+   )
+   ( set-armor-type 
+      "Hell Bringer" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Hull" 
+   )
+   ( set-armor-type 
+      "Hell Bringer" 
+      ( true ) 
+      "Hell Armor" 
+      "reactor" 
+      "navigation" 
+      "weapons" 
+      "engine" 
+      "communication" 
+      "sensors" 
+      "turret14" 
+      "turret13" 
+      "turret12" 
+      "turret11" 
+      "turret10" 
+      "turret09" 
+      "turret08" 
+      "turret07" 
+      "turret06" 
+      "turret05" 
+      "turret04" 
+      "turret03" 
+      "turret02" 
+      "turret01" 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      200 
+      "turret01" 
+      "turret04" 
+   )
+)
++Name: pisces+mara+boss rak arrive
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Hell Armor" 
+      "weapons" 
+      "sensors" 
+      "communications" 
+      "navigation" 
+      "engine" 
+   )
+)
++Name: fighting chance
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Hell Bringer" ) 
+   ( do-nothing ) 
+)
++Name: destroy hell bringer
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Hell Bringer (F10)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Mara" ) 
+   ( do-nothing ) 
+)
++Name: destroy mara
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Elite Mara (F11)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Pisces" ) 
+   ( do-nothing ) 
+)
++Name: destroy pisces
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Pisces (F12)", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Pisces" ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: shafts on
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Pisces" ) 
+   ( fade-out 2000 1 ) 
+)
++Name: white fade
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "saturation" 100 ) 
+   ( set-post-effect "distort noise" 0 ) 
+   ( modify-variable 
+      @saturation-level[95] 
+      100 
+   )
+   ( fade-in ) 
+)
++Name: remove post effects
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Hell Bringer" ) 
+   ( unprotect-ship "Alpha 1" ) 
+)
++Name: ==boss fight==
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( != 
+      @saturation-level[95] 
+      ( hits-left "Alpha 1" ) 
+   )
+   ( if-then-else 
+      ( < 
+         @saturation-level[95] 
+         ( hits-left "Alpha 1" ) 
+      )
+      ( modify-variable 
+         @saturation-level[95] 
+         ( + @saturation-level[95] 1 ) 
+      )
+      ( modify-variable 
+         @saturation-level[95] 
+         ( - @saturation-level[95] 1 ) 
+      )
+   )
+   ( set-post-effect 
+      "saturation" 
+      @saturation-level[95] 
+   )
+)
++Name: health meter
++Repeat Count: -1
++Trigger Count: 8000
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Hell Bringer" ) 
+   ( repair-subsystem "Alpha 1" "Hull" 1 ) 
+)
++Name: regen
++Repeat Count: 8000
++Interval: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 22 "Hell Bringer" ) 
+   ( call-ssm-strike 
+      2 
+      "Hell Bringer" 
+      "Friendly" 
+   )
+)
++Name: redirect ssm barrage
++Repeat Count: 2
++Interval: 10
+
+$Formula: ( when 
+   ( < ( hits-left "Mara" ) 10 ) 
+   ( set-primary-weapon "Mara" 0 "SAAA" ) 
+   ( set-primary-weapon "Mara" 1 "SAAA" ) 
+)
++Name: berserk - mara
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( sabotage-subsystem "Mara" "Hull" 1 ) 
+)
++Name: berserk failure - mara
++Repeat Count: 40
++Interval: 3
++Chained: 5
+
+$Formula: ( when 
+   ( < ( hits-left "Hell Bringer" ) 5 ) 
+   ( turret-change-weapon 
+      "Hell Bringer" 
+      "turret02" 
+      "Shivan Multi Lance" 
+      1 
+      0 
+   )
+   ( turret-change-weapon 
+      "Hell Bringer" 
+      "turret03" 
+      "Shivan Multi Lance" 
+      1 
+      0 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      300 
+      "turret01" 
+      "turret04" 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      150 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+   )
+)
++Name: berserk - hell bringer
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( sabotage-subsystem 
+      "Hell Bringer" 
+      "Hull" 
+      1 
+   )
+)
++Name: berserk failure - hellbringer
++Repeat Count: 5
++Interval: 5
++Chained: 5
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Hell Bringer" ) 
+      ( < ( hits-left "Alpha 1" ) 20 ) 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+   ( set-primary-weapon 
+      "Alpha 1" 
+      0 
+      "Dwarf Lance" 
+   )
+   ( set-primary-weapon 
+      "Alpha 1" 
+      1 
+      "Dwarf Lance" 
+   )
+)
++Name: berserk alpha 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-weapon-energy 
+      ( + 
+         ( weapon-energy-pct "Alpha 1" ) 
+         15 
+      )
+      "Alpha 1" 
+   )
+   ( set-shield-energy 
+      ( + ( shields-left "Alpha 1" ) 20 ) 
+      "Alpha 1" 
+   )
+   ( set-afterburner-energy 
+      ( + 
+         ( afterburner-energy-pct "Alpha 1" ) 
+         20 
+      )
+      "Alpha 1" 
+   )
+)
++Name: who's laughing now?
++Repeat Count: 8000
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Streaker" ) 40 ) 
+   ( set-armor-type 
+      "Streaker" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+)
++Name: streaker < 40
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Streaker" ) 20 ) 
+   ( set-armor-type 
+      "Streaker" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+)
++Name: streaker < 20
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: ==END==
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 90 "Hell Bringer" ) 
    ( supernova-start 40 ) 
 )
 +Name: supernova start
@@ -5659,7 +7034,8 @@ $end_multi_text
 
 $Name: debug saturation
 $Team: -1
-$MessageNew:  XSTR("saturation-level: $saturation-level", -1)
+$MessageNew:  XSTR("saturation-level: $saturation-level
+distort-noise: $distort-noise-level", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total

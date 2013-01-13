@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 12/06/12 at 21:49:36
+$Modified: 01/13/13 at 16:28:17
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -143,6 +143,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -207,7 +208,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "escort" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 10
@@ -228,6 +229,7 @@ $Orientation:
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -264,7 +266,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -284,6 +286,7 @@ $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -299,7 +302,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "escort" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
@@ -828,19 +831,13 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( weapon-create 
-      "Alpha 1" 
-      "Shivan Multi Lance" 
-      ( get-object-x "Bad Guy" ) 
-      ( + ( get-object-y "Bad Guy" ) 1000 ) 
-      ( get-object-z "Bad Guy" ) 
-      ( - ( get-object-pitch "Bad Guy" ) 90 ) 
-      ( get-object-bank "Bad Guy" ) 
-      ( get-object-heading "Bad Guy" ) 
+   ( call-ssm-strike 
+      0 
       "Bad Guy" 
+      "Friendly" 
    )
 )
-+Name: spawn lance
++Name: ssm vs bad guy
 +Repeat Count: 6
 +Interval: 4
 

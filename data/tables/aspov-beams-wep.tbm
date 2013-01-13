@@ -673,7 +673,7 @@ $BeamInfo:
 	+Beam Piercing Splash Effect Velocity:	-10
 	+Beam Piercing Effect Variance:			0.01
 	$Section:
-		+Width:			24.0
+		+Width:			22.0
 		+Texture:		VasBeam2Core
 		+RGBA Inner:	255 255 255 255
 		+RGBA Outer:	150 150 150 10
@@ -682,7 +682,7 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-25
 	$Section:
-		+Width:			35.0
+		+Width:			34.0
 		+Texture:		VasBeam2Glow
 		+RGBA Inner:	160 160 0 255
 		+RGBA Outer:	60 60 0 10
@@ -691,7 +691,7 @@ $BeamInfo:
 		+Tile Factor:	10, 1
 		+Translation:	-15
 	$Section:
-		+Width:			50.0
+		+Width:			48.0
 		+Texture:		VasBeam2GlowHaze
 		+RGBA Inner:	255 0 0 255
 		+RGBA Outer:	60 0 0 10
@@ -700,7 +700,7 @@ $BeamInfo:
 		+Tile Factor:	14, 1
 		+Translation:	-10
 	$Section:
-		+Width:			107.0
+		+Width:			104.0
 		+Texture:		OrangeFade
 		+RGBA Inner:	255 255 255 255
 		+RGBA Outer:	150 150 150 10

@@ -351,6 +351,25 @@ Rakshasa:	Heavy Flak Cruiser
 	turret 13:Standard Flak
 	turret 14:Standard Flak
 
+Rakshasa:	Lance Assault Cruiser
+	subsystem armor: Hell Armor
+	hull armor:	 Shivan Destroyer Armor
+	hull:		 80k
+	turret 01:Shivan Multi Turret Up + Rof * 2
+	turret 02:Shivan Huge Lance
+	turret 03:Shivan Huge Lance
+	turret 04:Shivan Multi Turret Up + Rof * 2
+	turret 05:Shivan Multi Turret Up
+	turret 06:Shivan Multi Turret Up
+	turret 07:Shivan Lance
+	turret 08:Shivan Lance
+	turret 09:Shivan Lance
+	turret 10:Shivan Lance
+	turret 11:Shivan Multi Turret Up
+	turret 12:Shivan Multi Turret Up
+	turret 13:Shivan Multi Turret Up
+	turret 14:Shivan Multi Turret Up
+
 
 Cain:		Light Support Cruiser
 	hull:  32k
