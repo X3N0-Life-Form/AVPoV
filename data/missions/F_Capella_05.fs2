@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Final Round", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:45:13
-$Modified: 01/13/13 at 20:01:24
+$Modified: 01/15/13 at 23:21:08
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -25,9 +25,9 @@ $end_multi_text
 
 +Viewer pos: 2280.602539, 7379.641602, -3695.515625
 +Viewer orient:
-	0.688195, -0.000002, 0.725526,
-	0.046159, 0.997974, -0.043781,
-	-0.724056, 0.063619, 0.686801
+	0.928033, -0.000003, 0.372499,
+	-0.186273, 0.865986, 0.464080,
+	-0.322580, -0.500068, 0.803663
 
 
 $AI Profile: myProfile
@@ -39,24 +39,30 @@ $Variables:
 		0		"center-x"		"0"		"number"
 		1		"center-y"		"0"		"number"
 		2		"center-z"		"0"		"number"
-		3		"convoy-min-speed"		"500"		"number"
-		4		"convoy-size"		"7"		"number"
-		5		"distort-noise-level"		"0"		"number"
-		6		"lambda-1-x"		"0"		"number"
-		7		"lambda-1-z"		"0"		"number"
-		8		"lambda-2-x"		"0"		"number"
-		9		"lambda-2-z"		"0"		"number"
-		10		"saturation-level"		"95"		"number"
-		11		"sigma-1-x"		"0"		"number"
-		12		"sigma-1-z"		"0"		"number"
-		13		"sigma-2-x"		"0"		"number"
-		14		"sigma-2-z"		"0"		"number"
-		15		"sigma-3-x"		"0"		"number"
-		16		"sigma-3-z"		"0"		"number"
-		17		"zeta-1-x"		"0"		"number"
-		18		"zeta-1-z"		"0"		"number"
-		19		"zeta-2-x"		"0"		"number"
-		20		"zeta-2-z"		"0"		"number"
+		3		"convoy-escort-health"		"100100"		"number"		"campaign-persistent"
+		4		"convoy-min-speed"		"500"		"number"
+		5		"convoy-size"		"7"		"number"
+		6		"distort-noise-level"		"0"		"number"
+		7		"lambda-1-x"		"0"		"number"
+		8		"lambda-1-z"		"0"		"number"
+		9		"lambda-2-x"		"0"		"number"
+		10		"lambda-2-z"		"0"		"number"
+		11		"lambda-health"		"100100"		"number"		"campaign-persistent"
+		12		"saturation-level"		"95"		"number"
+		13		"sigma-1-x"		"0"		"number"
+		14		"sigma-1-z"		"0"		"number"
+		15		"sigma-2-x"		"0"		"number"
+		16		"sigma-2-z"		"0"		"number"
+		17		"sigma-3-x"		"0"		"number"
+		18		"sigma-3-z"		"0"		"number"
+		19		"sigma-health"		"100100100"		"number"		"campaign-persistent"
+		20		"spec-ops-health"		"100100100"		"number"		"campaign-persistent"
+		21		"zeta-1-x"		"0"		"number"
+		22		"zeta-1-z"		"0"		"number"
+		23		"zeta-2-x"		"0"		"number"
+		24		"zeta-2-z"		"0"		"number"
+		25		"zeta-cargo-health"		"100100"		"number"		"campaign-persistent"
+		26		"zeta-health"		"100100"		"number"		"campaign-persistent"
 )
 
 #Command Briefing
@@ -180,7 +186,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	500
 )
 
-#Objects		;! 130 total
+#Objects		;! 124 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis Elite
@@ -915,10 +921,10 @@ $Determination: 10
 +Use Table Score:
 +Score: 20
 
-$Name: TC-TRI 24		;! Object #22
+$Name: TC-TRI#2		;! Object #22
 $Class: TC-TRI
 $Team: Friendly
-$Location: -975.404663, -614.045288, 4014.659180
+$Location: -975.404602, -614.045288, 4014.659180
 $Orientation:
 	-0.995807, 0.000006, -0.091477,
 	-0.090011, -0.178352, 0.979841,
@@ -975,7 +981,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 20
 
-$Name: TC-TRI 23		;! Object #24
+$Name: TC-TRI#1		;! Object #24
 $Class: TC-TRI
 $Team: Friendly
 $Location: -743.404541, -314.045258, 4044.659180
@@ -3725,7 +3731,7 @@ $Orientation:
 	0.436399, 0.000000, -0.899754
 $AI Behavior: None
 +AI Class: Big
-$AI Goals: ( goals ( ai-chase "Qwar Jet" 50 ) ( ai-chase "Hell Bringer" 48 ) )
+$AI Goals: ( goals ( ai-chase "Qwar Jet" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -3763,234 +3769,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 210
 
-$Name: Pisces 1		;! Object #112
-$Class: SB Seraphim
-$Team: Hostile
-$Location: -1559.190918, 8135.108398, -1349.340820
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-+AI Class: Demon
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
-+Subsystem: turret01
-+Primary Banks: ( "Shivan Flak Weapon" )
-+Subsystem: turret02
-+Primary Banks: ( "Shivan Flak Weapon" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 16
-
-$Name: Pisces 2		;! Object #113
-$Class: SB Seraphim
-$Team: Hostile
-$Location: -1137.474731, 7883.306641, -1240.881592
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-+AI Class: Demon
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
-+Subsystem: turret01
-+Primary Banks: ( "Shivan Flak Weapon" )
-+Subsystem: turret02
-+Primary Banks: ( "Shivan Flak Weapon" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 16
-
-$Name: Pisces 3		;! Object #114
-$Class: SB Seraphim
-$Team: Hostile
-$Location: -1158.103516, 8163.388672, -1290.298096
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-+AI Class: Demon
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
-+Subsystem: turret01
-+Primary Banks: ( "Shivan Flak Weapon" )
-+Subsystem: turret02
-+Primary Banks: ( "Shivan Flak Weapon" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 16
-
-$Name: Pisces 4		;! Object #115
-$Class: SB Seraphim
-$Team: Hostile
-$Location: -1330.784668, 7815.963867, -1222.161865
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-+AI Class: Demon
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
-+Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
-+Subsystem: turret01
-+Primary Banks: ( "Shivan Flak Weapon" )
-+Subsystem: turret02
-+Primary Banks: ( "Shivan Flak Weapon" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 16
-
-$Name: Mara		;! Object #116
-$Class: SF Mara#
-$Team: Hostile
-$Location: -1404.459839, 7943.873047, -1508.051758
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-$AI Goals: ( goals ( ai-chase-any 50 ) )
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Scatter Gun" "Shivan Flak Weapon" )
-+Secondary Banks: ( "Tempest Adv#Shivan" "TAG-C#Barrage" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 250
-+Hotkey: 6
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 12
-
-$Name: Hell Bringer		;! Object #117
-$Class: SC Rakshasa
-$Team: Hostile
-$Location: -1572.130127, 7117.158691, -1558.024414
-$Orientation:
-	0.859315, -0.505533, 0.077548,
-	0.503487, 0.862807, 0.045437,
-	-0.089879, 0.000000, 0.995953
-$AI Behavior: None
-+AI Class: Big
-$AI Goals: ( goals ( ai-chase "Reaper" 50 ) ( ai-chase "Sparta" 49 ) ( ai-chase "Streaker" 46 ) )
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret02
-+Primary Banks: ( "Shivan Huge Lance" )
-+Subsystem: turret03
-+Primary Banks: ( "Shivan Huge Lance" )
-+Subsystem: turret04
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret05
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret06
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret07
-+Primary Banks: ( "Shivan Lance" )
-+Subsystem: turret08
-+Primary Banks: ( "Shivan Lance" )
-+Subsystem: turret09
-+Primary Banks: ( "Shivan Lance" )
-+Subsystem: turret10
-+Primary Banks: ( "Shivan Lance" )
-+Subsystem: turret11
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret12
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret13
-+Primary Banks: ( "Shivan Multi Turret Up" )
-+Subsystem: turret14
-+Primary Banks: ( "Shivan Multi Turret Up" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "no-shields" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 400
-+Special Hitpoints: 80000
-+Hotkey: 5
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 300
-
-$Name: Streaker Alpha 1		;! Object #118
+$Name: Streaker Alpha 1		;! Object #112
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11806.736328, 0.000224, 20688.958984
@@ -4018,7 +3797,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 2		;! Object #119
+$Name: Streaker Alpha 2		;! Object #113
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11137.140625, 0.000361, 20389.818359
@@ -4046,7 +3825,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 3		;! Object #120
+$Name: Streaker Alpha 3		;! Object #114
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11064.504883, -0.000201, 19762.531250
@@ -4074,7 +3853,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 4		;! Object #121
+$Name: Streaker Alpha 4		;! Object #115
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11766.827148, -0.000238, 19892.220703
@@ -4102,7 +3881,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Beta 1		;! Object #122
+$Name: Streaker Beta 1		;! Object #116
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9860.397461, -0.010788, 18911.914063
@@ -4130,7 +3909,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 2		;! Object #123
+$Name: Streaker Beta 2		;! Object #117
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9496.953125, -0.010505, 19139.751953
@@ -4158,7 +3937,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 3		;! Object #124
+$Name: Streaker Beta 3		;! Object #118
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9373.872070, -0.010927, 18811.289063
@@ -4186,7 +3965,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 4		;! Object #125
+$Name: Streaker Beta 4		;! Object #119
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9691.544922, -0.010494, 18666.478516
@@ -4214,7 +3993,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Gamma 1		;! Object #126
+$Name: Streaker Gamma 1		;! Object #120
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7898.997559, -0.010866, 18155.640625
@@ -4243,7 +4022,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 2		;! Object #127
+$Name: Streaker Gamma 2		;! Object #121
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7466.039551, -0.010843, 18125.384766
@@ -4272,7 +4051,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 3		;! Object #128
+$Name: Streaker Gamma 3		;! Object #122
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7646.304199, -0.010116, 17741.199219
@@ -4301,7 +4080,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 4		;! Object #129
+$Name: Streaker Gamma 4		;! Object #123
 $Class: GTF Ares
 $Team: Friendly
 $Location: -8104.858398, -0.010987, 17844.789063
@@ -4330,7 +4109,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-#Wings		;! 25 total
+#Wings		;! 24 total
 
 $Name: Alpha
 $Waves: 1
@@ -4745,27 +4524,6 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Sparta" 50 ) ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( )
 
-$Name: Pisces
-$Waves: 1
-$Wave Threshold: 0
-$Special Ship: 0		;! Pisces 1
-
-$Arrival Location: Hyperspace
-$Arrival Cue: ( destroyed-or-departed-delay 
-   5 
-   "Qwar Jet" 
-)
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Ships: (		;! 4 total
-	"Pisces 1"
-	"Pisces 2"
-	"Pisces 3"
-	"Pisces 4"
-)
-$AI Goals: ( goals ( ai-chase "Sparta" 50 ) ( ai-chase "Reaper" 49 ) ( ai-chase "Streaker" 47 ) ( ai-chase-any 45 ) )
-+Flags: ( )
-
 $Name: Streaker Alpha
 $Waves: 1
 $Wave Threshold: 0
@@ -4829,7 +4587,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
 +Flags: ( )
 
-#Events		;! 81 total
+#Events		;! 60 total
 
 $Formula: ( when 
    ( < ( shields-left "Alpha 1" ) 50 ) 
@@ -4886,16 +4644,7 @@ $Formula: ( when
          ( - ( get-object-y "Qwar Jet" ) 3500 ) 
          ( get-object-z "Qwar Jet" ) 
       )
-      ( if-then-else 
-         ( has-arrived-delay 0 "Hell Bringer" ) 
-         ( set-object-position 
-            "Sparta path:1" 
-            ( get-object-x "Hell Bringer" ) 
-            ( get-object-y "Hell Bringer" ) 
-            ( get-object-z "Hell Bringer" ) 
-         )
-         ( do-nothing ) 
-      )
+      ( do-nothing ) 
    )
 )
 +Name: update sparta path
@@ -6207,32 +5956,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when-argument 
-   ( every-of 
-      "Sigma 3" 
-      "Sigma 2" 
-      "Sigma 3" 
-      "Lambda 1" 
-      "Lambda 1" 
-      "Zeta 1" 
-      "Zeta 1" 
-   )
-   ( true ) 
-   ( if-then-else 
-      ( is-destroyed-delay 0 "<argument>" ) 
-      ( invalidate-argument "<argument>" ) 
-      ( call-ssm-strike 
-         1 
-         "<argument>" 
-         "Hostile" 
-      )
-   )
-)
-+Name: af ssm vs convoy
-+Repeat Count: 10
-+Interval: 8
-+Chained: 7
-
 $Formula: ( when 
    ( has-arrived-delay 0 "Qwar Jet" ) 
    ( modify-variable 
@@ -6482,429 +6205,20 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 
-      0 
-      "Pisces" 
-      "Mara" 
-      "Hell Bringer" 
-   )
-   ( set-armor-type 
-      "Mara" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-      "Shields" 
-      "engine" 
-      "weapons" 
-      "communications" 
-      "sensors" 
-      "navigation" 
-   )
-   ( set-armor-type 
-      "Pisces 1" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-      "Shields" 
-      "engine" 
-      "weapons" 
-      "communication" 
-      "sensors" 
-      "navigation" 
-      "turret01" 
-      "turret02" 
-   )
-   ( set-armor-type 
-      "Pisces 2" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-      "Shields" 
-      "engine" 
-      "weapons" 
-      "communication" 
-      "sensors" 
-      "navigation" 
-      "turret01" 
-      "turret02" 
-   )
-   ( set-armor-type 
-      "Pisces 3" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-      "Shields" 
-      "engine" 
-      "weapons" 
-      "communication" 
-      "sensors" 
-      "navigation" 
-      "turret01" 
-      "turret02" 
-   )
-   ( set-armor-type 
-      "Pisces 4" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-      "Shields" 
-      "engine" 
-      "weapons" 
-      "communication" 
-      "sensors" 
-      "navigation" 
-      "turret01" 
-      "turret02" 
-   )
-   ( deactivate-glow-maps 
-      "Pisces 1" 
-      "Pisces 2" 
-      "Pisces 3" 
-      "Pisces 4" 
-      "Mara" 
-      "Hell Bringer" 
-   )
-   ( set-armor-type 
-      "Hell Bringer" 
-      ( true ) 
-      "Shivan Destroyer Armor" 
-      "Hull" 
-   )
-   ( set-armor-type 
-      "Hell Bringer" 
-      ( true ) 
-      "Hell Armor" 
-      "reactor" 
-      "navigation" 
-      "weapons" 
-      "engine" 
-      "communication" 
-      "sensors" 
-      "turret14" 
-      "turret13" 
-      "turret12" 
-      "turret11" 
-      "turret10" 
-      "turret09" 
-      "turret08" 
-      "turret07" 
-      "turret06" 
-      "turret05" 
-      "turret04" 
-      "turret03" 
-      "turret02" 
-      "turret01" 
-   )
-   ( turret-set-rate-of-fire 
-      "Hell Bringer" 
-      200 
-      "turret01" 
-      "turret04" 
-   )
-)
-+Name: pisces+mara+boss rak arrive
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( set-armor-type 
-      "Alpha 1" 
-      ( true ) 
-      "Shivan Elite Armor" 
-      "Hull" 
-      "Shields" 
-   )
-   ( set-armor-type 
-      "Alpha 1" 
-      ( true ) 
-      "Hell Armor" 
-      "weapons" 
-      "sensors" 
-      "communications" 
-      "navigation" 
-      "engine" 
-   )
-)
-+Name: fighting chance
-+Repeat Count: 1
-+Interval: 1
-+Chained: 0
-
-$Formula: ( when 
-   ( is-destroyed-delay 0 "Hell Bringer" ) 
-   ( do-nothing ) 
-)
-+Name: destroy hell bringer
-+Repeat Count: 1
-+Interval: 1
-+Objective:  XSTR("Destroy Hell Bringer (F10)", -1)
-
-$Formula: ( when 
-   ( is-destroyed-delay 0 "Mara" ) 
-   ( do-nothing ) 
-)
-+Name: destroy mara
-+Repeat Count: 1
-+Interval: 1
-+Objective:  XSTR("Destroy Elite Mara (F11)", -1)
-
-$Formula: ( when 
-   ( is-destroyed-delay 0 "Pisces" ) 
-   ( do-nothing ) 
-)
-+Name: destroy pisces
-+Repeat Count: 1
-+Interval: 1
-+Objective:  XSTR("Destroy Pisces (F12)", -1)
-
-$Formula: ( when 
-   ( has-arrived-delay 0 "Pisces" ) 
-   ( set-post-effect "lightshafts" 100 ) 
-)
-+Name: shafts on
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( has-arrived-delay 0 "Pisces" ) 
-   ( fade-out 2000 1 ) 
-)
-+Name: white fade
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( set-post-effect "saturation" 100 ) 
-   ( set-post-effect "distort noise" 0 ) 
-   ( modify-variable 
-      @saturation-level[95] 
-      100 
-   )
-   ( fade-in ) 
-)
-+Name: remove post effects
-+Repeat Count: 1
-+Interval: 1
-+Chained: 2
-
-$Formula: ( when 
-   ( has-arrived-delay 0 "Hell Bringer" ) 
-   ( unprotect-ship "Alpha 1" ) 
-)
-+Name: ==boss fight==
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( != 
-      @saturation-level[95] 
-      ( hits-left "Alpha 1" ) 
-   )
-   ( if-then-else 
-      ( < 
-         @saturation-level[95] 
-         ( hits-left "Alpha 1" ) 
-      )
-      ( modify-variable 
-         @saturation-level[95] 
-         ( + @saturation-level[95] 1 ) 
-      )
-      ( modify-variable 
-         @saturation-level[95] 
-         ( - @saturation-level[95] 1 ) 
-      )
-   )
-   ( set-post-effect 
-      "saturation" 
-      @saturation-level[95] 
-   )
-)
-+Name: health meter
-+Repeat Count: -1
-+Trigger Count: 8000
-+Interval: 1
-+Chained: 4
-
-$Formula: ( when 
-   ( has-arrived-delay 0 "Hell Bringer" ) 
-   ( repair-subsystem "Alpha 1" "Hull" 1 ) 
-)
-+Name: regen
-+Repeat Count: 8000
-+Interval: 2
-
-$Formula: ( when 
-   ( has-arrived-delay 22 "Hell Bringer" ) 
-   ( call-ssm-strike 
-      2 
-      "Hell Bringer" 
-      "Friendly" 
-   )
-)
-+Name: redirect ssm barrage
-+Repeat Count: 2
-+Interval: 10
-
-$Formula: ( when 
-   ( < ( hits-left "Mara" ) 10 ) 
-   ( set-primary-weapon "Mara" 0 "SAAA" ) 
-   ( set-primary-weapon "Mara" 1 "SAAA" ) 
-)
-+Name: berserk - mara
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( sabotage-subsystem "Mara" "Hull" 1 ) 
-)
-+Name: berserk failure - mara
-+Repeat Count: 40
-+Interval: 3
-+Chained: 5
-
-$Formula: ( when 
-   ( < ( hits-left "Hell Bringer" ) 5 ) 
-   ( turret-change-weapon 
-      "Hell Bringer" 
-      "turret02" 
-      "Shivan Multi Lance" 
-      1 
-      0 
-   )
-   ( turret-change-weapon 
-      "Hell Bringer" 
-      "turret03" 
-      "Shivan Multi Lance" 
-      1 
-      0 
-   )
-   ( turret-set-rate-of-fire 
-      "Hell Bringer" 
-      300 
-      "turret01" 
-      "turret04" 
-   )
-   ( turret-set-rate-of-fire 
-      "Hell Bringer" 
-      150 
-      "turret07" 
-      "turret08" 
-      "turret09" 
-      "turret10" 
-   )
-)
-+Name: berserk - hell bringer
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( sabotage-subsystem 
-      "Hell Bringer" 
-      "Hull" 
-      1 
-   )
-)
-+Name: berserk failure - hellbringer
-+Repeat Count: 5
-+Interval: 5
-+Chained: 5
-
-$Formula: ( when 
-   ( and 
-      ( has-arrived-delay 0 "Hell Bringer" ) 
-      ( < ( hits-left "Alpha 1" ) 20 ) 
-   )
-   ( set-armor-type 
-      "Alpha 1" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-   )
-   ( set-primary-weapon 
-      "Alpha 1" 
-      0 
-      "Dwarf Lance" 
-   )
-   ( set-primary-weapon 
-      "Alpha 1" 
-      1 
-      "Dwarf Lance" 
-   )
-)
-+Name: berserk alpha 1
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( true ) 
-   ( set-weapon-energy 
-      ( + 
-         ( weapon-energy-pct "Alpha 1" ) 
-         15 
-      )
-      "Alpha 1" 
-   )
-   ( set-shield-energy 
-      ( + ( shields-left "Alpha 1" ) 20 ) 
-      "Alpha 1" 
-   )
-   ( set-afterburner-energy 
-      ( + 
-         ( afterburner-energy-pct "Alpha 1" ) 
-         20 
-      )
-      "Alpha 1" 
-   )
-)
-+Name: who's laughing now?
-+Repeat Count: 8000
-+Interval: 1
-+Chained: 0
-
-$Formula: ( when 
-   ( < ( hits-left "Streaker" ) 40 ) 
-   ( set-armor-type 
-      "Streaker" 
-      ( true ) 
-      "Shivan Elite Armor" 
-      "Hull" 
-   )
-)
-+Name: streaker < 40
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( < ( hits-left "Streaker" ) 20 ) 
-   ( set-armor-type 
-      "Streaker" 
-      ( true ) 
-      "Hell Armor" 
-      "Hull" 
-   )
-)
-+Name: streaker < 20
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when ( true ) ( do-nothing ) ) 
-+Name: ==END==
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( has-arrived-delay 90 "Hell Bringer" ) 
+   ( has-arrived-delay 90 "Streaker" ) 
    ( supernova-start 40 ) 
 )
 +Name: supernova start
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
+$Formula: ( when 
+   ( true ) 
+   ( add-goal 
+      "Sathanas" 
+      ( ai-warp-out 89 ) 
+   )
+)
 +Name: sath warp out
 +Repeat Count: 1
 +Interval: 1
@@ -6920,6 +6234,100 @@ $Formula: ( when
 +Chained: 3
 
 $Formula: ( when 
+   ( true ) 
+   ( modify-variable 
+      @convoy-escort-health[100100] 
+      ( hits-left "Azra Vasuda" ) 
+   )
+   ( modify-variable 
+      @convoy-escort-health[100100] 
+      ( + 
+         @convoy-escort-health[100100] 
+         ( * 
+            ( hits-left "Hand of Truth" ) 
+            1000 
+         )
+      )
+   )
+   ( modify-variable 
+      @spec-ops-health[100100100] 
+      ( hits-left "Streaker" ) 
+   )
+   ( modify-variable 
+      @spec-ops-health[100100100] 
+      ( + 
+         @spec-ops-health[100100100] 
+         ( * ( hits-left "Sparta" ) 1000 ) 
+      )
+   )
+   ( modify-variable 
+      @spec-ops-health[100100100] 
+      ( + 
+         @spec-ops-health[100100100] 
+         ( * ( hits-left "Reaper" ) 1000000 ) 
+      )
+   )
+   ( modify-variable 
+      @lambda-health[100100] 
+      ( hits-left "Lambda 1" ) 
+   )
+   ( modify-variable 
+      @lambda-health[100100] 
+      ( + 
+         @lambda-health[100100] 
+         ( * ( hits-left "Lambda 2" ) 1000 ) 
+      )
+   )
+   ( modify-variable 
+      @sigma-health[100100100] 
+      ( hits-left "Sigma 1" ) 
+   )
+   ( modify-variable 
+      @sigma-health[100100100] 
+      ( + 
+         @sigma-health[100100100] 
+         ( * ( hits-left "Sigma 2" ) 1000 ) 
+      )
+   )
+   ( modify-variable 
+      @sigma-health[100100100] 
+      ( + 
+         @sigma-health[100100100] 
+         ( * ( hits-left "Sigma 3" ) 1000000 ) 
+      )
+   )
+   ( modify-variable 
+      @zeta-health[100100] 
+      ( hits-left "Zeta 1" ) 
+   )
+   ( modify-variable 
+      @zeta-health[100100] 
+      ( + 
+         @zeta-health[100100] 
+         ( * ( hits-left "Zeta 2" ) 1000 ) 
+      )
+   )
+   ( modify-variable 
+      @zeta-cargo-health[100100] 
+      ( hits-left "TC-TRI#1" ) 
+   )
+   ( modify-variable 
+      @zeta-cargo-health[100100] 
+      ( + 
+         @zeta-cargo-health[100100] 
+         ( * ( hits-left "TC-TRI#2" ) 1000 ) 
+      )
+   )
+   ( training-msg 
+      "debug convoy status - end" 
+   )
+)
++Name: save survivors variables
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
    ( has-departed-delay 0 "Alpha 1" ) 
    ( do-nothing ) 
 )
@@ -6929,8 +6337,14 @@ $Formula: ( when
 +Chained: 0
 +Objective:  XSTR("Engage subspace drive", -1)
 
-#Goals		;! 0 total
+#Goals		;! 1 total
 
+$Type: Primary
++Name: Survive
+$MessageNew:  XSTR("Survive", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay "warp out" 0 ) 
++No music
 
 #Waypoints		;! 16 lists total
 
@@ -7017,7 +6431,7 @@ $List: (		;! 1 points in list
 	( -10801.811523, -0.000965, 8536.272461 )
 )
 
-#Messages		;! 2 total
+#Messages		;! 3 total
 
 
 $Name: debug convoy x
@@ -7036,6 +6450,16 @@ $Name: debug saturation
 $Team: -1
 $MessageNew:  XSTR("saturation-level: $saturation-level
 distort-noise: $distort-noise-level", -1)
+$end_multi_text
+
+$Name: debug convoy status - end
+$Team: -1
+$MessageNew:  XSTR("sigma-health: $sigma-health
+lambda-health: $lambda-health
+zeta-health: $zeta-health
+zeta-cargo-health: $zeta-cargo-health
+convoy-escort-health: $convoy-escort-health
+spec-ops-health: $spec-ops-health", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total
