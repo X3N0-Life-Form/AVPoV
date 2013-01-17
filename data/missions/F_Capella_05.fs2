@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Final Round", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:45:13
-$Modified: 01/15/13 at 23:21:08
+$Modified: 01/16/13 at 19:12:10
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2280.602539, 7379.641602, -3695.515625
++Viewer pos: 3507.932373, 1213.978882, 2179.663574
 +Viewer orient:
-	0.928033, -0.000003, 0.372499,
-	-0.186273, 0.865986, 0.464080,
-	-0.322580, -0.500068, 0.803663
+	0.465262, -0.000001, 0.885173,
+	-0.278135, 0.949351, 0.146194,
+	-0.840340, -0.314216, 0.441697
 
 
 $AI Profile: myProfile
@@ -43,26 +43,13 @@ $Variables:
 		4		"convoy-min-speed"		"500"		"number"
 		5		"convoy-size"		"7"		"number"
 		6		"distort-noise-level"		"0"		"number"
-		7		"lambda-1-x"		"0"		"number"
-		8		"lambda-1-z"		"0"		"number"
-		9		"lambda-2-x"		"0"		"number"
-		10		"lambda-2-z"		"0"		"number"
-		11		"lambda-health"		"100100"		"number"		"campaign-persistent"
-		12		"saturation-level"		"95"		"number"
-		13		"sigma-1-x"		"0"		"number"
-		14		"sigma-1-z"		"0"		"number"
-		15		"sigma-2-x"		"0"		"number"
-		16		"sigma-2-z"		"0"		"number"
-		17		"sigma-3-x"		"0"		"number"
-		18		"sigma-3-z"		"0"		"number"
-		19		"sigma-health"		"100100100"		"number"		"campaign-persistent"
-		20		"spec-ops-health"		"100100100"		"number"		"campaign-persistent"
-		21		"zeta-1-x"		"0"		"number"
-		22		"zeta-1-z"		"0"		"number"
-		23		"zeta-2-x"		"0"		"number"
-		24		"zeta-2-z"		"0"		"number"
-		25		"zeta-cargo-health"		"100100"		"number"		"campaign-persistent"
-		26		"zeta-health"		"100100"		"number"		"campaign-persistent"
+		7		"hammer-health"		"100100100"		"number"		"campaign-persistent"
+		8		"lambda-health"		"100100"		"number"		"campaign-persistent"
+		9		"saturation-level"		"95"		"number"
+		10		"sigma-health"		"100100100"		"number"		"campaign-persistent"
+		11		"spec-ops-health"		"100100100"		"number"		"campaign-persistent"
+		12		"zeta-cargo-health"		"100100"		"number"		"campaign-persistent"
+		13		"zeta-health"		"100100"		"number"		"campaign-persistent"
 )
 
 #Command Briefing
@@ -186,7 +173,7 @@ $Ship Choices: (
 	"Tempest Adv#Shivan"	500
 )
 
-#Objects		;! 124 total
+#Objects		;! 117 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis Elite
@@ -1010,189 +997,7 @@ $Dockee Point: Cargo Dockpoint
 +Use Table Score:
 +Score: 0
 
-$Name: convoy center		;! Object #25
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3166.257813, 0.000090, 2216.827881
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: av path		;! Object #26
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3399.325195, -0.013457, 1753.417358
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: hot path		;! Object #27
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3752.990967, -0.013303, 2280.614746
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 7
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: k path1		;! Object #28
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3447.183838, 0.000015, 2104.598877
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 6
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: k path2		;! Object #29
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3458.026123, 0.000015, 2049.118896
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 6
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: k path3		;! Object #30
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3453.966553, 0.000017, 2001.566650
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 6
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: k path4		;! Object #31
-$Class: GTNB Pharos
-$Team: Friendly
-$Location: 3457.007080, 0.000020, 1943.951172
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-event-true-delay "debug init" 0 ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Hotkey: 6
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: Aquarius 1		;! Object #32
+$Name: Aquarius 1		;! Object #25
 $Class: SB Seraphim
 $Team: Hostile
 $Location: 467.737701, 791.930603, 5560.676270
@@ -1224,7 +1029,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius 2		;! Object #33
+$Name: Aquarius 2		;! Object #26
 $Class: SB Seraphim
 $Team: Hostile
 $Location: 322.863953, 791.930542, 5544.442871
@@ -1256,7 +1061,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius 3		;! Object #34
+$Name: Aquarius 3		;! Object #27
 $Class: SB Seraphim
 $Team: Hostile
 $Location: 613.600220, 791.930542, 5651.025879
@@ -1288,7 +1093,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius 4		;! Object #35
+$Name: Aquarius 4		;! Object #28
 $Class: SB Seraphim
 $Team: Hostile
 $Location: 430.271332, 791.930664, 5661.592773
@@ -1320,7 +1125,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius#dummy 1		;! Object #36
+$Name: Aquarius#dummy 1		;! Object #29
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -4849.893066, -0.000345, 5454.376465
@@ -1348,7 +1153,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius#dummy 2		;! Object #37
+$Name: Aquarius#dummy 2		;! Object #30
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -4927.727539, -0.000403, 5400.960449
@@ -1376,7 +1181,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius#dummy 3		;! Object #38
+$Name: Aquarius#dummy 3		;! Object #31
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -4956.492188, -0.000677, 5543.925293
@@ -1404,7 +1209,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Aquarius#dummy 4		;! Object #39
+$Name: Aquarius#dummy 4		;! Object #32
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -5013.899414, -0.000701, 5569.369141
@@ -1432,7 +1237,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Libra 1		;! Object #40
+$Name: Libra 1		;! Object #33
 $Class: SF Mara
 $Team: Hostile
 $Location: 793.865906, 839.573853, 5709.134766
@@ -1461,7 +1266,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra 2		;! Object #41
+$Name: Libra 2		;! Object #34
 $Class: SF Mara
 $Team: Hostile
 $Location: 767.396973, 786.927002, 5769.224609
@@ -1490,7 +1295,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra 3		;! Object #42
+$Name: Libra 3		;! Object #35
 $Class: SF Mara
 $Team: Hostile
 $Location: 789.069702, 735.798218, 5724.708984
@@ -1519,7 +1324,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra 4		;! Object #43
+$Name: Libra 4		;! Object #36
 $Class: SF Mara
 $Team: Hostile
 $Location: 807.072937, 774.986511, 5683.668457
@@ -1548,7 +1353,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra#dummy 1		;! Object #44
+$Name: Libra#dummy 1		;! Object #37
 $Class: SF Mara
 $Team: Hostile
 $Location: -4173.717285, 0.002131, 5985.361816
@@ -1574,7 +1379,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra#dummy 2		;! Object #45
+$Name: Libra#dummy 2		;! Object #38
 $Class: SF Mara
 $Team: Hostile
 $Location: -4096.981934, 0.002155, 6087.127930
@@ -1600,7 +1405,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra#dummy 3		;! Object #46
+$Name: Libra#dummy 3		;! Object #39
 $Class: SF Mara
 $Team: Hostile
 $Location: -3936.603271, 0.002091, 6075.965820
@@ -1626,7 +1431,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra#dummy 4		;! Object #47
+$Name: Libra#dummy 4		;! Object #40
 $Class: SF Mara
 $Team: Hostile
 $Location: -3992.812256, 0.002174, 5996.453613
@@ -1652,7 +1457,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Hammer 1		;! Object #48
+$Name: Hammer 1		;! Object #41
 $Class: GTC Aeolus
 $Team: Friendly
 $Location: -244.537827, 2158.402344, 1167.622437
@@ -1702,7 +1507,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 500
 
-$Name: Hammer 2		;! Object #49
+$Name: Hammer 2		;! Object #42
 $Class: GTC Aeolus
 $Team: Friendly
 $Location: -776.904724, 2158.402100, 787.066284
@@ -1752,7 +1557,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 500
 
-$Name: Hammer 3		;! Object #50
+$Name: Hammer 3		;! Object #43
 $Class: GTC Aeolus
 $Team: Friendly
 $Location: 8.603789, 2158.402100, 762.548218
@@ -1802,7 +1607,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 500
 
-$Name: Hammer Alpha 1		;! Object #51
+$Name: Hammer Alpha 1		;! Object #44
 $Class: GTF Erinyes
 $Team: Friendly
 $Location: -427.351807, 2061.399414, 753.034546
@@ -1831,7 +1636,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Hammer Alpha 2		;! Object #52
+$Name: Hammer Alpha 2		;! Object #45
 $Class: GTF Erinyes
 $Team: Friendly
 $Location: -267.136475, 2061.399658, 905.376709
@@ -1860,7 +1665,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Hammer Alpha 3		;! Object #53
+$Name: Hammer Alpha 3		;! Object #46
 $Class: GTF Erinyes
 $Team: Friendly
 $Location: -260.135864, 2061.399414, 752.390015
@@ -1889,7 +1694,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Hammer Alpha 4		;! Object #54
+$Name: Hammer Alpha 4		;! Object #47
 $Class: GTF Erinyes
 $Team: Friendly
 $Location: -333.772461, 2061.399414, 646.119141
@@ -1918,7 +1723,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Hammer Beta 1		;! Object #55
+$Name: Hammer Beta 1		;! Object #48
 $Class: GTF Ares
 $Team: Friendly
 $Location: -645.612915, 2340.896484, 809.914307
@@ -1947,7 +1752,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Hammer Beta 2		;! Object #56
+$Name: Hammer Beta 2		;! Object #49
 $Class: GTF Ares
 $Team: Friendly
 $Location: -648.207642, 2340.896484, 992.765259
@@ -1976,7 +1781,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Hammer Beta 3		;! Object #57
+$Name: Hammer Beta 3		;! Object #50
 $Class: GTF Ares
 $Team: Friendly
 $Location: -492.385040, 2340.896484, 875.661804
@@ -2005,7 +1810,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Hammer Beta 4		;! Object #58
+$Name: Hammer Beta 4		;! Object #51
 $Class: GTF Ares
 $Team: Friendly
 $Location: -543.300903, 2340.896484, 758.877319
@@ -2034,7 +1839,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Blight		;! Object #59
+$Name: Blight		;! Object #52
 $Class: SC Cain
 $Team: Hostile
 $Location: -487.717468, 4384.302734, 1931.767212
@@ -2088,7 +1893,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 150
 
-$Name: Tal Drak		;! Object #60
+$Name: Tal Drak		;! Object #53
 $Class: SC Cain
 $Team: Hostile
 $Location: -1050.102539, 4384.302246, 2000.988281
@@ -2137,7 +1942,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 150
 
-$Name: Leo 1		;! Object #61
+$Name: Leo 1		;! Object #54
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -500.000000, 4500.000000, 2000.000000
@@ -2164,7 +1969,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: Leo 2		;! Object #62
+$Name: Leo 2		;! Object #55
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -399.449219, 4500.000000, 1975.916504
@@ -2191,7 +1996,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: Leo 3		;! Object #63
+$Name: Leo 3		;! Object #56
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -416.925781, 4500.000000, 2114.731445
@@ -2218,7 +2023,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: Leo 4		;! Object #64
+$Name: Leo 4		;! Object #57
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -571.880859, 4500.000000, 2070.804688
@@ -2245,7 +2050,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: Rakshasa 246		;! Object #65
+$Name: Rakshasa 246		;! Object #58
 $Class: SC Rakshasa
 $Team: Hostile
 $Location: -256.666962, 2148.796631, -1281.028564
@@ -2303,7 +2108,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 300
 
-$Name: Oblivion 1		;! Object #66
+$Name: Oblivion 1		;! Object #59
 $Class: SF Mara#
 $Team: Hostile
 $Location: 82.217552, 2200.000000, -1448.880127
@@ -2330,7 +2135,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Oblivion 2		;! Object #67
+$Name: Oblivion 2		;! Object #60
 $Class: SF Mara#
 $Team: Hostile
 $Location: -685.827393, 2200.000000, -1445.525024
@@ -2357,7 +2162,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Gemini#Dummy 1		;! Object #68
+$Name: Gemini#Dummy 1		;! Object #61
 $Class: SB Nahema
 $Team: Hostile
 $Location: -4342.276367, -0.000061, 7954.310547
@@ -2383,7 +2188,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini#Dummy 2		;! Object #69
+$Name: Gemini#Dummy 2		;! Object #62
 $Class: SB Nahema
 $Team: Hostile
 $Location: -4126.895020, -0.000174, 8004.452148
@@ -2409,7 +2214,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini#Dummy 3		;! Object #70
+$Name: Gemini#Dummy 3		;! Object #63
 $Class: SB Nahema
 $Team: Hostile
 $Location: -4202.131836, 0.000023, 7831.746094
@@ -2435,7 +2240,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini#Dummy 4		;! Object #71
+$Name: Gemini#Dummy 4		;! Object #64
 $Class: SB Nahema
 $Team: Hostile
 $Location: -4430.765137, 0.000011, 7813.202148
@@ -2461,7 +2266,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Taurus#Dummy 1		;! Object #72
+$Name: Taurus#Dummy 1		;! Object #65
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -4067.770264, -0.000177, 8807.020508
@@ -2489,7 +2294,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus#Dummy 2		;! Object #73
+$Name: Taurus#Dummy 2		;! Object #66
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -4066.226807, -0.000250, 9061.302734
@@ -2517,7 +2322,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus#Dummy 3		;! Object #74
+$Name: Taurus#Dummy 3		;! Object #67
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -3888.786865, -0.000304, 9075.105469
@@ -2545,7 +2350,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus#Dummy 4		;! Object #75
+$Name: Taurus#Dummy 4		;! Object #68
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -3973.828125, -0.000059, 8821.703125
@@ -2573,7 +2378,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Cancer#Dummy 1		;! Object #76
+$Name: Cancer#Dummy 1		;! Object #69
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -3377.230713, -0.000174, 9126.971680
@@ -2599,7 +2404,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer#Dummy 2		;! Object #77
+$Name: Cancer#Dummy 2		;! Object #70
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -3223.248047, -0.000335, 9343.184570
@@ -2625,7 +2430,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer#Dummy 3		;! Object #78
+$Name: Cancer#Dummy 3		;! Object #71
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -3163.299805, 0.000226, 9179.712891
@@ -2651,7 +2456,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer#Dummy 4		;! Object #79
+$Name: Cancer#Dummy 4		;! Object #72
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -3007.746826, 0.000458, 9282.979492
@@ -2677,7 +2482,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Gemini 1		;! Object #80
+$Name: Gemini 1		;! Object #73
 $Class: SB Nahema
 $Team: Hostile
 $Location: -900.000000, -1000.000000, 4000.000000
@@ -2707,7 +2512,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 2		;! Object #81
+$Name: Gemini 2		;! Object #74
 $Class: SB Nahema
 $Team: Hostile
 $Location: -669.724609, -1115.071655, 3981.335449
@@ -2737,7 +2542,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 3		;! Object #82
+$Name: Gemini 3		;! Object #75
 $Class: SB Nahema
 $Team: Hostile
 $Location: -832.568115, -1216.282959, 3964.919678
@@ -2767,7 +2572,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 4		;! Object #83
+$Name: Gemini 4		;! Object #76
 $Class: SB Nahema
 $Team: Hostile
 $Location: -1019.182617, -1156.996826, 3974.535645
@@ -2797,7 +2602,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Taurus 1		;! Object #84
+$Name: Taurus 1		;! Object #77
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -1366.108398, -1419.018921, 3932.036377
@@ -2829,7 +2634,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus 2		;! Object #85
+$Name: Taurus 2		;! Object #78
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -1462.882568, -1438.097412, 3928.941895
@@ -2861,7 +2666,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus 3		;! Object #86
+$Name: Taurus 3		;! Object #79
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -1440.692139, -1558.178345, 3909.465088
@@ -2893,7 +2698,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Taurus 4		;! Object #87
+$Name: Taurus 4		;! Object #80
 $Class: SB Seraphim
 $Team: Hostile
 $Location: -1563.239990, -1525.531250, 3914.760498
@@ -2925,7 +2730,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Cancer 1		;! Object #88
+$Name: Cancer 1		;! Object #81
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -812.638672, -1510.405884, 3917.214111
@@ -2955,7 +2760,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 2		;! Object #89
+$Name: Cancer 2		;! Object #82
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -795.776367, -1644.127319, 3895.524414
@@ -2985,7 +2790,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 3		;! Object #90
+$Name: Cancer 3		;! Object #83
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -990.570801, -1652.331055, 3894.193848
@@ -3015,7 +2820,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 4		;! Object #91
+$Name: Cancer 4		;! Object #84
 $Class: SF Aeshma
 $Team: Hostile
 $Location: -691.681641, -1666.782471, 3891.849609
@@ -3045,7 +2850,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Qwar Jet		;! Object #92
+$Name: Qwar Jet		;! Object #85
 $Class: SD Ravana
 $Team: Hostile
 $Location: 600.000000, 11000.000000, 3042.399902
@@ -3138,7 +2943,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 670
 
-$Name: Scorpio 1		;! Object #93
+$Name: Scorpio 1		;! Object #86
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 19104.302734, -0.000270, 17118.312500
@@ -3167,7 +2972,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Scorpio 2		;! Object #94
+$Name: Scorpio 2		;! Object #87
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 18270.333984, 0.000102, 17115.734375
@@ -3196,7 +3001,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Scorpio 3		;! Object #95
+$Name: Scorpio 3		;! Object #88
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 19303.013672, 0.000328, 18280.443359
@@ -3225,7 +3030,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Scorpio 4		;! Object #96
+$Name: Scorpio 4		;! Object #89
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 17993.367188, 0.000326, 17394.871094
@@ -3254,7 +3059,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Saggitarius 1		;! Object #97
+$Name: Saggitarius 1		;! Object #90
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 17431.921875, 0.000248, 19830.701172
@@ -3283,7 +3088,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Saggitarius 2		;! Object #98
+$Name: Saggitarius 2		;! Object #91
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 17346.587891, 0.000353, 19144.876953
@@ -3312,7 +3117,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Saggitarius 3		;! Object #99
+$Name: Saggitarius 3		;! Object #92
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 16705.185547, -0.000232, 19127.214844
@@ -3341,7 +3146,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Saggitarius 4		;! Object #100
+$Name: Saggitarius 4		;! Object #93
 $Class: SB Taurvi
 $Team: Hostile
 $Location: 16912.902344, -0.000350, 19858.857422
@@ -3370,7 +3175,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Virgo 1		;! Object #101
+$Name: Virgo 1		;! Object #94
 $Class: SF Mara#
 $Team: Hostile
 $Location: 14163.929688, 0.000190, 16570.287109
@@ -3396,7 +3201,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Virgo 2		;! Object #102
+$Name: Virgo 2		;! Object #95
 $Class: SF Mara#
 $Team: Hostile
 $Location: 14193.629883, 0.000365, 15336.401367
@@ -3422,7 +3227,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Virgo 3		;! Object #103
+$Name: Virgo 3		;! Object #96
 $Class: SF Mara#
 $Team: Hostile
 $Location: 13375.310547, -0.000358, 15630.228516
@@ -3448,7 +3253,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Virgo 4		;! Object #104
+$Name: Virgo 4		;! Object #97
 $Class: SF Mara#
 $Team: Hostile
 $Location: 14584.237305, 0.000049, 15989.737305
@@ -3474,7 +3279,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Sparta		;! Object #105
+$Name: Sparta		;! Object #98
 $Class: GTCv Sparta#Original
 $Team: Friendly
 $Location: -7000.000000, 5000.000000, 9570.000000
@@ -3532,7 +3337,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 40
 
-$Name: Sparta Alpha 1		;! Object #106
+$Name: Sparta Alpha 1		;! Object #99
 $Class: SF Mara (terrans)
 $Team: Friendly
 $Location: -9445.546875, -0.000513, 10579.916016
@@ -3560,7 +3365,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Sparta Alpha 2		;! Object #107
+$Name: Sparta Alpha 2		;! Object #100
 $Class: SF Mara (terrans)
 $Team: Friendly
 $Location: -9235.639648, 0.000161, 10727.110352
@@ -3588,7 +3393,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Sparta Alpha 3		;! Object #108
+$Name: Sparta Alpha 3		;! Object #101
 $Class: SF Mara (terrans)
 $Team: Friendly
 $Location: -9103.477539, 0.000335, 10462.452148
@@ -3616,7 +3421,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Sparta Alpha 4		;! Object #109
+$Name: Sparta Alpha 4		;! Object #102
 $Class: SF Mara (terrans)
 $Team: Friendly
 $Location: -9301.253906, 0.000535, 10352.396484
@@ -3644,7 +3449,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Streaker		;! Object #110
+$Name: Streaker		;! Object #103
 $Class: GTD Hecate
 $Team: Friendly
 $Location: -7683.384277, 6000.003906, 11394.529297
@@ -3721,7 +3526,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 1300
 
-$Name: Reaper		;! Object #111
+$Name: Reaper		;! Object #104
 $Class: SC Lilith
 $Team: Friendly
 $Location: -8881.361328, 6000.000977, 10314.693359
@@ -3769,7 +3574,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 210
 
-$Name: Streaker Alpha 1		;! Object #112
+$Name: Streaker Alpha 1		;! Object #105
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11806.736328, 0.000224, 20688.958984
@@ -3797,7 +3602,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 2		;! Object #113
+$Name: Streaker Alpha 2		;! Object #106
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11137.140625, 0.000361, 20389.818359
@@ -3825,7 +3630,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 3		;! Object #114
+$Name: Streaker Alpha 3		;! Object #107
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11064.504883, -0.000201, 19762.531250
@@ -3853,7 +3658,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Alpha 4		;! Object #115
+$Name: Streaker Alpha 4		;! Object #108
 $Class: GVF Serapis Elite
 $Team: Friendly
 $Location: -11766.827148, -0.000238, 19892.220703
@@ -3881,7 +3686,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 18
 
-$Name: Streaker Beta 1		;! Object #116
+$Name: Streaker Beta 1		;! Object #109
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9860.397461, -0.010788, 18911.914063
@@ -3909,7 +3714,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 2		;! Object #117
+$Name: Streaker Beta 2		;! Object #110
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9496.953125, -0.010505, 19139.751953
@@ -3937,7 +3742,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 3		;! Object #118
+$Name: Streaker Beta 3		;! Object #111
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9373.872070, -0.010927, 18811.289063
@@ -3965,7 +3770,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Beta 4		;! Object #119
+$Name: Streaker Beta 4		;! Object #112
 $Class: SF Dragon
 $Team: Friendly
 $Location: -9691.544922, -0.010494, 18666.478516
@@ -3993,7 +3798,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Streaker Gamma 1		;! Object #120
+$Name: Streaker Gamma 1		;! Object #113
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7898.997559, -0.010866, 18155.640625
@@ -4022,7 +3827,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 2		;! Object #121
+$Name: Streaker Gamma 2		;! Object #114
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7466.039551, -0.010843, 18125.384766
@@ -4051,7 +3856,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 3		;! Object #122
+$Name: Streaker Gamma 3		;! Object #115
 $Class: GTF Ares
 $Team: Friendly
 $Location: -7646.304199, -0.010116, 17741.199219
@@ -4080,7 +3885,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: Streaker Gamma 4		;! Object #123
+$Name: Streaker Gamma 4		;! Object #116
 $Class: GTF Ares
 $Team: Friendly
 $Location: -8104.858398, -0.010987, 17844.789063
@@ -4587,7 +4392,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
 +Flags: ( )
 
-#Events		;! 60 total
+#Events		;! 59 total
 
 $Formula: ( when 
    ( < ( shields-left "Alpha 1" ) 50 ) 
@@ -5130,114 +4935,6 @@ $Formula: ( when
 +Interval: 5
 
 $Formula: ( when 
-   ( false ) 
-   ( modify-variable 
-      @sigma-1-x[0] 
-      ( get-object-x "Sigma 1" ) 
-   )
-   ( modify-variable 
-      @sigma-2-x[0] 
-      ( get-object-x "Sigma 2" ) 
-   )
-   ( modify-variable 
-      @sigma-3-x[0] 
-      ( get-object-x "Sigma 3" ) 
-   )
-   ( modify-variable 
-      @lambda-1-x[0] 
-      ( get-object-x "Lambda 1" ) 
-   )
-   ( modify-variable 
-      @lambda-2-x[0] 
-      ( get-object-x "Lambda 2" ) 
-   )
-   ( modify-variable 
-      @zeta-1-x[0] 
-      ( get-object-x "Zeta 1" ) 
-   )
-   ( modify-variable 
-      @zeta-2-x[0] 
-      ( get-object-x "Zeta 2" ) 
-   )
-   ( set-object-position 
-      "convoy center" 
-      ( get-object-x "convoy center path:1" ) 
-      ( get-object-y "convoy center path:1" ) 
-      ( get-object-z "convoy center path:1" ) 
-   )
-   ( set-object-position 
-      "hot path" 
-      ( get-object-x "Hand of Truth path:1" ) 
-      ( get-object-y "Hand of Truth path:1" ) 
-      ( get-object-z "Hand of Truth path:1" ) 
-   )
-   ( set-object-position 
-      "av path" 
-      ( get-object-x "Azra Vasuda path:1" ) 
-      ( get-object-y "Azra Vasuda path:1" ) 
-      ( get-object-z "Azra Vasuda path:1" ) 
-   )
-   ( modify-variable 
-      @sigma-1-z[0] 
-      ( get-object-z "Sigma 1" ) 
-   )
-   ( modify-variable 
-      @sigma-2-z[0] 
-      ( get-object-z "Sigma 2" ) 
-   )
-   ( modify-variable 
-      @sigma-3-z[0] 
-      ( get-object-z "Sigma 3" ) 
-   )
-   ( modify-variable 
-      @lambda-1-z[0] 
-      ( get-object-z "Lambda 1" ) 
-   )
-   ( modify-variable 
-      @lambda-2-z[0] 
-      ( get-object-z "Lambda 2" ) 
-   )
-   ( modify-variable 
-      @zeta-1-z[0] 
-      ( get-object-z "Zeta 1" ) 
-   )
-   ( modify-variable 
-      @zeta-2-z[0] 
-      ( get-object-z "Zeta 2" ) 
-   )
-   ( training-msg "debug convoy x" ) 
-   ( set-object-position 
-      "k path1" 
-      ( get-object-x "Kappa patrol path:1" ) 
-      ( get-object-y "Kappa patrol path:1" ) 
-      ( get-object-z "Kappa patrol path:1" ) 
-   )
-   ( set-object-position 
-      "k path2" 
-      ( get-object-x "Kappa patrol path:2" ) 
-      ( get-object-y "Kappa patrol path:2" ) 
-      ( get-object-z "Kappa patrol path:2" ) 
-   )
-   ( set-object-position 
-      "k path3" 
-      ( get-object-x "Kappa patrol path:3" ) 
-      ( get-object-y "Kappa patrol path:3" ) 
-      ( get-object-z "Kappa patrol path:3" ) 
-   )
-   ( set-object-position 
-      "k path4" 
-      ( get-object-x "Kappa patrol path:4" ) 
-      ( get-object-y "Kappa patrol path:4" ) 
-      ( get-object-z "Kappa patrol path:4" ) 
-   )
-)
-+Name: debug - get x
-+Repeat Count: -1
-+Trigger Count: 8000
-+Interval: 1
-+Chained: 0
-
-$Formula: ( when 
    ( true ) 
    ( never-warp "Alpha 1" ) 
    ( set-armor-type 
@@ -5278,38 +4975,6 @@ $Formula: ( when
 +Name: debug saturation
 +Repeat Count: 8000
 +Interval: 1
-
-$Formula: ( when ( false ) ( do-nothing ) ) 
-+Name: debug init
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( false ) 
-   ( set-object-position 
-      "Alpha 1" 
-      ( + 
-         ( get-object-x "convoy center path:1" ) 
-         0 
-      )
-      ( + 
-         ( get-object-y "convoy center path:1" ) 
-         0 
-      )
-      ( + 
-         ( get-object-z "convoy center path:1" ) 
-         4000 
-      )
-   )
-   ( set-object-facing-object 
-      "Alpha 1" 
-      "convoy center path:1" 
-   )
-)
-+Name: debug update
-+Repeat Count: 4000
-+Interval: 3
-+Chained: 3
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Aquarius" ) 
@@ -6036,6 +5701,14 @@ $Formula: ( when
 +Chained: 4
 
 $Formula: ( when 
+   ( < ( hits-left "Sparta" ) 65 ) 
+   ( beam-protect-ship "Sparta" ) 
+)
++Name: sparta < 65
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Sparta" ) 
    ( set-post-effect 
       "distort noise" 
@@ -6205,6 +5878,14 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-destroyed-delay 0 "Qwar Jet" ) 
+   ( beam-unprotect-ship "Sparta" ) 
+)
++Name: qwar jet destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( has-arrived-delay 90 "Streaker" ) 
    ( supernova-start 40 ) 
 )
@@ -6318,6 +5999,24 @@ $Formula: ( when
          ( * ( hits-left "TC-TRI#2" ) 1000 ) 
       )
    )
+   ( modify-variable 
+      @hammer-health[100100100] 
+      ( hits-left "Hammer 1" ) 
+   )
+   ( modify-variable 
+      @zeta-cargo-health[100100] 
+      ( + 
+         @hammer-health[100100100] 
+         ( * ( hits-left "Hammer 2" ) 1000 ) 
+      )
+   )
+   ( modify-variable 
+      @zeta-cargo-health[100100] 
+      ( + 
+         @hammer-health[100100100] 
+         ( * ( hits-left "Hammer 3" ) 1000000 ) 
+      )
+   )
    ( training-msg 
       "debug convoy status - end" 
    )
@@ -6337,7 +6036,7 @@ $Formula: ( when
 +Chained: 0
 +Objective:  XSTR("Engage subspace drive", -1)
 
-#Goals		;! 1 total
+#Goals		;! 3 total
 
 $Type: Primary
 +Name: Survive
@@ -6345,6 +6044,23 @@ $MessageNew:  XSTR("Survive", -1)
 $end_multi_text
 $Formula: ( is-event-true-delay "warp out" 0 ) 
 +No music
+
+$Type: Secondary
++Name: fight qwar jet
+$MessageNew:  XSTR("Fight the Shivans", -1)
+$end_multi_text
+$Formula: ( destroyed-or-departed-delay 
+   0 
+   "Qwar Jet" 
+)
+
+$Type: Bonus
++Name: kill qwar jet
+$MessageNew:  XSTR("Destroy Shivans", -1)
+$end_multi_text
+$Formula: ( is-destroyed-delay 0 "Qwar Jet" ) 
++No music
++Score: 500
 
 #Waypoints		;! 16 lists total
 
@@ -6431,20 +6147,8 @@ $List: (		;! 1 points in list
 	( -10801.811523, -0.000965, 8536.272461 )
 )
 
-#Messages		;! 3 total
+#Messages		;! 2 total
 
-
-$Name: debug convoy x
-$Team: -1
-$MessageNew:  XSTR("center-x:$center-x y:$center-y z:$center-z
-s1:$sigma-1-x - $sigma-1-z
-s2:$sigma-2-x - $sigma-2-z
-s3:$sigma-3-x - $sigma-3-z
-l1:$lambda-1-x - $lambda-1-z
-l2:$lambda-2-x - $lambda-2-z
-z1:$zeta-1-x - $zeta-1-z
-z2:$zeta-2-x - $zeta-2-z", -1)
-$end_multi_text
 
 $Name: debug saturation
 $Team: -1
@@ -6459,7 +6163,8 @@ lambda-health: $lambda-health
 zeta-health: $zeta-health
 zeta-cargo-health: $zeta-cargo-health
 convoy-escort-health: $convoy-escort-health
-spec-ops-health: $spec-ops-health", -1)
+spec-ops-health: $spec-ops-health
+hammer-health: $hammer-health", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total
