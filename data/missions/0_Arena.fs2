@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 01/13/13 at 16:28:17
+$Modified: 01/16/13 at 20:29:37
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -220,7 +220,7 @@ $Determination: 10
 
 $Name: Bad Guy		;! Object #2
 $Class: GTCv Sparta
-$Team: Hostile
+$Team: Friendly
 $Location: 2679.620605, -284.025513, 4425.915039
 $Orientation:
 	-0.999209, -0.032015, 0.023662,
@@ -646,7 +646,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Alpha 1" 47 ) ( ai-chase "Bad Guy" 49 ) ( ai-chase-wing "Baddies" 50 ) )
 +Flags: ( "reinforcement" )
 
-#Events		;! 8 total
+#Events		;! 9 total
 
 $Formula: ( when 
    ( true ) 
@@ -830,9 +830,9 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( true ) 
+   ( false ) 
    ( call-ssm-strike 
-      0 
+      2 
       "Bad Guy" 
       "Friendly" 
    )
@@ -840,6 +840,19 @@ $Formula: ( when
 +Name: ssm vs bad guy
 +Repeat Count: 6
 +Interval: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( play-sound-from-table 
+      ( get-object-x "Alpha 1" ) 
+      ( get-object-y "Alpha 1" ) 
+      ( get-object-z "Alpha 1" ) 
+      185 
+   )
+)
++Name: play sound
++Repeat Count: 3
++Interval: 5
 
 #Goals		;! 0 total
 
