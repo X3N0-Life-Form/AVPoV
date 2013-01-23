@@ -272,7 +272,9 @@ $Name:	256	largeturret_rot.ogg,	0, 0.70, 1, 400, 800		; Very large turret base r
 $Name:	257	largeturret_elev.ogg,	0, 0.70, 1, 400, 800		; Very large turret barrel elevation
 
 ; my sounds
-$Name:	258 bleeps.ogg,		0, 0.50, 1, 50, 100
+$Name:	258 bleeps.ogg,				0, 0.50, 1, 50, 100
+$Name:	259	bleeps-reverse.ogg		0, 0.50, 1, 50, 100
+$Name:	260 genalmr.wav				0, 0.70, 0
 ;; look for message sounds
 ;; remix shivan weapon sounds for upgraded and heavy variants
 ;; & maybe beams as well?
