@@ -26,7 +26,7 @@ $SSM:				; 2
 	+Radius:		1600
 	+Offset:		1
 	+Custom Message:*Inbound Shivan SSM Barrage*
-	+Custom Sound:	185
+	+Custom Sound:	260
 	
 $SSM:				; 3
 	+Weapon:		Shivan Mordiggian Bomb
