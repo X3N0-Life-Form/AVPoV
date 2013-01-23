@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Great Hunt", -1)
 $Author: X3N0-Life-Form
 $Created: 06/27/10 at 13:07:01
-$Modified: 11/11/12 at 17:45:50
+$Modified: 01/23/13 at 11:42:05
 $Notes:
 Self playing if you call epsilon right away.$End Notes:
 
@@ -12,26 +12,21 @@ $Mission Desc:
  XSTR("Put mission description here
 ", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 128
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 3204.554199, 4422.286621, -3315.087158
++Viewer pos: -1842.131836, 1476.619385, 588.425598
 +Viewer orient:
-	0.783014, -0.000003, 0.622004,
-	-0.393417, 0.774559, 0.495259,
-	-0.481780, -0.632502, 0.606489
+	0.781296, -0.000001, -0.624161,
+	0.412585, 0.750367, 0.516453,
+	0.468349, -0.661022, 0.586259
 
 
 $AI Profile: myProfile
@@ -237,7 +232,7 @@ $end_multi_text
 $Voice: none.wav
 $Recommendation text:
     XSTR("", -1)
-; don't hesitate to disable the Grelier's own beam cannons.", -1)
+; don't hesitate to disable the Grelier's own beam cannons.", -1)
 $end_multi_text
 
 $Formula: ( is-goal-incomplete 
@@ -796,7 +791,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 0
 
-$Name: ST Azrael 2		;! Object #19
+$Name: Azrael 2		;! Object #19
 $Class: ST Azrael
 $Team: Hostile
 $Location: -377.633179, 0.000148, 1208.233154
@@ -826,7 +821,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 15
 
-$Name: ST Azrael 1		;! Object #20
+$Name: Azrael 1		;! Object #20
 $Class: ST Azrael
 $Team: Hostile
 $Location: -132.229980, 0.000134, 1226.789673
@@ -871,9 +866,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -901,9 +900,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -931,9 +934,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -961,9 +968,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -991,9 +1002,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1021,9 +1036,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1051,9 +1070,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1081,9 +1104,13 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret02a
++Primary Banks: ( "Shivan Scatter Gun" )
 +Subsystem: turret03a
++Primary Banks: ( "Shivan Sniper Gun" )
 +Subsystem: turret04a
++Primary Banks: ( "Shivan Scatter Gun" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
