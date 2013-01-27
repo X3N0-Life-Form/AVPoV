@@ -10,26 +10,17 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The 134th tests the new Target Acquisition and Guidance (TAG) missile.
-", 1082)
+ XSTR("The 134th tests the new Target Acquisition and Guidance (TAG) missile.", 1082)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 131076
 +NebAwacs: 2500.000000
-
 +Storm: s_active
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 1
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -40,11 +31,19 @@ $end_multi_text
 	-0.999917, 0.000003, 0.012916,
 	-0.012904, -0.043972, -0.998950,
 	0.000565, -0.999033, 0.043968
-+SquadReassignName: 134th Barracuda
+
++SquadReassignName: 134th Barracudas
 +SquadReassignLogo: barracudas.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Sexp_variables
 
@@ -60,7 +59,7 @@ $start_briefing
 $num_stages: 6
 $start_stage
 $multi_text
- XSTR("The 134th will now assist with the combat evaluation of the Target Acquisition and Guidance missile. Captain Forsythe of the Warspite has requested you specifically for this mission, so you must have made quite an impression on your last sortie. The Warspite will supervise this combined arms exercise.", 1083)
+ XSTR("The $w 134th will now assist with the combat evaluation of the $y Target $y Acquisition and $y Guidance missile. $w Captain $w Forsythe of the $f Warspite has requested you specifically for this mission, so you must have made quite an impression on your last sortie. The $f Warspite will supervise this combined arms exercise.", 1083)
 $end_multi_text
 $voice: SM202_MB_01.wav
 $camera_pos: -5.285526, 4645.368652, 11978.132813
@@ -82,7 +81,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -104,7 +103,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The 134th will now assist with the combat evaluation of the Target Acquisition and Guidance missile. This will be the first deployment of this system in an actual combat exercise. Our laboratory simulations indicate it has significant potential as a tactical weapon. ", 1084)
+ XSTR("The $w 134th will now assist with the combat evaluation of the $y Target $y Acquisition and $y Guidance missile. This will be the first deployment of this system in an actual combat exercise. Our laboratory simulations indicate it has significant potential as a tactical weapon. ", 1084)
 $end_multi_text
 $voice: SM202_MB_02.wav
 $camera_pos: -5.285526, 4645.368652, 11978.132813
@@ -126,7 +125,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -148,7 +147,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("When you hit a target with the TAG warhead, the missile's beacon will illuminate the target for allied capital ships within range. All available firepower will be brought to bear for a quick resolution. This technology could be a decisive advantage for the $f GTVA. In this exercise, we will test the prototype TAG-A.", 1085)
+ XSTR("When you hit a target with the $y TAG warhead, the missile's beacon will illuminate the target for allied capital ships within range. All available firepower will be brought to bear for a quick resolution. This technology could be a decisive advantage for the $y GTVA. In this exercise, we will test the prototype $y TAG-A.", 1085)
 $end_multi_text
 $voice: SM202_MB_03.wav
 $camera_pos: -5.285526, 4645.368652, 11978.132813
@@ -166,7 +165,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -188,7 +187,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. The $f Lucidity will provide AWACS coverage.  ", 1086)
+ XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. The $f Lucidity will provide $y AWACS coverage.  ", 1086)
 $end_multi_text
 $voice: SM202_MB_04.wav
 $camera_pos: 1788.531738, 4645.368652, 11976.029297
@@ -210,7 +209,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -234,7 +233,7 @@ $type: 18
 $team: Friendly
 $class: GTA Charybdis
 $pos: 1371.518677, 478.368774, 15361.457031
-$label: Lucidity
+$label: GTA Lucidity
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -244,7 +243,7 @@ $end_icon
 $start_icon
 $type: 21
 $team: Hostile
-$class: GVF Thoth
+$class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
 $label: Hostile Craft
 +id: 4
@@ -256,7 +255,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. ", 1087)
+ XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. ", 1087)
 $end_multi_text
 $voice: SM202_MB_05.wav
 $camera_pos: 1788.531738, 4645.368652, 11976.029297
@@ -278,7 +277,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -300,7 +299,7 @@ $end_icon
 $start_icon
 $type: 21
 $team: Hostile
-$class: GVF Thoth
+$class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
 $label: Hostile Craft
 +id: 4
@@ -312,7 +311,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("For this mission, you'll be flying a refurbished Ulysses space superiority fighter, specially modified for this exercise. The Ulysses is a Great War antique, but the fighter still handles well, and the modifications will enable TAG engineers to monitor the progress of the exercise. ", 1088)
+ XSTR("For this mission, you'll be flying a refurbished $y Ulysses space superiority fighter, specially modified for this exercise. The $y Ulysses is a $y Great $y War antique, but the fighter still handles well, and the modifications will enable $y TAG engineers to monitor the progress of the exercise. ", 1088)
 $end_multi_text
 $voice: SM202_MB_06.wav
 $camera_pos: 1620.901978, 1148.671143, 14204.053711
@@ -330,7 +329,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -352,7 +351,7 @@ $end_icon
 $start_icon
 $type: 21
 $team: Hostile
-$class: GVF Thoth
+$class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
 $label: Hostile Craft
 +id: 4
@@ -512,10 +511,9 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	104
-	"Prometheus R"	0
+	"Subach HL-7"	102
+	"Prometheus R"	2
 	"TAG-A"	500
-	"Prometheus S"	0
 )
 
 #Objects		;! 31 total
@@ -528,6 +526,7 @@ $Orientation:
 	-0.814169, -0.192429, 0.547813,
 	-0.212679, 0.976749, 0.027014,
 	-0.540274, -0.094514, -0.836165
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 16
@@ -554,6 +553,7 @@ $Orientation:
 	-0.934812, 0.006332, 0.355088,
 	0.059875, 0.988339, 0.140004,
 	-0.350060, 0.152138, -0.924290
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Demon
 $AI Goals: ( goals ( ai-chase-any 50 ) )
@@ -583,6 +583,7 @@ $Orientation:
 	-0.829070, 0.000000, 0.559145,
 	-0.171899, 0.951570, -0.254883,
 	-0.532066, -0.307432, -0.788918
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -619,6 +620,7 @@ $Orientation:
 	-0.849565, -0.047641, 0.525330,
 	-0.031425, 0.998715, 0.039751,
 	-0.526548, 0.017263, -0.849970
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -696,10 +698,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret25
 +AI Class: General
-+Sbank Ammo: ( 0 )
 +Subsystem: turret26
 +AI Class: General
-+Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -712,6 +712,9 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Warspite
 
 $Name: Scout 1		;! Object #4
 $Class: GTF Loki
@@ -721,6 +724,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Run in one" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -755,6 +759,7 @@ $Orientation:
 	0.884666, 0.000000, -0.466225,
 	-0.000014, 1.000000, -0.000027,
 	0.466225, 0.000031, 0.884666
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -770,7 +775,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #6
@@ -781,6 +785,7 @@ $Orientation:
 	0.827439, 0.000000, -0.561555,
 	-0.000015, 1.000000, -0.000022,
 	0.561555, 0.000027, 0.827439
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -796,7 +801,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #7
@@ -807,6 +811,7 @@ $Orientation:
 	0.952078, 0.000000, -0.305855,
 	-0.000009, 1.000000, -0.000027,
 	0.305855, 0.000028, 0.952078
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -822,7 +827,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 4		;! Object #8
@@ -833,6 +837,7 @@ $Orientation:
 	0.884666, 0.000000, -0.466225,
 	-0.000014, 1.000000, -0.000027,
 	0.466225, 0.000031, 0.884666
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -848,7 +853,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scout 3		;! Object #9
@@ -859,6 +863,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 50 ) ( ai-warp-out 12 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -897,6 +902,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -923,6 +929,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -949,6 +956,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -975,6 +983,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 50 ) ( ai-chase-wing "Alpha" 50 ) )
@@ -1001,6 +1010,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 50 ) ( ai-chase-wing "Alpha" 50 ) )
@@ -1027,6 +1037,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 66 ) ( ai-chase-any 50 ) )
@@ -1042,7 +1053,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 2		;! Object #16
@@ -1053,6 +1063,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 66 ) ( ai-chase-any 50 ) )
@@ -1068,7 +1079,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 3		;! Object #17
@@ -1079,6 +1089,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-chase "Kappa 3" 66 ) ( ai-chase-any 50 ) )
@@ -1094,7 +1105,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 4		;! Object #18
@@ -1105,6 +1115,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-chase "Kappa 3" 66 ) ( ai-chase-any 50 ) )
@@ -1120,7 +1131,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 1		;! Object #19
@@ -1131,6 +1141,7 @@ $Orientation:
 	-0.068026, 0.000000, -0.997684,
 	-0.007793, 0.999970, 0.000531,
 	0.997653, 0.007811, -0.068024
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1158,6 +1169,7 @@ $Orientation:
 	-0.048438, 0.000000, -0.998826,
 	-0.007516, 0.999972, 0.000364,
 	0.998798, 0.007525, -0.048437
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1185,6 +1197,7 @@ $Orientation:
 	-0.062989, 0.000000, -0.998014,
 	-0.007996, 0.999968, 0.000505,
 	0.997982, 0.008012, -0.062987
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1212,6 +1225,7 @@ $Orientation:
 	-0.031393, 0.000000, -0.999507,
 	-0.007663, 0.999971, 0.000241,
 	0.999478, 0.007667, -0.031392
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1239,6 +1253,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1257,7 +1272,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Iota 2		;! Object #24
@@ -1268,6 +1282,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1286,7 +1301,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Iota 3		;! Object #25
@@ -1297,6 +1311,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1315,7 +1330,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Iota 4		;! Object #26
@@ -1326,6 +1340,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1344,7 +1359,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Libra 1		;! Object #27
@@ -1355,6 +1369,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1381,6 +1396,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1407,6 +1423,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Run in one" 50 ) ( ai-waypoints-once "Close In" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1446,6 +1463,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1464,7 +1482,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 #Wings		;! 7 total
@@ -1676,7 +1693,7 @@ $Formula: ( when
    ( true ) 
    ( ship-no-guardian "Scout 1" ) 
    ( send-message-list 
-      "Scout 1" 
+      "#Scout 1" 
       "High" 
       "SCT- Pass la buck" 
       100 
@@ -1732,7 +1749,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 9 "Scout 3" ) 
    ( send-message 
-      "Scout 3" 
+      "#Scout 3" 
       "High" 
       "S3- Storm" 
    )
@@ -1761,11 +1778,11 @@ $Formula: ( when
       )
    )
    ( send-message-list 
-      "Warspite" 
+      "#Warspite" 
       "High" 
       "WAR- Trouble" 
       0 
-      "Lucidity" 
+      "#Lucidity" 
       "High" 
       "LUCID- Trouble" 
       10700 
@@ -1811,11 +1828,11 @@ $Formula: ( when
       )
    )
    ( send-message-list 
-      "Warspite" 
+      "#Warspite" 
       "High" 
       "WAR- Trouble" 
       0 
-      "Lucidity" 
+      "#Lucidity" 
       "High" 
       "LUCID- Trouble" 
       9000 
@@ -1954,7 +1971,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Warspite" ) 20 ) 
    ( send-message 
-      "Warspite" 
+      "#Warspite" 
       "High" 
       "WAR- Hurt" 
    )
@@ -2202,9 +2219,9 @@ $Formula: ( and
 
 #Waypoints		;! 3 lists total
 
-
 $Jump Node: 23.923006, -109.418991, -1247.423462
 $Jump Node Name: Capella
+
 $Name: Lucidity Patrol
 $List: (		;! 6 points in list
 	( 1359.807861, 427.468201, 14921.681641 )
@@ -2228,11 +2245,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 26 total
 
-
 $Name: A2- Intro
 $Team: -1
 $MessageNew:  XSTR("This is Alpha wing. We are in position and standing by.", 1100)
 $end_multi_text
++Persona: Wingman 1
 +AVI Name: Head-TP5
 +Wave Name: sm202_a2_01.wav
 
@@ -2240,6 +2257,7 @@ $Name: COM- Intro 2
 $Team: -1
 $MessageNew:  XSTR("Acknowledged. Scouts are inbound with enemy fighters in pursuit. Number of bandits unknown.", 1101)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_01.wav
 
@@ -2247,6 +2265,7 @@ $Name: SCT- Pass la buck
 $Team: -1
 $MessageNew:  XSTR("Scout 1 here! I'm bugging out! They thrashed me good back there!", 1102)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-TP1
 +Wave Name: sm202_s1_01.wav
 
@@ -2254,6 +2273,7 @@ $Name: S3- Storm
 $Team: -1
 $MessageNew:  XSTR("Mayday! Mayday! This is Scout 3! A large Shivan force is headed for your position! I'm under heavy fire here! ", 1103)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-TP6
 +Wave Name: sm202_s3_01.wav
 
@@ -2261,6 +2281,7 @@ $Name: WAR- Trouble
 $Team: -1
 $MessageNew:  XSTR("Alpha wing, be advised our fire control is currently slaved into the TAG system. We're totally dependent on you for all our weapons targeting. If you don't TAG it, we can't hit it.", 1104)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: sm202_wa_01.wav
 
@@ -2268,13 +2289,15 @@ $Name: LUCID- Trouble
 $Team: -1
 $MessageNew:  XSTR("Long-range sensors indicate eleven hostile craft are inbound. We're picking up additional jump signatures with hostile configurations.", 1105)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm202_lu_01.wav
 
 $Name: COM- Trouble
 $Team: -1
 $MessageNew:  XSTR("All units! This situation has been upgraded to a tactical engagement. Iota wing will reinforce your position as soon as possible. Hang in there, Alpha. Help is on the way.", 1106)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_02.wav
 
@@ -2282,6 +2305,7 @@ $Name: A2- trouble
 $Team: -1
 $MessageNew:  XSTR("That's not good enough, Command! We're not properly armed out here! What do you expect us to do?", 1107)
 $end_multi_text
++Persona: Wingman 1
 +AVI Name: Head-TP5
 +Wave Name: sm202_a2_02.wav
 
@@ -2289,6 +2313,7 @@ $Name: COM- trouble 2A
 $Team: -1
 $MessageNew:  XSTR("We are fully aware of your situation, Alpha.  We are also aware that thousands of lives on board the Warspite and Lucidity are counting on you.", 1108)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_03.wav
 
@@ -2296,7 +2321,7 @@ $Name: A2- Yes sir
 $Team: -1
 $MessageNew:  XSTR("Roger that, Command. We'll get the job done.", 1109)
 $end_multi_text
-+Persona: Wingman 2
++Persona: Wingman 1
 +AVI Name: Head-TP5
 +Wave Name: sm202_a2_03.wav
 
@@ -2304,6 +2329,7 @@ $Name: COM- all clear
 $Team: -1
 $MessageNew:  XSTR("All clear. Mission complete. Alpha, you may return to base. ", 1110)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_04.wav
 
@@ -2311,6 +2337,7 @@ $Name: COM- ARJUNA
 $Team: -1
 $MessageNew:  XSTR("A wing of five Taurvis now closing in! Intercept those bombers, Alpha!", 1111)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_05.wav
 
@@ -2326,6 +2353,7 @@ $Name: COM- Trouble 2B
 $Team: -1
 $MessageNew:  XSTR("We are fully aware of your situation, Alpha.  We are also aware of thousands of lives on board the Warspite that are counting on you.", 1113)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_06.wav
 
@@ -2333,6 +2361,7 @@ $Name: WAR- Hurt
 $Team: -1
 $MessageNew:  XSTR("This is the Warspite! We're under heavy fire! Alpha, unless you TAG those hostiles, we are completely defenseless!", 1114)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-TP5
 +Wave Name: sm202_wa_02.wav
 
@@ -2340,6 +2369,7 @@ $Name: COM- WAR Dead
 $Team: -1
 $MessageNew:  XSTR("The Shivans have destroyed the Warspite!", 1115)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_ac_07.wav
 
@@ -2347,6 +2377,7 @@ $Name: LUCID- Hurt
 $Team: -1
 $MessageNew:  XSTR("We need fighter cover on the Lucidity! We must not lose the AWACS!", 1116)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_AC_09.wav
 
@@ -2354,6 +2385,7 @@ $Name: Lucid- Dead
 $Team: -1
 $MessageNew:  XSTR("The Lucidity has been destroyed!", 1117)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_AC_10.wav
 
@@ -2361,6 +2393,7 @@ $Name: COM- RTU Bad
 $Team: -1
 $MessageNew:  XSTR("Alpha, return to base on the double. This mission is over.", 1118)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm202_aC_08.wav
 
@@ -2376,6 +2409,7 @@ $Name: COM- Affirm
 $Team: -1
 $MessageNew:  XSTR("Affirmative, Kappa 3! What's your status?", 1120)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_AC_08.wav
 
@@ -2391,6 +2425,7 @@ $Name: COM Transmit
 $Team: -1
 $MessageNew:  XSTR("I am transmitting the coordinates of the Aquitaine's current position. Return to base immediately. You are badly damaged.", 1122)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_AC_09.wav
 
@@ -2398,6 +2433,7 @@ $Name: KAP- Final Words
 $Team: -1
 $MessageNew:  XSTR("Listen to me! There's no way we can stop them this time! Shut down the portal before it's too late! There's something out there, Command! Please! ", 1123)
 $end_multi_text
++Persona: Wingman 4
 +AVI Name: Head-TP7
 +Wave Name: sm201_K3_03.wav
 
@@ -2405,13 +2441,15 @@ $Name: COM- Do you copy
 $Team: -1
 $MessageNew:  XSTR("Kappa 3, do you copy? Please respond. I repeat. Do you copy?", 1124)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_AC_10.wav
 
 $Name: Com- Classified
 $Team: -1
-$MessageNew:  XSTR("All units, you will disregard Kappa 3's transmission. The communication record of this sortie has been classified level Phi.  ", 1125)
+$MessageNew:  XSTR("All units, you will disregard Kappa 3's transmission. The communication record of this sortie has been classified level $b Phi.  ", 1125)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_AC_11.wav
 
@@ -2420,14 +2458,13 @@ $end_multi_text
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 489
-$Ambient light level: 7895160
+$Num stars: 0
+$Ambient light level: 0
 +Neb2: nbackblue2
-
 +Neb2Flags: 63
 
-
 #Asteroid Fields
+
 
 #Music
 

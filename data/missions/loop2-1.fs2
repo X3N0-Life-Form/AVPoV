@@ -10,27 +10,18 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The 99th Skulls, Special Operations Command, must rescue Snipes and the survivors on board the Grall.
-", 169)
+ XSTR("The 99th Skulls, Special Operations Command, must rescue Snipes and the survivors on board the Grall.", 169)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 28
 +NebAwacs: 2500.000000
-
 +Storm: s_emp
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 1
-
 +Hull Repair Ceiling: 0.000000
-
-+Subsystem Repair Ceiling: 100.000000
++Subsystem Repair Ceiling: 0.000000
 
 +Player Entry Delay:
 2.000000
@@ -40,18 +31,26 @@ $end_multi_text
 	1.000000, 0.000000, -0.000000,
 	0.000000, 0.018033, 0.999837,
 	0.000000, -0.999837, 0.018033
+
 +SquadReassignName: 99th Skulls
 +SquadReassignLogo: jollyroger.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
 $Stage Text:
  XSTR("Special Operations Command
 
-You have been selected for a covert assignment with Special Operations Command (SOC), in conjunction with Galactic Terran-Vasudan Intelligence (GTVI). Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the GTVA.", 170)
+You have been selected for a covert assignment with $w Special $w Operations $w Command $w (SOC), in conjunction with $w Galactic $w Terran-Vasudan $w Intelligence $w (GTVI). Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the $y GTVA.", 170)
 $end_multi_text
 $Ani Filename: Cb_loop-a_e.ani
 +Wave Filename: LP2-1_CB_01.wav
@@ -59,7 +58,7 @@ $Ani Filename: Cb_loop-a_e.ani
 $Stage Text:
  XSTR("Lieutenant Commander Snipes
 
-At 0437 reconnaissance units received a coded transmission from Lieutenant Commander Snipes. The Commander's vessel, the $e NTT $e Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The Grall was docked to the $h NTC $h Alexandria when the cruiser ran our blockade of the Knossos portal in $b Gamma $b Draconis.", 171)
+At 0437 reconnaissance units received a coded transmission from $w Lieutenant $w Commander $w Snipes. The Commander's vessel, the $f NTT $f Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The $f Grall was docked to the $h NTC $h Alexandria when the cruiser ran our blockade of the Knossos portal in $b Gamma $b Draconis.", 171)
 $end_multi_text
 $Ani Filename: Cb_loop-b_b.ani
 +Wave Filename: LP2-1_CB_02a.wav
@@ -87,7 +86,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("You know why you're here, pilot, so let's get down to work. Recon located a Pharos navigation buoy not far from where Snipes's transmission was received. Your wing will be inserted at that position to find the $e Grall and make contact with Snipes. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
+ XSTR("You know why you're here, pilot, so let's get down to work. Recon located a $y Pharos navigation buoy not far from where $w Snipes's transmission was received. Your wing will be inserted at that position to find the $f Grall and make contact with $w Snipes. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
 $end_multi_text
 $voice: LP2-1_MB_01.wav
 $camera_pos: 420.264740, 13972.686523, 6672.515625
@@ -127,7 +126,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding Snipes and the $e Grall. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with Tempests and Rockeyes.", 175)
+ XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding $w Snipes and the $f Grall. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with $y Tempests and $y Rockeyes.", 175)
 $end_multi_text
 $voice: LP2-1_MB_02.wav
 $camera_pos: 842.049438, 14636.061523, 5293.390137
@@ -191,7 +190,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once you locate Snipes, call in $g Lambda $g 1. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the $e Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
+ XSTR("Once you locate $w Snipes, call in $f Lambda $f 1. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the $f Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
 $end_multi_text
 $voice: LP2-1_MB_03.wav
 $camera_pos: 1039.498047, 15408.145508, 6231.711914
@@ -257,7 +256,7 @@ $type: 34
 $team: Friendly
 $class: GTT Elysium
 $pos: 467.153198, -0.000353, 9516.170898
-$label: GTT Teloron
+$label: GTT Lambda 1
 +id: 6
 $hlight: 1
 $mirror: 0
@@ -271,7 +270,7 @@ $end_briefing
 
 $Num stages: 3
 
-$Formula: ( has-departed-delay 0 "GTT Lambda 1" ) 
+$Formula: ( has-departed-delay 0 "Lambda 1" ) 
 $Multi text
     XSTR("Congratulations, pilot. You saved my life, and I owe you big. If I had more clout with the brass, I'd have them give you a Service Medallion, but they don't just hand those out. You didn't have to volunteer for this assignment, but I'm damn glad you did.
 
@@ -283,7 +282,7 @@ $Recommendation text:
 $end_multi_text
 
 $Formula: ( and 
-   ( is-destroyed-delay 0 "NTT Grall" ) 
+   ( is-destroyed-delay 0 "Grall" ) 
    ( not 
       ( is-event-true-delay "Swap Cargo" 0 ) 
    )
@@ -301,7 +300,7 @@ $end_multi_text
 $Formula: ( and 
    ( has-departed-delay 0 "Alpha 1" ) 
    ( not 
-      ( has-departed-delay 0 "GTT Lambda 1" ) 
+      ( has-departed-delay 0 "Lambda 1" ) 
    )
 )
 $Multi text
@@ -312,10 +311,16 @@ $Recommendation text:
     XSTR("Do not leave the mission until Snipes and the recovery craft have safely departed.", 181)
 $end_multi_text
 
+#Alternate Types:
+$Alt: NTT Argo
+$Alt: NTF Hercules
+#end
+
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
+
 )
 
 +Weaponry Pool: (
@@ -345,6 +350,7 @@ $Orientation:
 	0.999550, 0.000000, -0.029996,
 	0.000000, 1.000000, 0.000000,
 	0.029996, 0.000000, 0.999550
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -360,7 +366,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 2		;! Object #1
@@ -371,32 +376,7 @@ $Orientation:
 	0.999550, 0.000000, -0.029995,
 	0.000000, 1.000000, 0.000000,
 	0.029995, 0.000000, 0.999550
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Subach HL-7" "Subach HL-7" )
-+Secondary Banks: ( "Tempest" "Tempest" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 10
-+Persona Index: 1
-
-$Name: Alpha 3		;! Object #2
-$Class: GTF Erinyes
-$Team: Friendly
-$Location: 203.399567, 0.000062, 100.269554
-$Orientation:
-	0.999550, 0.000000, -0.029995,
-	0.000000, 1.000000, 0.000000,
-	0.029995, 0.000000, 0.999550
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -415,6 +395,33 @@ $Determination: 10
 +Score: 10
 +Persona Index: 0
 
+$Name: Alpha 3		;! Object #2
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 203.399567, 0.000062, 100.269554
+$Orientation:
+	0.999550, 0.000000, -0.029995,
+	0.000000, 1.000000, 0.000000,
+	0.029995, 0.000000, 0.999550
+$IFF: IFF 1
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 10
++Persona Index: 1
+
 $Name: Alpha 4		;! Object #3
 $Class: GTF Erinyes
 $Team: Friendly
@@ -423,6 +430,7 @@ $Orientation:
 	0.999550, 0.000000, -0.029995,
 	0.000000, 1.000000, 0.000000,
 	0.029995, 0.000000, 0.999550
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -449,6 +457,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -463,7 +472,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: Virgo 1		;! Object #5
@@ -474,6 +482,7 @@ $Orientation:
 	-0.996095, 0.000000, -0.088292,
 	0.000000, 1.000000, 0.000000,
 	0.088292, 0.000000, -0.996095
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -489,7 +498,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #6
@@ -500,6 +508,7 @@ $Orientation:
 	-0.996095, 0.000000, -0.088292,
 	0.000000, 1.000000, 0.000000,
 	0.088292, 0.000000, -0.996095
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -515,7 +524,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #7
@@ -526,6 +534,7 @@ $Orientation:
 	-0.996095, 0.000000, -0.088292,
 	0.000000, 1.000000, 0.000000,
 	0.088292, 0.000000, -0.996095
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -541,7 +550,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 4		;! Object #8
@@ -552,6 +560,7 @@ $Orientation:
 	-0.996095, 0.000000, -0.088292,
 	0.000000, 1.000000, 0.000000,
 	0.088292, 0.000000, -0.996095
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -567,7 +576,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: NB 8		;! Object #9
@@ -578,6 +586,7 @@ $Orientation:
 	0.000797, 0.000000, 1.000000,
 	0.000000, 1.000000, 0.000000,
 	-1.000000, 0.000000, 0.000797
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -592,17 +601,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
-$Name: NTT Grall		;! Object #10
+$Name: Grall		;! Object #10
 $Class: GTT Argo
+$Alt: NTT Argo
 $Team: Hostile
 $Location: 497.799866, -100.013245, 11541.656250
 $Orientation:
 	0.000796, 0.000000, 1.000000,
 	0.000000, 1.000000, 0.000000,
 	-1.000000, 0.000000, 0.000796
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Personel", 182)
 +Initial Hull: 89
@@ -638,12 +648,14 @@ $Determination: 10
 
 $Name: Zeta 1		;! Object #11
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 315.444824, -100.010223, 10803.296875
 $Orientation:
 	0.408487, 0.000000, -0.912764,
 	0.000000, 1.000000, 0.000000,
 	0.912764, 0.000000, 0.408487
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -659,17 +671,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Zeta 2		;! Object #12
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 3.521484, -100.010445, 10540.424805
 $Orientation:
 	0.408487, 0.000000, -0.912764,
 	0.000000, 1.000000, 0.000000,
 	0.912764, 0.000000, 0.408487
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -685,19 +698,20 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Iota 4		;! Object #13
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 660.999878, -100.010269, 10994.196289
 $Orientation:
 	0.000796, 0.000000, 1.000000,
 	0.000000, 1.000000, 0.000000,
 	-1.000000, 0.000000, 0.000796
+$IFF: IFF 1
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "NTT Grall" 50 ) )
+$AI Goals: ( goals ( ai-guard "Grall" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -708,14 +722,13 @@ $Arrival Cue: ( <
    1292 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( has-departed-delay 0 "GTT Lambda 1" ) 
+$Departure Cue: ( has-departed-delay 0 "Lambda 1" ) 
 $Determination: 10
 +Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Taurus 1		;! Object #14
@@ -726,6 +739,7 @@ $Orientation:
 	-0.996095, 0.000000, -0.088292,
 	0.000000, 1.000000, 0.000000,
 	0.088292, 0.000000, -0.996095
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -752,6 +766,7 @@ $Orientation:
 	-0.942222, 0.000000, -0.334989,
 	0.000000, 1.000000, 0.000000,
 	0.334989, 0.000000, -0.942222
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -778,6 +793,7 @@ $Orientation:
 	-0.992998, 0.000000, -0.118131,
 	0.000000, 1.000000, 0.000000,
 	0.118131, 0.000000, -0.992998
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -804,6 +820,7 @@ $Orientation:
 	-0.992998, 0.000000, -0.118131,
 	0.000000, 1.000000, 0.000000,
 	0.118131, 0.000000, -0.992998
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -830,6 +847,7 @@ $Orientation:
 	-0.999933, 0.000000, 0.011593,
 	0.000000, 1.000000, 0.000000,
 	-0.011593, 0.000000, -0.999933
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -845,7 +863,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 2		;! Object #19
@@ -856,6 +873,7 @@ $Orientation:
 	-0.999933, 0.000000, 0.011593,
 	0.000000, 1.000000, 0.000000,
 	-0.011593, 0.000000, -0.999933
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -871,7 +889,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: NB 1		;! Object #20
@@ -882,6 +899,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -896,10 +914,9 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
-$Name: GTT Lambda 1		;! Object #21
+$Name: Lambda 1		;! Object #21
 $Class: GTT Elysium
 $Team: Friendly
 $Location: 172.567749, -0.000243, -246.229767
@@ -907,6 +924,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -919,8 +937,8 @@ $Arrival Anchor: Alpha 1
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-undocked-delay 
-   "GTT Lambda 1" 
-   "NTT Grall" 
+   "Lambda 1" 
+   "Grall" 
    1 
    2 
 )
@@ -931,7 +949,6 @@ $Determination: 10
 +Escort priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: NB 3		;! Object #22
@@ -942,6 +959,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -956,7 +974,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: Aquarius 1		;! Object #23
@@ -967,11 +984,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -982,7 +1000,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aquarius 2		;! Object #24
@@ -993,11 +1010,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1008,7 +1026,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aquarius 3		;! Object #25
@@ -1019,11 +1036,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1034,7 +1052,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aquarius 4		;! Object #26
@@ -1045,11 +1062,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1060,7 +1078,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 1		;! Object #27
@@ -1071,11 +1088,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1086,7 +1104,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 2		;! Object #28
@@ -1097,11 +1114,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1112,7 +1130,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 3		;! Object #29
@@ -1123,11 +1140,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1138,7 +1156,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 4		;! Object #30
@@ -1149,11 +1166,12 @@ $Orientation:
 	-0.807088, 0.000000, 0.590431,
 	0.000000, 1.000000, 0.000000,
 	-0.590431, 0.000000, -0.807088
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Trebuchet" "Enemy MX-64" )
++Secondary Banks: ( "Trebuchet#Shivan" "MX-64#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1164,7 +1182,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: NB 4		;! Object #31
@@ -1175,6 +1192,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1189,7 +1207,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: NB 5		;! Object #32
@@ -1200,6 +1217,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1214,7 +1232,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: NB 6		;! Object #33
@@ -1225,6 +1242,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1239,7 +1257,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: NB 7		;! Object #34
@@ -1250,6 +1267,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1264,7 +1282,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 0
 
 $Name: Cancer 1		;! Object #35
@@ -1275,6 +1292,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1290,7 +1308,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #36
@@ -1301,6 +1318,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1316,7 +1334,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #37
@@ -1327,6 +1344,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1342,7 +1360,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 4		;! Object #38
@@ -1353,6 +1370,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1368,7 +1386,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 1		;! Object #39
@@ -1379,6 +1396,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1394,7 +1412,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 2		;! Object #40
@@ -1405,6 +1422,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1420,7 +1438,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 3		;! Object #41
@@ -1431,6 +1448,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1446,7 +1464,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 4		;! Object #42
@@ -1457,6 +1474,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1472,7 +1490,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 1		;! Object #43
@@ -1483,6 +1500,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1497,7 +1515,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 2		;! Object #44
@@ -1508,6 +1525,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1522,7 +1540,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 3		;! Object #45
@@ -1533,6 +1550,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1547,7 +1565,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 4		;! Object #46
@@ -1558,6 +1575,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1572,7 +1590,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 1		;! Object #47
@@ -1583,6 +1600,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1598,7 +1616,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 2		;! Object #48
@@ -1609,6 +1626,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1624,7 +1642,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 3		;! Object #49
@@ -1635,6 +1652,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1650,7 +1668,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 4		;! Object #50
@@ -1661,6 +1678,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1676,7 +1694,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 5		;! Object #51
@@ -1687,6 +1704,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1702,7 +1720,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Lepus 6		;! Object #52
@@ -1713,6 +1730,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1728,7 +1746,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 #Wings		;! 11 total
@@ -1741,7 +1758,7 @@ $Special Ship: 0		;! Alpha 1
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( has-departed-delay 0 "GTT Lambda 1" ) 
+$Departure Cue: ( has-departed-delay 0 "Lambda 1" ) 
 $Ships: (		;! 4 total
 	"Alpha 1"
 	"Alpha 2"
@@ -1783,12 +1800,12 @@ $Arrival Cue: ( <
    1292 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( has-departed-delay 0 "GTT Lambda 1" ) 
+$Departure Cue: ( has-departed-delay 0 "Lambda 1" ) 
 $Ships: (		;! 2 total
 	"Zeta 1"
 	"Zeta 2"
 )
-$AI Goals: ( goals ( ai-guard "NTT Grall" 50 ) )
+$AI Goals: ( goals ( ai-guard "Grall" 50 ) )
 +Flags: ( "no-arrival-music" "no-arrival-message" )
 
 $Name: Taurus
@@ -1945,15 +1962,15 @@ $Special Ship: 0		;! Lepus 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1300
-$Arrival Anchor: GTT Lambda 1
+$Arrival Anchor: Lambda 1
 $Arrival Cue: ( and 
    ( not 
       ( < 
-         ( distance "NTT Grall" "GTT Lambda 1" ) 
+         ( distance "Grall" "Lambda 1" ) 
          2000 
       )
    )
-   ( has-arrived-delay 0 "GTT Lambda 1" ) 
+   ( has-arrived-delay 0 "Lambda 1" ) 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1965,20 +1982,20 @@ $Ships: (		;! 6 total
 	"Lepus 5"
 	"Lepus 6"
 )
-$AI Goals: ( goals ( ai-chase "GTT Lambda 1" 50 ) )
+$AI Goals: ( goals ( ai-chase "Lambda 1" 50 ) )
 +Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
 
-#Events		;! 36 total
+#Events		;! 32 total
 
 $Formula: ( when 
    ( < 
-      ( distance "NTT Grall" "GTT Lambda 1" ) 
+      ( distance "Grall" "Lambda 1" ) 
       2100 
    )
    ( add-goal 
-      "GTT Lambda 1" 
+      "Lambda 1" 
       ( ai-dock 
-         "NTT Grall" 
+         "Grall" 
          "topside docking" 
          "Frontside dock" 
          89 
@@ -1991,13 +2008,13 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-docked-delay 
-      "GTT Lambda 1" 
-      "NTT Grall" 
+      "Lambda 1" 
+      "Grall" 
       1 
       27 
    )
    ( add-goal 
-      "GTT Lambda 1" 
+      "Lambda 1" 
       ( ai-undock 89 ) 
    )
 )
@@ -2007,15 +2024,12 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-docked-delay 
-      "GTT Lambda 1" 
-      "NTT Grall" 
+      "Lambda 1" 
+      "Grall" 
       1 
       20 
    )
-   ( transfer-cargo 
-      "NTT Grall" 
-      "GTT Lambda 1" 
-   )
+   ( transfer-cargo "Grall" "Lambda 1" ) 
 )
 +Name: Swap Cargo
 +Repeat Count: 1
@@ -2023,8 +2037,8 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and-in-sequence 
-      ( has-arrived-delay 0 "GTT Lambda 1" ) 
-      ( has-departed-delay 0 "GTT Lambda 1" ) 
+      ( has-arrived-delay 0 "Lambda 1" ) 
+      ( has-departed-delay 0 "Lambda 1" ) 
    )
    ( do-nothing ) 
 )
@@ -2044,45 +2058,18 @@ $Formula: ( when
 
 $Formula: ( when 
    ( < 
-      ( distance "Alpha 1" "NTT Grall" ) 
+      ( distance "Alpha 1" "Grall" ) 
       1252 
    )
-   ( change-iff "Friendly" "NTT Grall" ) 
+   ( change-iff 
+      "Friendly" 
+      "Grall" 
+      "Zeta 1" 
+      "Zeta 2" 
+      "Iota 4" 
+   )
 )
 +Name: IFF Grall
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( < 
-      ( distance "Alpha 1" "NTT Grall" ) 
-      1252 
-   )
-   ( change-iff "Friendly" "Zeta 1" ) 
-)
-+Name: IFF Odin 1
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( < 
-      ( distance "Alpha 1" "NTT Grall" ) 
-      1252 
-   )
-   ( change-iff "Friendly" "Zeta 2" ) 
-)
-+Name: IFF Odin 2
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( < 
-      ( distance "Alpha 1" "NTT Grall" ) 
-      1252 
-   )
-   ( change-iff "Friendly" "Iota 4" ) 
-)
-+Name: IFF Baldur
 +Repeat Count: 1
 +Interval: 1
 
@@ -2112,7 +2099,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "NTT Grall" ) 
+   ( has-arrived-delay 0 "Grall" ) 
    ( do-nothing ) 
 )
 +Name: Find Grall
@@ -2144,7 +2131,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 10 "NTT Grall" ) 
+   ( has-arrived-delay 10 "Grall" ) 
    ( send-message 
       "Alpha 2" 
       "High" 
@@ -2158,7 +2145,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "Hey there" 
    )
@@ -2170,18 +2157,18 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-arrived-delay 0 "GTT Lambda 1" ) 
+      ( has-arrived-delay 0 "Lambda 1" ) 
       ( < 
-         ( distance "NTT Grall" "GTT Lambda 1" ) 
+         ( distance "Grall" "Lambda 1" ) 
          2000 
       )
    )
    ( send-message-list 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "Commence docking" 
       0 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "Commence docking 2" 
       7000 
@@ -2194,11 +2181,11 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "Undock" 0 ) 
    ( send-message-list 
-      "GTT Lambda 1" 
+      "#Lambda 1" 
       "High" 
       "Received Crew" 
       0 
-      "GTT Lambda 1" 
+      "#Lambda 1" 
       "High" 
       "Outta here" 
       7000 
@@ -2214,7 +2201,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-arrived-delay 0 "NTT Grall" ) 
+      ( has-arrived-delay 0 "Grall" ) 
       ( is-event-true-delay "Swap Cargo" 0 ) 
    )
    ( do-nothing ) 
@@ -2225,7 +2212,7 @@ $Formula: ( when
 +Objective:  XSTR("Protect Grall", 184)
 
 $Formula: ( when 
-   ( has-departed-delay 0 "GTT Lambda 1" ) 
+   ( has-departed-delay 0 "Lambda 1" ) 
    ( do-nothing ) 
 )
 +Name: Protect Teloron
@@ -2237,7 +2224,7 @@ $Formula: ( when
    ( is-event-true-delay "IFF Grall" 0 ) 
    ( add-goal 
       "Taurus" 
-      ( ai-chase "NTT Grall" 89 ) 
+      ( ai-chase "Grall" 89 ) 
    )
 )
 +Name: Attack Grall
@@ -2248,7 +2235,7 @@ $Formula: ( when
    ( is-event-true-delay "IFF Grall" 0 ) 
    ( add-goal 
       "Libra" 
-      ( ai-chase "NTT Grall" 89 ) 
+      ( ai-chase "Grall" 89 ) 
    )
 )
 +Name: Attack Grall 2
@@ -2256,7 +2243,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "NTT Grall" ) 
+   ( has-arrived-delay 0 "Grall" ) 
    ( do-nothing ) 
 )
 +Name: Follow Nav Buoys
@@ -2290,7 +2277,7 @@ $Formula: ( when
       4 
    )
    ( send-message 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "Alexandria was" 
    )
@@ -2320,7 +2307,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "17 of us" 
    )
@@ -2347,7 +2334,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "The Alexandria deployed" 
    )
@@ -2377,7 +2364,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "NTT Grall" 
+      "#Grall" 
       "High" 
       "Yeah, but I" 
    )
@@ -2387,7 +2374,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "NTT Grall" ) 
+   ( has-arrived-delay 0 "Grall" ) 
    ( do-nothing ) 
 )
 +Name: Event name
@@ -2397,10 +2384,10 @@ $Formula: ( when
 $Formula: ( when 
    ( and 
       ( < 
-         ( distance "Alpha 1" "NTT Grall" ) 
+         ( distance "Alpha 1" "Grall" ) 
          1100 
       )
-      ( has-arrived-delay 0 "GTT Lambda 1" ) 
+      ( has-arrived-delay 0 "Lambda 1" ) 
    )
    ( do-nothing ) 
 )
@@ -2411,7 +2398,7 @@ $Formula: ( when
 +Objective:  XSTR("Call In Lambda 1", 187)
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "GTT Lambda 1" ) 
+   ( is-destroyed-delay 0 "Lambda 1" ) 
    ( send-message 
       "Alpha 2" 
       "High" 
@@ -2457,13 +2444,13 @@ $Type: Primary
 +Name: Rescue Snipes
 $MessageNew:  XSTR("Rescue Lt. Commander Snipes", 188)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "GTT Lambda 1" ) 
+$Formula: ( has-departed-delay 0 "Lambda 1" ) 
 
 $Type: Secondary
-+Name: find grall
++Name: Find Grall
 $MessageNew:  XSTR("Locate and recover the Grall", 189)
 $end_multi_text
-$Formula: ( has-arrived-delay 0 "NTT Grall" ) 
+$Formula: ( has-arrived-delay 0 "Grall" ) 
 
 #Waypoints		;! 0 lists total
 
@@ -2547,6 +2534,7 @@ $Name: Received Crew
 $Team: -1
 $MessageNew:  XSTR("Survivors are on board, sir. Release docking point now.", 199)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: L2-1_LA_01.wav
 
@@ -2554,6 +2542,7 @@ $Name: Outta here
 $Team: -1
 $MessageNew:  XSTR("Extraction complete. Return to base.", 200)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: L2-1_LA_02.wav
 
@@ -2561,6 +2550,7 @@ $Name: Outta here 2
 $Team: -1
 $MessageNew:  XSTR("All units, return to base pronto!", 201)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: L2-1_LA_03.wav
 
@@ -2638,7 +2628,7 @@ $end_multi_text
 
 #Reinforcements		;! 1 total
 
-$Name: GTT Lambda 1
+$Name: Lambda 1
 $Type: Attack/Protect
 $Num times: 1
 +Arrival Delay: 0
@@ -2647,12 +2637,10 @@ $Num times: 1
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 100
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 +Neb2: nbackblack
-
 +Neb2Flags: 12
-
 
 $Bitmap List:
 $Sun: SunViolet

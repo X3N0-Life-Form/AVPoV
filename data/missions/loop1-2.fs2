@@ -10,23 +10,16 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("Snipes and Alpha 1 must hijack the NTT Sunder.
-", 89)
+ XSTR("Snipes and Alpha 1 must hijack the NTT Sunder.", 89)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 24
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 1
-
 +Hull Repair Ceiling: 0.000000
-
-+Subsystem Repair Ceiling: 100.000000
++Subsystem Repair Ceiling: 0.000000
 
 +Player Entry Delay:
 2.000000
@@ -36,11 +29,20 @@ $end_multi_text
 	0.944783, -0.000000, 0.327697,
 	-0.252791, 0.636329, 0.728823,
 	-0.208523, -0.771418, 0.601192
-+SquadReassignName: Scorpians
+
++SquadReassignName: Scorpions
 +SquadReassignLogo: scorpsquadc.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -49,7 +51,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("As you have no doubt already heard, the GVD Psamtik has destroyed the NTD Cyrene, flagship of the Sirius fleet. As bad as things look in Polaris, the situation in Sirius is even worse. Bosch has redeployed our battle group to reinforce NTF positions in that system.", 90)
+ XSTR("As you have no doubt already heard, the $h GVD $h Psamtik has destroyed the $f NTD $f Cyrene, flagship of the $b Sirius fleet. As bad as things look in $b Polaris, the situation in $b Sirius is even worse. $w Bosch has redeployed our battle group to reinforce $f NTF positions in that system.", 90)
 $end_multi_text
 $voice: LP1-2_MB_01.wav
 $camera_pos: 467.665344, 15248.609375, 97.104233
@@ -161,7 +163,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We arrive in Sirius in six hours. The 185th will be deployed immediately to rendezvous with the NTT Sunder. Our mission will be to escort the transport back to the Regulus jump node. The cargo on board the Sunder has been classified well beyond my level of clearance. Let's just say if the Sunder goes down, so do we.", 91)
+ XSTR("We arrive in $b Sirius in six hours. The $w 185th will be deployed immediately to rendezvous with the $f NTT $f Sunder. Our mission will be to escort the transport back to the $b Regulus jump node. The cargo on board the $f Sunder has been classified well beyond my level of clearance. Let's just say if the $f Sunder goes down, so do we.", 91)
 $end_multi_text
 $voice: LP1-2_MB_02.wav
 $camera_pos: 467.665344, 15248.609375, 97.104233
@@ -273,7 +275,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The Alliance is fighting to secure the Alpha Centauri and Deneb jump nodes, so intelligence believes the risk of engagement will be low. Of course, that's what they told us in Polaris, where we got jumped by half the Vasudan armada. Expect the unexpected, kids, and report to the flight deck at 1310 sharp. Dismissed.", 92)
+ XSTR("The Alliance is fighting to secure the $b Alpha $b Centauri and $b Deneb jump nodes, so intelligence believes the risk of engagement will be low. Of course, that's what they told us in $b Polaris, where we got jumped by half the Vasudan armada. Expect the unexpected, kids, and report to the flight deck at 1310 sharp. Dismissed.", 92)
 $end_multi_text
 $voice: LP1-2_MB_03.wav
 $camera_pos: 384.112976, 21064.716797, 6781.156738
@@ -385,9 +387,9 @@ $end_icon
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTC Aeolus
+$class: GTNB Pharos
 $pos: 83.712776, -0.000613, 14021.709961
-$label: Regulas Jump Node
+$label: Regulus Jump Node
 +id: 9
 $hlight: 0
 $mirror: 0
@@ -402,8 +404,8 @@ $end_briefing
 $Num stages: 4
 
 $Formula: ( and 
-   ( has-departed-delay 0 "NTT Sunder" ) 
-   ( has-departed-delay 0 "GTA Hamako" ) 
+   ( has-departed-delay 0 "Sunder" ) 
+   ( has-departed-delay 0 "Hamako" ) 
 )
 $Multi text
     XSTR("Thanks to our heist, the Sunder is now in allied custody. With our scan of the Iceni and the capture of the rebel transport, the GTVI can begin to unravel the secret of Bosch's ETAK project. 
@@ -418,8 +420,8 @@ $Recommendation text:
 $end_multi_text
 
 $Formula: ( and 
-   ( is-destroyed-delay 0 "GTA Hamako" ) 
-   ( has-departed-delay 0 "NTT Sunder" ) 
+   ( is-destroyed-delay 0 "Hamako" ) 
+   ( has-departed-delay 0 "Sunder" ) 
 )
 $Multi text
     XSTR("Thanks to our heist, the Sunder is now in allied custody. With our scan of the Iceni and the capture of the rebel transport, the GTVI can begin to unravel the secret of Bosch's ETAK project. 
@@ -433,7 +435,7 @@ $Recommendation text:
     XSTR("You may proceed to the next GTVI mission only if the Hamako and Sunder survive.", 95)
 $end_multi_text
 
-$Formula: ( is-destroyed-delay 0 "NTT Sunder" ) 
+$Formula: ( is-destroyed-delay 0 "Sunder" ) 
 $Multi text
     XSTR("With the destruction of the Sunder, our heist failed. With only our scan of the Iceni to go on, unraveling the secret of Bosch's ETAK project will be nearly impossible. We invested six months into this operation and came away empty-handed. 
 
@@ -448,10 +450,10 @@ $Formula: ( and
    ( has-departed-delay 0 "Alpha 1" ) 
    ( and 
       ( not 
-         ( has-departed-delay 0 "NTT Sunder" ) 
+         ( has-departed-delay 0 "Sunder" ) 
       )
       ( not 
-         ( is-destroyed-delay 0 "NTT Sunder" ) 
+         ( is-destroyed-delay 0 "Sunder" ) 
       )
    )
 )
@@ -464,6 +466,19 @@ $Voice: LP1-1_DB_03.wav
 $Recommendation text:
     XSTR("Never leave the mission before you receive the order to return to base.", 98)
 $end_multi_text
+
+#Alternate Types:
+$Alt: NTT Argo
+$Alt: NTC Aeolus
+$Alt: NTCv Deimos
+$Alt: NTF Hercules
+$Alt: NTF Hercules Mark II
+$Alt: NTS Hygeia
+#end
+
+#Callsigns:
+$Callsign: Snipes
+#end
 
 #Players		;! 1 total
 
@@ -486,12 +501,14 @@ $Ship Choices: (
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -291.638336, -0.000034, -440.699921
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -507,17 +524,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 208		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 2		;! Object #1
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -392.638153, -0.000061, -630.352295
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -541,12 +559,14 @@ $Determination: 10
 
 $Name: Alpha 3		;! Object #2
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -189.088837, -0.000050, -633.245850
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -569,12 +589,14 @@ $Determination: 10
 
 $Name: Alpha 4		;! Object #3
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -293.238281, -0.000056, -740.503296
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -598,12 +620,15 @@ $Determination: 10
 
 $Name: Beta 1		;! Object #4
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
+$Callsign: Snipes
 $Team: Friendly
 $Location: 314.821869, 100.000069, -506.368683
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -615,7 +640,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "locked" )
++Flags: ( "cargo-known" "protect-ship" "locked" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 208		;! note that this is a bitfield!!!
@@ -625,12 +650,14 @@ $Determination: 10
 
 $Name: Beta 2		;! Object #5
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 216.138947, 100.000084, -707.567017
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -653,12 +680,14 @@ $Determination: 10
 
 $Name: Beta 3		;! Object #6
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 317.689911, 100.000114, -809.317871
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -681,12 +710,14 @@ $Determination: 10
 
 $Name: Beta 4		;! Object #7
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 417.613556, 100.000107, -707.567017
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -709,12 +740,14 @@ $Determination: 10
 
 $Name: Gamma 1		;! Object #8
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -755.284363, 99.999725, 53.053062
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -737,12 +770,14 @@ $Determination: 10
 
 $Name: Gamma 2		;! Object #9
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -858.449036, 99.999756, -56.818371
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -766,12 +801,14 @@ $Determination: 10
 
 $Name: Gamma 3		;! Object #10
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -959.594788, 99.999718, 50.167137
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -794,12 +831,14 @@ $Determination: 10
 
 $Name: Gamma 4		;! Object #11
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -855.258606, 99.999741, 251.365387
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -822,12 +861,14 @@ $Determination: 10
 
 $Name: Delta 1		;! Object #12
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 484.029602, 500.000183, 260.210144
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -850,12 +891,14 @@ $Determination: 10
 
 $Name: Delta 2		;! Object #13
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 388.763977, 500.000153, 80.798340
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -878,12 +921,14 @@ $Determination: 10
 
 $Name: Delta 3		;! Object #14
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 591.430298, 500.000061, 69.506348
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -906,12 +951,14 @@ $Determination: 10
 
 $Name: Delta 4		;! Object #15
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 484.253662, 500.000061, -35.714310
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -934,12 +981,14 @@ $Determination: 10
 
 $Name: Epsilon 1		;! Object #16
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -115.936943, -199.999847, 1553.525635
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -962,12 +1011,14 @@ $Determination: 10
 
 $Name: Epsilon 2		;! Object #17
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -216.250732, -199.999878, 1352.897217
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -991,12 +1042,14 @@ $Determination: 10
 
 $Name: Epsilon 3		;! Object #18
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -117.223648, -199.999847, 1249.789795
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1019,12 +1072,14 @@ $Determination: 10
 
 $Name: Epsilon 4		;! Object #19
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -13.186989, -199.999863, 1364.172607
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1047,12 +1102,14 @@ $Determination: 10
 
 $Name: Theta 1		;! Object #20
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -737.465210, -100.000038, 1338.338257
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1075,12 +1132,14 @@ $Determination: 10
 
 $Name: Theta 2		;! Object #21
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -838.157532, -100.000031, 1137.709717
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1103,12 +1162,14 @@ $Determination: 10
 
 $Name: Theta 3		;! Object #22
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -640.415649, -99.999992, 1137.709717
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1131,12 +1192,14 @@ $Determination: 10
 
 $Name: Theta 4		;! Object #23
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -739.540771, -100.000000, 1037.989258
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1159,12 +1222,14 @@ $Determination: 10
 
 $Name: Zeta 1		;! Object #24
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 888.146606, -99.999855, 98.139969
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1187,12 +1252,14 @@ $Determination: 10
 
 $Name: Zeta 2		;! Object #25
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 783.955261, -99.999840, -107.747238
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1215,12 +1282,14 @@ $Determination: 10
 
 $Name: Zeta 3		;! Object #26
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 985.071594, -99.999847, -103.988754
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1240,16 +1309,17 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
-+Persona Index: 2
 
 $Name: Zeta 4		;! Object #27
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 886.675781, -99.999863, -211.212570
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1269,16 +1339,17 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
-+Persona Index: 3
 
-$Name: NTT Sunder		;! Object #28
+$Name: Sunder		;! Object #28
 $Class: GTT Argo
+$Alt: NTT Argo
 $Team: Friendly
 $Location: 1.766860, -0.000241, 203.453537
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1296,7 +1367,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( < 
    ( distance 
       "Waypoint path 1:1" 
-      "NTT Sunder" 
+      "Sunder" 
    )
    1000 
 )
@@ -1311,12 +1382,14 @@ $Determination: 10
 
 $Name: Iota 1		;! Object #29
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Friendly
 $Location: -665.263855, 319.999878, 5583.834961
 $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1332,18 +1405,19 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 +Persona Index: 4
 
 $Name: Iota 2		;! Object #30
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Friendly
 $Location: -775.920715, 319.998383, 5798.011230
 $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1359,17 +1433,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Iota 3		;! Object #31
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Friendly
 $Location: -484.585876, 319.999542, 5761.240234
 $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1385,7 +1460,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Skull Beta 4		;! Object #32
@@ -1396,6 +1470,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1421,6 +1496,7 @@ $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1436,7 +1512,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Kappa 2		;! Object #34
@@ -1447,6 +1522,7 @@ $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1462,7 +1538,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Kappa 3		;! Object #35
@@ -1473,6 +1548,7 @@ $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1488,7 +1564,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Skull Alpha 4		;! Object #36
@@ -1499,6 +1574,7 @@ $Orientation:
 	0.110570, 0.000000, 0.993868,
 	0.000000, 1.000000, 0.000000,
 	-0.993868, 0.000000, 0.110570
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1516,22 +1592,24 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: NTF Centaur		;! Object #37
+$Name: Centaur		;! Object #37
 $Class: GTS Hygeia
+$Alt: NTS Hygeia
 $Team: Friendly
 $Location: -1130.635010, 0.001941, 6036.480957
 $Orientation:
 	-0.009203, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009203
+$IFF: IFF 1
 $AI Behavior: None
-$AI Goals: ( goals ( ai-stay-near-ship "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-stay-near-ship "Sunder" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Near Ship
 +Arrival Distance: 800
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-event-true-delay 
    "Freighter Go" 
    55 
@@ -1554,6 +1632,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1580,6 +1659,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1606,6 +1686,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1632,6 +1713,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1658,6 +1740,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1684,6 +1767,7 @@ $Orientation:
 	0.010796, 0.000000, 0.999942,
 	0.000000, 1.000000, 0.000000,
 	-0.999942, 0.000000, 0.010796
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1702,14 +1786,16 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: NTC Mylae		;! Object #44
+$Name: Mylae		;! Object #44
 $Class: GTC Aeolus
+$Alt: NTC Aeolus
 $Team: Hostile
 $Location: -1088.578003, 438.000031, 7105.458008
 $Orientation:
 	0.971338, 0.000000, -0.237703,
 	0.000000, 1.000000, 0.000000,
 	0.237703, 0.000000, 0.971338
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1741,7 +1827,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret12
 $Arrival Location: Near Ship
 +Arrival Distance: 974
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-destroyed-delay 
    34 
    "Iota" 
@@ -1757,15 +1843,20 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: NTC_Mylae
 
 $Name: Leo 1		;! Object #45
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1588.699585, 438.000305, 7107.038574
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1780,17 +1871,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Leo 2		;! Object #46
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1686.970825, 438.000183, 7006.169922
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1805,17 +1897,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Leo 3		;! Object #47
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1488.091553, 438.000336, 7006.095215
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1830,17 +1923,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Gemini 1		;! Object #48
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1389.841431, 438.000305, 6705.000488
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1855,17 +1949,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Gemini 2		;! Object #49
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1487.948730, 438.000275, 6603.928711
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1880,17 +1975,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Gemini 3		;! Object #50
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1285.406494, 438.000336, 6607.212891
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1905,17 +2001,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Gemini 4		;! Object #51
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -1388.746582, 438.000336, 6505.753906
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1930,10 +2027,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
-$Name: GTA Hamako		;! Object #52
+$Name: Hamako		;! Object #52
 $Class: GTA Charybdis
 $Team: Friendly
 $Location: 988.948425, -339.999695, 8907.606445
@@ -1941,6 +2037,7 @@ $Orientation:
 	-0.416147, 0.000000, 0.909297,
 	0.000000, 1.000000, 0.000000,
 	-0.909297, 0.000000, -0.416147
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1963,12 +2060,12 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Primary Banks: ( "Terran Turret" "Terran Turret" )
 $Arrival Location: In front of ship
 +Arrival Distance: 1000
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( has-arrived-delay 46 "Iota" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
 )
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
@@ -1981,12 +2078,14 @@ $Determination: 10
 
 $Name: Aquarius 1		;! Object #53
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -975.747742, 0.000507, 10712.762695
 $Orientation:
 	-0.730602, 0.000000, -0.682803,
 	0.000000, 1.000000, 0.000000,
 	0.682803, 0.000000, -0.730602
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -2007,12 +2106,14 @@ $Determination: 10
 
 $Name: Pisces 1		;! Object #54
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -1662.785889, -119.999107, 9946.454102
 $Orientation:
 	0.020795, 0.000000, -0.999784,
 	0.000000, 1.000000, 0.000000,
 	0.999784, 0.000000, 0.020795
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2033,12 +2134,14 @@ $Determination: 10
 
 $Name: Pisces 2		;! Object #55
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -1462.029541, -119.998840, 10106.504883
 $Orientation:
 	0.020795, 0.000000, -0.999784,
 	0.000000, 1.000000, 0.000000,
 	0.999784, 0.000000, 0.020795
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2059,12 +2162,14 @@ $Determination: 10
 
 $Name: Pisces 3		;! Object #56
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -1488.151611, -119.999176, 9798.895508
 $Orientation:
 	0.020795, 0.000000, -0.999784,
 	0.000000, 1.000000, 0.000000,
 	0.999784, 0.000000, 0.020795
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2085,12 +2190,14 @@ $Determination: 10
 
 $Name: Aries 1		;! Object #57
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 854.101257, 0.000467, 7955.738281
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2106,17 +2213,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Aries 2		;! Object #58
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 1018.990784, -0.000070, 8052.199707
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2132,17 +2240,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Aries 3		;! Object #59
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 979.580139, 0.000366, 7902.791016
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2158,17 +2267,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Taurus 1		;! Object #60
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 1395.017822, 0.000285, 8150.293457
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2184,17 +2294,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Taurus 2		;! Object #61
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 1475.831299, 0.000121, 7987.491699
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2210,17 +2321,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Taurus 3		;! Object #62
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 1330.497314, 0.000198, 7987.545898
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2236,10 +2348,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
-$Name: GTCv Naxos		;! Object #63
+$Name: Naxos		;! Object #63
 $Class: GTCv Deimos
 $Team: Friendly
 $Location: 1422.165039, 0.001951, 12662.036133
@@ -2247,6 +2358,7 @@ $Orientation:
 	-0.830054, 0.000000, 0.557683,
 	0.000000, 1.000000, 0.000000,
 	-0.557683, 0.000000, -0.830054
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Aquarius 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2288,7 +2400,7 @@ $Arrival Cue: ( has-arrived-delay 28 "Aquarius 1" )
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
    ( has-departed-delay 0 "Sunder Decoy" ) 
 )
 $Determination: 10
@@ -2298,6 +2410,9 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Naxos
 
 $Name: Sunder Decoy		;! Object #64
 $Class: GTT Argo
@@ -2307,6 +2422,7 @@ $Orientation:
 	-0.998419, 0.000000, -0.056206,
 	0.000000, 1.000000, 0.000000,
 	0.056206, 0.000000, -0.998419
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2320,10 +2436,10 @@ $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 28 "Aquarius 1" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
    ( and 
-      ( is-destroyed-delay 5 "GTA Hamako" ) 
-      ( has-departed-delay 5 "NTT Sunder" ) 
+      ( is-destroyed-delay 5 "Hamako" ) 
+      ( has-departed-delay 5 "Sunder" ) 
    )
 )
 $Determination: 10
@@ -2342,6 +2458,7 @@ $Orientation:
 	-0.842760, 0.000000, 0.538290,
 	0.000000, 1.000000, 0.000000,
 	-0.538290, 0.000000, -0.842760
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2367,6 +2484,7 @@ $Orientation:
 	-0.842760, 0.000000, 0.538290,
 	0.000000, 1.000000, 0.000000,
 	-0.538290, 0.000000, -0.842760
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2392,6 +2510,7 @@ $Orientation:
 	-0.842760, 0.000000, 0.538290,
 	0.000000, 1.000000, 0.000000,
 	-0.538290, 0.000000, -0.842760
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2417,6 +2536,7 @@ $Orientation:
 	-0.842760, 0.000000, 0.538290,
 	0.000000, 1.000000, 0.000000,
 	-0.538290, 0.000000, -0.842760
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2442,6 +2562,7 @@ $Orientation:
 	-0.916485, 0.000000, 0.400070,
 	0.000000, 1.000000, 0.000000,
 	-0.400070, 0.000000, -0.916485
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2467,6 +2588,7 @@ $Orientation:
 	-0.916485, 0.000000, 0.400070,
 	0.000000, 1.000000, 0.000000,
 	-0.400070, 0.000000, -0.916485
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2492,6 +2614,7 @@ $Orientation:
 	-0.916485, 0.000000, 0.400070,
 	0.000000, 1.000000, 0.000000,
 	-0.400070, 0.000000, -0.916485
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2517,6 +2640,7 @@ $Orientation:
 	-0.916485, 0.000000, 0.400070,
 	0.000000, 1.000000, 0.000000,
 	-0.400070, 0.000000, -0.916485
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2534,14 +2658,16 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: NTCv Sevrin		;! Object #73
+$Name: Sevrin		;! Object #73
 $Class: GTCv Deimos
+$Alt: NTCv Deimos
 $Team: Friendly
 $Location: 119.202415, 249.999619, 13310.809570
 $Orientation:
 	-0.999597, 0.000000, -0.028404,
 	0.000000, 1.000000, 0.000000,
 	0.028404, 0.000000, -0.999597
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2580,9 +2706,9 @@ $Arrival Cue: ( and
       30 
       "Sunder Decoy" 
    )
-   ( has-departed-delay 0 "NTT Sunder" ) 
+   ( has-departed-delay 0 "Sunder" ) 
    ( not 
-      ( is-destroyed-delay 0 "GTA Hamako" ) 
+      ( is-destroyed-delay 0 "Hamako" ) 
    )
 )
 $Departure Location: Hyperspace
@@ -2594,15 +2720,20 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: NTCv_Sevrin
 
 $Name: Lambda 1		;! Object #74
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -416.692383, 499.995300, 14264.596680
 $Orientation:
 	-0.992998, 0.000000, -0.118131,
 	0.000000, 1.000000, 0.000000,
 	0.118131, 0.000000, -0.992998
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2621,12 +2752,14 @@ $Determination: 10
 
 $Name: Lambda 2		;! Object #75
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -572.598328, 499.995911, 13618.893555
 $Orientation:
 	-0.992998, 0.000000, -0.118131,
 	0.000000, 1.000000, 0.000000,
 	0.118131, 0.000000, -0.992998
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2645,12 +2778,14 @@ $Determination: 10
 
 $Name: Lambda 3		;! Object #76
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: -806.147888, 499.995117, 14166.992188
 $Orientation:
 	-0.992998, 0.000000, -0.118131,
 	0.000000, 1.000000, 0.000000,
 	0.118131, 0.000000, -0.992998
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2669,12 +2804,14 @@ $Determination: 10
 
 $Name: Lambda 4		;! Object #77
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 496.174011, 499.997986, 13643.599609
 $Orientation:
 	-0.996928, 0.000000, -0.078327,
 	0.000000, 1.000000, 0.000000,
 	0.078327, 0.000000, -0.996928
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2693,12 +2830,14 @@ $Determination: 10
 
 $Name: Lambda 5		;! Object #78
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 702.507996, 499.997986, 14278.990234
 $Orientation:
 	-0.996928, 0.000000, -0.078327,
 	0.000000, 1.000000, 0.000000,
 	0.078327, 0.000000, -0.996928
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2717,12 +2856,14 @@ $Determination: 10
 
 $Name: Lambda 6		;! Object #79
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Friendly
 $Location: 337.419678, 499.997864, 14250.439453
 $Orientation:
 	-0.996928, 0.000000, -0.078327,
 	0.000000, 1.000000, 0.000000,
 	0.078327, 0.000000, -0.996928
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2739,7 +2880,7 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: GTEP Hermes		;! Object #80
+$Name: Hermes		;! Object #80
 $Class: GTEP Hermes
 $Team: Friendly
 $Location: -260.831146, 0.000895, 12304.465820
@@ -2747,6 +2888,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2766,14 +2908,16 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: NTC Hellespont		;! Object #81
+$Name: Hellespont		;! Object #81
 $Class: GTC Aeolus
+$Alt: NTC Aeolus
 $Team: Hostile
 $Location: -1673.588989, 79.999245, 11547.901367
 $Orientation:
 	-0.702713, 0.000000, -0.711473,
 	0.000000, 1.000000, 0.000000,
 	0.711473, 0.000000, -0.702713
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2797,7 +2941,7 @@ $Arrival Cue: ( is-destroyed-delay
    34 
    "Leo" 
    "Gemini" 
-   "NTC Mylae" 
+   "Mylae" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2809,15 +2953,20 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: NTC_Hellespont
 
 $Name: Aquarius 2		;! Object #82
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -1173.674316, 0.000179, 10708.729492
 $Orientation:
 	-0.824435, 0.000000, -0.565956,
 	0.000000, 1.000000, 0.000000,
 	0.565956, 0.000000, -0.824435
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2838,12 +2987,14 @@ $Determination: 10
 
 $Name: Aquarius 3		;! Object #83
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -1196.965576, 0.000256, 10902.535156
 $Orientation:
 	-0.824435, 0.000000, -0.565956,
 	0.000000, 1.000000, 0.000000,
 	0.565956, 0.000000, -0.824435
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2864,12 +3015,14 @@ $Determination: 10
 
 $Name: Aquarius 4		;! Object #84
 $Class: GTF Hercules Mark II
+$Alt: NTF Hercules Mark II
 $Team: Hostile
 $Location: -991.952576, 0.000243, 10888.750977
 $Orientation:
 	-0.824435, 0.000000, -0.565956,
 	0.000000, 1.000000, 0.000000,
 	0.565956, 0.000000, -0.824435
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2921,11 +3074,11 @@ $Departure Cue: ( or
       "Return to Base" 
       8 
    )
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
    ( and 
-      ( has-departed-delay 3 "GTCv Naxos" ) 
+      ( has-departed-delay 3 "Naxos" ) 
       ( not 
-         ( has-departed-delay 3 "GTA Hamako" ) 
+         ( has-departed-delay 3 "Hamako" ) 
       )
    )
 )
@@ -3031,7 +3184,7 @@ $Special Ship: 0		;! Iota 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 800
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-event-true-delay 
    "Freighter Go" 
    55 
@@ -3043,7 +3196,7 @@ $Ships: (		;! 3 total
 	"Iota 2"
 	"Iota 3"
 )
-$AI Goals: ( goals ( ai-guard "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-guard "Sunder" 50 ) )
 +Flags: ( )
 
 $Name: Kappa
@@ -3053,7 +3206,7 @@ $Special Ship: 0		;! Kappa 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 800
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-event-true-delay 
    "Freighter Go" 
    55 
@@ -3065,7 +3218,7 @@ $Ships: (		;! 3 total
 	"Kappa 2"
 	"Kappa 3"
 )
-$AI Goals: ( goals ( ai-guard "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-guard "Sunder" 50 ) )
 +Flags: ( )
 
 $Name: Skull Alpha
@@ -3075,12 +3228,12 @@ $Special Ship: 0		;! Skull Alpha 1
 
 $Arrival Location: In front of ship
 +Arrival Distance: 1200
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( has-arrived-delay 46 "Iota" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
 )
 $Ships: (		;! 4 total
 	"Skull Alpha 1"
@@ -3098,12 +3251,12 @@ $Special Ship: 0		;! Skull Beta 1
 
 $Arrival Location: In front of ship
 +Arrival Distance: 1100
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( has-arrived-delay 46 "Iota" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
 )
 $Ships: (		;! 4 total
 	"Skull Beta 1"
@@ -3121,7 +3274,7 @@ $Special Ship: 0		;! Leo 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 900
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-destroyed-delay 
    34 
    "Iota" 
@@ -3143,7 +3296,7 @@ $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 920
-$Arrival Anchor: NTT Sunder
+$Arrival Anchor: Sunder
 $Arrival Cue: ( is-destroyed-delay 
    34 
    "Iota" 
@@ -3169,7 +3322,7 @@ $Arrival Cue: ( has-arrived-delay 28 "Aquarius 1" )
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
    ( has-departed-delay 0 "Sunder Decoy" ) 
 )
 $Ships: (		;! 4 total
@@ -3178,7 +3331,7 @@ $Ships: (		;! 4 total
 	"Skull Gamma 3"
 	"Skull Gamma 4"
 )
-$AI Goals: ( goals ( ai-guard "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-guard "Sunder" 50 ) )
 +Flags: ( )
 
 $Name: Skull Delta
@@ -3191,7 +3344,7 @@ $Arrival Cue: ( has-arrived-delay 28 "Aquarius 1" )
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
    ( is-destroyed-delay 5 "Sunder Decoy" ) 
-   ( is-destroyed-delay 5 "NTT Sunder" ) 
+   ( is-destroyed-delay 5 "Sunder" ) 
    ( has-departed-delay 0 "Sunder Decoy" ) 
 )
 $Ships: (		;! 4 total
@@ -3200,7 +3353,7 @@ $Ships: (		;! 4 total
 	"Skull Delta 3"
 	"Skull Delta 4"
 )
-$AI Goals: ( goals ( ai-guard "GTA Hamako" 50 ) )
+$AI Goals: ( goals ( ai-guard "Hamako" 50 ) )
 +Flags: ( )
 
 $Name: Aries
@@ -3213,7 +3366,7 @@ $Arrival Cue: ( is-destroyed-delay
    34 
    "Leo" 
    "Gemini" 
-   "NTC Mylae" 
+   "Mylae" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3222,7 +3375,7 @@ $Ships: (		;! 3 total
 	"Aries 2"
 	"Aries 3"
 )
-$AI Goals: ( goals ( ai-chase "GTA Hamako" 50 ) )
+$AI Goals: ( goals ( ai-chase "Hamako" 50 ) )
 +Flags: ( )
 
 $Name: Taurus
@@ -3235,7 +3388,7 @@ $Arrival Cue: ( is-destroyed-delay
    34 
    "Leo" 
    "Gemini" 
-   "NTC Mylae" 
+   "Mylae" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3257,7 +3410,7 @@ $Arrival Cue: ( is-destroyed-delay
    34 
    "Leo" 
    "Gemini" 
-   "NTC Mylae" 
+   "Mylae" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3266,7 +3419,7 @@ $Ships: (		;! 3 total
 	"Pisces 2"
 	"Pisces 3"
 )
-$AI Goals: ( goals ( ai-chase "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-chase "Sunder" 50 ) )
 +Flags: ( )
 
 $Name: Lambda
@@ -3280,9 +3433,9 @@ $Arrival Cue: ( and
       30 
       "Sunder Decoy" 
    )
-   ( has-departed-delay 0 "NTT Sunder" ) 
+   ( has-departed-delay 0 "Sunder" ) 
    ( not 
-      ( is-destroyed-delay 0 "GTA Hamako" ) 
+      ( is-destroyed-delay 0 "Hamako" ) 
    )
 )
 $Departure Location: Hyperspace
@@ -3307,7 +3460,7 @@ $Arrival Cue: ( is-destroyed-delay
    34 
    "Leo" 
    "Gemini" 
-   "NTC Mylae" 
+   "Mylae" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -3317,10 +3470,18 @@ $Ships: (		;! 4 total
 	"Aquarius 3"
 	"Aquarius 4"
 )
-$AI Goals: ( goals ( ai-chase "NTT Sunder" 50 ) )
+$AI Goals: ( goals ( ai-chase "Sunder" 50 ) )
 +Flags: ( )
 
 #Events		;! 108 total
+
+$Formula: ( when 
+   ( has-time-elapsed 10 ) 
+   ( ship-guardian "Beta 1" ) 
+)
++Name: Event name
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( has-time-elapsed 24 ) 
@@ -3664,7 +3825,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( protect-ship "NTT Sunder" ) 
+   ( protect-ship "Sunder" ) 
 )
 +Name: Protect Freighter
 +Repeat Count: 1
@@ -3863,7 +4024,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "Timer" 0 ) 
    ( add-goal 
-      "NTT Sunder" 
+      "Sunder" 
       ( ai-stay-still 
          "Waypoint path 1:1" 
          89 
@@ -3919,7 +4080,7 @@ $Formula: ( when
       "Zeta" 
    )
    ( add-goal 
-      "NTT Sunder" 
+      "Sunder" 
       ( ai-waypoints-once 
          "Waypoint path 1" 
          89 
@@ -3946,7 +4107,7 @@ $Formula: ( when
    )
    ( add-goal 
       "Beta 1" 
-      ( ai-guard "NTT Sunder" 89 ) 
+      ( ai-guard "Sunder" 89 ) 
    )
 )
 +Name: Bond Protect Freighter
@@ -4024,12 +4185,12 @@ $Formula: ( when
       "Shields" 
    )
 )
-+Name: Here to help__
++Name: Here to help
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "NTF Centaur" ) 
+   ( has-arrived-delay 0 "Centaur" ) 
    ( good-rearm-time "Friendly" 10 ) 
 )
 +Name: Repair
@@ -4039,7 +4200,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "Repair" 0 ) 
    ( add-goal 
-      "NTT Sunder" 
+      "Sunder" 
       ( ai-stay-still 
          "Waypoint path 1:1" 
          89 
@@ -4056,7 +4217,7 @@ $Formula: ( when
       32 
    )
    ( add-goal 
-      "NTT Sunder" 
+      "Sunder" 
       ( ai-waypoints-once 
          "Waypoint path 1" 
          89 
@@ -4077,7 +4238,7 @@ $Formula: ( when
       "Kappa 1" 
       "Kappa 2" 
       "Kappa 3" 
-      "NTF Centaur" 
+      "Centaur" 
    )
 )
 +Name: Hostile
@@ -4100,7 +4261,7 @@ $Formula: ( when
    ( is-destroyed-delay 0 "Iota" "Kappa" ) 
    ( add-goal 
       "Skull Alpha" 
-      ( ai-guard "NTT Sunder" 89 ) 
+      ( ai-guard "Sunder" 89 ) 
    )
 )
 +Name: Guard Sunder 1
@@ -4111,7 +4272,7 @@ $Formula: ( when
    ( is-destroyed-delay 0 "Iota" "Kappa" ) 
    ( add-goal 
       "Skull Beta" 
-      ( ai-guard "NTT Sunder" 89 ) 
+      ( ai-guard "Sunder" 89 ) 
    )
 )
 +Name: Guard Sunder 2
@@ -4138,7 +4299,7 @@ $Formula: ( when
       15000 
    )
 )
-+Name: Guard Sunder__
++Name: Guard Sunder
 +Repeat Count: 1
 +Interval: 1
 
@@ -4146,7 +4307,7 @@ $Formula: ( when
    ( has-arrived-delay 20 "Leo" ) 
    ( add-goal 
       "Leo" 
-      ( ai-chase "GTA Hamako" 89 ) 
+      ( ai-chase "Hamako" 89 ) 
    )
 )
 +Name: Attack AWAC
@@ -4157,7 +4318,7 @@ $Formula: ( when
    ( is-event-true-delay "Attack AWAC" 0 ) 
    ( add-goal 
       "Skull Alpha" 
-      ( ai-guard "GTA Hamako" 89 ) 
+      ( ai-guard "Hamako" 89 ) 
    )
 )
 +Name: Protect AWAC 1
@@ -4168,7 +4329,7 @@ $Formula: ( when
    ( is-event-true-delay "Attack AWAC" 0 ) 
    ( add-goal 
       "Skull Beta" 
-      ( ai-guard "GTA Hamako" 89 ) 
+      ( ai-guard "Hamako" 89 ) 
    )
 )
 +Name: Protect AWAC 2
@@ -4176,13 +4337,10 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 
-      0 
-      "NTC Hellespont" 
-   )
+   ( has-arrived-delay 0 "Hellespont" ) 
    ( add-goal 
       "Skull Beta" 
-      ( ai-chase "NTC Hellespont" 89 ) 
+      ( ai-chase "Hellespont" 89 ) 
    )
 )
 +Name: Attack Hellespont
@@ -4194,10 +4352,10 @@ $Formula: ( when
       0 
       "Leo" 
       "Gemini" 
-      "NTC Mylae" 
+      "Mylae" 
    )
    ( add-goal 
-      "GTA Hamako" 
+      "Hamako" 
       ( ai-waypoints-once 
          "Waypoint path 1" 
          89 
@@ -4209,10 +4367,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( is-destroyed-delay 
-      0 
-      "NTC Hellespont" 
-   )
+   ( is-destroyed-delay 0 "Hellespont" ) 
    ( do-nothing ) 
 )
 +Name: Destroy Hellespont
@@ -4221,10 +4376,10 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Hellespont", 101)
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "GTCv Naxos" ) 
+   ( has-arrived-delay 0 "Naxos" ) 
    ( add-goal 
       "Aquarius 1" 
-      ( ai-chase "GTCv Naxos" 89 ) 
+      ( ai-chase "Naxos" 89 ) 
    )
 )
 +Name: Attack help
@@ -4242,17 +4397,17 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-departed-delay 6 "NTT Sunder" ) 
+      ( has-departed-delay 6 "Sunder" ) 
       ( is-destroyed-delay 
          0 
          "Pisces" 
          "Aries" 
          "Taurus" 
          "Aquarius 1" 
-         "NTC Hellespont" 
+         "Hellespont" 
       )
       ( not 
-         ( is-destroyed-delay 0 "GTA Hamako" ) 
+         ( is-destroyed-delay 0 "Hamako" ) 
       )
    )
    ( self-destruct "Sunder Decoy" ) 
@@ -4263,17 +4418,17 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-departed-delay 1 "NTT Sunder" ) 
+      ( has-departed-delay 1 "Sunder" ) 
       ( is-destroyed-delay 
          0 
          "Pisces" 
          "Aries" 
          "Taurus" 
          "Aquarius 1" 
-         "NTC Hellespont" 
+         "Hellespont" 
       )
       ( not 
-         ( is-destroyed-delay 0 "GTA Hamako" ) 
+         ( is-destroyed-delay 0 "Hamako" ) 
       )
    )
    ( send-message-list 
@@ -4300,9 +4455,9 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 3 "NTCv Sevrin" ) 
+   ( has-arrived-delay 3 "Sevrin" ) 
    ( send-message 
-      "NTCv Sevrin" 
+      "Sevrin" 
       "High" 
       "NTF What" 
    )
@@ -4327,7 +4482,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "NTCv Sevrin" 
+      "Sevrin" 
       "High" 
       "Not Happy" 
    )
@@ -4348,15 +4503,15 @@ $Formula: ( when
 +Objective:  XSTR("Return to base", 66)
 
 $Formula: ( when 
-   ( has-arrived-delay 5 "GTCv Naxos" ) 
-   ( beam-free-all "NTC Mylae" ) 
+   ( has-arrived-delay 5 "Naxos" ) 
+   ( beam-free-all "Mylae" ) 
 )
 +Name: Beam 3
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "NTC Mylae" ) 
+   ( is-destroyed-delay 0 "Mylae" ) 
    ( do-nothing ) 
 )
 +Name: Destroy Mylae
@@ -4365,7 +4520,7 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Mylae", 102)
 
 $Formula: ( when 
-   ( has-arrived-delay 7 "GTCv Naxos" ) 
+   ( has-arrived-delay 7 "Naxos" ) 
    ( beam-free-all "Aquarius 1" ) 
 )
 +Name: Beam 4
@@ -4382,15 +4537,15 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Aquarius", 103)
 
 $Formula: ( when 
-   ( has-arrived-delay 3 "GTCv Naxos" ) 
-   ( beam-free-all "GTCv Naxos" ) 
+   ( has-arrived-delay 3 "Naxos" ) 
+   ( beam-free-all "Naxos" ) 
 )
 +Name: Beam 5
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "NTT Sunder" ) 
+   ( is-destroyed-delay 0 "Sunder" ) 
    ( send-message 
       "Beta 1" 
       "High" 
@@ -4442,7 +4597,7 @@ $Formula: ( when
       2 
       "Gemini" 
       "Leo" 
-      "NTC Mylae" 
+      "Mylae" 
    )
    ( send-message 
       "Beta 1" 
@@ -4473,7 +4628,7 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Kappa", 105)
 
 $Formula: ( when 
-   ( has-departed-delay 0 "NTT Sunder" ) 
+   ( has-departed-delay 0 "Sunder" ) 
    ( do-nothing ) 
 )
 +Name: Protect Sunder
@@ -4482,7 +4637,7 @@ $Formula: ( when
 +Objective:  XSTR("Protect Sunder", 106)
 
 $Formula: ( when 
-   ( has-departed-delay 0 "GTA Hamako" ) 
+   ( has-departed-delay 0 "Hamako" ) 
    ( do-nothing ) 
 )
 +Name: Protect Hamako
@@ -4491,7 +4646,7 @@ $Formula: ( when
 +Objective:  XSTR("Protect Hamako", 107)
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "GTA Hamako" ) 
+   ( has-arrived-delay 0 "Hamako" ) 
    ( validate-goal "Guard Hamako" ) 
 )
 +Name: Validate Hamako
@@ -4517,7 +4672,7 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Pisces", 22)
 
 $Formula: ( when 
-   ( has-arrived-delay 0 "NTC Mylae" ) 
+   ( has-arrived-delay 0 "Mylae" ) 
    ( send-message 
       "Beta 1" 
       "High" 
@@ -4529,7 +4684,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "NTC Mylae" ) 
+   ( is-destroyed-delay 0 "Mylae" ) 
    ( send-message 
       "Beta 1" 
       "High" 
@@ -4541,10 +4696,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 
-      0 
-      "NTC Hellespont" 
-   )
+   ( has-arrived-delay 0 "Hellespont" ) 
    ( send-message 
       "Beta 1" 
       "High" 
@@ -4562,10 +4714,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( is-destroyed-delay 
-      0 
-      "NTC Hellespont" 
-   )
+   ( is-destroyed-delay 0 "Hellespont" ) 
    ( send-message 
       "Beta 1" 
       "High" 
@@ -4591,8 +4740,8 @@ $Formula: ( when
 $Formula: ( when 
    ( has-departed-delay 
       0 
-      "NTT Sunder" 
-      "GTA Hamako" 
+      "Sunder" 
+      "Hamako" 
    )
    ( do-nothing ) 
 )
@@ -4602,8 +4751,8 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-departed-delay 3 "GTCv Naxos" ) 
-      ( has-departed-delay 3 "GTA Hamako" ) 
+      ( has-departed-delay 3 "Naxos" ) 
+      ( has-departed-delay 3 "Hamako" ) 
    )
    ( send-message 
       "Beta 1" 
@@ -4617,8 +4766,8 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( is-destroyed-delay 0 "GTA Hamako" ) 
-      ( has-departed-delay 0 "NTT Sunder" ) 
+      ( is-destroyed-delay 0 "Hamako" ) 
+      ( has-departed-delay 0 "Sunder" ) 
    )
    ( do-nothing ) 
 )
@@ -4628,9 +4777,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( has-departed-delay 3 "GTCv Naxos" ) 
+      ( has-departed-delay 3 "Naxos" ) 
       ( not 
-         ( has-departed-delay 3 "GTA Hamako" ) 
+         ( has-departed-delay 3 "Hamako" ) 
       )
    )
    ( do-nothing ) 
@@ -4741,20 +4890,20 @@ $Type: Primary
 +Name: Guard Sunder
 $MessageNew:  XSTR("Escort the Sunder", 108)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "NTT Sunder" ) 
+$Formula: ( has-departed-delay 0 "Sunder" ) 
 
 $Type: Primary
 +Name: Guard Hamako
 $MessageNew:  XSTR("Protect the Hamako", 109)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "GTA Hamako" ) 
+$Formula: ( has-departed-delay 0 "Hamako" ) 
 +Invalid
 
 #Waypoints		;! 2 lists total
 
-
 $Jump Node: 0.000000, 0.000000, 14000.000000
-$Jump Node Name: Regulas
+$Jump Node Name: Regulus
+
 $Name: Waypoint path 1
 $List: (		;! 1 points in list
 	( 0.000000, 0.000000, 14000.000000 )
@@ -4842,7 +4991,7 @@ $end_multi_text
 
 $Name: Stay on course
 $Team: -1
-$MessageNew:  XSTR("Our mission, Alpha 1, is to highjack the NTT Sunder. The transport pilot is one of us, so he'll follow course. We need to make the rebels think the Sunder has been destroyed. A decoy transport will arrive in a few minutes.", 119)
+$MessageNew:  XSTR("Our mission, Alpha 1, is to hijack the NTT Sunder. The transport pilot is one of us, so he'll follow course. We need to make the rebels think the Sunder has been destroyed. A decoy transport will arrive in a few minutes.", 119)
 $end_multi_text
 +Persona: Wingman 4
 +AVI Name: Head-TP3
@@ -4892,6 +5041,7 @@ $Name: NTF What
 $Team: -1
 $MessageNew:  XSTR("This is the NTCv Sevrin, 2nd Battle Group, Regulus. What is your status, pilots? We were instructed to rendezvous with a transport.", 125)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: LP1-2_SEV_01.wav
 
@@ -4907,6 +5057,7 @@ $Name: Not Happy
 $Team: -1
 $MessageNew:  XSTR("Stand down, Beta 1. We followed our orders to the letter. Now get back to base before the Vasudans return. There's nothing more we can do out here.", 127)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: LP1-2_SEV_02.wav
 
@@ -4993,179 +5144,351 @@ $end_multi_text
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 27 total
+#Background bitmaps		;! 55 total
 
 $Num stars: 2000
-$Ambient light level: 7895160
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunGold
-+Angles: 5.393063 0.000000 4.206240
+$Sun: SunSiriusA
++Angles: 6.195914 0.000000 3.228857
 +Scale: 2.000000
-$Starbitmap: dneb03
-+Angles: 0.000000 0.000000 1.047197
+$Sun: SunSiriusB
++Angles: 0.034907 0.000000 2.967057
++Scale: 0.200000
+$Starbitmap: NebulB3-Main
++Angles: 4.345866 2.792525 0.000000
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 4.276053 0.000000 5.916662
 +ScaleX: 4.000000
 +ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: planeth
-+Angles: 0.785398 3.752455 3.490656
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.345866 2.792525 5.585049
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 4.188787 1.570795 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.520399 2.356193 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 4.101521 5.585049 0.349066
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 4.188787 5.934115 0.436332
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.188787 2.617992 0.610865
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: planetc
-+Angles: 0.994837 0.000000 3.665189
+$Starbitmap: NebulB10-Whisp
++Angles: 4.101521 3.141590 0.436332
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB1-Main
++Angles: 0.000000 0.000000 1.745328
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB3-Main
++Angles: 0.000000 0.000000 4.380773
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 0.663225 0.000000 5.393063
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 0.174533 0.942477 4.014254
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.785398 5.585049 5.131264
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 0.069813 0.000000 1.221730
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 0.000000 4.520399 4.712385
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.000000 5.916662 2.007127
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 5.916662 1.570795 1.483529
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 5.061451 1.570795 1.919861
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 0.872664 3.926988 4.345866
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.872664 5.846848 2.076940
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 0.872664 0.698131 2.356193
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.436332 0.174533 1.308996
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.712385 2.076940 6.091194
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.625119 5.759582 6.195914
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 4.520399 0.000000 0.349066
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 4.712385 1.570795 0.174533
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 5.585049 3.926988 4.014254
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 4.363320 1.570795 0.174533
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 4.363320 0.349066 5.934115
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.363320 2.356193 5.393063
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.014254 3.141590 4.886918
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.014254 3.054324 4.886918
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 4.014254 0.000000 0.872664
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.014254 0.349066 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 1.570795 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 1.396262 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 1.919861 0.785398 0.000000
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.698131 2.356193 2.076940
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.349066 3.490656 1.884954
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 0.261799 3.665189 3.316123
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.261799 0.506145 3.054324
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.226893 3.141590 3.630282
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 0.174533 0.000000 4.520399
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 0.174533 5.759582 0.698131
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 0.174533 0.000000 0.872664
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 0.174533 4.712385 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 0.000000 1.570795 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 0.174533 4.712385 0.610865
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 0.000000 0.000000 0.523598
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 5.934115 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 6.038835 0.698131 0.174533
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA5-Whisp
++Angles: 5.759582 5.585049 6.108648
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetH
++Angles: 0.785398 5.881755 3.490656
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetC
++Angles: 0.994837 1.954767 3.665189
 +ScaleX: 0.400000
 +ScaleY: 0.400000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb02
-+Angles: 0.733038 0.733038 0.733038
-+ScaleX: 3.000000
-+ScaleY: 2.200000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 0.855211 2.146753 0.558505
-+ScaleX: 2.200000
-+ScaleY: 3.500000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb12
-+Angles: 0.383972 0.383972 0.733038
-+ScaleX: 2.400000
-+ScaleY: 3.200000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb02
-+Angles: 1.117010 1.117010 1.117010
-+ScaleX: 2.000000
-+ScaleY: 2.500000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 1.937314 2.146753 1.082103
-+ScaleX: 3.200000
-+ScaleY: 2.700000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb02
-+Angles: 2.146753 1.937314 2.146753
-+ScaleX: 3.400000
-+ScaleY: 4.100000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb12
-+Angles: 1.937314 3.455749 2.321286
-+ScaleX: 2.000000
-+ScaleY: 3.500000
-+DivX: 1
-+DivY: 2
-$Starbitmap: neb18
-+Angles: 1.745328 0.000000 2.146753
-+ScaleX: 3.000000
-+ScaleY: 2.700000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 1.937314 3.874628 1.745328
-+ScaleX: 2.500000
-+ScaleY: 2.500000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 1.518435 5.811942 0.855211
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb12
-+Angles: 1.256636 0.000000 0.645771
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 1.658062 1.570795 0.488692
-+ScaleX: 3.200000
-+ScaleY: 1.800000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb02
-+Angles: 1.954767 1.850047 0.383972
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 2.146753 2.146753 0.209439
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb12
-+Angles: 2.286380 4.258600 6.265727
-+ScaleX: 2.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 2.356193 2.356193 5.951568
-+ScaleX: 4.500000
-+ScaleY: 3.800000
-+DivX: 2
-+DivY: 2
-$Starbitmap: dneb02
-+Angles: 2.216566 1.343902 5.707222
-+ScaleX: 3.000000
-+ScaleY: 2.200000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 1.937314 3.298670 5.532689
-+ScaleX: 2.000000
-+ScaleY: 3.200000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb02
-+Angles: 1.675515 1.867501 5.427969
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb12
-+Angles: 1.343902 1.588248 5.480330
-+ScaleX: 4.000000
-+ScaleY: 2.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 0.994837 2.146753 5.654862
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb02
-+Angles: 0.767944 3.961894 5.951568
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb18
-+Angles: 0.575958 0.000000 6.230820
-+ScaleX: 4.000000
-+ScaleY: 2.200000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb12
-+Angles: 0.645771 2.565632 0.191986
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
 
 #Asteroid Fields
+
 
 #Music
 
@@ -5173,4 +5496,3 @@ $Event Music: 7: Revelation
 $Briefing Music: None
 
 #End
-

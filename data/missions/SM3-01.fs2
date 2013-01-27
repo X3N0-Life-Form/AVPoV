@@ -14,17 +14,11 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 131072
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 1
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -38,8 +32,16 @@ $end_multi_text
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -48,7 +50,7 @@ $start_briefing
 $num_stages: 1
 $start_stage
 $multi_text
- XSTR("The $h Sathanas decimated our fleet at the Capella node. Your bomber wing will be scrambled to destroy the Juggernaut's forward beam turrets before it reaches Capella. You must destroy at least two turrets to give the $h Colossus a fighting chance. You will be armed with the new long-range Trebuchet missile and the Helios torpedo, the $f GTVA's most powerful tactical warhead.", 1496)
+ XSTR("The $h Sathanas decimated our fleet at the $b Capella node. Your bomber wing will be scrambled to destroy the $h Juggernaut's forward beam turrets before it reaches $b Capella. You must destroy at least two turrets to give the $f Colossus a fighting chance. You will be armed with the new long-range $y Trebuchet missile and the $y Helios torpedo, the $f GTVA's most powerful tactical warhead.", 1496)
 $end_multi_text
 $voice: SM301_MB_01.wav
 $camera_pos: -4850.209961, 25749.529297, -20032.982422
@@ -64,7 +66,7 @@ $Formula: ( true )
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTF Ulysses
+$class: GTNB Pharos
 $pos: -14395.752930, 430.993561, 10304.724609
 $label: Capella
 +id: 1
@@ -175,7 +177,7 @@ $Formula: ( and
    ( is-event-true-delay "1 of 4 down" 0 ) 
 )
 $Multi text
-    XSTR("You also helped to eliminate the Beleth. Consequently, our remaining forces in Gamma Draconis are on the verge of securing the system.  ", 1506)
+    XSTR("You also helped to eliminate the Beleth. Consequently, our remaining forces in Gamma Draconis are on the verge of securing the system.", 1506)
 $end_multi_text
 $Voice: SM301_DB_06.wav
 $Recommendation text:
@@ -187,7 +189,7 @@ $Formula: ( and
    ( is-event-true-delay "RTB Trigger" 0 ) 
 )
 $Multi text
-    XSTR("The destroyer Thebes, however, did not survive the engagement. Our sacrifice in this battle is immeasurable. ", 1507)
+    XSTR("The destroyer Thebes, however, did not survive the engagement. Our sacrifice in this battle is immeasurable.", 1507)
 $end_multi_text
 $Voice: SM301_DB_08.wav
 $Recommendation text:
@@ -208,7 +210,7 @@ $end_multi_text
 
 $Formula: ( has-departed-delay 0 "Beleth" ) 
 $Multi text
-    XSTR("Regrettably, you were unable to stop the Beleth. However, neutralizing the Sathanas must remain our highest priority. ", 1508)
+    XSTR("Regrettably, you were unable to stop the Beleth. However, neutralizing the Sathanas must remain our highest priority.", 1508)
 $end_multi_text
 $Voice: SM301_DB_07.wav
 $Recommendation text:
@@ -249,6 +251,7 @@ $Orientation:
 	-0.931615, 0.000000, -0.363446,
 	-0.026409, 0.997357, 0.067694,
 	0.362485, 0.072663, -0.929153
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -275,6 +278,7 @@ $Orientation:
 	-0.933479, 0.000000, -0.358633,
 	-0.025341, 0.997500, 0.065960,
 	0.357736, 0.070661, -0.931146
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -303,6 +307,7 @@ $Orientation:
 	-0.918919, 0.000000, -0.394447,
 	-0.028362, 0.997412, 0.066074,
 	0.393426, 0.071904, -0.916540
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -330,6 +335,7 @@ $Orientation:
 	-0.919483, 0.000000, -0.393131,
 	-0.027163, 0.997610, 0.063531,
 	0.392191, 0.069094, -0.917285
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -357,6 +363,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -431,7 +438,6 @@ $Determination: 10
 +Respawn priority: 0
 +Escort priority: 8
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Virgo 1		;! Object #5
@@ -442,6 +448,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -457,7 +464,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #6
@@ -468,6 +474,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -483,7 +490,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #7
@@ -494,6 +500,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -509,7 +516,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 4		;! Object #8
@@ -520,6 +526,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -535,7 +542,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 1		;! Object #9
@@ -546,6 +552,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -569,6 +576,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -592,6 +600,7 @@ $Orientation:
 	-0.936747, 0.000000, -0.350008,
 	-0.023693, 0.997706, 0.063411,
 	0.349205, 0.067692, -0.934598
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -619,6 +628,7 @@ $Orientation:
 	-0.935194, 0.000000, -0.354136,
 	-0.023562, 0.997784, 0.062223,
 	0.353351, 0.066535, -0.933122
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -646,6 +656,7 @@ $Orientation:
 	-0.928844, 0.000000, -0.370470,
 	-0.024947, 0.997730, 0.062546,
 	0.369629, 0.067338, -0.926736
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -673,6 +684,7 @@ $Orientation:
 	-0.926046, 0.000000, -0.377410,
 	-0.024876, 0.997825, 0.061039,
 	0.376589, 0.065913, -0.924033
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -700,6 +712,7 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -727,6 +740,7 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -753,6 +767,7 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -779,6 +794,7 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -805,6 +821,7 @@ $Orientation:
 	-0.870473, -0.385370, 0.306216,
 	-0.421681, 0.904752, -0.060081,
 	-0.253896, -0.181424, -0.950065
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 50 ) )
@@ -845,13 +862,16 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( < ( hits-left "Phoenicia" ) 4 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
++Flags: ( "cargo-known" "beam-protect-ship" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 1000
+$Texture Replace:
++old: nameplate
++new: GTD_Phoenicia
 
 $Name: Delta 1		;! Object #20
 $Class: GVB Bakha
@@ -861,6 +881,7 @@ $Orientation:
 	-0.955612, 0.000000, -0.294628,
 	-0.021222, 0.997402, 0.068833,
 	0.293863, 0.072030, -0.953130
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -889,6 +910,7 @@ $Orientation:
 	-0.943793, 0.000000, -0.330537,
 	-0.023365, 0.997498, 0.066716,
 	0.329710, 0.070689, -0.941432
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -916,6 +938,7 @@ $Orientation:
 	-0.955778, 0.000000, -0.294090,
 	-0.020807, 0.997494, 0.067621,
 	0.293353, 0.070750, -0.953383
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -943,6 +966,7 @@ $Orientation:
 	-0.942794, 0.000000, -0.333375,
 	-0.023116, 0.997593, 0.065372,
 	0.332573, 0.069339, -0.940525
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -970,6 +994,7 @@ $Orientation:
 	-0.931779, 0.228279, 0.282270,
 	0.060956, 0.864891, -0.498244,
 	-0.357872, -0.447047, -0.819803
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1021,6 +1046,7 @@ $Orientation:
 	0.980157, 0.000000, -0.198221,
 	0.000000, 1.000000, 0.000000,
 	0.198221, 0.000000, 0.980157
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1091,6 +1117,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1106,7 +1133,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 3		;! Object #27
@@ -1117,6 +1143,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1132,7 +1159,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 4		;! Object #28
@@ -1143,6 +1169,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1158,7 +1185,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 2		;! Object #29
@@ -1169,6 +1195,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1184,7 +1211,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Epsilon 1		;! Object #30
@@ -1195,6 +1221,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1219,6 +1246,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1243,6 +1271,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1267,6 +1296,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2904,7 +2934,7 @@ $Formula: ( is-subsystem-destroyed-delay
 
 $Type: Secondary
 +Name: XXX Beam 3
-$MessageNew:  XSTR("Destroy Beleth primary beam turret 2", 1520)
+$MessageNew:  XSTR("Destroy Beleth primary beam turret 3", 1520)
 $end_multi_text
 $Formula: ( is-subsystem-destroyed-delay 
    "Beleth" 
@@ -2922,9 +2952,9 @@ $Formula: ( is-destroyed-delay 0 "Beleth" )
 
 #Waypoints		;! 3 lists total
 
-
 $Jump Node: -2319.147461, 0.000293, 157.318573
 $Jump Node Name: Capella
+
 $Name: Jump Node
 $List: (		;! 1 points in list
 	( -2350.842041, 0.000597, 197.803833 )
@@ -2943,11 +2973,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 36 total
 
-
 $Name: HEC Bye
 $Team: -1
 $MessageNew:  XSTR("This is the Phoenicia. We've got a hull breach on twelve decks. 25% of our crew is down! Authorization or not, we're getting out of here, Command!", 1522)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: sm3-01_ph_01.wav
 
@@ -2955,6 +2985,7 @@ $Name: First one down
 $Team: -1
 $MessageNew:  XSTR("Good. One down and three to go. Keep it up, pilot, and keep moving.", 1523)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_01.wav
 
@@ -2962,6 +2993,7 @@ $Name: 2 of 4
 $Team: -1
 $MessageNew:  XSTR("You're halfway there, Alpha. Don't give up!", 1524)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_02.wav
 
@@ -2969,6 +3001,7 @@ $Name: 3 of 4
 $Team: -1
 $MessageNew:  XSTR("One more turret to disable!", 1525)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_03.wav
 
@@ -2976,6 +3009,7 @@ $Name: 4 of 4
 $Team: -1
 $MessageNew:  XSTR("Excellent. Continue with your attack, pilot. The more turrets we eliminate, the better our chances. Your work is done, so do not put yourself at unnecessary risk.", 1526)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_04.wav
 
@@ -2983,6 +3017,7 @@ $Name: Bonus
 $Team: -1
 $MessageNew:  XSTR("Impressive work, Alpha 1. The odds for the Colossus have improved dramatically.", 1527)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_05.wav
 
@@ -2990,6 +3025,7 @@ $Name: des dies
 $Team: -1
 $MessageNew:  XSTR("We have lost the Phoenicia! Repeat! We have lost the Phoenicia!", 1528)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_06.wav
 
@@ -2997,6 +3033,7 @@ $Name: Delta Wing Down
 $Team: -1
 $MessageNew:  XSTR("The Shivans wiped out Delta wing. It's all up to you, Alpha.", 1529)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_07.wav
 
@@ -3004,6 +3041,7 @@ $Name: HEC- Intro
 $Team: -1
 $MessageNew:  XSTR("--Command, I will not jeopardize the lives of my crew! Either you deploy more ships now, or we will withdraw! We cannot hold this position without additional fleet assets!", 1530)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: sm3-01_ph_02.wav
 
@@ -3011,6 +3049,7 @@ $Name: COM- INTRO
 $Team: -1
 $MessageNew:  XSTR("Alpha wing, your mission is to assist the Phoenicia. We must hold this node against the Shivan advance. Your objective--", 1531)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_08.wav
 
@@ -3018,6 +3057,7 @@ $Name: COM- Intro 2
 $Team: -1
 $MessageNew:  XSTR("Alpha, your objective is to destroy the juggernaut's forward beam cannons. Target the tip of each of the four arms of the Sathanas. ", 1532)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_09.wav
 
@@ -3033,6 +3073,7 @@ $Name: COM- INTRO 3
 $Team: -1
 $MessageNew:  XSTR("Neither will the Colossus if you fail your mission! You have your orders! Do it now!", 1534)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_10.wav
 
@@ -3056,6 +3097,7 @@ $Name: COM- WD1
 $Team: -1
 $MessageNew:  XSTR("Well done, Alpha. The Thebes will be in system momentarily to secure the node. Rearm and repair quickly. More enemy warships are inbound. Gamma wing deployed.", 1537)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_11.wav
 
@@ -3063,6 +3105,7 @@ $Name: COM-WD2
 $Team: -1
 $MessageNew:  XSTR("The Shivans will attempt to consolidate their gains in Gamma Draconis. We must hold them off at all costs. Failure is not an option here.", 1538)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_12.wav
 
@@ -3070,13 +3113,15 @@ $Name: XXX-Hello
 $Team: -1
 $MessageNew:  XSTR("This is the Thebes. We have emerged within a large debris field, Command. ", 1539)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Large Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: sm3-01_th_01.wav
 
 $Name: COM- deb 1
 $Team: -1
 $MessageNew:  XSTR("Alpha wing just resolved a tactical engagement, Thebes. Recon has sited a Demon-class destroyer, designation Beleth. The warship will be upon us momentarily.", 1540)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_13.wav
 
@@ -3084,6 +3129,7 @@ $Name: COM deb 2
 $Team: -1
 $MessageNew:  XSTR("Alpha and Gamma, you will be tasked with destroying the Demon's beam cannons. The Thebes will provide fire support. Reinforcements are standing by.", 1541)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_14.wav
 
@@ -3091,6 +3137,7 @@ $Name: G1- here they are
 $Team: -1
 $MessageNew:  XSTR("A Demon-class destroyer has jumped in. Command is well-informed.", 1542)
 $end_multi_text
++Persona: Wingman 7
 +AVI Name: Head-VP2
 +Wave Name: sm3-01_g1_01.wav
 
@@ -3098,6 +3145,7 @@ $Name: A2- if alive
 $Team: -1
 $MessageNew:  XSTR("Then they must know this mission is suicide.", 1543)
 $end_multi_text
++Persona: Wingman 6
 +AVI Name: Head-VP1
 +Wave Name: sm3-01_a2_03.wav
 
@@ -3105,6 +3153,7 @@ $Name: COM- WD1a
 $Team: -1
 $MessageNew:  XSTR("Your performance was less than satisfactory, pilot. The Thebes will be in system momentarily to secure the node. Rearm and repair quickly. More enemy warships are inbound. Gamma wing deployed.", 1544)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_15.wav
 
@@ -3112,6 +3161,7 @@ $Name: COM V Mop
 $Team: -1
 $MessageNew:  XSTR("Excellent work, pilots. We have destroyed the Beleth. Secure the area and return to base. We need you in the Capella system.", 1545)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_16.wav
 
@@ -3119,6 +3169,7 @@ $Name: COM V No Mop
 $Team: -1
 $MessageNew:  XSTR("Excellent work, pilots. Return to base pronto. We need you in the Capella system.", 1546)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_17.wav
 
@@ -3126,6 +3177,7 @@ $Name: COM- Good work
 $Team: -1
 $MessageNew:  XSTR("Good work.", 1547)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_18.wav
 
@@ -3133,6 +3185,7 @@ $Name: RTB
 $Team: -1
 $MessageNew:  XSTR("Return to base, pilots. We need you to assist the Colossus in the Capella system.", 1548)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_19.wav
 
@@ -3140,6 +3193,7 @@ $Name: COM- Intro 2a
 $Team: -1
 $MessageNew:  XSTR("The Phoenicia will hold back the Sathanas until you complete your objectives.", 1549)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_20.wav
 
@@ -3147,6 +3201,7 @@ $Name: COM 1 of 3
 $Team: -1
 $MessageNew:  XSTR("We have neutralized the first beam cannon!", 1550)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_21.wav
 
@@ -3154,6 +3209,7 @@ $Name: COM 2 of 3
 $Team: -1
 $MessageNew:  XSTR("Good work. The Demon has only one beam turret operational.", 1551)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_22.wav
 
@@ -3161,6 +3217,7 @@ $Name: COM 3 of 3
 $Team: -1
 $MessageNew:  XSTR("We've destroyed the last of the main guns. Excellent job. Concentrate now on the anti-fighter beams and flak cannons.", 1552)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_23.wav
 
@@ -3168,6 +3225,7 @@ $Name: COM WARNING
 $Team: -1
 $MessageNew:  XSTR("The Sathanas is engaging its subspace drives. All units, get out of the way now!", 1553)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_24.wav
 
@@ -3175,6 +3233,7 @@ $Name: COM- NoTurrets
 $Team: -1
 $MessageNew:  XSTR("You failed this mission, pilot. The Sathanas will be at full strength when it confronts the Colossus. ", 1554)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_25.wav
 
@@ -3182,6 +3241,7 @@ $Name: COM- Failure
 $Team: -1
 $MessageNew:  XSTR("The Beleth has entered the Capella system! We have a massacre on our hands, pilot! Your incompetence has endangered millions of innocent lives! Return to base!", 1555)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_26.wav
 
@@ -3189,6 +3249,7 @@ $Name: COM- F Flak war
 $Team: -1
 $MessageNew:  XSTR("The forward flak cannons are down. Good work.", 1556)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_27.wav
 
@@ -3196,6 +3257,7 @@ $Name: COM- Beleth escape
 $Team: -1
 $MessageNew:  XSTR("The Beleth is engaging its jump drive! All units, stand clear!", 1557)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-01_ac_29.wav
 
@@ -3208,221 +3270,150 @@ $Num times: 1
 +No Messages: ( )
 +Yes Messages: ( )
 
-#Background bitmaps		;! 34 total
+#Background bitmaps		;! 22 total
 
-$Num stars: 654
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunWhite
-+Angles: 0.209439 0.000000 5.759582
-+Scale: 1.000000
-$Starbitmap: dneb04
-+Angles: 0.000000 2.321286 0.000000
-+ScaleX: 4.000000
-+ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: dneb05
-+Angles: 0.401425 0.663225 0.139626
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 0.820304 4.834558 0.000000
-+ScaleX: 2.000000
+$Sun: SunEtamin
++Angles: 5.637409 0.000000 5.323250
++Scale: 4.000000
+$Starbitmap: NebulB3-Main
++Angles: 1.553342 0.000000 1.047197
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 0.000000 1.308996 0.558505
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb04
-+Angles: 6.021381 0.890117 5.794488
-+ScaleX: 4.000000
+$Starbitmap: NebulG9-Whisp
++Angles: 1.553342 3.281216 1.082103
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.951568 2.740165 5.602502
+$Starbitmap: NebulB5-Whisp
++Angles: 1.570795 0.000000 1.221730
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 1.745328 0.767944 0.959930
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 2.373646 1.117010 1.343902
++ScaleX: 3.000000
++ScaleY: 1.400000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 3.368483 5.148717 1.274089
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 0.506145 0.383972 1.239183
++ScaleX: 4.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 0.209439 0.069813 1.204276
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 1.378809 1.518435 1.500982
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 0.750491 0.959930 1.466075
++ScaleX: 5.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB1-Main
++Angles: 5.235984 0.000000 5.934115
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb05
-+Angles: 0.000000 0.000000 5.951568
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 5.881755 5.009091 5.532689
+$Starbitmap: NebulB5-Whisp
++Angles: 5.113811 0.000000 6.038835
 +ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb04
-+Angles: 5.585049 0.383972 5.393063
-+ScaleX: 2.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 0.558505 0.628318 6.126101
+$Starbitmap: NebulB11-Whisp
++Angles: 5.253437 6.126101 5.759582
 +ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 5.218530 0.000000 5.218530
-+ScaleX: 2.000000
-+ScaleY: 2.000000
++ScaleY: 1.200000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb05
-+Angles: 5.009091 5.585049 5.218530
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb04
-+Angles: 5.585049 5.585049 0.925024
-+ScaleX: 2.000000
+$Starbitmap: NebulB12-Whisp
++Angles: 5.305797 2.757618 5.934115
++ScaleX: 4.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.777035 2.321286 0.802851
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 6.021381 4.468040 0.628318
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb05
-+Angles: 5.585049 0.575958 0.925024
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb04
-+Angles: 5.358157 2.740165 0.628318
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.131264 5.951568 0.506145
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.991638 0.855211 0.418879
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb05
-+Angles: 4.764745 1.692968 0.191986
-+ScaleX: 4.000000
-+ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: dneb04
-+Angles: 5.253437 3.455749 1.117010
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.078904 1.256636 1.308996
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.886918 1.867501 1.553342
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb05
-+Angles: 3.508109 0.383972 1.378809
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb04
-+Angles: 3.385936 1.570795 1.169370
+$Starbitmap: NebulB2-Main
++Angles: 5.585049 2.513272 5.323250
 +ScaleX: 4.000000
 +ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 4.799652 1.797688 1.815141
-+ScaleX: 3.000000
-+ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.886918 4.276053 2.076940
-+ScaleX: 2.000000
+$Starbitmap: NebulG5-Whisp
++Angles: 5.619956 6.195914 5.358157
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 5.619956 0.000000 5.305797
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 0.000000 5.619956 0.000000
++ScaleX: 13.000000
++ScaleY: 10.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 1.570795 1.343902 0.000000
++ScaleX: 10.000000
++ScaleY: 8.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 0.000000 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 6.073741 3.089230 0.209439
++ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb05
-+Angles: 4.345866 0.366519 2.216566
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulB2-Main
++Angles: 6.195914 1.727875 2.513272
++ScaleX: 9.000000
++ScaleY: 9.000000
 +DivX: 1
-+DivY: 1
-$Starbitmap: dneb04
-+Angles: 3.874628 1.570795 2.408552
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 4.031707 0.558505 0.959930
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.345866 1.797688 0.715584
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb04
-+Angles: 4.520399 2.146753 0.541052
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 3.577922 0.366519 0.663225
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 3.961894 1.570795 0.506145
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
 +DivY: 1
 
 #Asteroid Fields
+
 
 #Music
 

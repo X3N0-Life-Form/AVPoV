@@ -10,26 +10,17 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("Alpha wing of the 203rd must defend the GTD Aquitaine as it repairs its engines near the Gamma Draconis jump node in the nebula.
-", 1702)
+ XSTR("Alpha wing of the 203rd must defend the GTD Aquitaine as it repairs its engines near the Gamma Draconis jump node in the nebula.", 1702)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3400.000000
-
 +Storm: s_standard
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -43,8 +34,15 @@ $end_multi_text
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -71,7 +69,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -1094.627197, -0.000034, 2940.668213
-$label: Aquitaine
+$label: GTD Aquitaine
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -93,7 +91,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$f Admiral $f Petrarch reports that his gunners destroyed the $h Urobach and all but one of the fighter wings. With the entire $r Shivan armada now heading for $g Terran-Vasudan space, we must get the $f Aquitaine out as soon as possible. Your mission is to defend the $f Aquitaine until its propulsion systems are restored.", 1704)
+ XSTR("$w Admiral $w Petrarch reports that his gunners destroyed the $h Urobach and all but one of the fighter wings. With the entire Shivan armada now heading for Terran-Vasudan space, we must get the $f Aquitaine out as soon as possible. Your mission is to defend the $f Aquitaine until its propulsion systems are restored.", 1704)
 $end_multi_text
 $voice: SM305_MB_02.wav
 $camera_pos: -5191.928711, 2714.432617, 2955.241943
@@ -111,7 +109,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -1094.627197, -0.000034, 2940.668213
-$label: Aquitaine
+$label: GTD Aquitaine
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -133,7 +131,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("A damage control team is currently en route from $b Gamma $b Draconis. The $f GTC $f Agrippa, an Aeolus-class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
+ XSTR("A damage control team is currently en route from $b Gamma $b Draconis. The $f GTC $f Agrippa, an $y Aeolus -class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
 $end_multi_text
 $voice: SM305_MB_03.wav
 $camera_pos: -5912.104980, 3232.332764, 3762.261475
@@ -151,7 +149,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -1094.627197, -0.000034, 2940.668213
-$label: Aquitaine
+$label: GTD Aquitaine
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -175,7 +173,7 @@ $type: 18
 $team: Friendly
 $class: GTC Aeolus
 $pos: 637.788757, -1067.399658, 4927.394531
-$label: Agrippa
+$label: GTC Agrippa
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -197,7 +195,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the $r Shivans sufficient time to launch additional wings and threaten the $f Aquitaine.", 1706)
+ XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the Shivans sufficient time to launch additional wings and threaten the $f Aquitaine.", 1706)
 $end_multi_text
 $voice: SM305_MB_04.wav
 $camera_pos: -11255.395508, 5561.112793, 5206.678223
@@ -215,7 +213,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -3103.852539, 0.000497, 4851.168457
-$label: Aquitaine
+$label: GTD Aquitaine
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -342,6 +340,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -358,7 +357,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aquitaine		;! Object #1
@@ -369,6 +367,7 @@ $Orientation:
 	0.952429, 0.304711, -0.005498,
 	-0.289583, 0.910471, 0.295274,
 	0.094979, -0.279635, 0.955397
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", 13)
@@ -458,6 +457,9 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 1000
+$Texture Replace:
++old: nameplate
++new: GTD_Aquitaine
 
 $Name: Alpha 2		;! Object #2
 $Class: GVF Serapis
@@ -467,6 +469,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -484,8 +487,8 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
++Persona Index: 6
 
 $Name: Alpha 3		;! Object #3
 $Class: GVF Serapis
@@ -495,6 +498,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -512,7 +516,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 4		;! Object #4
@@ -523,6 +526,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -540,7 +544,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 1		;! Object #5
@@ -551,6 +554,7 @@ $Orientation:
 	-0.705234, 0.000000, -0.708975,
 	0.000000, 1.000000, 0.000000,
 	0.708975, 0.000000, -0.705234
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -567,7 +571,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 2		;! Object #6
@@ -578,6 +581,7 @@ $Orientation:
 	0.999644, 0.000000, -0.026688,
 	0.000000, 1.000000, 0.000000,
 	0.026688, 0.000000, 0.999644
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -594,7 +598,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 3		;! Object #7
@@ -605,6 +608,7 @@ $Orientation:
 	-0.575716, 0.000000, 0.817650,
 	0.000000, 1.000000, 0.000000,
 	-0.817650, 0.000000, -0.575716
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -621,7 +625,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 4		;! Object #8
@@ -632,6 +635,7 @@ $Orientation:
 	-0.998793, 0.000000, -0.049120,
 	0.000000, 1.000000, 0.000000,
 	0.049120, 0.000000, -0.998793
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -648,7 +652,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 5		;! Object #9
@@ -659,6 +662,7 @@ $Orientation:
 	0.394935, 0.000000, -0.918709,
 	0.000000, 1.000000, 0.000000,
 	0.918709, 0.000000, 0.394935
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -675,7 +679,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 6		;! Object #10
@@ -686,6 +689,7 @@ $Orientation:
 	0.145990, 0.000000, -0.989286,
 	0.989262, 0.006904, 0.145987,
 	0.006830, -0.999976, 0.001008
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -702,7 +706,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Abaddon		;! Object #11
@@ -713,6 +716,7 @@ $Orientation:
 	-0.101503, 0.963558, 0.247493,
 	0.365624, 0.267499, -0.891496,
 	-0.925212, 0.000000, -0.379452
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -722,10 +726,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
 +Subsystem: turret02
-+Primary Banks: ( "" )
 +Subsystem: turret03
 +Subsystem: turret04
-+Sbank Ammo: ( 0 )
 +Subsystem: turret05
 +Primary Banks: ( "MRed" )
 +Subsystem: turret06
@@ -763,6 +765,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -789,6 +792,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -815,6 +819,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -841,6 +846,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -867,6 +873,7 @@ $Orientation:
 	-0.994634, 0.000000, -0.103455,
 	-0.033555, 0.945940, 0.322601,
 	0.097862, 0.324341, -0.940864
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
@@ -916,6 +923,9 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTC_Agrippa
 
 $Name: Argo		;! Object #17
 $Class: GTT Argo
@@ -925,6 +935,7 @@ $Orientation:
 	-0.957561, 0.000000, -0.288232,
 	-0.062776, 0.975994, 0.208555,
 	0.281313, 0.217798, -0.934573
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Aquitaine" "Frontside dock" "Dock01" 89 ) )
 $Cargo 1:  XSTR("Repair Crew", 1711)
@@ -954,6 +965,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -983,6 +995,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1012,6 +1025,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1038,6 +1052,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1064,6 +1079,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1090,6 +1106,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1116,6 +1133,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1142,6 +1160,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1168,6 +1187,7 @@ $Orientation:
 	0.020293, 0.000000, -0.999794,
 	0.000000, 1.000000, 0.000000,
 	0.999794, 0.000000, 0.020293
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1194,6 +1214,7 @@ $Orientation:
 	-0.071097, 0.000000, -0.997469,
 	0.000000, 1.000000, 0.000000,
 	0.997469, 0.000000, -0.071097
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1220,6 +1241,7 @@ $Orientation:
 	0.061894, 0.000000, -0.998083,
 	0.000000, 1.000000, 0.000000,
 	0.998083, 0.000000, 0.061894
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1246,6 +1268,7 @@ $Orientation:
 	-0.016922, 0.000000, -0.999857,
 	0.000000, 1.000000, 0.000000,
 	0.999857, 0.000000, -0.016922
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1272,6 +1295,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1296,6 +1320,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1320,6 +1345,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1344,6 +1370,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1368,6 +1395,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1392,6 +1420,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1408,7 +1437,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 2		;! Object #36
@@ -1419,6 +1447,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1435,7 +1464,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 3		;! Object #37
@@ -1446,6 +1474,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1462,7 +1491,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 4		;! Object #38
@@ -1473,6 +1501,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1489,7 +1518,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Taurus 1		;! Object #39
@@ -1500,6 +1528,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1528,6 +1557,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1556,6 +1586,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1584,6 +1615,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1612,6 +1644,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1626,7 +1659,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 2		;! Object #44
@@ -1637,6 +1669,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1651,7 +1684,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 3		;! Object #45
@@ -1662,6 +1694,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1676,7 +1709,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Gemini 1		;! Object #46
@@ -1687,6 +1719,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1710,6 +1743,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1733,6 +1767,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1756,6 +1791,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1782,6 +1818,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1808,6 +1845,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1834,6 +1872,7 @@ $Orientation:
 	-0.246632, 0.000000, 0.969109,
 	0.000000, 1.000000, 0.000000,
 	-0.969109, 0.000000, -0.246632
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1860,6 +1899,7 @@ $Orientation:
 	-0.153019, 0.000000, -0.988223,
 	0.000000, 1.000000, 0.000000,
 	0.988223, 0.000000, -0.153019
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1887,6 +1927,7 @@ $Orientation:
 	-0.163552, 0.000000, -0.986535,
 	0.000000, 1.000000, 0.000000,
 	0.986535, 0.000000, -0.163552
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1914,6 +1955,7 @@ $Orientation:
 	-0.102110, 0.000000, -0.994773,
 	0.000000, 1.000000, 0.000000,
 	0.994773, 0.000000, -0.102110
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1941,6 +1983,7 @@ $Orientation:
 	-0.099617, 0.000000, -0.995026,
 	0.000000, 1.000000, 0.000000,
 	0.995026, 0.000000, -0.099617
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1968,6 +2011,7 @@ $Orientation:
 	-0.088087, 0.000000, -0.996113,
 	0.000000, 1.000000, 0.000000,
 	0.996113, 0.000000, -0.088087
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1995,6 +2039,7 @@ $Orientation:
 	-0.187770, 0.000000, -0.982213,
 	0.000000, 1.000000, 0.000000,
 	0.982213, 0.000000, -0.187770
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2021,6 +2066,7 @@ $Orientation:
 	-0.158521, 0.000000, -0.987356,
 	0.000000, 1.000000, 0.000000,
 	0.987356, 0.000000, -0.158521
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2047,6 +2093,7 @@ $Orientation:
 	-0.167005, 0.000000, -0.985956,
 	0.000000, 1.000000, 0.000000,
 	0.985956, 0.000000, -0.167005
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2073,6 +2120,7 @@ $Orientation:
 	-0.133267, 0.000000, -0.991080,
 	0.000000, 1.000000, 0.000000,
 	0.991080, 0.000000, -0.133267
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2099,6 +2147,7 @@ $Orientation:
 	-0.105850, 0.000000, -0.994382,
 	0.000000, 1.000000, 0.000000,
 	0.994382, 0.000000, -0.105850
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2125,6 +2174,7 @@ $Orientation:
 	-0.577973, 0.000000, -0.816056,
 	0.000000, 1.000000, 0.000000,
 	0.816056, 0.000000, -0.577973
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2152,6 +2202,7 @@ $Orientation:
 	-0.597094, 0.000000, -0.802172,
 	0.000000, 1.000000, 0.000000,
 	0.802172, 0.000000, -0.597094
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2179,6 +2230,7 @@ $Orientation:
 	-0.566693, 0.000000, -0.823929,
 	0.000000, 1.000000, 0.000000,
 	0.823929, 0.000000, -0.566693
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2206,6 +2258,7 @@ $Orientation:
 	-0.666276, 0.000000, -0.745705,
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2233,6 +2286,7 @@ $Orientation:
 	-0.666276, 0.000000, -0.745705,
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2260,6 +2314,7 @@ $Orientation:
 	-0.666276, 0.000000, -0.745705,
 	0.000000, 1.000000, 0.000000,
 	0.745705, 0.000000, -0.666276
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2287,6 +2342,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2304,7 +2360,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Beta 2		;! Object #70
@@ -2315,6 +2370,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2332,7 +2388,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Beta 3		;! Object #71
@@ -2343,6 +2398,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2360,7 +2416,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Beta 4		;! Object #72
@@ -2371,6 +2426,7 @@ $Orientation:
 	0.696707, 0.000000, 0.717356,
 	0.000000, 1.000000, 0.000000,
 	-0.717356, 0.000000, 0.696707
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2388,7 +2444,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 #Wings		;! 15 total
@@ -3628,9 +3683,9 @@ $Formula: ( has-docked-delay
 
 #Waypoints		;! 3 lists total
 
-
 $Jump Node: -2397.633057, -1188.185791, 6945.157715
-$Jump Node Name: Jump Node 0
+$Jump Node Name: Gamma Draconis
+
 $Name: Waypoint path 1
 $List: (		;! 1 points in list
 	( -2383.983887, -1188.185913, 6860.926758 )
@@ -3649,11 +3704,11 @@ $List: (		;! 2 points in list
 
 #Messages		;! 32 total
 
-
 $Name: Aquitaine Online
 $Team: -1
 $MessageNew:  XSTR("Command, this is the Aquitaine. Engines are back on line. Setting course for the Gamma Draconis jump node. ETA four minutes.", 1715)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_01.wav
 
@@ -3661,6 +3716,7 @@ $Name: Transport Ready
 $Team: -1
 $MessageNew:  XSTR("Transport will emerge from subspace momentarily.", 1716)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_02.wav
 
@@ -3668,6 +3724,7 @@ $Name: Noncritical Personnel
 $Team: -1
 $MessageNew:  XSTR("Hull integrity is dropping. We must evacuate all non-essential personnel. Stand by to deploy escape pods.", 1717)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_03.wav
 
@@ -3675,6 +3732,7 @@ $Name: Moloch Arrives
 $Team: -1
 $MessageNew:  XSTR("The SCv Abaddon has emerged from subspace.", 1718)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_04.wav
 
@@ -3690,6 +3748,7 @@ $Name: Megare Maras
 $Team: -1
 $MessageNew:  XSTR("Negate the Maras, Alpha. Secure this area on the double.", 1720)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_01.wav
 
@@ -3697,6 +3756,7 @@ $Name: Thank You
 $Team: -1
 $MessageNew:  XSTR("Thank you for your assistance, Alpha wing. The Argo should be here in under five minutes.", 1721)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_05.wav
 
@@ -3704,6 +3764,7 @@ $Name: Do Or Die
 $Team: -1
 $MessageNew:  XSTR("Aquitaine here. That's the last of the escape pods. It's do or die for the rest of us.", 1722)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_06.wav
 
@@ -3711,6 +3772,7 @@ $Name: All Surviving Pods
 $Team: -1
 $MessageNew:  XSTR("All surviving escape pods have jumped out safely.", 1723)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_02.wav
 
@@ -3718,6 +3780,7 @@ $Name: All Escape Pods
 $Team: -1
 $MessageNew:  XSTR("All escape pods have jumped out safely.", 1724)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_03.wav
 
@@ -3725,6 +3788,7 @@ $Name: Take Care
 $Team: -1
 $MessageNew:  XSTR("Alpha, this is the Aquitaine. You take care of the fighters, we'll worry about the Abaddon. Destroy its beam turrets if you get the opportunity.", 1725)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_07.wav
 
@@ -3732,6 +3796,7 @@ $Name: Abaddon Nullified
 $Team: -1
 $MessageNew:  XSTR("We have nullified the Abaddon!", 1726)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_04.wav
 
@@ -3739,6 +3804,7 @@ $Name: Agrippa Position
 $Team: -1
 $MessageNew:  XSTR("This is the GTC Agrippa. We are now in position, Command.", 1727)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM3-05_Ag_01.wav
 
@@ -3746,6 +3812,7 @@ $Name: Agrippa Under Attack
 $Team: -1
 $MessageNew:  XSTR("Agrippa here! We're under attack! You need to deploy more fighters, Command!", 1728)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM3-05_Ag_02.wav
 
@@ -3753,6 +3820,7 @@ $Name: All We Can
 $Team: -1
 $MessageNew:  XSTR("We're doing all we can, Agrippa. Hold your position until the Argo has docked.", 1729)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_05.wav
 
@@ -3760,6 +3828,7 @@ $Name: Good Agrippa
 $Team: -1
 $MessageNew:  XSTR("Good work. Agrippa, we need to pull you out. Proceed immediately to the Gamma Draconis node.", 1730)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_06.wav
 
@@ -3767,6 +3836,7 @@ $Name: Roger Agrippa
 $Team: -1
 $MessageNew:  XSTR("Roger that, Command. Good luck, Aquitaine. Agrippa out.", 1731)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM3-05_Ag_03.wav
 
@@ -3774,6 +3844,7 @@ $Name: Argo Almost There
 $Team: -1
 $MessageNew:  XSTR("Argo transport here. Now initiating docking sequence. We're almost there, Aquitaine", 1732)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: SM3-05_Ar_01.wav
 
@@ -3781,6 +3852,7 @@ $Name: Argo Under Attack
 $Team: -1
 $MessageNew:  XSTR("The Argo is under attack! Alpha, cover that transport or we'll lose the Aquitaine!", 1733)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_Ar_02.wav
 
@@ -3788,6 +3860,7 @@ $Name: Argo Docked
 $Team: -1
 $MessageNew:  XSTR("This is the Argo. We have secured our dock point. Materials are now being transferred to the Aquitaine.", 1734)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: SM3-05_Ar_03.wav
 
@@ -3795,6 +3868,7 @@ $Name: Argo Lost
 $Team: -1
 $MessageNew:  XSTR("We've lost the Argo! Repeat! We've lost the Argo!", 1735)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_07.wav
 
@@ -3802,6 +3876,7 @@ $Name: Status Aquitaine
 $Team: -1
 $MessageNew:  XSTR("What's your status, Aquitaine?", 1736)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_08.wav
 
@@ -3809,6 +3884,7 @@ $Name: ETA
 $Team: -1
 $MessageNew:  XSTR("Command, we are 2,000 meters from the Gamma Draconis node. ETA one minute.", 1737)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_09.wav
 
@@ -3816,6 +3892,7 @@ $Name: Repairs
 $Team: -1
 $MessageNew:  XSTR("Repairs are 50% complete. Core module has been replaced. We are now running diagnostics.", 1738)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_10.wav
 
@@ -3823,6 +3900,7 @@ $Name: Aquitaine Jump
 $Team: -1
 $MessageNew:  XSTR("Aquitaine here. Initiating jump drive sequence. See you in Gamma Draconis, Alpha. Thanks for your help.", 1739)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_11.wav
 
@@ -3830,6 +3908,7 @@ $Name: Well Done
 $Team: -1
 $MessageNew:  XSTR("Well done, Alpha. Return to base.", 1740)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_09.wav
 
@@ -3837,6 +3916,7 @@ $Name: Aquitaine In Pain
 $Team: -1
 $MessageNew:  XSTR("This is the Aquitaine. Hull integrity has fallen below critical! We need more fighters out here, or we're not going to make it, Command!", 1741)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_12.wav
 
@@ -3844,6 +3924,7 @@ $Name: Aquitaine Destroyed
 $Team: -1
 $MessageNew:  XSTR("We have lost the Aquitaine! All units return to base! Mission aborted!", 1742)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_10.wav
 
@@ -3851,6 +3932,7 @@ $Name: Cavalry
 $Team: -1
 $MessageNew:  XSTR("We have deployed reinforcements, Alpha. Stand by.", 1743)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-05_AC_11.wav
 
@@ -3858,6 +3940,7 @@ $Name: Repair Status 1
 $Team: -1
 $MessageNew:  XSTR("We've stabilized the engines, but we need more time here, Command.", 1744)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_13.wav
 
@@ -3865,6 +3948,7 @@ $Name: Repair Status 2
 $Team: -1
 $MessageNew:  XSTR("Aquitaine here. Engines will be on line in two minutes.", 1745)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_14.wav
 
@@ -3880,12 +3964,10 @@ $end_multi_text
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 500
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 +Neb2: nbackpurp1
-
 +Neb2Flags: 63
-
 
 $Bitmap List:
 $Sun: SunBlue
@@ -3893,6 +3975,7 @@ $Sun: SunBlue
 +Scale: 1.000000
 
 #Asteroid Fields
+
 
 #Music
 

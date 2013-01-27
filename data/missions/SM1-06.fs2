@@ -14,21 +14,13 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3000.000000
-
 +Storm: none
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -42,8 +34,15 @@ $end_multi_text
 +SquadReassignName: 107th Ravens
 +SquadReassignLogo: ravens.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -52,7 +51,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("With recent victories on the civil war front, the GTVA Security Council has authorized the deployment of two Deimos-class corvettes into the nebular theatre of operations. The $f Lysander and the $f Actium crossed the subspace portal in Gamma Draconis at 2335 hours and joined up with the $f Aquitaine's battle group.", 817)
+ XSTR("With recent victories on the civil war front, the $y GTVA $f Security $f Council has authorized the deployment of two $y Deimos -class corvettes into the nebular theatre of operations. The $f Lysander and the $f Actium crossed the subspace portal in $b Gamma $b Draconis at 2335 hours and joined up with the $f Aquitaine's battle group.", 817)
 $end_multi_text
 $voice: SM106_MB_01.wav
 $camera_pos: 0.831794, 2924.856934, -1063.638550
@@ -70,7 +69,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 550.500000, 0.000000, 1256.000000
-$label: Actium
+$label: GTCv Actium
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -82,7 +81,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -655.599976, -314.100098, 1284.400024
-$label: Lysander
+$label: GTCv Lysander
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -92,7 +91,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("On their last sortie, $f Epsilon and $f Iota wings encountered two Shivan warships: a Rakshasa-class cruiser designated the $r Iblis and a Lilith-class cruiser designated the $r Asuras. Admiral Petrarch has instructed our corvettes to hunt down and destroy these vessels. The 107th will provide fighter cover.", 818)
+ XSTR("On their last sortie, $f Epsilon and $f Iota wings encountered two Shivan warships: a $y Rakshasa -class cruiser designated the $r Iblis and a $y Lilith -class cruiser designated the $r Asuras. $w Admiral $w Petrarch has instructed our corvettes to hunt down and destroy these vessels. The $w 107th will provide fighter cover.", 818)
 $end_multi_text
 $voice: SM106_MB_02.wav
 $camera_pos: 9.592987, 10892.172852, -4462.078125
@@ -110,7 +109,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 1745.406738, 0.000267, 1317.873047
-$label: Actium
+$label: GTCv Actium
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -122,7 +121,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -1972.111938, -314.100433, 1269.732666
-$label: Lysander
+$label: GTCv Lysander
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -156,7 +155,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Alpha wing, your mission is to escort the Lysander and the Actium as they carry out this assault. Your first priority will be to eliminate all hostile fighters and bombers. Only then will you assist the corvettes with their strike against the Shivan warships.  If we lose either corvette, you will abort the mission and withdraw from the field immediately.", 819)
+ XSTR("$f Alpha wing, your mission is to escort the $f Lysander and the $f Actium as they carry out this assault. Your first priority will be to eliminate all hostile fighters and bombers. Only then will you assist the corvettes with their strike against the Shivan warships.  If we lose either corvette, you will abort the mission and withdraw from the field immediately.", 819)
 $end_multi_text
 $voice: SM106_MB_03.wav
 $camera_pos: 9.103047, 5846.145996, -4272.577148
@@ -174,7 +173,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 1167.719604, -0.000434, 1489.355225
-$label: Actium
+$label: GTCv Actium
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -186,7 +185,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -894.288025, -314.101288, 1793.456665
-$label: Lysander
+$label: GTCv Lysander
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -350,9 +349,7 @@ $end_multi_text
 
 #Alternate Types:
 $Alt: Unknown
-
 #end
-
 
 #Players		;! 1 total
 
@@ -381,6 +378,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 45
@@ -397,7 +395,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 2		;! Object #1
@@ -408,6 +405,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 45
@@ -424,7 +422,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 0
 
@@ -436,6 +433,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 45
@@ -452,7 +450,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 0
 
@@ -464,6 +461,7 @@ $Orientation:
 	0.999232, 0.000000, 0.039191,
 	0.000000, 1.000000, 0.000000,
 	-0.039191, 0.000000, 0.999232
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
@@ -516,6 +514,9 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Actium
 
 $Name: Lysander		;! Object #4
 $Class: GTCv Deimos
@@ -525,6 +526,7 @@ $Orientation:
 	0.999825, 0.000000, 0.018710,
 	0.000384, 0.999789, -0.020519,
 	-0.018706, 0.020522, 0.999614
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
@@ -579,6 +581,9 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Lysander
 
 $Name: Asuras		;! Object #5
 $Class: SC Cain
@@ -588,6 +593,7 @@ $Orientation:
 	0.637152, 0.000000, -0.770739,
 	-0.764156, 0.130424, -0.631709,
 	0.100523, 0.991459, 0.083100
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -622,6 +628,7 @@ $Orientation:
 	-0.999501, 0.000000, 0.031600,
 	-0.002269, 0.997420, -0.071754,
 	-0.031518, -0.071790, -0.996922
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -637,7 +644,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #7
@@ -648,6 +654,7 @@ $Orientation:
 	-0.999929, 0.000000, 0.011900,
 	-0.000878, 0.997274, -0.073776,
 	-0.011868, -0.073781, -0.997204
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -663,7 +670,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #8
@@ -674,6 +680,7 @@ $Orientation:
 	-0.998186, 0.000000, 0.060207,
 	-0.004448, 0.997267, -0.073746,
 	-0.060043, -0.073880, -0.995458
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -689,7 +696,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 1		;! Object #9
@@ -700,6 +706,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -724,6 +731,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -748,6 +756,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -772,6 +781,7 @@ $Orientation:
 	-0.416147, 0.000000, 0.909298,
 	0.000000, 1.000000, 0.000000,
 	-0.909298, 0.000000, -0.416147
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -836,6 +846,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -864,6 +875,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -893,6 +905,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -908,7 +921,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #16
@@ -919,6 +931,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -934,7 +947,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #17
@@ -945,6 +957,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -960,7 +973,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 1		;! Object #18
@@ -971,6 +983,7 @@ $Orientation:
 	-0.986899, 0.000000, -0.161338,
 	0.000000, 1.000000, 0.000000,
 	0.161338, 0.000000, -0.986899
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -987,7 +1000,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 2		;! Object #19
@@ -998,6 +1010,7 @@ $Orientation:
 	-0.983201, 0.000000, -0.182527,
 	0.000000, 1.000000, 0.000000,
 	0.182527, 0.000000, -0.983201
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1014,7 +1027,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 3		;! Object #20
@@ -1025,6 +1037,7 @@ $Orientation:
 	-0.991708, 0.000000, -0.128511,
 	0.000000, 1.000000, 0.000000,
 	0.128511, 0.000000, -0.991708
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1041,7 +1054,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Taurus 1		;! Object #21
@@ -1052,6 +1064,7 @@ $Orientation:
 	-0.969023, 0.000000, -0.246972,
 	0.000000, 1.000000, 0.000000,
 	0.246972, 0.000000, -0.969023
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1076,6 +1089,7 @@ $Orientation:
 	-0.964329, 0.000000, -0.264708,
 	0.000000, 1.000000, 0.000000,
 	0.264708, 0.000000, -0.964329
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1100,6 +1114,7 @@ $Orientation:
 	-0.976161, 0.000000, -0.217046,
 	0.000000, 1.000000, 0.000000,
 	0.217046, 0.000000, -0.976161
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1124,6 +1139,7 @@ $Orientation:
 	-0.908601, 0.000000, 0.417664,
 	-0.017061, 0.999165, -0.037115,
 	-0.417316, -0.040848, -0.907843
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1147,6 +1163,7 @@ $Orientation:
 	-0.905038, 0.000000, 0.425330,
 	-0.017664, 0.999137, -0.037586,
 	-0.424963, -0.041530, -0.904257
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1170,6 +1187,7 @@ $Orientation:
 	-0.888231, 0.000000, 0.459396,
 	-0.019815, 0.999069, -0.038312,
 	-0.458969, -0.043133, -0.887405
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1185,7 +1203,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 3		;! Object #27
@@ -1196,6 +1213,7 @@ $Orientation:
 	-0.876350, 0.000000, 0.481674,
 	-0.021002, 0.999049, -0.038210,
 	-0.481216, -0.043602, -0.875517
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1212,7 +1230,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 2		;! Object #28
@@ -1223,6 +1240,7 @@ $Orientation:
 	-0.880416, 0.000000, 0.474203,
 	-0.020309, 0.999083, -0.037705,
 	-0.473768, -0.042827, -0.879608
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1239,19 +1257,18 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Unknown		;! Object #29
 $Class: SD Ravana
 $Alt: Unknown
-
 $Team: Hostile
 $Location: 6810.731934, -0.003314, 16023.216797
 $Orientation:
 	-0.756982, 0.000000, 0.653436,
 	-0.021023, 0.999482, -0.024354,
 	-0.653098, -0.032173, -0.756590
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1331,6 +1348,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1347,7 +1365,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 1
 
@@ -1359,6 +1376,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1375,7 +1393,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 1
 
@@ -1387,6 +1404,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1403,7 +1421,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 #Wings		;! 10 total
@@ -2780,11 +2797,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 36 total
 
-
 $Name: Lilith Destroyed
 $Team: -1
 $MessageNew:  XSTR("We have destroyed the Asuras, Command. That's one more Shivan cruiser out of circulation.", 830)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_01.wav
 
@@ -2816,6 +2833,7 @@ $Name: Anything
 $Team: -1
 $MessageNew:  XSTR("Are you reading anything on sensors, Actium?", 834)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_02.wav
 
@@ -2823,6 +2841,7 @@ $Name: Negative
 $Team: -1
 $MessageNew:  XSTR("Negative, Lysander.", 835)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_ATM_02.wav
 
@@ -2830,6 +2849,7 @@ $Name: Find Them
 $Team: -1
 $MessageNew:  XSTR("If we don't find them, they'll find us. I don't expect we'll be disappointed.", 836)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_03.wav
 
@@ -2837,6 +2857,7 @@ $Name: Relics
 $Team: -1
 $MessageNew:  XSTR("The Shivans fought nothing but Great War relics. We'll show them what firepower is all about.", 837)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_ATM_03.wav
 
@@ -2852,6 +2873,7 @@ $Name: Intercept
 $Team: -1
 $MessageNew:  XSTR("Alpha and Beta, intercept those bandits! Keep them off the Lysander and Actium!", 839)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_03.wav
 
@@ -2859,6 +2881,7 @@ $Name: Lilith View
 $Team: -1
 $MessageNew:  XSTR("A Cain-class cruiser now coming into view!", 840)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_04.wav
 
@@ -2866,6 +2889,7 @@ $Name: Power Up
 $Team: -1
 $MessageNew:  XSTR("Confirmed. It's the Asuras! Firing all guns!", 841)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_ATM_04.wav
 
@@ -2881,6 +2905,7 @@ $Name: Dont Fly
 $Team: -1
 $MessageNew:  XSTR("Avoid the beam and you won't get hit, pilot!", 843)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_04.wav
 
@@ -2896,6 +2921,7 @@ $Name: Finish Off
 $Team: -1
 $MessageNew:  XSTR("Well done, pilots. Help the corvettes finish off the Asuras, but don't get too close!", 845)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_05.wav
 
@@ -2903,6 +2929,7 @@ $Name: Find Rakshasa
 $Team: -1
 $MessageNew:  XSTR("Okay, let's find that Rakshasa. Continue on your current heading. If you need to rearm, pilots, now would be a good time.", 846)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_06.wav
 
@@ -2934,6 +2961,7 @@ $Name: Need To Know
 $Team: -1
 $MessageNew:  XSTR("You'll be informed on a need-to-know basis, pilot. Now kill the chatter and focus on your mission!", 850)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_07.wav
 
@@ -2941,6 +2969,7 @@ $Name: Incoming
 $Team: -1
 $MessageNew:  XSTR("New readings coming up on sensors! Incoming fighters!", 851)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_ATM_05.wav
 
@@ -2948,6 +2977,7 @@ $Name: Fire At Will
 $Team: -1
 $MessageNew:  XSTR("Iblis now within in range! All guns, fire for effect.", 852)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_05.wav
 
@@ -2955,6 +2985,7 @@ $Name: Destroy
 $Team: -1
 $MessageNew:  XSTR("Stay focused, pilots! We need more fighter cover! Do not let them lure you away!", 853)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_08.wav
 
@@ -2962,6 +2993,7 @@ $Name: Bombers
 $Team: -1
 $MessageNew:  XSTR("A wing of Seraphim is approaching fast! Intercept those bombers!", 854)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_09.wav
 
@@ -2969,6 +3001,7 @@ $Name: Rakshasa Crit
 $Team: -1
 $MessageNew:  XSTR("The hull integrity of the Iblis has fallen below critical! We're almost there!", 855)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_ATM_06.wav
 
@@ -2976,6 +3009,7 @@ $Name: Huge
 $Team: -1
 $MessageNew:  XSTR("Command, something massive has jumped in! The database does not recognize the configuration!", 856)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_06.wav
 
@@ -2983,6 +3017,7 @@ $Name: Visual
 $Team: -1
 $MessageNew:  XSTR("Where? What is it? I can't get a visual!", 857)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM106_W1_03.wav
 
@@ -2990,6 +3025,7 @@ $Name: Massive
 $Team: -1
 $MessageNew:  XSTR("Command, we have a situation here!", 858)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM106_LY_07.wav
 
@@ -2997,6 +3033,7 @@ $Name: Get Out
 $Team: -1
 $MessageNew:  XSTR("Can you get a closer look, Lysander?", 859)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_10.wav
 
@@ -3004,6 +3041,7 @@ $Name: Actium Dead
 $Team: -1
 $MessageNew:  XSTR("We've lost the Actium!", 860)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_11.wav
 
@@ -3011,6 +3049,7 @@ $Name: Return To Base
 $Team: -1
 $MessageNew:  XSTR("All vessels return to base! We need to regroup! Get out of there, pilots!", 861)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_12.wav
 
@@ -3018,6 +3057,7 @@ $Name: Taurvi Destroyed
 $Team: -1
 $MessageNew:  XSTR("The Seraphim are history! Well done, pilots!", 862)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM106_AC_13.wav
 
@@ -3051,11 +3091,9 @@ $end_multi_text
 #Background bitmaps		;! 8 total
 
 $Num stars: 205
-$Ambient light level: 7895160
+$Ambient light level: 0
 +Neb2: nbackpurp2
-
 +Neb2Flags: 37
-
 
 $Bitmap List:
 $Sun: SunWhite
@@ -3111,6 +3149,7 @@ $Starbitmap: dneb01
 +DivY: 1
 
 #Asteroid Fields
+
 
 #Music
 

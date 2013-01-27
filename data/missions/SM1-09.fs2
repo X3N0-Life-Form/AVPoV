@@ -13,17 +13,11 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 0
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -37,8 +31,16 @@ $end_multi_text
 +SquadReassignName: 242nd Suicide Kings
 +SquadReassignLogo: 242suicide.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -47,7 +49,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("The 242nd will escort a supply convoy as it makes its rendezvous with the $f GTVA $f Colossus. As we prepare the $f Colossus for the allied counterattack, we must handle the logistics of supplying and maintaining this warship. Convoys of transports, gas miners, and freighters have been deployed for this purpose.", 943)
+ XSTR("The $w 242nd will escort a supply convoy as it makes its rendezvous with the $f GTVA $f Colossus. As we prepare the $f Colossus for the allied counterattack, we must handle the logistics of supplying and maintaining this warship. Convoys of transports, gas miners, and freighters have been deployed for this purpose.", 943)
 $end_multi_text
 $voice: SM109_MB_01.wav
 $camera_pos: 1441.968506, 35.682564, 2669.299805
@@ -63,9 +65,9 @@ $Formula: ( true )
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: 298.332672, -15.324831, 2652.656494
-$label: Parracombe
+$label: GTFr Parracombe
 +id: 4
 $hlight: 1
 $mirror: 0
@@ -77,7 +79,7 @@ $type: 12
 $team: Friendly
 $class: GTG Zephyrus
 $pos: 291.010529, -90.168144, 2379.147217
-$label: Avila
+$label: GTG Avila
 +id: 5
 $hlight: 1
 $mirror: 0
@@ -89,7 +91,7 @@ $type: 12
 $team: Friendly
 $class: GVG Anuket
 $pos: 282.016388, 59.957100, 2214.645020
-$label: Jooyun
+$label: GVG Jooyun
 +id: 6
 $hlight: 1
 $mirror: 0
@@ -99,7 +101,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $f Colossus will jump in and rendezvous with your convoy at the Capella jump node, located on the far side of an asteroid field. The area has been the site of intense fighting and rebel activity. Intelligence believes the rebels might attempt to attack our supply convoys rather than challenge the $f Colossus directly.", 944)
+ XSTR("The $f Colossus will jump in and rendezvous with your convoy at the $b Capella jump node, located on the far side of an asteroid field. The area has been the site of intense fighting and rebel activity. Intelligence believes the rebels might attempt to attack our supply convoys rather than challenge the $f Colossus directly.", 944)
 $end_multi_text
 $voice: SM109_MB_02.wav
 $camera_pos: 2537.146729, 45.534504, 1931.941040
@@ -115,9 +117,9 @@ $Formula: ( true )
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -390.068878, 56.527981, 2529.532471
-$label: Parracombe
+$label: GTFr Parracombe
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -129,7 +131,7 @@ $type: 12
 $team: Friendly
 $class: GTG Zephyrus
 $pos: 291.010712, -193.193192, 2467.817383
-$label: Avila
+$label: GTG Avila
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -141,7 +143,7 @@ $type: 12
 $team: Friendly
 $class: GVG Anuket
 $pos: 282.016388, 59.957100, 2214.645020
-$label: Jooyun
+$label: GVG Jooyun
 +id: 6
 $hlight: 0
 $mirror: 0
@@ -151,7 +153,7 @@ $end_icon
 $start_icon
 $type: 8
 $team: Unknown
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: -2970.200439, 13.782231, 4833.649414
 $label: Asteroid Field
 +id: 7
@@ -175,7 +177,7 @@ $end_icon
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: 2362.285645, 29.192305, 2235.934082
 $label: Capella Node
 +id: 11
@@ -187,7 +189,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("You will be leading Alpha wing, the main escort component. Your mission is to defend the $f GTFr $f Parracombe, the $f GTG $f Avila, and the $f GVG $f Jooyun. The $f Avila and $f Jooyun are mining vessels designed to collect fuel from gas giants for the reactors that power the $f Colossus.", 945)
+ XSTR("You will be leading $f Alpha wing, the main escort component. Your mission is to defend the $f GTFr $f Parracombe, the $f GTG $f Avila, and the $f GVG $f Jooyun. The $f Avila and $f Jooyun are mining vessels designed to collect fuel from gas giants for the reactors that power the $f Colossus.", 945)
 $end_multi_text
 $voice: SM109_MB_03.wav
 $camera_pos: 3046.262695, 45.531292, 3538.497314
@@ -203,9 +205,9 @@ $Formula: ( true )
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -390.068878, 56.527981, 2529.532471
-$label: Parracombe
+$label: GTFr Parracombe
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -217,7 +219,7 @@ $type: 12
 $team: Friendly
 $class: GTG Zephyrus
 $pos: 291.010712, -193.193192, 2467.817383
-$label: Avila
+$label: GTG Avila
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -229,7 +231,7 @@ $type: 12
 $team: Friendly
 $class: GVG Anuket
 $pos: 282.016388, 59.957100, 2214.645020
-$label: Jooyun
+$label: GVG Jooyun
 +id: 6
 $hlight: 0
 $mirror: 0
@@ -239,7 +241,7 @@ $end_icon
 $start_icon
 $type: 8
 $team: Unknown
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: -58632.738281, 13.782227, 12317.138672
 $label: Asteroid Field
 +id: 7
@@ -275,7 +277,7 @@ $end_icon
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: 2362.285645, 29.192305, 2235.934082
 $label: Capella Node
 +id: 11
@@ -287,7 +289,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The Vasudans have dispatched a wing of Serapis fighters to guard the $f Jooyun. You do not have command over this unit. However, the 242nd Suicide Kings are responsible for the $f Jooyun's safety. Eighteen months of civil war are beginning to strain Terran-Vasudan relations, especially in contested systems. See to it the $f Jooyun survives.", 946)
+ XSTR("The Vasudans have dispatched a wing of $y Serapis fighters to guard the $f Jooyun. You do not have command over this unit. However, the $w 242nd $w Suicide $w Kings are responsible for the $f Jooyun's safety. Eighteen months of civil war are beginning to strain Terran-Vasudan relations, especially in contested systems. See to it the $f Jooyun survives.", 946)
 $end_multi_text
 $voice: SM109_MB_04.wav
 $camera_pos: 3046.262695, 45.531292, 3538.497314
@@ -303,9 +305,9 @@ $Formula: ( true )
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -390.068878, 56.527981, 2529.532471
-$label: Parracombe
+$label: GTFr Parracombe
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -317,7 +319,7 @@ $type: 12
 $team: Friendly
 $class: GTG Zephyrus
 $pos: 291.010712, -193.193192, 2467.817383
-$label: Avila
+$label: GTG Avila
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -329,7 +331,7 @@ $type: 12
 $team: Friendly
 $class: GVG Anuket
 $pos: 282.016388, 59.957100, 2214.645020
-$label: Jooyun
+$label: GVG Jooyun
 +id: 6
 $hlight: 0
 $mirror: 0
@@ -339,7 +341,7 @@ $end_icon
 $start_icon
 $type: 8
 $team: Unknown
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: -58632.738281, 13.782227, 12317.138672
 $label: Asteroid Field
 +id: 7
@@ -387,7 +389,7 @@ $end_icon
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTG Zephyrus
+$class: GTNB Pharos
 $pos: 2362.285645, 29.192305, 2235.934082
 $label: Capella Node
 +id: 11
@@ -597,6 +599,13 @@ $Recommendation text:
     XSTR("Do not jump out until ordered to do so.", 625)
 $end_multi_text
 
+#Alternate Types:
+$Alt: NTC Fenris
+$Alt: NTF Hercules
+$Alt: NTB Medusa
+$Alt: NTF Alastor
+#end
+
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
@@ -617,7 +626,6 @@ $Ship Choices: (
 
 #Objects		;! 52 total
 
-;s only weakness.  Well done.", -1)
 $Name: Alpha 1		;! Object #0
 $Class: GTF Perseus
 $Team: Friendly
@@ -626,6 +634,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 39
@@ -642,7 +651,88 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Jooyun		;! Object #1
+$Name: Alpha 2		;! Object #1
+$Class: GTF Perseus
+$Team: Friendly
+$Location: -42.742249, -0.001081, 2423.643066
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 39
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 10
++Persona Index: 0
+
+$Name: Alpha 3		;! Object #2
+$Class: GTF Perseus
+$Team: Friendly
+$Location: -136.817352, -0.001076, 2431.968262
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 39
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 10
++Persona Index: 1
+
+$Name: Alpha 4		;! Object #3
+$Class: GTF Perseus
+$Team: Friendly
+$Location: -80.948669, -0.001081, 2384.616455
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 39
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 10
++Persona Index: 2
+
+$Name: Jooyun		;! Object #4
 $Class: GVG Anuket
 $Team: Friendly
 $Location: 282.016388, 9.292456, 2121.580322
@@ -650,6 +740,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Jooyun point" 50 ) )
@@ -674,10 +765,9 @@ $Determination: 10
 +Escort priority: 6
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 50
 
-$Name: Avila		;! Object #2
+$Name: Avila		;! Object #5
 $Class: GTG Zephyrus
 $Team: Friendly
 $Location: 316.228333, -181.804291, 2468.557129
@@ -685,6 +775,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Avila Point" 50 ) )
@@ -709,73 +800,21 @@ $Determination: 10
 +Escort priority: 5
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 50
 +Persona Index: 3
 
-$Name: Alpha 2		;! Object #3
-$Class: GTF Perseus
+$Name: Parracombe		;! Object #6
+$Class: GTFr Triton
 $Team: Friendly
-$Location: -42.742249, -0.001081, 2423.643066
+$Location: 206.988693, 185.929565, 2796.133057
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 39
-+Initial Hull: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 10
-+Persona Index: 0
-
-$Name: Alpha 3		;! Object #4
-$Class: GTF Perseus
-$Team: Friendly
-$Location: -136.817352, -0.001076, 2431.968262
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 39
-+Initial Hull: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 10
-+Persona Index: 1
-
-$Name: Parracombe		;! Object #5
-$Class: GTFR Triton
-$Team: Friendly
-$Location: 206.988693, 185.929550, 2796.133057
-$Orientation:
-	-1.000000, -0.000000, -0.000004,
+	-1.000000, 0.000000, -0.000004,
 	0.000000, -0.999971, -0.007547,
 	-0.000004, -0.007547, 0.999971
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
-$AI Goals: ( goals ( ai-waypoints-once "Para point" 50 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Parra point" 50 ) )
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Velocity: 100
 +Initial Hull: 100
@@ -794,17 +833,17 @@ $Determination: 10
 +Escort priority: 3
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 20
 
-$Name: TAC 163 Cargo Pod		;! Object #6
+$Name: TAC 163 Cargo Pod		;! Object #7
 $Class: TC-TRI
 $Team: Friendly
-$Location: 207.682175, 173.568192, 2987.004150
+$Location: 207.684555, 173.559219, 2987.005371
 $Orientation:
-	-1.000000, 0.000000, -0.000000,
+	-1.000000, 0.000000, 0.000000,
 	-0.000000, -0.999970, -0.007655,
 	-0.000000, -0.007655, 0.999970
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Hull: 100
@@ -823,41 +862,20 @@ $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dockpoint
 +Group: 0
 +Score: 5
-
-$Name: Alpha 4		;! Object #7
-$Class: GTF Perseus
-$Team: Friendly
-$Location: -80.948669, -0.001081, 2384.616455
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 39
-+Initial Hull: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 10
-+Persona Index: 2
+$Texture Replace:
++old: nameplate
++new: GTFr_Parracombe
 
 $Name: Libra 1		;! Object #8
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3753.247314, -0.000642, 7258.316406
 $Orientation:
 	-0.933518, 0.000001, -0.358531,
 	0.000917, 0.999997, -0.002386,
 	0.358530, -0.002556, -0.933515
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Avila" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -879,12 +897,14 @@ $Determination: 10
 
 $Name: Libra 2		;! Object #9
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3620.933838, -0.000441, 7256.978516
 $Orientation:
 	-0.940735, 0.000000, -0.339142,
 	0.000874, 0.999997, -0.002424,
 	0.339141, -0.002577, -0.940732
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Avila" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -906,12 +926,14 @@ $Determination: 10
 
 $Name: Libra 3		;! Object #10
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3760.631104, -0.000359, 7371.304688
 $Orientation:
 	-0.935478, 0.000000, -0.353384,
 	0.000887, 0.999997, -0.002349,
 	0.353383, -0.002511, -0.935475
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Avila" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -939,6 +961,7 @@ $Orientation:
 	0.006092, -0.978841, -0.204535,
 	-0.029795, 0.204270, -0.978463,
 	0.999539, 0.012054, -0.027919
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1024,7 +1047,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Parapet		;! Object #12
@@ -1035,6 +1057,7 @@ $Orientation:
 	-0.178246, 0.000000, -0.983986,
 	0.000000, 1.000000, 0.000000,
 	0.983986, 0.000000, -0.178246
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints "Jump point patrol" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1079,6 +1102,9 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Parapet
 
 $Name: Theta 1		;! Object #13
 $Class: GTF Perseus
@@ -1088,6 +1114,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1112,6 +1139,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1136,6 +1164,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1154,12 +1183,14 @@ $Determination: 10
 
 $Name: Gun1		;! Object #16
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 1018.961914, 333.675232, 7035.098633
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1182,12 +1213,14 @@ $Determination: 10
 
 $Name: Gun2		;! Object #17
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 596.543457, 333.674164, 6306.196777
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1210,12 +1243,14 @@ $Determination: 10
 
 $Name: Gun3		;! Object #18
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: -87.399414, 677.099487, 6903.604492
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1236,12 +1271,14 @@ $Determination: 10
 
 $Name: Gun4		;! Object #19
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 1189.449219, 333.675568, 6763.681152
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1264,12 +1301,14 @@ $Determination: 10
 
 $Name: Gun5		;! Object #20
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 43.470524, 333.671997, 5868.953125
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1292,12 +1331,14 @@ $Determination: 10
 
 $Name: Gun6		;! Object #21
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 83.085938, 719.538025, 6632.187012
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1318,12 +1359,14 @@ $Determination: 10
 
 $Name: Gun7		;! Object #22
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: 1103.939941, 333.674744, 8173.993652
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1346,12 +1389,14 @@ $Determination: 10
 
 $Name: Gun8		;! Object #23
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: -274.966309, 333.672821, 7441.048828
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1374,12 +1419,14 @@ $Determination: 10
 
 $Name: Gun9		;! Object #24
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: -2.420166, 415.693909, 8042.500000
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1398,14 +1445,16 @@ $Determination: 10
 +Group: 1
 +Score: 6
 
-$Name: Gun14		;! Object #25
+$Name: Gun10		;! Object #25
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: -33.983887, 587.478027, 12705.875000
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1426,14 +1475,16 @@ $Determination: 10
 +Group: 2
 +Score: 6
 
-$Name: Gun17		;! Object #26
+$Name: Gun11		;! Object #26
 $Class: GTSG Alastor
+$Alt: NTF Alastor
 $Team: Hostile
 $Location: -513.706604, 587.476379, 12356.046875
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1456,12 +1507,14 @@ $Determination: 10
 
 $Name: Maelstrom		;! Object #27
 $Class: GTC Fenris
+$Alt: NTC Fenris
 $Team: Hostile
 $Location: 0.000000, 0.000000, 16768.500000
 $Orientation:
 	-0.999862, 0.000000, -0.016626,
 	-0.001825, 0.993957, 0.109754,
 	0.016526, 0.109769, -0.993820
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 5" 50 ) )
@@ -1493,15 +1546,20 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 200
+$Texture Replace:
++old: nameplate
++new: NTC_Maelstrom
 
 $Name: Pisces 1		;! Object #28
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 3373.842285, 0.003751, 7045.931152
 $Orientation:
 	-0.898491, 0.000000, 0.438992,
 	-0.001122, 0.999997, -0.002296,
 	-0.438991, -0.002556, -0.898488
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1522,12 +1580,14 @@ $Determination: 10
 
 $Name: Pisces 2		;! Object #29
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 3487.307129, 0.004074, 7044.782227
 $Orientation:
 	-0.890923, 0.000000, 0.454154,
 	-0.001151, 0.999997, -0.002259,
 	-0.454153, -0.002535, -0.890920
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1548,12 +1608,14 @@ $Determination: 10
 
 $Name: Pisces 3		;! Object #30
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 3364.735840, 0.003499, 7140.215332
 $Orientation:
 	-0.902042, 0.000001, 0.431648,
 	-0.001088, 0.999997, -0.002275,
 	-0.431647, -0.002522, -0.902039
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -1574,12 +1636,14 @@ $Determination: 10
 
 $Name: Capricorn 1		;! Object #31
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -236.976196, 4.401664, 14621.510742
 $Orientation:
 	-0.999981, 0.000000, -0.006106,
 	0.000001, 1.000000, -0.000179,
 	0.006106, -0.000179, -0.999981
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1596,17 +1660,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Capricorn 2		;! Object #32
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -32.981201, 5.218361, 14612.319336
 $Orientation:
 	-0.999998, 0.000000, 0.001896,
 	0.000000, 1.000000, -0.000211,
 	-0.001896, -0.000211, -0.999998
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1623,17 +1688,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Capricorn 3		;! Object #33
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -96.571289, 6.159157, 14496.438477
 $Orientation:
 	-1.000000, 0.000000, -0.000602,
 	0.000000, 1.000000, -0.000249,
 	0.000602, -0.000249, -1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1650,7 +1716,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Kappa 1		;! Object #34
@@ -1661,6 +1726,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1690,9 +1756,11 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
@@ -1718,6 +1786,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1747,6 +1816,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1770,12 +1840,14 @@ $Determination: 10
 
 $Name: Gemini 1		;! Object #38
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: 3589.048584, 0.000589, 5480.335449
 $Orientation:
 	-0.933518, 0.000000, -0.358531,
 	0.000917, 0.999997, -0.002386,
 	0.358530, -0.002556, -0.933515
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1796,12 +1868,14 @@ $Determination: 10
 
 $Name: Gemini 2		;! Object #39
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: 3721.362061, 0.000711, 5478.997559
 $Orientation:
 	-0.940735, 0.000000, -0.339142,
 	0.000874, 0.999997, -0.002424,
 	0.339141, -0.002577, -0.940732
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1822,12 +1896,14 @@ $Determination: 10
 
 $Name: Gemini 3		;! Object #40
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: 3581.664795, 0.000868, 5593.323242
 $Orientation:
 	-0.935479, 0.000000, -0.353384,
 	0.000887, 0.999997, -0.002349,
 	0.353383, -0.002511, -0.935476
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1848,12 +1924,14 @@ $Determination: 10
 
 $Name: Aquarius 1		;! Object #41
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -4044.064941, 0.000102, 5440.262207
 $Orientation:
 	-0.898491, 0.000000, 0.438992,
 	-0.001122, 0.999997, -0.002296,
 	-0.438991, -0.002556, -0.898488
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1872,12 +1950,14 @@ $Determination: 10
 
 $Name: Aquarius 2		;! Object #42
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -3930.598633, 0.000360, 5439.114746
 $Orientation:
 	-0.890923, 0.000000, 0.454155,
 	-0.001151, 0.999997, -0.002258,
 	-0.454153, -0.002535, -0.890920
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1896,12 +1976,14 @@ $Determination: 10
 
 $Name: Aquarius 3		;! Object #43
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: -4053.171631, -0.000150, 5534.546387
 $Orientation:
 	-0.902042, 0.000000, 0.431649,
 	-0.001088, 0.999997, -0.002275,
 	-0.431647, -0.002522, -0.902039
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1920,12 +2002,14 @@ $Determination: 10
 
 $Name: Cancer 1		;! Object #44
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3266.144287, 0.003736, 12809.866211
 $Orientation:
 	-0.933518, 0.000001, -0.358531,
 	0.000917, 0.999997, -0.002386,
 	0.358530, -0.002556, -0.933515
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1946,12 +2030,14 @@ $Determination: 10
 
 $Name: Cancer 2		;! Object #45
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3133.831787, 0.003936, 12808.528320
 $Orientation:
 	-0.940735, 0.000000, -0.339142,
 	0.000874, 0.999997, -0.002424,
 	0.339141, -0.002577, -0.940732
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1972,12 +2058,14 @@ $Determination: 10
 
 $Name: Cancer 3		;! Object #46
 $Class: GTB Medusa
+$Alt: NTB Medusa
 $Team: Hostile
 $Location: -3273.528320, 0.004015, 12922.854492
 $Orientation:
 	-0.935478, 0.000000, -0.353384,
 	0.000887, 0.999997, -0.002349,
 	0.353383, -0.002511, -0.935475
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1998,12 +2086,14 @@ $Determination: 10
 
 $Name: Aries 1		;! Object #47
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 2930.700684, 0.004007, 12463.402344
 $Orientation:
 	-0.957666, 0.000000, 0.287882,
 	-0.000004, 1.000000, -0.000014,
 	-0.287882, -0.000015, -0.957666
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2023,12 +2113,14 @@ $Determination: 10
 
 $Name: Aries 2		;! Object #48
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 3044.167480, 0.004333, 12462.253906
 $Orientation:
 	-0.954618, 0.000000, 0.297832,
 	-0.000004, 1.000000, -0.000014,
 	-0.297832, -0.000015, -0.954618
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2048,12 +2140,14 @@ $Determination: 10
 
 $Name: Aries 3		;! Object #49
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Hostile
 $Location: 2921.594727, 0.003756, 12557.685547
 $Orientation:
 	-0.958641, 0.000000, 0.284618,
 	-0.000004, 1.000000, -0.000014,
 	-0.284618, -0.000015, -0.958641
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -2079,6 +2173,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Jooyun" "topside docking" "blahblah" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2097,7 +2192,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Hauler 2		;! Object #51
@@ -2108,6 +2202,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Avila" "topside docking" "blahblah" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2126,7 +2221,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 #Wings		;! 11 total
@@ -2799,8 +2893,8 @@ $Formula: ( when
 
 $Formula: ( when 
    ( or 
-      ( is-destroyed-delay 0 "Gun14" ) 
-      ( is-destroyed-delay 0 "Gun17" ) 
+      ( is-destroyed-delay 0 "Gun10" ) 
+      ( is-destroyed-delay 0 "Gun11" ) 
    )
    ( do-nothing ) 
 )
@@ -2922,7 +3016,7 @@ $Formula: ( when
       "Lost the Avila" 
    )
 )
-+Name: Lost avila
++Name: Lost Avila
 +Repeat Count: 1
 +Interval: 1
 
@@ -2931,10 +3025,10 @@ $Formula: ( when
    ( send-message 
       "#Command" 
       "High" 
-      "Lost the Paracombe" 
+      "Lost the Parracombe" 
    )
 )
-+Name: Loast parracombe
++Name: Lost Parracombe
 +Repeat Count: 1
 +Interval: 1
 
@@ -3010,7 +3104,7 @@ $Formula: ( when
       ( ai-waypoints "Destination 1" 89 ) 
    )
 )
-+Name: Jooyun destination
++Name: Jooyun Destination
 +Repeat Count: 1
 +Interval: 1
 
@@ -3033,7 +3127,7 @@ $Formula: ( when
    ( < 
       ( distance 
          "Parracombe" 
-         "Para point:1" 
+         "Parra point:1" 
       )
       1200 
    )
@@ -3043,7 +3137,7 @@ $Formula: ( when
       ( ai-waypoints "Destination 3" 89 ) 
    )
 )
-+Name: Para dest
++Name: Parra dest
 +Repeat Count: 1
 +Interval: 1
 
@@ -3149,7 +3243,7 @@ $Formula: ( when
    ( send-message 
       "Parracombe" 
       "High" 
-      "Paracombe Critical" 
+      "Parracombe Critical" 
    )
 )
 +Name: Parracombe crisis
@@ -3255,45 +3349,45 @@ $Formula: ( when
 
 $Formula: ( when 
    ( < 
-      ( distance "Gun14" "<any friendly>" ) 
+      ( distance "Gun10" "<any friendly>" ) 
       1000 
    )
-   ( ship-vulnerable "Gun14" ) 
+   ( ship-vulnerable "Gun10" ) 
    ( set-subsystem-strength 
-      "Gun14" 
+      "Gun10" 
       "turret01a" 
       100 
    )
    ( set-subsystem-strength 
-      "Gun14" 
+      "Gun10" 
       "turret02a" 
       100 
    )
-   ( ship-visible "Gun14" ) 
+   ( ship-visible "Gun10" ) 
 )
-+Name: Gun 14
++Name: Gun 10
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
    ( < 
-      ( distance "Gun17" "<any friendly>" ) 
+      ( distance "Gun11" "<any friendly>" ) 
       1000 
    )
-   ( ship-vulnerable "Gun17" ) 
+   ( ship-vulnerable "Gun11" ) 
    ( set-subsystem-strength 
-      "Gun17" 
+      "Gun11" 
       "turret01a" 
       100 
    )
    ( set-subsystem-strength 
-      "Gun17" 
+      "Gun11" 
       "turret02a" 
       100 
    )
-   ( ship-visible "Gun17" ) 
+   ( ship-visible "Gun11" ) 
 )
-+Name: Gun 17
++Name: Gun 11
 +Repeat Count: 1
 +Interval: 1
 
@@ -3355,8 +3449,8 @@ $Formula: ( and
       "Gun7" 
       "Gun8" 
       "Gun9" 
-      "Gun14" 
-      "Gun17" 
+      "Gun10" 
+      "Gun11" 
    )
    ( and 
       ( not 
@@ -3398,10 +3492,10 @@ $Formula: ( is-destroyed-delay
 
 #Waypoints		;! 10 lists total
 
-
 $Jump Node: 102.356812, 25.653296, 19213.648438
 $Jump Node Name: Capella
-$Name: Para point
+
+$Name: Parra point
 $List: (		;! 1 points in list
 	( 169.470093, 128.253677, 16849.687500 )
 )
@@ -3456,11 +3550,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 23 total
 
-
 $Name: Beam challange
 $Team: -1
 $MessageNew:  XSTR("The NTC Maelstrom has entered the asteroid field! When it gets in range, the cruiser will fire its forward beam cannon at the convoy! Alpha 1, you are ordered to neutralize that turret.", 968)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_01.wav
 
@@ -3468,6 +3562,7 @@ $Name: Convoy Warning
 $Team: -1
 $MessageNew:  XSTR("Your primary objective is to escort the convoy. Do not let the rebels lure you away.", 969)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_02.wav
 
@@ -3475,13 +3570,15 @@ $Name: ParafatDDD
 $Team: -1
 $MessageNew:  XSTR("This is the GTC Parapet. We have orders to blockade the Capella jump node, and we must not leave our position. We will sortie a wing of Perseus fighters to assist. Good luck, pilots.", 970)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Large Ship
++AVI Name: Head-CM3
 +Wave Name: SM109_ppt_01.wav
 
 $Name: Colossus Arrives
 $Team: -1
 $MessageNew:  XSTR("This is the GTVA Colossus. We have reached the rendezvous point. Now deploying transports. Theta wing, stand watch. ", 971)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM109_col_01.wav
 
@@ -3489,13 +3586,15 @@ $Name: Thanks 1
 $Team: -1
 $MessageNew:  XSTR("Thank you for your escort, Alpha wing.", 972)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM109_Col_02.wav
 
-$Name: Lost the Paracombe
+$Name: Lost the Parracombe
 $Team: -1
 $MessageNew:  XSTR("The rebels destroyed the Parracombe!", 973)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_03.wav
 
@@ -3503,6 +3602,7 @@ $Name: Lost the Avila
 $Team: -1
 $MessageNew:  XSTR("We've lost the Avila! I repeat. We've lost the Avila!", 974)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_04.wav
 
@@ -3510,7 +3610,7 @@ $Name: Lost Jooyun
 $Team: -1
 $MessageNew:  XSTR("The Jooyun has been destroyed. The Vasudans will not be pleased.", 975)
 $end_multi_text
-+Persona: Wingman 3
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_vw_01.wav
 
@@ -3518,6 +3618,7 @@ $Name: Beam down
 $Team: -1
 $MessageNew:  XSTR("Well done, pilot. The Maelstrom's main gun has been neutralized.", 976)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_05.wav
 
@@ -3525,6 +3626,7 @@ $Name: Convoy Warning 3
 $Team: -1
 $MessageNew:  XSTR("Check your distance from the convoy, pilot.", 977)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_06.wav
 
@@ -3572,6 +3674,7 @@ $Name: Be Careful
 $Team: -1
 $MessageNew:  XSTR("Destroy it, but be careful, Alpha. The NTF seem to have an ambush in the works. Keep an eye out for hostile fighters.", 983)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_08.wav
 
@@ -3579,6 +3682,7 @@ $Name: Medusa Bombers
 $Team: -1
 $MessageNew:  XSTR("The rebels have sortied their Medusa bombers! Intercept them before they fire their missiles! We must protect that convoy!", 984)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_09.wav
 
@@ -3586,6 +3690,7 @@ $Name: Maelstrom Destroyed
 $Team: -1
 $MessageNew:  XSTR("Excellent work, pilots! We have destroyed the Maelstrom! ", 985)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM109_AC_10.wav
 
@@ -3593,27 +3698,31 @@ $Name: Jooyun in the Ca-Ca
 $Team: -1
 $MessageNew:  XSTR("This is the GVG Jooyun. We are in dire need of fighter cover! All allied ships in the vicinity, please assist!", 986)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Support Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM109_Joo_01.wav
 
 $Name: Avila in Deep
 $Team: -1
 $MessageNew:  XSTR("Avila here! Help us out, pilots! Hull integrity is below critical! ", 987)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM4
 +Wave Name: SM109_Avi_01.wav
 
-$Name: Paracombe Critical
+$Name: Parracombe Critical
 $Team: -1
 $MessageNew:  XSTR("This is the Parracombe! We're taking a pounding here! Our hull cannot withstand a direct hit!", 988)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: SM109_pCb_01.wav
 
 $Name: All over loser
 $Team: -1
 $MessageNew:  XSTR("The convoy is lost!  Return to base immediately.", 989)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm109_ac_11.wav
 
@@ -3621,59 +3730,258 @@ $Name: Colossus Arrives 2
 $Team: -1
 $MessageNew:  XSTR("Alpha, the situation is now under control. You may return to base.", 990)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm109_col_03.wav
 
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 7 total
+#Background bitmaps		;! 40 total
 
-$Num stars: 953
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunRed
-+Angles: 0.157080 4.799652 3.665189
+$Sun: SunEnif
++Angles: 0.488692 0.000000 0.174533
 +Scale: 2.000000
-$Starbitmap: neb17
-+Angles: 0.244346 0.383972 0.191986
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulA1-Main
++Angles: 5.585049 0.000000 0.488692
++ScaleX: 8.000000
++ScaleY: 8.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb15
-+Angles: 0.523598 2.146753 0.471239
-+ScaleX: 3.000000
+$Starbitmap: NebulA2-Main
++Angles: 0.349066 0.000000 2.076940
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 4.974180 5.759580 0.349066
++ScaleX: 5.000000
 +ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb06
-+Angles: 0.785398 1.326449 0.052360
-+ScaleX: 2.000000
+$Starbitmap: NebulA4-Whisp
++Angles: 6.195910 4.537850 0.506145
++ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb04
-+Angles: 1.047197 3.246310 0.366519
+$Starbitmap: NebulA5-Whisp
++Angles: 1.047200 1.047200 2.530730
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 0.174533 0.000000 2.617990
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 0.000000 0.000000 1.047200
 +ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 0.244346 0.000000 2.443460
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 1.378810 0.000000 2.076940
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb15
-+Angles: 1.308996 1.762781 0.558505
+$Starbitmap: NebulA10-Whisp
++Angles: 5.497780 0.785398 6.021380
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 2.251470 0.000000 1.919860
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 4.712390 3.141590 1.745330
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA14-Whisp
++Angles: 5.934110 0.000000 0.174533
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 5.393060 0.174533 4.014250
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 5.829390 1.570800 3.752450
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 4.886920 4.712390 4.014250
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 1.570800 0.174533 5.218530
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 0.488692 0.000000 5.061450
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 1.378810 1.047200 6.091190
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 0.872664 1.570800 5.585050
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 6.091190 0.000000 2.617990
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 5.759580 0.488692 2.251470
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 4.712390 1.570800 3.316120
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 2.164210 3.822270 1.815140
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 5.759580 0.785398 0.698131
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb17
-+Angles: 1.570795 3.717548 0.750491
+$Starbitmap: NebulA3-Whisp
++Angles: 5.759580 0.000000 1.047200
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: planetb
-+Angles: 1.169370 5.445423 0.000000
+$Starbitmap: NebulA4-Whisp
++Angles: 5.829390 4.345870 0.925024
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 0.523598 6.195910 1.832590
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 0.506145 3.141590 1.919860
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 5.497780 1.745330 1.309000
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 0.785398 1.570800 1.832590
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 1.047200 5.235980 1.919860
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 1.396260 0.000000 1.919860
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 1.483530 4.712390 1.745330
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 0.872664 1.221730 2.268930
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 0.872664 1.570800 2.164210
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 5.759580 3.577920 1.274090
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 5.235980 0.000000 1.047200
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 4.712390 0.000000 0.872664
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetB
++Angles: 1.169370 2.338739 0.000000
 +ScaleX: 0.500000
 +ScaleY: 0.500000
 +DivX: 1
@@ -3685,7 +3993,7 @@ $Density: 100
 +Field Type: 0
 +Debris Genre: 0
 +Field Debris Type: 2
-$Average Speed: 4.999263
+$Average Speed: 5.000000
 $Minimum: -4000.000000, -1000.000000, -1000.000000
 $Maximum: 4000.000000, 3000.000000, 20000.000000
 +Inner Bound:

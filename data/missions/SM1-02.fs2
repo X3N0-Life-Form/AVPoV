@@ -10,18 +10,15 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The 53rd are ordered to destroy an NTF depot hidden in the Deneb asteroid belt.
-", 564)
+ XSTR("The 53rd are ordered to destroy an NTF depot hidden in the Deneb asteroid belt.", 564)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 0
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -33,10 +30,18 @@ $end_multi_text
 	0.006244, 0.999964, -0.005758,
 	0.735130, -0.008494, -0.677873
 +SquadReassignName: 53rd Hammerheads
-+SquadReassignLogo: hammer.pcx
++SquadReassignLogo: hammer1.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -45,7 +50,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Command has ordered the 53rd Hammerheads to secure an $h NTF depot in the $b Deneb asteroid belt. Six sentry guns are positioned around the depot, and rebel freighters are now moving the cargo out of the area. The $h NTF has gone through a lot of trouble to hide these materials.", 565)
+ XSTR("Command has ordered the $w 53rd $w Hammerheads to secure an $h NTF depot in the $b Deneb asteroid belt. Six sentry guns are positioned around the depot, and rebel freighters are now moving the cargo out of the area. The $h NTF has gone through a lot of trouble to hide these materials.", 565)
 $end_multi_text
 $voice: SM102_MB_01.wav
 $camera_pos: -2496.588135, 2794.064453, -2112.298828
@@ -121,7 +126,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Alpha 1, your mission is to seek and destroy all targets of opportunity, including freighters, cargo, and sentry guns. $f Beta wing will scan the cargo. Recon sighted a wing of $h Lokis guarding the depot, so prioritize these bandits.", 566)
+ XSTR("$f Alpha $f 1, your mission is to seek and destroy all targets of opportunity, including freighters, cargo, and sentry guns. $f Beta wing will scan the cargo. Recon sighted a wing of $h Lokis guarding the depot, so prioritize these bandits.", 566)
 $end_multi_text
 $voice: SM102_MB_02.wav
 $camera_pos: -2802.504883, 3163.967285, -4188.106934
@@ -197,7 +202,7 @@ $end_icon
 $start_icon
 $type: 14
 $team: Neutral
-$class: GTFR Poseidon
+$class: GTFr Poseidon
 $pos: -3798.427490, 295.728668, -2153.458984
 $label: Capricorn
 +id: 6
@@ -297,7 +302,7 @@ $end_icon
 $start_icon
 $type: 14
 $team: Neutral
-$class: GTFR Poseidon
+$class: GTFr Poseidon
 $pos: -3798.427490, 295.728668, -2153.458984
 $label: Capricorn
 +id: 6
@@ -368,14 +373,17 @@ $end_multi_text
 
 #Alternate Types:
 $Alt: Unknown
-
+$Alt: NTF Loki
+$Alt: NTFr Poseidon
+$Alt: NTFr Triton
+$Alt: NTSG Alastor
 #end
-
 
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
+
 )
 
 +Weaponry Pool: (
@@ -395,6 +403,7 @@ $Orientation:
 	0.514198, 0.000000, 0.857671,
 	-0.297531, 0.937900, 0.178378,
 	-0.804410, -0.346905, 0.482267
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -422,6 +431,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -437,8 +447,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: TC 2 2		;! Object #2
 $Class: TC 2
@@ -448,6 +457,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -463,8 +473,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: TC 2 3		;! Object #3
 $Class: TC 2
@@ -474,6 +483,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -489,8 +499,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: TC 2 4		;! Object #4
 $Class: TC 2
@@ -500,6 +509,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -515,8 +525,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: TC 2 5		;! Object #5
 $Class: TC 2
@@ -526,6 +535,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -541,8 +551,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: TAC 1 6		;! Object #6
 $Class: TAC 1
@@ -552,6 +561,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -567,7 +577,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 5
 
 $Name: TAC 1 9		;! Object #7
@@ -578,6 +587,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -593,7 +603,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 5
 
 $Name: TAC 1 10		;! Object #8
@@ -604,6 +613,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -619,7 +629,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 5
 
 $Name: Alpha 2		;! Object #9
@@ -630,6 +639,7 @@ $Orientation:
 	0.543629, 0.000000, 0.839326,
 	-0.273890, 0.945259, 0.177398,
 	-0.793380, -0.326321, 0.513870
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -658,6 +668,7 @@ $Orientation:
 	0.455158, 0.000000, 0.890411,
 	-0.298065, 0.942307, 0.152364,
 	-0.839040, -0.334750, 0.428899
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -680,12 +691,14 @@ $Determination: 10
 
 $Name: Sentry 03		;! Object #11
 $Class: GTSG Alastor
+$Alt: NTSG Alastor
 $Team: Neutral
 $Location: -2195.576904, -97.647957, -2118.100830
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -708,12 +721,14 @@ $Determination: 10
 
 $Name: Sentry 01		;! Object #12
 $Class: GTSG Alastor
+$Alt: NTSG Alastor
 $Team: Neutral
 $Location: -2695.819336, -117.493202, -1313.131836
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -742,6 +757,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
 +Initial Velocity: 33
@@ -757,17 +773,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 5
 
 $Name: Sentry 04		;! Object #14
 $Class: GTSG Alastor
+$Alt: NTSG Alastor
 $Team: Neutral
 $Location: -2593.935547, 308.210693, -2021.959717
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Unable To Scan", 571)
@@ -790,12 +807,14 @@ $Determination: 10
 
 $Name: Sentry 02		;! Object #15
 $Class: GTSG Alastor
+$Alt: NTSG Alastor
 $Team: Neutral
 $Location: -2294.909180, 293.910339, -1421.125732
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -819,13 +838,13 @@ $Determination: 10
 $Name: Unknown NTF		;! Object #16
 $Class: NTF Boadicea
 $Alt: Unknown
-
 $Team: Neutral
 $Location: 3826.043945, -0.000068, 2148.225830
 $Orientation:
 	0.789992, 0.000000, -0.613117,
 	0.000000, 1.000000, 0.000000,
 	0.613117, 0.000000, 0.789992
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-play-dead 89 ) )
@@ -913,13 +932,15 @@ $Determination: 10
 +Score: 400
 
 $Name: Capricorn 1		;! Object #17
-$Class: GTFR Triton
+$Class: GTFr Triton
+$Alt: NTFr Triton
 $Team: Neutral
 $Location: -3346.466309, 110.668503, -1499.145752
 $Orientation:
 	-0.995492, 0.000002, -0.094852,
 	-0.013700, -0.989518, 0.143758,
 	-0.093857, 0.144409, 0.985057
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -939,17 +960,17 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 257		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 20
 
 $Name: TAC 1 47		;! Object #18
 $Class: TAC 1
 $Team: Neutral
-$Location: -3352.392090, 97.033760, -1417.069092
+$Location: -3352.392090, 97.033745, -1417.069092
 $Orientation:
-	0.995494, 0.000150, 0.094826,
-	-0.093875, 0.142770, 0.985294,
-	-0.013391, -0.989756, 0.142141
+	0.995493, 0.000070, 0.094838,
+	-0.093876, 0.142770, 0.985294,
+	-0.013472, -0.989756, 0.142133
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Fighter Parts", 573)
 +Initial Velocity: 33
@@ -968,17 +989,18 @@ $Determination: 10
 $Docker Point: Cargo Dock01
 $Dockee Point: cargo dockpoint
 +Group: 0
-+Use Table Score:
 +Score: 5
 
 $Name: Capricorn 2		;! Object #19
-$Class: GTFR Poseidon
+$Class: GTFr Poseidon
+$Alt: NTFr Poseidon
 $Team: Neutral
 $Location: -3173.178955, 15.132055, -2046.921265
 $Orientation:
 	-0.064716, -0.352272, 0.933658,
 	-0.222067, 0.917243, 0.330686,
 	-0.972883, -0.185935, -0.137588
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1005,11 +1027,12 @@ $Determination: 10
 $Name: TC 2 27		;! Object #20
 $Class: TC 2
 $Team: Neutral
-$Location: -3164.530518, 0.105604, -2051.995850
+$Location: -3164.530518, 0.105614, -2051.995850
 $Orientation:
-	-0.064717, -0.352273, 0.933658,
-	-0.222069, 0.917242, 0.330686,
-	-0.972882, -0.185937, -0.137590
+	-0.064718, -0.352273, 0.933658,
+	-0.222069, 0.917243, 0.330686,
+	-0.972882, -0.185936, -0.137591
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Munitions", 572)
 +Initial Velocity: 33
@@ -1028,17 +1051,18 @@ $Determination: 10
 $Docker Point: cargo dock
 $Dockee Point: cargo dock
 +Group: 0
-+Use Table Score:
-+Score: 0
++Score: 5
 
 $Name: Cancer 1		;! Object #21
-$Class: GTF Hercules
+$Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2099.699951, 0.000000, -1302.300049
 $Orientation:
 	-0.993165, 0.000000, 0.116722,
 	-0.013779, 0.993008, -0.117240,
 	-0.115906, -0.118046, -0.986221
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-chase "Alpha 1" 89 ) )
@@ -1055,17 +1079,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Cancer 2		;! Object #22
-$Class: GTF Hercules
+$Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2200.200928, -0.000040, -1200.130493
 $Orientation:
 	-0.999987, 0.000000, -0.005037,
 	0.000533, 0.994390, -0.105774,
 	0.005009, -0.105776, -0.994377
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Capricorn 3" 50 ) ( ai-guard "Sentry 01" 50 ) ( ai-guard "Sentry 02" 50 ) ( ai-guard "Sentry 03" 50 ) ( ai-guard "Sentry 04" 50 ) )
@@ -1082,17 +1107,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Capricorn 3		;! Object #23
-$Class: GTFR Poseidon
+$Class: GTFr Poseidon
+$Alt: NTFr Poseidon
 $Team: Neutral
 $Location: -1787.599976, 619.130249, -1949.599976
 $Orientation:
 	0.358240, 0.000000, 0.933630,
 	-0.207227, 0.975056, 0.079514,
 	-0.910341, -0.221959, 0.349304
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-dock "TC 2 5" "cargo dock" "cargo dock" 89 ) )
@@ -1129,6 +1155,7 @@ $Orientation:
 	0.752481, 0.000000, 0.658614,
 	-0.226571, 0.938965, 0.258862,
 	-0.618416, -0.344012, 0.706553
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1157,6 +1184,7 @@ $Orientation:
 	0.774028, 0.000000, 0.633151,
 	-0.210634, 0.943042, 0.257500,
 	-0.597088, -0.332675, 0.729941
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1186,6 +1214,7 @@ $Orientation:
 	0.717075, 0.000000, 0.696996,
 	-0.234227, 0.941843, 0.240975,
 	-0.656461, -0.336053, 0.675373
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1208,12 +1237,14 @@ $Determination: 10
 
 $Name: Aries 1		;! Object #27
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -1699.500000, 0.000000, -1286.199951
 $Orientation:
 	-0.520663, 0.000000, 0.853762,
 	0.169590, 0.980073, 0.103424,
 	-0.836749, 0.198638, -0.510288
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1233,12 +1264,14 @@ $Determination: 10
 
 $Name: Aries 2		;! Object #28
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -1685.127930, 0.000063, -1403.373169
 $Orientation:
 	-0.398107, 0.000000, 0.917339,
 	0.191449, 0.977980, 0.083085,
 	-0.897139, 0.208700, -0.389340
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1258,12 +1291,14 @@ $Determination: 10
 
 $Name: Aquarius 1		;! Object #29
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2088.858643, 0.000187, -557.272827
 $Orientation:
 	-0.520663, 0.000000, 0.853762,
 	0.169590, 0.980073, 0.103424,
 	-0.836749, 0.198638, -0.510288
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1283,12 +1318,14 @@ $Determination: 10
 
 $Name: Aquarius 2		;! Object #30
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2074.486572, 0.000250, -674.445984
 $Orientation:
 	-0.398107, 0.000000, 0.917339,
 	0.191449, 0.977980, 0.083085,
 	-0.897139, 0.208700, -0.389340
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1314,6 +1351,7 @@ $Orientation:
 	-0.013385, 0.000000, -0.999910,
 	0.000000, 1.000000, 0.000000,
 	0.999910, 0.000000, -0.013385
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1340,6 +1378,7 @@ $Orientation:
 	0.076169, 0.000000, -0.997095,
 	-0.062244, 0.998050, -0.004755,
 	0.995150, 0.062426, 0.076021
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1360,12 +1399,14 @@ $Determination: 10
 
 $Name: Pisces 1		;! Object #33
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 2980.965576, -0.000102, 2594.276855
 $Orientation:
 	-0.538201, 0.000000, -0.842817,
 	0.000000, 1.000000, 0.000000,
 	0.842817, 0.000000, -0.538201
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Alpha 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1386,12 +1427,14 @@ $Determination: 10
 
 $Name: Pisces 2		;! Object #34
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 2909.407227, -0.000123, 2513.809082
 $Orientation:
 	-0.441562, 0.000000, -0.897231,
 	0.000000, 1.000000, 0.000000,
 	0.897231, 0.000000, -0.441562
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Unknown NTF" 50 ) )
@@ -1413,12 +1456,14 @@ $Determination: 10
 
 $Name: Pisces 3		;! Object #35
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 3087.387939, -0.000090, 2448.096191
 $Orientation:
 	-0.464240, 0.000000, -0.885709,
 	0.000000, 1.000000, 0.000000,
 	0.885709, 0.000000, -0.464240
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Unknown NTF" 50 ) )
@@ -1440,12 +1485,14 @@ $Determination: 10
 
 $Name: Virgo 1		;! Object #36
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 3166.877686, -0.000012, 2836.080566
 $Orientation:
 	-0.777264, 0.000000, -0.629174,
 	0.000000, 1.000000, 0.000000,
 	0.629174, 0.000000, -0.777264
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1466,12 +1513,14 @@ $Determination: 10
 
 $Name: Virgo 2		;! Object #37
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 3095.319336, -0.000033, 2755.612793
 $Orientation:
 	-0.701902, 0.000000, -0.712274,
 	0.000000, 1.000000, 0.000000,
 	0.712274, 0.000000, -0.701902
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1492,12 +1541,14 @@ $Determination: 10
 
 $Name: Virgo 3		;! Object #38
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: 3273.300049, 0.000000, 2689.899902
 $Orientation:
 	-0.769741, 0.000000, -0.638357,
 	0.000000, 1.000000, 0.000000,
 	0.638357, 0.000000, -0.769741
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1829,7 +1880,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Beta 1" 
+      "#Beta 1" 
       "High" 
       "Unscanable" 
    )
@@ -2908,7 +2959,6 @@ $List: (		;! 1 points in list
 
 #Messages		;! 36 total
 
-
 $Name: Lets Go
 $Team: -1
 $MessageNew:  XSTR("Okay, Alpha wing. Let's take out the fighters and freighters. Beta will scan the cargo. Watch those sentry guns!", 582)
@@ -3089,6 +3139,7 @@ $Name: Bosch
 $Team: -1
 $MessageNew:  XSTR("This is Admiral Bosch of the Neo-Terran Front. Allied fighters, break off your attack!", 604)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-BSH
 +Wave Name: SM102_BH_01.wav
 
@@ -3144,6 +3195,7 @@ $Name: Make This Brief
 $Team: -1
 $MessageNew:  XSTR("If you destroy this installation, you sign the death warrant of our race! I demand unfettered access to the Sirius jump node!", 611)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-BSH
 +Wave Name: SM102_BH_02.wav
 
@@ -3159,6 +3211,7 @@ $Name: Unfettered Access
 $Team: -1
 $MessageNew:  XSTR("Listen to me! If my safety is guaranteed, I'll withdraw my forces from Deneb.", 613)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-BSH
 +Wave Name: SM102_BH_03.wav
 
@@ -3197,159 +3250,279 @@ $end_multi_text
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 24 total
+#Background bitmaps		;! 44 total
 
-$Num stars: 1260
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunGold
-+Angles: 0.000000 0.000000 2.076940
-+Scale: 2.000000
-$Starbitmap: neb09
-+Angles: 5.009091 5.585049 5.218530
-+ScaleX: 3.000000
-+ScaleY: 2.000000
+$Sun: SunDeneb
++Angles: 0.872664 0.000000 5.393063
++Scale: 4.000000
+$Starbitmap: NebulB1-Main
++Angles: 0.872664 0.785398 1.396262
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb01
-+Angles: 5.585049 5.585049 0.925024
-+ScaleX: 2.000000
-+ScaleY: 1.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb03
-+Angles: 5.777035 2.321286 0.802851
+$Starbitmap: NebulB1-Main
++Angles: 0.872664 0.785398 1.396262
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb12
-+Angles: 6.021381 4.468040 0.628318
-+ScaleX: 2.000000
-+ScaleY: 2.000000
+$Starbitmap: NebulB2-Main
++Angles: 0.000000 0.000000 5.585049
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb09
-+Angles: 5.585049 0.575958 0.925024
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb01
-+Angles: 5.358157 2.740165 0.628318
-+ScaleX: 3.000000
-+ScaleY: 2.000000
+$Starbitmap: NebulB3-Main
++Angles: 0.000000 5.585049 3.490656
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb03
-+Angles: 5.131264 5.951568 0.506145
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulB6-Whisp
++Angles: 6.108648 0.000000 4.712385
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb12
-+Angles: 4.991638 0.855211 0.418879
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: neb09
-+Angles: 4.764745 1.692968 0.191986
+$Starbitmap: NebulB5-Whisp
++Angles: 6.108648 0.000000 5.235984
 +ScaleX: 4.000000
 +ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: dneb01
-+Angles: 5.253437 3.455749 1.117010
-+ScaleX: 3.000000
-+ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb03
-+Angles: 5.078904 1.256636 1.308996
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb12
-+Angles: 4.886918 1.867501 1.553342
-+ScaleX: 2.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb09
-+Angles: 3.508109 0.383972 1.378809
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb01
-+Angles: 3.385936 1.570795 1.169370
+$Starbitmap: NebulB8-Whisp
++Angles: 0.000000 0.000000 4.363320
 +ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: neb03
-+Angles: 4.799652 1.797688 1.815141
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb12
-+Angles: 4.886918 4.276053 2.076940
-+ScaleX: 2.000000
 +ScaleY: 4.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb09
-+Angles: 4.345866 0.366519 2.216566
+$Starbitmap: NebulB11-Whisp
++Angles: 0.000000 0.785398 3.839721
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb01
-+Angles: 3.874628 1.570795 2.408552
+$Starbitmap: NebulB6-Whisp
++Angles: 0.174533 2.792525 4.101521
 +ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
++ScaleY: 4.000000
++DivX: 1
 +DivY: 1
-$Starbitmap: neb03
-+Angles: 4.031707 0.558505 0.959930
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
+$Starbitmap: NebulB14-Whisp
++Angles: 5.410516 4.712385 4.886918
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
 +DivY: 1
-$Starbitmap: neb12
-+Angles: 4.345866 1.797688 0.715584
+$Starbitmap: NebulB12-Whisp
++Angles: 5.585049 1.570795 4.886918
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 0.000000 3.490656 4.537852
 +ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 0.000000 0.000000 5.934115
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.174533 0.000000 5.497783
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 6.021381 2.967057 5.585049
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 5.934115 2.094393 5.410516
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 6.108648 0.349066 3.665189
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 5.585049 3.141590 5.323250
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 0.000000 5.235984 3.316123
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 0.174533 3.141590 3.316123
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 0.261799 0.000000 3.665189
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 5.061451 1.919861 1.745328
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 4.886918 1.047197 2.094393
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 0.349066 5.934115 1.745328
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 4.363320 0.349066 2.094393
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.523598 1.570795 1.221730
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 1.047197 4.886918 1.658062
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 5.759582 0.872664 1.308996
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 1.308996 5.497783 1.745328
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.886918 0.000000 2.443459
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 5.235984 3.141590 1.047197
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 1.570795 0.000000 1.919861
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 1.221730 5.497783 2.007127
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 1.745328 0.000000 2.443459
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 5.061451 0.000000 2.792525
++ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb01
-+Angles: 4.520399 2.146753 0.541052
+$Starbitmap: NebulB14-Whisp
++Angles: 0.698131 0.523598 2.094393
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.698131 2.617992 2.181660
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 0.785398 4.712385 2.356193
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 6.108648 4.014254 0.959930
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 5.235984 0.523598 0.610865
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 4.363320 3.141590 3.141590
 +ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.363320 1.396262 5.759582
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 4.188787 3.141590 5.759582
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetH
++Angles: 0.000000 4.485493 4.014254
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb02
-+Angles: 3.577922 0.366519 0.663225
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb12
-+Angles: 3.961894 1.570795 0.506145
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: planeth
-+Angles: 0.000000 0.558505 4.014254
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 2
 
 #Asteroid Fields
 
@@ -3357,7 +3530,7 @@ $Density: 120
 +Field Type: 0
 +Debris Genre: 0
 +Field Debris Type: 2
-$Average Speed: 13.000000
+$Average Speed: 12.999999
 $Minimum: -5000.000000, -2500.000000, -4200.000000
 $Maximum: 6000.000000, 2200.000000, 6000.000000
 +Inner Bound:

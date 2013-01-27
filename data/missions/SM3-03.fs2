@@ -10,8 +10,7 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The 203rd must capture the NTF Iceni, Admiral Bosch's command ship.
-", 1593)
+ XSTR("The 203rd must capture the NTF Iceni, Admiral Bosch's command ship.", 1593)
 $end_multi_text
 
 +Game Type Flags: 1
@@ -20,10 +19,6 @@ $end_multi_text
 +NebAwacs: 3000.000000
 
 +Storm: s_standard
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
 
 
 +Disallow Support: 0
@@ -46,14 +41,23 @@ $end_multi_text
 
 $AI Profile: myProfile
 
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
+
 #Command Briefing
 
 $Stage Text:
  XSTR("Colossus Triumphant
 
-At 0345 hours, the $f GTVA $f Colossus destroyed the Shivan juggernaut $h Sathanas near the $b Gamma $b Draconis jump node in $b Capella. This victory proves without a doubt our technological superiority over our Great War nemesis. For the second time, the $f Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
+At 0345 hours, the $f GTVA $f Colossus destroyed the Shivan juggernaut $h Sathanas near the $b Gamma $b Draconis jump node in $b Capella. This victory proves without a doubt our technological superiority over our $y Great $y War nemesis. For the second time, the Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
 
-With the $f Colossus, we will have nothing more to fear.", -1)
+With the $f Colossus, we will have nothing more to fear.", 1594)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM303_CB_01.wav
@@ -61,7 +65,7 @@ $Ani Filename: <default>
 $Stage Text:
  XSTR("Damage Control
 
-We still have much to accomplish, however. The Sathanas inflicted moderate damage against the Colossus, though its systems remain 80% operational. Terran and Vasudan engineers anticipate it will take several months to fully repair the warship's hull. Until we completely secure the nebula, our evacuation of Capella's civilian population will proceed as planned.", 1595)
+We still have much to accomplish, however. The $h Sathanas inflicted moderate damage against the $f Colossus, though its systems remain 80% operational. Terran and Vasudan engineers anticipate it will take several months to fully repair the warship's hull. Until we completely secure the nebula, our evacuation of $b Capella's civilian population will proceed as planned.", 1595)
 $end_multi_text
 $Ani Filename: cb_sm3-03_b.ani
 +Wave Filename: SM303_CB_02.wav
@@ -69,9 +73,9 @@ $Ani Filename: cb_sm3-03_b.ani
 $Stage Text:
  XSTR("Chasing the Iceni
 
-With the immediate Shivan threat neutralized, we must now focus on capturing Admiral Bosch. Recon units are scouring the nebula for any sign of his command ship. The Psamtik will lead a task force assigned to recover the Iceni once its position has been determined.
+With the immediate Shivan threat neutralized, we must now focus on capturing $w Admiral $w Bosch. Recon units are scouring the nebula for any sign of his command ship. The $f Psamtik will lead a task force assigned to recover the $h Iceni once its position has been determined.
 
-Command has disclosed new information concerning the NTF's secret agenda.", 1596)
+Command has disclosed new information concerning the $h NTF's secret agenda.", 1596)
 $end_multi_text
 $Ani Filename: cb_sm2-10_c.ani
 +Wave Filename: SM303_CB_03.wav
@@ -79,7 +83,7 @@ $Ani Filename: cb_sm2-10_c.ani
 $Stage Text:
  XSTR("ETAK
 
-We now know that Admiral Bosch has developed a Shivan communication technology that transmits and modulates quantum pulses. Bosch secretly resurrected a defunct GTI project involving captured Shivan specimen, terminated after the GTI's Hades rebellion in 2335. Bosch referred to his project as ETAK, short for Etamnanki, the tower that may have inspired the story of Babel.", 1597)
+We now know that $w Admiral $w Bosch has developed a Shivan communication technology that transmits and modulates quantum pulses. $w Bosch secretly resurrected a defunct GTI project involving captured Shivan specimen, terminated after the GTI's $y Hades rebellion in 2335. $w Bosch referred to his project as $b ETAK, short for Etamnanki, the tower that may have inspired the story of Babel.", 1597)
 $end_multi_text
 $Ani Filename: cb_sm2-10_a.ani
 +Wave Filename: SM303_CB_04.wav
@@ -87,7 +91,7 @@ $Ani Filename: cb_sm2-10_a.ani
 $Stage Text:
  XSTR("Stealing History
 
-Through a rigorous study of Ancient archeology, Bosch learned the location of the Knossos subspace device, the portal to the region of the galaxy where the Ancients first encountered the Shivans. His genocidal war was a smoke screen to cover his plunder of Ancient sites in Vasudan systems. In Deneb, he learned how to activate the portal and deployed the Trinity to power up the device.", 1598)
+Through a rigorous study of $y Ancient archeology, $w Bosch learned the location of the $y Knossos subspace device, the portal to the region of the galaxy where the $y Ancients first encountered the Shivans. His genocidal war was a smoke screen to cover his plunder of $y Ancient sites in Vasudan systems. In $b Deneb, he learned how to activate the portal and deployed the $h Trinity to power up the device.", 1598)
 $end_multi_text
 $Ani Filename: cb_sm1-05_d.ani
 +Wave Filename: SM303_CB_05.wav
@@ -95,7 +99,7 @@ $Ani Filename: cb_sm1-05_d.ani
 $Stage Text:
  XSTR("An Infernal Pact
 
-Integral to Bosch's vision of Neo-Terra was an alliance with the Shivans upon their return to our systems. When Bosch realized his regime was on the brink of collapse, he ordered his forces into the nebula to make contact with the enemy. Interrogation of rebel prisoners reveals that only Bosch's immediate subordinates had access to the ETAK project. No further details are available at your level of clearance.", 1599)
+Integral to $h Bosch's vision of Neo-Terra was an alliance with the Shivans upon their return to our systems. When $w Bosch realized his regime was on the brink of collapse, he ordered his forces into the nebula to make contact with the enemy. Interrogation of rebel prisoners reveals that only $w Bosch's immediate subordinates had access to the $b ETAK project. No further details are available at your level of clearance.", 1599)
 $end_multi_text
 $Ani Filename: cb_sm1-01_b.ani
 +Wave Filename: SM303_CB_06.wav
@@ -103,7 +107,7 @@ $Ani Filename: cb_sm1-01_b.ani
 $Stage Text:
  XSTR("Circe
 
-You are now authorized to use the GTW-19 Circe. Derived from advanced EM weaponry, the Circe disrupts shield systems by directing a barrage of fluctuating EM harmonics on the target. This energy is completely ineffective against armor plating or insulated subsystems. For this reason, the Circe is best paired with a weapon such as the Maxim or the Prometheus, which inflict heavy hull damage.", 1600)
+You are now authorized to use the $y GTW-19 $y Circe. Derived from advanced EM weaponry, the $y Circe disrupts shield systems by directing a barrage of fluctuating EM harmonics on the target. This energy is completely ineffective against armor plating or insulated subsystems. For this reason, the $y Circe is best paired with a weapon such as the $y Maxim or the $y Prometheus, which inflict heavy hull damage.", 1600)
 $end_multi_text
 $Ani Filename: Tech_GTW-Circe.ani
 +Wave Filename: SM303_CB_07.wav
@@ -113,7 +117,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Reconnaissance has located the NTF Iceni. Bosch has made contact with the Shivans a second time. An Azrael-class transport is currently docked with the vessel. A second transport appears to be waiting nearby. We do not know if the Shivans are boarding the Iceni, or if Bosch and his followers are boarding the transports.", 1601)
+ XSTR("Reconnaissance has located the $h NTF $h Iceni. $w Bosch has made contact with the Shivans a second time. An $y Azrael -class transport is currently docked with the vessel. A second transport appears to be waiting nearby. We do not know if the Shivans are boarding the $h Iceni, or if $w Bosch and his followers are boarding the transports.", 1601)
 $end_multi_text
 $voice: SM303_MB_01.wav
 $camera_pos: 775.416016, 3204.856445, -3271.545410
@@ -131,7 +135,7 @@ $type: 28
 $team: Neutral
 $class: NTF Iceni
 $pos: 436.658569, 187.898392, 1636.391357
-$label: Iceni
+$label: NTF Iceni
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -153,7 +157,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our objective is to capture the $h Iceni and the ETAK technology. Two Shivan cruisers are guarding the vessel, the $h Azmedaj and the $h Sammael. Once the cruisers have been destroyed, we will deploy a Special Forces unit to board and secure the rebel command ship. Your second objective will be to defend our transport, the $f GVT $f Qeb.", 1602)
+ XSTR("Our objective is to capture the $h Iceni and the $b ETAK technology. Two Shivan cruisers are guarding the vessel, the $h Azmedaj and the $h Sammael. Once the cruisers have been destroyed, we will deploy a Special Forces unit to board and secure the rebel command ship. Your second objective will be to defend our transport, the $f GTT $f Qeb.", 1602)
 $end_multi_text
 $voice: SM303_MB_02.wav
 $camera_pos: 775.416016, 3690.816650, -4113.252441
@@ -171,7 +175,7 @@ $type: 28
 $team: Neutral
 $class: NTF Iceni
 $pos: 436.658569, 187.898392, 1636.391357
-$label: Iceni
+$label: NTF Iceni
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -217,7 +221,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("To our knowledge, the $h Iceni holds the only example of the ETAK technology in existence. Bosch took extraordinary measures to destroy all evidence of his research. If we fail, we have little hope of rebuilding the device. Command has absolute faith in your ability to succeed in this endeavor.", 1603)
+ XSTR("To our knowledge, the $h Iceni holds the only example of the $b ETAK technology in existence. $w Bosch took extraordinary measures to destroy all evidence of his research. If we fail, we have little hope of rebuilding the device. Command has absolute faith in your ability to succeed in this endeavor.", 1603)
 $end_multi_text
 $voice: SM303_MB_03.wav
 $camera_pos: 436.658569, 2756.769775, -2813.022705
@@ -235,7 +239,7 @@ $type: 28
 $team: Neutral
 $class: NTF Iceni
 $pos: 436.658569, 187.898392, 1636.391357
-$label: Iceni
+$label: NTF Iceni
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -428,6 +432,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -444,7 +449,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Alpha 2		;! Object #1
@@ -455,6 +459,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -472,7 +477,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 5
 
@@ -484,6 +488,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -501,7 +506,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 5
 
@@ -513,6 +517,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -530,7 +535,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Azrael		;! Object #4
@@ -541,6 +545,7 @@ $Orientation:
 	-0.255193, -0.965925, -0.043185,
 	0.951951, -0.258820, 0.163719,
 	-0.169317, 0.000670, 0.985562
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -570,11 +575,11 @@ $Determination: 10
 $Name: Iceni		;! Object #5
 $Class: NTF Iceni
 $Team: Neutral
-$Location: 487.237823, 259.483032, 2138.453369
+$Location: 449.891693, 162.902222, 2203.381836
 $Orientation:
-	0.860344, -0.500006, 0.099014,
-	-0.495051, -0.865934, -0.071298,
-	0.121388, 0.012324, -0.992529
+	0.860345, -0.500005, 0.099015,
+	-0.495050, -0.865935, -0.071298,
+	0.121389, 0.012323, -0.992529
 $AI Behavior: None
 $AI Goals: ( goals ( ai-play-dead 89 ) )
 $Cargo 1:  XSTR("Survivors", 1610)
@@ -630,6 +635,7 @@ $Orientation:
 	-0.778573, 0.000000, -0.627554,
 	0.000000, 1.000000, 0.000000,
 	0.627554, 0.000000, -0.778573
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -658,7 +664,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 150
 
 $Name: Sammael		;! Object #7
@@ -669,6 +674,7 @@ $Orientation:
 	-0.750755, 0.000000, 0.660581,
 	0.000000, 1.000000, 0.000000,
 	-0.660581, 0.000000, -0.750755
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -710,6 +716,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Iceni" "Frontside dock" "RightDock" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -773,6 +780,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -788,7 +796,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 2		;! Object #10
@@ -799,6 +806,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -814,7 +822,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aries 3		;! Object #11
@@ -825,6 +832,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -840,7 +848,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Aquarius 1		;! Object #12
@@ -851,6 +858,7 @@ $Orientation:
 	0.343646, 0.000000, 0.939099,
 	0.000000, 1.000000, 0.000000,
 	-0.939099, 0.000000, 0.343646
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -879,6 +887,7 @@ $Orientation:
 	0.343646, 0.000000, 0.939099,
 	0.000000, 1.000000, 0.000000,
 	-0.939099, 0.000000, 0.343646
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -907,6 +916,7 @@ $Orientation:
 	0.343646, 0.000000, 0.939099,
 	0.000000, 1.000000, 0.000000,
 	-0.939099, 0.000000, 0.343646
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -935,6 +945,7 @@ $Orientation:
 	-0.469923, 0.000000, -0.882707,
 	0.000000, 1.000000, 0.000000,
 	0.882707, 0.000000, -0.469923
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -961,6 +972,7 @@ $Orientation:
 	-0.469923, 0.000000, -0.882707,
 	0.000000, 1.000000, 0.000000,
 	0.882707, 0.000000, -0.469923
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -987,6 +999,7 @@ $Orientation:
 	-0.469923, 0.000000, -0.882707,
 	0.000000, 1.000000, 0.000000,
 	0.882707, 0.000000, -0.469923
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1013,6 +1026,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1041,6 +1055,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1069,6 +1084,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1096,6 +1112,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1123,6 +1140,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1137,7 +1155,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #23
@@ -1148,6 +1165,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1162,7 +1180,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #24
@@ -1173,6 +1190,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1187,7 +1205,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 1		;! Object #25
@@ -1198,6 +1215,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1213,7 +1231,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 2		;! Object #26
@@ -1224,6 +1241,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1239,7 +1257,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 3		;! Object #27
@@ -1250,6 +1267,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1265,7 +1283,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 4		;! Object #28
@@ -1276,6 +1293,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1291,7 +1309,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Leo 1		;! Object #29
@@ -1302,6 +1319,7 @@ $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
 	-0.001593, 0.000000, -0.999999
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1325,6 +1343,7 @@ $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
 	-0.001593, 0.000000, -0.999999
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1348,6 +1367,7 @@ $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
 	-0.001593, 0.000000, -0.999999
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1371,6 +1391,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1395,6 +1416,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1419,6 +1441,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1443,6 +1466,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1467,6 +1491,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1491,6 +1516,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1515,6 +1541,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1539,6 +1566,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1563,6 +1591,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1578,7 +1607,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 2		;! Object #41
@@ -1589,6 +1617,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1604,7 +1633,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 3		;! Object #42
@@ -1615,6 +1643,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1630,7 +1659,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 4		;! Object #43
@@ -1641,6 +1669,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1656,7 +1685,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 1		;! Object #44
@@ -1667,6 +1695,7 @@ $Orientation:
 	-0.452176, 0.000000, 0.891929,
 	0.000000, 1.000000, 0.000000,
 	-0.891929, 0.000000, -0.452176
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1695,6 +1724,7 @@ $Orientation:
 	-0.452176, 0.000000, 0.891929,
 	0.000000, 1.000000, 0.000000,
 	-0.891929, 0.000000, -0.452176
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1723,6 +1753,7 @@ $Orientation:
 	-0.452176, 0.000000, 0.891929,
 	0.000000, 1.000000, 0.000000,
 	-0.891929, 0.000000, -0.452176
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1737,7 +1768,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Capricorn 2		;! Object #47
@@ -1748,6 +1778,7 @@ $Orientation:
 	-0.452176, 0.000000, 0.891929,
 	0.000000, 1.000000, 0.000000,
 	-0.891929, 0.000000, -0.452176
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1762,7 +1793,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Capricorn 3		;! Object #48
@@ -1773,6 +1803,7 @@ $Orientation:
 	-0.452176, 0.000000, 0.891929,
 	0.000000, 1.000000, 0.000000,
 	-0.891929, 0.000000, -0.452176
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1787,7 +1818,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sagittarius 3		;! Object #49
@@ -1798,6 +1828,7 @@ $Orientation:
 	-0.563985, 0.000000, 0.825785,
 	0.000000, 1.000000, 0.000000,
 	-0.825785, 0.000000, -0.563985
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2148,7 +2179,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Extraction" 
    )
@@ -2630,7 +2661,7 @@ $Formula: ( when
       )
    )
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Iceni Hurt" 
    )
@@ -2664,7 +2695,7 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Iceni" ) 
    )
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "Normal" 
       "Out Of Time" 
    )
@@ -2694,7 +2725,7 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Iceni" ) 
    )
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "Normal" 
       "Secret To Hell" 
    )
@@ -2741,7 +2772,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Killed" 
    )
@@ -2767,7 +2798,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Out Of Here Now" 
    )
@@ -2793,7 +2824,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Listen To Me" 
    )
@@ -2819,7 +2850,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "No Can Do" 
    )
@@ -2886,7 +2917,7 @@ $Formula: ( when
       )
    )
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "No Time" 
    )
@@ -2954,7 +2985,7 @@ $Formula: ( when
       8 
    )
    ( send-message 
-      "Iceni" 
+      "#Iceni" 
       "High" 
       "Slaughterhouse" 
    )
@@ -3101,6 +3132,7 @@ $Name: Iceni Under Attack
 $Team: -1
 $MessageNew:  XSTR("The Shivans are attacking the command ship! Changing IFF status to friendly. Defend the Iceni, pilots. We must retrieve that technology!", 1615)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_25.wav
 
@@ -3108,6 +3140,7 @@ $Name: Stay Clear
 $Team: -1
 $MessageNew:  XSTR("Get out of there, pilots! Stand clear of the Iceni! Self-destruction is imminent!", 1616)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_01.wav
 
@@ -3123,6 +3156,7 @@ $Name: Both Cruisers Destroyed
 $Team: -1
 $MessageNew:  XSTR("Both cruisers are down. We are sending in the boarding party.", 1618)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_02.wav
 
@@ -3130,6 +3164,7 @@ $Name: Cain Destroyed
 $Team: -1
 $MessageNew:  XSTR("Cain class cruiser has been destroyed.", 1619)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_03.wav
 
@@ -3137,6 +3172,7 @@ $Name: Lilith Destroyed
 $Team: -1
 $MessageNew:  XSTR("The Sammael has been destroyed.", 1620)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_04.wav
 
@@ -3144,6 +3180,7 @@ $Name: Iceni Destroyed
 $Team: -1
 $MessageNew:  XSTR("The Iceni has been destroyed.  Return to base.", 1621)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_05.wav
 
@@ -3167,6 +3204,7 @@ $Name: Destroy Cruisers
 $Team: -1
 $MessageNew:  XSTR("Destroy the cruisers, pilots. We must secure the area before we send in the boarding party.", 1624)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_06.wav
 
@@ -3182,6 +3220,7 @@ $Name: Bombers
 $Team: -1
 $MessageNew:  XSTR("A wing of Nephilim bombers is heading for the Iceni! Stop them before they launch their warheads!", 1626)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_07.wav
 
@@ -3189,6 +3228,7 @@ $Name: Aquarius Down
 $Team: -1
 $MessageNew:  XSTR("Aquarius wing is down!", 1627)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_08.wav
 
@@ -3196,6 +3236,7 @@ $Name: Cancer Incoming
 $Team: -1
 $MessageNew:  XSTR("Cancer wing has arrived. We've got three Nahema bombers closing in. Intercept and destroy!", 1628)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_09.wav
 
@@ -3203,6 +3244,7 @@ $Name: Cancer Nullified
 $Team: -1
 $MessageNew:  XSTR("We have nullified Cancer wing.", 1629)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_10.wav
 
@@ -3210,6 +3252,7 @@ $Name: Azrael Destroyed
 $Team: -1
 $MessageNew:  XSTR("We have destroyed the Azrael.", 1630)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_11.wav
 
@@ -3217,6 +3260,7 @@ $Name: Qeb Enters
 $Team: -1
 $MessageNew:  XSTR("The GVT Qeb has entered the field of engagement. Escort the transport until it docks with the Iceni.", 1631)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_12.wav
 
@@ -3224,14 +3268,16 @@ $Name: Qeb In Position
 $Team: -1
 $MessageNew:  XSTR("This is the GVT Qeb. We are now in position. Commencing docking sequence.", 1632)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Support Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM3-03_Qe_01.wav
 
 $Name: Qeb Docked
 $Team: -1
 $MessageNew:  XSTR("Qeb here. Docking point secure. Iceni, stand by for boarding.", 1633)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Support Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM3-03_Qe_02.wav
 
 $Name: Slaughterhouse
@@ -3244,6 +3290,7 @@ $Name: Survivors On Board
 $Team: -1
 $MessageNew:  XSTR("All survivors are now on board the transport. We have the specifications. Undocking now.", 1635)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_13.wav
 
@@ -3251,13 +3298,15 @@ $Name: Qeb Jump
 $Team: -1
 $MessageNew:  XSTR("This is the Qeb. Now making the jump to subspace.", 1636)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Support Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM3-03_Qe_03.wav
 
 $Name: Mission Accomplished
 $Team: -1
 $MessageNew:  XSTR("Mission accomplished, pilots. You are authorized to return to base.", 1637)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_14.wav
 
@@ -3265,6 +3314,7 @@ $Name: Extraction
 $Team: -1
 $MessageNew:  XSTR("This is Lt. Rusk, NTF Iceni! We need immediate extraction! Please assist!", 1638)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_02.wav
 
@@ -3272,6 +3322,7 @@ $Name: Status
 $Team: -1
 $MessageNew:  XSTR("What's your status, Iceni?", 1639)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_15.wav
 
@@ -3279,6 +3330,7 @@ $Name: Killed
 $Team: -1
 $MessageNew:  XSTR("The Shivans boarded us! They killed everyone!  I've got thirty-three survivors on deck seven. There's got to be more below.", 1640)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_03.wav
 
@@ -3286,6 +3338,7 @@ $Name: Wheres Bosch
 $Team: -1
 $MessageNew:  XSTR("Where's Admiral Bosch?", 1641)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_16.wav
 
@@ -3293,6 +3346,7 @@ $Name: Out Of Here Now
 $Team: -1
 $MessageNew:  XSTR("They took him away, with Gibson and Sarno and about a dozen others. You've got to get us out of here NOW!", 1642)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_04.wav
 
@@ -3300,6 +3354,7 @@ $Name: Tech On Board
 $Team: -1
 $MessageNew:  XSTR("Is the communication technology on board?", 1643)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_17.wav
 
@@ -3307,6 +3362,7 @@ $Name: Listen To Me
 $Team: -1
 $MessageNew:  XSTR("Listen to me! Bosch initiated the self-destruct sequence! We have only a few minutes left!", 1644)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_05.wav
 
@@ -3314,6 +3370,7 @@ $Name: Transmit
 $Team: -1
 $MessageNew:  XSTR("Transmit the specifications of the ETAK device now, Iceni.", 1645)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_18.wav
 
@@ -3321,6 +3378,7 @@ $Name: No Can Do
 $Team: -1
 $MessageNew:  XSTR("No can do. You get us out alive, Command, I'll get you those specs! You understand?", 1646)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_06.wav
 
@@ -3328,6 +3386,7 @@ $Name: Now Deploying
 $Team: -1
 $MessageNew:  XSTR("Acknowledged. Now deploying GVT Qeb. Stand by.", 1647)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_19.wav
 
@@ -3335,6 +3394,7 @@ $Name: Eliminate Cruisers
 $Team: -1
 $MessageNew:  XSTR("Our fighters must eliminate these cruisers first, Iceni. Stand by.", 1648)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_20.wav
 
@@ -3342,6 +3402,7 @@ $Name: No Time
 $Team: -1
 $MessageNew:  XSTR("I'm telling you there's no time, Command! Get us out of here now!", 1649)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_07.wav
 
@@ -3349,6 +3410,7 @@ $Name: Iceni Hurt
 $Team: -1
 $MessageNew:  XSTR("Hull integrity has fallen below critical! We're gonna die out here, Command! Get us some fighter cover!", 1650)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_08.wav
 
@@ -3356,6 +3418,7 @@ $Name: Qeb Destroyed
 $Team: -1
 $MessageNew:  XSTR("Iceni, we've lost the GVT Qeb. We're deploying a second transport.", 1651)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_21.wav
 
@@ -3363,6 +3426,7 @@ $Name: Out Of Time
 $Team: -1
 $MessageNew:  XSTR("Self-destruct in thirty seconds, Command! You're out of time.", 1652)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_09.wav
 
@@ -3370,6 +3434,7 @@ $Name: Redeem Yourself
 $Team: -1
 $MessageNew:  XSTR("Transmit the specs, Lieutenant. This is your last chance to redeem yourself.", 1653)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_22.wav
 
@@ -3377,6 +3442,7 @@ $Name: Secret To Hell
 $Team: -1
 $MessageNew:  XSTR("Sorry, Command. We're taking that secret to hell with us. Believe me. You don't want to know. Rusk out.", 1654)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM3
 +Wave Name: SM303_Ic_10.wav
 
@@ -3384,6 +3450,7 @@ $Name: Azrael Undocked
 $Team: -1
 $MessageNew:  XSTR("The Azrael has undocked with the Iceni. The vessel is preparing to engage its subspace drive.", 1655)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_23.wav
 
@@ -3391,6 +3458,7 @@ $Name: Qeb Destroyed 2
 $Team: -1
 $MessageNew:  XSTR("We've lost the transport! Repeat! We've lost the transport!", 1656)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM3-03_AC_24.wav
 
@@ -3399,12 +3467,10 @@ $end_multi_text
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 500
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 +Neb2: nbackpurp2
-
 +Neb2Flags: 62
-
 
 $Bitmap List:
 $Sun: SunBlue

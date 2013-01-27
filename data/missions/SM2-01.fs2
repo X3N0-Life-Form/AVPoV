@@ -10,26 +10,17 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The 134th Barracudas escort two freighters in the first nebula deployment of the AWACS.
-", 1033)
+ XSTR("The 134th Barracudas escort two freighters in the first nebula deployment of the AWACS.", 1033)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 1750.000000
-
 +Storm: s_active
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -43,8 +34,15 @@ $end_multi_text
 +SquadReassignName: 134th Barracuda
 +SquadReassignLogo: barracudas.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Sexp_variables
 
@@ -58,7 +56,7 @@ $Variables:
 $Stage Text:
  XSTR("News from the Front
 
-At 2150, the Colossus entered the Polaris system and neutralized the NTD Andronicus and the NTC Camisard, securing the jump node from Epsilon Pegasi. Meanwhile, the 13th Vasudan Battle Group has destroyed the NTD Cyrene and gained foothold in Sirius. Intelligence reports that Admiral Bosch and his elite guard have withdrawn to the rebel enclave of Regulus. 
+At 2150, the $f Colossus entered the $b Polaris system and neutralized the $h NTD $h Andronicus and the $h NTC $h Camisard, securing the jump node from $b Epsilon $b Pegasi. Meanwhile, the $f 13th $f Vasudan $f Battle $f Group has destroyed the $h NTD $h Cyrene and gained foothold in $b Sirius. Intelligence reports that $w Admiral $w Bosch and his elite guard have withdrawn to the rebel enclave of $b Regulus. 
 
 Command anticipates a total allied victory in less than 30 days.", 1034)
 $end_multi_text
@@ -68,7 +66,7 @@ $Ani Filename: cb_sm2-01_a.ani
 $Stage Text:
  XSTR("The Subspace Portal
 
-Dr. Hargrove's task force has determined that the subspace portal in Gamma Draconis was constructed by the Ancients, an extinct civilization discovered near the end of the Great War. Artifacts excavated in the Altair system contained data that enabled the GTA and PVN to destroy the SD Lucifer. Many Terran and Vasudan systems once belonged to the Ancients' empire, which the Shivans obliterated eight thousand years ago. The portal has been renamed Knossos, after the Earth's Minoan civilization.", 1035)
+$w Dr. $w Hargrove's task force has determined that the subspace portal in $b Gamma $b Draconis was constructed by the $y Ancients, an extinct civilization discovered near the end of the $y Great $y War. Artifacts excavated in the $b Altair system contained data that enabled the $f GTA and $f PVN to destroy the $h SD $h Lucifer. Many Terran and Vasudan systems once belonged to the $y Ancients' empire, which the Shivans obliterated eight thousand years ago. The portal has been renamed $b $y Knossos, after the Earth's Minoan civilization.", 1035)
 $end_multi_text
 $Ani Filename: cb_sm2-01_b.ani
 +Wave Filename: SM201_CB_02.wav
@@ -76,9 +74,9 @@ $Ani Filename: cb_sm2-01_b.ani
 $Stage Text:
  XSTR("The Deneb Connection
 
-Intelligence has learned that Bosch acquired Ancient materials from an excavation site in the Deneb system. These artifacts somehow enabled Bosch to locate and activate the Knossos portal. This explains the presence of the admiral's command ship in the Deneb asteroid belt. Bosch then sent the NTC Trinity into Gamma Draconis to activate the portal, which lured the Shivans into that system. 
+Intelligence has learned that $w Bosch acquired $y Ancient materials from an excavation site in the $b Deneb system. These artifacts somehow enabled $w Bosch to locate and activate the $y Knossos portal. This explains the presence of the Admiral's command ship in the $b Deneb asteroid belt. $w Bosch then sent the $h NTC $h Trinity into $b Gamma $b Draconis to activate the portal, which lured the Shivans into that system. 
 
-We do not know Bosch's motives or what the Shivans are doing in the nebula.", 1036)
+We do not know $w Bosch's motives or what the Shivans are doing in the nebula.", 1036)
 $end_multi_text
 $Ani Filename: cb_sm1-01_b.ani
 +Wave Filename: SM201_CB_03.wav
@@ -86,7 +84,7 @@ $Ani Filename: cb_sm1-01_b.ani
 $Stage Text:
  XSTR("Nostos
 
-Allied scientists studying the portal remain optimistic about the potential for this technology. In five to ten years, we might be able to restore contact with Earth or create new jump nodes to unexplored regions of the galaxy. For this reason, the portal must remain open for as long as possible. 
+Allied scientists studying the portal remain optimistic about the potential for this technology. In five to ten years, we might be able to restore contact with $b Earth or create new jump nodes to unexplored regions of the galaxy. For this reason, the portal must remain open for as long as possible. 
 
 Command has issued a standing order to destroy the device should a full-scale invasion be imminent.", 1037)
 $end_multi_text
@@ -96,7 +94,7 @@ $Ani Filename: cb_sm2-01_d.ani
 $Stage Text:
  XSTR("Our Objectives
 
-The destruction of the Ravana has intensified Shivan activity in the nebula. The Shivan fleet appears to be smaller than the armada we defeated three decades ago, and our improved technology gives us a tactical advantage. However, with the possibility of uncharted jump nodes leading to more Shivan-infested systems, we cannot know with any certainty the full extent of the enemy force. 
+The destruction of the $h Ravana has intensified Shivan activity in the nebula. The Shivan fleet appears to be smaller than the armada we defeated three decades ago, and our improved technology gives us a tactical advantage. However, with the possibility of uncharted jump nodes leading to more Shivan-infested systems, we cannot know with any certainty the full extent of the enemy force. 
 
 A miscalculation on our part could unleash the second Shivan invasion of our home systems.", 1038)
 $end_multi_text
@@ -106,9 +104,9 @@ $Ani Filename: <default>
 $Stage Text:
  XSTR("New Technologies
 
-The Aquitaine will spearhead the next phase of our exploration and containment operation in the nebula. To help us achieve our objectives, the Alliance has developed new technologies, including Advanced Warning And Control Systems, or AWACS, and gas mining vessels to gather deuterium for our fusion reactors. 
+The $f Aquitaine will spearhead the next phase of our exploration and containment operation in the nebula. To help us achieve our objectives, the Alliance has developed new technologies, including Advanced Warning And Control Systems, or $y AWACS, and gas mining vessels to gather deuterium for our fusion reactors. 
 
-Prototypes of these new tactical weapons and fighters will be deployed pending successful completion of field tests. The 134th Barracudas will be conducting these combat exercises near the Gamma Draconis jump node.", 1039)
+Prototypes of these new tactical weapons and fighters will be deployed pending successful completion of field tests. The $w 134th $w Barracudas will be conducting these combat exercises near the $b Gamma $b Draconis jump node.", 1039)
 $end_multi_text
 $Ani Filename: cb_sm2-01_e.ani
 +Wave Filename: SM201_CB_06.wav
@@ -116,7 +114,7 @@ $Ani Filename: cb_sm2-01_e.ani
 $Stage Text:
  XSTR("GTW ML-70 Morning Star
 
-Two next-generation weapons are now available: the Morning Star and the EMP missile. The GTW ML-70 Morning Star improves upon the Flail gun developed during the Great War. Recent advances in high-temperature optics enable the primary focusing chamber of the Morning Star to produce a more coherent charge. Though an energy weapon, the Morning Star has a powerful kinetic effect on its target.", 1040)
+Two next-generation weapons are now available: the $y Morning $y Star and the $y EMP $y Missile. The $y GTW $y ML-70 $y Morning $y Star improves upon the $y Flail gun developed during the $y Great $y War. Recent advances in high-temperature optics enable the primary focusing chamber of the $y Morning $y Star to produce a more coherent charge. Though an energy weapon, the $y Morning $y Star has a powerful kinetic effect on its target.", 1040)
 $end_multi_text
 $Ani Filename: Tech_GTW_ML-70.ani
 +Wave Filename: SM201_CB_07.wav
@@ -124,7 +122,7 @@ $Ani Filename: Tech_GTW_ML-70.ani
 $Stage Text:
  XSTR("EMP Missile
 
-The EMP missile interferes with the electronics systems of vessels caught within the blast radius of the warhead. The detonation scrambles targeting data and jams communications. Tactically, the EMP is an effective anti-bomber weapon. It prevents these craft from acquiring aspect lock and temporarily shuts down the guidance and propulsion systems of warheads in flight.", 1041)
+The $y EMP $y Missile interferes with the electronics systems of vessels caught within the blast radius of the warhead. The detonation scrambles targeting data and jams communications. Tactically, the EMP is an effective anti-bomber weapon. It prevents these craft from acquiring aspect lock and temporarily shuts down the guidance and propulsion systems of warheads in flight.", 1041)
 $end_multi_text
 $Ani Filename: Tech_EMP.ani
 +Wave Filename: SM201_CB_08.wav
@@ -134,7 +132,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("Welcome to the 134th Barracudas, pilot. I'm Commander Vincey, your squadron leader. The 134th is a combat evaluation unit, or CEU, which means we're among the first to test new ships and weapons in the field. While we carry out our missions, engineers will gather data on the systems we've been assigned to test.", 1042)
+ XSTR("Welcome to the $w 134th $w Barracudas, pilot. I'm $w Commander $w Vincey, your squadron leader. The $w 134th is a combat evaluation unit, or $w CEU, which means we're among the first to test new ships and weapons in the field. While we carry out our missions, engineers will gather data on the systems we've been assigned to test.", 1042)
 $end_multi_text
 $voice: SM201_MB_01.wav
 $camera_pos: 1136.876709, 21339.244141, 6772.349121
@@ -152,7 +150,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 26.244081, -0.000166, 14672.982422
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -174,9 +172,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: 1800.613281, -16.736555, 2023.145874
-$label: Vauban
+$label: GTFr Vauban
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -188,7 +186,7 @@ $type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 46.984642, 50.886593, 1571.245605
-$label: Lucidity
+$label: GTA Lucidity
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -198,9 +196,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -1666.777466, -14.473908, 2046.384399
-$label: Erinpura
+$label: GTFr Erinpura
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -210,7 +208,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("In this mission, our primary objective is to escort two Triton-class freighters, the $f Erinpura and the $f Vauban. They will enter the nebula at the Gamma Draconis node and travel to their waypoint, where they will rendezvous with the $f GTCv $f Warspite. Their cargo is the new Target Acquisition and Guidance missile system. ", 1043)
+ XSTR("In this mission, our primary objective is to escort two $y Triton -class freighters, the $f Erinpura and the $f Vauban. They will enter the nebula at the $b Gamma $b Draconis node and travel to their waypoint, where they will rendezvous with the $f GTCv $f Warspite. Their cargo is the new $y Target $y Acquisition and $y Guidance missile system. ", 1043)
 $end_multi_text
 $voice: SM201_MB_02.wav
 $camera_pos: 1136.876709, 21339.244141, 6772.349121
@@ -228,7 +226,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 26.244081, -0.000166, 14672.982422
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -250,9 +248,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: 2018.430054, -16.736059, 5004.134766
-$label: Vauban
+$label: GTFr Vauban
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -264,7 +262,7 @@ $type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 243.592072, 50.886765, 5678.918457
-$label: Lucidity
+$label: GTA Lucidity
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -274,9 +272,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -1478.226929, -14.475400, 4952.784668
-$label: Erinpura
+$label: GTFr Erinpura
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -298,7 +296,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $f GTA $f Lucidity will provide AWACS support for this mission. With its powerful sensor array, the $f Lucidity will transmit targeting data to your fighter, effectively increasing your sensor range. The 134th will be the first to test the system in the nebula.", 1044)
+ XSTR("The $f GTA $f Lucidity will provide $y AWACS support for this mission. With its powerful sensor array, the $f Lucidity will transmit targeting data to your fighter, effectively increasing your sensor range. The $w 134th will be the first to test the system in the nebula.", 1044)
 $end_multi_text
 $voice: SM201_MB_03.wav
 $camera_pos: 1136.876709, 21339.244141, 6772.349121
@@ -316,7 +314,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 26.244081, -0.000166, 14672.982422
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -338,9 +336,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: 2018.430054, -16.736059, 5004.134766
-$label: Vauban
+$label: GTFr Vauban
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -352,7 +350,7 @@ $type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 243.592072, 50.886765, 5678.918457
-$label: Lucidity
+$label: GTA Lucidity
 +id: 4
 $hlight: 1
 $mirror: 0
@@ -362,9 +360,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -1478.226929, -14.475400, 4952.784668
-$label: Erinpura
+$label: GTFr Erinpura
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -386,7 +384,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Now keep in mind that the C in CEU stands for Combat. These aren't controlled laboratory experiments. Shivan activity has intensified, so you can expect to engage some $h Maras and $h Cains out there. If the action gets too intense, call in reinforcements at your discretion. Good luck, pilot.", 1045)
+ XSTR("Now keep in mind that the C in $w CEU stands for Combat. These aren't controlled laboratory experiments. Shivan activity has intensified, so you can expect to engage some $h Maras and $h Cains out there. If the action gets too intense, call in reinforcements at your discretion. Good luck, pilot.", 1045)
 $end_multi_text
 $voice: SM201_MB_04.wav
 $camera_pos: 1136.876709, 21339.244141, 6772.349121
@@ -404,7 +402,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 26.244081, -0.000166, 14672.982422
-$label: Warspite
+$label: GTCv Warspite
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -426,9 +424,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: 2568.628906, -16.737167, 7948.719727
-$label: Vauban
+$label: GTFr Vauban
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -440,7 +438,7 @@ $type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 513.136963, 50.886135, 8593.380859
-$label: Lucidity
+$label: GTA Lucidity
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -450,9 +448,9 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -1392.126953, -14.475071, 7957.075195
-$label: Erinpura
+$label: GTFr Erinpura
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -695,6 +693,7 @@ $end_multi_text
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
+
 )
 
 +Weaponry Pool: (
@@ -718,6 +717,7 @@ $Orientation:
 	0.925812, 0.000000, -0.377984,
 	0.057829, 0.988227, 0.141643,
 	0.373534, -0.152993, 0.914913
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -741,6 +741,7 @@ $Orientation:
 	0.919447, 0.000000, -0.393213,
 	0.059875, 0.988339, 0.140004,
 	0.388628, -0.152270, 0.908726
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -765,6 +766,7 @@ $Orientation:
 	0.930312, 0.000000, -0.366769,
 	0.055195, 0.988612, 0.140002,
 	0.362592, -0.150489, 0.919717
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -789,6 +791,7 @@ $Orientation:
 	0.921858, 0.000000, -0.387529,
 	0.057848, 0.988796, 0.137610,
 	0.383187, -0.149274, 0.911529
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -813,6 +816,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 0.978032, 0.208460,
 	0.000000, -0.208460, 0.978032
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Lucidity Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -847,6 +851,7 @@ $Orientation:
 	1.000000, 0.000011, 0.000014,
 	-0.000016, 0.896219, 0.443611,
 	-0.000007, -0.443611, 0.896219
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Erinpura Path" 50 ) )
 $Cargo 1:  XSTR("TAG Missiles", 1054)
@@ -870,38 +875,9 @@ $Determination: 10
 +Escort priority: 1
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 20
 
-$Name: TC 28		;! Object #6
-$Class: TC-TRI
-$Team: Friendly
-$Location: -453.806244, -136.768906, -803.244690
-$Orientation:
-	1.000000, -0.000018, 0.000004,
-	0.000015, 0.896267, 0.443514,
-	-0.000011, -0.443514, 0.896267
-$AI Behavior: None
-$Cargo 1:  XSTR("TAG Missiles", 1054)
-+Initial Hull: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" "invulnerable" )
-+Flags2: ( )
-+Respawn priority: 0
-+Docked With: Erinpura
-$Docker Point: Cargo Dock01
-$Dockee Point: Cargo Dockpoint
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: Vauban		;! Object #7
+$Name: Vauban		;! Object #6
 $Class: GTFR Triton
 $Team: Friendly
 $Location: 659.734924, -32.091930, -966.656738
@@ -909,6 +885,7 @@ $Orientation:
 	1.000000, 0.000010, 0.000014,
 	-0.000016, 0.868006, 0.496555,
 	-0.000007, -0.496555, 0.868006
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Vauban Path" 50 ) )
 $Cargo 1:  XSTR("TAG Missiles", 1054)
@@ -929,38 +906,9 @@ $Determination: 10
 +Escort priority: 2
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 20
 
-$Name: TC 27		;! Object #8
-$Class: TC-TRI
-$Team: Friendly
-$Location: 659.039124, -117.434624, -795.480286
-$Orientation:
-	1.000000, -0.000046, -0.000013,
-	0.000046, 0.868060, 0.496461,
-	-0.000011, -0.496461, 0.868060
-$AI Behavior: None
-$Cargo 1:  XSTR("TAG Missiles", 1054)
-+Initial Hull: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" "invulnerable" )
-+Flags2: ( )
-+Respawn priority: 0
-+Docked With: Vauban
-$Docker Point: Cargo Dock01
-$Dockee Point: Cargo Dockpoint
-+Group: 0
-+Use Table Score:
-+Score: 0
-
-$Name: Warspite		;! Object #9
+$Name: Warspite		;! Object #7
 $Class: GTCv Deimos
 $Team: Friendly
 $Location: 317.516266, 0.001394, 14182.887695
@@ -968,6 +916,7 @@ $Orientation:
 	-0.849565, -0.047641, 0.525330,
 	-0.031425, 0.998715, 0.039751,
 	-0.526548, 0.017263, -0.849970
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1011,8 +960,11 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: GTCv_Warspite
 
-$Name: Beta 1		;! Object #10
+$Name: Beta 1		;! Object #8
 $Class: GTF Perseus
 $Team: Friendly
 $Location: 1446.130127, 0.003004, -703.881775
@@ -1020,6 +972,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1036,7 +989,7 @@ $Determination: 10
 +Score: 12
 +Persona Index: 3
 
-$Name: Beta 2		;! Object #11
+$Name: Beta 2		;! Object #9
 $Class: GTF Perseus
 $Team: Friendly
 $Location: 1378.121338, 0.004635, -757.980896
@@ -1044,6 +997,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1059,7 +1013,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Beta 3		;! Object #12
+$Name: Beta 3		;! Object #10
 $Class: GTF Perseus
 $Team: Friendly
 $Location: 1522.964966, 0.004167, -760.263245
@@ -1067,6 +1021,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1083,7 +1038,7 @@ $Determination: 10
 +Score: 12
 +Persona Index: 3
 
-$Name: Beta 4		;! Object #13
+$Name: Beta 4		;! Object #11
 $Class: GTF Perseus
 $Team: Friendly
 $Location: 1449.093018, 0.003495, -814.487610
@@ -1091,6 +1046,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1106,7 +1062,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Scorpio 1		;! Object #14
+$Name: Scorpio 1		;! Object #12
 $Class: SF Manticore
 $Team: Hostile
 $Location: 1547.199951, -2732.385498, 5142.100098
@@ -1114,11 +1070,12 @@ $Orientation:
 	-0.921435, 0.000000, 0.388532,
 	0.204693, 0.849966, 0.485447,
 	-0.330239, 0.526838, -0.783188
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Harpoon#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1129,10 +1086,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Scorpio 2		;! Object #15
+$Name: Scorpio 2		;! Object #13
 $Class: SF Manticore
 $Team: Hostile
 $Location: 1570.410522, -2732.385254, 5205.794922
@@ -1140,11 +1096,12 @@ $Orientation:
 	-0.921667, 0.000000, 0.387982,
 	0.202617, 0.852802, 0.481326,
 	-0.330872, 0.522234, -0.785999
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Harpoon#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1155,10 +1112,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Scorpio 3		;! Object #16
+$Name: Scorpio 3		;! Object #14
 $Class: SF Manticore
 $Team: Hostile
 $Location: 1516.391479, -2732.385742, 5217.441895
@@ -1166,11 +1122,12 @@ $Orientation:
 	-0.925375, 0.000000, 0.379052,
 	0.198209, 0.852389, 0.483886,
 	-0.323100, 0.522907, -0.788780
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Harpoon#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1181,10 +1138,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Scorpio 4		;! Object #17
+$Name: Scorpio 4		;! Object #15
 $Class: SF Manticore
 $Team: Hostile
 $Location: 1761.316284, -3098.099365, 5240.796387
@@ -1192,11 +1148,12 @@ $Orientation:
 	-0.910313, 0.000000, 0.413921,
 	0.213163, 0.857199, 0.468797,
 	-0.354813, 0.514985, -0.780320
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Harpoon#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1207,10 +1164,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Libra 1		;! Object #18
+$Name: Libra 1		;! Object #16
 $Class: SF Mara
 $Team: Hostile
 $Location: -1324.791504, 803.600403, 5662.562500
@@ -1218,12 +1174,13 @@ $Orientation:
 	-0.338105, 0.000000, -0.941108,
 	0.314737, 0.942420, -0.113073,
 	0.886919, -0.334432, -0.318637
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Tempest#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1234,10 +1191,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Libra 2		;! Object #19
+$Name: Libra 2		;! Object #17
 $Class: SF Mara
 $Team: Hostile
 $Location: -1283.049316, 803.600708, 5758.963379
@@ -1245,12 +1201,13 @@ $Orientation:
 	-0.381392, 0.000000, -0.924413,
 	0.309671, 0.942221, -0.127763,
 	0.871002, -0.334992, -0.359356
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Tempest#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1261,10 +1218,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Libra 3		;! Object #20
+$Name: Libra 3		;! Object #18
 $Class: SF Mara
 $Team: Hostile
 $Location: -1405.023926, 800.769958, 5719.125977
@@ -1272,12 +1228,13 @@ $Orientation:
 	-0.348498, 0.000000, -0.937310,
 	0.301253, 0.946943, -0.112008,
 	0.887579, -0.321402, -0.330007
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Tempest#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1288,10 +1245,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Libra 4		;! Object #21
+$Name: Libra 4		;! Object #19
 $Class: SF Mara
 $Team: Hostile
 $Location: -1373.487549, 803.600525, 5807.520020
@@ -1299,12 +1255,13 @@ $Orientation:
 	-0.385456, 0.000000, -0.922726,
 	0.297155, 0.946726, -0.124132,
 	0.873569, -0.322040, -0.364921
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Shivan" "Tempest#Shivan" )
++Secondary Banks: ( "Rockeye#Shivan" "Tempest#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1315,10 +1272,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Malor		;! Object #22
+$Name: Malor		;! Object #20
 $Class: SC Cain
 $Team: Hostile
 $Location: 697.099976, 2453.600098, 7556.799805
@@ -1326,6 +1282,7 @@ $Orientation:
 	-0.963743, 0.000000, 0.266830,
 	-0.181691, 0.732354, -0.656236,
 	-0.195414, -0.680924, -0.705802
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Erinpura" 43 ) ( ai-chase "Vauban" 23 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1356,10 +1313,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 150
 
-$Name: Zeta 1		;! Object #23
+$Name: Zeta 1		;! Object #21
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 37.366447, -0.001393, 3185.148193
@@ -1367,6 +1323,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1385,7 +1342,7 @@ $Determination: 10
 +Group: 0
 +Score: 17
 
-$Name: Zeta 2		;! Object #24
+$Name: Zeta 2		;! Object #22
 $Class: GTB Medusa
 $Team: Friendly
 $Location: -25.002380, -0.001993, 3305.728271
@@ -1393,6 +1350,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1411,7 +1369,7 @@ $Determination: 10
 +Group: 0
 +Score: 17
 
-$Name: Virgo 1		;! Object #25
+$Name: Virgo 1		;! Object #23
 $Class: SB Nephilim
 $Team: Hostile
 $Location: -996.822693, -1655.356934, 10080.693359
@@ -1419,6 +1377,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1439,7 +1398,7 @@ $Determination: 10
 +Group: 0
 +Score: 18
 
-$Name: Virgo 2		;! Object #26
+$Name: Virgo 2		;! Object #24
 $Class: SB Nephilim
 $Team: Hostile
 $Location: -1078.591431, -1655.357178, 9994.983398
@@ -1447,6 +1406,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1467,7 +1427,7 @@ $Determination: 10
 +Group: 0
 +Score: 18
 
-$Name: Cancer 1		;! Object #27
+$Name: Cancer 1		;! Object #25
 $Class: SF Basilisk
 $Team: Hostile
 $Location: -1017.678528, -1184.038940, 10057.219727
@@ -1475,6 +1435,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1490,10 +1451,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Cancer 2		;! Object #28
+$Name: Cancer 2		;! Object #26
 $Class: SF Basilisk
 $Team: Hostile
 $Location: -1083.244873, -1184.038574, 10059.351563
@@ -1501,6 +1461,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1516,10 +1477,9 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
-$Name: Cancer 3		;! Object #29
+$Name: Cancer 3		;! Object #27
 $Class: SF Basilisk
 $Team: Hostile
 $Location: -964.385559, -1184.038574, 10037.947266
@@ -1527,6 +1487,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1542,8 +1503,67 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
+
+$Name: TC 27		;! Object #28
+$Class: TC-TRI
+$Team: Friendly
+$Location: 660.070007, -117.739578, -796.482056
+$Orientation:
+	1.000000, -0.000002, 0.000034,
+	-0.000016, 0.868095, 0.496399,
+	-0.000030, -0.496399, 0.868095
+$IFF: IFF 1
+$AI Behavior: None
+$Cargo 1:  XSTR("TAG Missiles", 1054)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Docked With: Vauban
+$Docker Point: Cargo Dock01
+$Dockee Point: Cargo Dockpoint
++Group: 0
+$Texture Replace:
++old: nameplate
++new: GTFr_Vauban
+
+$Name: TC 28		;! Object #29
+$Class: TC-TRI
+$Team: Friendly
+$Location: -452.775391, -137.133392, -804.226257
+$Orientation:
+	1.000000, 0.000001, 0.000034,
+	-0.000016, 0.896299, 0.443450,
+	-0.000030, -0.443450, 0.896299
+$IFF: IFF 1
+$AI Behavior: None
+$Cargo 1:  XSTR("TAG Missiles", 1054)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Docked With: Erinpura
+$Docker Point: Cargo Dock01
+$Dockee Point: Cargo Dockpoint
++Group: 0
+$Texture Replace:
++old: nameplate
++new: GTFr_Erinpura
 
 #Wings		;! 7 total
 
@@ -2389,9 +2409,9 @@ $Formula: ( and
 
 #Waypoints		;! 4 lists total
 
-
 $Jump Node: 151.452057, -109.419754, -1662.140503
 $Jump Node Name: Capella
+
 $Name: Lucidity Path
 $List: (		;! 4 points in list
 	( -5.516802, -0.000662, 611.193726 )
@@ -2424,11 +2444,11 @@ $List: (		;! 2 points in list
 
 #Messages		;! 22 total
 
-
 $Name: A2 Intro-1
 $Team: -1
 $MessageNew:  XSTR("Command, this is Alpha wing. We are on-station at the Gamma Draconis node.", 1059)
 $end_multi_text
++Persona: Wingman 1
 +AVI Name: Head-TP1
 +Wave Name: sm201_a2_01.wav
 
@@ -2436,6 +2456,7 @@ $Name: COM Intro-2
 $Team: -1
 $MessageNew:  XSTR("We are sending in the transports now, Alpha.", 1060)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_01.wav
 
@@ -2443,36 +2464,39 @@ $Name: AWACS Online
 $Team: -1
 $MessageNew:  XSTR("Lucidity here. The AWACS is coming online. We're picking up hostiles at long range.", 1061)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_01.wav
 
 $Name: WAR-Presto
 $Team: -1
 $MessageNew:  XSTR("Roger. Illuminating IFF now and heading your way.", 1062)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: sm201_wa_01.wav
 
 $Name: LUCID-Presto
 $Team: -1
 $MessageNew:  XSTR("Warspite, this is the Lucidity. We are nearing the rendezvous point. Please activate your IFF transponder.", 1063)
-
-; please activate your IFF transponder.", -1)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_02.wav
 
 $Name: VAU- Presto
 $Team: -1
 $MessageNew:  XSTR("Warspite, this is the Vauban.  We've lost AWACS support. Request immediate assistance.", 1064)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Large Ship
++AVI Name: Head-CM5
 +Wave Name: sm201_va_01.wav
 
 $Name: COM- Kali is mean
 $Team: -1
 $MessageNew:  XSTR("Beta wing is standing by. Reinforce at your discretion, Alpha.", 1065)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_02.wav
 
@@ -2480,41 +2504,47 @@ $Name: LUCID- Kali is mean
 $Team: -1
 $MessageNew:  XSTR("The Shivans are targeting our AWACS system. We need fighter cover pronto!", 1066)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_03.wav
 
 $Name: LUCID- Blind
 $Team: -1
 $MessageNew:  XSTR("The AWACS is offline. We're now attempting to repair the sensor array.", 1067)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_04.wav
 
 $Name: LUCID- AWACS Again
 $Team: -1
 $MessageNew:  XSTR("This is the Lucidity. We now have limited AWACS capability. Repairs are still in progress.", 1068)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_05.wav
 
 $Name: LUCID- AWACS Fixed
 $Team: -1
 $MessageNew:  XSTR("AWACS is back at full strength.", 1069)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_06.wav
 
 $Name: LUCID- Blind Again
 $Team: -1
 $MessageNew:  XSTR("We've lost sensors again! Probability of field repair is less than five percent.", 1070)
 $end_multi_text
-+AVI Name: Head-CM1
++Persona: Support Ship
++AVI Name: Head-CM3
 +Wave Name: sm201_lu_07.wav
 
 $Name: COM: Cain threat
 $Team: -1
 $MessageNew:  XSTR("Alpha, sensors have picked up a Cain-class cruiser. Call in Zeta wing if you require assistance.", 1071)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_03.wav
 
@@ -2522,15 +2552,15 @@ $Name: WAR- On the case
 $Team: -1
 $MessageNew:  XSTR("Thanks Alpha.  We'll take it from here.", 1072)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: sm201_wa_02.wav
 
 $Name: COM- All Clear
 $Team: -1
 $MessageNew:  XSTR("All detected enemy craft have been neutralized. Alpha wing, return to base.", 1073)
-
-; we'll take it from here.", -1)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_04.wav
 
@@ -2538,6 +2568,7 @@ $Name: COM- Not clear yet
 $Team: -1
 $MessageNew:  XSTR("Alpha, help the Warspite secure the area. Eliminate all enemy craft within range.", 1074)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_05.wav
 
@@ -2545,6 +2576,7 @@ $Name: COM-Failure
 $Team: -1
 $MessageNew:  XSTR("The convoy you were assigned to protect has been destroyed. Alpha, return to base immediately.", 1075)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_06.wav
 
@@ -2552,6 +2584,7 @@ $Name: COM- Mixed Failure
 $Team: -1
 $MessageNew:  XSTR("The Erinpura and Vauban have been destroyed. Escort the Lucidity to the Warspite and return to base.", 1076)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm201_ac_07.wav
 
@@ -2559,6 +2592,7 @@ $Name: Cancer Inb
 $Team: -1
 $MessageNew:  XSTR("We're tracking a new inbound wing, designation Cancer.  Take them out now, Alpha!", 1077)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm308_ac_07.wav
 
@@ -2604,14 +2638,13 @@ $Num times: 1
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 489
-$Ambient light level: 7895160
+$Num stars: 0
+$Ambient light level: 0
 +Neb2: nbackblue2
-
 +Neb2Flags: 63
 
-
 #Asteroid Fields
+
 
 #Music
 

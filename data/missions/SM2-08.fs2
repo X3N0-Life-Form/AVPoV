@@ -14,21 +14,13 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3000.000000
-
 +Storm: s_active
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -42,8 +34,15 @@ $end_multi_text
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -52,7 +51,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("$f Alpha $f 1, you will pilot the new $y Ptah$|-class stealth fighter. Your mission is to scan the subsystems of the $h Sathanas $h Juggernaut$|. Allied Intelligence has requested data regarding the navigation, weapons, sensors, and communications subsystems of the warship.", 1345)
+ XSTR("$f Alpha $f 1, you will pilot the new $y Ptah -class stealth fighter. Your mission is to scan the subsystems of the $h Sathanas $h Juggernaut. Allied Intelligence has requested data regarding the navigation, weapons, sensors, and communications subsystems of the warship.", 1345)
 $end_multi_text
 $voice: SM208_MB_01.wav
 $camera_pos: 0.157497, 603.797058, -584.848999
@@ -370,6 +369,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -382,7 +382,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" "stealth" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -396,6 +396,7 @@ $Orientation:
 	0.038445, 0.000000, 0.999261,
 	0.000000, 1.000000, 0.000000,
 	-0.999261, 0.000000, 0.038445
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -459,13 +460,13 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret51
 +Subsystem: turret52
 +Subsystem: turret53
-+Subsystem: Navigation
++Subsystem: navigation
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: Communication
++Subsystem: communication
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: Weapons
++Subsystem: weapons
 +Cargo Name: XSTR("Scanned", 1357)
-+Subsystem: Sensors
++Subsystem: sensors
 +Cargo Name: XSTR("Scanned", 1357)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -477,7 +478,6 @@ $Determination: 10
 +Respawn priority: 0
 +Escort priority: 98
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Scorpio 1		;! Object #2
@@ -488,6 +488,7 @@ $Orientation:
 	-0.089085, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089085
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -503,7 +504,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 2		;! Object #3
@@ -514,6 +514,7 @@ $Orientation:
 	-0.089085, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089085
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -529,7 +530,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 3		;! Object #4
@@ -540,6 +540,7 @@ $Orientation:
 	-0.089085, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089085
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -555,7 +556,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Scorpio 4		;! Object #5
@@ -566,6 +566,7 @@ $Orientation:
 	-0.089085, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089085
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -581,7 +582,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 1		;! Object #6
@@ -592,6 +592,7 @@ $Orientation:
 	0.523366, 0.000000, 0.852108,
 	0.000000, 1.000000, 0.000000,
 	-0.852108, 0.000000, 0.523366
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -608,7 +609,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 2		;! Object #7
@@ -619,6 +619,7 @@ $Orientation:
 	0.523366, 0.000000, 0.852108,
 	0.000000, 1.000000, 0.000000,
 	-0.852108, 0.000000, 0.523366
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -635,7 +636,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 3		;! Object #8
@@ -646,6 +646,7 @@ $Orientation:
 	0.523366, 0.000000, 0.852108,
 	0.000000, 1.000000, 0.000000,
 	-0.852108, 0.000000, 0.523366
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -662,7 +663,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Libra 4		;! Object #9
@@ -673,6 +673,7 @@ $Orientation:
 	0.523366, 0.000000, 0.852108,
 	0.000000, 1.000000, 0.000000,
 	-0.852108, 0.000000, 0.523366
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -689,7 +690,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 1		;! Object #10
@@ -700,6 +700,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -724,6 +725,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -748,6 +750,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -772,6 +775,7 @@ $Orientation:
 	-0.002815, -0.952091, 0.305804,
 	-0.008763, 0.305817, 0.952051,
 	-0.999958, 0.000000, -0.009204
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -822,7 +826,6 @@ $Determination: 10
 +Escort priority: 99
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 400
 
 $Name: Delta 1		;! Object #14
@@ -833,6 +836,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -857,6 +861,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -881,6 +886,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -905,6 +911,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -929,6 +936,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -953,6 +961,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -977,6 +986,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1001,6 +1011,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1025,6 +1036,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1049,6 +1061,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1073,6 +1086,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1099,6 +1113,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1125,6 +1140,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1855,359 +1871,374 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
-   ( is-event-true-delay "However" 0 ) 
-   ( validate-goal "Destroy A Turret" ) 
+$Formula: ( when
+   ( is-event-true-delay
+      "However"
+      0
+   )
+	( validate-goal "Destroy A Turret" )
 )
 +Name: Field Goal
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
-   ( and 
-      ( or 
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret02" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret03" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret04" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret05" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret06" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret07" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret08" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret09" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret10" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret11" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret12" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret13" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret14" 
-            0 
-         )
-      )
-      ( is-event-true-delay "However" 0 ) 
-   )
-   ( do-nothing ) 
+$Formula: ( when
+	( and 
+		( or 
+      	( is-subsystem-destroyed-delay 
+	         "Sathanas" 
+	         "turret02" 
+	         0 
+	      )
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret03" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret04" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret05" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret06" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret07" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret08" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret09" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret10" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret11" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret12" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret13" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret14" 
+				0 
+			)
+		)
+		( is-event-true-delay
+			"However"
+			0
+		)
+	)
+	( do-nothing )
 )
 +Name: Any Turrets 1
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
-   ( and 
-      ( or 
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret15" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret16" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret17" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret18" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret19" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret20" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret21" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret22" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret23" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret24" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret25" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret26" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret27" 
-            0 
-         )
-      )
-      ( is-event-true-delay "However" 0 ) 
-   )
-   ( do-nothing ) 
+$Formula: ( when
+	( and 
+		( or 
+      	( is-subsystem-destroyed-delay 
+	         "Sathanas" 
+	         "turret15" 
+	         0 
+	      )
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret16" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret17" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret18" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret19" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret20" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret21" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret22" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret23" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret24" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret25" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret26" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret27" 
+				0 
+			)
+		)
+		( is-event-true-delay
+			"However"
+			0
+		)
+	)
+	( do-nothing )
 )
 +Name: Any Turrets 2
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
-   ( and 
-      ( or 
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret28" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret29" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret30" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret31" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret32" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret33" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret34" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret35" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret36" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret37" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret38" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret39" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret40" 
-            0 
-         )
-      )
-      ( is-event-true-delay "However" 0 ) 
-   )
-   ( do-nothing ) 
+$Formula: ( when
+	( and 
+		( or 
+      	( is-subsystem-destroyed-delay 
+	         "Sathanas" 
+	         "turret28" 
+	         0 
+	      )
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret29" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret30" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret31" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret32" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret33" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret34" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret35" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret36" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret37" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret38" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret39" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret40" 
+				0 
+			)
+		)
+		( is-event-true-delay
+			"However"
+			0
+		)
+	)
+	( do-nothing )
 )
 +Name: Any Turrets 3
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
-   ( and 
-      ( or 
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret41" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret42" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret43" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret44" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret45" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret46" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret47" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret48" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret49" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret50" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret51" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret52" 
-            0 
-         )
-         ( is-subsystem-destroyed-delay 
-            "Sathanas" 
-            "turret53" 
-            0 
-         )
-      )
-      ( is-event-true-delay "However" 0 ) 
-   )
-   ( do-nothing ) 
+$Formula: ( when
+	( and 
+		( or 
+      	( is-subsystem-destroyed-delay 
+	         "Sathanas" 
+	         "turret41" 
+	         0 
+	      )
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret42" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret43" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret44" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret45" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret46" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret47" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret48" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret49" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret50" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret51" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret52" 
+				0 
+			)
+			( is-subsystem-destroyed-delay 
+				"Sathanas" 
+				"turret53" 
+				0 
+			)
+		)
+		( is-event-true-delay
+			"However"
+			0
+		)
+	)
+	( do-nothing )
 )
 +Name: Any Turrets 4
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( or 
-      ( is-event-true-delay 
-         "Any Turrets 1" 
-         0 
-      )
-      ( is-event-true-delay 
-         "Any Turrets 2" 
-         0 
-      )
-      ( is-event-true-delay 
-         "Any Turrets 3" 
-         0 
-      )
-      ( is-event-true-delay 
-         "Any Turrets 4" 
-         0 
-      )
+	( or 
+		( is-event-true-delay
+			"Any Turrets 1"
+			0
+		)
+		( is-event-true-delay
+			"Any Turrets 2"
+			0
+		)
+		( is-event-true-delay
+			"Any Turrets 3"
+			0
+		)
+		( is-event-true-delay
+			"Any Turrets 4"
+			0
+		)
    )
-   ( do-nothing ) 
+   ( do-nothing )
 )
 +Name: Killed A Turret
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( and 
-      ( not 
-         ( is-destroyed-delay 0 "Maahes" ) 
-      )
-      ( is-event-true-delay 
-         "Mission  Accomplished" 
-         0 
-      )
-      ( is-event-true-delay "All Good" 0 ) 
-   )
-   ( grant-medal "Medal of Valor" ) 
+	( and 
+		( not
+			( is-destroyed-delay 0 "Maahes" ) 
+		)
+		( is-event-true-delay 
+			"Mission  Accomplished" 
+			0 
+		)
+		( is-event-true-delay "All Good" 0 ) 
+	)
+	( grant-medal "Medal of Valor" ) 
 )
 +Name: Medal of Valor
 +Repeat Count: 1
@@ -2260,11 +2291,11 @@ $Formula: ( cap-subsys-cargo-known-delay
 
 $Type: Bonus
 +Name: Destroy A Turret
-$MessageNew:  XSTR("Destroy at least one turret", -1)
+$MessageNew: XSTR("Destroy at least one turret", -1)
 $end_multi_text
-$Formula: ( is-event-true-delay 
-   "Killed A Turret" 
-   0 
+$Formula: ( is-event-true-delay
+   "Killed A Turret"
+   0
 )
 +Invalid
 
@@ -2281,7 +2312,6 @@ $List: (		;! 1 points in list
 )
 
 #Messages		;! 23 total
-
 
 $Name: Systems
 $Team: -1
@@ -2473,13 +2503,12 @@ $end_multi_text
 #Background bitmaps		;! 0 total
 
 $Num stars: 2000
-$Ambient light level: 7895160
+$Ambient light level: 0
 +Neb2: nbackgreen
-
 +Neb2Flags: 63
 
-
 #Asteroid Fields
+
 
 #Music
 

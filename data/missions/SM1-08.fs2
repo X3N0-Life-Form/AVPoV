@@ -14,17 +14,11 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 0
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -38,15 +32,23 @@ $end_multi_text
 +SquadReassignName: 242nd Suicide Kings
 +SquadReassignLogo: 242suicide.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
 $Stage Text:
  XSTR("Enif Massacre
 
-36 hours ago, the NTF launched a full-scale offensive in Epsilon Pegasi, taking the GTVA 6th Fleet by surprise. Commanding his forces from the NTD Repulse, Rear Admiral Koth leads the rebel advance. With 75 percent of our forces in this system decimated, the regional death toll since the incursion now exceeds 80,000.
+36 hours ago, the $h NTF launched a full-scale offensive in $b Epsilon $b Pegasi, taking the $y GTVA $f 6th $f Fleet by surprise. Commanding his forces from the $h NTD $h Repulse, $w Rear $w Admiral $w Koth leads the rebel advance. With 75 percent of our forces in this system decimated, the regional death toll since the incursion now exceeds 80,000.
  
 Unless we act quickly, a decisive rebel victory is imminent.", 895)
 $end_multi_text
@@ -56,9 +58,9 @@ $Ani Filename: cb_sm1-08_a.ani
 $Stage Text:
  XSTR("Stalemate in Sirius
 
-The GTD Aquitaine will lead the allied counterstrike against Koth and his warships. We will resupply in Capella before shipping out to the front. 
+The $f GTD $f Aquitaine will lead the allied counterstrike against $w Koth and his warships. We will resupply in $b Capella before shipping out to the front. 
 
-We have also learned our campaign in Sirius has failed. A two-pronged offensive launched from Alpha Centauri and Deneb encountered fierce resistance. Unless we can devise a military solution for dealing with the rebels, the GTVA will be forced to recognize the NTF's authority in Sirius, Regulus, and Polaris.", 896)
+We have also learned our campaign in $b Sirius has failed. A two-pronged offensive launched from $b Alpha $b Centauri and $b Deneb encountered fierce resistance. Unless we can devise a military solution for dealing with the rebels, the $y GTVA will be forced to recognize the $h NTF's authority in $b Sirius, $b Regulus, and $b Polaris.", 896)
 $end_multi_text
 $Ani Filename: cb_sm1-08_b.ani
 +Wave Filename: SM108_CB_02.wav
@@ -66,9 +68,9 @@ $Ani Filename: cb_sm1-08_b.ani
 $Stage Text:
  XSTR("On the Vanguard
 
-Allied engineers in the meantime are developing and adapting technologies that will enable us to fight more effectively in the nebula. Dr. Hargrove and her research team continue to study the subspace portal. Their findings have been classified level Phi.
+Allied engineers in the meantime are developing and adapting technologies that will enable us to fight more effectively in the nebula. $w Dr. $w Hargrove and her research team continue to study the subspace portal. Their findings have been classified level $b Phi.
 
-Until the situation in Epsilon Pegasi has been normalized, the GTVA will suspend its operations in the nebula.", 897)
+Until the situation in $b Epsilon $b Pegasi has been normalized, the $y GTVA will suspend its operations in the nebula.", 897)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM108_CB_03.wav
@@ -78,7 +80,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("This is Lieutenant Commander Cordova, leader of the 242nd Suicide Kings. Welcome to Epsilon Pegasi, pilots. $f Enif $f Station, the Alliance's base of operations in this system, is now under attack. Though we have destroyed the $h NTC $h Outrage, the $h Cato continues to bombard the installation with heavy beam fire.", 898)
+ XSTR("This is $w Lieutenant $w Commander $w Cordova, leader of the $w 242nd $w Suicide $w Kings. Welcome to $b Epsilon $b Pegasi, pilots. $f Enif $f Station, the Alliance's base of operations in this system, is now under attack. Though we have destroyed the $h NTC $h Outrage, the $h Cato continues to bombard the installation with heavy beam fire.", 898)
 $end_multi_text
 $voice: SM108_MB_01.wav
 $camera_pos: -163.328064, 6031.839355, -3292.212402
@@ -108,7 +110,7 @@ $type: 28
 $team: Neutral
 $class: GTCv Deimos
 $pos: 2997.684814, -1126.800415, 6057.371094
-$label: Hawkwood
+$label: NTCv Hawkwood
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -120,7 +122,7 @@ $type: 18
 $team: Neutral
 $class: GTC Leviathan
 $pos: -2824.985107, 498.099365, 5117.827637
-$label: Cato
+$label: NTC Cato
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -130,7 +132,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Evacuation of civilian personnel on board $f Enif $f Station is now in progress. As you know, civilians are protected under the Beta Aquilae Convention, but the $h NTF has rejected that treaty and its provisions. Fortunately, most of the civilian convoy has jumped safely to the Capella jump node.", 899)
+ XSTR("Evacuation of civilian personnel on board $f Enif $f Station is now in progress. As you know, civilians are protected under the $w Beta $w Aquilae $w Convention, but the $h NTF has rejected that treaty and its provisions. Fortunately, most of the civilian convoy has jumped safely to the $b Capella jump node.", 899)
 $end_multi_text
 $voice: SM108_MB_02.wav
 $camera_pos: -204.162872, 9520.066406, 3104.892822
@@ -160,7 +162,7 @@ $type: 28
 $team: Neutral
 $class: GTCv Deimos
 $pos: 2997.684814, -1126.800415, 6057.371094
-$label: Hawkwood
+$label: NTCv Hawkwood
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -172,7 +174,7 @@ $type: 18
 $team: Neutral
 $class: GTC Leviathan
 $pos: -2935.769775, 498.099976, 5112.047363
-$label: Cato
+$label: NTC Cato
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -182,9 +184,9 @@ $end_icon
 $start_icon
 $type: 11
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -758.383179, 245.899170, 6168.578613
-$label: Calypso
+$label: GTFr Calypso
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -196,7 +198,7 @@ $type: 34
 $team: Friendly
 $class: GTT Elysium
 $pos: 1531.720825, -86.676392, 3848.659424
-$label: Mannheim
+$label: GTT Mannheim
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -206,7 +208,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your mission is to defend $f Enif $f Station. As leader of Alpha wing, you will command your squadmates to destroy the fighters and warships besieging our installation. If the rebels sortie their Zeus bombers, intercept the warheads before they impact the base. ", 900)
+ XSTR("Your mission is to defend $f Enif $f Station. As leader of $f Alpha wing, you will command your squadmates to destroy the fighters and warships besieging our installation. If the rebels sortie their $y Zeus bombers, intercept the warheads before they impact the base. ", 900)
 $end_multi_text
 $voice: SM108_MB_03.wav
 $camera_pos: -2978.636719, 3230.123779, 2776.869873
@@ -236,7 +238,7 @@ $type: 28
 $team: Neutral
 $class: GTCv Deimos
 $pos: 2997.684814, -1126.800415, 6057.371094
-$label: Hawkwood
+$label: NTCv Hawkwood
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -248,7 +250,7 @@ $type: 18
 $team: Neutral
 $class: GTC Leviathan
 $pos: -2935.769775, 498.099976, 5112.047363
-$label: Cato
+$label: NTC Cato
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -258,9 +260,9 @@ $end_icon
 $start_icon
 $type: 11
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -767.473816, 245.899841, 5670.544434
-$label: Calypso
+$label: GTFr Calypso
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -272,7 +274,7 @@ $type: 34
 $team: Friendly
 $class: GTT Elysium
 $pos: 1531.720825, -86.676392, 3848.659424
-$label: Mannheim
+$label: GTT Mannheim
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -306,7 +308,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Allied forces are engaging the rebels throughout the system. As resources become available, they will be deployed to assist you. Until we get these reinforcements, however, holding down the fort is all up to you. This sortie will be the first combat field test of the Perseus intercept fighter, so let's put on a good show.", 901)
+ XSTR("Allied forces are engaging the rebels throughout the system. As resources become available, they will be deployed to assist you. Until we get these reinforcements, however, holding down the fort is all up to you. This sortie will be the first combat field test of the $y Perseus intercept fighter, so let's put on a good show.", 901)
 $end_multi_text
 $voice: SM108_MB_04.wav
 $camera_pos: -171.618362, 7990.074707, 2945.064209
@@ -336,7 +338,7 @@ $type: 28
 $team: Neutral
 $class: GTCv Deimos
 $pos: 2997.684814, -1126.800415, 6057.371094
-$label: Hawkwood
+$label: NTCv Hawkwood
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -348,7 +350,7 @@ $type: 18
 $team: Neutral
 $class: GTC Leviathan
 $pos: -2935.769775, 498.099976, 5112.047363
-$label: Cato
+$label: NTC Cato
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -358,9 +360,9 @@ $end_icon
 $start_icon
 $type: 11
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -954.659790, 245.900223, 5814.775391
-$label: Calypso
+$label: GTFr Calypso
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -372,7 +374,7 @@ $type: 34
 $team: Friendly
 $class: GTT Elysium
 $pos: 1531.720825, -86.676392, 3848.659424
-$label: Mannheim
+$label: GTT Mannheim
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -478,6 +480,14 @@ $Recommendation text:
     XSTR("", 10)
 $end_multi_text
 
+#Alternate Types:
+$Alt: NTC Leviathan
+$Alt: NTCv Deimos
+$Alt: NTF Hercules
+$Alt: NTF Loki
+$Alt: NTB Zeus
+#end
+
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
@@ -505,6 +515,7 @@ $Orientation:
 	0.999917, 0.000000, 0.012859,
 	-0.001738, 0.990820, 0.135177,
 	-0.012741, -0.135188, 0.990738
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -531,6 +542,7 @@ $Orientation:
 	0.999960, 0.000000, -0.008967,
 	0.001188, 0.991183, 0.132495,
 	0.008888, -0.132500, 0.991143
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -558,6 +570,7 @@ $Orientation:
 	0.999451, 0.000000, 0.033121,
 	-0.004386, 0.991192, 0.132361,
 	-0.032829, -0.132434, 0.990648
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -579,12 +592,14 @@ $Determination: 10
 
 $Name: Cato		;! Object #3
 $Class: GTC Leviathan
+$Alt: NTC Leviathan
 $Team: Neutral
 $Location: -2286.986816, 498.098938, 5042.710449
 $Orientation:
 	-0.354304, 0.000000, -0.935130,
 	0.187516, 0.979689, -0.071046,
 	0.916137, -0.200524, -0.347108
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Enif Station" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -621,6 +636,9 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 100
+$Texture Replace:
++old: nameplate
++new: NTC_Cato
 
 $Name: Colossus		;! Object #4
 $Class: GTVA Colossus
@@ -630,6 +648,7 @@ $Orientation:
 	-0.958682, 0.020619, -0.283732,
 	0.030622, 0.999054, -0.030866,
 	0.282827, -0.038279, -0.958407
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -711,7 +730,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Calypso		;! Object #5
@@ -722,6 +740,7 @@ $Orientation:
 	0.912780, 0.000000, 0.408452,
 	-0.015644, 0.999266, 0.034960,
 	-0.408153, -0.038300, 0.912110
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Medical Supplies", 148)
 +Initial Hull: 100
@@ -750,17 +769,18 @@ $Determination: 10
 +Escort priority: 80
 +Orders Accepted: 257		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 20
 
 $Name: Taurus 1		;! Object #6
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2389.557861, 0.000432, 4914.871094
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -779,12 +799,14 @@ $Determination: 10
 
 $Name: Taurus 2		;! Object #7
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2442.397949, -0.000104, 5099.397949
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -803,12 +825,14 @@ $Determination: 10
 
 $Name: Taurus 3		;! Object #8
 $Class: GTF Loki
+$Alt: NTF Loki
 $Team: Neutral
 $Location: -2536.640381, -0.000251, 4980.213379
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -833,6 +857,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -851,12 +876,14 @@ $Determination: 10
 
 $Name: Hawkwood		;! Object #10
 $Class: GTCv Deimos
+$Alt: NTCv Deimos
 $Team: Neutral
 $Location: 3224.103027, -537.099548, 7349.303711
 $Orientation:
 	-0.550460, 0.000000, 0.834861,
 	0.120921, 0.989455, 0.079728,
 	-0.826058, 0.144840, -0.544656
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -909,15 +936,20 @@ $Determination: 10
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
+$Texture Replace:
++old: nameplate
++new: NTCv_Hawkwood
 
 $Name: Conquest		;! Object #11
 $Class: GTC Leviathan
+$Alt: NTC Leviathan
 $Team: Neutral
 $Location: -2040.584595, 418.357910, 6125.139160
 $Orientation:
 	-0.942223, 0.000000, -0.334989,
 	0.000000, 1.000000, 0.000000,
 	0.334989, 0.000000, -0.942223
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -959,17 +991,21 @@ $Determination: 10
 +Escort priority: 95
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 200
+$Texture Replace:
++old: nameplate
++new: NTC_Conquest
 
 $Name: Gemini 1		;! Object #12
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -994.900024, 1171.294067, 10048.500000
 $Orientation:
 	-0.984989, 0.000000, -0.172620,
 	0.000000, 1.000000, 0.000000,
 	0.172620, 0.000000, -0.984989
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -989,12 +1025,14 @@ $Determination: 10
 
 $Name: Gemini 2		;! Object #13
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -1233.290283, 1171.294067, 9959.710938
 $Orientation:
 	-0.975882, 0.000000, -0.218298,
 	0.000000, 1.000000, 0.000000,
 	0.218298, 0.000000, -0.975882
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1014,12 +1052,14 @@ $Determination: 10
 
 $Name: Gemini 3		;! Object #14
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -1168.443115, 1171.294189, 10176.549805
 $Orientation:
 	-0.980025, 0.000000, -0.198876,
 	0.000000, 1.000000, 0.000000,
 	0.198876, 0.000000, -0.980025
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1045,6 +1085,7 @@ $Orientation:
 	0.999917, 0.000000, 0.012859,
 	-0.001738, 0.990820, 0.135177,
 	-0.012741, -0.135188, 0.990738
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1069,6 +1110,7 @@ $Orientation:
 	0.999960, 0.000000, -0.008967,
 	0.001188, 0.991183, 0.132495,
 	0.008888, -0.132500, 0.991143
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1094,6 +1136,7 @@ $Orientation:
 	0.999451, 0.000000, 0.033121,
 	-0.004386, 0.991192, 0.132361,
 	-0.032829, -0.132434, 0.990648
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -1112,12 +1155,14 @@ $Determination: 10
 
 $Name: Leo 1		;! Object #18
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3004.600098, 0.000000, 3002.100098
 $Orientation:
 	0.503425, 0.000000, -0.864039,
 	0.000000, 1.000000, 0.000000,
 	0.864039, 0.000000, 0.503425
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1137,12 +1182,14 @@ $Determination: 10
 
 $Name: Leo 2		;! Object #19
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -2902.236572, 0.000203, 3001.393799
 $Orientation:
 	0.516935, 0.000000, -0.856025,
 	0.000000, 1.000000, 0.000000,
 	0.856025, 0.000000, 0.516935
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1162,12 +1209,14 @@ $Determination: 10
 
 $Name: Leo 3		;! Object #20
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3000.920166, 0.000176, 2902.426514
 $Orientation:
 	0.525261, 0.000000, -0.850941,
 	0.000000, 1.000000, 0.000000,
 	0.850941, 0.000000, 0.525261
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1187,12 +1236,14 @@ $Determination: 10
 
 $Name: Virgo 1		;! Object #21
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3018.795410, -0.000095, 3432.348389
 $Orientation:
 	0.503425, 0.000000, -0.864039,
 	0.000000, 1.000000, 0.000000,
 	0.864039, 0.000000, 0.503425
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1212,12 +1263,14 @@ $Determination: 10
 
 $Name: Virgo 2		;! Object #22
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -2916.431885, 0.000108, 3431.642090
 $Orientation:
 	0.516935, 0.000000, -0.856025,
 	0.000000, 1.000000, 0.000000,
 	0.856025, 0.000000, 0.516935
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1237,12 +1290,14 @@ $Determination: 10
 
 $Name: Virgo 3		;! Object #23
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3015.115479, 0.000081, 3332.674805
 $Orientation:
 	0.525261, 0.000000, -0.850941,
 	0.000000, 1.000000, 0.000000,
 	0.850941, 0.000000, 0.525261
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1262,12 +1317,14 @@ $Determination: 10
 
 $Name: Pisces 1		;! Object #24
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Neutral
 $Location: 865.872681, -0.000748, 5794.298828
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1282,17 +1339,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Pisces 2		;! Object #25
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Neutral
 $Location: 1732.819214, -0.000357, 4401.575195
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1307,17 +1365,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Pisces 3		;! Object #26
 $Class: GTF Hercules
+$Alt: NTF Hercules
 $Team: Neutral
 $Location: -1316.836060, -0.000470, 6393.001953
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1332,17 +1391,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Aries 1		;! Object #27
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3063.263672, 0.000037, 3939.687500
 $Orientation:
 	0.503425, 0.000000, -0.864039,
 	0.000000, 1.000000, 0.000000,
 	0.864039, 0.000000, 0.503425
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1362,12 +1422,14 @@ $Determination: 10
 
 $Name: Aries 2		;! Object #28
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -2984.533203, -0.000122, 3935.919678
 $Orientation:
 	0.516935, 0.000000, -0.856025,
 	0.000000, 1.000000, 0.000000,
 	0.856025, 0.000000, 0.516935
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1387,12 +1449,14 @@ $Determination: 10
 
 $Name: Aries 3		;! Object #29
 $Class: GTB Zeus
+$Alt: NTB Zeus
 $Team: Neutral
 $Location: -3059.583740, 0.000213, 3840.013916
 $Orientation:
 	0.525261, 0.000000, -0.850941,
 	0.000000, 1.000000, 0.000000,
 	0.850941, 0.000000, 0.525261
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1418,6 +1482,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1449,6 +1514,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path U1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1480,6 +1546,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 5" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1511,6 +1578,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1542,6 +1610,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path U1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1573,6 +1642,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 5" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1596,51 +1666,18 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: Mannheim		;! Object #36
-$Class: GTT Elysium
-$Team: Friendly
-$Location: 313.522980, -86.676453, 3901.173340
-$Orientation:
-	0.378717, -0.028127, -0.925085,
-	0.139744, -0.986341, 0.087199,
-	-0.914901, -0.162298, -0.369614
-$AI Behavior: None
-$Cargo 1:  XSTR("Civilians", 145)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( are-waypoints-done-delay 
-   "Mannheim" 
-   "Waypoint path 4" 
-   0 
-)
-$Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 70
-+Orders Accepted: 257		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 10
-
-$Name: Enif Station		;! Object #37
+$Name: Enif Station		;! Object #36
 $Class: GTI Arcadia
 $Team: Friendly
-$Location: -60.763393, 0.985462, 4717.296387
+$Location: -60.759029, 0.986324, 4717.298340
 $Orientation:
-	-0.378731, 0.028125, 0.925079,
-	-0.115831, 0.990239, -0.077528,
-	-0.918229, -0.136514, -0.371777
+	-0.378726, 0.028126, 0.925081,
+	-0.115830, 0.990239, -0.077528,
+	-0.918231, -0.136513, -0.371772
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 82
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -1676,7 +1713,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret23
 +Subsystem: turret24
 $Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
+$Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -1684,12 +1721,45 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
-+Docked With: Mannheim
-$Docker Point: topside docking
-$Dockee Point: topside docking
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 1000
+
+$Name: Mannheim		;! Object #37
+$Class: GTT Elysium
+$Team: Friendly
+$Location: 313.522980, -86.676453, 3901.173340
+$Orientation:
+	0.378717, -0.028127, -0.925085,
+	0.139744, -0.986341, 0.087199,
+	-0.914901, -0.162298, -0.369614
+$IFF: IFF 1
+$AI Behavior: None
+$Cargo 1:  XSTR("Civilians", 145)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( are-waypoints-done-delay 
+   "Mannheim" 
+   "Waypoint path 4" 
+   0 
+)
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 70
++Docked With: Enif Station
+$Docker Point: topside docking
+$Dockee Point: topside docking
++Orders Accepted: 257		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
 
 #Wings		;! 9 total
 
@@ -2629,11 +2699,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 30 total
 
-
 $Name: Bombers Incoming
 $Team: -1
 $MessageNew:  XSTR("Enif Station here. NTF bombers are closing in!", 911)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_01.wav
 
@@ -2641,6 +2711,7 @@ $Name: More Bombers
 $Team: -1
 $MessageNew:  XSTR("More rebel bombers inbound! Seek and destroy!", 912)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_02.wav
 
@@ -2648,6 +2719,7 @@ $Name: Civs Safe
 $Team: -1
 $MessageNew:  XSTR("All civilian transports have departed safely.", 913)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_03.wav
 
@@ -2655,6 +2727,7 @@ $Name: Installation Safe
 $Team: -1
 $MessageNew:  XSTR("Return to base pilots. Mission accomplished.", 914)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_01.wav
 
@@ -2662,6 +2735,7 @@ $Name: Installation Destroyed
 $Team: -1
 $MessageNew:  XSTR("We have lost Enif Station! Repeat. We have lost Enif Station!", 915)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_02.wav
 
@@ -2669,6 +2743,7 @@ $Name: Calypso Clear
 $Team: -1
 $MessageNew:  XSTR("This is the GTFr Calypso. We have cleared Enif Station. Now engaging subspace drive.", 916)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM3
 +Wave Name: SM108_CA_01.wav
 
@@ -2676,6 +2751,7 @@ $Name: Break Off
 $Team: -1
 $MessageNew:  XSTR("NTF fighters, you are firing upon a civilian vessel! Break off your attack!", 917)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM3
 +Wave Name: SM108_CA_02.wav
 
@@ -2683,6 +2759,7 @@ $Name: Calypso Cover
 $Team: -1
 $MessageNew:  XSTR("Alpha, we need some fighter cover on the Calypso! Hold back the rebels so the civilians can escape!", 918)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_03.wav
 
@@ -2690,6 +2767,7 @@ $Name: Calypso Destroyed
 $Team: -1
 $MessageNew:  XSTR("The Calypso has been destroyed!", 919)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_04.wav
 
@@ -2697,6 +2775,7 @@ $Name: Mannheim Clear
 $Team: -1
 $MessageNew:  XSTR("This is the Mannheim. We have set course for the Capella jump node. Activating jump drive now.", 920)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: SM108_MA_01.wav
 
@@ -2704,6 +2783,7 @@ $Name: Mannheim Attacked
 $Team: -1
 $MessageNew:  XSTR("Our transport is carrying civilian passengers! Your attack is in violation of the Beta Aquilae Convention!", 921)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: SM108_MA_02.wav
 
@@ -2711,6 +2791,7 @@ $Name: Protect Mannheim
 $Team: -1
 $MessageNew:  XSTR("Pilots, protect the Mannheim! The transport is under attack!", 922)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_05.wav
 
@@ -2718,6 +2799,7 @@ $Name: Lost Mannheim
 $Team: -1
 $MessageNew:  XSTR("We've lost the Mannheim! Two hundred civilians were on board that transport!", 923)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_06.wav
 
@@ -2725,6 +2807,7 @@ $Name: Target Bombers
 $Team: -1
 $MessageNew:  XSTR("Intercept the bombs before they hit the installation! We must not lose that base!", 924)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_07.wav
 
@@ -2732,6 +2815,7 @@ $Name: New Bombers
 $Team: -1
 $MessageNew:  XSTR("Command, this is Enif Station! A new wing of bombers has jumped in! Request immediate fighter cover!", 925)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_04.wav
 
@@ -2739,6 +2823,7 @@ $Name: Enif Moderate
 $Team: -1
 $MessageNew:  XSTR("This is Enif Station. We have sustained moderate damage. All breached levels have been sealed off. Engineering reports the situation is under control.", 926)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_05.wav
 
@@ -2746,6 +2831,7 @@ $Name: Pods
 $Team: -1
 $MessageNew:  XSTR("Enif Station here, Command. Hull integrity is falling, and all decks report heavy casualties. General evacuation now in progress. Deploying escape pods.", 927)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_06.wav
 
@@ -2753,6 +2839,7 @@ $Name: Enif Critical
 $Team: -1
 $MessageNew:  XSTR("This is Enif Station! All systems going critical!", 928)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_07.wav
 
@@ -2760,6 +2847,7 @@ $Name: Cato Destroyed
 $Team: -1
 $MessageNew:  XSTR("Well done. The NTC Cato has been destroyed!", 929)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_08.wav
 
@@ -2767,6 +2855,7 @@ $Name: Defeated Hawkwood
 $Team: -1
 $MessageNew:  XSTR("We have defeated the Hawkwood!", 930)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_09.wav
 
@@ -2774,6 +2863,7 @@ $Name: Conquest Obliterated
 $Team: -1
 $MessageNew:  XSTR("The Conquest has been obliterated!", 931)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_10.wav
 
@@ -2781,6 +2871,7 @@ $Name: Decatur Eliminated
 $Team: -1
 $MessageNew:  XSTR("Our forces have eliminated the Decatur!", 932)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_11.wav
 
@@ -2788,6 +2879,7 @@ $Name: Good Job
 $Team: -1
 $MessageNew:  XSTR("This is Enif Station. We thank you for your help, pilots. You've done a commendable job out here.", 933)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM5
 +Wave Name: SM108_EN_08.wav
 
@@ -2795,6 +2887,7 @@ $Name: Total Failure
 $Team: -1
 $MessageNew:  XSTR("All allied ships return to base. This operation is a total failure.", 934)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_12.wav
 
@@ -2826,6 +2919,7 @@ $Name: Colossus 1
 $Team: -1
 $MessageNew:  XSTR("IFF status is friendly. Meet the Colossus, the largest space-faring warship ever constructed.", 938)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_13.wav
 
@@ -2833,6 +2927,7 @@ $Name: Clear Out
 $Team: -1
 $MessageNew:  XSTR("This is the GTVA Colossus. Fighters stand clear of hostile warships. All batteries, fire at will.", 939)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM108_COL_01.wav
 
@@ -2840,167 +2935,265 @@ $Name: Colossus Maintain
 $Team: -1
 $MessageNew:  XSTR("Colossus, maintain your current position. You will defend Enif Station until relieved.", 940)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM108_AC_14.wav
 
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 24 total
+#Background bitmaps		;! 40 total
 
-$Num stars: 500
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunRed
-+Angles: 0.069813 4.799652 3.665189
+$Sun: SunEnif
++Angles: 0.488692 0.000000 0.174533
 +Scale: 2.000000
-$Starbitmap: neb07
-+Angles: 0.244346 0.366519 0.174533
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulA1-Main
++Angles: 5.585049 0.000000 0.488692
++ScaleX: 8.000000
++ScaleY: 8.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb09
-+Angles: 0.506145 2.111847 0.471239
-+ScaleX: 3.000000
+$Starbitmap: NebulA2-Main
++Angles: 0.349066 0.000000 2.076940
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 4.974180 5.759580 0.349066
++ScaleX: 5.000000
 +ScaleY: 5.000000
 +DivX: 1
-+DivY: 2
-$Starbitmap: neb13
-+Angles: 0.785398 1.308996 0.052360
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: neb11
-+Angles: 1.047197 3.246310 0.366519
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 1.308996 1.745328 0.558505
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb09
-+Angles: 1.570795 3.700095 0.750491
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb13
-+Angles: 6.021381 0.000000 0.000000
+$Starbitmap: NebulA4-Whisp
++Angles: 6.195910 4.537850 0.506145
 +ScaleX: 4.000000
 +ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: neb11
-+Angles: 0.000000 1.343902 0.401425
-+ScaleX: 3.000000
-+ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 6.021381 1.326449 0.628318
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: neb09
-+Angles: 5.672316 0.000000 0.610865
-+ScaleX: 2.000000
-+ScaleY: 2.000000
+$Starbitmap: NebulA5-Whisp
++Angles: 1.047200 1.047200 2.530730
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb13
-+Angles: 5.235983 3.106683 0.645771
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb11
-+Angles: 5.811942 0.767944 0.925024
-+ScaleX: 2.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb07
-+Angles: 5.811942 0.000000 1.169370
+$Starbitmap: NebulA6-Whisp
++Angles: 0.174533 0.000000 2.617990
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb09
-+Angles: 5.881755 2.495819 1.308996
-+ScaleX: 2.000000
+$Starbitmap: NebulA7-Whisp
++Angles: 0.000000 0.000000 1.047200
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 0.244346 0.000000 2.443460
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 1.378810 0.000000 2.076940
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 5.881755 2.146753 1.308996
+$Starbitmap: NebulA10-Whisp
++Angles: 5.497780 0.785398 6.021380
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 2.251470 0.000000 1.919860
 +ScaleX: 4.000000
 +ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: neb11
-+Angles: 0.645771 0.977384 1.308996
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
++DivX: 1
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 6.021381 6.021381 1.867501
+$Starbitmap: NebulA12-Whisp
++Angles: 4.712390 3.141590 1.745330
 +ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA14-Whisp
++Angles: 5.934110 0.000000 0.174533
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 5.393060 0.174533 4.014250
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 5.829390 1.570800 3.752450
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 4.886920 4.712390 4.014250
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 1.570800 0.174533 5.218530
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 0.488692 0.000000 5.061450
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 1.378810 1.047200 6.091190
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 0.872664 1.570800 5.585050
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 6.091190 0.000000 2.617990
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 5.759580 0.488692 2.251470
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 4.712390 1.570800 3.316120
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 2.164210 3.822270 1.815140
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 5.759580 0.785398 0.698131
++ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 6.021381 3.857175 2.007127
+$Starbitmap: NebulA3-Whisp
++Angles: 5.759580 0.000000 1.047200
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 5.829390 4.345870 0.925024
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb11
-+Angles: 6.195914 0.855211 5.846848
+$Starbitmap: NebulA10-Whisp
++Angles: 0.523598 6.195910 1.832590
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 0.506145 3.141590 1.919860
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 5.497780 1.745330 1.309000
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 0.785398 1.570800 1.832590
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 1.047200 5.235980 1.919860
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 1.396260 0.000000 1.919860
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 1.483530 4.712390 1.745330
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 0.872664 1.221730 2.268930
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA8-Whisp
++Angles: 0.872664 1.570800 2.164210
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA13-Whisp
++Angles: 5.759580 3.577920 1.274090
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 5.235980 0.000000 1.047200
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 4.712390 0.000000 0.872664
 +ScaleX: 4.000000
 +ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: neb13
-+Angles: 5.602502 2.356193 5.602502
-+ScaleX: 3.000000
-+ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb07
-+Angles: 5.585049 0.610865 5.585049
-+ScaleX: 5.000000
-+ScaleY: 5.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: neb07
-+Angles: 5.131264 5.480330 5.480330
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb09
-+Angles: 4.974185 2.146753 5.427969
-+ScaleX: 4.000000
-+ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: planete
-+Angles: 1.169370 2.111847 0.000000
+$Starbitmap: PlanetE
++Angles: 1.169370 4.747292 0.000000
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 
 #Asteroid Fields
+
 
 #Music
 

@@ -14,21 +14,13 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3000.000000
-
 +Storm: none
-
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -42,8 +34,15 @@ $end_multi_text
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
-
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -80,7 +79,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("In the first phase, you will attack the $h SC $h Rephaim, a Rakshasa-class warship. Our recon flights have located the $h Rephaim near the allied secure zone. The cruiser is accompanied by two wings comprised of Mara-class fighters. Our analysis of the $h Rephaim's flight pattern suggests the vessel is patrolling the region.", 1389)
+ XSTR("In the first phase, you will attack the $h SC $h Rephaim, a $y Rakshasa -class warship. Our recon flights have located the $h Rephaim near the allied secure zone. The cruiser is accompanied by two wings comprised of $y Mara -class fighters. Our analysis of the $h Rephaim's flight pattern suggests the vessel is patrolling the region.", 1389)
 $end_multi_text
 $voice: SM209_MB_02.wav
 $camera_pos: -2281.261963, 757.092896, 207.137054
@@ -120,7 +119,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your first task is to eliminate the fighter escort. This must be achieved quickly, before reinforcements arrive. Once the escort has been neutralized, call in Delta wing. The bombers will help you destroy the $h Rephaim. If necessary, your wing will need to incapacitate the cruiser's beam turrets to clear a path for your bombers.", 1390)
+ XSTR("Your first task is to eliminate the fighter escort. This must be achieved quickly, before reinforcements arrive. Once the escort has been neutralized, call in $f Delta wing. The bombers will help you destroy the $h Rephaim. If necessary, your wing will need to incapacitate the cruiser's beam turrets to clear a path for your bombers.", 1390)
 $end_multi_text
 $voice: SM209_MB_03.wav
 $camera_pos: -2281.261963, 757.092896, 207.137054
@@ -160,7 +159,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We anticipate the attack on the $h Rephaim will bring Shivan reinforcements.  Your squadron is charged with the duty of engaging and destroying these hostiles until the $h Sathanas arrives. Sigma wing will also be available to assist, once these bombers have returned from their current sortie.", 1391)
+ XSTR("We anticipate the attack on the $h Rephaim will bring Shivan reinforcements.  Your squadron is charged with the duty of engaging and destroying these hostiles until the $h Sathanas arrives. $f Sigma wing will also be available to assist, once these bombers have returned from their current sortie.", 1391)
 $end_multi_text
 $voice: SM209_MB_04.wav
 $camera_pos: -2281.261963, 757.092896, 207.137054
@@ -212,7 +211,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The upgraded Target Acquisition and Guidance warhead is now available. The TAG-B, an aspect-seeking missile, features an improved shock-resistant substrate that enables the beacon to transmit data with greater precision.  The $f GVCv $f Sopedu will provide fire support for this operation.", 1392)
+ XSTR("The upgraded $y Target $y Acquisition and $y Guidance warhead is now available. The $y TAG-B, an aspect-seeking missile, features an improved shock-resistant substrate that enables the beacon to transmit data with greater precision.  The $f GVCv $f Sopedu will provide fire support for this operation.", 1392)
 $end_multi_text
 $voice: SM209_MB_05.wav
 $camera_pos: -2281.261963, 757.092896, 207.137054
@@ -264,7 +263,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The Alliance will execute simultaneous, coordinated strikes against Shivan positions in the nebula. For this reason, our destroyers will not be deployed unless the $h Sathanas appears in your field of engagement.  If we fail to lure the $h Sathanas, or if the Juggernaut engages our forces elsewhere, we will abort this mission.", 1393)
+ XSTR("The Alliance will execute simultaneous, coordinated strikes against Shivan positions in the nebula. For this reason, our destroyers will not be deployed unless the $h Sathanas appears in your field of engagement.  If we fail to lure the $h Sathanas, or if the $h Juggernaut engages our forces elsewhere, we will abort this mission.", 1393)
 $end_multi_text
 $voice: SM209_MB_06.wav
 $camera_pos: -2005.978394, 326.624023, 825.920227
@@ -341,7 +340,7 @@ $Ship Choices: (
 	"Hornet"	580
 	"Tornado"	740
 	"Harpoon"	100
-	"TAG-B"	100
+	"TAG-B"	160
 	"Piranha"	100
 	"Stiletto II"	100
 )
@@ -356,6 +355,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -372,7 +372,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Iceni		;! Object #1
@@ -383,6 +382,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -444,6 +444,7 @@ $Orientation:
 	-0.285189, 0.000000, 0.958471,
 	0.000000, 1.000000, 0.000000,
 	-0.958471, 0.000000, -0.285189
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -502,6 +503,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -519,7 +521,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 5
 
@@ -531,6 +532,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -548,7 +550,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 5
 
@@ -560,6 +561,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -577,7 +579,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 12
 +Persona Index: 5
 
@@ -589,6 +590,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -613,6 +615,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -637,6 +640,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -661,6 +665,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -685,6 +690,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -709,6 +715,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -733,6 +740,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -757,6 +765,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -781,6 +790,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -805,6 +815,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -829,6 +840,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -853,6 +865,7 @@ $Orientation:
 	-0.697849, 0.000000, 0.716246,
 	0.000000, 1.000000, 0.000000,
 	-0.716246, 0.000000, -0.697849
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -895,6 +908,7 @@ $Orientation:
 	-0.998295, 0.000000, -0.058374,
 	0.000000, 1.000000, 0.000000,
 	0.058374, 0.000000, -0.998295
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Thutmose" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -928,7 +942,6 @@ $Determination: 10
 +Escort priority: 90
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 150
 
 $Name: Thutmose		;! Object #19
@@ -939,6 +952,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -987,7 +1001,6 @@ $Determination: 10
 +Escort priority: 98
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 400
 
 $Name: Virgo 1		;! Object #20
@@ -998,6 +1011,7 @@ $Orientation:
 	-0.996233, 0.000000, -0.086719,
 	-0.004048, 0.998910, 0.046504,
 	0.086624, 0.046680, -0.995147
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1013,7 +1027,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #21
@@ -1024,6 +1037,7 @@ $Orientation:
 	-0.991202, 0.000000, -0.132357,
 	-0.006147, 0.998921, 0.046036,
 	0.132214, 0.046445, -0.990133
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1039,7 +1053,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #22
@@ -1050,6 +1063,7 @@ $Orientation:
 	-0.997766, 0.000000, -0.066802,
 	-0.003464, 0.998655, 0.051737,
 	0.066712, 0.051853, -0.996424
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1065,7 +1079,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 4		;! Object #23
@@ -1076,6 +1089,7 @@ $Orientation:
 	-0.992974, 0.000000, -0.118333,
 	-0.006280, 0.998591, 0.052697,
 	0.118166, 0.053070, -0.991575
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1091,7 +1105,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Virgo 5		;! Object #24
@@ -1102,6 +1115,7 @@ $Orientation:
 	-0.999081, 0.000000, -0.042860,
 	-0.002105, 0.998793, 0.049073,
 	0.042808, 0.049118, -0.997875
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1117,7 +1131,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Taurus 1		;! Object #25
@@ -1128,6 +1141,7 @@ $Orientation:
 	-0.965980, 0.000000, -0.258620,
 	0.000000, 1.000000, 0.000000,
 	0.258620, 0.000000, -0.965980
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1151,6 +1165,7 @@ $Orientation:
 	-0.965979, 0.000000, -0.258620,
 	0.000000, 1.000000, 0.000000,
 	0.258620, 0.000000, -0.965979
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1174,6 +1189,7 @@ $Orientation:
 	-0.965979, 0.000000, -0.258620,
 	0.000000, 1.000000, 0.000000,
 	0.258620, 0.000000, -0.965979
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1197,6 +1213,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1224,6 +1241,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1251,6 +1269,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1278,6 +1297,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1305,6 +1325,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1330,6 +1351,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1355,6 +1377,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1380,6 +1403,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2161,7 +2185,6 @@ $List: (		;! 1 points in list
 
 #Messages		;! 30 total
 
-
 $Name: Shivan Sound
 $Team: -1
 $MessageNew:  XSTR("<Incoming Transmission>", 1397)
@@ -2180,6 +2203,7 @@ $Name: See Anything
 $Team: -1
 $MessageNew:  XSTR("Are you able to see anything?", 1399)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_01.wav
 
@@ -2195,6 +2219,7 @@ $Name: Maintain
 $Team: -1
 $MessageNew:  XSTR("Maintain your current heading, pilots.", 1401)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_02.wav
 
@@ -2210,6 +2235,7 @@ $Name: Identify
 $Team: -1
 $MessageNew:  XSTR("Can you identify it, Alpha?", 1403)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_03.wav
 
@@ -2225,6 +2251,7 @@ $Name: Impossible
 $Team: -1
 $MessageNew:  XSTR("That's impossible! This is an allied channel!", 1405)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_04.wav
 
@@ -2248,6 +2275,7 @@ $Name: Engage Shivans
 $Team: -1
 $MessageNew:  XSTR("All units, engage the Shivans! Stand clear of the Iceni! Do not attack that ship!", 1408)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_05.wav
 
@@ -2271,6 +2299,7 @@ $Name: Deploying Thutmose
 $Team: -1
 $MessageNew:  XSTR("Now deploying the Thutmose!", 1411)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_06.wav
 
@@ -2278,6 +2307,7 @@ $Name: Rephaim Destroyed
 $Team: -1
 $MessageNew:  XSTR("We have destroyed the Rephaim! Excellent work, pilots.", 1412)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_07.wav
 
@@ -2285,20 +2315,23 @@ $Name: Thutmose Engaging
 $Team: -1
 $MessageNew:  XSTR("This is the Thutmose. We are now engaging the enemy.", 1413)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Large Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM2-09_Th_01.wav
 
 $Name: Corvette Under Attack
 $Team: -1
 $MessageNew:  XSTR("We are under attack! We have sustained heavy damage! We require assistance, Command!", 1414)
 $end_multi_text
-+AVI Name: Head-VC
++Persona: Large Ship Vasudan
++AVI Name: Head-VC2
 +Wave Name: SM2-09_Th_02.wav
 
 $Name: Cover Thutmose
 $Team: -1
 $MessageNew:  XSTR("Alpha 1, get some cover on the Thutmose!", 1415)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_08.wav
 
@@ -2306,6 +2339,7 @@ $Name: Corvette Destroyed
 $Team: -1
 $MessageNew:  XSTR("The corvette has been destroyed!", 1416)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_09.wav
 
@@ -2313,6 +2347,7 @@ $Name: Cain Arrives
 $Team: -1
 $MessageNew:  XSTR("Incoming jump signature! Cain-class warship! Designation, Thaumiel.", 1417)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_10.wav
 
@@ -2320,6 +2355,7 @@ $Name: Thaumiel Nullified
 $Team: -1
 $MessageNew:  XSTR("We have nullified the Thaumiel. Job well done, pilots.", 1418)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_11.wav
 
@@ -2327,6 +2363,7 @@ $Name: Incoming Warship
 $Team: -1
 $MessageNew:  XSTR("Incoming warship! It's a Moloch-class corvette, designation Golab!", 1419)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_12.wav
 
@@ -2334,6 +2371,7 @@ $Name: Rearm 2-09
 $Team: -1
 $MessageNew:  XSTR("Shivan reinforcements could arrive at any time. Rearm if you need to, pilots.", 1420)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_14.wav
 
@@ -2341,6 +2379,7 @@ $Name: No Sign
 $Team: -1
 $MessageNew:  XSTR("No sign of the Sathanas! We must keep up this offensive to lure the Shivan juggernaut!", 1421)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_15.wav
 
@@ -2348,6 +2387,7 @@ $Name: Delta Standing By
 $Team: -1
 $MessageNew:  XSTR("Delta wing is standing by. Call in the bombers at your discretion, Alpha.", 1422)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_16.wav
 
@@ -2355,6 +2395,7 @@ $Name: Sigma Standing By
 $Team: -1
 $MessageNew:  XSTR("Sigma wing is now standing by. Deploy these bombers at your discretion.", 1423)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_17.wav
 
@@ -2362,6 +2403,7 @@ $Name: Return To The Psamtik
 $Team: -1
 $MessageNew:  XSTR("All units! Return to base! The Shivan juggernaut is heading for the Gamma Draconis node!", 1424)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_18.wav
 
@@ -2369,6 +2411,7 @@ $Name: Direct Order
 $Team: -1
 $MessageNew:  XSTR("Alpha 1, you are disobeying a direct order! Command is withdrawing the fleet to Gamma Draconis. If you do not jump out now, you'll be left behind.", 1425)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_19.wav
 
@@ -2376,6 +2419,7 @@ $Name: Insubordination
 $Team: -1
 $MessageNew:  XSTR("You'll pay for your insubordination, pilot. Allied Command, out.", 1426)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: SM2-09_AC_20.wav
 
@@ -2397,14 +2441,13 @@ $Num times: 1
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 500
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 +Neb2: nbackpurp1
-
 +Neb2Flags: 63
 
-
 #Asteroid Fields
+
 
 #Music
 

@@ -10,22 +10,15 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("The Colossus and the Sathanas face off in the Capella system.
-", 1559)
+ XSTR("The Colossus and the Sathanas face off in the Capella system.", 1559)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 131072
-+Fog Near Mult: 1.000000
-
-+Fog Far Mult: 1.000000
-
-
++Red Alert: 0
++Scramble: 1
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -39,8 +32,28 @@ $end_multi_text
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
+
+#Sexp_variables
+
+$Variables:
+(
+		94		"SJD Sathanas 19"		"10000"		"block"
+		95		"SJD Sathanas 19"		"10000"		"block"
+		96		"SJD Sathanas 19"		"10000"		"block"
+		97		"SJD Sathanas 19"		"8500"		"block"
+		98		"SJD Sathanas 19"		"1"		"block"
+		99		"SJD Sathanas 19"		"5000"		"block"
+)
 
 #Command Briefing
 
@@ -49,9 +62,9 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("The $h Satahanas entered the Capella system and obliterated the line of defense we had established to intercept it. We now have no choice but to send in the $f Colossus. With its beam cannons still operational, the $h Sathanas has sufficient firepower to win this engagement.
+ XSTR("The $h Sathanas entered the $b Capella system and obliterated the line of defense we had established to intercept it. We now have no choice but to send in the $f Colossus. With its beam cannons still operational, the $h Sathanas has sufficient firepower to win this engagement.
 
-Your wing will be scrambled immediately. There is no time to select your ship or armaments. Your mission is to neutralize these remaining beam cannons as quickly as possible. If you fail, we risk losing the $f Colossus and the Capella system. ", 1560)
+Your wing will be scrambled immediately. There is no time to select your ship or armaments. Your mission is to neutralize these remaining beam cannons as quickly as possible. If you fail, we risk losing the $f Colossus and the $b Capella system. ", 1560)
 $end_multi_text
 $voice: sm302_mb_01.wav
 $camera_pos: 36143.382813, 8628.259766, 14244.781250
@@ -85,7 +98,7 @@ $type: 25
 $team: Friendly
 $class: GVB Bakha
 $pos: -307123.156250, 381.901611, -83092.250000
-$label: Alpha 4
+$label: Alpha
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -95,7 +108,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $h Satahanas has entered the Capella system and engaged the $f Colossus. Your exceptional performance in Gamma Draconis has significantly improved the odds for the Alliance. We are deploying your wing to provide bomber support for the $f Colossus. Eliminate any target of opportunity, but do not take unnecessary risks.", 1561)
+ XSTR("The $h Sathanas has entered the $b Capella system and engaged the $f Colossus. Your exceptional performance in $b Gamma $b Draconis has significantly improved the odds for the Alliance. We are deploying your wing to provide bomber support for the $f Colossus. Eliminate any target of opportunity, but do not take unnecessary risks.", 1561)
 $end_multi_text
 $voice: sm302_mb_02.wav
 $camera_pos: 36016.648438, 8628.259766, 21203.224609
@@ -129,7 +142,7 @@ $type: 25
 $team: Friendly
 $class: GVB Bakha
 $pos: -30004.244141, 381.900970, 20146.687500
-$label: Alpha 4
+$label: Alpha
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -212,9 +225,11 @@ $end_multi_text
 $Formula: ( and 
    ( is-destroyed-delay 0 "Colossus" ) 
    ( not 
-      ( is-destroyed-delay 0 "Sathanas" ) 
-   )
-   ( is-event-true-delay "RTB 1" 0 ) 
+      ( is-event-true-delay 
+         "All 4 down C out" 
+         0 
+      ) 
+   ) 
 )
 $Multi text
     XSTR("The GTVA Colossus, the largest Terran-Vasudan warship ever constructed, over twenty years in the making, has been destroyed. Thirty thousand perished in the Juggernaut's attack, and millions more are in jeopardy. You failed to neutralize the forward beam cannons, pilot, and now we will all pay the price of that failure.", 1565)
@@ -224,8 +239,13 @@ $Recommendation text:
     XSTR("", 10)
 $end_multi_text
 
-$Formula: ( not 
-   ( is-event-true-delay "RTB 1" 0 ) 
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Colossus" ) 
+   ) 
+   ( not 
+      ( is-destroyed-delay 0 "Sathanas" ) 
+   ) 
 )
 $Multi text
     XSTR("A Vasudan never leaves the field of battle without authorization from a superior officer. Your cowardice jeopardized the lives of our brothers and sisters. You are hereby stripped of your wings and all privileges bestowed upon you as an officer of the Galactic Terran-Vasudan Alliance. You will be taken into custody and handed over to the Terran 3rd Battle Group authority, where you will face a court martial. You are a disgrace to your species, Terran.", 1318)
@@ -262,6 +282,7 @@ $Orientation:
 	-0.989534, 0.000000, -0.144303,
 	-0.011077, 0.997049, 0.075959,
 	0.143877, 0.076762, -0.986614
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -288,6 +309,7 @@ $Orientation:
 	-0.990004, 0.000000, -0.141041,
 	-0.010759, 0.997086, 0.075522,
 	0.140630, 0.076285, -0.987119
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -316,6 +338,7 @@ $Orientation:
 	-0.988212, 0.000000, -0.153092,
 	-0.011719, 0.997066, 0.075649,
 	0.152643, 0.076551, -0.985312
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -344,6 +367,7 @@ $Orientation:
 	-0.990641, 0.000000, -0.136495,
 	-0.010520, 0.997025, 0.076353,
 	0.136089, 0.077074, -0.987694
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -372,6 +396,7 @@ $Orientation:
 	0.984596, 0.000000, 0.174847,
 	0.024569, 0.990078, -0.138353,
 	-0.173112, 0.140518, 0.974827
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -440,9 +465,8 @@ $Determination: 10
 +Flags: ( "no-shields" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 30
++Escort priority: 3
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Colossus		;! Object #5
@@ -453,6 +477,7 @@ $Orientation:
 	-0.998462, -0.034167, -0.043676,
 	-0.029340, 0.993853, -0.106756,
 	0.047055, -0.105310, -0.993326
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-chase "Sathanas" 50 ) )
@@ -553,9 +578,8 @@ $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 15
++Escort priority: 5
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 $Name: Cancer 1		;! Object #6
@@ -566,6 +590,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -580,7 +605,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #7
@@ -591,6 +615,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -605,7 +630,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #8
@@ -616,6 +640,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -630,7 +655,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Cancer 4		;! Object #9
@@ -641,6 +665,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -655,7 +680,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Beta 1		;! Object #10
@@ -862,7 +886,7 @@ $Ships: (		;! 4 total
 	"Cancer 4"
 )
 $AI Goals: ( goals ( ai-chase-any 50 ) )
-+Flags: ( )
++Flags: ( "no-arrival-message" )
 +Wave Delay Min: 5
 +Wave Delay Max: 9
 
@@ -910,7 +934,7 @@ $Formula: ( when
       ( not 
          ( is-destroyed-delay 0 "Cancer" ) 
       )
-      ( is-destroyed-delay 0 "Sathanas" ) 
+      ( is-destroyed-delay 7 "Sathanas" ) 
       ( not 
          ( is-destroyed-delay 0 "Colossus" ) 
       )
@@ -955,8 +979,8 @@ $Formula: ( when
 $Formula: ( when 
    ( is-previous-goal-true 
       "SM3-01" 
-      "GUN 1" 
-      ( true ) 
+      "Gun 1" 
+      ( false ) 
    )
    ( set-subsystem-strength 
       "Sathanas" 
@@ -969,10 +993,22 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-previous-goal-false 
+      "sm3-01" 
+      "Gun 1" 
+      ( true ) 
+   )
+   ( validate-goal "Gun 1" ) 
+)
++Name: Goal 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( is-previous-goal-true 
       "SM3-01" 
-      "GUN 2" 
-      ( false ) 
+      "Gun 2" 
+      ( true ) 
    )
    ( set-subsystem-strength 
       "Sathanas" 
@@ -985,10 +1021,22 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-previous-goal-false 
+      "sm3-01" 
+      "Gun 2" 
+      ( false ) 
+   )
+   ( validate-goal "Gun 2" ) 
+)
++Name: Goal 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( is-previous-goal-true 
       "SM3-01" 
-      "GUN 3" 
-      ( true ) 
+      "Gun 3" 
+      ( false ) 
    )
    ( set-subsystem-strength 
       "Sathanas" 
@@ -1001,10 +1049,22 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( is-previous-goal-false 
+      "sm3-01" 
+      "Gun 3" 
+      ( true ) 
+   )
+   ( validate-goal "Gun 3" ) 
+)
++Name: Goal 3
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( is-previous-goal-true 
       "SM3-01" 
-      "GUN 4" 
-      ( false ) 
+      "Gun 4" 
+      ( true ) 
    )
    ( set-subsystem-strength 
       "Sathanas" 
@@ -1013,6 +1073,18 @@ $Formula: ( when
    )
 )
 +Name: Beam 4
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-previous-goal-false 
+      "sm3-01" 
+      "Gun 4" 
+      ( false ) 
+   )
+   ( validate-goal "Gun 4" ) 
+)
++Name: Goal 4
 +Repeat Count: 1
 +Interval: 1
 
@@ -1119,54 +1191,6 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Beams", 1566)
 
 $Formula: ( when 
-   ( is-previous-goal-false 
-      "sm3-01" 
-      "GUN 1" 
-      ( true ) 
-   )
-   ( validate-goal "GUN 1b" ) 
-)
-+Name: Gun goal 1
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( is-previous-goal-false 
-      "sm3-01" 
-      "GUN 2" 
-      ( false ) 
-   )
-   ( validate-goal "GUN 2b" ) 
-)
-+Name: Gun goal 2
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( is-previous-goal-false 
-      "sm3-01" 
-      "GUN 3" 
-      ( true ) 
-   )
-   ( validate-goal "GUN 3b" ) 
-)
-+Name: Gun goal 3
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( is-previous-goal-false 
-      "sm3-01" 
-      "GUN 4" 
-      ( true ) 
-   )
-   ( validate-goal "GUN 4b" ) 
-)
-+Name: Gun goal 4
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
    ( true ) 
    ( beam-free-all "Colossus" ) 
 )
@@ -1177,7 +1201,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 80 ) 
    ( send-message 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "COL 80" 
    )
@@ -1189,7 +1213,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 50 ) 
    ( send-message 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "COL 50" 
    )
@@ -1201,7 +1225,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 20 ) 
    ( send-message 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "COL 20" 
    )
@@ -1223,13 +1247,18 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( < ( hits-left "Sathanas" ) 70 ) 
+   ( and 
+      ( < ( hits-left "Sathanas" ) 70 ) 
+      ( not 
+         ( is-destroyed-delay 0 "Colossus" ) 
+      )
+   )
    ( send-message-list 
       "#Command" 
       "High" 
       "SAM 70 a" 
       0 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "SAM 70 b" 
       4544 
@@ -1240,13 +1269,18 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( < ( hits-left "Sathanas" ) 45 ) 
+   ( and 
+      ( < ( hits-left "Sathanas" ) 45 ) 
+      ( not 
+         ( is-destroyed-delay 0 "Colossus" ) 
+      )
+   )
    ( send-message-list 
       "#Command" 
       "High" 
       "SAM 45 a" 
       0 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "SAM 45 b" 
       4544 
@@ -1257,13 +1291,18 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( < ( hits-left "Sathanas" ) 20 ) 
+   ( and 
+      ( < ( hits-left "Sathanas" ) 20 ) 
+      ( not 
+         ( is-destroyed-delay 0 "Colossus" ) 
+      )
+   )
    ( send-message-list 
       "#Command" 
       "High" 
       "SAM 20 a" 
       0 
-      "Colossus" 
+      "#Colossus" 
       "High" 
       "SAM 20 b" 
       4544 
@@ -1453,7 +1492,7 @@ $Formula: ( when
       ( not 
          ( is-destroyed-delay 0 "Colossus" ) 
       )
-      ( and 
+      ( or 
          ( is-event-true-delay 
             "1 of 2 to go" 
             0 
@@ -1552,7 +1591,6 @@ $Formula: ( when
       ( not 
          ( is-destroyed-delay 0 "Colossus" ) 
       )
-      ( is-event-true-delay "RTB 1" 0 ) 
    )
    ( do-nothing ) 
 )
@@ -1561,7 +1599,11 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-time-elapsed 1 ) 
+   ( is-previous-event-false 
+      "sm3-01" 
+      "4 of 4 down" 
+      ( true ) 
+   )
    ( invalidate-goal 
       "Assist in the kill" 
    )
@@ -1582,99 +1624,83 @@ $Formula: ( when
 #Goals		;! 5 total
 
 $Type: Primary
-+Name: GUN 1b
-$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 1", 1567)
-$end_multi_text
-$Formula: ( or 
-   ( = 
-      ( hits-left-subsystem 
-         "Sathanas" 
-         "turret01" 
-      )
-      0 
-   )
-   ( is-subsystem-destroyed-delay 
-      "Sathanas" 
-      "turret01" 
-      0 
-   )
-)
-+Invalid
-
-$Type: Primary
-+Name: GUN 2b
-$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 2", 1568)
-$end_multi_text
-$Formula: ( or 
-   ( = 
-      ( hits-left-subsystem 
-         "Sathanas" 
-         "turret02" 
-      )
-      0 
-   )
-   ( is-subsystem-destroyed-delay 
-      "Sathanas" 
-      "turret02" 
-      0 
-   )
-)
-+Invalid
-
-$Type: Primary
-+Name: GUN 3b
-$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 3", 1569)
-$end_multi_text
-$Formula: ( or 
-   ( = 
-      ( hits-left-subsystem 
-         "Sathanas" 
-         "turret03" 
-      )
-      0 
-   )
-   ( is-subsystem-destroyed-delay 
-      "Sathanas" 
-      "turret03" 
-      0 
-   )
-)
-+Invalid
-
-$Type: Primary
-+Name: GUN 4b
-$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 4", 1570)
-$end_multi_text
-$Formula: ( or 
-   ( = 
-      ( hits-left-subsystem 
-         "Sathanas" 
-         "turret04" 
-      )
-      0 
-   )
-   ( is-subsystem-destroyed-delay 
-      "Sathanas" 
-      "turret04" 
-      0 
-   )
-)
-+Invalid
-
-$Type: Primary
 +Name: Assist in the kill
 $MessageNew:  XSTR("Help the Colossus neutralize the Sathanas", 1571)
 $end_multi_text
 $Formula: ( is-destroyed-delay 0 "Sathanas" ) 
 
-#Waypoints		;! 1 lists total
+$Type: Primary
++Name: Gun 1
+$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 1", 1567)
+$end_multi_text
+$Formula: ( and 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "turret01" 
+      0 
+   ) 
+   ( not
+      ( is-destroyed-delay 0 "Sathanas" ) 
+   )
+)
++Invalid
 
+$Type: Primary
++Name: Gun 2
+$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 2", 1568)
+$end_multi_text
+$Formula: ( and 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "turret02" 
+      0 
+   ) 
+   ( not
+      ( is-destroyed-delay 0 "Sathanas" ) 
+   )
+)
++Invalid
+
+$Type: Primary
++Name: Gun 3
+$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 3", 1569)
+$end_multi_text
+$Formula: ( and 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "turret03" 
+      0 
+   ) 
+   ( not
+      ( is-destroyed-delay 0 "Sathanas" ) 
+   )
+)
++Invalid
+
+$Type: Primary
++Name: Gun 4
+$MessageNew:  XSTR("Destroy Sathanas forward beam cannon 4", 1570)
+$end_multi_text
+$Formula: ( and 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "turret04" 
+      0 
+   ) 
+   ( not
+      ( is-destroyed-delay 0 "Sathanas" ) 
+   )
+)
++Invalid
+
+#Waypoints		;! 1 lists total
 
 $Jump Node: 4744.500000, 0.000000, 9450.900391
 $Jump Node Name: Gamma Draconis
 
 $Jump Node: -3137.150391, -11088.758789, -21666.789063
 $Jump Node Name: Vega
+
 $Name: Waypoint path 1
 $List: (		;! 1 points in list
 	( -51584.738281, 2083.418213, 100050.437500 )
@@ -1682,11 +1708,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 20 total
 
-
 $Name: COM Mop
 $Team: -1
 $MessageNew:  XSTR("Well done, secure the area and our work here will finished.", 1572)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_01.wav
 
@@ -1694,6 +1720,7 @@ $Name: COL 80
 $Team: -1
 $MessageNew:  XSTR("Colossus here. We have sustained moderate damage. Hull breach on forward decks 140 through 200. Damage control reports auxiliary systems compromised.", 1573)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_01.wav
 
@@ -1701,6 +1728,7 @@ $Name: Col 50
 $Team: -1
 $MessageNew:  XSTR("Command, this is the Colossus. Hull integrity dropping. Multiple systems approaching critical. Casualty rate escalating.", 1574)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_02.wav
 
@@ -1708,6 +1736,7 @@ $Name: COL 20
 $Team: -1
 $MessageNew:  XSTR("Colossus here! Our hull will not sustain another salvo! We must withdraw immediately, Command!", 1575)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_03.wav
 
@@ -1715,6 +1744,7 @@ $Name: COM COL Dead
 $Team: -1
 $MessageNew:  XSTR("We've lost the Colossus! Abort mission, Alpha. Return to base. ", 1576)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_02.wav
 
@@ -1722,6 +1752,7 @@ $Name: INTRO 2 to Kill
 $Team: -1
 $MessageNew:  XSTR("You have two forward beam cannons to neutralize. Acquire your target and engage!", 1577)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_05.wav
 
@@ -1729,6 +1760,7 @@ $Name: INTRO 1 To Kill
 $Team: -1
 $MessageNew:  XSTR("You have only one forward beam cannon to neutralize. Acquire your target and engage!", 1578)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_06.wav
 
@@ -1736,6 +1768,7 @@ $Name: INTRO- Easy
 $Team: -1
 $MessageNew:  XSTR("Listen up, Alpha. Eliminate targets of opportunity, but be careful. It's all up to the Colossus now.", 1579)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_07.wav
 
@@ -1743,6 +1776,7 @@ $Name: COM SAM Dead
 $Team: -1
 $MessageNew:  XSTR("The Sathanas is going down! All units, stand clear!", 1580)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_08.wav
 
@@ -1750,6 +1784,7 @@ $Name: SAM 70 a
 $Team: -1
 $MessageNew:  XSTR("Colossus, the Juggernaut has sustained only moderate damage. You need to direct more energy through your main guns!", 1581)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_09.wav
 
@@ -1757,6 +1792,7 @@ $Name: SAM 70 b
 $Team: -1
 $MessageNew:  XSTR("We're having difficulty stabilizing the power grid, Command. Shutting down non-essential systems.", 1582)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_04.wav
 
@@ -1764,6 +1800,7 @@ $Name: SAM 45 a
 $Team: -1
 $MessageNew:  XSTR("More firepower, Colossus! The hull integrity of the Sathanas has fallen below fifty percent. ", 1583)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_10.wav
 
@@ -1771,6 +1808,7 @@ $Name: SAM 45 b
 $Team: -1
 $MessageNew:  XSTR("Heat sinks were not made for this kind of abuse, Command! We'll melt down our cannons if we push any harder.", 1584)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_05.wav
 
@@ -1778,6 +1816,7 @@ $Name: SAM 20 a
 $Team: -1
 $MessageNew:  XSTR("We're almost there, Colossus! Target has gone critical! The war must end here and now!", 1585)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_11.wav
 
@@ -1785,6 +1824,7 @@ $Name: SAM 20 b
 $Team: -1
 $MessageNew:  XSTR("Secondary and Tertiary reactors are down! Fire control is on the verge of redline! We're giving it all we got!", 1586)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: sm3-02_co_06.wav
 
@@ -1792,6 +1832,7 @@ $Name: 1 to go
 $Team: -1
 $MessageNew:  XSTR("One cannon left! We are running out of time, Alpha! ", 1587)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_14.wav
 
@@ -1799,13 +1840,15 @@ $Name: All down
 $Team: -1
 $MessageNew:  XSTR("All cannons are down! Repeat! All cannons are down!  Eliminate targets of opportunity, but be careful. It's all up to the Colossus now.", 1588)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_15.wav
 
 $Name: All down C dead
 $Team: -1
-$MessageNew:  XSTR("You completed your mission too late, pilot. The battle has been lost.  Return to base.", 1589)
+$MessageNew:  XSTR("You completed your mission too late, pilot. The battle has been lost. Return to base.", 1589)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_16.wav
 
@@ -1813,6 +1856,7 @@ $Name: COM Cancer
 $Team: -1
 $MessageNew:  XSTR("The Shivans have scrambled a wing of fighters, designation Cancer. Do not let them impede your mission, Alpha.", 1590)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_17.wav
 
@@ -1820,234 +1864,154 @@ $Name: COM Cancer dead
 $Team: -1
 $MessageNew:  XSTR("We have eliminated Cancer wing.", 1591)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm3-02_ac_18.wav
-;t be good.", -1)
 
 #Reinforcements		;! 0 total
 
 
-#Background bitmaps		;! 35 total
+#Background bitmaps		;! 20 total
 
-$Num stars: 399
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunGold
-+Angles: 0.000000 0.000000 4.625119
+$Sun: SunCapellaA
++Angles: 0.261799 0.000000 0.750491
 +Scale: 2.000000
-$Starbitmap: dneb03
-+Angles: 0.000000 2.321286 0.000000
+$Sun: SunCapellaC
++Angles: 6.108648 0.000000 3.892081
++Scale: 0.050000
+$Sun: SunCapellaB
++Angles: 0.279252 0.000000 0.698131
++Scale: 0.500000
+$Sun: SunCapellaD
++Angles: 6.108648 0.000000 3.874628
++Scale: 0.050000
+$Starbitmap: NebulG8-Whisp
++Angles: 0.000000 6.143554 0.000000
 +ScaleX: 4.000000
 +ScaleY: 4.000000
++DivX: 4
++DivY: 4
+$Starbitmap: NebulG7-Whisp
++Angles: 6.056288 1.518435 0.349066
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 3
++DivY: 3
+$Starbitmap: NebulG1-Main
++Angles: 0.000000 0.174533 6.265727
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 3
++DivY: 3
+$Starbitmap: NebulG5-Whisp
++Angles: 0.139626 0.052360 6.265727
++ScaleX: 2.000000
++ScaleY: 2.000000
 +DivX: 2
 +DivY: 2
-$Starbitmap: neb11
-+Angles: 0.401425 0.663225 0.139626
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 0.820304 4.834558 0.000000
-+ScaleX: 2.000000
+$Starbitmap: NebulG9-Whisp
++Angles: 0.366519 1.518435 5.951568
++ScaleX: 3.000000
 +ScaleY: 3.000000
++DivX: 3
++DivY: 3
+$Starbitmap: NebulG5-Whisp
++Angles: 0.000000 4.607666 5.934115
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb13
-+Angles: 0.000000 1.308996 0.558505
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb03
-+Angles: 6.021381 0.890117 5.794488
-+ScaleX: 4.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulA1-Main
++Angles: 6.091194 0.034907 3.926988
++ScaleX: 1.500000
++ScaleY: 1.500000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb13
-+Angles: 5.951568 2.740165 5.602502
+$Starbitmap: NebulA5-Whisp
++Angles: 5.899208 3.071777 4.031707
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb11
-+Angles: 0.000000 0.000000 5.951568
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 5.881755 5.009091 5.532689
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 5.585049 0.383972 5.393063
-+ScaleX: 2.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb13
-+Angles: 0.558505 0.628318 6.126101
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 5.218530 0.000000 5.218530
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb11
-+Angles: 5.009091 5.585049 5.218530
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 5.585049 5.585049 0.925024
-+ScaleX: 2.000000
+$Starbitmap: NebulA10-Whisp
++Angles: 5.916662 0.122173 3.996801
++ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb13
-+Angles: 5.777035 2.321286 0.802851
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulA4-Whisp
++Angles: 6.161007 0.000000 3.926988
++ScaleX: 1.000000
++ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb10
-+Angles: 6.021381 4.468040 0.628318
-+ScaleX: 2.000000
-+ScaleY: 2.000000
+$Starbitmap: NebulA2-Main
++Angles: 6.143554 0.000000 3.926988
++ScaleX: 1.500000
++ScaleY: 1.500000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb11
-+Angles: 5.585049 0.575958 0.925024
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb03
-+Angles: 5.358157 2.740165 0.628318
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb13
-+Angles: 5.131264 5.951568 0.506145
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 4.991638 0.855211 0.418879
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: neb11
-+Angles: 4.764745 1.692968 0.191986
+$Starbitmap: NebulA6-Whisp
++Angles: 6.108648 1.989674 4.084067
 +ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 2
 +DivY: 2
-$Starbitmap: dneb03
-+Angles: 5.253437 3.455749 1.117010
+$Starbitmap: NebulA7-Whisp
++Angles: 0.017453 6.248274 3.892081
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 6.038835 0.000000 4.014254
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA14-Whisp
++Angles: 0.017453 0.000000 4.084067
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb13
-+Angles: 5.078904 1.256636 1.308996
+$Starbitmap: NebulA13-Whisp
++Angles: 6.038835 1.134463 3.996801
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 6.161007 0.000000 3.769908
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 4
++DivY: 4
+$Starbitmap: NebulA6-Whisp
++Angles: 5.846848 0.209439 4.136427
 +ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 3
++DivY: 3
+$Starbitmap: NebulA8-Whisp
++Angles: 6.195914 0.000000 4.084067
++ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb10
-+Angles: 4.886918 1.867501 1.553342
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb11
-+Angles: 3.508109 0.383972 1.378809
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 3.385936 1.570795 1.169370
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: neb13
-+Angles: 4.799652 1.797688 1.815141
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 4.886918 4.276053 2.076940
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb11
-+Angles: 4.345866 0.366519 2.216566
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 3.874628 1.570795 2.408552
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: neb13
-+Angles: 4.031707 0.558505 0.959930
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 4.345866 1.797688 0.715584
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb03
-+Angles: 4.520399 2.146753 0.541052
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 3.577922 0.366519 0.663225
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb10
-+Angles: 3.961894 1.570795 0.506145
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: planete
-+Angles: 0.000000 0.000000 2.879791
+$Starbitmap: PlanetE
++Angles: 0.000000 2.844884 2.879791
 +ScaleX: 2.500000
 +ScaleY: 2.500000
 +DivX: 1
 +DivY: 1
 
 #Asteroid Fields
+
 
 #Music
 

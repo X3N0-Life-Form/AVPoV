@@ -10,18 +10,15 @@ This is a FRED created mission
 $End Notes:
 
 $Mission Desc:
- XSTR("As a last resort, the GTVA demolishes the Knossos subspace device in Gamma Draconis.
-", 1428)
+ XSTR("As a last resort, the GTVA demolishes the Knossos subspace portal in Gamma Draconis.", 1428)
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 0
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -36,15 +33,54 @@ $end_multi_text
 +SquadReassignLogo: vasudan1.pcx
 
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Theta" "Epsilon" )
-
+$Skybox Model: Starfield.pof
 $AI Profile: myProfile
+
+#Plot Info
+
+$Tour:  XSTR("Blah", 6)
+$Pre-Briefing Cutscene: Blah
+$Pre-Mission Cutscene: Blah
+$Next Mission Success: Blah
+$Next Mission Partial: Blah
+$Next Mission Failure: Blah
+
+#Sexp_variables
+
+$Variables:
+(
+		76		"Meson 3"		"2000"		"block"
+		77		"Meson 3"		"3550"		"block"
+		78		"Meson 3"		"500"		"block"
+		79		"Meson 3"		"9000"		"block"
+		80		"Meson 3"		"1"		"block"
+		81		"Meson 3"		"1000"		"block"
+		82		"Meson 2"		"2000"		"block"
+		83		"Meson 2"		"3550"		"block"
+		84		"Meson 2"		"500"		"block"
+		85		"Meson 2"		"9000"		"block"
+		86		"Meson 2"		"1"		"block"
+		87		"Meson 2"		"1000"		"block"
+		88		"Meson 1"		"2000"		"block"
+		89		"Meson 1"		"3550"		"block"
+		90		"Meson 1"		"500"		"block"
+		91		"Meson 1"		"9000"		"block"
+		92		"Meson 1"		"1"		"block"
+		93		"Meson 1"		"1000"		"block"
+		94		"Knossos Portal"		"100"		"block"
+		95		"Knossos Portal"		"4000"		"block"
+		96		"Knossos Portal"		"900"		"block"
+		97		"Knossos Portal"		"3000"		"block"
+		98		"Knossos Portal"		"1"		"block"
+		99		"Knossos Portal"		"1000"		"block"
+)
 
 #Command Briefing
 
 $Stage Text:
  XSTR("Sathanas
 
-The Shivan juggernaut $r Sathanas is now en route to the jump node leading to $g Terran-Vasudan space. Command ordered all units to rally in $b Gamma $b Draconis in three hours' time. Though we have accounted for most of our fleet, at least six warships have failed to reach the rendezvous point. We can wait for them no longer.  The $f GTVA $f Security $f Council has authorized the immediate destruction of the $e Knossos subspace portal.", 1429)
+The Shivan Juggernaut $h Sathanas is now en route to the jump node leading to Terran-Vasudan space. Command ordered all units to rally in $b Gamma $b Draconis in three hours' time. Though we have accounted for most of our fleet, at least six warships have failed to reach the rendezvous point. We can wait for them no longer.  The $f GTVA $f Security $f Council has authorized the immediate destruction of the $y Knossos Subspace Portal.", 1429)
 $end_multi_text
 $Ani Filename: cb_sm2-10_d.ani
 +Wave Filename: SM210_CB_01.wav
@@ -52,7 +88,7 @@ $Ani Filename: cb_sm2-10_d.ani
 $Stage Text:
  XSTR("Meson Bomb
 
-To demolish the $e Knossos portal, we will detonate the meson bomb, an experimental new weapon under development at the Hideki Institute in the $b Vega system. Though its specifications are highly classifed, physicists claim the meson bomb has more explosive power than any other warhead in our arsenal, sufficient to destroy any small craft within a three-kilometer radius. The size of the bomb prohibits tactical deployment.", 1430)
+To demolish the $y Knossos Portal, we will detonate the $y Meson $y Bomb, an experimental new weapon under development at the $w Hideki $w Institute in the $b Vega system. Though its specifications are highly classifed, physicists claim the $y Meson $y Bomb has more explosive power than any other warhead in our arsenal, sufficient to destroy any small craft within a three-kilometer radius. The size of the bomb prohibits tactical deployment.", 1430)
 $end_multi_text
 $Ani Filename: cb_sm2-10_e.ani
 +Wave Filename: SM210_CB_02.wav
@@ -60,7 +96,7 @@ $Ani Filename: cb_sm2-10_e.ani
 $Stage Text:
  XSTR("Allied Strategy
 
-A small task force will oversee the demolition of the $e Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated $b Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting $b Capella, the largest exodus since the $h Great $h War. The $g Colossus will remain in that system to engage the $r Sathanas should we fail.", 1431)
+A small task force will oversee the demolition of the $y Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated $b Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting $b Capella, the largest exodus since the $y Great $y War. The $f Colossus will remain in that system to engage the $h Sathanas should we fail.", 1431)
 $end_multi_text
 $Ani Filename: 
 +Wave Filename: SM210_CB_03.wav
@@ -70,7 +106,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("At 2230 hours, the $f GTVA announced its plan for the destruction of the Knossos device. For strategic and scientific reasons, we will not attack the portal with the main guns of our warships. The demolition of the subspace portal will be accomplished with the use of the experimental Meson bomb.", 1432)
+ XSTR("At 2230 hours, the $y GTVA announced its plan for the destruction of the $y Knossos device. For strategic and scientific reasons, we will not attack the portal with the main guns of our warships. The demolition of the subspace portal will be accomplished with the use of the experimental $y Meson $y Bomb.", 1432)
 $end_multi_text
 $voice: SM210_mB_01.wav
 $camera_pos: 18.517078, 4546.434570, -11271.795898
@@ -88,7 +124,7 @@ $type: 26
 $team: Hostile
 $class: Knossos
 $pos: 0.000000, 0.000000, 0.000000
-$label: Knossos Device
+$label: Knossos Portal
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -98,7 +134,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our first objective will be to sanitize the area. Observers report that Shivan scouting wings have already entered Gamma Draconis, and enemy activity will intensify before the arrival of the $h Sathanas Juggernaut. The $f Renenet, a Sobek-class corvette, will monitor the operation and provide fire support.", 1433)
+ XSTR("Our first objective will be to sanitize the area. Observers report that Shivan scouting wings have already entered $b Gamma $b Draconis, and enemy activity will intensify before the arrival of the $h Sathanas $h Juggernaut. The $f Renenet, a $y Sobek -class corvette, will monitor the operation and provide fire support.", 1433)
 $end_multi_text
 $voice: SM210_mB_02.wav
 $camera_pos: -10.814144, 8129.271973, -18836.208984
@@ -116,7 +152,7 @@ $type: 26
 $team: Hostile
 $class: Knossos
 $pos: 0.000000, 0.000000, 0.000000
-$label: Knossos Device
+$label: Knossos Portal
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -128,7 +164,7 @@ $type: 28
 $team: Friendly
 $class: GVCv Sobek
 $pos: -8351.796875, -2435.842285, -12327.670898
-$label: Renenet
+$label: GVCv Renenet
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -138,7 +174,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once we have eliminated the enemy presence, a freighter carrying the Meson warhead will deposit the bomb at the detonation site. This is the first deployment of the weapon prototype. Because computer simulations predict only a forty percent chance of success, we have two more warheads standing by.", 1434)
+ XSTR("Once we have eliminated the enemy presence, a freighter carrying the $y Meson warhead will deposit the bomb at the detonation site. This is the first deployment of the weapon prototype. Because computer simulations predict only a forty percent chance of success, we have two more warheads standing by.", 1434)
 $end_multi_text
 $voice: SM210_mB_03.wav
 $camera_pos: 5969.406250, 6179.204102, -1774.739746
@@ -156,7 +192,7 @@ $type: 26
 $team: Hostile
 $class: Knossos
 $pos: -5638.291992, -0.000036, 1052.029419
-$label: Knossos Device
+$label: Knossos Portal
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -168,7 +204,7 @@ $type: 28
 $team: Friendly
 $class: GVCv Sobek
 $pos: -8351.796875, -2435.842285, -12327.670898
-$label: Renenet
+$label: GVCv Renenet
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -178,7 +214,7 @@ $end_icon
 $start_icon
 $type: 12
 $team: Friendly
-$class: GTFR Triton
+$class: GTFr Triton
 $pos: -4324.864258, -6.155623, -2592.162354
 $label: Transport 1
 +id: 3
@@ -195,7 +231,7 @@ $end_briefing
 $Num stages: 6
 
 $Formula: ( is-goal-true-delay 
-   "Destroy Knossos device" 
+   "Destroy Knossos Portal" 
    0 
 )
 $Multi text
@@ -280,7 +316,7 @@ $end_multi_text
 $Formula: ( and 
    ( is-destroyed-delay 0 "Renenet" ) 
    ( is-goal-false-delay 
-      "Destroy Knossos device" 
+      "Destroy Knossos Portal" 
       0 
    )
 )
@@ -336,6 +372,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -353,7 +390,88 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Knossos Device		;! Object #1
+$Name: Alpha 2		;! Object #1
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 447.459717, -33.787117, -4600.014160
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 15
+
+$Name: Alpha 3		;! Object #2
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 591.293640, -33.787270, -4613.108887
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 15
+
+$Name: Alpha 4		;! Object #3
+$Class: GVF Tauret
+$Team: Friendly
+$Location: 513.040283, -33.786980, -4678.250488
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 15
+
+$Name: Knossos Portal		;! Object #4
 $Class: Knossos
 $Team: Hostile
 $Location: 0.000000, 0.000000, 0.000000
@@ -361,6 +479,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -372,19 +491,14 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "hidden-from-sensors" "don't-collide-invisible" )
++Flags: ( "cargo-known" "protect-ship" "no-shields" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
-$Special Explosion:
-+Special Exp Damage: 900
-+Special Exp Blast: 3000
-+Special Exp Inner Radius: 100
-+Special Exp Outer Radius: 4000
-+Special Exp Shockwave Speed: 1000
++Special Exp index: 94
 +Group: 0
 +Score: 1000
 
-$Name: Aries 1		;! Object #2
+$Name: Aries 1		;! Object #5
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -1022.422363, -91.581055, 4074.675293
@@ -392,11 +506,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak" )
++Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -410,7 +525,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Aries 2		;! Object #3
+$Name: Aries 2		;! Object #6
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -1432.071289, -91.580765, 1620.078857
@@ -418,11 +533,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak" )
++Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -436,7 +552,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Aries 3		;! Object #4
+$Name: Aries 3		;! Object #7
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -642.416992, -91.579636, 3539.933105
@@ -444,11 +560,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak" )
++Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -462,7 +579,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Aries 4		;! Object #5
+$Name: Aries 4		;! Object #8
 $Class: SF Astaroth
 $Team: Hostile
 $Location: -1038.733765, -91.581322, 1155.824707
@@ -470,11 +587,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak" )
++Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -488,7 +606,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Scorpio 1		;! Object #6
+$Name: Scorpio 1		;! Object #9
 $Class: SF Astaroth
 $Team: Hostile
 $Location: 453.319366, 371.085449, -50.900116
@@ -496,11 +614,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Rockeye" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -513,7 +632,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Scorpio 2		;! Object #7
+$Name: Scorpio 2		;! Object #10
 $Class: SF Astaroth
 $Team: Hostile
 $Location: 81.712151, 0.001612, -1693.992188
@@ -521,12 +640,13 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Rockeye" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -539,7 +659,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Scorpio 3		;! Object #8
+$Name: Scorpio 3		;! Object #11
 $Class: SF Astaroth
 $Team: Hostile
 $Location: 815.109375, 441.526978, -1327.287354
@@ -547,11 +667,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Rockeye" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -564,7 +685,7 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Scorpio 4		;! Object #9
+$Name: Scorpio 4		;! Object #12
 $Class: SF Astaroth
 $Team: Hostile
 $Location: 354.447754, 197.907883, -642.715271
@@ -572,12 +693,13 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Rockeye" "Rockeye" )
++Secondary Banks: ( "Rockeye#Shivan" "Rockeye#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -590,92 +712,127 @@ $Determination: 10
 +Group: 0
 +Score: 12
 
-$Name: Alpha 2		;! Object #10
-$Class: GVF Tauret
+$Name: Theta 1		;! Object #13
+$Class: GVF Thoth
 $Team: Friendly
-$Location: 447.459717, -33.787117, -4600.014160
+$Location: -913.050171, -0.001013, -4993.382324
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
-+AI Class: Colonel
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tornado" )
++Primary Banks: ( "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Score: 15
++Score: 8
++Persona Index: 6
 
-$Name: Alpha 3		;! Object #11
-$Class: GVF Tauret
+$Name: Theta 2		;! Object #14
+$Class: GVF Thoth
 $Team: Friendly
-$Location: 591.293640, -33.787270, -4613.108887
+$Location: -1037.239868, -0.000782, -5156.840332
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
-+AI Class: Colonel
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tornado" )
++Primary Banks: ( "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Score: 15
++Score: 8
++Persona Index: 6
 
-$Name: Alpha 4		;! Object #12
-$Class: GVF Tauret
+$Name: Theta 3		;! Object #15
+$Class: GVF Thoth
 $Team: Friendly
-$Location: 513.040283, -33.786980, -4678.250488
+$Location: -764.503662, -0.000417, -5226.443848
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
-+AI Class: Colonel
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tempest" "Tornado" )
++Primary Banks: ( "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Score: 15
++Score: 8
++Persona Index: 6
 
-$Name: Lambda 1		;! Object #13
-$Class: GTFR Triton
+$Name: Theta 4		;! Object #16
+$Class: GVF Thoth
+$Team: Friendly
+$Location: -871.419067, -0.000563, -5389.768555
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Mekhu HL-7" )
++Secondary Banks: ( "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
++Persona Index: 6
+
+$Name: Lambda 1		;! Object #17
+$Class: GTFr Triton
 $Team: Friendly
 $Location: 84.665367, -371.684692, -1777.373779
 $Orientation:
 	0.996229, 0.086631, -0.004677,
 	-0.082189, 0.925168, -0.370550,
 	-0.027773, 0.369538, 0.928800
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "CENTER" 50 ) ( ai-undock 44 ) ( ai-waypoints-once "Center Fore" 33 ) ( ai-warp-out 22 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -700,14 +857,15 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: Meson 1		;! Object #14
+$Name: Meson 1		;! Object #18
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: 75.200623, -253.170349, -1554.879639
+$Location: 75.200623, -253.170532, -1554.879395
 $Orientation:
-	-0.996227, -0.086658, 0.004602,
-	-0.082181, 0.925102, -0.370718,
+	-0.996227, -0.086656, 0.004602,
+	-0.082180, 0.925102, -0.370718,
 	0.027867, -0.369698, -0.928734
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -721,80 +879,22 @@ $Determination: 10
 +Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-$Special Explosion:
-+Special Exp Damage: 500
-+Special Exp Blast: 9000
-+Special Exp Inner Radius: 2000
-+Special Exp Outer Radius: 3550
-+Special Exp Shockwave Speed: 1000
++Special Exp index: 88
 +Docked With: Lambda 1
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
 +Group: 0
 +Score: 3
 
-$Name: Theta 1		;! Object #15
-$Class: GVF Thoth
-$Team: Friendly
-$Location: -913.050171, -0.001013, -4993.382324
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 8
-+Persona Index: 6
-
-$Name: Theta 2		;! Object #16
-$Class: GVF Thoth
-$Team: Friendly
-$Location: -1037.239868, -0.000782, -5156.840332
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 8
-+Persona Index: 6
-
-$Name: Lambda 2		;! Object #17
-$Class: GTFR Triton
+$Name: Lambda 2		;! Object #19
+$Class: GTFr Triton
 $Team: Friendly
 $Location: 2389.253418, 134.300110, -2340.441650
 $Orientation:
 	0.753747, -0.051940, 0.655107,
 	-0.134072, 0.963751, 0.230669,
 	-0.643342, -0.261698, 0.719462
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Knossos Right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -827,14 +927,15 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: Meson 2		;! Object #18
+$Name: Meson 2		;! Object #20
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: 2224.056152, 95.663841, -2153.743408
+$Location: 2224.056152, 95.663887, -2153.743408
 $Orientation:
-	-0.753717, 0.052107, -0.655129,
-	-0.133842, 0.963790, 0.230639,
-	0.643425, 0.261521, -0.719452
+	-0.753717, 0.052115, -0.655127,
+	-0.133835, 0.963790, 0.230644,
+	0.643426, 0.261520, -0.719452
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -848,26 +949,22 @@ $Determination: 10
 +Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-$Special Explosion:
-+Special Exp Damage: 500
-+Special Exp Blast: 9000
-+Special Exp Inner Radius: 2000
-+Special Exp Outer Radius: 3550
-+Special Exp Shockwave Speed: 1000
++Special Exp index: 82
 +Docked With: Lambda 2
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
 +Group: 0
 +Score: 3
 
-$Name: Lambda 3		;! Object #19
-$Class: GTFR Triton
+$Name: Lambda 3		;! Object #21
+$Class: GTFr Triton
 $Team: Friendly
 $Location: -1747.543823, 46.433826, -1599.243042
 $Orientation:
 	0.982303, 0.028090, -0.185176,
 	0.000000, 0.988689, 0.149977,
 	0.187295, -0.147323, 0.971194
+$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Knossos Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -900,14 +997,15 @@ $Determination: 10
 +Group: 0
 +Score: 10
 
-$Name: Meson 3		;! Object #20
+$Name: Meson 3		;! Object #22
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: -1700.786621, 37.154430, -1351.520020
+$Location: -1700.786255, 37.154152, -1351.520142
 $Orientation:
-	-0.982318, -0.028018, 0.185109,
-	0.000026, 0.988717, 0.149791,
-	-0.187218, 0.147148, -0.971236
+	-0.982318, -0.028058, 0.185102,
+	-0.000014, 0.988716, 0.149799,
+	-0.187217, 0.147147, -0.971236
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
@@ -921,71 +1019,12 @@ $Determination: 10
 +Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-$Special Explosion:
-+Special Exp Damage: 500
-+Special Exp Blast: 9000
-+Special Exp Inner Radius: 2000
-+Special Exp Outer Radius: 3550
-+Special Exp Shockwave Speed: 1000
++Special Exp index: 76
 +Docked With: Lambda 3
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
 +Group: 0
 +Score: 3
-
-$Name: Theta 3		;! Object #21
-$Class: GVF Thoth
-$Team: Friendly
-$Location: -764.503662, -0.000417, -5226.443848
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 8
-+Persona Index: 6
-
-$Name: Theta 4		;! Object #22
-$Class: GVF Thoth
-$Team: Friendly
-$Location: -871.419067, -0.000563, -5389.768555
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 8
-+Persona Index: 6
 
 $Name: Epsilon 1		;! Object #23
 $Class: GVF Thoth
@@ -995,6 +1034,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1011,7 +1051,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 +Persona Index: 6
 
@@ -1023,6 +1062,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1039,7 +1079,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 +Persona Index: 6
 
@@ -1051,6 +1090,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1067,7 +1107,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 +Persona Index: 6
 
@@ -1079,9 +1118,10 @@ $Orientation:
 	-0.995012, -0.091465, -0.039822,
 	0.033111, -0.679362, 0.733056,
 	-0.094102, 0.728081, 0.679001
+$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
-$AI Goals: ( goals ( ai-waypoints-once "Waypoint path 6" 55 ) ( ai-waypoints-once "Aim point" 33 ) ( ai-stay-still "Knossos Device" 22 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Waypoint path 6" 55 ) ( ai-waypoints-once "Aim point" 33 ) ( ai-stay-still "Knossos Portal" 22 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
 +Initial Shields: 100
@@ -1142,6 +1182,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1166,6 +1207,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1190,6 +1232,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1214,6 +1257,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1238,6 +1282,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1262,6 +1307,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1286,6 +1332,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1310,6 +1357,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1334,6 +1382,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1358,6 +1407,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1382,6 +1432,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1406,6 +1457,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1430,6 +1482,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1445,7 +1498,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Capricorn 2		;! Object #40
@@ -1456,6 +1508,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1471,7 +1524,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Capricorn 3		;! Object #41
@@ -1482,6 +1534,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1497,7 +1550,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Capricorn 4		;! Object #42
@@ -1508,6 +1560,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1523,7 +1576,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 1		;! Object #43
@@ -1534,6 +1586,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1549,7 +1602,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 2		;! Object #44
@@ -1560,6 +1612,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1575,7 +1628,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 3		;! Object #45
@@ -1586,6 +1638,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1601,7 +1654,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Pisces 4		;! Object #46
@@ -1612,6 +1664,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1627,7 +1680,6 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
-+Use Table Score:
 +Score: 12
 
 $Name: Sathanas		;! Object #47
@@ -1638,6 +1690,7 @@ $Orientation:
 	-0.999997, 0.000000, -0.002561,
 	0.000000, 1.000000, 0.000000,
 	0.002561, 0.000000, -0.999997
+$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1700,7 +1753,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-destroyed-delay 
    45 
-   "Knossos Device" 
+   "Knossos Portal" 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1709,7 +1762,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10000
 
 #Wings		;! 9 total
@@ -1757,7 +1809,7 @@ $Ships: (		;! 4 total
 	"Aries 3"
 	"Aries 4"
 )
-$AI Goals: ( goals ( ai-guard "Knossos Device" 3 ) ( ai-waypoints "Top-Bottom" 50 ) )
+$AI Goals: ( goals ( ai-guard "Knossos Portal" 3 ) ( ai-waypoints "Top-Bottom" 50 ) )
 +Flags: ( )
 
 $Name: Scorpio
@@ -1775,7 +1827,7 @@ $Ships: (		;! 4 total
 	"Scorpio 3"
 	"Scorpio 4"
 )
-$AI Goals: ( goals ( ai-guard "Knossos Device" 4 ) ( ai-waypoints "Top-Bottom" 50 ) )
+$AI Goals: ( goals ( ai-guard "Knossos Portal" 4 ) ( ai-waypoints "Top-Bottom" 50 ) )
 +Flags: ( )
 
 $Name: Epsilon
@@ -1843,7 +1895,7 @@ $Ships: (		;! 6 total
 	"Cancer 5"
 	"Cancer 6"
 )
-$AI Goals: ( goals ( ai-guard "Knossos Device" 50 ) )
+$AI Goals: ( goals ( ai-guard "Knossos Portal" 50 ) )
 +Flags: ( )
 
 $Name: Libra
@@ -1904,6 +1956,7 @@ $Ships: (		;! 4 total
 	"Pisces 3"
 	"Pisces 4"
 )
+$AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
 #Events		;! 66 total
@@ -1914,7 +1967,7 @@ $Formula: ( when
       "Meson 2" 
       "Meson 3" 
    )
-   ( self-destruct "Knossos Device" ) 
+   ( self-destruct "Knossos Portal" ) 
    ( allow-weapon "Infyrno" ) 
    ( tech-add-weapons "Infyrno" "Helios" ) 
    ( allow-weapon "Helios" ) 
@@ -2827,7 +2880,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-destroyed-delay 
       5 
-      "Knossos Device" 
+      "Knossos Portal" 
    )
    ( send-message-list 
       "Renenet" 
@@ -3068,12 +3121,12 @@ $Formula: ( when
 #Goals		;! 5 total
 
 $Type: Primary
-+Name: Destroy Knossos device
++Name: Destroy Knossos Portal
 $MessageNew:  XSTR("Monitor the Knossos demolition", 1443)
 $end_multi_text
 $Formula: ( is-destroyed-delay 
    0 
-   "Knossos Device" 
+   "Knossos Portal" 
 )
 
 $Type: Secondary
@@ -3089,6 +3142,7 @@ $Formula: ( is-destroyed-delay
    "Capricorn" 
    "Pisces" 
 )
++No music
 
 $Type: Secondary
 +Name: Lure Shivans Away for Bomb
@@ -3104,6 +3158,7 @@ $Formula: ( and
       600 
    )
 )
++No music
 
 $Type: Secondary
 +Name: Second Diversion
@@ -3111,6 +3166,7 @@ $MessageNew:  XSTR("Keep Shivans away from 2nd meson deployment", 1446)
 $end_multi_text
 $Formula: ( is-event-true-delay "Blow 2" 0 ) 
 +Invalid
++No music
 
 $Type: Secondary
 +Name: Protect Renrnrt
@@ -3125,6 +3181,7 @@ $Formula: ( and
       0 
    )
 )
++No music
 
 #Waypoints		;! 11 lists total
 
@@ -3189,11 +3246,11 @@ $List: (		;! 1 points in list
 
 #Messages		;! 46 total
 
-
 $Name: REN- Intro 1
 $Team: -1
 $MessageNew:  XSTR("Command, this is the Renenet. We have detected 2 wings of Mara fighters 4000 meters from our position. The enemy has not engaged.", 1448)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_01.wav
 
@@ -3201,6 +3258,7 @@ $Name: COM- Intro 2
 $Team: -1
 $MessageNew:  XSTR("There's no time to wait. Alpha, close in and draw the fighters away from the Knossos. Lure them toward the Renenet. We need to clear that detonation site before we sortie the freighter. ", 1449)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_02.wav
 
@@ -3208,6 +3266,7 @@ $Name: A2- Intro 3
 $Team: -1
 $MessageNew:  XSTR("Acknowledged. We will lure them within range of the corvette's guns.", 1450)
 $end_multi_text
++Persona: Wingman 7
 +AVI Name: Head-VP2
 +Wave Name: sm2-10_a2_01.wav
 
@@ -3215,6 +3274,7 @@ $Name: A3- Pull 1
 $Team: -1
 $MessageNew:  XSTR("Command, we have engaged the enemy. We are now heading back to the Renenet.", 1451)
 $end_multi_text
++Persona: Wingman 7
 +AVI Name: Head-VP2
 +Wave Name: sm2-10_a3_01.wav
 
@@ -3222,6 +3282,7 @@ $Name: REN Second try 1
 $Team: -1
 $MessageNew:  XSTR("Command, we achieved a clean detonation of the meson warhead. However, the Knossos portal remains fully operational. ", 1452)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_02.wav
 
@@ -3229,6 +3290,7 @@ $Name: COM Second try 2
 $Team: -1
 $MessageNew:  XSTR("We will proceed with the second deployment. Demolition pattern sigma. We will use the remaining meson bombs for this attempt. The Sathanas juggernaut cannot be far away. ", 1453)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_03.wav
 
@@ -3236,6 +3298,7 @@ $Name: COM Second try 3
 $Team: -1
 $MessageNew:  XSTR("The meson bombs have drawn the Shivans' attention. Defend the warheads until they are in position and the freighters have cleared the area.", 1454)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_04.wav
 
@@ -3243,6 +3306,7 @@ $Name: T2 In Position
 $Team: -1
 $MessageNew:  XSTR("This is Lambda 2. We are now in position.", 1455)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: sm2-10_l2_01.wav
 
@@ -3250,6 +3314,7 @@ $Name: T3 In Position
 $Team: -1
 $MessageNew:  XSTR("Lambda 3 here. We have reached the detonation site.", 1456)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM3
 +Wave Name: sm2-10_L3_01.wav
 
@@ -3257,6 +3322,7 @@ $Name: T2 Delivered Bomb
 $Team: -1
 $MessageNew:  XSTR("Command, we have delivered the package, and we're moving out.", 1457)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: sm2-10_l2_02.wav
 
@@ -3264,6 +3330,7 @@ $Name: T3 Delivered Bomb
 $Team: -1
 $MessageNew:  XSTR("Undocking sequence complete. We are now returning to base.", 1458)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM3
 +Wave Name: sm2-10_l3_02.wav
 
@@ -3271,6 +3338,7 @@ $Name: COM T2 Escapes
 $Team: -1
 $MessageNew:  XSTR("Lambda 2 has cleared.", 1459)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_05.wav
 
@@ -3278,6 +3346,7 @@ $Name: COM T2 Dies early
 $Team: -1
 $MessageNew:  XSTR("Lambda 2 is down! Repeat! Lambda 2 is down! All units, return to base. We must abort this mission.", 1460)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_06.wav
 
@@ -3285,6 +3354,7 @@ $Name: COM T2 Dies late
 $Team: -1
 $MessageNew:  XSTR("We lost Lambda 2. Proceed with your objectives.", 1461)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_07.wav
 
@@ -3292,6 +3362,7 @@ $Name: COM T3 Escapes
 $Team: -1
 $MessageNew:  XSTR("Lambda 3 has made the jump to subspace.", 1462)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_08.wav
 
@@ -3299,6 +3370,7 @@ $Name: COM T3 Dies early
 $Team: -1
 $MessageNew:  XSTR("All units, return to base! We lost the meson warhead! Engage your jump drives now!", 1463)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_09.wav
 
@@ -3306,6 +3378,7 @@ $Name: COM T3 Dies late
 $Team: -1
 $MessageNew:  XSTR("Lambda 3 has been destroyed.", 1464)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_10.wav
 
@@ -3313,6 +3386,7 @@ $Name: T1 In Position
 $Team: -1
 $MessageNew:  XSTR("Command, this is Lambda 1. We are now in position. Initiating undocking sequence now.", 1465)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: sm2-10_l1_01.wav
 
@@ -3320,6 +3394,7 @@ $Name: T1 Delivered Bomb
 $Team: -1
 $MessageNew:  XSTR("Meson warhead armed and ready, Command. We're outta here.", 1466)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: sm2-10_l1_02.wav
 
@@ -3327,6 +3402,7 @@ $Name: COM T1 Escapes
 $Team: -1
 $MessageNew:  XSTR("Lambda 1 has cleared the blast zone. ", 1467)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_11.wav
 
@@ -3334,6 +3410,7 @@ $Name: COM T1 Dies Early
 $Team: -1
 $MessageNew:  XSTR("We've lost the warhead! We're pulling you out, Alpha. Return to base.", 1468)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_12.wav
 
@@ -3341,6 +3418,7 @@ $Name: COM T1 Dies Late
 $Team: -1
 $MessageNew:  XSTR("Lambda 1 has been annihilated. ", 1469)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_13.wav
 
@@ -3348,6 +3426,7 @@ $Name: REN Aries and scorp down
 $Team: -1
 $MessageNew:  XSTR("Command, we have sanitized the area. All hostiles have been eliminated.", 1470)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_03.wav
 
@@ -3355,6 +3434,7 @@ $Name: A3 Wow
 $Team: -1
 $MessageNew:  XSTR("It seems improbable a warhead would have sufficient force to demolish a structure of this size.", 1471)
 $end_multi_text
++Persona: Wingman 7
 +AVI Name: Head-VP2
 +Wave Name: sm2-10_a3_02.wav
 
@@ -3362,6 +3442,7 @@ $Name: A4 Yea, wow
 $Team: -1
 $MessageNew:  XSTR("Particularly a weapon of Terran design.", 1472)
 $end_multi_text
++Persona: Wingman 6
 +AVI Name: Head-VP1
 +Wave Name: sm2-10_a4_01.wav
 
@@ -3369,6 +3450,7 @@ $Name: A2 Yea wow
 $Team: -1
 $MessageNew:  XSTR("The meson bomb is a joint development, Alpha 4. We are full partners in this enterprise.", 1473)
 $end_multi_text
++Persona: Wingman 7
 +AVI Name: Head-VP2
 +Wave Name: sm2-10_a2_02.wav
 
@@ -3376,6 +3458,7 @@ $Name: REN- like he said- wow
 $Team: -1
 $MessageNew:  XSTR("Alpha wing, you would be well advised to concern yourself with the Shivans and leave these matters to the Security Council.", 1474)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_04.wav
 
@@ -3383,6 +3466,7 @@ $Name: REN Fight Fight Fight
 $Team: -1
 $MessageNew:  XSTR("The Shivans have accepted your challenge, Alpha wing. Head back to the Renenet. Our turrets will open fire when the enemy comes within range.", 1475)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_05.wav
 
@@ -3390,6 +3474,7 @@ $Name: REN Ready to fire
 $Team: -1
 $MessageNew:  XSTR("Initiating detonation sequence. All units, stand clear of the blast zone.", 1476)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_06.wav
 
@@ -3397,6 +3482,7 @@ $Name: REN Clear out 1
 $Team: -1
 $MessageNew:  XSTR("Alpha, your vessel must be no less than 3,000 meters from the center of the portal.", 1477)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_07.wav
 
@@ -3404,6 +3490,7 @@ $Name: REN Clear Out 2
 $Team: -1
 $MessageNew:  XSTR("Alpha, this is your final warning. We have no choice but to detonate.", 1478)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_08.wav
 
@@ -3411,6 +3498,7 @@ $Name: REN Detonation
 $Team: -1
 $MessageNew:  XSTR("Detonation in . . 5 . . 4 . . 3 . . 2 . . 1 . . Zero", 1479)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_09.wav
 
@@ -3418,6 +3506,7 @@ $Name: COM 12 DRAGONS
 $Team: -1
 $MessageNew:  XSTR("Incoming hostiles! Twelve dragon-class fighters have entered Gamma Draconis!", 1480)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_14.wav
 
@@ -3425,6 +3514,7 @@ $Name: REN Blast Again
 $Team: -1
 $MessageNew:  XSTR("All units, prepare for second detonation. You must be 3,000 meters from the warheads. This is your final warning.", 1481)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_10.wav
 
@@ -3432,6 +3522,7 @@ $Name: Whoop
 $Team: -1
 $MessageNew:  XSTR("Command, demolition pattern sigma has proven successful. The Knossos subspace portal has been destroyed.", 1482)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_11.wav
 
@@ -3439,6 +3530,7 @@ $Name: Whoop 2
 $Team: -1
 $MessageNew:  XSTR("Congratulations, Renenet. You just saved millions of lives out there. You'll get a hero's welcome back at the fleet. ", 1483)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_15.wav
 
@@ -3446,6 +3538,7 @@ $Name: Whoop 3
 $Team: -1
 $MessageNew:  XSTR("With all due respect, Command. This is no time for celebration. The destruction of this ancient artifact is an immeasurable loss. ", 1484)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_12.wav
 
@@ -3453,6 +3546,7 @@ $Name: Whoop 4
 $Team: -1
 $MessageNew:  XSTR("Our scientists have all the data we need to rebuild the portal in the future, Renenet. We just stopped the second Shivan invasion of our home systems.", 1485)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_16.wav
 
@@ -3460,6 +3554,7 @@ $Name: Opps 1
 $Team: -1
 $MessageNew:  XSTR("Command, I'm picking up an incoming jump signature! The Sathanas is entering the system!", 1486)
 $end_multi_text
++Persona: Large Ship Vasudan
 +AVI Name: Head-VC
 +Wave Name: sm2-10_re_13.wav
 
@@ -3467,6 +3562,7 @@ $Name: Oops 2
 $Team: -1
 $MessageNew:  XSTR("That's impossible! Request immediate status update!", 1487)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_17.wav
 
@@ -3482,6 +3578,7 @@ $Name: Oops 4
 $Team: -1
 $MessageNew:  XSTR("All units, return to base! We're pulling you out! Get out of there, pilots!", 1489)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_18.wav
 
@@ -3489,6 +3586,7 @@ $Name: T1 In System
 $Team: -1
 $MessageNew:  XSTR("Lambda 1 here. We have entered the field of engagement.", 1490)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM4
 +Wave Name: sm2-10_l1_03.wav
 
@@ -3496,6 +3594,7 @@ $Name: T2 In system
 $Team: -1
 $MessageNew:  XSTR("This is Lambda 2. We're in, Command. Setting course for the detonation site.", 1491)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM1
 +Wave Name: sm2-10_l2_03.wav
 
@@ -3503,6 +3602,7 @@ $Name: T3 In System
 $Team: -1
 $MessageNew:  XSTR("This is Lambda 3 on the scene. Proceeding to the drop point.", 1492)
 $end_multi_text
++Persona: Support Ship
 +AVI Name: Head-CM3
 +Wave Name: sm2-10_l3_03.wav
 
@@ -3510,6 +3610,7 @@ $Name: RTB Fail
 $Team: -1
 $MessageNew:  XSTR("All probability for success has been nullified. Return to base, pilot. Mission aborted.", 1493)
 $end_multi_text
++Persona: Terran Command
 +AVI Name: Head-CM2
 +Wave Name: sm2-10_ac_19.wav
 
@@ -3522,218 +3623,146 @@ $Num times: 1
 +No Messages: ( )
 +Yes Messages: ( )
 
-#Background bitmaps		;! 34 total
+#Background bitmaps		;! 22 total
 
-$Num stars: 863
-$Ambient light level: 7895160
+$Num stars: 2000
+$Ambient light level: 0
 
 $Bitmap List:
-$Sun: SunWhite
-+Angles: 1.134463 0.593411 0.942477
-+Scale: 1.000000
-$Starbitmap: dneb17
-+Angles: 0.000000 2.321286 0.000000
-+ScaleX: 4.000000
-+ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: neb16
-+Angles: 0.401425 0.663225 0.139626
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 0.820304 4.834558 0.000000
-+ScaleX: 2.000000
+$Sun: SunEtamin
++Angles: 5.637409 0.000000 5.323250
++Scale: 4.000000
+$Starbitmap: NebulB3-Main
++Angles: 1.553342 0.000000 1.047197
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 0.000000 1.308996 0.558505
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb17
-+Angles: 6.021381 0.890117 5.794488
-+ScaleX: 4.000000
+$Starbitmap: NebulG9-Whisp
++Angles: 1.553342 3.281216 1.082103
++ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.951568 2.740165 5.602502
+$Starbitmap: NebulB5-Whisp
++Angles: 1.570795 0.000000 1.221730
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 1.745328 0.767944 0.959930
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 2.373646 1.117010 1.343902
++ScaleX: 3.000000
++ScaleY: 1.400000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 3.368483 5.148717 1.274089
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 0.506145 0.383972 1.239183
++ScaleX: 4.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 0.209439 0.069813 1.204276
++ScaleX: 2.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 1.378809 1.518435 1.500982
++ScaleX: 3.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 0.750491 0.959930 1.466075
++ScaleX: 5.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB1-Main
++Angles: 5.235984 0.000000 5.934115
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb16
-+Angles: 0.000000 0.000000 5.951568
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 5.881755 5.009091 5.532689
+$Starbitmap: NebulB5-Whisp
++Angles: 5.113811 0.000000 6.038835
 +ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb17
-+Angles: 5.585049 0.383972 5.393063
-+ScaleX: 2.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 0.558505 0.628318 6.126101
+$Starbitmap: NebulB11-Whisp
++Angles: 5.253437 6.126101 5.759582
 +ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 5.218530 0.000000 5.218530
-+ScaleX: 2.000000
-+ScaleY: 2.000000
++ScaleY: 1.200000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb16
-+Angles: 5.009091 5.585049 5.218530
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb17
-+Angles: 5.585049 5.585049 0.925024
-+ScaleX: 2.000000
+$Starbitmap: NebulB12-Whisp
++Angles: 5.305797 2.757618 5.934115
++ScaleX: 4.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.777035 2.321286 0.802851
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 6.021381 4.468040 0.628318
-+ScaleX: 2.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb16
-+Angles: 5.585049 0.575958 0.925024
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: dneb17
-+Angles: 5.358157 2.740165 0.628318
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.131264 5.951568 0.506145
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.991638 0.855211 0.418879
-+ScaleX: 3.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 2
-$Starbitmap: neb16
-+Angles: 4.764745 1.692968 0.191986
-+ScaleX: 4.000000
-+ScaleY: 4.000000
-+DivX: 2
-+DivY: 2
-$Starbitmap: dneb17
-+Angles: 5.253437 3.455749 1.117010
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 5.078904 1.256636 1.308996
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.886918 1.867501 1.553342
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: neb16
-+Angles: 3.508109 0.383972 1.378809
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb17
-+Angles: 3.385936 1.570795 1.169370
+$Starbitmap: NebulB2-Main
++Angles: 5.585049 2.513272 5.323250
 +ScaleX: 4.000000
 +ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 4.799652 1.797688 1.815141
-+ScaleX: 3.000000
-+ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.886918 4.276053 2.076940
-+ScaleX: 2.000000
+$Starbitmap: NebulG5-Whisp
++Angles: 5.619956 6.195914 5.358157
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 5.619956 0.000000 5.305797
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 0.000000 5.619956 0.000000
++ScaleX: 13.000000
++ScaleY: 10.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 1.570795 1.343902 0.000000
++ScaleX: 10.000000
++ScaleY: 8.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 0.000000 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 6.073741 3.089230 0.209439
++ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: neb16
-+Angles: 4.345866 0.366519 2.216566
-+ScaleX: 3.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulB2-Main
++Angles: 6.195914 1.727875 2.513272
++ScaleX: 9.000000
++ScaleY: 9.000000
 +DivX: 1
-+DivY: 1
-$Starbitmap: dneb17
-+Angles: 3.874628 1.570795 2.408552
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb06
-+Angles: 4.031707 0.558505 0.959930
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 4.345866 1.797688 0.715584
-+ScaleX: 3.000000
-+ScaleY: 2.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb17
-+Angles: 4.520399 2.146753 0.541052
-+ScaleX: 2.000000
-+ScaleY: 4.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 3.577922 0.366519 0.663225
-+ScaleX: 3.000000
-+ScaleY: 3.000000
-+DivX: 1
-+DivY: 1
-$Starbitmap: dneb15
-+Angles: 3.961894 1.570795 0.506145
-+ScaleX: 4.000000
-+ScaleY: 3.000000
-+DivX: 2
 +DivY: 1
 
 #Asteroid Fields
