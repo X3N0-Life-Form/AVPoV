@@ -130,7 +130,7 @@ B_Vampire_Arc_01.Fangs in the Mist						//?
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-B_Vampire_Arc_02.You Shall not Pass !						//?
+B_Vampire_Arc_02.You Shall not Pass !						//ReWork in progress
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		Background : todo
@@ -139,8 +139,8 @@ B_Vampire_Arc_02.You Shall not Pass !						//?
 		The SD Vampire blows up a few ships & enters Gamma Draconnis
 		Ships :
 			-SD Vampire (Ravana class)	//vital
-			-GTD Wizard (Hecate class)	//destroyed
-			-GVCv Glamdring (Sobek class)	//destroyed
+			-GTD Wizard (Hecate class)	//non-vital
+			-GVCv Glamdring (Sobek class)	//non-vital
 			-GTCv Yakiba (Deimos class)	//destroyed
 			-SC Haagenti (Rakshasa class)	//destroyed
 			-SC Putana (Cain class)		//destroyed
