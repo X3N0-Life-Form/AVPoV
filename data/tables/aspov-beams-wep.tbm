@@ -600,7 +600,7 @@ $Name:							MjolnirBeam
 	
 $Name:							SVas
 	+nocreate ;:
-	+Tech Title:		XSTR("Type 1a 'Fire Arrow' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-1a 'Fire Arrow' Vasudan Beam",-1)
 	+Tech Description:	XSTR("Formerly mounted on Sobek-class corvettes, the 'Fire Arrow' was the Imperium's first beam weapon. Drawing lessons from the 'Small Green', Vasudan scientists produced a then impressive beam weapon, mounted on a warship designed to carry it. Proving to skeptics that beam weapons were actually viable, the know-how acquired during the development of the Type 1 was put to good use by Terran engineers as the Deimos corvette's design phase neared completion and produced the 'Slasher' Terran beam.
 	
 	Because of its corvette-grade power requirements, mounting the Type 1a on cruisers such as the Mentu would have made these ships much less resilient, sacrificing armor for extra generators, a move that was deemed unwise by the Vasudan Military, which considered that cruisers should evolve to be purely defensive platforms while corvettes filled the offensive warship role. As such, the 'Fire Arrow' became mostly a secondary weapon for Vasudan Destroyers, despite continued work to reduce the beam's power drain.",-1)
@@ -608,13 +608,13 @@ $Name:							SVas
 	
 $Name:							VSlash
 	+nocreate ;:
-	+Tech Title:		XSTR("Type 2c 'Maelstrom' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-2c 'Maelstrom' Vasudan Beam",-1)
 	+Tech Description:	XSTR("With the tremendous success of the Deimos-class corvette and mk3 Terran beams, Type 1 Vasudan beams became inadequate against corvette-grade combattants. Basically a 'Fire Arrow' on steroids, the 'Maelstrom' sacrificed its accuracy, but doubled its damage output and refire rate, producing what is still one of the most powerful beam weapon mounted on Alliance warships. Despite the increased power drain, the Sobek's reactors and power grid proved to be able to handle their new main weapons.",-1)
 	$end_multi_text ;:
 
 
 $Name:							MVas
-	+Tech Title:		XSTR("Type 4a 'Pillar of Sorrow' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-4a 'Pillar of Sorrow' Vasudan Beam",-1)
 	+Tech Description:	XSTR("
 	
 	Damage per salvo: 9508",-1)
@@ -707,7 +707,7 @@ $BeamInfo:
 		
 ;; damage per salvo: 12224.5		
 $Name:							MVasUp
-	+Tech Title:		XSTR("Type 4d 'Pillar of Hope' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-4d 'Pillar of Hope' Vasudan Beam",-1)
 	+Tech Description:	XSTR("
 	
 	",-1)
@@ -801,7 +801,7 @@ $BeamInfo:
 		
 $Name:							BVas
 	+nocreate ;:
-	+Tech Title:		XSTR("Type 3b 'Axe of Faith' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-3b 'Axe of Faith' Vasudan Beam",-1)
 	+Tech Description:	XSTR("
 	
 	",-1)
