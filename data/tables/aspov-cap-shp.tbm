@@ -2720,7 +2720,7 @@ $Species:                       Vasudan
 	+Tech Description:
 		XSTR("The Newet class saw its beginnings shortly after the outbreak of the NTF Rebellion in 2366, impressed by the combat effectiveness of the GVC Aeolus class in the conflict and recognizing the need for a compact flak platform equivalent, Vasudan Command comissoned Akheton Corporation and RNI Shipyards to construct a cruiser of simlar function. RNI would supply the weapons systems and their signature smoothbarreled Slug Flak cannon platforms. While Akheton would be resposible for proving the main design and construction.
 
-		The Newet is currently used exclusively by Special Operations forces, and is packed with the most advanced tech available, making it an incredibly versatile warship, if expensive for the time being. Akheton used this spaceframe as a (successful) testbed for their cut down version of its mk 3 sensor suite, electronic warfare package and targeting systems. Special Operations Command also requested the cruiser to be equipped with a full array of Wraith Point Defence Turrets and a GTSSD-07c 'Power Horse' subspace drive. The Newet's main drawback is its anti-capital ship weapon array, composed of a single Small Beam. It therefore lacks the firepower of the Mentu 'Enforcer''s upgraded Medium Beam, though SOC believes it to be an acceptable trade off for superior anti-fighter defence and subspace agility.", -1)
+		The Newet is currently used exclusively by Special Operations forces, and is packed with the most advanced tech available, making it an incredibly versatile warship, if expensive for the time being. Akheton used this spaceframe as a (successful) testbed for their cut down version of its mk 3 sensor suite, electronic warfare package and targeting systems. Special Operations Command also requested the cruiser to be equipped with a full array of Wraith Point Defence Turrets and a GTSSD-07c 'Power Horse' subspace drive. The Newet's main drawback is its anti-capital ship weapon array, composed of a single Type 1f 'Fire Bolt' Small Beam. It therefore lacks the firepower of the Mentu 'Enforcer''s upgraded Medium Beam, though SOC believes it to be an acceptable trade off for superior anti-fighter defence and subspace agility.", -1)
 	$end_multi_text
 $POF file:                      GVC_Newet.pof
 $Detail distance:       (0, 300, 550, 1000)
@@ -2999,7 +2999,7 @@ $Short name:				TStrCorv
 $Species:					Terran
 	+Tech Description:		XSTR("CLASSIFIED - level Omega
 	
-	Mounting the 'Pulsar Lance' weapon system, the original Sparta design was meant to be tha Alliance's response to the Shivan threat, providing an extremely versatile platform for both special assignments and front line duties. By the end of the Battle of Capella, only one of the original prototypes remained unchanged, and was deployed to assist the GTD Streaker on its final assignment, marking the first combat deployment of a Lance-capable warship.", -1)
+	Mounting the 'Pulsar Lance' weapon system, the original Sparta design was meant to be the Alliance's response to the Shivan threat, providing an extremely versatile platform for both special assignments and front line duties. By the end of the Battle of Capella, only one of the original prototypes remained unchanged, and was deployed to assist the GTD Streaker on its final assignment, marking the first combat deployment of a Lance-capable warship.", -1)
 	$end_multi_text
 $POF file:					diomedes.pof
 $Detail distance:			(0, 5000, 5000, 10000)
@@ -3181,4 +3181,195 @@ $Subsystem:		turret22, 			3, 20.0
 	$Flags: 					( "check hull" )	
 
 
+$Name:		GTCv Stratos
+$Short name:				TCov3c
+$Species:					Terran
+	+Tech Description:		XSTR( "CLASSIFIED - Level Omega
+	
+	Following the tremendous success of Lance-capable corvettes Selket and Sparta after the events of Capella, the GTVA Security Council green-litted the research and development of true assault warships and hunter-killer combat groups. The first product of this endeavor is the Stratos-class Corvette. Based on the Sparta design, the Stratos carries a single forward-facing 'Cluster Lance' weapon system, supplemented by a pair of fast-firing upper medium class Terran beams as its main anti-ship weapon array, sacrificing the Sparta's missile tubes and fighter bay for additional shock power.
+	
+	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capbilities are on par with its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independant close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
+$end_multi_text
+$POF file:					corvette3t-03.pof
+$Detail distance:			(0, 4500, 4500, 10000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					0.6
+$Max Velocity:				0.0, 0.0, 20.0
+$Rotation time:				100.0, 102.0, 102.0
+$Rear Velocity:				0.0
+$Forward accel:				2.0
+$Forward decel:				1.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			75.0
+$Expl outer rad:			750.0
+$Expl damage:				500.0
+$Expl blast:				1300.0
+$Expl Propagates:			YES
+$Shockwave Speed:			190.0
+$Shockwave Count:			3
+$Shields:					0
+$Power Output:				38.0
+$Max Oclk Speed:			35.0
+$Max Weapon Eng:			0.0
+$Hitpoints:					90000
+$Armor Type:				HeavyArmor
+$Flags: 					( "corvette" "big damage" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, -25, -1050
+$Closeup_zoom:				0.5
+$Score:						40
+$Subsystem: 	engines, 			15, 0
+	$Engine Wash: 				Default300
+$Subsystem: 	navigation, 		7.5, 0
+$Subsystem: 	communications, 	5, 0
+$Subsystem: 	sensors, 			7.5, 0
+$Subsystem: 	weapons, 			7.5, 0
+$Subsystem: 	turret01, 			10.0, 20.0
+	$Default PBanks:			( "Cluster Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 			5.5, 20.0
+	$Default PBanks:			( "MGreenUp" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			5.5, 20.0
+	$Default PBanks:			( "MGreenUp" )
+	$Max Turrets per Bomb:		1
+	$ROF:
+		+Multiplier:	2.0
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			3.4, 20.0
+	$Default PBanks:			( "Advanced Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		80, 0, 0
+$Subsystem: 	turret05, 			3.4, 20.0
+	$Default PBanks:			( "Advanced Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		80, 0, 0
+$Subsystem: 	turret06, 			3.4, 20.0
+	$Default PBanks:			( "Advanced Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		80, 0, 0
+$Subsystem: 	turret07, 			3.4, 20.0
+	$Default PBanks:			( "Advanced Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		80, 180, 0
+$Subsystem: 	turret08, 			3.4, 20.0
+	$Default PBanks:			( "Advanced Flak" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		80, 180, 0
+$Subsystem: 	turret09, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret20, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret21, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret22, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret23, 			1.5, 20.0
+	$Default PBanks:			( "Pulsar Lance" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret24, 			1.5, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Max Turrets per Bomb:		1
+	$Flags:			 			( "check hull" )
+	
+	
 #End

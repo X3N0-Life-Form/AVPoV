@@ -411,7 +411,7 @@ $BeamInfo:
 	+Life:			  			10.0
 	+Warmup:		  			500
 	+Warmdown:					500
-	+Radius:		  			10.0			;; muzzle glow radius in meters
+	+Radius:		  			14.0			;; muzzle glow radius in meters
 	+PCount:					24			;; particles spewed every interval
 	+PRadius:					2.4			;; particle radius
 	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
