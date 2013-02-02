@@ -82,7 +82,7 @@ $Piercing Impact Velocity:			10
 $Piercing Impact Splash Velocity:	-4.5
 $Piercing Impact Variance:			0.01
 $Piercing Impact Particles:			5
-$Muzzleflash:						PWmuzzle
+$Muzzleflash:						MDmuzzle
 $Pspew:
 	+Count:			3
 	+Time:			1
@@ -242,7 +242,7 @@ $Burst Flags:						()
 
 
 $Name:                          Shivan Multi Turret Up
-	+Tech Title:		XSTR("Shivan Multi Turret",-1)
+	+Tech Title:		XSTR("Upgraded Shivan Multi Turret",-1)
 	+Tech Description:	XSTR("Upgraded Shivan warship mounted multi-shot turret
 	
 	Damage per second: 600",-1)

@@ -2523,7 +2523,7 @@ $Short name:					HTL-Mentu-b.pof
 $Species:                       Vasudan
 +Tech Description:
 XSTR(
-"A very recent redesign of the Mentu cruiser, the Enforcer variant has been created to integrate the Alliance's newest weaponery, such as the Wraith turret or the Vasudan Upgraded Medium Beam. Though it looks almost identical to the original Mentu, the Enforcer's internal structure is significantly different from its older brother, meaning classic Mentus cannot be retrofitted into Enforcers, just like Fenreis cannot be transformed into Leviathans.
+"A very recent redesign of the Mentu cruiser, the Enforcer variant has been created to integrate the Alliance's newest weaponery, such as the Wraith turret or the Type 4d 'Pillar of Hope' Medium Beam. Though it looks almost identical to the original Mentu, the Enforcer's internal structure is significantly different from its older brother, meaning classic Mentus cannot be retrofitted into Enforcers, just like Fenreis cannot be transformed into Leviathans.
 
 Although its next generation beam cannon gives the enforcer enough firepower to challenge corvettes, its hull and subsystem strength is much lower than that of the standard Mentu.", -1)
 $end_multi_text

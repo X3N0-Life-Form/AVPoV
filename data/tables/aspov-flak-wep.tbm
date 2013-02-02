@@ -154,10 +154,7 @@ $Pspew:
 ;; Shivan Long Range Flak -- to be used only on Sathanas & Lucifer
 $Name:							Suppression Flak
 	+Tech Title: XSTR("Shivan Suppression Flak",-1)
-	+Tech Description: XSTR("Shivan Suppression Flak
-	
-	Mounted on the front of the Sathanas Juggernaught, the Suppression Flak fills a similar role to the alliance's Long Range Flak cannons, namely harassing bombers at long range to make the kill easier for close range point defense systems. The Suppression Flak, however is significantly more dangerous than a regular Long Range Flak, boasting an increased range, projectile speed, and damage output per projectile.
-	",-1)
+	+Tech Description: XSTR("Mounted on the front of the Sathanas Juggernaught, the Suppression Flak fills a similar role to the Alliance's Long Range Flak cannons, namely harassing bombers at long range to make the kill easier for close range point defense systems. The Suppression Flak, however is significantly more dangerous than a regular Long Range Flak, boasting an increased range, projectile speed, and damage output per projectile.",-1)
 	$end_multi_text
 $Model File:					none
 $Mass:							1.2

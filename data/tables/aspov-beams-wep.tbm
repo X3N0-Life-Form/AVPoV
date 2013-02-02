@@ -381,9 +381,7 @@ $Name:							LTerSlash
 $Name:							BGreen
 	+nocreate ;:
 	+Tech Title:		XSTR("Mk3 'Big Green' Terran Beam",-1)
-	+Tech Description:	XSTR("Given the effectiveness of corvette combattants, it was clear that destroyers needed ways to quickly deal with larger warships. Designed specifically to be mounted on Orion destroyers, the 'Big Green' was described as 'what the Small Green would be if it was developped today'. A direct-fire beam of immense power, the 3rd generation Terran Beam seemed to finally approach what the Hades' and Lucifer's beams were capable of. Despite suffering from heat dissipation problems, it made Orion destroyers so deadly that the Vasudan Imperium decided to outfit Typhon-class destroyers with their own destroyer-grade beam, despite the Vasudan's beam design paradigm 'design the beam, then the ship'.
-	
-	",-1)
+	+Tech Description:	XSTR("Given the effectiveness of corvette combattants, it was clear that destroyers needed ways to quickly deal with larger warships. Designed specifically to be mounted on Orion destroyers, the 'Big Green' was described as 'what the Small Green would be if it was developped today'. A direct-fire beam of immense power, the 3rd generation Terran Beam seemed to finally approach what the Hades' and Lucifer's beams were capable of. Despite suffering from heat dissipation problems, it made Orion destroyers so deadly that the Vasudan Imperium decided to outfit Typhon-class destroyers with their own destroyer-grade beam, despite the Vasudan's design paradigm 'design the beam, then the ship'.",-1)
 	$end_multi_text
 	
 $Name:							BFGreen
@@ -614,8 +612,8 @@ $Name:							VSlash
 
 
 $Name:							MVas
-	+Tech Title:		XSTR("T-4a 'Pillar of Sorrow' Vasudan Beam",-1)
-	+Tech Description:	XSTR("
+	+Tech Title:		XSTR("T-4a 'Pillar of Sorrow' VBeam",-1)
+	+Tech Description:	XSTR("Taylor-made for the Selket-class corvette, the Type 4 'Pillar of Sorrow' inflicts roughly the same amount of damage as Type 2 beams, but at a reduced refire rate. However its overall reduced power consumption, combined with improved power generators allowed Vasudan designers to mount five of them on a single corvette.
 	
 	Damage per salvo: 9508",-1)
 	$end_multi_text
@@ -707,7 +705,7 @@ $BeamInfo:
 		
 ;; damage per salvo: 12224.5		
 $Name:							MVasUp
-	+Tech Title:		XSTR("T-4d 'Pillar of Hope' Vasudan Beam",-1)
+	+Tech Title:		XSTR("T-4d 'Pillar of Hope' VBeam",-1)
 	+Tech Description:	XSTR("
 	
 	",-1)
@@ -801,10 +799,8 @@ $BeamInfo:
 		
 $Name:							BVas
 	+nocreate ;:
-	+Tech Title:		XSTR("T-3b 'Axe of Faith' Vasudan Beam",-1)
-	+Tech Description:	XSTR("
-	
-	",-1)
+	+Tech Title:		XSTR("T-3b 'Axe of Faith' VBeam",-1)
+	+Tech Description:	XSTR("Development of the Type 3 Vasudan Beam began shortly before the Terran's Mark 3, as the Imperium prepared to renew its destroyer fleet. Focusing on firing as often as possible without sacrificing accuracy, the 'Axe of Faith''s damage output per salvo isn't quite as high as its Terran sister weapon, but compensate by firing more often, making the beam more reliable in long engagements.",-1)
 	$end_multi_text ;:
 
 
