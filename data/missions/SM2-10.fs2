@@ -3112,7 +3112,7 @@ $Formula: ( when
    ( tech-add-weapons "Helios" ) 
    ( allow-weapon "Helios" ) 
    ( allow-ship "GVF Serapis Elite" ) 
-   ( allow-ship "GVB Sekhmet Elite" ) 
+   ( allow-ship "GVB Hathor" ) 
 )
 +Name: New Stuff
 +Repeat Count: 1

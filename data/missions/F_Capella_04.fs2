@@ -108,7 +108,7 @@ $Ship Choices: (
 	"GVB Sekhmet"	12
 	"GVB Bakha"	12
 	"GVF Serapis Elite"	4
-	"GVB Sekhmet Elite"	4
+	"GVB Hathor"	4
 )
 
 +Weaponry Pool: (
@@ -1560,7 +1560,7 @@ $Determination: 10
 +Score: 12
 
 $Name: Epsilon 1		;! Object #40
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 1795.649780, -0.000095, 1375.653687
 $Orientation:
@@ -1587,7 +1587,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Epsilon 2		;! Object #41
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 1939.448486, -0.000226, 1498.126831
 $Orientation:
@@ -1614,7 +1614,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Epsilon 3		;! Object #42
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2049.864746, 0.000100, 1413.106323
 $Orientation:
@@ -1641,7 +1641,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Epsilon 4		;! Object #43
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2032.731812, -0.000015, 1324.124878
 $Orientation:
@@ -1668,7 +1668,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Delta 1		;! Object #44
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2675.742188, -0.000200, 1506.452515
 $Orientation:
@@ -1695,7 +1695,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Delta 2		;! Object #45
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2780.969971, 0.000020, 1426.190308
 $Orientation:
@@ -1722,7 +1722,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Delta 3		;! Object #46
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2658.478516, 0.000111, 1417.436890
 $Orientation:
@@ -1749,7 +1749,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Delta 4		;! Object #47
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 2729.882324, -0.000052, 1316.499634
 $Orientation:

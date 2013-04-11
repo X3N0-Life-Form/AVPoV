@@ -54,7 +54,7 @@ $Ship Choices: (
 	"GVF Tauret"	8
 	"GVB Bakha"	8
 	"GVF Serapis Elite"	8
-	"GVB Sekhmet Elite"	8
+	"GVB Hathor"	8
 )
 
 +Weaponry Pool: (
@@ -648,7 +648,7 @@ $Determination: 10
 +Score: 13
 
 $Name: Beta 1		;! Object #18
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 230.114456, 520.925903, -539.407715
 $Orientation:
@@ -676,7 +676,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Beta 2		;! Object #19
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 363.967560, 364.831543, -499.682312
 $Orientation:
@@ -704,7 +704,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Beta 3		;! Object #20
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 220.373810, 266.403473, -474.633118
 $Orientation:
@@ -732,7 +732,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Beta 4		;! Object #21
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: 134.995193, 337.735168, -492.786804
 $Orientation:

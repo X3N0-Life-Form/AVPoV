@@ -3593,7 +3593,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Apep Zeta 1		;! Object #103
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: -1365.005615, 0.000492, -15620.556641
 $Orientation:
@@ -3620,7 +3620,7 @@ $Determination: 10
 +Score: 18
 
 $Name: Apep Zeta 2		;! Object #104
-$Class: GVB Sekhmet Elite
+$Class: GVB Hathor
 $Team: Friendly
 $Location: -1471.819458, 0.000668, -15713.889648
 $Orientation:
