@@ -407,143 +407,118 @@ $Subsystem:				engine,			35,0.0
 
 
 
-$Name:                  GVB Sekhmet Elite
-$Short name:            VBomb21
-$Species:               Vasudan
-	+Type:                  XSTR("Bomber", 3099)
-	+Maneuverability:       XSTR("Average", 3100)
-	+Armor:                 XSTR("Heavy", 3101)
-	+Manufacturer:          XSTR("Mekhu Enterprises", 3102)
-	+Description:			XSTR(" ", -1)
+$Name: 								GVB Hathor
+$Species: 							Vasudan
+
+	+Type: 							XSTR( "Assault Bomber", -1 )
+	+Maneuverability: 				XSTR( "Average", -1 )
+	+Armor: 						XSTR( "Heavy", -1 )
+	+Manufacturer:         	 		XSTR("Mekhu Enterprises", -1)
+	+Description: 					XSTR( " ", -1 )
 $end_multi_text
-+Tech Description:
-XSTR(
-"", -1)
+	+Tech Description:				XSTR( "The GVB Hathor was conceived to engage Shivan capital ships and live to tell the tale. As a worthy successor of the GVB Sekhmet, this bomber carries a higher bomb capacity, upgraded shields, ECM defence systems and a subspace motivator designed for precission jumps. In the event of a Shivan Incursion, Hathors are expected to fend off the first waves of capital ships while system-wide evacuation and node suppression contingencies are put in place. Despite its high production costs, Hathor bombers have been incorporated into most vasudan battlegroups en masse, reflecting the pivotal role the Vasudan Admiralty as assigned them in the event of a new Shivan Incursion.", -1 )
 $end_multi_text
-+Length:          23 Meters
-+Gun Mounts:      4
-+Missile Banks:   3
-$POF file:                      Sekhmet_elite.pof
-$Detail distance:       (0, 100, 300, 900)
-$ND: 							124 225 125
-$ND: 							99 223 102
-$ND: 							70 215 72
-$ND: 							23 188 26
-$ND: 							51 151 50
-$Show damage:           YES
-$Density:               1
-$Damp:                  0.2
-$Rotdamp:               0.55
-$Max Velocity:          60.0, 60.0, 70.0
-$Rotation time:         4.0, 4.0, 4.0
-$Rear Velocity:         0.0
-$Forward accel:         5.0
-$Forward decel:         2.0
-$Slide accel:           0.0
-$Slide decel:           0.0
+	+Length: 						25 m
+	+Gun Mounts: 					4 ( 2, 2 )
+	+Missile Banks: 				3 ( 120, 60, 60 )		
+$POF file: 							Hathor.pof							
+$Detail distance: 					(0, 115, 259, 613)			
+$Density: 							1				           
+$Damp:								0.24					   
+$Rotdamp:							0.53                       
+$Max Velocity: 						60.0, 60.0, 70.0 ; 0.0, 0.0, 68.0             
+$Rotation time: 					4, 4, 4 ; 5, 5, 5               		
+$Rear Velocity: 					0.0                        
+$Forward accel: 					5	                       
+$Forward decel: 					2.0 ; 2.5                        
+$Slide accel: 						0.0                        
+$Slide decel: 						0.0 
 $Glide:					YES
-	+Glide Accel Mult:	1.0
-$Expl inner rad:        55.0
-$Expl outer rad:        105.0
-$Expl damage:           20.0
-$Expl blast:            1500.0
-$Expl Propagates:       NO 
-$Shockwave Speed:       0.0
-$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "UD-8 Kayser" "Fire Spitter" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter")
-$Allowed Dogfight PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim")
-$Default PBanks:        ( "Prometheus S" )
-$PBank Capacity:		(100)
-$Allowed SBanks:        ( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
-$Allowed Dogfight SBanks:        ( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
-$Default SBanks:        ( "Cyclops" "Cyclops" "Tempest" )
-$SBank Capacity:        ( 80, 80, 80 )
-$Shields:               850
-$Shield Color:			100 255 100
-$Power Output:          3.0
-$Max Oclk Speed:        84.0
-$Max Weapon Eng:        100.0
-$Hitpoints:             500
+	+Glide Accel Mult:	1.0                       
+$Expl inner rad: 					75.0                       
+$Expl outer rad: 					150.0                      
+$Expl damage: 						30.0                       
+$Expl blast: 						2000.0                     
+$Expl Propagates: 					NO                         
+$Shockwave Speed: 					0.0                        
+$Weapon Model Draw Distance:		100
+$Allowed PBanks:        		    ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "UD-8 Kayser" "Fire Spitter" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" )
+$Allowed Dogfight PBanks:        	( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim")
+$Default PBanks:        			( "Prometheus S" "Hell Spitter" )
+$PBank Capacity:		( 100, 100 )
+$Allowed SBanks:        			( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
+$Allowed Dogfight SBanks:        	( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
+$Default SBanks:        			( "Tempest" "Cyclops" "Cyclops" ) ; ( "Piranha" "Helios" "Helios" )
+$SBank Capacity: 					( 120, 60, 60 )
+$Show Secondary Models: 		    ( no no no )
+$Shields: 							850 ; 600
+$Shield Color: 						100 255 100
+$Power Output: 						4.5
+$Max Oclk Speed: 					85.0 ; 80.0
+$Max Weapon Eng: 					220.0
+$Hitpoints: 						520
 $Armor Type:			LightArmor
 $Shield Armor Type:		LightArmor
-$Flags:                 ( "player_ship" "bomber" )
-$AI Class:              Elite
-$Afterburner:           YES
-	+Aburn Max Vel:			0.0, 0.0, 140.0
-	+Aburn For accel:       0.7
-	+Aburn Fuel:            300.0
-	+Aburn Burn Rate:       50.0
-	+Aburn Rec Rate:        25.0
-$Countermeasures:       35
-$Scan time:             2000
-$EngineSnd:      		130 
-$Closeup_pos:           0.0, 0.0, -33
-$Closeup_zoom:          0.5
-$Shield_icon:           shieldbv-02
-$Ship_icon:             iconbomber2v-02
-$Ship_anim:             ssbomber2v-02
-$Ship_overhead: 		loadbomber2v-02
-$Score:             	18
+; $Support Hull Repair Rate: 			5.0
+$Flags: 							( "player_ship" "bomber" )
+$AI Class: 							Elite
+$Afterburner:           			YES
+	+Aburn Max Vel: 				0.0, 0.0, 100.0 ; 0.0, 0.0, 100.0
+	+Aburn For accel:       		0.7
+	+Aburn Fuel:           		 	300.0
+	+Aburn Burn Rate:       		50.0
+	+Aburn Rec Rate:        		25.0
+$Countermeasures: 					45
+$Scan time: 						2000
+$EngineSnd: 						130
+$Closeup_pos:           			0.0, 0.0, -33
+$Closeup_zoom:          			0.5
+$Shield_icon:           			shield-hathor
+$Ship_icon:                     	iconbomber2v-02
+$Ship_anim:                     	ssbomber2v-02
+$Ship_overhead: 					loadbomber2v-02
+$Score:             				20
 $Trail:
-	+Offset:		0 6.65 -4.2
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
+	+Offset:						0 6.65 -4.2
+	+Start Width:					0.25
+	+End Width:						0.05
+	+Start Alpha:					1.0
+	+End Alpha:						0.0
+	+Max Life:						1.0
+	+Spew Time:						60
+	+Bitmap:						Contrail01
 $Trail:
-	+Offset:		0 -7.8 .45
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
+	+Offset:						0 -7.8 .45
+	+Start Width:					0.25
+	+End Width:						0.05
+	+Start Alpha:					1.0
+	+End Alpha:						0.0
+	+Max Life:						1.0
+	+Spew Time:						60
+	+Bitmap:						Contrail01
 $Trail:
-	+Offset:		6.74 6.4 .73
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
+	+Offset:						6.74 6.4 .73
+	+Start Width:					0.25
+	+End Width:						0.05
+	+Start Alpha:					1.0
+	+End Alpha:						0.0
+	+Max Life:						1.0
+	+Spew Time:						60
+	+Bitmap:						Contrail01
 $Trail:
-	+Offset:		-6.74 6.4 .73
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
-$Trail:
-	+Offset:		6.57 -6.4 -2.92
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
-$Trail:
-	+Offset:		-6.57 -6.4 -2.92
-	+Start Width:	0.25
-	+End Width:	0.05
-	+Start Alpha:	1.0
-	+End Alpha:	0.0
-	+Max Life:	1.0
-	+Spew Time:	60
-	+Bitmap:	Contrail01
-$Radar Image 2D:    radar-bomber
-$Subsystem:                     weapons,                        8,0.0
-$Subsystem:                     sensors,                         5,0.0
+	+Offset:						-6.74 6.4 .73
+	+Start Width:					0.25
+	+End Width:						0.05
+	+Start Alpha:					1.0
+	+End Alpha:						0.0
+	+Max Life:						1.0
+	+Spew Time:						60
+	+Bitmap:						Contrail01
+$Subsystem:                     weapons,                 8,0.0
+$Subsystem:                     sensors,                 5,0.0
 $Subsystem:                     navigation,              5,0.0
-$Subsystem:                     communications,   5,0.0
+$Subsystem:                     communications,  		 5,0.0
 $Subsystem:                     engine,                 35,0.0
-
 
 $Name:                          SF Mara#
 $Short name:            		SFight22#fuck_you

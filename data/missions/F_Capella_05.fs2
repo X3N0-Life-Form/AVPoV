@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Final Round", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:45:13
-$Modified: 01/16/13 at 19:12:10
+$Modified: 04/13/13 at 22:57:15
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -19,16 +19,18 @@ $end_multi_text
 
 +Fog Far Mult: 1.000000
 
-+Disallow Support: 0
++Disallow Support: 1
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
 +Viewer pos: 3507.932373, 1213.978882, 2179.663574
 +Viewer orient:
-	0.465262, -0.000001, 0.885173,
-	-0.278135, 0.949351, 0.146194,
-	-0.840340, -0.314216, 0.441697
+	0.690158, -0.000000, 0.723659,
+	0.222874, 0.951392, -0.212556,
+	-0.688483, 0.307982, 0.656611
 
+
+$Skybox Model: Starfield.pof
 
 $AI Profile: myProfile
 
@@ -192,7 +194,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "player-start" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -911,7 +913,7 @@ $Determination: 10
 $Name: TC-TRI#2		;! Object #22
 $Class: TC-TRI
 $Team: Friendly
-$Location: -975.404602, -614.045288, 4014.659180
+$Location: -975.404663, -614.045288, 4014.659180
 $Orientation:
 	-0.995807, 0.000006, -0.091477,
 	-0.090011, -0.178352, 0.979841,
@@ -3452,7 +3454,7 @@ $Determination: 10
 $Name: Streaker		;! Object #103
 $Class: GTD Hecate
 $Team: Friendly
-$Location: -7683.384277, 6000.003906, 11394.529297
+$Location: -7921.999512, 6000.001953, 12515.928711
 $Orientation:
 	0.865383, 0.061554, 0.497317,
 	-0.101174, -0.950528, 0.293702,
@@ -3509,7 +3511,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret27
 +Primary Banks: ( "MGreenUp" )
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 25 "Sparta" ) 
+$Arrival Cue: ( has-arrived-delay 75 "Sparta" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( is-event-true-delay 
    "supernova start" 
@@ -4000,7 +4002,10 @@ $Special Ship: 0		;! Aquarius#dummy 1
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Sathanas
-$Arrival Cue: ( has-time-elapsed 15 ) 
+$Arrival Cue: ( is-event-true-delay 
+   "start dialogue 5" 
+   7 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 
    7 
@@ -4200,7 +4205,7 @@ $Ships: (		;! 4 total
 	"Gemini 3"
 	"Gemini 4"
 )
-$AI Goals: ( goals ( ai-chase-any 50 ) )
+$AI Goals: ( goals ( ai-chase "Hammer 1" 50 ) ( ai-chase "Hammer 2" 49 ) ( ai-chase "Hammer 3" 48 ) ( ai-chase "Hand of Truth" 45 ) ( ai-chase-wing "Alpha" 30 ) )
 +Flags: ( )
 
 $Name: Taurus
@@ -4218,7 +4223,7 @@ $Ships: (		;! 4 total
 	"Taurus 3"
 	"Taurus 4"
 )
-$AI Goals: ( goals ( ai-chase-any 50 ) )
+$AI Goals: ( goals ( ai-chase "Azra Vasuda" 50 ) ( ai-chase "Hand of Truth" 49 ) ( ai-chase-wing "Alpha" 30 ) )
 +Flags: ( )
 
 $Name: Cancer
@@ -4236,7 +4241,7 @@ $Ships: (		;! 4 total
 	"Cancer 3"
 	"Cancer 4"
 )
-$AI Goals: ( goals ( ai-chase-any 50 ) )
+$AI Goals: ( goals ( ai-chase-wing "Kappa" 50 ) ( ai-chase-wing "Iota" 49 ) ( ai-chase-wing "Hammer Alpha" 48 ) ( ai-chase-wing "Hammer Beta" 47 ) ( ai-chase-wing "Alpha" 45 ) )
 +Flags: ( )
 
 $Name: Scorpio
@@ -4392,7 +4397,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Streaker" 50 ) )
 +Flags: ( )
 
-#Events		;! 59 total
+#Events		;! 82 total
 
 $Formula: ( when 
    ( < ( shields-left "Alpha 1" ) 50 ) 
@@ -4963,17 +4968,95 @@ $Formula: ( when
       "Hull" 
       "Shields" 
    )
+   ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when-argument 
+   ( random-of 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
+   ( is-in-mission "<argument>" ) 
+   ( send-message 
+      "<argument>" 
+      "High" 
+      "mission start 1 - alpha" 
+   )
+)
++Name: start dialogue 1
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
 $Formula: ( when 
    ( true ) 
-   ( training-msg "debug saturation" ) 
+   ( send-message 
+      "Hand of Truth" 
+      "High" 
+      "mission start 2 - hot" 
+   )
 )
-+Name: debug saturation
-+Repeat Count: 8000
++Name: start dialogue 2
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Hand of Truth" 
+      "High" 
+      "mission start 3 - hot" 
+   )
+)
++Name: start dialogue 3
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Hand of Truth" 
+      "High" 
+      "mission start 4 - hot" 
+   )
+)
++Name: start dialogue 4
++Repeat Count: 1
++Interval: 1
++Chained: 8
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Hand of Truth" 
+      "High" 
+      "mission start 5 - hot" 
+   )
+)
++Name: start dialogue 5
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      4 
+      "Aquarius#dummy" 
+   )
+   ( send-message 
+      "Azra Vasuda" 
+      "High" 
+      "1st wave launches - av" 
+   )
+)
++Name: 1st wave
++Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
@@ -5060,6 +5143,34 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Destroy Libra", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 3 "Aquarius" ) 
+      ( is-destroyed-delay 3 "Libra" ) 
+   )
+   ( send-message 
+      "Support 1" 
+      "Low" 
+      "support - support" 
+   )
+)
++Name: support
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Support 1" 
+      "Low" 
+      "support bis - support" 
+   )
+)
++Name: support bis
++Repeat Count: 1
++Interval: 1
++Chained: 5
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Hammer 1" ) 
@@ -5505,29 +5616,6 @@ $Formula: ( when
 +Interval: 1
 +Objective:  XSTR("Destroy Cancer (F10)", -1)
 
-$Formula: ( when-argument 
-   ( every-of 
-      "Hammer 1" 
-      "Hammer 2" 
-      "Hammer 3" 
-   )
-   ( has-arrived-delay 8 "Gemini" ) 
-   ( if-then-else 
-      ( not 
-         ( is-destroyed-delay 0 "<argument>" ) 
-      )
-      ( call-ssm-strike 
-         1 
-         "<argument>" 
-         "Hostile" 
-      )
-      ( do-nothing ) 
-   )
-)
-+Name: af ssm vs hammer
-+Repeat Count: 5
-+Interval: 3
-
 $Formula: ( when 
    ( and 
       ( has-arrived-delay 16 "Gemini" ) 
@@ -5616,6 +5704,11 @@ $Formula: ( when
       ( get-object-y "Qwar Jet" ) 
       ( + ( get-object-z "Qwar Jet" ) 1500 ) 
    )
+   ( change-soundtrack "<No Music>" ) 
+   ( play-sound-from-file 
+      "FS2_DB_02.wav" 
+      1 
+   )
 )
 +Name: qwar jet arrives
 +Repeat Count: 1
@@ -5638,7 +5731,20 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Sparta" ) 
-   ( do-nothing ) 
+   ( beam-lock 
+      "Sparta" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret21" 
+      "turret22" 
+   )
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "sparta arrives - sparta" 
+   )
 )
 +Name: Sparta arrives
 +Repeat Count: 1
@@ -5699,6 +5805,102 @@ $Formula: ( when
 +Repeat Count: 5
 +Interval: 8
 +Chained: 4
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "sparta fires catapults" 
+      0 
+   )
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "sparta fires catapults - spart" 
+   )
+)
++Name: cat msg
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 8 "Sparta" ) 
+   ( send-message 
+      "<any wingman>" 
+      "High" 
+      "status report - any wingman" 
+   )
+)
++Name: status report
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "we'll get you out - sparta" 
+   )
+)
++Name: we'll get you out
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( has-arrived-delay 20 "Sparta" ) 
+   ( beam-free 
+      "Sparta" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret21" 
+      "turret22" 
+   )
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "lance online - sparta" 
+   )
+)
++Name: sparta activates lance
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Sparta" 
+      "Low" 
+      "lance running hot - sparta" 
+   )
+)
++Name: lance running hot
++Repeat Count: 1
++Interval: 1
++Chained: 95
+
+$Formula: ( when 
+   ( true ) 
+   ( beam-lock 
+      "Sparta" 
+      "turret10" 
+      "turret11" 
+      "turret12" 
+      "turret13" 
+      "turret21" 
+      "turret22" 
+   )
+   ( send-message 
+      "Sparta" 
+      "Low" 
+      "lance offline - sparta" 
+   )
+)
++Name: sparta lance shuting down
++Repeat Count: 1
++Interval: 1
++Chained: 30
 
 $Formula: ( when 
    ( < ( hits-left "Sparta" ) 65 ) 
@@ -5863,31 +6065,139 @@ $Formula: ( when
 +Chained: 12
 
 $Formula: ( when 
-   ( has-arrived-delay 12 "Streaker" ) 
-   ( set-post-effect 
-      "distort noise" 
-      @distort-noise-level[0] 
-   )
-   ( modify-variable 
-      @distort-noise-level[0] 
-      ( + @distort-noise-level[0] 1 ) 
+   ( has-arrived-delay 6 "Streaker" ) 
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "calculate warpout 1 - sparta" 
    )
 )
-+Name: distort-noise#2
-+Repeat Count: 3
-+Interval: 1
-
-$Formula: ( when 
-   ( is-destroyed-delay 0 "Qwar Jet" ) 
-   ( beam-unprotect-ship "Sparta" ) 
-)
-+Name: qwar jet destroyed
++Name: calculate warpout 1
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 90 "Streaker" ) 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "calculate warpout 2 - streaker" 
+   )
+)
++Name: calculate warpout 2
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "calculate warpout 3 - streaker" 
+   )
+)
++Name: calculate warpout 3
++Repeat Count: 1
++Interval: 1
++Chained: 7
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "calculate warpout 4 - streaker" 
+   )
+)
++Name: calculate warpout 4
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "calculate warpout 5 - streaker" 
+   )
+)
++Name: calculate warpout 5
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Sparta" 
+      "High" 
+      "calculate warpout 6 - sparta" 
+   )
+)
++Name: calculate warpout 6
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "calculate warpout 7 - streaker" 
+   )
+)
++Name: calculate warpout 7
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( has-arrived-delay 12 "Streaker" ) 
+   ( fade-out 3000 1 ) 
+)
++Name: back to normal - fade out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "distort noise" 0 ) 
+   ( set-post-effect "saturation" 100 ) 
+   ( fade-in ) 
+)
++Name: back to normal
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Qwar Jet" 
+   )
+   ( beam-unprotect-ship "Sparta" ) 
+   ( close-sound-from-file ( true ) ) 
+   ( play-sound-from-file 
+      "FS2_DB_01.wav" 
+   )
+)
++Name: qwar jet out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 90 "Streaker" ) 
+      ( is-event-true-delay 
+         "calculate warpout 7" 
+         12 
+      )
+   )
    ( supernova-start 40 ) 
+   ( close-sound-from-file ( true ) ) 
 )
 +Name: supernova start
 +Repeat Count: 1
@@ -6036,6 +6346,47 @@ $Formula: ( when
 +Chained: 0
 +Objective:  XSTR("Engage subspace drive", -1)
 
+$Formula: ( when 
+   ( is-event-true-delay 
+      "supernova start" 
+      0 
+   )
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "supernova 1 - streaker" 
+   )
+)
++Name: supernova 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Sparta" 
+      "Low" 
+      "supernova 2 - sparta" 
+   )
+)
++Name: supernova 2
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Streaker" 
+      "High" 
+      "supernova 3 - streaker" 
+   )
+)
++Name: supernova 3
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
 #Goals		;! 3 total
 
 $Type: Primary
@@ -6147,7 +6498,7 @@ $List: (		;! 1 points in list
 	( -10801.811523, -0.000965, 8536.272461 )
 )
 
-#Messages		;! 2 total
+#Messages		;! 27 total
 
 
 $Name: debug saturation
@@ -6163,9 +6514,150 @@ lambda-health: $lambda-health
 zeta-health: $zeta-health
 zeta-cargo-health: $zeta-cargo-health
 convoy-escort-health: $convoy-escort-health
-spec-ops-health: $spec-ops-health
+spec-ops-health: $spec-ops-health
 hammer-health: $hammer-health", -1)
 $end_multi_text
+
+$Name: sparta arrives - sparta
+$Team: -1
+$MessageNew:  XSTR("What the - gunnery control, lock Catapult and fire at will! Activate the Pulsar Lance system.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: sparta fires catapults - spart
+$Team: -1
+$MessageNew:  XSTR("Sparta to Alliance forces, status report.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: status report - any wingman
+$Team: -1
+$MessageNew:  XSTR("We all were drawn out of subspace here while making a jump towards the Vega node. We have been unable to plot a jump out since then.", -1)
+$end_multi_text
++AVI Name: Head-VP1
+
+$Name: we'll get you out - sparta
+$Team: -1
+$MessageNew:  XSTR("Stand by. If the GTD Streaker is drawn here too, their equipment might just be powerful enough to plot a jump through this ... static.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: lance online - sparta
+$Team: -1
+$MessageNew:  XSTR("Pulsar Lance coming online. Let's hope we won't get any fry out", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: lance running hot - sparta
+$Team: -1
+$MessageNew:  XSTR("Lance systems are running hot. We're also starting to get dangerous feedbacks. We'll have to shut them down in 20 to 30 seconds.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: lance offline - sparta
+$Team: -1
+$MessageNew:  XSTR("Lance reactor 3 is reaching transphase critical threshold! Shutting down Pulsar Lance weapon system.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: calculate warpout 1 - sparta
+$Team: -1
+$MessageNew:  XSTR("Sparta to Streaker, we have been pulled out of subspace early by an unknown anomaly. Can your navigation systems plot a jump out of this area?", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: calculate warpout 2 - streaker
+$Team: -1
+$MessageNew:  XSTR("Stand by, Sparta.", -1)
+$end_multi_text
+
+$Name: calculate warpout 3 - streaker
+$Team: -1
+$MessageNew:  XSTR("Negative on warpout calculations. Even our sensor and navigations suites can't overcome that noise.", -1)
+$end_multi_text
+
+$Name: calculate warpout 4 - streaker
+$Team: -1
+$MessageNew:  XSTR("Hang on ... Navigation says the anomaly that pulled us out bears some similarities with inter-system jump nodes.", -1)
+$end_multi_text
+
+$Name: calculate warpout 5 - streaker
+$Team: -1
+$MessageNew:  XSTR("Confirmed, we're in close proximity to an expanding jump node of extreme intensity", -1)
+$end_multi_text
+
+$Name: calculate warpout 6 - sparta
+$Team: -1
+$MessageNew:  XSTR("What the heck does that mean? A jump node to where?", -1)
+$end_multi_text
+
+$Name: calculate warpout 7 - streaker
+$Team: -1
+$MessageNew:  XSTR("Unkown, Sparta. We're also picking up some unsusual activity towards the star...", -1)
+$end_multi_text
+
+$Name: supernova 1 - streaker
+$Team: -1
+$MessageNew:  XSTR("Holy Terra, Capella is going supernova! All units, prepare to warpout immediately!", -1)
+$end_multi_text
+
+$Name: supernova 2 - sparta
+$Team: -1
+$MessageNew:  XSTR("Warpout where? We can't plot a jump out to anywhere.", -1)
+$end_multi_text
+
+$Name: supernova 3 - streaker
+$Team: -1
+$MessageNew:  XSTR("Just engage the drive. We're jumping blind in whatever subspace anomaly is keeping us here in the first place.", -1)
+$end_multi_text
+
+$Name: mission start 1 - alpha
+$Team: -1
+$MessageNew:  XSTR("This is not the Vega node. Where are we?", -1)
+$end_multi_text
++AVI Name: Head-VP2
+
+$Name: mission start 2 - hot
+$Team: -1
+$MessageNew:  XSTR("Negative. It appears that our convoy and your wing have been pulled out of subspace due to an unknown anomaly.", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: mission start 3 - hot
+$Team: -1
+$MessageNew:  XSTR("Long range subspace communications and navigation are only picking up static noise. Standard communication methods have not yield any better result yet.", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: mission start 4 - hot
+$Team: -1
+$MessageNew:  XSTR("It is unlikely that our distress call gets picked up due to the star's natural noise.", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: mission start 5 - hot
+$Team: -1
+$MessageNew:  XSTR("The Sathanas has also been harassing us with independant subspace missile strikes. We believe they are about to launch a strikecraft assault. Assume escort positions.", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: 1st wave launches - av
+$Team: -1
+$MessageNew:  XSTR("Here they come. All fighters, stand by to engage.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: support - support
+$Team: -1
+$MessageNew:  XSTR("This is Hygeia 2-0-foxtrot-alpha-1: I still have a decent supply of missiles, but you'll have to call us manually. Our main comms took a bad hit and we've barely been able to jury-rig our current transmitter-reciever.", -1)
+$end_multi_text
++AVI Name: Head-TP8
+
+$Name: support bis - support
+$Team: -1
+$MessageNew:  XSTR("Which means, no automatic requests.", -1)
+$end_multi_text
++AVI Name: Head-TP8
 
 #Reinforcements		;! 0 total
 
@@ -6184,7 +6676,7 @@ $Sun: SunCapellaA
 
 #Music
 
-$Event Music: None
+$Event Music: 7: Revelation
 $Briefing Music: None
 
 #End

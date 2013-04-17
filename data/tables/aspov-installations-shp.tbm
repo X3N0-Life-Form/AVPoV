@@ -1,0 +1,114 @@
+#Ship Classes
+
+$Name:				Comet
+$Short name:			SupplyDepot
+$Species:				Terran
++Tech Description:
+XSTR("Developed after the Great War, and continuously upgraded in the years that followed, the Comet class supply depot is a modern, highly efficient small station, utilised by both the GTVA and civilian organisations for the administration and protection of cargo depots, or as centres for commerce and trade.  Although not itself armed, the Comet's sophisticated network of sensors and communications allow it to integrate with and significantly enhance the defensive capabilities of the sentry cannon webs that are generally deployed with the station.
+
+Designed with modularity and customisation in mind, the Comet is often altered to enhance it cargo storage or other capabilities. Common additions include cargo pads, additional storage facilities for atypical cargoes or additional habitable space. Further to this, the GTVA have designed a variant with its own onboard weapons systems, for use in more volatile systems, however these are not presently available to the civilian market.", -1)
+$end_multi_text
+$POF file:				CivDepot.pof
+$Detail distance:			(0, 5000, 10000, 35000)
+$Show damage:			NO
+$Density:				1
+$Damp:				0.2
+$Rotdamp:				0.2
+$Max Velocity:			0.0, 0.0, 0.0
+$Rotation time:			200.0, 200.0, 200.0
+$Rear Velocity:			0.0
+$Forward accel:			0.0
+$Forward decel:			0.0
+$Slide accel:			0.0
+$Slide decel:			0.0
+$Expl inner rad:			50.0
+$Expl outer rad:			500.0
+$Expl damage:			150.0
+$Expl blast:			600.0
+$Expl Propagates:			NO
+$Shockwave Speed:			0
+$Shockwave Count:			0
+$Default PBanks:			()
+$Default SBanks:			()
+$SBank Capacity:			()
+$Shields:				0
+$Power Output:			1.0
+$Max Oclk Speed:			0.0
+$Max Weapon Eng:			100.0
+$Hitpoints:				32000
+$Flags:				( "in tech database" )
+$AI Class:				Captain
+$Afterburner:			NO
+$Countermeasures:			0
+$Scan time:				12000
+$EngineSnd:				191
+$Closeup_pos:			0.0, 0.0, -455
+$Closeup_zoom:			0.5
+$Score:				150
+$Subsystem: 			radar, 			5,	3.0
+$Subsystem:			Communication,		10, 	0.0
+$Subsystem:			Sensors,		10, 	0.0
+$Subsystem:			Reactor,		25, 	0.0
+$Subsystem:			Fightertbay,		0, 	0.0
+
+
+$Name:				Comet#Armed
+$Short name:			SupplyDepotGTVA
+$Species:				Terran
++Tech Description:
+XSTR("Developed after the Great War, and continuously upgraded in the years that followed, the Comet class supply depot is a modern, highly efficient small station, utilised by both the GTVA and civilian organisations for the administration and protection of cargo depots, or as centres for commerce and trade.  Although not itself armed, the Comet's sophisticated network of sensors and communications allow it to integrate with and significantly enhance the defensive capabilities of the sentry cannon webs that are generally deployed with the station.
+
+Designed with modularity and customisation in mind, the Comet is often altered to enhance it cargo storage or other capabilities. Common additions include cargo pads, additional storage facilities for atypical cargoes or additional habitable space. Further to this, the GTVA have designed a variant with its own onboard weapons systems, for use in more volatile systems, however these are not presently available to the civilian market.", -1)
+$end_multi_text
+$POF file:				CivDepotArmed.pof
+$Detail distance:			(0, 5000, 10000, 35000)
+$Show damage:			NO
+$Density:				1
+$Damp:				0.2
+$Rotdamp:				0.2
+$Max Velocity:			0.0, 0.0, 0.0
+$Rotation time:			200.0, 200.0, 200.0
+$Rear Velocity:			0.0
+$Forward accel:			0.0
+$Forward decel:			0.0
+$Slide accel:			0.0
+$Slide decel:			0.0
+$Expl inner rad:			50.0
+$Expl outer rad:			500.0
+$Expl damage:			150.0
+$Expl blast:			600.0
+$Expl Propagates:			NO
+$Shockwave Speed:			0
+$Shockwave Count:			0
+$Default PBanks:			()
+$Default SBanks:			()
+$SBank Capacity:			()
+$Shields:				0
+$Power Output:			1.0
+$Max Oclk Speed:			0.0
+$Max Weapon Eng:			100.0
+$Hitpoints:				40000
+$Flags:				( "in tech database" )
+$AI Class:				Captain
+$Afterburner:			NO
+$Countermeasures:			0
+$Scan time:				12000
+$EngineSnd:				191
+$Closeup_pos:			0.0, 0.0, -455
+$Closeup_zoom:			0.5
+$Score:				150
+$Subsystem: 			radar, 			5,	3.0
+$Subsystem:			Communication,		10, 	0.0
+$Subsystem:			Sensors,		10, 	0.0
+$Subsystem:			Reactor,		25, 	0.0
+$Subsystem:			Fightertbay,		0, 	0.0       
+$Subsystem: 			turret01,		7,	0.0
+	$Default PBanks: ( "AAAf" )
+	$Flags: ( "check hull" )
+$Subsystem: 			turret02,		4,	0.0
+	$Default PBanks: ( "Terran Turret" )
+$Subsystem: 			turret03,		4,	0.0
+	$Default PBanks: ( "Terran Turret" )
+
+
+#End
