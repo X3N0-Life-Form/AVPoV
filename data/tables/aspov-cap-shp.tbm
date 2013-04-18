@@ -2518,6 +2518,111 @@ $Subsystem:                 turret30,0.125,0.5
 ;; New Ships
 ;; -------------------------------------------------------------- ;;
 
+$Name:		SC Asura
+$Short name:					Asura
+$Species:                       Shivan
+$POF file:                      Asura.pof
+$Detail distance:				(0, 300, 500, 1000)
+$Show damage:					YES
+$Density:                       2
+$Damp:                          0.5
+$Rotdamp:                       0.5
+$Max Velocity:					65.0, 65.0, 65.0
+$Rotation time:					10.0, 10.0, 5.0
+$Rear Velocity:					65.0
+$Forward accel:					4.0
+$Forward decel:					2.0
+$Slide accel:					2.0
+$Slide decel:					2.0
+$Glide:							YES
+	+Dynamic Glide Cap:		YES
+$Expl inner rad:				75.0
+$Expl outer rad:				150.0
+$Expl damage:					50.0
+$Expl blast:					1500.0
+$Expl Propagates:				NO
+$Shockwave Speed:				100.0
+$Shockwave Count:				1
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       3000
+$Shield Color:					255 92 92
+$Power Output:					4.0
+$Max Oclk Speed:				75.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     7500
+$Armor Type:					Shivan Capital Ship Armor
+$Flags:                         ( "cruiser" "generate icon" )
+$AI Class:                      Captain
+$Afterburner:               	YES
+   +Aburn Max Vel:			80.0, 80.0, 80.0
+   +Aburn For accel:		0.75
+   +Aburn Max Reverse Vel:	80.0
+   +Aburn Rev accel:		0.75
+   +Aburn Fuel:				420.0
+   +Aburn Burn Rate:		55.0
+   +Aburn Rec Rate:			29.0
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						133
+$Closeup_pos:					0.0, 0.0, -150
+$Closeup_zoom:					0.7
+$Score:							50
+$Subsystem:		turret01,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret02,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret03,			5,5.0
+	$Default PBanks:			( "Shivan Scatter Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret04,			5,5.0
+	$Default PBanks:			( "Shivan Scatter Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret05,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret06,			5,5.0
+	$Default PBanks:			( "Shivan Scatter Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret07,			5,5.0
+	$Default PBanks:			( "Shivan Heavy Anticap Laser" )
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" )
+$Subsystem:		turret08,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret09,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret10,			5,5.0
+	$Default PBanks:			( "Shivan Sniper Gun" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret11,			5,1.0
+	$Default PBanks:			( "Shivan Heavy Anticap Laser" )
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" )
+$Subsystem:		turret12,			5,1.0
+	$Default PBanks:			( "Shivan Heavy Anticap Laser" )
+	$ROF:
+		+Multiplier:	2.0
+	$Flags: 					( "check hull" )
+$Subsystem:		turret13,			5,1.0
+	$Default SBanks:			( "Hornet#Shivan#Asura" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret14,			5,1.0
+	$Default SBanks:			( "Hornet#Shivan#Asura" )
+	$Flags: 					( "check hull" )
+$Subsystem:		sensors,			10,0.0
+$Subsystem:		communication,		10,0.0
+$Subsystem:		engine,				35,0.0
+$Subsystem:		weapons,			15,0.0
+$Subsystem:		navigation,			5,0.0
+
 $Name:                          GVC Mentu Enforcer
 $Short name:					HTL-Mentu-b.pof
 $Species:                       Vasudan
