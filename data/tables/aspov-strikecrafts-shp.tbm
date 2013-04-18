@@ -444,7 +444,7 @@ $Shockwave Speed: 					0.0
 $Weapon Model Draw Distance:		100
 $Allowed PBanks:        		    ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim" "UD-8 Kayser" "Fire Spitter" "Hayg Mas" "Sahr AS" "Sehku" "Hell Spitter" )
 $Allowed Dogfight PBanks:        	( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Lamprey" "Circe" "Maxim")
-$Default PBanks:        			( "Prometheus S" "Hell Spitter" )
+$Default PBanks:        			( "Fire Spitter" "Hell Spitter" )
 $PBank Capacity:		( 100, 100 )
 $Allowed SBanks:        			( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
 $Allowed Dogfight SBanks:        	( "Rockeye"  "Tempest" "Harpoon" "Hornet" "Tornado" "Trebuchet" "Piranha" "Stiletto II" "Cyclops" "Cyclops#short" "Helios" "EMP Adv." "Infyrno" )
