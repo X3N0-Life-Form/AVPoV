@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 01/30/13 at 22:41:40
+$Modified: 04/18/13 at 21:19:35
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2050.868896, 374.367035, 2596.786133
++Viewer pos: 1080.061768, 359.128052, 3860.308105
 +Viewer orient:
-	0.899396, -0.000001, -0.437135,
-	-0.069764, 0.987182, -0.143539,
-	0.431532, 0.159595, 0.887868
+	0.052191, 0.000000, -0.998637,
+	0.327955, 0.944538, 0.017140,
+	0.943251, -0.328403, 0.049296
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Friendlies" "Gemini" "Snipers" "Libra" )
@@ -91,7 +91,7 @@ $Ship Choices: (
 	"Trebuchet"	13
 )
 
-#Objects		;! 12 total
+#Objects		;! 8 total
 
 $Name: Alpha 1		;! Object #0
 $Class: SF Mara (terrans)
@@ -206,43 +206,27 @@ $Determination: 10
 +Score: 670
 
 $Name: Friend		;! Object #2
-$Class: GTCv Stratos
+$Class: GTC Cretheus
 $Team: Friendly
 $Location: 2660.781494, -284.025543, 4784.271973
 $Orientation:
 	-0.999209, -0.032015, 0.023662,
-	-0.028870, 0.991981, 0.123048,
-	-0.027412, 0.122268, -0.992119
+	-0.039568, 0.733108, -0.678961,
+	0.004390, -0.679358, -0.733794
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
++Subsystem: turret05-base
++Subsystem: turret06-base
++Subsystem: turret07-base
++Subsystem: turret08-base
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -257,34 +241,27 @@ $Determination: 10
 +Score: 90
 
 $Name: Bad Guy		;! Object #3
-$Class: SC Rakshasa
+$Class: SC Cain
 $Team: Hostile
-$Location: 2691.408447, -117.792305, 3421.735107
+$Location: 2452.723389, -117.792244, 4135.171875
 $Orientation:
 	0.997551, 0.002797, -0.069887,
-	0.015945, 0.963793, 0.266173,
-	0.068101, -0.266636, 0.961388
+	0.045591, 0.731753, 0.680043,
+	0.053042, -0.681564, 0.729834
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
-+Primary Banks: ( "Shivan Multi Turret Up" )
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
 +Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -297,6 +274,7 @@ $Determination: 10
 +Special Hitpoints: 80000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 150
 
 $Name: Bad 1		;! Object #4
@@ -312,6 +290,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -338,6 +317,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -364,6 +344,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -390,6 +371,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -403,123 +385,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Bombers 1		;! Object #8
-$Class: SB Seraphim
-$Team: Hostile
-$Location: 2942.181152, 981.990540, 4030.362549
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Cap_Killer
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
-+Subsystem: turret01
-+Subsystem: turret02
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Score: 14
-
-$Name: Bombers 2		;! Object #9
-$Class: SB Seraphim
-$Team: Hostile
-$Location: 2951.954834, 981.990540, 3937.492188
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Cap_Killer
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
-+Subsystem: turret01
-+Subsystem: turret02
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Score: 14
-
-$Name: Bombers 3		;! Object #10
-$Class: SB Seraphim
-$Team: Hostile
-$Location: 3097.506592, 981.990540, 4087.608398
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Cap_Killer
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
-+Subsystem: turret01
-+Subsystem: turret02
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Score: 14
-
-$Name: Bombers 4		;! Object #11
-$Class: SB Seraphim
-$Team: Hostile
-$Location: 2913.786865, 981.990540, 3948.420166
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Cap_Killer
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Light Laser" "Shivan Heavy Anticap Laser" "Shivan Light Laser" )
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" "Shivan Bomb" )
-+Subsystem: turret01
-+Subsystem: turret02
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Score: 14
-
-#Wings		;! 3 total
+#Wings		;! 2 total
 
 $Name: Alpha
 $Waves: 1
@@ -550,24 +416,6 @@ $Ships: (		;! 4 total
 	"Bad 2"
 	"Bad 3"
 	"Bad 4"
-)
-$AI Goals: ( goals ( ai-chase "Friend" 50 ) )
-+Flags: ( )
-
-$Name: Bombers
-$Waves: 1
-$Wave Threshold: 0
-$Special Ship: 0		;! Bombers 1
-
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Ships: (		;! 4 total
-	"Bombers 1"
-	"Bombers 2"
-	"Bombers 3"
-	"Bombers 4"
 )
 $AI Goals: ( goals ( ai-chase "Friend" 50 ) )
 +Flags: ( )

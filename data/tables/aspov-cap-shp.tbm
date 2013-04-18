@@ -2544,7 +2544,7 @@ $Expl inner rad:				150.0
 $Expl outer rad:				650.0
 $Expl damage:					200.0
 $Expl blast:					10000.0
-$Expl Propagates:				YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Expl Propagates:				YES
 $Shockwave Speed:				500.0                                           ;; speed shockwave expands at, 0 means no shockwave
 $Shockwave Count:	2
 $Default PBanks:				()
@@ -2555,6 +2555,7 @@ $Power Output:					100.0
 $Max Oclk Speed:				60.0
 $Max Weapon Eng:				100.0
 $Hitpoints:                     40000
+$Armor Type: 					HeavyArmor
 $Flags:                         ( "cruiser" "in tech database")
 $AI Class:                      Captain
 $Afterburner:					NO
@@ -2674,6 +2675,7 @@ $Power Output:					90.0
 $Max Oclk Speed:				35.0
 $Max Weapon Eng:				100.0
 $Hitpoints:                     17500
+$Armor Type: 					HeavyArmor
 $Flags:                         ( "cruiser" "in tech database" )
 $AI Class:                      Captain
 $Afterburner:					NO
@@ -2737,7 +2739,7 @@ $Expl inner rad:				170.0
 $Expl outer rad:				625.0
 $Expl damage:					250.0
 $Expl blast:					10000.0
-$Expl Propagates:				YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Expl Propagates:				YES
 $Shockwave Speed:				500.0                                           ;; speed shockwave expands at, 0 means no shockwave
 $Shockwave Count:	2
 $Default PBanks:				()
@@ -2748,6 +2750,7 @@ $Power Output:					100.0
 $Max Oclk Speed:				60.0
 $Max Weapon Eng:				100.0
 $Hitpoints:                     45000
+$Armor Type: 					HeavyArmor
 $Flags:                         ( "cruiser" )
 $AI Class:                      Big
 $Afterburner:					NO
@@ -2813,6 +2816,150 @@ $Subsystem:                     sensors,                                 5,0.0
 	$AWACS:			3500
 $Subsystem:                     navigation,                      5,0.0
 $Subsystem:                     weapons,                                 5,0.0
+
+$Name:                          GTC Cretheus
+$Short name:					Cretheus
+$Species:                       Terran
+	+Tech Description:			XSTR("TODO", -1)
+$end_multi_text
+$POF file:                      GTCCretheus.pof
+$Detail distance: 				(0, 215, 444 )
+$Show damage:					YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.0
+$Max Velocity:					0.0, 0.0, 50.0
+$Rotation time:					45.0, 45.0, 45.0
+$Rear Velocity:					0.0
+$Forward accel:					7.5
+$Forward decel:					3.5
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				125.0
+$Expl outer rad:				650.0
+$Expl damage:					100.0
+$Expl blast:					3500.0
+$Expl Propagates:				YES
+$Shockwave Speed:				500.0
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       0
+$Power Output:					90.0
+$Max Oclk Speed:				25.0
+$Max Weapon Eng:				100.0
+$Hitpoints:                     15000
+$Armor Type: 					HeavyArmor
+$Flags:                         ( "cruiser" )
+$AI Class:                      Captain
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						128
+$Closeup_pos:					0.0, 0.0, -100
+$Closeup_zoom:					0.5
+$Score:							75
+$Subsystem:		turret01-base, 		2, 5.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+  	$type:						initial
+		+relative_angle:	90,0,0
+$Subsystem:		turret02-base, 		3, 5.0
+	$Default PBanks:			( "Heavy Flak#Cretheus" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+  	$type:						initial
+		+relative_angle:	90,0,0
+$Subsystem:		turret03-base, 		2, 5.0
+	$Default PBanks:			( "Heavy Flak#Cretheus" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+  	$type:						initial
+		+relative_angle:	90,0,0
+$Subsystem:		turret04-base, 		2, 5.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:						( "check hull" "reset when idle" )
+	$animation:					triggered
+  	$type:						initial
+		+relative_angle:	90,0,0
+$Subsystem:		turret05-base, 		2, 5.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation: 				triggered
+  	$type: 						initial
+		+relative_angle:	90,180,0
+$Subsystem:		turret06-base, 		2, 5.0
+	$Default PBanks:			( "Heavy Flak#Cretheus" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation: 				triggered
+  	$type: 						initial
+		+relative_angle:	90,180,0
+$Subsystem:		turret07-base, 		2, 5.0
+	$Default PBanks:			( "Heavy Flak#Cretheus" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Max Turrets per Bomb:		1
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation: 				triggered
+  	$type: 						initial
+		+relative_angle:	90,180,0
+$Subsystem:		turret08-base, 		2, 5.0
+	$Default PBanks:			( "Mass Driver" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation: 				triggered
+  	$type: 						initial
+		+relative_angle:	90,180,0
+$Subsystem:		sensors,			4, 0
+$Subsystem:		communications,		4, 0.0
+$Subsystem:		navigation,			4, 0.0
+$Subsystem:		weapons,			4, 0.0
+$Subsystem:		engine01,			15, 0.0
+	$Engine Wash:				Default100
+$Subsystem:		engine02,			15, 0.0
+	$Engine Wash:				Default100
+$Subsystem:		fighterbay,			0, 0.0
 
 
 $Name:		GTCv Sparta
