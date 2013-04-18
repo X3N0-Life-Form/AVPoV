@@ -134,13 +134,12 @@ $Lifetime:								11.0
 $Energy Consumed:						0.0														;; Energy used when fired
 $Cargo Size:							20.0														;; Amount of space taken up in weapon cargo
 $Homing:								YES
-	;; the following indented fields are only required when $Homing is YES
 	+Type:								ASPECT													;; Legal: HEAT, ASPECT
 	+Turn Time:							1.75
 	+Min Lock Time:						4.5														;; Minimum lock time (in seconds)
 	+Lock Pixels/Sec:					60                                           ;; Pixels moved per sec while locking
-	+Catch-up Pixels/Sec:				100														;; Pixels moved per sec while catching up
-	+Catch-up Penalty:					30															;; Extra pixels to move after catching up
+	+Catch-up Pixels/Sec:				100
+	+Catch-up Penalty:					30
 $LaunchSnd:								92
 $ImpactSnd:								88
 $FlyBySnd:								-1
@@ -159,5 +158,52 @@ $Impact Explosion:						ExpMissileHit1
 $Impact Explosion Radius:				9.0
 $Tag:									3 10.0
 $SSM:									2 ; SSM barrage
+
+$Name:                                 	Cluster SSM TAG#Shivan
+	+Title:								XSTR("Shivan Cluster Bomb TAG",-1)
+	+Tech Description:
+		XSTR("",-1)
+		$end_multi_text
+$Model File:							S_Trebuchet.pof
+$Mass:									1.0
+$Velocity:								300.0
+$Fire Wait:								3.5
+$Damage:								10
+$Damage Type:							ShivanWeapon
+$Blast Force:							10.0
+$Inner Radius:							10.0
+$Outer Radius:							30.0
+$Shockwave Speed:						0                                            ;; velocity of shockwave.  0 for none.
+$Armor Factor:							0.1
+$Shield Factor:							0.1
+$Subsystem Factor:						0.1
+$Lifetime:								13.0
+$Energy Consumed:						0.0														;; Energy used when fired
+$Cargo Size:							10.0
+$Homing:								YES
+	+Type:								ASPECT													;; Legal: HEAT, ASPECT
+	+Turn Time:							1.25
+	+Min Lock Time:						3.5														;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					30
+	+Catch-up Pixels/Sec:				50
+	+Catch-up Penalty:					15
+$LaunchSnd:								92
+$ImpactSnd:								88 
+$FlyBySnd:								-1
+$Rearm Rate:							0.33
+$Flags:									( "player allowed" )
+$Trail:
+	+Start Width:						0.25                                         ;; Width of trail nearest missile
+	+End Width:							0.5                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:							0.3                                          ;; how many seconds before trail disappears
+	+Bitmap:							missiletrail06
+$Icon:									iconTagC
+$Anim:									tagC
+$Impact Explosion:						ExpMissileHit1
+$Impact Explosion Radius:				9.0
+$Tag:									3 10.0
+$SSM:									4 ; cluster SSM
 
 #End

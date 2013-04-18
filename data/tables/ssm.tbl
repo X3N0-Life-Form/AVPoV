@@ -38,5 +38,14 @@ $SSM:				; 3
 	+Custom Message:*Inbound Mordiggian Bomb*
 	+Custom Sound:	185
 
+$SSM:				; 4
+	+Weapon:		Shivan Cluster SSM
+	+Count:			1
+	+WarpRadius:	25
+	+WarpTime:		4
+	+Radius:		800
+	+Offset:		1
+	+Custom Message:*Inbound Cluster Strike*
+	+Custom Sound:	185
 	
 #end
