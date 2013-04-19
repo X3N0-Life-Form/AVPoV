@@ -8,6 +8,9 @@ AVPoV-videos.lnk
 
 data/cache/
 
+data/tables/*.disabled
+data/scripts/*.disabled
+
 data/tables/aspov-adjustGunshipWeapons-sct.tbm_
 data/music/PST_Sigil-arv.ogg
 data/music/PST_Sigil-btl1.ogg
@@ -20,3 +23,4 @@ data/missions/Backup.*
 data/missions/torpedoes.fs2
 data/missions/Z_show.fs2
 data/missions/Z_screeny.fs2
+data/missions/0_Outnumbered*
