@@ -142,11 +142,17 @@ $Impact Explosion:                     ExpMissileHit1
 $Impact Explosion Radius:					15.0
 
 
-$Name:									Catapult ;; used on Arcadia installations
+$Name:									Catapult
 	+Tech Title:				   XSTR("'Catapult' Long Range Torpedo", -1)
 	+Tech Anim:					   Tech_Helios
 	+Tech Description: 
-		XSTR("TODO", -1)
+		XSTR("CLASSIFIED - Level Rho
+		
+		The Alliance's most powerful warhead is the still-classified GTM-852 'Catapult' Long Range Torpedo. Combining an extremely powerful warhead with a state-of-the-art engine, the Catapult features unparalleled range and firepower. However, this comes at the cost of subsystem-specific aspect lock, though both commanders and engineers agree that this is by no means the purpose of this warhead. Though it is capable of shattering the hull of even the thoughest Terran-Vasudan warships in at most a few impacts, its prohibitive cost forces commanders to deploy this weapon against already softened up targets, or as a finisher weapon.
+		
+		Another interesting feature of the Catapult is its ability to be deployed by independant launchers, making it an ideal ambush weapon, unleashing a sudden hellfire against unsuspecting battlegroups or military convoys. In cases of extreme emergency, these launchers can also be used to fire the Catapult from a ship's fighterbay or docking ports, as demonstrated by SOC operatives during Operation Havoc against NTF forces.
+		
+		Too large to be mounted on bombers, the Catapult is by definiton a capital ship weapon. Only newer warships, such as the Sparta-class corvette or the Malta-class torpedo boat, mount compatible launchers, although some Arcadia installations have been successfully refitted with heavy torpedo tubes replacing their standard anti-fighter missile launchers. The bulk of the Catapult reserves are located in the Capella and Beta Aquilae systems, and like the Helios, require special authorisation by the Security Council in order to be deployed.", -1)
 	$end_multi_text
 $Model File:							helios.pof
 $Mass:									35.0
