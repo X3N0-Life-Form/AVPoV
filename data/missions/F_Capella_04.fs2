@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 04/19/13 at 22:04:48
+$Modified: 04/24/13 at 21:33:41
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -14,7 +14,7 @@ $Mission Desc:
 ", -1)
 $end_multi_text
 +Game Type Flags: 1
-+Flags: 128
++Flags: 262272
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1209.705933, 3214.632568, -564.141418
++Viewer pos: 9627.751953, 422.894928, 14650.788086
 +Viewer orient:
-	0.999721, 0.000000, 0.023633,
-	0.006881, 0.956671, -0.291089,
-	-0.022609, 0.291170, 0.956404
+	-0.371003, 0.000002, -0.928632,
+	0.549545, 0.806100, -0.219550,
+	0.748570, -0.591779, -0.299067
 
 
 $Skybox Model: Starfield.pof
@@ -38,7 +38,8 @@ $AI Profile: myProfile
 
 $Variables:
 (
-		0		"stone_target"		"1"		"number"
+		0		"Sath-hull"		"94"		"number"		"player-persistent"
+		1		"stone_target"		"1"		"number"
 )
 #Fiction Viewer
 
@@ -136,7 +137,7 @@ $Ship Choices: (
 	"Crossbow"	120
 )
 
-#Objects		;! 234 total
+#Objects		;! 235 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -157,7 +158,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "player-start" "invulnerable" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -325,7 +326,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50
-+Special Hitpoints: 2000000
++Special Hitpoints: 2750000
 +Group: 0
 +Use Table Score:
 +Score: 10000
@@ -413,11 +414,11 @@ $Dockee Point: Dock01
 $Name: Dockpoint dummies 1		;! Object #6
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8739.858398, -42.109104, 9201.695313
+$Location: 8739.858398, -42.109085, 9201.695313
 $Orientation:
-	0.074549, 0.928340, -0.364181,
-	0.631052, 0.238857, 0.738052,
-	0.772151, -0.284839, -0.568023
+	0.074548, 0.928340, -0.364181,
+	0.631052, 0.238858, 0.738052,
+	0.772151, -0.284837, -0.568024
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -442,11 +443,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704032, 9213.975586
+$Location: 8706.747070, 12.704030, 9213.975586
 $Orientation:
-	-0.074363, -0.928412, 0.364037,
+	-0.074363, -0.928411, 0.364037,
 	0.670575, 0.223638, 0.707329,
-	-0.738105, 0.296714, 0.605939
+	-0.738105, 0.296714, 0.605938
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -471,11 +472,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.632813, -2.463066, 9187.411133
+$Location: 8741.631836, -2.462790, 9187.413086
 $Orientation:
-	0.755451, -0.290064, -0.587500,
-	0.652744, 0.255539, 0.713179,
-	-0.056738, -0.922260, 0.382385
+	0.755422, -0.290428, -0.587358,
+	0.652752, 0.255535, 0.713173,
+	-0.057035, -0.922147, 0.382614
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -500,11 +501,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.361328, -30.218004, 9229.858398
+$Location: 8704.362305, -30.218332, 9229.856445
 $Orientation:
-	0.755422, -0.290431, -0.587357,
-	0.652752, 0.255536, 0.713173,
-	-0.057036, -0.922146, 0.382616
+	0.755390, -0.290828, -0.587201,
+	0.652760, 0.255532, 0.713167,
+	-0.057360, -0.922021, 0.382867
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -592,11 +593,11 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.479492, 5.504860, 11767.511719
+$Location: 13005.477539, 5.504875, 11767.512695
 $Orientation:
-	0.177112, 0.000023, -0.984235,
-	0.984242, 0.000032, 0.177113,
-	0.000036, -1.000000, -0.000016
+	0.176978, 0.000024, -0.984259,
+	0.984266, 0.000032, 0.176979,
+	0.000036, -1.000000, -0.000017
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -635,7 +636,7 @@ $Dockee Point: Frontside dock
 $Name: Ganymede Beta		;! Object #12
 $Class: GTI Ganymede
 $Team: Friendly
-$Location: 15597.318359, -0.001644, 10491.915039
+$Location: 15597.318359, 844.683533, 10491.915039
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -662,7 +663,7 @@ $Determination: 10
 $Name: Ganymede Alpha		;! Object #13
 $Class: GTI Ganymede
 $Team: Friendly
-$Location: 13410.742188, -0.002077, 9052.814453
+$Location: 13410.742188, -168.269302, 9052.814453
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -934,7 +935,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 15
-+Special Hitpoints: 270000
++Special Hitpoints: 405000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -3189,7 +3190,7 @@ $Orientation:
 	0.000000, 0.939100, 0.343646
 $AI Behavior: None
 +AI Class: Big
-$AI Goals: ( goals ( ai-chase "Searing Fate" 50 ) ( ai-chase "Crixalis" 48 ) ( ai-chase "Apep" 46 ) )
+$AI Goals: ( goals ( ai-waypoints "Hellknight path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -7329,6 +7330,35 @@ $Determination: 10
 +Use Table Score:
 +Score: 210
 
+$Name: Comet Alpha		;! Object #234
+$Class: Comet#Armed
+$Team: Friendly
+$Location: 10366.564453, -0.000524, 14414.399414
+$Orientation:
+	0.662884, 0.226869, 0.713523,
+	-0.097427, 0.971022, -0.218230,
+	-0.742356, 0.075144, 0.665778
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 150
+
 #Wings		;! 43 total
 
 $Name: Alpha
@@ -7428,16 +7458,19 @@ $AI Goals: ( goals ( ai-chase-wing "Ballard Beta" 50 ) ( ai-chase-wing "Ballard 
 +Wave Delay Max: 47
 
 $Name: Epsilon
-$Waves: 1
+$Waves: 2
 $Wave Threshold: 0
 $Special Ship: 0		;! Epsilon 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Apep
-$Arrival Cue: ( is-event-true-delay 
-   "Apep deploys bombers" 
-   0 
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "Apep deploys bombers" 
+      0 
+   )
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -7449,18 +7482,23 @@ $Ships: (		;! 4 total
 )
 $AI Goals: ( goals ( ai-chase "Sathanas" 47 ) )
 +Flags: ( )
++Wave Delay Min: 5
++Wave Delay Max: 10
 
 $Name: Delta
-$Waves: 1
+$Waves: 2
 $Wave Threshold: 0
 $Special Ship: 0		;! Delta 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Apep
-$Arrival Cue: ( is-event-true-delay 
-   "Apep deploys bombers" 
-   0 
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "Apep deploys bombers" 
+      0 
+   )
+   ( not ( is-destroyed-delay 0 "Apep" ) ) 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -7472,6 +7510,8 @@ $Ships: (		;! 4 total
 )
 $AI Goals: ( goals ( ai-chase "Sathanas" 47 ) )
 +Flags: ( )
++Wave Delay Min: 5
++Wave Delay Max: 10
 
 $Name: Lambda
 $Waves: 1
@@ -8256,7 +8296,7 @@ $Ships: (		;! 3 total
 )
 +Flags: ( )
 
-#Events		;! 67 total
+#Events		;! 83 total
 
 $Formula: ( when 
    ( and 
@@ -8515,7 +8555,7 @@ $Formula: ( when
    )
 )
 +Name: update Apep path
-+Repeat Count: 200
++Repeat Count: 800
 +Interval: 10
 
 $Formula: ( when 
@@ -8686,7 +8726,7 @@ $Formula: ( when
    )
 )
 +Name: update stone path
-+Repeat Count: 200
++Repeat Count: 800
 +Interval: 10
 
 $Formula: ( when 
@@ -8707,7 +8747,7 @@ $Formula: ( when
 )
 +Name: stone - max speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
 
 $Formula: ( when 
@@ -8728,7 +8768,7 @@ $Formula: ( when
 )
 +Name: stone - reduced speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
 
 $Formula: ( when 
@@ -8756,7 +8796,7 @@ $Formula: ( when
    )
 )
 +Name: update crixalis path
-+Repeat Count: 200
++Repeat Count: 800
 +Interval: 10
 
 $Formula: ( when 
@@ -8774,7 +8814,7 @@ $Formula: ( when
 )
 +Name: crixalis - max speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
 
 $Formula: ( when 
@@ -8792,7 +8832,7 @@ $Formula: ( when
 )
 +Name: crixalis - reduced speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
 
 $Formula: ( when 
@@ -8820,7 +8860,7 @@ $Formula: ( when
    )
 )
 +Name: update searing fate path
-+Repeat Count: 200
++Repeat Count: 800
 +Interval: 10
 
 $Formula: ( when 
@@ -8841,7 +8881,7 @@ $Formula: ( when
 )
 +Name: searing fate - max speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
 
 $Formula: ( when 
@@ -8862,8 +8902,274 @@ $Formula: ( when
 )
 +Name: searing fate - reduced speed
 +Repeat Count: -1
-+Trigger Count: 200
++Trigger Count: 800
 +Interval: 20
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Hellknight" ) 
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 0 "Searing Fate" ) 
+      )
+      ( set-object-position 
+         "Hellknight path:1" 
+         ( get-object-x "Searing Fate" ) 
+         ( get-object-y "Searing Fate" ) 
+         ( get-object-z "Searing Fate" ) 
+      )
+      ( if-then-else 
+         ( not 
+            ( is-destroyed-delay 0 "Crixalis" ) 
+         )
+         ( set-object-position 
+            "Hellknight path:1" 
+            ( get-object-x "Crixalis" ) 
+            ( get-object-y "Crixalis" ) 
+            ( get-object-z "Crixalis" ) 
+         )
+         ( if-then-else 
+            ( not 
+               ( is-destroyed-delay 
+                  0 
+                  "Stone of Dovka" 
+               )
+            )
+            ( set-object-position 
+               "Hellknight path:1" 
+               ( get-object-x "Stone of Dovka" ) 
+               ( get-object-y "Stone of Dovka" ) 
+               ( get-object-z "Stone of Dovka" ) 
+            )
+            ( if-then-else 
+               ( not ( is-destroyed-delay 0 "Apep" ) ) 
+               ( set-object-position 
+                  "Hellknight path:1" 
+                  ( get-object-x "Apep" ) 
+                  ( get-object-y "Apep" ) 
+                  ( get-object-z "Apep" ) 
+               )
+               ( if-then-else 
+                  ( not 
+                     ( is-destroyed-delay 0 "Babylon" ) 
+                  )
+                  ( set-object-position 
+                     "Hellknight path:1" 
+                     ( get-object-x "Babylon" ) 
+                     ( get-object-y "Babylon" ) 
+                     ( get-object-z "Babylon" ) 
+                  )
+                  ( do-nothing ) 
+               )
+            )
+         )
+      )
+   )
+   ( if-then-else 
+      ( < 
+         ( distance 
+            "Hellknight" 
+            "Hellknight path:1" 
+         )
+         3000 
+      )
+      ( cap-waypoint-speed "Hellknight" 10 ) 
+      ( cap-waypoint-speed "Hellknight" -1 ) 
+   )
+)
++Name: update hellknight path + speed
++Repeat Count: 800
++Interval: 10
+
+$Formula: ( when-argument 
+   ( random-of 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+   )
+   ( and 
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Apep" 
+            "<argument>" 
+            0 
+         )
+      )
+      ( is-event-true-delay "Apep < 80" 0 ) 
+   )
+   ( explosion-effect 
+      ( get-object-x "Apep" "<argument>" ) 
+      ( get-object-y "Apep" "<argument>" ) 
+      ( get-object-z "Apep" "<argument>" ) 
+      3200 
+      50 
+      1200 
+      400 
+      1200 
+      600 
+      0 
+      7 
+   )
+   ( sabotage-subsystem 
+      "Apep" 
+      "<argument>" 
+      100 
+   )
+   ( invalidate-argument "<argument>" ) 
+   ( if-then-else 
+      ( string-equals 
+         "<argument>" 
+         "turret05" 
+      )
+      ( send-message 
+         "Apep" 
+         "High" 
+         "launcher 01 down - apep" 
+      )
+      ( if-then-else 
+         ( string-equals 
+            "<argument>" 
+            "turret06" 
+         )
+         ( send-message 
+            "Apep" 
+            "High" 
+            "launcher 02 down - apep" 
+         )
+         ( if-then-else 
+            ( string-equals 
+               "<argument>" 
+               "turret07" 
+            )
+            ( send-message 
+               "Apep" 
+               "High" 
+               "launcher 03 down - apep" 
+            )
+            ( if-then-else 
+               ( string-equals 
+                  "<argument>" 
+                  "turret08" 
+               )
+               ( send-message 
+                  "Apep" 
+                  "High" 
+                  "launcher 04 down - apep" 
+               )
+               ( if-then-else 
+                  ( string-equals 
+                     "<argument>" 
+                     "turret09" 
+                  )
+                  ( send-message 
+                     "Apep" 
+                     "High" 
+                     "launcher 05 down - apep" 
+                  )
+                  ( if-then-else 
+                     ( string-equals 
+                        "<argument>" 
+                        "turret10" 
+                     )
+                     ( send-message 
+                        "Apep" 
+                        "High" 
+                        "launcher 06 down - apep" 
+                     )
+                     ( do-nothing ) 
+                  )
+               )
+            )
+         )
+      )
+   )
+)
++Name: pop a launcher
++Repeat Count: 5
++Interval: 22
+
+$Formula: ( when-argument 
+   ( every-of 
+      "turret05" 
+      "turret06" 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+   )
+   ( is-subsystem-destroyed-delay 
+      "Apep" 
+      "<argument>" 
+      0 
+   )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "all launchers down - apep" 
+   )
+)
++Name: all launchers down
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Stone of Dovka" 
+   )
+   ( send-message 
+      "#Stone of Dovka" 
+      "High" 
+      "stone of dovka down - sod" 
+   )
+   ( if-then-else 
+      ( and 
+         ( not 
+            ( is-event-true-delay 
+               "1st wave destroyed" 
+               0 
+            )
+         )
+         ( is-event-true-delay 
+            "1st wave armor swaps" 
+            0 
+         )
+      )
+      ( training-msg 
+         "stone targeting - lost" 
+      )
+      ( do-nothing ) 
+   )
+)
++Name: stone of dovka down
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Searing Fate" ) 
+   ( send-message 
+      "#Searing Fate" 
+      "High" 
+      "searing fate down - sf" 
+   )
+)
++Name: searing fate down
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Crixalis" ) 
+   ( send-message 
+      "#Crixalis" 
+      "High" 
+      "crixalis down - crixa" 
+   )
+)
++Name: crixalis down
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( < ( hits-left "Apep" ) 80 ) 
@@ -8881,6 +9187,11 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Apep" ) 55 ) 
    ( change-ai-class "Demon" "Apep" ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "apep < 55 - apep#obster" 
+   )
 )
 +Name: Apep < 55
 +Repeat Count: 1
@@ -8949,21 +9260,16 @@ $Formula: ( when
       "FS2_Cinema2.ogg" 
       1 
    )
-   ( turret-set-rate-of-fire 
-      "Apep" 
-      250 
-      "turret05" 
-      "turret06" 
-      "turret07" 
-      "turret08" 
-      "turret09" 
-      "turret10" 
-   )
    ( set-object-position 
       "babylon path:1" 
       ( get-object-x "Sathanas" ) 
       ( + ( get-object-y "Sathanas" ) 6000 ) 
       ( get-object-z "Sathanas" ) 
+   )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "apep < 39 - apep#obster" 
    )
 )
 +Name: Apep < 39
@@ -9212,7 +9518,7 @@ $Formula: ( when
       ( do-nothing ) 
       ( ship-rot-maneuver 
          "Sathanas" 
-         300000 
+         30000 
          0 
          0 
          -100 
@@ -9233,15 +9539,40 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( add-goal 
-      "Sathanas" 
-      ( ai-waypoints "Sathanas path" 50 ) 
+   ( send-message 
+      "#Paxton Shipyard" 
+      "High" 
+      "paxton down - paxton" 
    )
 )
-+Name: stop rotating
++Name: paxton down - msg
 +Repeat Count: 1
 +Interval: 1
-+Chained: 30
++Chained: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Eb'Siliss" ) 
+   ( send-message 
+      "#Eb'Siliss" 
+      "High" 
+      "eb siliss down - eb siliss" 
+   )
+)
++Name: eb siliss down - msg
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Ballard" ) 
+   ( send-message 
+      "#Ballard" 
+      "High" 
+      "ballard down - ballard" 
+   )
+)
++Name: ballard down - msg
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( <= ( hits-left "Alpha 1" ) 10 ) 
@@ -9252,7 +9583,7 @@ $Formula: ( when
       "Hull" 
    )
 )
-+Name: player < 10
++Name: player < 10 - hell armor
 +Repeat Count: 1
 +Interval: 1
 
@@ -9262,7 +9593,10 @@ $Formula: ( when-argument
       "Crixalis" 
       "Stone of Dovka" 
    )
-   ( <= ( hits-left "Sathanas" ) 71 ) 
+   ( and 
+      ( <= ( hits-left "Sathanas" ) 71 ) 
+      ( is-event-true-delay "your call 2" 7 ) 
+   )
    ( if-then-else 
       ( not 
          ( is-destroyed-delay 0 "<argument>" ) 
@@ -9306,7 +9640,7 @@ $Formula: ( when
    ( clear-goals "Sathanas" ) 
    ( ship-rot-maneuver 
       "Sathanas" 
-      300000 
+      30000 
       0 
       0 
       -100 
@@ -9316,6 +9650,19 @@ $Formula: ( when
 +Name: sath < 55 - sath rotate
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "sath rotate - apep" 
+   )
+)
++Name: sath rotate - msg
++Repeat Count: 1
++Interval: 1
++Chained: 3
 
 $Formula: ( when 
    ( <= ( hits-left "Sathanas" ) 49 ) 
@@ -9331,7 +9678,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( is-event-true-delay 
-      "sath < 55 - sath rotate" 
+      "sath rotate - msg" 
       0 
    )
    ( if-then-else 
@@ -9440,6 +9787,18 @@ $Formula: ( when
       "Hull" 
       "Shields" 
    )
+   ( beam-lock 
+      "Sathanas" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+   )
+   ( set-subsystem-strength 
+      "Sathanas" 
+      "Hull" 
+      @Sath-hull[94] 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
@@ -9512,6 +9871,143 @@ $Formula: ( when
 +Trigger Count: 20
 +Interval: 7
 +Chained: 0
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+      "Beta 1" 
+      "Beta 2" 
+      "Beta 3" 
+      "Beta 4" 
+      "Gamma 1" 
+      "Gamma 2" 
+      "Gamma 3" 
+      "Gamma 4" 
+   )
+   ( true ) 
+   ( if-then-else 
+      ( or 
+         ( is-ship-class 
+            "GVF Horus" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVF Thoth" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVF Serapis" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVF Serapis Elite" 
+            "<argument>" 
+         )
+      )
+      ( set-armor-type 
+         "<argument>" 
+         ( true ) 
+         "Shivan Elite Armor" 
+         "Hull" 
+         "Shields" 
+      )
+      ( do-nothing ) 
+   )
+   ( if-then-else 
+      ( or 
+         ( is-ship-class 
+            "GVF Seth" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVF Tauret" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVB Bakha" 
+            "<argument>" 
+         )
+      )
+      ( set-armor-type 
+         "<argument>" 
+         ( true ) 
+         "Shivan Destroyer Armor" 
+         "Hull" 
+         "Shields" 
+      )
+      ( do-nothing ) 
+   )
+   ( if-then-else 
+      ( or 
+         ( is-ship-class 
+            "GVB Sekhmet" 
+            "<argument>" 
+         )
+         ( is-ship-class 
+            "GVB Hathor" 
+            "<argument>" 
+         )
+      )
+      ( set-armor-type 
+         "<argument>" 
+         ( true ) 
+         "Shivan Bomber Armor" 
+         "Hull" 
+         "Shields" 
+      )
+      ( do-nothing ) 
+   )
+)
++Name: starting wings fighting chance
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 4 ) 
+   ( send-message 
+      "Eb'Siliss" 
+      "High" 
+      "mission start 1 - eb siliss" 
+   )
+   ( beam-free 
+      "Sathanas" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+   )
+)
++Name: start 1 - msg + unlock sath bea
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Paxton Shipyard" 
+      "High" 
+      "mission start 2 - paxton" 
+   )
+)
++Name: start 2 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Ballard" 
+      "High" 
+      "mission start 3 - ballard" 
+   )
+)
++Name: start 3 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 3
 
 $Formula: ( when 
    ( and 
@@ -9751,6 +10247,19 @@ $Formula: ( when
 +Interval: 7
 
 $Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "<any wingman>" 
+      "High" 
+      "macross style - any wingman" 
+   )
+)
++Name: macross style
++Repeat Count: 1
++Interval: 1
++Chained: 20
+
+$Formula: ( when 
    ( has-time-elapsed 3 ) 
    ( fire-beam 
       "Ballard" 
@@ -9909,6 +10418,31 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Aquarius", -1)
 
 $Formula: ( when 
+   ( has-arrived-delay 13 "Apep" ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "your call 1 - apep" 
+   )
+)
++Name: your call 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "<any wingman>" 
+      "High" 
+      "your call 2 - any wingman" 
+   )
+)
++Name: your call 2
++Repeat Count: 1
++Interval: 1
++Chained: 7
+
+$Formula: ( when 
    ( has-arrived-delay 0 "Apep" ) 
    ( turret-set-rate-of-fire 
       "Crixalis" 
@@ -9949,6 +10483,11 @@ $Formula: ( when
       "turret22" 
       "turret30" 
    )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "apep arrives - apep" 
+   )
 )
 +Name: Apep arrives
 +Repeat Count: 1
@@ -9974,13 +10513,25 @@ $Formula: ( when
       "Sathanas" 
       "turret51" 
    )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "apep fires - apep" 
+   )
 )
 +Name: Apep fires
 +Repeat Count: 1
 +Interval: 1
 +Chained: 24
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "apep deploys bombers - apep" 
+   )
+)
 +Name: Apep deploys bombers
 +Repeat Count: 1
 +Interval: 1
@@ -10017,6 +10568,11 @@ $Formula: ( when
       0 
    )
    ( beam-free-all "Apep" ) 
+   ( send-message 
+      "Apep" 
+      "High" 
+      "switching to BVas - apep#gun" 
+   )
 )
 +Name: switching to BFVas
 +Repeat Count: 1
@@ -10111,6 +10667,11 @@ $Formula: ( when
       "turret09" 
       "turret10" 
    )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "vas torpedo fest - apep#gun" 
+   )
 )
 +Name: vas torpedo fest
 +Repeat Count: 1
@@ -10168,11 +10729,6 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when ( true ) ( do-nothing ) ) 
-+Name: firing catapults - msg
-+Repeat Count: 1
-+Interval: 1
-
 $Formula: ( when 
    ( or 
       ( is-event-true-delay 
@@ -10181,6 +10737,18 @@ $Formula: ( when
       )
       ( < ( hits-left "Apep" ) 64 ) 
    )
+   ( send-message 
+      "Apep" 
+      "High" 
+      "firing catapults - apep" 
+   )
+)
++Name: firing catapults - msg
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
    ( if-then-else 
       ( is-destroyed-delay 0 "Apep" ) 
       ( do-nothing ) 
@@ -10289,13 +10857,14 @@ $Formula: ( when
 +Chained: 5
 
 $Formula: ( when 
-   ( and 
-      ( has-arrived-delay 0 "Hellknight" ) 
-      ( is-destroyed-delay 0 "Searing Fate" ) 
+   ( has-arrived-delay 0 "Hellknight" ) 
+   ( send-message 
+      "<any wingman>" 
+      "High" 
+      "hellknight arrives - any wingm" 
    )
-   ( do-nothing ) 
 )
-+Name: Hellknight going against Apep
++Name: hellknight arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -10408,7 +10977,7 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-#Goals		;! 3 total
+#Goals		;! 4 total
 
 $Type: Secondary
 +Name: heavy damage
@@ -10433,7 +11002,13 @@ $Formula: ( is-destroyed-delay 0 "Sathanas" )
 +No music
 +Score: 12500
 
-#Waypoints		;! 9 lists total
+$Type: Primary
++Name: Survive
+$MessageNew:  XSTR("Survive the assault", -1)
+$end_multi_text
+$Formula: ( false ) 
+
+#Waypoints		;! 10 lists total
 
 $Name: Pretty Lady path
 $List: (		;! 1 points in list
@@ -10483,12 +11058,17 @@ $List: (		;! 1 points in list
 	( 4190.000000, 6000.000000, 12900.000000 )
 )
 
-#Messages		;! 29 total
+$Name: Hellknight path
+$List: (		;! 1 points in list
+	( 3646.826416, 0.000722, 8054.357422 )
+)
+
+#Messages		;! 49 total
 
 
 $Name: stone targetting
 $Team: -1
-$MessageNew:  XSTR("Target mode: $stone_target 
+$MessageNew:  XSTR("Stone of Dovka targetting mode: $stone_target 
 $1$ - Fire at will
 $2$ - Target fighters
 $3$ - Target bombers
@@ -10497,7 +11077,7 @@ $end_multi_text
 
 $Name: mission start 1 - eb siliss
 $Team: -1
-$MessageNew:  XSTR("Its beam are back online, they are targeting us!", -1)
+$MessageNew:  XSTR("Its beams are coming online, they are targeting us!", -1)
 $end_multi_text
 +AVI Name: Head-VC2
 
@@ -10555,7 +11135,7 @@ $Name: your call 1 - apep
 $Team: -1
 $MessageNew:  XSTR("Alpha 1, you are in charge of strikecraft command. You can choose to either focus on defending the battleline or engaging the Sathanas itself.", -1)
 $end_multi_text
-+AVI Name: Head-VP1
++AVI Name: Head-VC
 
 $Name: your call 2 - any wingman
 $Team: -1
@@ -10597,7 +11177,7 @@ $end_multi_text
 
 $Name: apep < 39 - apep#obster
 $Team: -1
-$MessageNew:  XSTR("This is the Apep. The hull won't last for much longer. We are commencing our final run. Launching every remaining strikecraft. Engineering report our main reactor will soon go into meltdown. Give them Hell. For Vasuda.", -1)
+$MessageNew:  XSTR("This is the Apep. The hull won't last for much longer. We are commencing our final run. Engineering report our main reactor will soon go into meltdown. I am ordering the evacuation of the ship. Do not concern yourselves we the escape pods.", -1)
 $end_multi_text
 
 $Name: firing catapults - apep
@@ -10652,6 +11232,120 @@ $Name: babylon going down - babylon
 $Team: -1
 $MessageNew:  XSTR("Munitions depot hit. All units, stand cl -", -1)
 $end_multi_text
+
+$Name: hellknight arrives - any wingm
+$Team: -1
+$MessageNew:  XSTR("Mother of Destruction, it's the Hellknight!", -1)
+$end_multi_text
++AVI Name: Head-VP1
+
+$Name: hellknight destroyed - player
+$Team: -1
+$MessageNew:  XSTR("Burn you horror spawn!", -1)
+$end_multi_text
+
+$Name: Sathanas destroyed 1 - anyone
+$Team: -1
+$MessageNew:  XSTR("The Sathanas is going down! THE SATHANAS IS GOING DOWN! We did it!", -1)
+$end_multi_text
+
+$Name: Sathanas destroyed 2 - anyone
+$Team: -1
+$MessageNew:  XSTR("Yeah! All Shivan forces are retreating. We ... it ... waow ...", -1)
+$end_multi_text
+
+$Name: Sathanas destroyed 3 - anyone
+$Team: -1
+$MessageNew:  XSTR("Let's go home. I've seen enough Shivans for a couple lifetimes.", -1)
+$end_multi_text
+
+$Name: ssm barrage 1 - apep
+$Team: -1
+$MessageNew:  XSTR("The Sathanas has sustained havey damage. Great job everyone. Keep this goi -", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: ssm barrage 2 - apep
+$Team: -1
+$MessageNew:  XSTR("SSM alert! All units, the Sathanas is vectoring in Subspace Missiles Barrage at us.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: Searing Fate down - searing fa
+$Team: -1
+$MessageNew:  XSTR("This is the Searing Fate, experiencing cataclysmic plasma rupture, we are -", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: launcher 01 down - apep
+$Team: -1
+$MessageNew:  XSTR("Explosion detected in launcher 01.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: launcher 02 down - apep
+$Team: -1
+$MessageNew:  XSTR("Torpedo detonation in launcher 02. Power conduit ruptured in section 5-62.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: launcher 03 down - apep
+$Team: -1
+$MessageNew:  XSTR("Launcher 03 is down. Evacuating section 2-27.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: launcher 04 down - apep
+$Team: -1
+$MessageNew:  XSTR("We've lost launcher 04 due to premature torpedo detonation.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: launcher 05 down - apep
+$Team: -1
+$MessageNew:  XSTR("Explosion detected in section 4-13. Launcher 05 is down.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: launcher 06 down - apep
+$Team: -1
+$MessageNew:  XSTR("Contact lost with launcher 06. Decting internal detonations in section 2-61.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: all launchers down - apep
+$Team: -1
+$MessageNew:  XSTR("That was the last of our torpedo launchers. Damage control teams reports significant internal damage.", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: empty msg
+$Team: -1
+$MessageNew:  XSTR(" ", -1)
+$end_multi_text
+
+$Name: stone of dovka down - sod
+$Team: -1
+$MessageNew:  XSTR("This is the Stone Of Dovka, our missile re -", -1)
+$end_multi_text
++AVI Name: Head-VC2
+
+$Name: stone targeting - lost
+$Team: -1
+$MessageNew:  XSTR(">>> Signal Lost <<<", -1)
+$end_multi_text
+
+$Name: searing fate down - sf
+$Team: -1
+$MessageNew:  XSTR("Main reactor breached! We are going down. All pilots, stand clear of the shock -", -1)
+$end_multi_text
++AVI Name: Head-VC
+
+$Name: crixalis down - crixa
+$Team: -1
+$MessageNew:  XSTR("This is the Crixalis, we are history. Avenge us!", -1)
+$end_multi_text
++AVI Name: Head-VC2
 
 #Reinforcements		;! 0 total
 

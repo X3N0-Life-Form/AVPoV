@@ -291,7 +291,7 @@ C_Shivan_Tech_Arc_03b.The Master of Death	//ToDo
 D_NTF_Arc_01.Card Games								//Beta-Ready/toTestFurther
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
-		New equipement : prometheus s ; piranha
+		New equipement : prometheus s ; piranha; fire spitter, hell spitter
 		Background : done (toRework)
 		Has a fiction piece
 		FS2 Timeline : during "The Sicilian Defense"
@@ -348,10 +348,10 @@ D_NTF_Arc_02.Bluff								//ToTestFurther
 #	GTD Carthage (optional) ; GVD Pharaoh ; GVD Black Mamba ; GTCv Warihu ;	#
 #	Hammer CG (optional)
 ///////////////////////////////////////////////////////////////////////////////////
-E_Sathanas_Arc_01.Hit and Run							//?
+E_Sathanas_Arc_01.Hit and Run							//Needs more refining + messages
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
-		New equipement : maxim
+		New equipement : maxim, crossbow
 		Background : todo
 		Has a fiction piece
 		FS2 Timeline : during "The Fog of War"
@@ -480,7 +480,7 @@ E_Sathanas_07.Sorrow								//
 		Ships :
 			-GTD Olympus Shadow (Hecate class)	//destroyed
 			-GTCv Kendrick Smith (Deimos class)	//non-vital
-			-Blade CG (2xSobek class)		//non-vital?
+			-Blade CG (2xSobek class)		//vital
 			-SC Lotode (Rakshasa class)		//destroyed
 			-SC Hellknight (Rakshasa class)		//vital
 			-SCv Toffolon (Moloch class)		//destroyed
@@ -495,7 +495,7 @@ E_Sathanas_07.Sorrow								//
 /*Time to improve my warship battle skills					*/
 /********************************************************************************/
 #				Fleet status					#
-# Player's base of operation :	GVP Apep (Hatshepsut class)			#
+# Player's base of operation :	GVD Apep (Hatshepsut class)			#
 # Current ships :		
 #
 #
@@ -519,7 +519,9 @@ F_Capella_01.Nightmare								//
 F_Capella_02.Exodus
 
 
+
 F_Capella_03.The Lost Generation
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 F_Capella_04.Their Finest Hour							//Need more testing
@@ -544,7 +546,6 @@ F_Capella_04.Their Finest Hour							//Need more testing
 		-GVC Stone of Dovka (Hemsut class)	//destroyed
 		-SC Hellknight (Rakshasa class)		//non-vital
 		-SC Plague (Cain class)			//non-vital
-- also: Restore failsafes?
 		-Apocalypse BG (Ravana + 2xLilith)	//vital
 
 

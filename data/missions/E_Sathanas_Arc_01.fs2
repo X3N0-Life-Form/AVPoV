@@ -4,16 +4,14 @@ $Version: 0.10
 $Name:  XSTR("Hit and Run", -1)
 $Author: Adrarsis
 $Created: 07/17/10 at 20:03:16
-$Modified: 08/23/12 at 21:40:07
+$Modified: 04/26/13 at 20:21:20
 $Notes:
 TODO : truc avec TAG$End Notes:
 
 $Mission Desc:
  XSTR("A patrol of the nebula, again.", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 132
 +NebAwacs: 3000.000000
 
@@ -23,18 +21,15 @@ $end_multi_text
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 0.000000, 2409.982178, -975.975647
++Viewer pos: -2196.624023, 12155.570313, 28.886272
 +Viewer orient:
-	1.000000, 0.000000, -0.000000,
-	0.000000, 0.380173, 0.924915,
-	0.000000, -0.924915, 0.380173
+	0.882255, 0.000001, 0.470772,
+	-0.173924, 0.929253, 0.325944,
+	-0.437466, -0.369444, 0.819838
 
 
 $AI Profile: FS2 RETAIL
@@ -45,7 +40,9 @@ $File: E01.txt
 #Command Briefing
 
 $Stage Text:
- XSTR("To the vasudan pilots joining us, welcome aboard the $g GTD $g Olympus $g Shadow.
+ XSTR("$b Welcome $b aboard
+
+To the vasudan pilots joining us, welcome aboard the $g GTD $g Olympus $g Shadow.
 
 Our engineers have modified several of our fighters to accomodate vasudan pilots.
 
@@ -57,9 +54,31 @@ $Ani Filename: <default>
 +Wave Filename: none
 
 $Stage Text:
- XSTR("As you may already know, $r Admiral $r Aken $r Bosch has managed to bypass the Colossus with the help of onboard saboteurs and enter the nebula. A search party, led by the $g GVD $g Psamtik is now being organised to apprehend the Rebel leader.
+ XSTR("$b The $b end $b of $b the $b Rebellion
+
+As you may already know, $r Admiral $r Aken $r Bosch has managed to bypass the Colossus with the help of onboard saboteurs and enter the nebula. A search party, led by the $g GVD $g Psamtik is now being organised to apprehend the Rebel leader.
 
 At 12:45, terran galactic time, the $g GTD $g Olympus $g Shadow and her escort ships will enter the nebula, and assist the Psamtik in its operations. We will also engage in containment operations and neutralize any $h Shivan $h Forces encountered.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+$Stage Text:
+ XSTR("$b GTW-66 $b Maxim
+
+You are now authorised to use the $y GTW-66 $y Maxim gun. A long range anti-hull option, the Maxim is designed to allow strikecrafts to engage capital ships at range, taking out turrets before moving in for the kill.
+
+Be advised that the gun's low shield penetration makes it a poor choice in a dogfight.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: none
+
+$Stage Text:
+ XSTR("$b Crossbow $b Swarmer $b Bomb
+
+You have also been cleared to carry the $y GTM-26b $y Crossbow Swarmer Bomb. As a light bomb, the Crossbow lacks the raw power of the Cyclops torpedo, but boasts shorter lock$slashrearm times, as well as increased missile speed. More importantly, the Crossbow has recently been modified to emulate Shivan bomb swarm tactics, and now fires in flights of 3 to 6 warheads.
+
+Engineers have also managed to make the weapon compatible with the $f Myrmidon's largest secondary bank, allowing this crafts to perform light bombing duties if needs be.", -1)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: none
@@ -73,7 +92,9 @@ $multi_text
 
 This is commander Dupont. To our new vasudan pilot joining us, welcome into the squadron.
 
-Our squadron has been ordered to assit the $g GTCv $g Xeus on her patrol. Since the $r shivan activity in the nebula has increased over the past few days, we will be deploying two wings to escort that corvette.", -1)
+Our squadron has been ordered to assit the $g GTCv $g Xeus on her patrol. Since the $r shivan activity in the nebula has increased over the past few days, we will be deploying two wings to escort that corvette.
+
+Both wings will be flying Crossbow-equipped Myrmidon fighters to supplement the Xeus' beams. $f Alpha wing will be fitted with Morning Stars to perform interceptor duties, while $f Beta wing is doing space superiority with Fire Spitter flak guns.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: 0.000000, 2409.982178, -975.975647
@@ -393,22 +414,24 @@ $Ship Choices: (
 +Weaponry Pool: (
 	"Subach HL-7"	16
 	"Akheton SDG"	16
-	"Morning Star"	16
+	"Morning Star"	20
 	"Prometheus R"	16
-	"Prometheus S"	20
+	"Prometheus S"	12
 	"Maxim"	8
 	"Circe"	8
+	"Hell Spitter"	4
 	"Rockeye"	80
-	"Tempest"	1200
+	"Tempest"	2480
 	"Hornet"	240
-	"Tornado"	512
 	"Harpoon"	40
 	"TAG-A"	120
 	"TAG-B"	120
 	"EMP Adv."	40
+	"Crossbow"	160
+	"Fire Spitter"	4
 )
 
-#Objects		;! 43 total
+#Objects		;! 50 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Myrmidon
@@ -420,10 +443,11 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 30
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Morning Star" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -444,12 +468,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
++Initial Velocity: 30
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Morning Star" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -471,12 +496,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
++Initial Velocity: 30
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Morning Star" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -498,12 +524,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
++Initial Velocity: 30
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Morning Star" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -525,12 +552,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Fire Spitter" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -552,12 +580,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Fire Spitter" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -579,12 +608,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Fire Spitter" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -606,12 +636,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Prometheus S" "Prometheus S" )
-+Secondary Banks: ( "Tornado" "Tornado" "Tornado" )
++Primary Banks: ( "Fire Spitter" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" "Crossbow" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -624,7 +655,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: GTCv Xeus		;! Object #8
+$Name: Xeus		;! Object #8
 $Class: GTCv Deimos
 $Team: Friendly
 $Location: -115.978302, -0.000119, -823.477905
@@ -633,9 +664,10 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-waypoints-once "Xeus" 50 ) )
++AI Class: Colonel
+$AI Goals: ( goals ( ai-waypoints-once "Xeus path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
++Initial Velocity: 100
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -679,7 +711,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 800
 
-$Name: GTA Devil's Eye		;! Object #9
+$Name: Devil's Eye		;! Object #9
 $Class: GTA Charybdis
 $Team: Friendly
 $Location: 322.732147, 0.000071, -780.628418
@@ -688,9 +720,10 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-waypoints-once "Devil's Eye" 50 ) )
++AI Class: Big
+$AI Goals: ( goals ( ai-waypoints-once "Devil's Eye path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
++Initial Velocity: 100
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -704,8 +737,8 @@ $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( or 
-   ( is-destroyed-delay 4 "GTCv Xeus" ) 
-   ( has-departed-delay 0 "GTCv Xeus" ) 
+   ( is-destroyed-delay 4 "Xeus" ) 
+   ( has-departed-delay 0 "Xeus" ) 
 )
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
@@ -767,16 +800,17 @@ $Determination: 10
 +Use Table Score:
 +Score: 13
 
-$Name: SC Baator		;! Object #12
+$Name: Baator		;! Object #12
 $Class: SC Rakshasa
 $Team: Hostile
-$Location: -70.972214, 0.000007, 6660.557617
+$Location: -70.861557, 1149.441772, 5621.038574
 $Orientation:
-	-0.999831, 0.000000, -0.018406,
-	0.000000, 1.000000, 0.000000,
+	-0.362297, -0.932039, -0.006670,
+	-0.931882, 0.362358, -0.017155,
 	0.018406, 0.000000, -0.999831
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
++AI Class: Colonel
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -790,15 +824,23 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret08
++Primary Banks: ( "Shivan Multi Turret" )
 +Subsystem: turret09
 +Subsystem: turret10
++Primary Banks: ( "SAAA" )
 +Subsystem: turret11
 +Subsystem: turret12
 +Subsystem: turret13
 +Subsystem: turret14
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-destroyed-delay 12 "Aries" ) 
+$Arrival Location: In front of ship
++Arrival Distance: 4200
+$Arrival Anchor: Xeus
+$Arrival Cue: ( destroyed-or-departed-delay 
+   12 
+   "Aries" 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
@@ -814,10 +856,10 @@ $Determination: 10
 $Name: Pisces 1		;! Object #13
 $Class: SF Mara
 $Team: Hostile
-$Location: 509.619629, 0.000005, 6637.275879
+$Location: 139.934128, 1690.099731, 5590.948242
 $Orientation:
-	-0.963345, 0.000000, -0.268266,
-	0.000000, 1.000000, 0.000000,
+	-0.349076, -0.932039, -0.097208,
+	-0.897875, 0.362358, -0.250034,
 	0.268266, 0.000000, -0.963345
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
@@ -841,10 +883,10 @@ $Determination: 10
 $Name: Pisces 2		;! Object #14
 $Class: SF Mara
 $Team: Hostile
-$Location: 337.643860, -0.000067, 6887.430664
+$Location: 74.640091, 1534.126343, 5843.076660
 $Orientation:
-	-0.963345, 0.000000, -0.268266,
-	0.000000, 1.000000, 0.000000,
+	-0.349076, -0.932039, -0.097208,
+	-0.897875, 0.362358, -0.250034,
 	0.268266, 0.000000, -0.963345
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
@@ -868,10 +910,10 @@ $Determination: 10
 $Name: Pisces 3		;! Object #15
 $Class: SF Mara
 $Team: Hostile
-$Location: 470.795868, 0.000071, 6969.286621
+$Location: 121.960632, 1659.615845, 5923.356445
 $Orientation:
-	-0.963345, 0.000000, -0.268266,
-	0.000000, 1.000000, 0.000000,
+	-0.349076, -0.932039, -0.097208,
+	-0.897875, 0.362358, -0.250034,
 	0.268266, 0.000000, -0.963345
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1285,7 +1327,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: SC Feargus		;! Object #31
+$Name: Feargus		;! Object #31
 $Class: SC Cain
 $Team: Hostile
 $Location: -7078.951172, 1860.723633, 15215.275391
@@ -1294,7 +1336,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.058374, 0.000000, -0.998296
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1315,7 +1357,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Sbank Ammo: ( 0 )
 $Arrival Location: Near Ship
 +Arrival Distance: 2400
-$Arrival Anchor: GTCv Xeus
+$Arrival Anchor: Xeus
 +Arrival Delay: 13
 $Arrival Cue: ( and 
    ( is-destroyed-delay 0 "Aquarius" ) 
@@ -1494,18 +1536,19 @@ $Determination: 10
 $Name: Libra 1		;! Object #38
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -10199.540039, -0.000538, 13004.809570
+$Location: -10199.540039, 4811.615234, 13004.809570
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Cyclops" "Cyclops" "Piranha" "Cyclops" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1524,18 +1567,19 @@ $Determination: 10
 $Name: Libra 2		;! Object #39
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -9372.500000, -0.000453, 13534.051758
+$Location: -9372.500000, 4811.615234, 13534.051758
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Cyclops" "Cyclops" "Piranha" "Cyclops" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1554,18 +1598,19 @@ $Determination: 10
 $Name: Libra 3		;! Object #40
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -9519.294922, -0.000490, 12927.785156
+$Location: -9519.294922, 4811.615234, 12927.785156
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Cyclops" "Cyclops" "Piranha" "Cyclops" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1584,18 +1629,19 @@ $Determination: 10
 $Name: Libra 4		;! Object #41
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -10029.298828, -0.000400, 12493.237305
+$Location: -10029.298828, 4811.615234, 12493.237305
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Cyclops" "Cyclops" "Piranha" "Cyclops" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1614,18 +1660,19 @@ $Determination: 10
 $Name: Libra 5		;! Object #42
 $Class: SB Seraphim
 $Team: Hostile
-$Location: -9505.155273, -0.000638, 12246.042969
+$Location: -9505.155273, 4811.615234, 12246.042969
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Cyclops" "Cyclops" "Piranha" "Cyclops" )
++Primary Banks: ( "Shivan Heavy Laser" "Shivan Anticap Laser" "Shivan Anticap Laser" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" "Shivan Bomb" )
 +Subsystem: turret01
 +Subsystem: turret02
 $Arrival Location: Hyperspace
@@ -1641,7 +1688,200 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-#Wings		;! 13 total
+$Name: Epsilon 1		;! Object #43
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -4882.387695, -0.000173, 12000.194336
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Epsilon 2		;! Object #44
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -4539.886230, -0.000232, 12020.233398
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Epsilon 3		;! Object #45
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -4827.433105, -0.000293, 12407.561523
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Epsilon 4		;! Object #46
+$Class: GVF Serapis
+$Team: Friendly
+$Location: -5049.406738, -0.000313, 12489.127930
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Sahr AS" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Scorpio 1		;! Object #47
+$Class: SF Basilisk
+$Team: Hostile
+$Location: -11507.622070, 4811.614258, 13334.130859
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Scorpio 2		;! Object #48
+$Class: SF Basilisk
+$Team: Hostile
+$Location: -11388.153320, 4811.613281, 13789.550781
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Scorpio 3		;! Object #49
+$Class: SF Basilisk
+$Team: Hostile
+$Location: -11827.071289, 4811.614258, 13881.898438
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+#Wings		;! 15 total
 
 $Name: Alpha
 $Waves: 1
@@ -1658,7 +1898,7 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
-$AI Goals: ( goals ( ai-guard "GTA Devil's Eye" 50 ) )
+$AI Goals: ( goals ( ai-guard "Devil's Eye" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -1677,7 +1917,7 @@ $Ships: (		;! 4 total
 	"Beta 3"
 	"Beta 4"
 )
-$AI Goals: ( goals ( ai-guard "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-guard "Xeus" 50 ) )
 +Hotkey: 1
 +Flags: ( )
 
@@ -1688,12 +1928,13 @@ $Special Ship: 0		;! Aries 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 3000
-$Arrival Anchor: GTCv Xeus
-+Arrival delay: 20
-$Arrival Cue: ( true ) 
+$Arrival Anchor: Xeus
+$Arrival Cue: ( is-event-true-delay 
+   "mission start 4 - msg" 
+   6 
+)
 $Departure Location: Hyperspace
-+Departure delay: 55
-$Departure Cue: ( true ) 
+$Departure Cue: ( has-arrived-delay 30 "Aries" ) 
 $Ships: (		;! 2 total
 	"Aries 1"
 	"Aries 2"
@@ -1706,8 +1947,10 @@ $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Pisces 1
 
-$Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 0 "SC Baator" ) 
+$Arrival Location: Near Ship
++Arrival Distance: 700
+$Arrival Anchor: Baator
+$Arrival Cue: ( has-arrived-delay 0 "Baator" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 3 total
@@ -1747,8 +1990,8 @@ $Special Ship: 0		;! Taurus 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 2400
-$Arrival Anchor: GTCv Xeus
-$Arrival Cue: ( is-destroyed-delay 15 "SC Baator" ) 
+$Arrival Anchor: Xeus
+$Arrival Cue: ( is-destroyed-delay 15 "Baator" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 3 total
@@ -1756,7 +1999,7 @@ $Ships: (		;! 3 total
 	"Taurus 2"
 	"Taurus 3"
 )
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) )
 +Flags: ( )
 +Wave Delay Min: 4
 +Wave Delay Max: 8
@@ -1768,7 +2011,7 @@ $Special Ship: 0		;! Aquarius 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 2000
-$Arrival Anchor: GTCv Xeus
+$Arrival Anchor: Xeus
 $Arrival Cue: ( has-arrived-delay 0 "Gemini" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1776,6 +2019,7 @@ $Ships: (		;! 2 total
 	"Aquarius 1"
 	"Aquarius 2"
 )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) ( ai-chase "Devil's Eye" 49 ) ( ai-chase-any 47 ) )
 +Flags: ( )
 +Wave Delay Min: 4
 +Wave Delay Max: 7
@@ -1787,7 +2031,7 @@ $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 2000
-$Arrival Anchor: GTCv Xeus
+$Arrival Anchor: Xeus
 $Arrival Cue: ( is-destroyed-delay 11 "Taurus" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1795,7 +2039,7 @@ $Ships: (		;! 2 total
 	"Gemini 1"
 	"Gemini 2"
 )
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) ( ai-chase "Devil's Eye" 49 ) ( ai-chase-any 48 ) )
 +Flags: ( )
 +Wave Delay Min: 4
 +Wave Delay Max: 7
@@ -1843,8 +2087,8 @@ $Special Ship: 0		;! Saggitarius 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 300
-$Arrival Anchor: SC Feargus
-$Arrival Cue: ( has-arrived-delay 0 "SC Feargus" ) 
+$Arrival Anchor: Feargus
+$Arrival Cue: ( has-arrived-delay 0 "Feargus" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 3 total
@@ -1852,7 +2096,7 @@ $Ships: (		;! 3 total
 	"Saggitarius 2"
 	"Saggitarius 3"
 )
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) )
 +Flags: ( )
 
 $Name: Leo
@@ -1862,8 +2106,8 @@ $Special Ship: 0		;! Leo 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 400
-$Arrival Anchor: SC Feargus
-$Arrival Cue: ( has-arrived-delay 0 "SC Feargus" ) 
+$Arrival Anchor: Feargus
+$Arrival Cue: ( has-arrived-delay 0 "Feargus" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 3 total
@@ -1881,8 +2125,8 @@ $Special Ship: 0		;! Libra 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1600
-$Arrival Anchor: GTCv Xeus
-$Arrival Cue: ( is-destroyed-delay 6 "SC Feargus" ) 
+$Arrival Anchor: Xeus
+$Arrival Cue: ( is-destroyed-delay 6 "Feargus" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 5 total
@@ -1892,29 +2136,66 @@ $Ships: (		;! 5 total
 	"Libra 4"
 	"Libra 5"
 )
-$AI Goals: ( goals ( ai-chase "GTCv Xeus" 50 ) )
+$AI Goals: ( goals ( ai-chase "Xeus" 50 ) )
 +Flags: ( )
 
-#Events		;! 19 total
+$Name: Epsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Epsilon 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 1500
+$Arrival Anchor: Xeus
+$Arrival Cue: ( and 
+   ( has-arrived-delay 0 "Feargus" ) 
+   ( percent-ships-destroyed 
+      50 
+      "Alpha" 
+      "Beta" 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Epsilon 1"
+	"Epsilon 2"
+	"Epsilon 3"
+	"Epsilon 4"
+)
+$AI Goals: ( goals ( ai-guard "Xeus" 50 ) ( ai-guard "Alpha 1" 48 ) )
++Flags: ( )
+
+$Name: Scorpio
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Scorpio 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 700
+$Arrival Anchor: Libra 1
+$Arrival Cue: ( has-arrived-delay 0 "Libra" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Scorpio 1"
+	"Scorpio 2"
+	"Scorpio 3"
+)
+$AI Goals: ( goals ( ai-guard-wing "Libra" 50 ) ( ai-chase-wing "Epsilon" 49 ) ( ai-chase-wing "Beta" 48 ) ( ai-chase-wing "Alpha" 46 ) )
++Flags: ( )
+
+#Events		;! 27 total
 
 $Formula: ( when 
    ( true ) 
    ( awacs-set-radius 
-      "GTA Devil's Eye" 
+      "Devil's Eye" 
       "radara" 
       6000 
    )
-   ( send-message-list 
-      "Alpha 2" 
-      "High" 
-      "mission start 1 - alpha 2" 
-      4300 
-      "Alpha 3" 
-      "High" 
-      "mission start 2 - alpha 3" 
-   )
    ( break-warp "Alpha 1" ) 
-   ( cap-waypoint-speed "GTCv Xeus" 20 ) 
+   ( cap-waypoint-speed "Xeus" 20 ) 
    ( set-post-effect "lightshafts" 100 ) 
 )
 +Name: mission start
@@ -1923,7 +2204,59 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( has-departed-delay 0 "GTCv Xeus" ) 
+   ( true ) 
+   ( send-message 
+      "Alpha 2" 
+      "High" 
+      "mission start 1 - alpha 2" 
+   )
+)
++Name: mission start 1 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Alpha 3" 
+      "High" 
+      "mission start 2 - alpha 3" 
+   )
+)
++Name: mission start 2 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Alpha 2" 
+      "High" 
+      "mission start 3 - alpha 2" 
+   )
+)
++Name: mission start 3 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "Xeus" 
+      "High" 
+      "mission start 4 - xeus" 
+   )
+)
++Name: mission start 4 - msg
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Xeus" ) 
    ( fix-warp "Alpha 1" ) 
 )
 +Name: Defend GTCv Xeus
@@ -1935,7 +2268,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 0 "Aries" ) 
    ( send-message 
-      "GTA Devil's Eye" 
+      "Devil's Eye" 
       "High" 
       "Aries arrives - AWACS" 
    )
@@ -1943,6 +2276,18 @@ $Formula: ( when
 +Name: Aries arrives
 +Repeat Count: 1
 +Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Aries" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Aries
++Repeat Count: 1
++Interval: 1
++Score: 10
++Chained: 0
++Objective:  XSTR("Destroy Aries", -1)
 +Team: 0
 
 $Formula: ( when 
@@ -1956,16 +2301,14 @@ $Formula: ( when
       "Aries destroyed - cmd" 
    )
 )
-+Name: Destroy Aries
++Name: aries destroyed or departed
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("Destroy Aries", -1)
-+Team: 0
 
 $Formula: ( when 
-   ( has-arrived-delay 1 "SC Baator" ) 
+   ( has-arrived-delay 1 "Baator" ) 
    ( send-message 
-      "GTA Devil's Eye" 
+      "Devil's Eye" 
       "High" 
       "SC Baator arrives - AWACS" 
    )
@@ -1974,6 +2317,15 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( beam-protect-ship "Devil's Eye" ) 
+)
++Name: no shooting the awacs
++Repeat Count: 1
++Interval: 1
++Chained: 0
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Pisces" ) 
@@ -1986,9 +2338,9 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "SC Baator" ) 
+   ( is-destroyed-delay 0 "Baator" ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "SC Baator destroyed - Xeus" 
    )
@@ -2002,7 +2354,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 2 "Taurus" ) 
    ( send-message 
-      "GTA Devil's Eye" 
+      "Devil's Eye" 
       "High" 
       "Taurus arrives - AWACS" 
    )
@@ -2035,7 +2387,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 0 "Gemini" ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "Gemini & Aquarius arrives-Xeus" 
    )
@@ -2059,10 +2411,10 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( has-arrived-delay 2 "SC Feargus" ) 
-   ( add-remove-escort "SC Feargus" 1 ) 
+   ( has-arrived-delay 2 "Feargus" ) 
+   ( add-remove-escort "Feargus" 1 ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "SC Feargus arrives - Xeus" 
    )
@@ -2073,9 +2425,9 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 3 "SC Feargus" ) 
+   ( is-destroyed-delay 3 "Feargus" ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "SC Feargus destroyed - Xeus" 
    )
@@ -2089,7 +2441,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 2 "Libra" ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "Libra arrives - Xeus" 
    )
@@ -2100,7 +2452,25 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 6 "Libra" ) 
+   ( is-destroyed-delay 0 "Libra" ) 
+   ( do-nothing ) 
+)
++Name: destroy Libra
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Libra", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Scorpio" ) 
+   ( do-nothing ) 
+)
++Name: destroy scorpio
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Scorpio", -1)
+
+$Formula: ( when 
+   ( true ) 
    ( send-message 
       "#Command" 
       "High" 
@@ -2110,7 +2480,7 @@ $Formula: ( when
 +Name: mission end
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("Destroy Libra", -1)
++Chained: 6
 +Team: 0
 
 $Formula: ( when 
@@ -2125,12 +2495,9 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 
-      0 
-      "GTA Devil's Eye" 
-   )
+   ( is-destroyed-delay 0 "Devil's Eye" ) 
    ( send-message 
-      "GTCv Xeus" 
+      "Xeus" 
       "High" 
       "GTA Devil's Eye destroyed-Xeus" 
    )
@@ -2141,7 +2508,7 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "GTCv Xeus" ) 
+   ( is-destroyed-delay 0 "Xeus" ) 
    ( send-message 
       "#Command" 
       "High" 
@@ -2160,46 +2527,51 @@ $Type: Primary
 +Name: Defend Xeus
 $MessageNew:  XSTR("Defend the GTCv Xeus", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "GTCv Xeus" ) 
+$Formula: ( and 
+   ( not ( is-destroyed-delay 0 "Xeus" ) ) 
+   ( is-event-true-delay "mission end" 0 ) 
+)
 
 $Type: Secondary
 +Name: Defend AWACS
 $MessageNew:  XSTR("Defend the GTA Devil's Eye", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 
-   0 
-   "GTA Devil's Eye" 
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Devil's Eye" ) 
+   )
+   ( is-event-true-delay "mission end" 0 ) 
 )
 
 #Waypoints		;! 2 lists total
 
-$Name: Xeus
+$Name: Xeus path
 $List: (		;! 3 points in list
 	( -108.942612, 0.000716, 2245.824951 )
 	( -1679.815674, 0.001037, 5734.885254 )
 	( -5301.688477, 0.000904, 9755.497070 )
 )
 
-$Name: Devil's Eye
+$Name: Devil's Eye path
 $List: (		;! 3 points in list
 	( 418.515228, 0.000928, 2248.122070 )
 	( -1336.175171, 0.001003, 6230.536133 )
 	( -5409.613281, 0.001026, 10724.543945 )
 )
 
-#Messages		;! 14 total
+#Messages		;! 16 total
 
 
 $Name: mission start 1 - alpha 2
 $Team: -1
-$MessageNew:  XSTR("45 minutes. If no one shows up in less than 15 minutes, I win.", -1)
+$MessageNew:  XSTR("Aaand we hit the 45 minutes mark. If no one shows up in less than 15 minutes, I get a free beer.", -1)
 $end_multi_text
 +Persona: Wingman 1
 +AVI Name: Head-TP1
 
 $Name: mission start 2 - alpha 3
 $Team: -1
-$MessageNew:  XSTR("You two should stop doing that. Last time I did that, the guy died during the mission.", -1)
+$MessageNew:  XSTR("You two should stop doing that. It's only funny until someone actually dies during the mission.", -1)
 $end_multi_text
 +Persona: Wingman 2
 +AVI Name: Head-TP2
@@ -2242,13 +2614,13 @@ $end_multi_text
 
 $Name: SC Feargus arrives - Xeus
 $Team: -1
-$MessageNew:  XSTR("A cain class cruiser just jumped in with a wing of Nahemas.Pilots, intercept those bombers, and watch out for the escort.", -1)
+$MessageNew:  XSTR("A cain class cruiser just jumped in with a wing of Nahemas. Pilots, intercept those bombers, and watch out for the escort.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
 $Name: Mission End - cmd
 $Team: -1
-$MessageNew:  XSTR("To all units, pull out of your current locations towards emergency jump points. A shivan warship of massive proportions is attacking our task forces one by one.", -1)
+$MessageNew:  XSTR("To all units, pull out of your current locations towards emergency jump points. A Shivan warship of massive proportions is attacking our task forces one by one.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
@@ -2266,13 +2638,25 @@ $end_multi_text
 
 $Name: SC Feargus destroyed - Xeus
 $Team: -1
-$MessageNew:  XSTR("The Feargus has been destroyed. Things are getting a bit tensed up here.", -1)
+$MessageNew:  XSTR("The Feargus has been destroyed. Things are getting a bit tensed.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
 $Name: Libra arrives - Xeus
 $Team: -1
 $MessageNew:  XSTR("A wing Seraphim bombers has emerged from subspace 1600 meters away. Looks like they are coming for us.", -1)
+$end_multi_text
++AVI Name: Head-CM1
+
+$Name: mission start 3 - alpha 2
+$Team: -1
+$MessageNew:  XSTR("Alpha 4 and I are too lucky too die. Besides, it's kind of our good luck ritual.", -1)
+$end_multi_text
++AVI Name: Head-TP1
+
+$Name: mission start 4 - xeus
+$Team: -1
+$MessageNew:  XSTR("Will you two cut the chatter? The mission's not over yet. We've had reports of Shivans attacks on other patrols. Stay focused.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
