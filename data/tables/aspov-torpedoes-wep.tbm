@@ -17,13 +17,13 @@ $Shockwave Damage Type:					HugeWeapon
 ;; Heavy bomber missiles
 
 $Name:                                  Crossbow
-	+Title:                                 XSTR("GTM-26 Crossbow", -1)
+	+Title:                                 XSTR("GTM-26b Crossbow", -1)
 	+Description:
 		XSTR(
 		"Standard Issue
 		Fast Target Lock", -1)
 	$end_multi_text ;:
-	+Tech Title:				   XSTR("GTM-26 Crossbow", -1)
+	+Tech Title:				   XSTR("GTM-26b Crossbow", -1)
 	+Tech Anim:					   Tech_Harpoon
 	+Tech Description:
 		XSTR(
@@ -34,10 +34,10 @@ $Mass:									15.0
 $Velocity:								450.0
 $Fire Wait:								3.0
 $Damage:								250
-$Damage Type:							NormalWeapon
-$Shockwave Damage Type:					NormalWeapon
+$Damage Type:							HugeWeapon
+$Shockwave Damage Type:					HugeWeapon
 $Blast Force:							80.0
-$Inner Radius:							20.0                                       ;; radius at which damage is full (0 for impact only)
+$Inner Radius:							20.0
 $Outer Radius:							120.0                                       ;; max radius for attenuated damage 
 $Shockwave Speed:						80
 $Armor Factor:							1.0
@@ -58,7 +58,7 @@ $Swarm:									3
 $LaunchSnd:								91                                        ;; The sound it makes when fired
 $ImpactSnd:								88                                        ;; The sound it makes when it hits something
 $FlyBySnd:								-1
-$Rearm Rate:							2.0													;; number of missiles/sec that are rearmed
+$Rearm Rate:							2.0
 $Flags:									( "player allowed" "bomb" "huge" )
 $Trail:
 	+Start Width:	0.3
