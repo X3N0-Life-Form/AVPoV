@@ -979,7 +979,7 @@ $BeamInfo:
 	+Warmup:		  			3500
 	+Warmdown:					1500
 	+Radius:		  			32.0
-	+PCount:					24				;; particles spewed every interval
+	+PCount:					36
 	+PRadius:					2.8				;; particle radius
 	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
 	+PAni:						particle_black
@@ -1033,6 +1033,101 @@ $BeamInfo:
 		+Zadd:			0.0
 	$Section:
 		+Width:			64.0
+		+Texture:		SbeamAE_black
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+	
+;
+	
+$Name:					Black Lance Titanesque ;; colossal * 8
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     15.0
+$Damage:                        10000
+$Damage Type:					LanceWeapon
+$Armor Factor:                  5.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					64000
+$Flags:                         ("Big Ship" "beam" "no pierce shields" )
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04_black
+$Impact Explosion Radius:       320.0
+$BeamInfo:
+	+Type:						0
+	+Life:			  			45.0
+	+Warmup:		  			3500
+	+Warmdown:					1500
+	+Radius:		  			256.0
+	+PCount:					96				;; particles spewed every interval
+	+PRadius:					22.4
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particle_black
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					148
+	+WarmupSound:				155
+	+WarmdownSound:				160
+	+Muzzleglow:				SbeamAglow_black
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
+	+Range:						64000
+	+Beam Flash Effect:						capflash_black
+	+Beam Flash Radius:						104.0
+	+Beam Piercing Effect:					exp06_black
+	+Beam Piercing Radius:					104.0
+	+Beam Piercing Effect Velocity:			800
+	+Beam Piercing Splash Effect Velocity:	-40
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Width:			64.0
+		+Texture:		SbeamAA_black
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			1.0
+		+Tile Factor:	90, 1
+		+Translation:	-2
+	$Section:
+		+Width:			128.0
+		+Texture:		SbeamAB_black
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			2.0
+	$Section:
+		+Width:			256.0
+		+Texture:		SbeamAC_black
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.001
+		+Zadd:			1.0
+		+Tile Factor:	10, 1
+		+Translation:	-2
+	$Section:
+		+Width:			384.0
+		+Texture:		SbeamAD_black
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			512.0
 		+Texture:		SbeamAE_black
 		+RGBA Inner:	255 0 0 255
 		+RGBA Outer:	60 0 0 10

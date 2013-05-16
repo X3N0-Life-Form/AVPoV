@@ -3011,7 +3011,7 @@ $Subsystem:		turret04-base, 		2, 5.0
   	$type:						initial
 		+relative_angle:	90,0,0
 $Subsystem:		turret05-base, 		2, 5.0
-	$Default PBanks:			( Heavy Flak#Cretheus" )
+	$Default PBanks:			( "Heavy Flak#Cretheus" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
