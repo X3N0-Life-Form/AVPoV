@@ -4697,8 +4697,8 @@ $Formula: ( when-argument
       )
       ( call-ssm-strike 
          1 
-         "<argument>" 
          "Hostile" 
+		 "<argument>" 
       )
       ( do-nothing ) 
    )
@@ -4723,8 +4723,8 @@ $Formula: ( when-argument
       )
       ( call-ssm-strike 
          3 
-         "<argument>" 
          "Hostile" 
+		 "<argument>" 
       )
       ( do-nothing ) 
    )
@@ -5629,8 +5629,8 @@ $Formula: ( when
    )
    ( call-ssm-strike 
       0 
-      "Hand of Truth" 
       "Hostile" 
+	  "Hand of Truth" 
    )
 )
 +Name: ssm barrage vs Hand of Truth

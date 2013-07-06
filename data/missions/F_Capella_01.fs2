@@ -6293,9 +6293,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 6 "Fox" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
 )
 +Name: subspace strike vs Fox
 +Repeat Count: 1
@@ -6325,9 +6325,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 22 "Fox" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
 )
 +Name: 2nd ssm vs Fox
 +Repeat Count: 1
@@ -6504,9 +6504,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
-   ( call-ssm-strike 1 "Fox" "Hostile" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike 1 "Hostile" "Fox" ) 
 )
 +Name: 3rd ssm vs fox
 +Repeat Count: 1
@@ -6537,8 +6537,8 @@ $Formula: ( when-argument
    )
    ( call-ssm-strike 
       1 
-      "<argument>" 
       "Hostile" 
+	  "<argument>" 
    )
    ( invalidate-argument "<argument>" ) 
 )
@@ -6551,8 +6551,8 @@ $Formula: ( when-argument
    ( true ) 
    ( call-ssm-strike 
       1 
-      "<argument>" 
       "Hostile" 
+	  "<argument>" 
    )
    ( invalidate-argument "<argument>" ) 
 )
@@ -6567,8 +6567,8 @@ $Formula: ( when-argument
    ( true ) 
    ( call-ssm-strike 
       1 
-      "<argument>" 
       "Hostile" 
+	  "<argument>" 
    )
    ( invalidate-argument "<argument>" ) 
 )

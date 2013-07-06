@@ -9603,8 +9603,8 @@ $Formula: ( when-argument
       )
       ( call-ssm-strike 
          1 
-         "<argument>" 
          "Hostile" 
+		 "<argument>" 
       )
       ( do-nothing ) 
    )
@@ -9668,7 +9668,7 @@ $Formula: ( when
    ( <= ( hits-left "Sathanas" ) 49 ) 
    ( if-then-else 
       ( not ( is-destroyed-delay 0 "Apep" ) ) 
-      ( call-ssm-strike 2 "Apep" "Hostile" ) 
+      ( call-ssm-strike 2 "Hostile" "Apep" ) 
       ( do-nothing ) 
    )
 )
@@ -9689,8 +9689,8 @@ $Formula: ( when
       ( do-nothing ) 
       ( call-ssm-strike 
          2 
-         "Ganymede Alpha" 
          "Hostile" 
+		 "Ganymede Alpha" 
       )
    )
    ( if-then-else 
@@ -9701,8 +9701,8 @@ $Formula: ( when
       ( do-nothing ) 
       ( call-ssm-strike 
          2 
-         "Ganymede Beta" 
          "Hostile" 
+		 "Ganymede Beta" 
       )
    )
 )
