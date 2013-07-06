@@ -10,6 +10,12 @@ data/cache/
 
 data/tables/*.disabled
 data/scripts/*.disabled
+data/maps/sub-*
+data/maps/-.dds
+
+data/tables/screencam*
+data/models/marker.pof
+data/maps/invisiblebta.dds
 
 data/tables/aspov-adjustGunshipWeapons-sct.tbm_
 data/music/PST_Sigil-arv.ogg
@@ -19,8 +25,6 @@ data/music/PST_Sigil-btl3.ogg
 
 data/missions/*.bak
 data/missions/Backup.*
-
 data/missions/torpedoes.fs2
-data/missions/Z_show.fs2
-data/missions/Z_screeny.fs2
+data/missions/Z_*
 data/missions/0_Outnumbered*

@@ -1,8 +1,0 @@
-#Conditonnal Hooks
-
---???what is the purpose of this
-$State: GS_STATE_GAME_PLAY
-
-$On Gameplay start: [[turretSwap.lua]]
-
-$On Warp In: [[turretSwap.lua]]
