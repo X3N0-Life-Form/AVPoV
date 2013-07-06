@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Their Finest Hour", 1867)
 $Author: James Agay
 $Created: 06/04/99 at 14:09:31
-$Modified: 11/21/12 at 21:23:30
+$Modified: 06/08/13 at 21:07:20
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -12,11 +12,12 @@ $End Notes:
 $Mission Desc:
  XSTR("The 70th Blue Lions participate in a feint at the Gamma Draconis jump node.", 1868)
 $end_multi_text
-
 +Game Type Flags: 1
 +Flags: 0
-+Red Alert: 0
-+Scramble: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -24,24 +25,18 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: 3454.479248, 4907.051758, 93.710396
++Viewer pos: 1535.550171, 1049.414185, 12426.656250
 +Viewer orient:
-	0.726291, -0.000003, -0.687387,
-	0.380401, 0.832916, 0.401927,
-	0.572535, -0.553399, 0.604941
+	0.869207, 0.000003, 0.494449,
+	-0.200981, 0.913664, 0.353306,
+	-0.451759, -0.406471, 0.794163
 +SquadReassignName: 70th Blue Lions
 +SquadReassignLogo: lion1.pcx
 
-$Skybox Model: Starfield.pof
-$AI Profile: myProfile
-#Plot Info
 
-$Tour:  XSTR("Blah", 6)
-$Pre-Briefing Cutscene: Blah
-$Pre-Mission Cutscene: Blah
-$Next Mission Success: Blah
-$Next Mission Partial: Blah
-$Next Mission Failure: Blah
+$Skybox Model: Starfield.pof
+
+$AI Profile: myProfile
 
 #Command Briefing
 
@@ -400,10 +395,11 @@ $Ship Choices: (
 	"Harpoon"	600
 	"TAG-B"	20000
 	"Stiletto II"	100
+	"Crossbow"	240
 	"Trebuchet"	48
 )
 
-#Objects		;! 56 total
+#Objects		;! 76 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Erinyes
@@ -413,7 +409,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -430,6 +425,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Alpha 2		;! Object #1
@@ -440,7 +436,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -467,7 +462,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -495,7 +489,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -522,7 +515,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -550,7 +542,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -577,7 +568,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -604,7 +594,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -631,7 +620,6 @@ $Orientation:
 	-0.591073, 0.000000, 0.806618,
 	0.000000, 1.000000, 0.000000,
 	-0.806618, 0.000000, -0.591073
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -659,7 +647,6 @@ $Orientation:
 	-0.591073, 0.000000, 0.806618,
 	0.000000, 1.000000, 0.000000,
 	-0.806618, 0.000000, -0.591073
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -687,7 +674,6 @@ $Orientation:
 	-0.591073, 0.000000, 0.806618,
 	0.000000, 1.000000, 0.000000,
 	-0.806618, 0.000000, -0.591073
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -715,7 +701,6 @@ $Orientation:
 	0.506201, -0.254821, -0.823910,
 	0.411729, 0.910853, -0.028750,
 	0.757787, -0.324674, 0.565992
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Elite
 $AI Goals: ( goals ( ai-waypoints-once "C Path" 1 ) )
@@ -905,6 +890,7 @@ $Determination: 10
 +Respawn priority: 0
 +Escort priority: 6
 +Group: 0
++Use Table Score:
 +Score: 10000
 
 $Name: Delta 4		;! Object #12
@@ -915,7 +901,6 @@ $Orientation:
 	-0.591073, 0.000000, 0.806618,
 	0.000000, 1.000000, 0.000000,
 	-0.806618, 0.000000, -0.591073
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -943,7 +928,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("Nothing", 13)
@@ -970,7 +954,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("Nothing", 13)
@@ -997,7 +980,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1024,7 +1006,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1051,7 +1032,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1078,7 +1058,6 @@ $Orientation:
 	-0.039194, 0.000000, 0.999232,
 	0.000000, 1.000000, 0.000000,
 	-0.999232, 0.000000, -0.039194
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1120,7 +1099,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints "Low Road" 50 ) )
@@ -1130,10 +1108,12 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Primary Banks: ( "Terran Turret" )
 +Subsystem: turret04
++Primary Banks: ( "Wraith" )
 +Subsystem: turret05
 +Primary Banks: ( "Terran Turret" )
 +Subsystem: turret06
@@ -1170,7 +1150,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints "High road" 50 ) )
@@ -1219,7 +1198,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints "Allied level path" 50 ) )
@@ -1265,6 +1243,7 @@ $Determination: 10
 +Escort priority: 7
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 400
 
 $Name: Asmodeus 2		;! Object #22
@@ -1275,7 +1254,6 @@ $Orientation:
 	-0.089086, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089086
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1298,6 +1276,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 30
 
 $Name: Asmodeus 1		;! Object #23
@@ -1308,7 +1287,6 @@ $Orientation:
 	-0.089086, 0.000000, 0.996024,
 	0.000000, 1.000000, 0.000000,
 	-0.996024, 0.000000, -0.089086
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1331,6 +1309,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 30
 
 $Name: Mephisto 1		;! Object #24
@@ -1341,7 +1320,6 @@ $Orientation:
 	-0.217452, 0.000000, -0.976071,
 	0.000000, 1.000000, 0.000000,
 	0.976071, 0.000000, -0.217452
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1363,6 +1341,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 30
 
 $Name: Orcus		;! Object #25
@@ -1373,7 +1352,6 @@ $Orientation:
 	-0.086976, -0.012222, 0.996135,
 	0.147620, 0.988728, 0.025020,
 	-0.985212, 0.149226, -0.084191
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1419,7 +1397,6 @@ $Orientation:
 	-0.086976, -0.012222, 0.996135,
 	0.147620, 0.988728, 0.025020,
 	-0.985212, 0.149226, -0.084191
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1450,6 +1427,7 @@ $Determination: 10
 +Escort priority: 1
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 150
 
 $Name: Baal		;! Object #27
@@ -1460,7 +1438,6 @@ $Orientation:
 	-0.086976, -0.012222, 0.996135,
 	0.147620, 0.988728, 0.025020,
 	-0.985212, 0.149226, -0.084191
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
@@ -1494,6 +1471,7 @@ $Determination: 10
 +Escort priority: 1
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 150
 
 $Name: Beast		;! Object #28
@@ -1504,7 +1482,6 @@ $Orientation:
 	-0.992419, -0.019999, 0.121269,
 	0.018097, 0.952143, 0.305117,
 	-0.121567, 0.304998, -0.944563
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-chase "Colossus" 50 ) )
@@ -1568,7 +1545,6 @@ $Orientation:
 	-0.064770, 0.016018, -0.997772,
 	0.117705, 0.993014, 0.008301,
 	0.990934, -0.116905, -0.066203
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1586,6 +1562,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Scorpio 2		;! Object #30
@@ -1596,7 +1573,6 @@ $Orientation:
 	-0.064770, 0.016018, -0.997772,
 	0.117705, 0.993014, 0.008301,
 	0.990934, -0.116905, -0.066203
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1614,6 +1590,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Scorpio 3		;! Object #31
@@ -1624,7 +1601,6 @@ $Orientation:
 	-0.064770, 0.016018, -0.997772,
 	0.117705, 0.993014, 0.008301,
 	0.990934, -0.116905, -0.066203
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1642,6 +1618,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Scorpio 4		;! Object #32
@@ -1652,7 +1629,6 @@ $Orientation:
 	-0.064770, 0.016018, -0.997772,
 	0.117705, 0.993014, 0.008301,
 	0.990934, -0.116905, -0.066203
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1670,6 +1646,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 1		;! Object #33
@@ -1680,7 +1657,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1705,7 +1681,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1730,7 +1705,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
@@ -1750,15 +1724,14 @@ $Determination: 10
 $Name: Sathanas		;! Object #36
 $Class: SJ Sathanas
 $Team: Hostile
-$Location: -6875.020020, 4469.253906, 20501.453125
+$Location: -6875.000000, 4469.299805, 25501.500000
 $Orientation:
 	-0.982221, 0.128552, -0.136806,
 	0.156269, 0.963723, -0.216376,
 	0.104027, -0.233908, -0.966678
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Elite
-$AI Goals: ( goals ( ai-chase "Colossus" 50 ) )
+$AI Goals: ( goals ( ai-waypoints "Colly position" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1828,6 +1801,7 @@ $Determination: 10
 +Respawn priority: 0
 +Escort priority: 4
 +Group: 0
++Use Table Score:
 +Score: 10000
 
 $Name: Virgo 1		;! Object #37
@@ -1838,7 +1812,6 @@ $Orientation:
 	-0.009204, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009204
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1854,6 +1827,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #38
@@ -1864,7 +1838,6 @@ $Orientation:
 	-0.009204, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009204
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1880,6 +1853,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #39
@@ -1890,7 +1864,6 @@ $Orientation:
 	-0.009204, 0.000000, -0.999958,
 	0.000000, 1.000000, 0.000000,
 	0.999958, 0.000000, -0.009204
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1906,6 +1879,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Gamma 1		;! Object #40
@@ -1916,7 +1890,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1945,7 +1918,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1973,7 +1945,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2001,7 +1972,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2029,7 +1999,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2048,6 +2017,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Libra 2		;! Object #45
@@ -2058,7 +2028,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2077,6 +2046,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Libra 3		;! Object #46
@@ -2087,7 +2057,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2106,6 +2075,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Libra 4		;! Object #47
@@ -2116,7 +2086,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2135,6 +2104,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Kappa 1		;! Object #48
@@ -2145,7 +2115,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2163,6 +2132,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Kappa 2		;! Object #49
@@ -2173,7 +2143,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2191,6 +2160,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Kappa 3		;! Object #50
@@ -2201,7 +2171,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2219,6 +2188,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Kappa 4		;! Object #51
@@ -2229,7 +2199,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2247,6 +2216,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Iota 1		;! Object #52
@@ -2257,7 +2227,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2285,7 +2254,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2313,7 +2281,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2341,7 +2308,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -2361,7 +2327,583 @@ $Determination: 10
 +Group: 0
 +Score: 17
 
-#Wings		;! 10 total
+$Name: Colossus Beta 1		;! Object #56
+$Class: GTF Ares
+$Team: Friendly
+$Location: -249.889633, 0.001423, 13930.168945
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "UD-8 Kayser" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Colossus Beta 2		;! Object #57
+$Class: GTF Ares
+$Team: Friendly
+$Location: -7.263062, 0.001343, 13607.160156
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "UD-8 Kayser" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Colossus Beta 3		;! Object #58
+$Class: GTF Ares
+$Team: Friendly
+$Location: -151.309875, 0.001366, 13495.416016
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "UD-8 Kayser" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Colossus Beta 4		;! Object #59
+$Class: GTF Ares
+$Team: Friendly
+$Location: -387.168671, 0.001497, 13695.422852
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "UD-8 Kayser" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Colossus Alpha 1		;! Object #60
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 949.508911, 0.001348, 13974.291992
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Colossus Alpha 2		;! Object #61
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 1125.600098, 0.001455, 13759.884766
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Colossus Alpha 3		;! Object #62
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 1022.164001, 0.001319, 13589.791016
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Colossus Alpha 4		;! Object #63
+$Class: GTF Perseus
+$Team: Friendly
+$Location: 902.293396, 0.001283, 13689.100586
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Tempest" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Colossus Delta 1		;! Object #64
+$Class: GTB Artemis
+$Team: Friendly
+$Location: 764.488647, 0.001499, 15097.469727
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Colossus Delta 2		;! Object #65
+$Class: GTB Artemis
+$Team: Friendly
+$Location: 995.366760, 0.001339, 14928.383789
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Colossus Delta 3		;! Object #66
+$Class: GTB Artemis
+$Team: Friendly
+$Location: 934.407776, 0.001575, 15331.200195
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Colossus Delta 4		;! Object #67
+$Class: GTB Artemis
+$Team: Friendly
+$Location: 789.406738, 0.001321, 15458.579102
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" )
++Secondary Banks: ( "Tornado" "Cyclops" "Cyclops" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Colossus Gamma 1		;! Object #68
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 216.504883, 0.001500, 14707.989258
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Colossus Gamma 2		;! Object #69
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 187.625351, 0.001502, 14634.916992
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Colossus Gamma 3		;! Object #70
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 339.875427, 0.001473, 14524.226563
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Colossus Gamma 4		;! Object #71
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 398.171661, 0.001453, 14640.095703
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Prometheus S" "Prometheus S" )
++Secondary Banks: ( "Trebuchet" "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Colossus Epsilon 1		;! Object #72
+$Class: GTF Loki
+$Team: Friendly
+$Location: 703.680786, 0.001498, 14008.063477
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Colossus Epsilon 2		;! Object #73
+$Class: GTF Loki
+$Team: Friendly
+$Location: 674.734619, 0.001445, 14110.660156
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Colossus Epsilon 3		;! Object #74
+$Class: GTF Loki
+$Team: Friendly
+$Location: 748.794250, 0.001494, 14060.562500
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Colossus Epsilon 4		;! Object #75
+$Class: GTF Loki
+$Team: Friendly
+$Location: 651.423950, 0.001420, 14036.531250
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "UD-8 Kayser" )
++Secondary Banks: ( "Tempest" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+#Wings		;! 15 total
 
 $Name: Alpha
 $Waves: 1
@@ -2378,6 +2920,7 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
+$AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -2561,7 +3104,116 @@ $Ships: (		;! 4 total
 )
 +Flags: ( )
 
-#Events		;! 54 total
+$Name: Colossus Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Colossus Alpha 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Colossus
+$Arrival Cue: ( has-arrived-delay 7 "Sathanas" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay "Jump Out 1" 0 ) 
+$Ships: (		;! 4 total
+	"Colossus Alpha 1"
+	"Colossus Alpha 2"
+	"Colossus Alpha 3"
+	"Colossus Alpha 4"
+)
+$AI Goals: ( goals ( ai-guard-wing "Colossus Beta" 50 ) ( ai-guard-wing "Colossus Delta" 48 ) ( ai-guard "Colossus" 46 ) )
++Flags: ( )
+
+$Name: Colossus Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Colossus Beta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Colossus
+$Arrival Cue: ( has-arrived-delay 
+   4 
+   "Colossus Alpha" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay "Jump Out 1" 0 ) 
+$Ships: (		;! 4 total
+	"Colossus Beta 1"
+	"Colossus Beta 2"
+	"Colossus Beta 3"
+	"Colossus Beta 4"
+)
+$AI Goals: ( goals ( ai-chase "Sathanas" 50 ) )
++Flags: ( )
+
+$Name: Colossus Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Colossus Gamma 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Colossus
+$Arrival Cue: ( has-arrived-delay 6 "Colossus Beta" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay "Jump Out 1" 0 ) 
+$Ships: (		;! 4 total
+	"Colossus Gamma 1"
+	"Colossus Gamma 2"
+	"Colossus Gamma 3"
+	"Colossus Gamma 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Virgo" 50 ) ( ai-chase "Sathanas" 48 ) )
++Flags: ( )
+
+$Name: Colossus Epsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Colossus Epsilon 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Colossus
+$Arrival Cue: ( has-arrived-delay 
+   5 
+   "Colossus Gamma" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay "Jump Out 1" 0 ) 
+$Ships: (		;! 4 total
+	"Colossus Epsilon 1"
+	"Colossus Epsilon 2"
+	"Colossus Epsilon 3"
+	"Colossus Epsilon 4"
+)
+$AI Goals: ( goals ( ai-guard-wing "Colossus Delta" 50 ) ( ai-guard-wing "Colossus Beta" 48 ) ( ai-guard "Colossus" 44 ) )
++Flags: ( )
+
+$Name: Colossus Delta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Colossus Delta 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Colossus
+$Arrival Cue: ( has-arrived-delay 
+   3 
+   "Colossus Epsilon" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay "Jump Out 1" 0 ) 
+$Ships: (		;! 4 total
+	"Colossus Delta 1"
+	"Colossus Delta 2"
+	"Colossus Delta 3"
+	"Colossus Delta 4"
+)
+$AI Goals: ( goals ( ai-chase "Sathanas" 50 ) )
++Flags: ( )
+
+#Events		;! 59 total
 
 $Formula: ( when 
    ( has-time-elapsed 10 ) 
@@ -2645,6 +3297,9 @@ $Formula: ( when
       "High" 
       "First Cain arrived" 
    )
+   ( beam-free-all "Stalwart" ) 
+   ( beam-free-all "Khepri" ) 
+   ( beam-free-all "Heket" ) 
 )
 +Name: Cain 1 Armed
 +Repeat Count: 1
@@ -3242,9 +3897,15 @@ $Formula: ( when
       ( - ( get-object-y "Hela" ) 1000 ) 
       ( get-object-z "Hela" ) 
    )
+   ( set-object-position 
+      "lilith pos:1" 
+      ( get-object-x "Hela" ) 
+      ( get-object-y "Hela" ) 
+      ( get-object-z "Hela" ) 
+   )
 )
 +Name: update lilith pos
-+Repeat Count: 1
++Repeat Count: -1
 +Trigger Count: 200
 +Interval: 5
 
@@ -3264,6 +3925,16 @@ $Formula: ( when
          100 
       )
    )
+   ( cap-waypoint-speed "Stalwart" -1 ) 
+   ( remove-goal 
+      "Stalwart" 
+      ( ai-waypoints-once "lilith pos" 120 ) 
+   )
+   ( remove-goal 
+      "Khepri" 
+      ( ai-waypoints-once "lilith pos" 120 ) 
+   )
+   ( cap-waypoint-speed "Khepri" -1 ) 
 )
 +Name: Hela destroyed
 +Repeat Count: 1
@@ -3325,7 +3996,7 @@ $Formula: ( when-argument
    )
 )
 +Name: TAG
-+Repeat Count: 1
++Repeat Count: -1
 +Trigger Count: 800
 +Interval: 30
 
@@ -3346,6 +4017,126 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when-argument 
+   ( any-of "Khepri" "Stalwart" ) 
+   ( < 
+      ( distance "<argument>" "Hela" ) 
+      4000 
+   )
+   ( add-goal 
+      "<argument>" 
+      ( ai-waypoints "lilith pos" 120 ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+   ( cap-waypoint-speed "<argument>" 10 ) 
+)
++Name: engage lilith
++Repeat Count: -1
++Trigger Count: 999
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Sathanas" ) 
+   ( set-armor-type 
+      "Colossus" 
+      ( true ) 
+      "Shivan Bomber Armor" 
+      "Hull" 
+   )
+)
++Name: sathanas arrives
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Sathanas" ) 
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret44" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret45" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret46" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret47" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret48" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret49" 
+      "Catapult" 
+      0 
+      1 
+   )
+   ( turret-change-weapon 
+      "Colossus" 
+      "turret50" 
+      "Catapult" 
+      0 
+      1 
+   )
+)
++Name: colly switch to catapult
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when-argument 
+   ( any-of "Khepri" "Heket" "Stalwart" ) 
+   ( has-arrived-delay 25 "Sathanas" ) 
+   ( if-then-else 
+      ( is-destroyed-delay 0 "<argument>" ) 
+      ( invalidate-argument "<argument>" ) 
+      ( call-ssm-strike 
+         0 
+         "Hostile" 
+         "<argument>" 
+      )
+   )
+)
++Name: ssm strikes
++Repeat Count: 200
++Interval: 30
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Sathanas" ) 
+   ( if-then-else 
+      ( < 
+         ( distance "Colossus" "Sathanas" ) 
+         7000 
+      )
+      ( cap-waypoint-speed "Sathanas" 5 ) 
+      ( cap-waypoint-speed "Sathanas" -1 ) 
+   )
+)
++Name: sath speed
++Repeat Count: 800
++Interval: 5
+
 #Goals		;! 2 total
 
 $Type: Secondary
@@ -3360,11 +4151,11 @@ $MessageNew:  XSTR("Neutralize all enemy fighters that enter the field of engage
 $end_multi_text
 $Formula: ( has-departed-delay 0 "Alpha 1" ) 
 
-#Waypoints		;! 14 lists total
+#Waypoints		;! 15 lists total
+
 
 $Jump Node: 8560.556641, -0.003340, 5746.738770
 $Jump Node Name: Gamma Draconis
-
 $Name: Waypoint path 1
 $List: (		;! 4 points in list
 	( 5236.658691, -0.002233, 6160.290527 )
@@ -3450,7 +4241,13 @@ $List: (		;! 1 points in list
 	( -10609.018555, -0.000835, 15297.879883 )
 )
 
+$Name: lilith pos
+$List: (		;! 1 points in list
+	( 5384.261719, -0.000167, 4346.586426 )
+)
+
 #Messages		;! 27 total
+
 
 $Name: Gamma Arrives
 $Team: -1
@@ -3674,7 +4471,7 @@ $end_multi_text
 #Background bitmaps		;! 23 total
 
 $Num stars: 2000
-$Ambient light level: 0
+$Ambient light level: 7895160
 
 $Bitmap List:
 $Sun: SunCapellaA
