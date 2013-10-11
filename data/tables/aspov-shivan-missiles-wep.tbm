@@ -80,11 +80,11 @@ $Thruster Glow Effect:				missileglow06
 
 
 $Name:                                 	Shivan Advanced Swarmer Bomb
-	+Title:								XSTR("Shivan Avanced Swarmer Bomb",-1)
+	+Title:								XSTR("Shivan Advanced Swarmer Bomb",-1)
 	+Description:
 		XSTR(
 		"Special Issue
-		Defense Saturation Bomb
+		Defence Saturation Bomb
 		Non-Conventional Warhead
 		", -1)
 		$end_multi_text
@@ -381,7 +381,7 @@ $Name:		Piranha#Shivan
 XSTR(
 "Standard Issue
 Area Effect
-Fighter Suppresion Weapon", -1)
+Fighter Suppression Weapon", -1)
 $end_multi_text
 $Flags:	("player allowed")
 
