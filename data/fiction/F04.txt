@@ -1,1 +1,18 @@
-    17 disobeying instructions. Hostiles collapsed a jump node. Sending scouts to invistigate activity beyond second second outgoing node. Hostile must not be allowed to escape. Sun operations almost complete. All ships still engaged at the end of operations are considered expendable. Threshold crossed, Sathanas multirole considered expendable. Hostile resistance almost eliminated in Capella. Begin preparations to terminate hostile resistance in adjacent systems as soon as sun operations are complete. Upgrade rules of engagement from "subspace-beam-shield" to "subspace-electronic-node forge".
+17 disobeying instructions.
+
+Hostiles collapsed a jump node.
+
+Sending scouts to invistigate activity beyond second second outgoing node.
+
+Hostile must not be allowed to escape.
+
+Sun operations almost complete.
+
+All ships still engaged at the end of operations are considered expendable.
+
+Threshold crossed, Sathanas multirole considered expendable.
+
+Hostile resistance almost eliminated in Capella.
+
+Begin preparations to terminate hostile resistance in adjacent systems as soon as sun operations are complete. 
+Upgrade rules of engagement from "subspace-beam-shield" to "subspace-electronic-node forge".

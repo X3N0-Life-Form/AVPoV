@@ -1,10 +1,10 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("Their Finest Hour", -1)
+$Name:  XSTR("Facing Goliath", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 04/24/13 at 21:33:41
+$Modified: 10/11/13 at 20:40:35
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 9627.751953, 422.894928, 14650.788086
++Viewer pos: 758.316101, 7683.516602, 6122.058594
 +Viewer orient:
-	-0.371003, 0.000002, -0.928632,
-	0.549545, 0.806100, -0.219550,
-	0.748570, -0.591779, -0.299067
+	0.992451, 0.000001, 0.122640,
+	-0.112174, 0.404225, 0.907755,
+	-0.049573, -0.914660, 0.401174
 
 
 $Skybox Model: Starfield.pof
@@ -414,7 +414,7 @@ $Dockee Point: Dock01
 $Name: Dockpoint dummies 1		;! Object #6
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8739.858398, -42.109085, 9201.695313
+$Location: 8739.858398, -42.109100, 9201.695313
 $Orientation:
 	0.074548, 0.928340, -0.364181,
 	0.631052, 0.238858, 0.738052,
@@ -443,9 +443,9 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704030, 9213.975586
+$Location: 8706.747070, 12.704044, 9213.975586
 $Orientation:
-	-0.074363, -0.928411, 0.364037,
+	-0.074364, -0.928411, 0.364037,
 	0.670575, 0.223638, 0.707329,
 	-0.738105, 0.296714, 0.605938
 $AI Behavior: None
@@ -472,11 +472,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.631836, -2.462790, 9187.413086
+$Location: 8741.628906, -2.463237, 9187.416016
 $Orientation:
-	0.755422, -0.290428, -0.587358,
-	0.652752, 0.255535, 0.713173,
-	-0.057035, -0.922147, 0.382614
+	0.755390, -0.290825, -0.587202,
+	0.652760, 0.255533, 0.713167,
+	-0.057357, -0.922022, 0.382865
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -501,11 +501,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.362305, -30.218332, 9229.856445
+$Location: 8704.360352, -30.218626, 9229.859375
 $Orientation:
-	0.755390, -0.290828, -0.587201,
-	0.652760, 0.255532, 0.713167,
-	-0.057360, -0.922021, 0.382867
+	0.755427, -0.290369, -0.587381,
+	0.652750, 0.255536, 0.713174,
+	-0.056987, -0.922165, 0.382577
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -593,10 +593,10 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.477539, 5.504875, 11767.512695
+$Location: 13005.482422, 14.513985, 11767.513672
 $Orientation:
-	0.176978, 0.000024, -0.984259,
-	0.984266, 0.000032, 0.176979,
+	0.177334, 0.000023, -0.984195,
+	0.984202, 0.000032, 0.177335,
 	0.000036, -1.000000, -0.000017
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
@@ -788,7 +788,7 @@ $Determination: 10
 $Name: TC-TRI 13		;! Object #16
 $Class: TC-TRI
 $Team: Friendly
-$Location: 12158.765625, -65.020416, 10601.440430
+$Location: 12158.765625, -65.015015, 10601.443359
 $Orientation:
 	1.000000, 0.000004, 0.000001,
 	-0.000000, 0.343545, -0.939162,
@@ -3241,13 +3241,6 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 300
-$Texture Replace:
-+old: rak_01-glow
-+new: rak_01_cmd-glow
-+old: rak_01-normal
-+new: rak_01_cmd-glow
-+old: rak_02-normal
-+new: rak_02_cmd-glow
 
 $Name: Oblivion 1		;! Object #98
 $Class: SF Manticore
@@ -4110,10 +4103,10 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: Turret01
-+Secondary Banks: ( "Trebuchet" )
++Secondary Banks: ( "Trebuchet#Hemsut" )
 +Sbank Ammo: ( 0 )
 +Subsystem: Turret02
-+Secondary Banks: ( "Trebuchet" )
++Secondary Banks: ( "Trebuchet#Hemsut" )
 +Sbank Ammo: ( 0 )
 +Subsystem: Turret03
 +Subsystem: Turret04
@@ -7228,19 +7221,6 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 670
-$Texture Replace:
-+old: capital04-01
-+new: capital04-01_cmd
-+old: capital04-03-glow
-+new: capital04-03_cmd-glow
-+old: corvstile2
-+new: corvstile2_cmd
-+old: htlravana-glow
-+new: htlravana_cmd-glow
-+old: scap02-glow
-+new: scap02_cmd-glow
-+old: supertile1-glow
-+new: supertile1_cmd-glow
 
 $Name: Apocalypse 2		;! Object #232
 $Class: SC Lilith
@@ -8296,250 +8276,7 @@ $Ships: (		;! 3 total
 )
 +Flags: ( )
 
-#Events		;! 83 total
-
-$Formula: ( when 
-   ( and 
-      ( key-pressed "1" ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( modify-variable @stone_target[1] 1 ) 
-   ( key-reset "1" ) 
-)
-+Name: stone mode 1 - fire at will
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 3
-
-$Formula: ( when 
-   ( and 
-      ( key-pressed "2" ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( modify-variable @stone_target[1] 2 ) 
-   ( key-reset "2" ) 
-)
-+Name: stone mode 2 - fighters
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 3
-
-$Formula: ( when 
-   ( and 
-      ( key-pressed "3" ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( modify-variable @stone_target[1] 3 ) 
-   ( key-reset "3" ) 
-)
-+Name: stone mode 3 - bombers
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 3
-
-$Formula: ( when 
-   ( and 
-      ( key-pressed "4" ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( modify-variable @stone_target[1] 4 ) 
-   ( key-reset "4" ) 
-)
-+Name: stone mode 4 - sathanas
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 3
-
-$Formula: ( when-argument 
-   ( every-of 
-      "Leo 1" 
-      "Leo 2" 
-      "Leo 3" 
-      "Leo 4" 
-      "Leo 5" 
-      "Leo 6" 
-      "Cancer 1" 
-      "Cancer 2" 
-      "Cancer 3" 
-      "Cancer 4" 
-      "Cancer 5" 
-      "Cancer 6" 
-      "Virgo 1" 
-      "Virgo 2" 
-      "Virgo 3" 
-      "Virgo 4" 
-      "Libra 1" 
-      "Libra 2" 
-      "Libra 3" 
-      "Libra 4" 
-   )
-   ( and 
-      ( = @stone_target[1] 2 ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( ship-tag "<argument>" 2 5 ) 
-)
-+Name: stone tag 2
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 5
-
-$Formula: ( when-argument 
-   ( every-of 
-      "Gemini 1" 
-      "Gemini 2" 
-      "Gemini 3" 
-      "Gemini 4" 
-      "Gemini 5" 
-      "Gemini 6" 
-      "Taurus 1" 
-      "Taurus 2" 
-      "Taurus 3" 
-      "Taurus 4" 
-      "Taurus 5" 
-      "Taurus 6" 
-   )
-   ( and 
-      ( = @stone_target[1] 3 ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( ship-tag "<argument>" 2 5 ) 
-)
-+Name: stone tag 3
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 5
-
-$Formula: ( when-argument 
-   ( every-of "Sathanas" ) 
-   ( and 
-      ( = @stone_target[1] 4 ) 
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-   )
-   ( ship-tag "<argument>" 2 5 ) 
-)
-+Name: stone tag 4
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 5
-
-$Formula: ( when 
-   ( and 
-      ( has-arrived-delay 
-         0 
-         "Stone of Dovka" 
-      )
-      ( not 
-         ( is-destroyed-delay 
-            0 
-            "Stone of Dovka" 
-         )
-      )
-      ( not 
-         ( is-event-true-delay 
-            "1st wave destroyed" 
-            0 
-         )
-      )
-      ( is-event-true-delay 
-         "1st wave armor swaps" 
-         0 
-      )
-   )
-   ( if-then-else 
-      ( = @stone_target[1] 1 ) 
-      ( turret-tagged-clear 
-         "Stone of Dovka" 
-      )
-      ( turret-tagged-specific 
-         "Stone of Dovka" 
-         "Turret01" 
-         "Turret02" 
-      )
-   )
-   ( training-msg "stone targetting" ) 
-)
-+Name: stone print mode
-+Repeat Count: -1
-+Trigger Count: 400
-+Interval: 5
+#Events		;! 75 total
 
 $Formula: ( when 
    ( has-arrived-delay 60 "Apep" ) 
@@ -8571,13 +8308,7 @@ $Formula: ( when
          )
       )
       ( if-then-else 
-         ( and 
-            ( not ( is-destroyed-delay 0 "Apep" ) ) 
-            ( or 
-               ( = @stone_target[1] 1 ) 
-               ( = @stone_target[1] 4 ) 
-            )
-         )
+         ( not ( is-destroyed-delay 0 "Apep" ) ) 
          ( if-then-else 
             ( and 
                ( has-arrived-delay 0 "Hellknight" ) 
@@ -8599,130 +8330,27 @@ $Formula: ( when
             )
          )
          ( if-then-else 
-            ( is-destroyed-delay 0 "Apep" ) 
-            ( if-then-else 
-               ( and 
-                  ( has-arrived-delay 0 "Hellknight" ) 
-                  ( not 
-                     ( is-destroyed-delay 0 "Hellknight" ) 
-                  )
-               )
-               ( set-object-position 
-                  "Stone of Dovka path:1" 
-                  ( get-object-x "Hellknight" ) 
-                  ( get-object-y "Hellknight" ) 
-                  ( get-object-z "Hellknight" ) 
-               )
-               ( set-object-position 
-                  "Stone of Dovka path:1" 
-                  ( get-object-x "Sathanas" ) 
-                  ( get-object-y "Sathanas" ) 
-                  ( get-object-z "Sathanas" ) 
+            ( and 
+               ( has-arrived-delay 0 "Hellknight" ) 
+               ( not 
+                  ( is-destroyed-delay 0 "Hellknight" ) 
                )
             )
-            ( if-then-else 
-               ( = @stone_target[1] 2 ) 
-               ( set-object-position 
-                  "Stone of Dovka path:1" 
-                  ( avg 
-                     ( get-object-x "Cancer" ) 
-                     ( get-object-x "Leo" ) 
-                     ( get-object-x "Libra" ) 
-                     ( get-object-x "Virgo" ) 
-                  )
-                  ( avg 
-                     ( get-object-y "Cancer" ) 
-                     ( get-object-y "Leo" ) 
-                     ( get-object-y "Libra" ) 
-                     ( get-object-y "Virgo" ) 
-                  )
-                  ( avg 
-                     ( get-object-z "Cancer" ) 
-                     ( get-object-z "Leo" ) 
-                     ( get-object-z "Libra" ) 
-                     ( get-object-z "Virgo" ) 
-                  )
-               )
-               ( if-then-else 
-                  ( = @stone_target[1] 3 ) 
-                  ( set-object-position 
-                     "Stone of Dovka path:1" 
-                     ( avg 
-                        ( get-object-x "Gemini" ) 
-                        ( get-object-x "Taurus" ) 
-                     )
-                     ( avg 
-                        ( get-object-y "Gemini" ) 
-                        ( get-object-y "Taurus" ) 
-                     )
-                     ( avg 
-                        ( get-object-z "Gemini" ) 
-                        ( get-object-z "Taurus" ) 
-                     )
-                  )
-                  ( do-nothing ) 
-               )
+            ( set-object-position 
+               "Stone of Dovka path:1" 
+               ( get-object-x "Hellknight" ) 
+               ( get-object-y "Hellknight" ) 
+               ( get-object-z "Hellknight" ) 
+            )
+            ( set-object-position 
+               "Stone of Dovka path:1" 
+               ( get-object-x "Sathanas" ) 
+               ( get-object-y "Sathanas" ) 
+               ( get-object-z "Sathanas" ) 
             )
          )
       )
       ( do-nothing ) 
-   )
-   ( if-then-else 
-      ( and 
-         ( not 
-            ( is-destroyed-delay 
-               0 
-               "Stone of Dovka" 
-            )
-         )
-         ( < 
-            ( distance 
-               "Stone of Dovka" 
-               "Stone of Dovka path:1" 
-            )
-            2000 
-         )
-         ( or 
-            ( = @stone_target[1] 2 ) 
-            ( = @stone_target[1] 3 ) 
-         )
-      )
-      ( if-then-else 
-         ( false ) 
-         ( do-nothing ) 
-         ( turret-change-weapon 
-            "Stone of Dovka" 
-            "Turret01" 
-            "Piranha" 
-            0 
-            1 
-         )
-         ( turret-change-weapon 
-            "Stone of Dovka" 
-            "Turret02" 
-            "Piranha" 
-            0 
-            1 
-         )
-      )
-      ( if-then-else 
-         ( false ) 
-         ( do-nothing ) 
-         ( turret-change-weapon 
-            "Stone of Dovka" 
-            "Turret01" 
-            "Trebuchet" 
-            0 
-            1 
-         )
-         ( turret-change-weapon 
-            "Stone of Dovka" 
-            "Turret02" 
-            "Trebuchet" 
-            0 
-            1 
-         )
-      )
    )
 )
 +Name: update stone path
@@ -9123,24 +8751,6 @@ $Formula: ( when
       "#Stone of Dovka" 
       "High" 
       "stone of dovka down - sod" 
-   )
-   ( if-then-else 
-      ( and 
-         ( not 
-            ( is-event-true-delay 
-               "1st wave destroyed" 
-               0 
-            )
-         )
-         ( is-event-true-delay 
-            "1st wave armor swaps" 
-            0 
-         )
-      )
-      ( training-msg 
-         "stone targeting - lost" 
-      )
-      ( do-nothing ) 
    )
 )
 +Name: stone of dovka down
@@ -9588,7 +9198,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when-argument 
-   ( every-of 
+   ( random-of 
       "Searing Fate" 
       "Crixalis" 
       "Stone of Dovka" 
@@ -9596,22 +9206,19 @@ $Formula: ( when-argument
    ( and 
       ( <= ( hits-left "Sathanas" ) 71 ) 
       ( is-event-true-delay "your call 2" 7 ) 
-   )
-   ( if-then-else 
       ( not 
          ( is-destroyed-delay 0 "<argument>" ) 
       )
-      ( call-ssm-strike 
-         1 
-         "Hostile" 
-		 "<argument>" 
-      )
-      ( do-nothing ) 
+   )
+   ( call-ssm-strike 
+      0 
+      "Hostile" 
+      "<argument>" 
    )
 )
 +Name: sath < 71 - ssm vs escort
 +Repeat Count: 4
-+Interval: 8
++Interval: 24
 
 $Formula: ( when 
    ( <= ( hits-left "Sathanas" ) 62 ) 
@@ -9690,7 +9297,7 @@ $Formula: ( when
       ( call-ssm-strike 
          2 
          "Hostile" 
-		 "Ganymede Alpha" 
+         "Ganymede Alpha" 
       )
    )
    ( if-then-else 
@@ -9702,7 +9309,7 @@ $Formula: ( when
       ( call-ssm-strike 
          2 
          "Hostile" 
-		 "Ganymede Beta" 
+         "Ganymede Beta" 
       )
    )
 )
@@ -11006,7 +10613,11 @@ $Type: Primary
 +Name: Survive
 $MessageNew:  XSTR("Survive the assault", -1)
 $end_multi_text
-$Formula: ( false ) 
+$Formula: ( is-event-true-delay 
+   "Sathanas destroyed" 
+   0 
+)
++Invalid
 
 #Waypoints		;! 10 lists total
 
@@ -11063,17 +10674,8 @@ $List: (		;! 1 points in list
 	( 3646.826416, 0.000722, 8054.357422 )
 )
 
-#Messages		;! 49 total
+#Messages		;! 47 total
 
-
-$Name: stone targetting
-$Team: -1
-$MessageNew:  XSTR("Stone of Dovka targetting mode: $stone_target 
-$1$ - Fire at will
-$2$ - Target fighters
-$3$ - Target bombers
-$4$ - Target Sathanas", -1)
-$end_multi_text
 
 $Name: mission start 1 - eb siliss
 $Team: -1
@@ -11329,11 +10931,6 @@ $Team: -1
 $MessageNew:  XSTR("This is the Stone Of Dovka, our missile re -", -1)
 $end_multi_text
 +AVI Name: Head-VC2
-
-$Name: stone targeting - lost
-$Team: -1
-$MessageNew:  XSTR(">>> Signal Lost <<<", -1)
-$end_multi_text
 
 $Name: searing fate down - sf
 $Team: -1

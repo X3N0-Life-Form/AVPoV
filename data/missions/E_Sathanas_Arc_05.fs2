@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("It's Hammer Time", -1)
 $Author: X3N0-Life-Form
 $Created: 10/02/10 at 16:58:31
-$Modified: 10/24/12 at 22:02:20
+$Modified: 09/30/13 at 22:08:48
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -13,29 +13,34 @@ $Mission Desc:
  XSTR("Put mission description here
 ", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 128
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -5889.786133, 4148.633789, -1060.234619
++Viewer pos: -5104.710449, 5170.645508, 4575.305176
 +Viewer orient:
-	0.694044, -0.000002, -0.719933,
-	0.456790, 0.772933, 0.440361,
-	0.556459, -0.634488, 0.536450
+	-0.500109, 0.000000, -0.865962,
+	0.599967, 0.721098, -0.346492,
+	0.624444, -0.692833, -0.360628
 
+
+$Skybox Model: starfield.pof
 
 $AI Profile: FS2 RETAIL
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"arg"		"none"		"string"
+		1		"target"		"none"		"string"
+)
 
 #Command Briefing
 
@@ -598,7 +603,7 @@ $Determination: 10
 $Name: Cyaegha		;! Object #4
 $Class: SCv Moloch
 $Team: Hostile
-$Location: 51.662792, -399.025299, 6628.354980
+$Location: 118.913651, -399.025330, 5318.124512
 $Orientation:
 	-0.653644, -0.250947, 0.713985,
 	0.218099, 0.840938, 0.495233,
@@ -610,7 +615,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "SRed-Refractor" )
++Primary Banks: ( "MRed" )
 +Subsystem: turret02
 +Primary Banks: ( "Suppression Flak" )
 +Subsystem: turret03
@@ -1226,7 +1231,7 @@ $Determination: 10
 $Name: Virgo 1		;! Object #23
 $Class: SF Mara
 $Team: Hostile
-$Location: 841.750732, -179.416702, 6023.156250
+$Location: 909.001465, -179.416733, 4712.925781
 $Orientation:
 	-0.965979, 0.000000, 0.258619,
 	0.000000, 1.000000, 0.000000,
@@ -1253,7 +1258,7 @@ $Determination: 10
 $Name: Virgo 2		;! Object #24
 $Class: SF Mara
 $Team: Hostile
-$Location: 713.801208, -179.416794, 5997.605469
+$Location: 781.051880, -179.416824, 4687.375000
 $Orientation:
 	-0.965979, 0.000000, 0.258619,
 	0.000000, 1.000000, 0.000000,
@@ -1280,7 +1285,7 @@ $Determination: 10
 $Name: Virgo 3		;! Object #25
 $Class: SF Mara
 $Team: Hostile
-$Location: 657.949341, -179.416748, 5922.454102
+$Location: 725.200073, -179.416779, 4612.223633
 $Orientation:
 	-0.965979, 0.000000, 0.258619,
 	0.000000, 1.000000, 0.000000,
@@ -1307,7 +1312,7 @@ $Determination: 10
 $Name: Virgo 4		;! Object #26
 $Class: SF Mara
 $Team: Hostile
-$Location: 588.710083, -179.416702, 5845.338867
+$Location: 655.960815, -179.416733, 4535.108398
 $Orientation:
 	-0.965979, 0.000000, 0.258619,
 	0.000000, 1.000000, 0.000000,
@@ -1334,7 +1339,7 @@ $Determination: 10
 $Name: Cancer 1		;! Object #27
 $Class: SF Astaroth
 $Team: Hostile
-$Location: -318.117035, -0.000113, 6110.651855
+$Location: -250.866135, -0.000144, 4800.421387
 $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
@@ -1360,7 +1365,7 @@ $Determination: 10
 $Name: Cancer 2		;! Object #28
 $Class: SF Astaroth
 $Team: Hostile
-$Location: -308.824280, -0.000071, 5944.198730
+$Location: -241.573471, -0.000102, 4633.968262
 $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
@@ -1386,7 +1391,7 @@ $Determination: 10
 $Name: Cancer 3		;! Object #29
 $Class: SF Astaroth
 $Team: Hostile
-$Location: -202.928864, -0.000187, 5942.525879
+$Location: -135.677948, -0.000218, 4632.295410
 $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
@@ -1412,7 +1417,7 @@ $Determination: 10
 $Name: Cancer 4		;! Object #30
 $Class: SF Astaroth
 $Team: Hostile
-$Location: -185.371689, -0.000077, 6074.851074
+$Location: -118.120804, -0.000108, 4764.620605
 $Orientation:
 	-0.999999, 0.000000, 0.001593,
 	0.000000, 1.000000, 0.000000,
@@ -2288,7 +2293,7 @@ $Determination: 10
 $Name: Taurus 1		;! Object #56
 $Class: SB Nahema
 $Team: Hostile
-$Location: -770.630981, -0.000131, 2876.473877
+$Location: -703.380249, -0.000162, 1566.243408
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2313,7 +2318,7 @@ $Determination: 10
 $Name: Taurus 2		;! Object #57
 $Class: SB Nahema
 $Team: Hostile
-$Location: -829.269836, -0.000256, 2714.708008
+$Location: -762.019165, -0.000287, 1404.477539
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2338,7 +2343,7 @@ $Determination: 10
 $Name: Taurus 3		;! Object #58
 $Class: SB Nahema
 $Team: Hostile
-$Location: -958.532715, -0.000178, 2856.051025
+$Location: -891.281982, -0.000209, 1545.820557
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2363,7 +2368,7 @@ $Determination: 10
 $Name: Taurus 4		;! Object #59
 $Class: SB Nahema
 $Team: Hostile
-$Location: -850.380737, -0.000241, 2974.309814
+$Location: -783.130005, -0.000272, 1664.079346
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2388,7 +2393,7 @@ $Determination: 10
 $Name: Aries 1		;! Object #60
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1286.345947, -0.000135, 2843.263184
+$Location: -1219.094238, -0.000166, 1533.032715
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2415,7 +2420,7 @@ $Determination: 10
 $Name: Aries 2		;! Object #61
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1156.706543, 0.000064, 3043.186523
+$Location: -1089.454834, 0.000033, 1732.956055
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2442,7 +2447,7 @@ $Determination: 10
 $Name: Aries 3		;! Object #62
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1260.366455, -0.000262, 3167.588379
+$Location: -1193.114746, -0.000293, 1857.357910
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2469,7 +2474,7 @@ $Determination: 10
 $Name: Capricorn 1		;! Object #63
 $Class: SB Taurvi
 $Team: Hostile
-$Location: 697.687744, -0.000173, 3153.965576
+$Location: 764.938477, -0.000204, 1843.735107
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2496,7 +2501,7 @@ $Determination: 10
 $Name: Capricorn 2		;! Object #64
 $Class: SB Taurvi
 $Team: Hostile
-$Location: 499.651306, -0.000028, 3039.911377
+$Location: 566.901733, -0.000059, 1729.680908
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2523,7 +2528,7 @@ $Determination: 10
 $Name: Capricorn 3		;! Object #65
 $Class: SB Taurvi
 $Team: Hostile
-$Location: 709.953796, -0.000175, 2796.952637
+$Location: 777.204468, -0.000206, 1486.722168
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2550,7 +2555,7 @@ $Determination: 10
 $Name: Libra 1		;! Object #66
 $Class: SF Mara
 $Team: Hostile
-$Location: 196.887695, 0.000019, 3408.242188
+$Location: 264.138550, -0.000012, 2098.011719
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2578,7 +2583,7 @@ $Determination: 10
 $Name: Libra 2		;! Object #67
 $Class: SF Mara
 $Team: Hostile
-$Location: 75.285889, -0.000150, 3300.014648
+$Location: 142.536758, -0.000181, 1989.784180
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2606,7 +2611,7 @@ $Determination: 10
 $Name: Libra 3		;! Object #68
 $Class: SF Mara
 $Team: Hostile
-$Location: 2.781799, 0.000000, 3405.421143
+$Location: 70.032654, -0.000031, 2095.190674
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -2850,12 +2855,13 @@ $Determination: 10
 $Name: Wrath 1		;! Object #77
 $Class: SC Cain
 $Team: Hostile
-$Location: -713.214417, -215.583344, 5227.335449
+$Location: -937.438843, -215.583405, 4281.596191
 $Orientation:
 	0.984389, -0.091465, -0.150380,
 	-0.090416, -0.995808, 0.013812,
 	-0.151013, 0.000000, -0.988532
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -2869,7 +2875,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
-+Primary Banks: ( "SRed-Nexus+2SRed+1MRed" )
 +Subsystem: turret08
 +Secondary Banks: ( "Swarmer#Shivan" )
 +Sbank Ammo: ( 0 )
@@ -2894,12 +2899,13 @@ $Determination: 10
 $Name: Wrath 2		;! Object #78
 $Class: SC Cain
 $Team: Hostile
-$Location: -117.831299, -770.321777, 6070.078125
+$Location: -188.867813, -770.321167, 6374.224609
 $Orientation:
 	0.918066, 0.239249, -0.316095,
 	0.226217, -0.970958, -0.077887,
 	-0.325549, 0.000000, -0.945525
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -2913,7 +2919,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
-+Primary Banks: ( "SRed-Refractor" )
 +Subsystem: turret08
 +Secondary Banks: ( "Swarmer#Shivan" )
 +Sbank Ammo: ( 0 )
@@ -2938,12 +2943,13 @@ $Determination: 10
 $Name: Wrath 3		;! Object #79
 $Class: SC Cain
 $Team: Hostile
-$Location: -184.289261, 562.305847, 5804.412598
+$Location: 778.459351, 562.306274, 5682.606445
 $Orientation:
 	-0.998295, 0.000000, 0.058374,
 	0.000000, 1.000000, 0.000000,
 	-0.058374, 0.000000, -0.998295
 $AI Behavior: None
++AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -2958,7 +2964,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Heavy Flak" )
 +Subsystem: turret06
 +Subsystem: turret07
-+Primary Banks: ( "SRed-Refractor" )
 +Subsystem: turret08
 +Secondary Banks: ( "Swarmer#Shivan" )
 +Sbank Ammo: ( 0 )
@@ -3055,7 +3060,7 @@ $Determination: 10
 $Name: Leo 1		;! Object #83
 $Class: SF Mara
 $Team: Hostile
-$Location: 56.704693, 0.000085, 4604.412109
+$Location: 123.955551, 0.000054, 3294.181641
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3083,7 +3088,7 @@ $Determination: 10
 $Name: Leo 2		;! Object #84
 $Class: SF Mara
 $Team: Hostile
-$Location: -35.941822, 0.000130, 4690.319824
+$Location: 31.309006, 0.000099, 3380.089355
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3111,7 +3116,7 @@ $Determination: 10
 $Name: Leo 3		;! Object #85
 $Class: SF Mara
 $Team: Hostile
-$Location: 183.138245, 0.000076, 4727.435059
+$Location: 250.389175, 0.000045, 3417.204590
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3139,7 +3144,7 @@ $Determination: 10
 $Name: Leo 4		;! Object #86
 $Class: SF Mara
 $Team: Hostile
-$Location: -7.510289, -0.000082, 4833.802734
+$Location: 59.740570, -0.000113, 3523.572266
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -3600,7 +3605,8 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Hammer 1
 
 $Arrival Location: Hyperspace
-$Arrival Cue: ( has-arrived-delay 4 "Wrath" ) 
++Arrival delay: 8
+$Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 1 total
@@ -3919,7 +3925,6 @@ $Wave Threshold: 0
 $Special Ship: 0		;! Wrath 1
 
 $Arrival Location: Hyperspace
-+Arrival delay: 6
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -4027,7 +4032,113 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-chase "Nix" 50 ) ( ai-guard "Apep" 49 ) )
 +Flags: ( )
 
-#Events		;! 40 total
+#Events		;! 38 total
+
+$Formula: ( when 
+   ( true ) 
+   ( if-then-else 
+      ( not 
+         ( is-destroyed-delay 0 "Wrath 1" ) 
+      )
+      ( modify-variable 
+         "@target[none]" 
+         "Wrath 1" 
+      )
+      ( if-then-else 
+         ( not 
+            ( is-destroyed-delay 0 "Wrath 2" ) 
+         )
+         ( modify-variable 
+            "@target[none]" 
+            "Wrath 2" 
+         )
+         ( if-then-else 
+            ( not 
+               ( is-destroyed-delay 0 "Wrath 3" ) 
+            )
+            ( modify-variable 
+               "@target[none]" 
+               "Wrath 3" 
+            )
+            ( if-then-else 
+               ( and 
+                  ( not 
+                     ( is-destroyed-delay 0 "Cyaegha" ) 
+                  )
+                  ( not 
+                     ( has-arrived-delay 0 "Cyaegha" ) 
+                  )
+               )
+               ( modify-variable 
+                  "@target[none]" 
+                  "Cyaegha" 
+               )
+               ( if-then-else 
+                  ( not 
+                     ( is-destroyed-delay 0 "Obizoth" ) 
+                  )
+                  ( modify-variable 
+                     "@target[none]" 
+                     "Obizoth" 
+                  )
+                  ( if-then-else 
+                     ( not 
+                        ( is-destroyed-delay 0 "Cyaegha" ) 
+                     )
+                     ( modify-variable 
+                        "@target[none]" 
+                        "Cyaegha" 
+                     )
+                     ( if-then-else 
+                        ( not ( is-destroyed-delay 0 "Nix" ) ) 
+                        ( modify-variable 
+                           "@target[none]" 
+                           "Nix" 
+                        )
+                        ( do-nothing ) 
+                     )
+                  )
+               )
+            )
+         )
+      )
+   )
+)
++Name: select main target
++Repeat Count: 9999
++Interval: 4
+
+$Formula: ( when 
+   ( true ) 
+   ( set-object-position 
+      "Hammer 1 path:1" 
+      ( get-object-x "@target[none]" ) 
+      ( get-object-y "@target[none]" ) 
+      ( get-object-z "@target[none]" ) 
+   )
+   ( set-object-position 
+      "Hammer 2 path:1" 
+      ( + 
+         ( get-object-x "Hammer 1 path:1" ) 
+         500 
+      )
+      ( get-object-y "Hammer 1 path:1" ) 
+      ( get-object-z "Hammer 1 path:1" ) 
+   )
+   ( set-object-position 
+      "Hammer 3 path:1" 
+      ( - 
+         ( get-object-x "Hammer 1 path:1" ) 
+         500 
+      )
+      ( get-object-y "Hammer 1 path:1" ) 
+      ( get-object-z "Hammer 1 path:1" ) 
+   )
+   ( training-msg "debug - print target" ) 
+)
++Name: update hammer paths
++Repeat Count: 9999
++Interval: 5
 
 $Formula: ( when 
    ( true ) 
@@ -4059,22 +4170,6 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 1 "Wrath" ) 
-   ( send-message 
-      "Alpha 2" 
-      "High" 
-      "Wrath arrives - alpha 2" 
-   )
-   ( beam-lock "Wrath 1" "turret07" ) 
-   ( beam-lock "Wrath 2" "turret07" ) 
-   ( beam-lock "Wrath 3" "turret07" ) 
-   ( add-remove-escort "Cyaegha" 0 ) 
-)
-+Name: Wrath arrives
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
    ( has-arrived-delay 0 "Hammer" ) 
    ( send-message 
       "Hammer 1" 
@@ -4086,6 +4181,18 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( add-goal 
+      "Wrath" 
+      ( ai-chase "Hammer" 89 ) 
+   )
+)
++Name: TODO - wrath moves to engage
++Repeat Count: 1
++Interval: 1
++Chained: 7
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Leo" ) 
@@ -4132,207 +4239,6 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 +Objective:  XSTR("Destroy Virgo", -1)
-+Team: 0
-
-$Formula: ( when 
-   ( and 
-      ( or 
-         ( < 
-            ( distance "Hammer 1" "Wrath 1" ) 
-            4000 
-         )
-         ( < 
-            ( distance "Alpha 1" "Wrath 1" ) 
-            2000 
-         )
-         ( < 
-            ( distance "Alpha 2" "Wrath 1" ) 
-            2000 
-         )
-         ( < 
-            ( distance "Alpha 3" "Wrath 1" ) 
-            2000 
-         )
-         ( < 
-            ( distance "Alpha 4" "Wrath 1" ) 
-            2000 
-         )
-      )
-      ( and 
-         ( not 
-            ( is-subsystem-destroyed-delay 
-               "Wrath 1" 
-               "turret07" 
-               0 
-            )
-         )
-         ( not 
-            ( is-subsystem-destroyed-delay 
-               "Wrath 2" 
-               "turret07" 
-               0 
-            )
-         )
-         ( not 
-            ( is-subsystem-destroyed-delay 
-               "Wrath 3" 
-               "turret07" 
-               0 
-            )
-         )
-         ( not 
-            ( is-subsystem-destroyed-delay 
-               "Cyaegha" 
-               "turret01" 
-               0 
-            )
-         )
-      )
-   )
-   ( fire-beam 
-      "Cyaegha" 
-      "turret01" 
-      "Wrath 2" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 2" 
-      "turret07" 
-      "Wrath 3" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 3" 
-      "turret07" 
-      "Wrath 1" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 1" 
-      "turret07" 
-      "Hammer 1" 
-   )
-)
-+Name: Beam refraction chain 1
-+Repeat Count: 1
-+Interval: 1
-+Team: 0
-
-$Formula: ( when 
-   ( and 
-      ( not 
-         ( is-subsystem-destroyed-delay 
-            "Wrath 1" 
-            "turret07" 
-            0 
-         )
-      )
-      ( not 
-         ( is-subsystem-destroyed-delay 
-            "Wrath 2" 
-            "turret07" 
-            0 
-         )
-      )
-      ( not 
-         ( is-subsystem-destroyed-delay 
-            "Wrath 3" 
-            "turret07" 
-            0 
-         )
-      )
-      ( not 
-         ( is-subsystem-destroyed-delay 
-            "Cyaegha" 
-            "turret01" 
-            0 
-         )
-      )
-   )
-   ( fire-beam 
-      "Cyaegha" 
-      "turret01" 
-      "Wrath 2" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 2" 
-      "turret07" 
-      "Wrath 3" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 3" 
-      "turret07" 
-      "Wrath 1" 
-      "turret07" 
-   )
-   ( fire-beam 
-      "Wrath 1" 
-      "turret07" 
-      "Hammer 1" 
-   )
-)
-+Name: Beam refraction chain 2
-+Repeat Count: 1
-+Interval: 1
-+Chained: 25
-
-$Formula: ( when 
-   ( is-event-true-delay 
-      "Beam refraction chain 1" 
-      3 
-   )
-   ( send-message 
-      "Hammer 1" 
-      "High" 
-      "Beam refraction chain - Hammer" 
-   )
-)
-+Name: 1st beam refraction
-+Repeat Count: 1
-+Interval: 1
-
-$Formula: ( when 
-   ( or 
-      ( is-subsystem-destroyed-delay 
-         "Wrath 1" 
-         "turret07" 
-         0 
-      )
-      ( is-destroyed-delay 0 "Wrath 1" ) 
-      ( is-event-true-delay 
-         "Beam refraction chain 2" 
-         0 
-      )
-   )
-   ( turret-change-weapon 
-      "Wrath 2" 
-      "turret07" 
-      "SRed" 
-      1 
-      0 
-   )
-   ( turret-change-weapon 
-      "Wrath 3" 
-      "turret07" 
-      "SRed" 
-      1 
-      0 
-   )
-   ( turret-change-weapon 
-      "Cyaegha" 
-      "turret01" 
-      "MRed" 
-      1 
-      0 
-   )
-   ( beam-free "Wrath 2" "turret07" ) 
-   ( beam-free "Wrath 3" "turret07" ) 
-)
-+Name: Switch back to regular beams
-+Repeat Count: 1
-+Interval: 1
 +Team: 0
 
 $Formula: ( when 
@@ -4802,20 +4708,20 @@ $Formula: ( and
 
 $Name: Hammer 1 path
 $List: (		;! 1 points in list
-	( -7.838327, 0.001536, 3721.917480 )
+	( 59.412537, 0.001505, 2411.687012 )
 )
 
 $Name: Hammer 3 path
 $List: (		;! 1 points in list
-	( -534.954041, -0.000055, 3570.042969 )
+	( -467.703125, -0.000086, 2259.812500 )
 )
 
 $Name: Hammer 2 path
 $List: (		;! 1 points in list
-	( 678.988159, -0.000144, 3937.652588 )
+	( 746.238892, -0.000175, 2627.422119 )
 )
 
-#Messages		;! 28 total
+#Messages		;! 29 total
 
 
 $Name: mission start 1 - alpha 2
@@ -4986,18 +4892,18 @@ $MessageNew:  XSTR("The Apep has been destroyed ! Mission aborted, all ships, re
 $end_multi_text
 +AVI Name: Head-CM2
 
+$Name: debug - print target
+$Team: -1
+$MessageNew:  XSTR("$target", -1)
+$end_multi_text
+
 #Reinforcements		;! 0 total
 
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 500
+$Num stars: 0
 $Ambient light level: 7895160
-+Nebula: Nebula01
-+Color: Blue
-+Pitch: 90
-+Bank: 128
-+Heading: 1
 
 #Asteroid Fields
 

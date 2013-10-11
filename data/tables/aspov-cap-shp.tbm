@@ -2521,6 +2521,9 @@ $Subsystem:                 turret30,0.125,0.5
 $Name:		SC Asura
 $Short name:					Asura
 $Species:                       Shivan
++Tech Description:
+	XSTR("TODO", -1)
+$end_multi_text
 $POF file:                      Asura.pof
 $Detail distance:				(0, 300, 500, 1000)
 $Show damage:					YES
@@ -2628,7 +2631,7 @@ $Short name:					HTL-Mentu-b.pof
 $Species:                       Vasudan
 +Tech Description:
 XSTR(
-"A very recent redesign of the Mentu cruiser, the Enforcer variant has been created to integrate the Alliance's newest weaponery, such as the Wraith turret or the Type 4d 'Pillar of Hope' Medium Beam. Though it looks almost identical to the original Mentu, the Enforcer's internal structure is significantly different from its older brother, meaning classic Mentus cannot be retrofitted into Enforcers, just like Fenreis cannot be transformed into Leviathans.
+"A very recent redesign of the Mentu cruiser, the Enforcer variant has been created to integrate the Alliance's newest weaponry, such as the Wraith turret or the Type 4d 'Pillar of Hope' Medium Beam. Though it looks almost identical to the original Mentu, the Enforcer's internal structure is significantly different from its older brother, meaning classic Mentus cannot be retrofitted into Enforcers, just like Fenris cannot be transformed into Leviathans.
 
 Although its next generation beam cannon gives the enforcer enough firepower to challenge corvettes, its hull and subsystem strength is much lower than that of the standard Mentu.", -1)
 $end_multi_text
@@ -2825,9 +2828,9 @@ $Name: 		@GVC Newet
 $Short name:            Vcruiser
 $Species:                       Vasudan
 	+Tech Description:
-		XSTR("The Newet class saw its beginnings shortly after the outbreak of the NTF Rebellion in 2366, impressed by the combat effectiveness of the GVC Aeolus class in the conflict and recognizing the need for a compact flak platform equivalent, Vasudan Command comissoned Akheton Corporation and RNI Shipyards to construct a cruiser of simlar function. RNI would supply the weapons systems and their signature smoothbarreled Slug Flak cannon platforms. While Akheton would be resposible for proving the main design and construction.
+		XSTR("The Newet class saw its beginnings shortly after the outbreak of the NTF Rebellion in 2366, impressed by the combat effectiveness of the GVC Aeolus class in the conflict and recognizing the need for a compact flak platform equivalent, Vasudan Command commissioned Akheton Corporation and RNI Shipyards to construct a cruiser of similar function. RNI would supply the weapons systems and their signature smooth-barrelled Slug Flak cannon platforms. While Akheton would be responsible for proving the main design and construction.
 
-		The Newet is currently used exclusively by Special Operations forces, and is packed with the most advanced tech available, making it an incredibly versatile warship, if expensive for the time being. Akheton used this spaceframe as a (successful) testbed for their cut down version of its mk 3 sensor suite, electronic warfare package and targeting systems. Special Operations Command also requested the cruiser to be equipped with a full array of Wraith Point Defence Turrets and a GTSSD-07c 'Power Horse' subspace drive. The Newet's main drawback is its anti-capital ship weapon array, composed of a single Type 1f 'Fire Bolt' Small Beam. It therefore lacks the firepower of the Mentu 'Enforcer''s upgraded Medium Beam, though SOC believes it to be an acceptable trade off for superior anti-fighter defence and subspace agility.", -1)
+		The Newet is currently used exclusively by Special Operations forces, and is packed with the most advanced tech available, making it an incredibly versatile warship, if expensive for the time being. Akheton used this spaceframe as a (successful) test bed for their cut down version of its mark 3 sensor suite, electronic warfare package and targeting systems. Special Operations Command also requested the cruiser to be equipped with a full array of Wraith Point Defence Turrets and a GTSSD-07c 'Power Horse' subspace drive. The Newet's main drawback is its anti-capital ship weapon array, composed of a single Type 1f 'Fire Bolt' Small Beam. It therefore lacks the firepower of the Mentu 'Enforcer''s upgraded Medium Beam, though SOC believes it to be an acceptable trade off for superior anti-fighter defence and subspace agility.", -1)
 	$end_multi_text
 $POF file:                      GVC_Newet.pof
 $Detail distance:       (0, 300, 550, 1000)
@@ -2929,7 +2932,7 @@ $Short name:					Cretheus
 $Species:                       Terran
 	+Tech Description:			XSTR("Reintroduced only recently to the Alliance's arsenal due to breakthrough in light-weight warship armor, gunboats are designed for short but intense fights. The Cretheus is meant to provide decisive anti-fighter firepower using fast-firing Heavy Flak guns to tear through any strikecraft that comes within range. In addition, the Cretheus mounts two mass driver turrets for anti-ship duty. Often operating in pairs, these light warships use their superior speed and maneuverability to circle around larger vessels, providing dynamic coverage to friendly ships, or evading the main guns of hostile targets while firing a steady stream of mass driver rounds.
 	
-	Though their relatively strong armor has made gunboats a viable combat vessel again, pilots should be aware that these ships are not made to withstand anti-capital ship weaponery, especially beam weapons.", -1)
+	Though their relatively strong armor has made gunboats a viable combat vessel again, pilots should be aware that these ships are not made to withstand anti-capital ship weaponry, especially beam weapons.", -1)
 $end_multi_text
 $POF file:                      GTCCretheus.pof
 $Detail distance: 				(0, 215, 444 )
@@ -3074,11 +3077,11 @@ $Subsystem:		fighterbay,			0, 0.0
 $Name:		GTCv Sparta
 $Short name:				TStrCorv
 $Species:					Terran
-	+Tech Description:		XSTR("The Alliance's newest Terran Warship is the Sparta Multirole Corvette. Although the design wasn't supposed to enter active service for another two years, the re-emergence of the Shivan threat pushed the Security Council to commit the handful of prototypes to combat operations, despite protests from ship captains and engineers. Every Sparta corvette underwent an emergency refit before being handed to Special Operations Command, replacing the highly experimental 'Pulsar Lance' Weapon System with the 'Wraith' Point Defence Turrets, and the Long Range Flak batteries with Mass Drivers, in order to provide the ship with reliable anti-fighter defence and additionnal anti-capital ship firepower, respectively.
+	+Tech Description:		XSTR("The Alliance's newest Terran Warship is the Sparta Multi-role Corvette. Although the design wasn't supposed to enter active service for another two years, the re-emergence of the Shivan threat pushed the Security Council to commit the handful of prototypes to combat operations, despite protests from ship captains and engineers. Every Sparta corvette underwent an emergency refit before being handed to Special Operations Command, replacing the highly experimental 'Pulsar Lance' Weapon System with the 'Wraith' Point Defence Turrets, and the Long Range Flak batteries with Mass Drivers, in order to provide the ship with reliable anti-fighter defence and additional anti-capital ship firepower, respectively.
 	
-		Equipped with four Medium Grade Anti-Capital Ship Beams, the corvette's Advanced Beam Firing Systems allows it to fire at an increased rate, without risks of system overload or overheat meltdown. Like its Vasudan counterpart, the Sparta also sports a small fighterbay, allowing it to operate independantly from Alliance destroyers, an ability SOC has been asking for since the decommission of light carriers in favor of Orion destroyers during the Terran-Vasudan War. Though the Sparta was supposed to be the testbed for the GTSSD-08d 'Silver Ox' subspace drive, the vessel is now equipped with a GTSSD-07d 'Power Ox', giving it the same kind of subspace agility as its Vasudan sister design.
+		Equipped with four Medium Grade Anti-Capital Ship Beams, the corvette's Advanced Beam Firing Systems allows it to fire at an increased rate, without risks of system overload or overheat meltdown. Like its Vasudan counterpart, the Sparta also sports a small fighterbay, allowing it to operate independently from Alliance destroyers, an ability SOC has been asking for since the decommission of light carriers in favor of Orion destroyers during the Terran-Vasudan War. Though the Sparta was supposed to be the test bed for the GTSSD-08d 'Silver Ox' subspace drive, the vessel is now equipped with a GTSSD-07d 'Power Ox', giving it the same kind of subspace agility as its Vasudan sister design.
 	
-		Despite being a severely under-tested spaceframe, the Sparta has demonstrated an extensive versatility and endurance, its onboard logistics facilities making field repairs easier, but more importantly allowing correction of design flaws as they are discovered without needing to send the ships back to dock.", -1)
+		Despite being a severely under-tested spaceframe, the Sparta has demonstrated an extensive versatility and endurance, its on-board logistics facilities making field repairs easier, but more importantly allowing correction of design flaws as they are discovered without needing to send the ships back to dock.", -1)
 	$end_multi_text
 $POF file:					diomedes.pof
 $Detail distance:			(0, 5000, 5000, 10000)
@@ -3444,7 +3447,7 @@ $Species:					Terran
 	
 	Following the tremendous success of Lance-capable corvettes Selket and Sparta after the events of Capella, the GTVA Security Council green-litted the research and development of true assault warships and hunter-killer combat groups. The first product of this endeavor is the Stratos-class Corvette. Based on the Sparta design, the Stratos carries a single forward-facing 'Cluster Lance' weapon system, supplemented by a pair of fast-firing upper medium class Terran beams as its main anti-ship weapon array, sacrificing the Sparta's missile tubes and fighter bay for additional shock power.
 	
-	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capbilities are on par with its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independant close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
+	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capabilities are on par with its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independent close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
 $end_multi_text
 $POF file:					corvette3t-03.pof
 $Detail distance:			(0, 4500, 4500, 10000)
