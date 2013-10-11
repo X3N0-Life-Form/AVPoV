@@ -14,5 +14,6 @@ Threshold crossed, Sathanas multirole considered expendable.
 
 Hostile resistance almost eliminated in Capella.
 
-Begin preparations to terminate hostile resistance in adjacent systems as soon as sun operations are complete. 
+Begin preparations to terminate hostile resistance in adjacent systems as soon as sun operations are complete.
+
 Upgrade rules of engagement from "subspace-beam-shield" to "subspace-electronic-node forge".

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Facing Goliath", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 10/11/13 at 20:40:35
+$Modified: 10/11/13 at 23:15:14
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 758.316101, 7683.516602, 6122.058594
++Viewer pos: 757.092834, -1043.514404, 14136.609375
 +Viewer orient:
-	0.992451, 0.000001, 0.122640,
-	-0.112174, 0.404225, 0.907755,
-	-0.049573, -0.914660, 0.401174
+	-0.919862, 0.000001, 0.392241,
+	-0.274992, 0.713082, -0.644898,
+	-0.279701, -0.701080, -0.655937
 
 
 $Skybox Model: Starfield.pof
@@ -39,7 +39,6 @@ $AI Profile: myProfile
 $Variables:
 (
 		0		"Sath-hull"		"94"		"number"		"player-persistent"
-		1		"stone_target"		"1"		"number"
 )
 #Fiction Viewer
 
@@ -137,7 +136,7 @@ $Ship Choices: (
 	"Crossbow"	120
 )
 
-#Objects		;! 235 total
+#Objects		;! 238 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -472,11 +471,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.628906, -2.463237, 9187.416016
+$Location: 8741.630859, -2.463392, 9187.414063
 $Orientation:
-	0.755390, -0.290825, -0.587202,
-	0.652760, 0.255533, 0.713167,
-	-0.057357, -0.922022, 0.382865
+	0.755427, -0.290366, -0.587381,
+	0.652750, 0.255537, 0.713175,
+	-0.056984, -0.922166, 0.382576
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -501,11 +500,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.360352, -30.218626, 9229.859375
+$Location: 8704.365234, -30.218206, 9229.854492
 $Orientation:
-	0.755427, -0.290369, -0.587381,
-	0.652750, 0.255536, 0.713174,
-	-0.056987, -0.922165, 0.382577
+	0.755451, -0.290067, -0.587499,
+	0.652744, 0.255539, 0.713180,
+	-0.056741, -0.922259, 0.382386
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -593,10 +592,10 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.482422, 14.513985, 11767.513672
+$Location: 13005.545898, 14.516876, 11767.515625
 $Orientation:
-	0.177334, 0.000023, -0.984195,
-	0.984202, 0.000032, 0.177335,
+	0.177691, 0.000023, -0.984131,
+	0.984138, 0.000032, 0.177692,
 	0.000036, -1.000000, -0.000017
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
@@ -652,10 +651,9 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "don't-collide-invisible" )
++Flags: ( "cargo-known" "no-shields" "don't-collide-invisible" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 2
 +Group: 0
 +Use Table Score:
 +Score: 900
@@ -679,10 +677,9 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "don't-collide-invisible" )
++Flags: ( "cargo-known" "no-shields" "don't-collide-invisible" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 1
 +Group: 0
 +Use Table Score:
 +Score: 900
@@ -776,10 +773,9 @@ $Departure Cue: ( or
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( )
 +Respawn priority: 0
-+Escort priority: 5
 +Orders Accepted: 257		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -7339,7 +7335,114 @@ $Determination: 10
 +Use Table Score:
 +Score: 150
 
-#Wings		;! 43 total
+$Name: Hunter 1		;! Object #235
+$Class: GVA Setekh
+$Team: Friendly
+$Location: 500.399994, -2075.199951, 13500.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.049184, -0.998790,
+	0.000000, 0.998790, -0.049184
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Morning Star" "Morning Star" )
++Subsystem: turret02
++Primary Banks: ( "Morning Star" "Morning Star" )
++Subsystem: turret03
++Primary Banks: ( "Morning Star" "Morning Star" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 12
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 150
+
+$Name: Hunter 2		;! Object #236
+$Class: GTC Cretheus
+$Team: Friendly
+$Location: 309.589630, -2001.257935, 13601.056641
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.049184, -0.998790,
+	0.000000, 0.998790, -0.049184
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01-base
++Subsystem: turret02-base
++Subsystem: turret03-base
++Subsystem: turret04-base
++Subsystem: turret05-base
++Subsystem: turret06-base
++Subsystem: turret07-base
++Subsystem: turret08-base
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 11
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 75
+
+$Name: Hunter 3		;! Object #237
+$Class: GVC Hemsut
+$Team: Friendly
+$Location: 733.174194, -2000.044922, 13382.623047
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.049184, -0.998790,
+	0.000000, 0.998790, -0.049184
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 10
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 75
+
+#Wings		;! 44 total
 
 $Name: Alpha
 $Waves: 1
@@ -7356,6 +7459,7 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
+$AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -8276,7 +8380,26 @@ $Ships: (		;! 3 total
 )
 +Flags: ( )
 
-#Events		;! 75 total
+$Name: Hunter
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Hunter 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "shipyard destroyed" 
+   25 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Hunter 1"
+	"Hunter 2"
+	"Hunter 3"
+)
++Flags: ( )
+
+#Events		;! 82 total
 
 $Formula: ( when 
    ( has-arrived-delay 60 "Apep" ) 
@@ -9205,15 +9328,28 @@ $Formula: ( when-argument
    )
    ( and 
       ( <= ( hits-left "Sathanas" ) 71 ) 
-      ( is-event-true-delay "your call 2" 7 ) 
+      ( is-event-true-delay 
+         "engage sath 2" 
+         7 
+      )
       ( not 
          ( is-destroyed-delay 0 "<argument>" ) 
       )
    )
-   ( call-ssm-strike 
-      0 
-      "Hostile" 
-      "<argument>" 
+   ( if-then-else 
+      ( not 
+         ( is-subsystem-destroyed-delay 
+            "Sathanas" 
+            "communication" 
+            0 
+         )
+      )
+      ( call-ssm-strike 
+         0 
+         "Hostile" 
+         "<argument>" 
+      )
+      ( do-nothing ) 
    )
 )
 +Name: sath < 71 - ssm vs escort
@@ -9274,7 +9410,16 @@ $Formula: ( when
 $Formula: ( when 
    ( <= ( hits-left "Sathanas" ) 49 ) 
    ( if-then-else 
-      ( not ( is-destroyed-delay 0 "Apep" ) ) 
+      ( and 
+         ( not ( is-destroyed-delay 0 "Apep" ) ) 
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Sathanas" 
+               "communication" 
+               0 
+            )
+         )
+      )
       ( call-ssm-strike 2 "Hostile" "Apep" ) 
       ( do-nothing ) 
    )
@@ -10024,15 +10169,49 @@ $Formula: ( when
 +Interval: 1
 +Objective:  XSTR("Destroy Aquarius", -1)
 
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: hunter arrives
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( if-then-else 
+      ( and 
+         ( <= 
+            ( distance "Alpha 1" "Hunter 1" ) 
+            2000 
+         )
+         ( not 
+            ( is-destroyed-delay 0 "Hunter 1" ) 
+         )
+         ( not 
+            ( is-subsystem-destroyed-delay 
+               "Hunter 1" 
+               "radara" 
+               0 
+            )
+         )
+      )
+      ( protect-ship "Alpha 1" ) 
+      ( unprotect-ship "Alpha 1" ) 
+   )
+)
++Name: hunter awacs
++Repeat Count: -1
++Trigger Count: 9999
++Interval: 3
++Chained: 2
+
 $Formula: ( when 
    ( has-arrived-delay 13 "Apep" ) 
    ( send-message 
       "Apep" 
       "High" 
-      "your call 1 - apep" 
+      "engage sath - apep" 
    )
 )
-+Name: your call 1
++Name: msg - engage sath
 +Repeat Count: 1
 +Interval: 1
 
@@ -10041,13 +10220,105 @@ $Formula: ( when
    ( send-message 
       "<any wingman>" 
       "High" 
-      "your call 2 - any wingman" 
+      "engage sath 2 - any wingman" 
    )
 )
-+Name: your call 2
++Name: engage sath 2
 +Repeat Count: 1
 +Interval: 1
 +Chained: 7
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "navigation" 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: destroy navigation
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Destroy Navigation", -1)
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "communication" 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: coms destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "weapons" 
+      0 
+   )
+   ( change-ai-class 
+      "Lieutenant" 
+      "Sathanas" 
+   )
+)
++Name: weapons destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-subsystem-destroyed-delay 
+      "Sathanas" 
+      "sensors" 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: sensors destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "enginesctr" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "engineslwleft" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "engineslwright" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "enginesmain" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "enginesupleft" 
+         0 
+      )
+      ( is-subsystem-destroyed-delay 
+         "Sathanas" 
+         "enginesupright" 
+         0 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: engines destroyed
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Apep" ) 
@@ -10330,7 +10601,7 @@ $Formula: ( when
       "Taurus" 
       "Gemini" 
    )
-   ( modify-variable @stone_target[1] 1 ) 
+   ( do-nothing ) 
 )
 +Name: 1st wave destroyed
 +Repeat Count: 1
@@ -10584,7 +10855,7 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-#Goals		;! 4 total
+#Goals		;! 5 total
 
 $Type: Secondary
 +Name: heavy damage
@@ -10609,7 +10880,7 @@ $Formula: ( is-destroyed-delay 0 "Sathanas" )
 +No music
 +Score: 12500
 
-$Type: Primary
+$Type: Secondary
 +Name: Survive
 $MessageNew:  XSTR("Survive the assault", -1)
 $end_multi_text
@@ -10617,7 +10888,15 @@ $Formula: ( is-event-true-delay
    "Sathanas destroyed" 
    0 
 )
-+Invalid
+
+$Type: Primary
++Name: halt the onslaught
+$MessageNew:  XSTR("Halt the Sathanas' onslaught", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "destroy navigation" 
+   0 
+)
 
 #Waypoints		;! 10 lists total
 
@@ -10733,15 +11012,15 @@ $MessageNew:  XSTR("In position. Gunnery control, neutralize that rear beam. All
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: your call 1 - apep
+$Name: engage sath - apep
 $Team: -1
-$MessageNew:  XSTR("Alpha 1, you are in charge of strikecraft command. You can choose to either focus on defending the battleline or engaging the Sathanas itself.", -1)
+$MessageNew:  XSTR("We need to prevent the Juggernaught from running away. Destroying the navigation subsystem should delay it.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: your call 2 - any wingman
+$Name: engage sath 2 - any wingman
 $Team: -1
-$MessageNew:  XSTR("Engaging the Sathanas will leave the capital ships open to bomber strike, but if we don't neutralize those beams quickly, they are going to tear the battleline apart.", -1)
+$MessageNew:  XSTR("Between the point defences and the fighter screen, we are going to suffer heavy casualties.", -1)
 $end_multi_text
 +AVI Name: Head-VP2
 
