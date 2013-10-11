@@ -16,7 +16,7 @@ $Name:                                 	@TAG-C#Shivan
 		XSTR("The recent apparition of this missile in the Shivan arsenal has GTVA specialist worried about its potential, and what it implies regarding Shivan subspace and weapon technology. The theory of such a weapon has been layed by various Alliance weapon and subspace specialists over the past year, although no official document regarding this experimental doctrine has been released yet, and most research projects, such as the 'C' variant of the TAG missile, are still in draft status. The Shivans, however, have started using these weapons shortly before the Sathanas' destruction, taking GTVA capital ships and fighter pilots by surprise.
 
 The tactical premise of this missile is similar to the Alliance's TAG missile, although the technology is far more complex and hold more potential. Like the initial ideas for the hypothetical TAG-C missile, this Shivan weapon acts as a subspace beacon once it hits it intended target, transmitting the tagged ship's exact coordinates to a remote weapon platform, which then fire a salvo of heavy anti-capital ship missiles through subspace.
-The most common variant of Shivan subspace TAG missile calls in salvos of 3 Subspace Missiles", -1)
+The most common variant of Shivan subspace TAG missile calls in salvoes of 3 Subspace Missiles", -1)
 		$end_multi_text
 $Model File:							S_Trebuchet.pof
 $Mass:									20.0
@@ -25,9 +25,9 @@ $Fire Wait:								4.0
 $Damage:								10
 $Damage Type:							ShivanWeapon
 $Blast Force:							10.0
-$Inner Radius:							10.0														;; radius at which damage is full (0 for impact only)
-$Outer Radius:							30.0														;; max radius for attenuated damage (0 for impact only)
-$Shockwave Speed:						0                                            ;; velocity of shockwave.  0 for none.
+$Inner Radius:							10.0
+$Outer Radius:							30.0
+$Shockwave Speed:						0
 $Armor Factor:							0.1
 $Shield Factor:							0.1
 $Subsystem Factor:						0.1
