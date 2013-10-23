@@ -8,7 +8,7 @@
 $Name:							BFRed
 	+nocreate ;:
 	+Tech Title:		XSTR("BFRed",-1)
-	+Tech Description:	XSTR("Juggernaught grade Shivan beam
+	+Tech Description:	XSTR("Juggernaut grade Shivan beam
 	
 	",-1)
 	$end_multi_text
@@ -239,7 +239,7 @@ $Name:                          LRLRed
 	+Tech Title:		XSTR("LRLRed",-1)
 	+Tech Description:	XSTR("Long Range Large Shivan Beam
 	
-	While this weapon appears to be identical to the Shivan large beam (LRed), it is capable of achieving beam lock at extreme range, akin to the SD Lucifer's own beam weaponery. So far, the SD Vampire has been the only Shivan destroyer to carry this weapon.
+	While this weapon appears to be identical to the Shivan large beam (LRed), it is capable of achieving beam lock at extreme range, akin to the SD Lucifer's own beam weaponry. So far, the SD Vampire has been the only Shivan destroyer to carry this weapon.
 	",-1)
 	$end_multi_text
 $Model File:                    none ; laser1-1.pof
@@ -344,9 +344,9 @@ $BeamInfo:
 $Name:							SGreen
 	+nocreate ;:
 	+Tech Title:		XSTR("Mk1 'Small Green' Terran Beam",-1)
-	+Tech Description:	XSTR("The first official Alliance beam weapon prototypes were developped for modified Leviathan cruisers. A well known spaceframe, the Leviathan offered in theory a perfect testbed for this highly experimental technology. In practice, the early results were catastrophic: The cruisers having inadequate powergrids and heatsinks, the beam cannon would either meltdown after a couple of shots, or would overload the cruiser's systems. Despite these initial setbacks, the Terran Assembly increased its support for the development of beam weapons, citing the GTD Hades as proof that retro-engineering of Shivan Beam technology was possible.
+	+Tech Description:	XSTR("The first official Alliance beam weapon prototypes were developed for modified Leviathan cruisers. A well known spaceframe, the Leviathan offered in theory a perfect test bed for this highly experimental technology. In practice, the early results were catastrophic: The cruisers having inadequate power grids and heat sinks, the beam cannon would either meltdown after a couple of shots, or would overload the cruiser's systems. Despite these initial setbacks, the Terran Assembly increased its support for the development of beam weapons, citing the GTD Hades as proof that retro-engineering of Shivan Beam technology was possible.
 	
-	As the Galactic Terran-Vasudan Alliance was about to birth, Vasudan experts were braught on the project. In the following months, the Leviathan's powergrid underwent a massive overhaul, dramatically improving the cruiser's power efficiency. With the introduction of the GTSSD-04c 'Work Horse' subspace drive, the Leviathan would actually end up with a robust powergrid and a significant amount of power to spare (which would later be used to power 4 anti-fighter beams), while only heat dissipation issues would remain.
+	As the Galactic Terran-Vasudan Alliance was about to birth, Vasudan experts were brought on the project. In the following months, the Leviathan's power grid underwent a massive overhaul, dramatically improving the cruiser's power efficiency. With the introduction of the GTSSD-04c 'Work Horse' subspace drive, the Leviathan would actually end up with a robust power grid and a significant amount of power to spare (which would later be used to power 4 anti-fighter beams), while only heat dissipation issues would remain.
 	
 	The final version of the mk1 'Small Green' beam weapon entered service only a few weeks after the GTVA was formed, giving Terran Leviathan and Orions a serious advantage over any other warship at the time.",-1)
 	$end_multi_text
@@ -355,7 +355,7 @@ $Name:							SGreen
 $Name:							TerSlash
 	+nocreate ;:
 	+Tech Title:		XSTR("Mk2 'Slasher' Terran Beam",-1)
-	+Tech Description:	XSTR("A couple of years after the introduction of the 'Small Green' beam cannon, GTVA High Command draw a few lessons from its development. First and foremost, cruiser combattants were largely inadequate for the use of beam weapons. As the Sobek class corvette neared completion, the Deimos corvette was roughly in the middle of its development. Once again, Vasudans were contracted to improve the ship's powergrid. Using a Vasudan reactor core, the Deimos would have the most robust powergrid in the Alliance, cueing Terran engineers to design a beam weapon capable of firing at an astonishing rate.
+	+Tech Description:	XSTR("A couple of years after the introduction of the 'Small Green' beam cannon, GTVA High Command draw a few lessons from its development. First and foremost, cruiser combatants were largely inadequate for the use of beam weapons. As the Sobek class corvette neared completion, the Deimos corvette was roughly in the middle of its development. Once again, Vasudans were contracted to improve the ship's power grid. Using a Vasudan reactor core, the Deimos would have the most robust power grid in the Alliance, cueing Terran engineers to design a beam weapon capable of firing at an astonishing rate.
 	
 	When the beam proved to be highly inaccurate, it was decided to make it sweep its target rather than firing at a single point. As its firepower was vastly superior to the 'Small Green's, Orion destroyers underwent another refitting stage to mount these weapons.",-1)
 	$end_multi_text
@@ -381,13 +381,13 @@ $Name:							LTerSlash
 $Name:							BGreen
 	+nocreate ;:
 	+Tech Title:		XSTR("Mk3 'Big Green' Terran Beam",-1)
-	+Tech Description:	XSTR("Given the effectiveness of corvette combattants, it was clear that destroyers needed ways to quickly deal with larger warships. Designed specifically to be mounted on Orion destroyers, the 'Big Green' was described as 'what the Small Green would be if it was developped today'. A direct-fire beam of immense power, the 3rd generation Terran Beam seemed to finally approach what the Hades' and Lucifer's beams were capable of. Despite suffering from heat dissipation problems, it made Orion destroyers so deadly that the Vasudan Imperium decided to outfit Typhon-class destroyers with their own destroyer-grade beam, despite the Vasudan's design paradigm 'design the beam, then the ship'.",-1)
+	+Tech Description:	XSTR("Given the effectiveness of corvette combatants, it was clear that destroyers needed ways to quickly deal with larger warships. Designed specifically to be mounted on Orion destroyers, the 'Big Green' was described as 'what the Small Green would be if it was developed today'. A direct-fire beam of immense power, the 3rd generation Terran Beam seemed to finally approach what the Hades' and Lucifer's beams were capable of. Despite suffering from heat dissipation problems, it made Orion destroyers so deadly that the Vasudan Imperium decided to outfit Typhon-class destroyers with their own destroyer-grade beam, despite the Vasudan's design paradigm 'design the beam, then the ship'.",-1)
 	$end_multi_text
 	
 $Name:							BFGreen
 	+nocreate ;:
 	+Tech Title:		XSTR("Mk3e 'Bigger Green' Terran Beam",-1)
-	+Tech Description:	XSTR("Technically nearly identical to the standard Mk3, the Mk3e is more robust, perfoming better under stress and sustained fire. It is exclusively found on Hecate-class destroyers and on the GTVA Colossus. Some Hecate commanders have been known to overcharge these beams for short periods of time to devasating effects. This practice however is frowned upon, as it can potentially cost the destroyer's main gun should the weapon meltdown.
+	+Tech Description:	XSTR("Technically nearly identical to the standard Mk3, the Mk3e is more robust, performing better under stress and sustained fire. It is exclusively found on Hecate-class destroyers and on the GTVA Colossus. Some Hecate commanders have been known to overcharge these beams for short periods of time to devastating effects. This practice however is frowned upon, as it can potentially cost the destroyer's main gun should the weapon meltdown.
 	
 	",-1)
 	$end_multi_text
@@ -395,7 +395,7 @@ $Name:							BFGreen
 
 $Name:							MGreen
 	+Tech Title:		XSTR("Mk4 'Medium Green' Terran Beam",-1)
-	+Tech Description:	XSTR("Once larger ships got equipped with more effective beam weaponery, it became clear that the 'Small Green' equipped on Leviathan and Aeolus cruisers wasn't up to the task. The 'Medium Green' research project's aim was to provide the brand new Aeolus cruisers with decent long range anti-warship capabilties, something the aging Leviathan and Fenris designs could achieve with their Fusion Mortar battery. Optimized to be outfitted exclusively into the Aeolus, the 'Medium Green' Terran Beam is rarely found on other ship classes. Very few Aeolus have themselves been retrofitted with Medium Beams, this privilege being usually reserved for Special Operations units or Combat Groups.
+	+Tech Description:	XSTR("Once larger ships got equipped with more effective beam weaponry, it became clear that the 'Small Green' equipped on Leviathan and Aeolus cruisers wasn't up to the task. The 'Medium Green' research project's aim was to provide the brand new Aeolus cruisers with decent long range anti-warship capabilities, something the ageing Leviathan and Fenris designs could achieve with their Fusion Mortar battery. Optimized to be outfitted exclusively into the Aeolus, the 'Medium Green' Terran Beam is rarely found on other ship classes. Very few Aeolus have themselves been retrofitted with Medium Beams, this privilege being usually reserved for Special Operations units or Combat Groups.
 
 	Damage per salvo: 4297",-1)
 	$end_multi_text
@@ -607,7 +607,7 @@ $Name:							SVas
 $Name:							VSlash
 	+nocreate ;:
 	+Tech Title:		XSTR("T-2c 'Maelstrom' Vasudan Beam",-1)
-	+Tech Description:	XSTR("With the tremendous success of the Deimos-class corvette and mk3 Terran beams, Type 1 Vasudan beams became inadequate against corvette-grade combattants. Basically a 'Fire Arrow' on steroids, the 'Maelstrom' sacrificed its accuracy, but doubled its damage output and refire rate, producing what is still one of the most powerful beam weapon mounted on Alliance warships. Despite the increased power drain, the Sobek's reactors and power grid proved to be able to handle their new main weapons.",-1)
+	+Tech Description:	XSTR("With the tremendous success of the Deimos-class corvette and mk3 Terran beams, Type 1 Vasudan beams became inadequate against corvette-grade combatants. Basically a 'Fire Arrow' on steroids, the 'Maelstrom' sacrificed its accuracy, but doubled its damage output and refire rate, producing what is still one of the most powerful beam weapon mounted on Alliance warships. Despite the increased power drain, the Sobek's reactors and power grid proved to be able to handle their new main weapons.",-1)
 	$end_multi_text ;:
 
 
@@ -800,7 +800,7 @@ $BeamInfo:
 $Name:							BVas
 	+nocreate ;:
 	+Tech Title:		XSTR("T-3b 'Axe of Faith' VBeam",-1)
-	+Tech Description:	XSTR("Development of the Type 3 Vasudan Beam began shortly before the Terran's Mark 3, as the Imperium prepared to renew its destroyer fleet. Focusing on firing as often as possible without sacrificing accuracy, the 'Axe of Faith''s damage output per salvo isn't quite as high as its Terran sister weapon, but compensate by firing more often, making the beam more reliable in long engagements.",-1)
+	+Tech Description:	XSTR("Development of the Type 3 Vasudan Beam began shortly before the Terran's Mark 3, as the Imperium prepared to renew its destroyer fleet. Focusing on firing as often as possible without sacrificing accuracy, the Axe of Faith's damage output per salvo isn't quite as high as its Terran sister weapon, but compensate by firing more often, making the beam more reliable in long engagements.",-1)
 	$end_multi_text ;:
 
 

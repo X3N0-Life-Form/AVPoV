@@ -27,7 +27,7 @@ $Name:                                  Shivan Megafunk Turret
 	
 	While its tactical role is seemingly identical to the old Terran Superior Point Defence Turret, it sacrifices range, velocity and refire rate in favor of increased damage per shot. This weapon poses little threat to strikecrafts due to its low shield penetration, fire rate and velocity.
 
-	More recent scans of the weapon indicate that it is infact related to the Shivan Heavy Anti-Capital Laser and the Shivan Large Cannon. The former is an apparently stripped down version of the turret's gun, featuring a better refire rate which makes it more dangerous to allied ships than the Superior Turret, despite its lower damage output per shot. The latter actually appear to be identical to the Superior Turret, which is troubling since the Shivan Large Cannon packs more than 3 times the firepower of the turret at a much faster refire rate, and some Shivan capital ships actually seem to have traded their Superior Turret for a Large Cannon Turret on occasions.",-1)
+	More recent scans of the weapon indicate that it is in fact related to the Shivan Heavy Anti-Capital Laser and the Shivan Large Cannon. The former is an apparently stripped down version of the turret's gun, featuring a better refire rate which makes it more dangerous to allied ships than the Superior Turret, despite its lower damage output per shot. The latter actually appear to be identical to the Superior Turret, which is troubling since the Shivan Large Cannon packs more than 3 times the firepower of the turret at a much faster refire rate, and some Shivan capital ships actually seem to have traded their Superior Turret for a Large Cannon Turret on occasions.",-1)
 	$end_multi_text
 $Damage Type:	ShivanHugeWeapon
 
@@ -35,7 +35,7 @@ $Damage Type:	ShivanHugeWeapon
 ;; GTVA
 $Name:                              Mass Driver 
 	+Tech Title:		XSTR("Mass Driver",-1)
-	+Tech Description:	XSTR("Initially developped for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and is particularly popular in the Vasudan Navy, which now often equips lighter variants on its warships.
+	+Tech Description:	XSTR("Initially developed for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and is particularly popular in the Vasudan Navy, which now often equips lighter variants on its warships.
 	
 	Before the Terran Navy decided to replace these expansive weapons with cheaper flak systems, the Mass Driver gave the Hecate punishing anti-warship firepower from almost any direction, backed up by the ship's beam weapons, delivering a near-constant stream of armor-piercing accelerated uranium slugs.
 	
@@ -188,7 +188,7 @@ $Name:                          Shivan Multi Turret
 	
 	Conflicting reports exist concerning the exact nature and behavior of this weapon. Early mission reports established it as a very deadly anti-capital weapon capable of firing 5 shots at once, posing a serious threat against warships and bombers, limited effectiveness against fighters.
 	
-	More recent encounters describe it as a weapon firing 5 shots in a short burst. Detailled scans of Shivan warships revealed that these two seemingly different weapons, are actually the same weapon system. The reason behind this weapon's change of behavior is still up for debate.
+	More recent encounters describe it as a weapon firing 5 shots in a short burst. Detailed scans of Shivan warships revealed that these two seemingly different weapons, are actually the same weapon system. The reason behind this weapon's change of behavior is still up for debate.
 	
 	Damage per second: 215",-1)
 	$end_multi_text

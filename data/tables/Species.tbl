@@ -172,7 +172,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Ravana - Battle Destroyer
 	
-	The Alliance has no explaination for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
+	The Alliance has no explanation for the Battle variant of the Ravana destroyer. Discovered during the invasion of Capella, this warship is more than twice as durable as the standard Ravana destroyer, while being capable of projecting decent anti-capital ship firepower in almost any direction. In addition, it carries a large amount of Dragons, Nahemas, Taurvis and upgraded Mara fighters, equipped with the best known Shivan equipment and backed up by gunships.
 
     On the battlefield, the SD Kohl'Taar, the only known ship of this type, has earned among Alliance officers and crew the title of 'Archangel of Death'.",-1)
 $end_multi_text
@@ -208,7 +208,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Demon - Command Destroyer (SD Susl'Arh Morc)
 
-    Extremely resilient, Demon Command Destroyers act as fleet hubs for Shivan forces. Their complex sensor array allows these ship to track any ship and subspace activity within a 120 Astronomical Units radius in free space (exact efficiency in nebula environment unknown). Using this intel, the ship coordinates strikes accross an entire theatre of operation, using Moloch support corvettes to form a communication and sensor network to vector incredibly precise shock strikes (even by Shivan standards) against Allied installations and warships. It has also been observed that the presence of a Command Destroyer within a specific solar system marked a drastic increase in Shivan SSM strikes, though the destroyer itself rarely launched Subspace Missiles.
+    Extremely resilient, Demon Command Destroyers act as fleet hubs for Shivan forces. Their complex sensor array allows these ship to track any ship and subspace activity within a 120 Astronomical Units radius in free space (exact efficiency in nebula environment unknown). Using this intel, the ship coordinates strikes across an entire theatre of operation, using Moloch support corvettes to form a communication and sensor network to vector incredibly precise shock strikes (even by Shivan standards) against Allied installations and warships. It has also been observed that the presence of a Command Destroyer within a specific solar system marked a drastic increase in Shivan SSM strikes, though the destroyer itself rarely launched Subspace Missiles.
 	
 	These ships rarely engage in direct combat, and seem to either have less subspace agility compared to other Shivan destroyers, or be more reluctant to use its subspace drives. A possible explaination is that the ship needs to remain in normal space to properly coordinate other Shivan forces and maintain its Moloch 'web'. However, its hull strength and the alarming speed at which a Command Destroyer is capable of repairing itself makes it difficult to take down.
 	
@@ -225,7 +225,7 @@ $Description:
 	
 	A new variant of the Demon-class destroyer, this ship's role is mostly to support other Shivan units, mostly by serving as a staging ground for strikecrafts while other destroyers go toe to toe with our ships, and providing SSM support.
 
-    These destroyers are usually fiercly defended, opperate far from the front line and tend to avoid direct combat compared to other Shivan destroyers, making them difficult to take down. Their ability to launch subspace missile seem to have cost the Demon's missile launchers' versatility, significanlty diminishing the destroyer's anti-fighter screen.
+    These destroyers are usually fiercly defended, operate far from the front line and tend to avoid direct combat compared to other Shivan destroyers, making them difficult to take down. Their ability to launch subspace missile seem to have cost the Demon's missile launchers' versatility, significantly diminishing the destroyer's anti-fighter screen.
 
     Due to their SSM launch capabilities, these vessels are a very high priority target, and should be taken down by any means necessary.",-1)
 $end_multi_text
@@ -249,7 +249,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Moloch - Carrier Corvette
 	
-	The standard variant of the Moloch class corvette packs 3 medium-sized beam weapons, a forward-facing cannon and a small fighter bay. This allows the Moloch to opperate independently from Shivan destroyers, and has been seen engaging Allied destroyers on its own.",-1)
+	The standard variant of the Moloch class corvette packs 3 medium-sized beam weapons, a forward-facing cannon and a small fighter bay. This allows the Moloch to operate independently from Shivan destroyers, and has been seen engaging Allied destroyers on its own.",-1)
 $end_multi_text
 
 $Entry:
@@ -281,7 +281,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Moloch - Command Corvette (SCv Cyaegha)
 	
-	Command corvettes are similar to the standard carrier corvette, though they display increased subspace agility compared to other Moloch variants and, Like all other command variants, this corvette is much more resilient. When engaged by allied warships, it will occasionnally overdrive its beam weapons for short periods of time, giving the corvette the edge it needs to quickly mop up Alliance capital ships pinning it down.",-1)
+	Command corvettes are similar to the standard carrier corvette, though they display increased subspace agility compared to other Moloch variants and, Like all other command variants, this corvette is much more resilient. When engaged by allied warships, it will occasionally overdrive its beam weapons for short periods of time, giving the corvette the edge it needs to quickly mop up Alliance capital ships pinning it down.",-1)
 $end_multi_text
 
 ;: ;; remove it for good? When exactly is it used?
@@ -292,7 +292,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Moloch - Area Denial Corvette
 	
-	An unsual variant, the Area Denial Corvette trades its anti-capital ship beams and close range missile launchers for long range flak guns and missile launchers. This unsual configuration for a Shivan ship leaves analysts puzzled, as so far Shivans never put emphasis on their warship's anti-fighter defence, let alone field a ship dedicated to this role.",-1)
+	An unusual variant, the Area Denial Corvette trades its anti-capital ship beams and close range missile launchers for long range flak guns and missile launchers. This unusual configuration for a Shivan ship leaves analysts puzzled, as so far Shivans never put emphasis on their warship's anti-fighter defence, let alone field a ship dedicated to this role.",-1)
 $end_multi_text
 
 $Entry:
@@ -362,7 +362,7 @@ $Description:
 	
 	A very recently discovered Rakshasa variant, the Heavy Assault Cruiser retains the Strike Cruiser's front firepower, couple with improved laser turrets, 4 anti-fighter beams and improved armor.
 
-    Though these vessels are considered high priority targets, the Alliance currently doesn't have the ressources to commit assets to hunting these cruisers down.",-1)
+    Though these vessels are considered high priority targets, the Alliance currently doesn't have the resources to commit assets to hunting these cruisers down.",-1)
 $end_multi_text
 
 $Entry:
@@ -501,7 +501,7 @@ $Description:
 	
 	Extremely rare fighter, the Dragon is akin to a miniature Mara in terms of size, agility and weapon compatibility, though it is better armed and faster, although it carries a much smaller ordnance.
 
-    Its high speed and minuscule target profile make this fighter ludicruciously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets",-1)
+    Its high speed and minuscule target profile make this fighter ludicrously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets",-1)
 $end_multi_text
 
 $Entry:
@@ -513,7 +513,7 @@ $Description:
 	
 	The bread and butter of the Shivan fighter force, the Mara fighter is capable of mounting most weapons in the Shivan arsenal, allowing it to fulfill almost any mission.
 
-    Pilots should also be aware of the fighter's exceptionnal agility and ability to move in all 3 axis",-1)
+    Pilots should also be aware of the fighter's exceptional agility and ability to move in all 3 axis",-1)
 $end_multi_text
 
 $Entry:
@@ -566,11 +566,11 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Orion-class Rebel Special Operations Destroyer
 
-    One of the first Orions to have been seized by the NTF, the Stalker was part of Neo-Terran Special Tasks Force, roughly the equivalent of the Alliance's Special Operations Command. Commanded by Rear-Admiral Lino Dusthoff, the Stalker has been involved in no less than 15 special operations against the GTVA, including the famous raid against the Cortez shipyards in Capella, bypassing Alliance blokades, which ended in the stealing of three Aeolus cruisers present in drydocks at the time, as well as a significant amount of supplies, destroying the shipyards themselves, thus denying the Alliance the ability to refit its own aeolus cruisers with Medium Beams, losing only one leviathan cruiser, 2 bomber wings and 6 fighter wings in the process.
+    One of the first Orions to have been seized by the NTF, the Stalker was part of Neo-Terran Special Tasks Force, roughly the equivalent of the Alliance's Special Operations Command. Commanded by Rear-Admiral Lino Dusthoff, the Stalker has been involved in no less than 15 special operations against the GTVA, including the famous raid against the Cortez shipyards in Capella, bypassing Alliance blockades, which ended in the stealing of three Aeolus cruisers present in drydocks at the time, as well as a significant amount of supplies, destroying the shipyards themselves, thus denying the Alliance the ability to refit its own Aeolus cruisers with Medium Beams, losing only one leviathan cruiser, 2 bomber wings and 6 fighter wings in the process.
 
     Having taken part in more joint operations with the Vasudans than most of its fellow officers, without any notable incident, the sudden defection of the then Commodore Dusthoff raised a few eyebrows in the higher circles of the Alliance Navy and the Security Council, prompting GTVI the reconsider the profile of potential defectors. In retrospect, this was also one of the first hints that Bosch's public persona didn't quite match its actual, unknown, motives.
 
-    The later months of the war showed a slow but steady decrease in the Stalker's performance, starting with the fiasco of an intelligence gathering operation in Epsilon Pegasi, which resulted in the loss of two NTF cruisers and the death of Dusthoff's second in command. Analysts suggest that while the Stalker's command crew intially joined Bosch's Neo Terran Front for motives different from Vasudan hatred or other obvious NTF ideologies, 15 months of constant operations against their former comrades and their first hand grasp of how increasingly desperate the NTF's situation was, eventually wore off the non-fanatic officers.",-1)
+    The later months of the war showed a slow but steady decrease in the Stalker's performance, starting with the fiasco of an intelligence gathering operation in Epsilon Pegasi, which resulted in the loss of two NTF cruisers and the death of Dusthoff's second in command. Analysts suggest that while the Stalker's command crew initially joined Bosch's Neo Terran Front for motives different from Vasudan hatred or other obvious NTF ideologies, 15 months of constant operations against their former comrades and their first hand grasp of how increasingly desperate the NTF's situation was, eventually wore off the non-fanatic officers.",-1)
 $end_multi_text
 
 $Entry:
@@ -609,7 +609,7 @@ $Description:
     
     Acting as Flagship of the 12th Vasudan Battlegroup, the GVD Apep entered its 5th year of service at the time of the Shivan incursion in Gamma Draconis. Due to its above average performance during the NTF conflict, the Apep and the 12th VBG were selected to assist in the containment operations in the nebula and Gamma Draconnis. Fitted with top-of-the-line equipment and weaponry, the ship's combat and logistical performance exceeds that of most Hatshepsut-class destroyers.
 
-    Under the command of Rear-Admiral Obster, the Apep spearheaded the first offensive on Regulus, in the early months of the Civil War. Ambushed by the NTD Repulse and the NTCv La Fayette, the Apep and other surviving allied warships were forced to retreat to Allied-controlled space, and underwent a massive refit, equipping the destroyer, among other things, with the brand new Vasudan Capital Ship Tordedo System, Wraith point defence turrets, Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure.",-1)
+    Under the command of Rear-Admiral Obster, the Apep spearheaded the first offensive on Regulus, in the early months of the Civil War. Ambushed by the NTD Repulse and the NTCv La Fayette, the Apep and other surviving allied warships were forced to retreat to Allied-controlled space, and underwent a massive refit, equipping the destroyer, among other things, with the brand new Vasudan Capital Ship Torpedo System, Wraith point defence turrets, Akheton's mark 3 Advanced Sensor Suite and Triton Dynamics' FRR (Fast Refuel and Repair) infrastructure.",-1)
 $end_multi_text
 
 $Entry:
@@ -619,7 +619,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Typhon-class Support Destroyer
 
-    An aging warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most succesfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat dented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
+    An ageing warship, the GVD Pharaoh entered service 3 years after the end of the Great War. While the Pharaoh was one of the most successfully beam-fitted Typhon destroyer of its time, due to its then advanced powergrid, the recent addition of a pair of secondary beam weapons, as part of an experiment to improve the typhon's offensive capabilities, somewhat dented the destroyer's reputation as a reliable asset when the main beam powergrid overloaded when the destroyer was under attack from the NTCv Lionheart, though the destroyer's secondary beams remained operational.",-1)
 $end_multi_text
 
 $Entry:
@@ -646,7 +646,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Ravana-class Long Range Hunter Killer Destroyer
 
-    Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams are capable of succesfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
+    Arriving shortly after the destruction of the SD Ravana and the arrival of the 12th Vasudan Battlegroup, the Vampire has proven to be particularly deadly due to the fact that its beams are capable of successfully acquire lock from long range, a feat only accomplished by the SD Lucifer during the great war.
 
     The Vampire is also better armed than the initial Ravana, and has different hull composition than the standard Shivan destroyers, hinting that this ship fills a slightly different role, and might be even more important to the Shivans than the average destroyer.",-1)
 $end_multi_text
@@ -658,7 +658,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Lilith-class Command Heavy Cruiser
 
-    The Reaper was first sighted shortly after the destruction of the SD Ravana. The cruiser has been sweeping the nebula ever since, usually leading strikes against Allied capital ships, with one or two other cruisers to assist it. Acting seemingly indenpendently from any Shivan Command Ship present in the nebula at the time, and has never taken any action to cross or secure the Gamma Draconnis node.",-1)
+    The Reaper was first sighted shortly after the destruction of the SD Ravana. The cruiser has been sweeping the nebula ever since, usually leading strikes against Allied capital ships, with one or two other cruisers to assist it. Acting seemingly independently from any Shivan Command Ship present in the nebula at the time, and has never taken any action to cross or secure the Gamma Draconnis node.",-1)
 $end_multi_text
 
 $Entry:
@@ -678,7 +678,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Rakshasa-class Hunter Killer Cruiser
 
-    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out litterally immediatly, the Hellknight is responsible for the deaths of tens of thousands of Alliance crewmembers. Despite no less than 2 operations to lure out the cruiser, and 3 outright hunt to destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
+    The bane of GTVA warships since the early days of the nebula campaign, the SC Hellknight is unique Rakshasa cruiser equipped with corvette grade weaponry. Finishing off already crippled warships and jumping out literally immediately, the Hellknight is responsible for the deaths of tens of thousands of Alliance crew members. Despite no less than 2 operations to lure out the cruiser, and 3 outright hunt to destroy it, its extreme subspace agility, superior firepower and uncommon toughness has allowed the Hellknight to survive throughout the campaign, occasionally jumping back into the nebula, supposedly for repairs.
 
     Over time, the Hellknight has acquired a grim but well deserved reputation as the Harbinger of Death for GTVA warships.",-1)
 $end_multi_text
@@ -701,7 +701,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Demon-class Combat Destroyer
 	
-	Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blocading forces.",-1)
+	Since the destruction of the Ravana, the Demon-class destroyer Vorvadoss serves as the Shivan's main base of operation in the nebula. Contrary to Hunter Killer destroyers such as the Ravana or the Vampire, the Vorvadoss has thus far avoided direct confrontation with allied warships, instead using its large strikecraft reserve to hunt down GTVA vessels present in the nebula. Unlike the Vampire and other Shivan warships, the Vorvadoss has never made any attempt at crossing the Gamma Draconis node, though its fighters and bombers have been involved in strikes against blockading forces.",-1)
 $end_multi_text
 
 $Entry:
@@ -721,7 +721,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Lilith-class Heavy Cruiser
 	
-	First sighted in the nebula, the Nergal has been relatively discret, for Lilith cruiser, occasionally assisting the SD Lamashtu. It was promplty destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
+	First sighted in the nebula, the Nergal has been relatively discrete, for Lilith cruiser, occasionally assisting the SD Lamashtu. It was promptly destroyed when it engaged the fleet guarding the Capella node from the Sathanas.",-1)
 $end_multi_text
 
 $Entry:
@@ -751,7 +751,7 @@ $AlwaysInTechRoom:		0
 $Description:
     XSTR("Ravana-class Hunter Killer Destroyer
 	
-	Bypassing Allied defences in Gamma Draconis, the Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediatly started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
+	Bypassing Allied defences in Gamma Draconis, the Ravana-class destroyer Centrab Betz is directly responsible for the destruction of the GTD Olympus Shadow. Upon its arrival in Gamma Draconis, the Centrab Betz immediately started attacking allied position at the Capella node. With most Allied assets in system engaged in operations intended to tie down the Shivans to allow the Olympus Shadow to escape, the destroyer advanced unchallenged, destroying the GTCv Kleinhaus and GVC Ihmu before moving to the node itself.
 
     Swift precision strikes from Vasudan pilots prevented the destroyer from destroying the Blade Sobek Combat Group, but between bomber wings launched from the Centrab Betz and other Shivan capital ships jumping from within the system, the Olympus Shadow was destroyed moments before the GVD Apep jumped in to secure the area.",-1)
 $end_multi_text
@@ -820,7 +820,7 @@ $Entry:
 $Name:				XSTR("Shivan Elite Armor",-1)
 $Anim:					none
 $AlwaysInTechRoom:		0
-$Description:		XSTR("Critical Shivan ships have, on occasions, benefitted from vastly superior hull and shielding compared to the rest of their fleet. Strangely enough, fighters and warships alike have been featuring the same type of armor.",-1)
+$Description:		XSTR("Critical Shivan ships have, on occasions, benefited from vastly superior hull and shielding compared to the rest of their fleet. Strangely enough, fighters and warships alike have been featuring the same type of armor.",-1)
 $end_multi_text
 
 $Entry:					
@@ -831,7 +831,7 @@ $Description:		XSTR("You shouldn't be seeing this. Makes ships nigh invulnerable
 $end_multi_text
 
 ;: ;; =====================================================
-;: ;;					My stuff - Additonal Information
+;: ;;					My stuff - Additional Information
 ;: ;; =====================================================
 
 $Entry:
@@ -879,9 +879,9 @@ $Name:        XSTR("Fast Refuel and Repair",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	1
 $Description:
-    XSTR("Trition Dynamics - Fast Refuel and Repair
+    XSTR("Triton Dynamics - Fast Refuel and Repair
 
-    Part of the Alliance's newest destroyer systems' package, the FR&R platform's purpose is to allow modern destroyers and installations to operate their strikecraft compliment efficiently in high intensity environment. This highly automated infrastructure is designed to bring exhausted fighters and bombers back to frontline as quickly as possible, and can in a pinch be used as an onboard factory. Over the past 10 years, Terran-Vasudan engineers have been trying to make Alliance warships as autonomous as possible, making ships more and more able to survive in hostile environments, on the front or behind enemy lines.",-1)
+    Part of the Alliance's newest destroyer systems' package, the FR&R platform's purpose is to allow modern destroyers and installations to operate their strikecraft compliment efficiently in high intensity environment. This highly automated infrastructure is designed to bring exhausted fighters and bombers back to frontline as quickly as possible, and can in a pinch be used as an on-board factory. Over the past 10 years, Terran-Vasudan engineers have been trying to make Alliance warships as autonomous as possible, making ships more and more able to survive in hostile environments, on the front or behind enemy lines.",-1)
 $end_multi_text
 
 $Entry:
@@ -924,7 +924,7 @@ $Description:
 	
 	The Shivans, however, have recently displayed the ability to deploy subspace missiles to devastating effect on Alliance forces. Standard Shivan subspace missile strikes (SSM strikes) operate in three stages:
 	    -First, a strikecraft deploys a TAG beacon on a target.
-	    -Then, depending on type of beacon used, Shivan warships or independant delivery systems launch the appropriate missiles through subspace.
+	    -Then, depending on type of beacon used, Shivan warships or independent delivery systems launch the appropriate missiles through subspace.
 	    -The missiles then emerge in a sphere around its designated target.
 	On occasions, Shivan command ships have shown the ability to relay strikes without the need for a TAG beacon.
 	
@@ -949,21 +949,4 @@ $Description:
     XSTR("CLASSIFIED - level Rho
 
     ",-1)
-$end_multi_text
-
-;: ;; =====================================================
-;: ;;					My stuff - Notes to self
-;: ;; =====================================================
-
-$Entry:
-$Name:        	XSTR("### mission reports ###",-1)
-$Anim:					
-$AlwaysInTechRoom:		1
-$Description:		XSTR("Concept: write a mission report after some important missions to give more insight to the player
-
-Either do this here or through fiction pieces
-
-Other idea: use fiction pieces to give more info about the GTD Streaker's operations - at least after the first time it is featured
-
-also: use git diff/patch to merge (at least partially) missions with MVP ones",-1)
 $end_multi_text
