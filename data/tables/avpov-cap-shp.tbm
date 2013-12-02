@@ -2749,7 +2749,7 @@ $Subsystem:                     navigation,                      5,0.0
 $Subsystem:                     weapons,                                 5,0.0
 
 ;; ================================================================================================ ;;
-$Name:                          GVC Hemsut
+$Name:                          GVGb Hemsut
 $Short name:					VTorpCruiser
 $Species:                       Vasudan
 	+Tech Description:
