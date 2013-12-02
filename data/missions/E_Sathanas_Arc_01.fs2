@@ -1936,7 +1936,7 @@ $Determination: 10
 +Score: 40
 
 $Name: SOC Combat Group 22 - 2		;! Object #51
-$Class: GTC Cretheus
+$Class: GTGb Cretheus
 $Team: Hostile
 $Location: 9405.570313, -932.756958, 20879.708984
 $Orientation:
@@ -1974,7 +1974,7 @@ $Determination: 10
 +Score: 75
 
 $Name: SOC Combat Group 22 - 3		;! Object #52
-$Class: GTC Cretheus
+$Class: GTGb Cretheus
 $Team: Hostile
 $Location: 8116.894531, 1335.903320, 18853.261719
 $Orientation:
