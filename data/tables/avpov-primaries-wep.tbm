@@ -229,7 +229,7 @@ $Name:                                  Sehku
 	+Tech Title:				    XSTR("GVW-52 Sehku", -1)
 	+Tech Anim:					    Tech_Akheton_SDG
 	+Tech Description:
-		XSTR("Using its Subsystem Disruptor Gun as a template, Akheton developped this weapon to replace the Alliance's Shield Breaker gun. Due to a chaotic development and unrealistic demands, Akheton lost its contract for the Alliance's standard Shield Breaker weapon in favor of the GTW-19 Circe.
+		XSTR("Using its Subsystem Disruptor Gun as a template, Akheton developed this weapon to replace the Alliance's Shield Breaker gun. Due to a chaotic development and unrealistic demands, Akheton lost its contract for the Alliance's standard Shield Breaker weapon in favor of the GTW-19 Circe.
 
 		The Akheton Corporation wanted to develop a multi-purpose weapon capable of replacing the SDG when it would enter the end of its life cycle, in addition of its anti-shield properties, thus adding a whole new set of constraints to an already demanding project, and delaying its entry into service for years. Initial field tests of the weapon were rather unimpressive: pilots judged the fire rate to be too slow for practical use in a dogfight situation. Instead of addressing these issues, Akheton decided to increase the value of each shot fired, causing the company to lose to race with the Circe.
 
@@ -365,7 +365,7 @@ $Name:                              Shivan Mega Laser
 	+Title:							XSTR("Shivan Mega Laser",-1)
 	+Tech Title:					XSTR("Shivan Mega Laser", -1)
 	+Tech Description:
-		XSTR("Over the past 32 years, GTVA scientist have put hard work in dismantling and understanding how Shivan weaponery works. While most of the findings are classified at highest levels, some of the published materials underline a massively alien view of weapon craft, relying on physics principles not traditionally applied to warfare. Yet the weapon produced are extremely versatile, capable (most of the time) of damaging hull, draining shields and disrupting subsystems with equal ease, while being extremely energy efficient and having seemly a low resource cost.", -1)
+		XSTR("Over the past 32 years, GTVA scientist have put hard work in dismantling and understanding how Shivan weaponry works. While most of the findings are classified at highest levels, some of the published materials underline a massively alien view of weapon craft, relying on physics principles not traditionally applied to warfare. Yet the weapon produced are extremely versatile, capable (most of the time) of damaging hull, draining shields and disrupting subsystems with equal ease, while being extremely energy efficient and having seemly a low resource cost.", -1)
 	$end_multi_text
 $Damage Type:						ShivanWeapon
 $Flags:								( "player allowed" )

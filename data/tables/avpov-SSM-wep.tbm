@@ -62,7 +62,7 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:		Shivan Subspace Missile
 	+Tech Description:
-		XSTR("The recently-appeared Shivan Subspace Missile seems to be an offshoot of the Shivan Megabomb. A slightly larger warhead, the Shivan SSM is equipped with a lightweight, possibly one-shot, subspace drive, a much stronger engine with an extended fuel cell, at the cost of a slightly inferior payload when compared to the Megabomb. On the field, these weapons pose a much greater threat to allied warships than flights of Shivan bombers equipped with a more traditionnal ordnance, as it often takes gunners and escort pilots by surprise, and reach their target within a few seconds of their arrival.
+		XSTR("The recently-appeared Shivan Subspace Missile seems to be an offshoot of the Shivan Megabomb. A slightly larger warhead, the Shivan SSM is equipped with a lightweight, possibly one-shot, subspace drive, a much stronger engine with an extended fuel cell, at the cost of a slightly inferior payload when compared to the Megabomb. On the field, these weapons pose a much greater threat to allied warships than flights of Shivan bombers equipped with a more traditional ordnance, as it often takes gunners and escort pilots by surprise, and reach their target within a few seconds of their arrival.
 
 			The Subspace Missiles are fired from some variants of the Demon-class destroyer, meaning that assaults on these vessels limits the Shivan's ability to launch SSM strikes on allied warships.",-1)
 		$end_multi_text
@@ -133,7 +133,7 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:		Shivan Subspace Missile#swarm
 	+Tech Description:
-		XSTR("When SSM-fitted Demons are engaged by allied warships in close combat, they fire their SSMs is full salvos, using the missile's conventional drive to get to their target.",-1)
+		XSTR("When SSM-fitted Demons are engaged by allied warships in close combat, they fire their SSMs is full salvoes, using the missile's conventional drive to get to their target.",-1)
 		$end_multi_text
 $Model File:		S_MegaBomb.pof
 $POF target LOD:	0
@@ -275,7 +275,7 @@ $Name:				Shivan Mordiggian Bomb
 	+Tech Description:
 		XSTR("Little information is available regarding the Mordiggian Bomb. Slightly less powerful the the standard Shivan Bomb, this bomb is also equipped with its own subspace TAG beacon, which calls in another Mordiggian Bomb upon hitting a target.
 
-		It is unclear who fires the additional bombs, as no shivan bomber or warship as been seen firing off-going Mordiggian bombs to this day. Some have theorized that the warheads could be fired from inside a large Shivan capital ship, most likely a Juggernaught since these bombs started being deployed after the arrival of the Sathanas fleet in Capella. Others suggest that a new type of specialized capital ship may be firing them, staying hidden far away from the battlefields and having evaded contact with allied ships in the confusion reigning in the Capella system.",-1)
+		It is unclear who fires the additional bombs, as no shivan bomber or warship as been seen firing off-going Mordiggian bombs to this day. Some have theorized that the warheads could be fired from inside a large Shivan capital ship, most likely a Juggernaut since these bombs started being deployed after the arrival of the Sathanas fleet in Capella. Others suggest that a new type of specialized capital ship may be firing them, staying hidden far away from the battlefields and having evaded contact with allied ships in the confusion reigning in the Capella system.",-1)
 		$end_multi_text
 $Model File:		S_MegaBomb.pof
 $POF target LOD: 	0

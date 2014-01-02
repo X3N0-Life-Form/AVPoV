@@ -162,7 +162,7 @@ $Glide: YES
 	+Glide Accel Mult:	1.0
 $Allowed PBanks:		
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6")
-	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy anticap Laser" "Shivan Flak Weapon")
+	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Heavy Anticap Laser" "Shivan Flak Weapon")
 	("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "UD-6" "Shivan Scatter Gun")
 $Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "Shivan Bomb" "Shivan Bomb#Short" "Shivan Megabomb" "Shivan Swarmer Bomb" "Shivan Mordiggian Bomb")
 $Armor Type:			Shivan Bomber Armor			; hits vs normal= 3000
@@ -316,8 +316,8 @@ $end_multi_text
 XSTR(
 "After the moderate success of the GVF Serapis, Akheton engineers attempted to correct or at least dampen its main flaw: durability. The project, dubbed Serapis Elite, had to follow a harsh set of specification: create a fighter as light weight and agile as the original Serapis, while increasing its hull resistance and shield strength, as well as a broader weapon compatibility.
 
-The result was an expansive fighter, integrating the brand new gliding feature, compatibility with the GTVA's most advanced fighter weaponery and a 50% increase in hull and shield strength over the original Serapis.
-While the Serapis Elite is not quite as expensive as the Terran Ares or Erinyes, its still-low life expectancy in particularly intense combat situation has dissuaded Vasudan Command from committing this fighter for mass-production, and thus the Serapis remained the Vasudan's main Space Superiority fighter, while this model was taken over by Special Operations Command and vasudan aces.", -1)
+The result was an expansive fighter, integrating the brand new gliding feature, compatibility with the GTVA's most advanced fighter weaponry and a 50% increase in hull and shield strength over the original Serapis.
+While the Serapis Elite is not quite as expensive as the Terran Ares or Erinyes, its still-low life expectancy in particularly intense combat situation has dissuaded Vasudan Command from committing this fighter for mass-production, and thus the Serapis remained the Vasudan's main Space Superiority fighter, while this model was taken over by Special Operations Command and Vasudan aces.", -1)
 $end_multi_text
 +Length:				14 Meters
 +Gun Mounts:			2
@@ -416,7 +416,7 @@ $Species: 							Vasudan
 	+Manufacturer:         	 		XSTR("Mekhu Enterprises", -1)
 	+Description: 					XSTR( " ", -1 )
 $end_multi_text
-	+Tech Description:				XSTR( "The GVB Hathor was conceived to engage Shivan capital ships and live to tell the tale. As a worthy successor of the GVB Sekhmet, this bomber carries a higher bomb capacity, upgraded shields, ECM defence systems and a subspace motivator designed for precission jumps. In the event of a Shivan Incursion, Hathors are expected to fend off the first waves of capital ships while system-wide evacuation and node suppression contingencies are put in place. Despite its high production costs, Hathor bombers have been incorporated into most vasudan battlegroups en masse, reflecting the pivotal role the Vasudan Admiralty as assigned them in the event of a new Shivan Incursion.", -1 )
+	+Tech Description:				XSTR( "The GVB Hathor was conceived to engage Shivan capital ships and live to tell the tale. As a worthy successor of the GVB Sekhmet, this bomber carries a higher bomb capacity, upgraded shields, ECM defence systems and a subspace motivator designed for precision jumps. In the event of a Shivan Incursion, Hathors are expected to fend off the first waves of capital ships while system-wide evacuation and node suppression contingencies are put in place. Despite its high production costs, Hathor bombers have been incorporated into most Vasudan battlegroups en masse, reflecting the pivotal role the Vasudan Admiralty as assigned them in the event of a new Shivan Incursion.", -1 )
 $end_multi_text
 	+Length: 						25 m
 	+Gun Mounts: 					4 ( 2, 2 )
