@@ -1,0 +1,13 @@
+#Conditional Hooks
+
+$Application: FS2_Open
+
+$State: GS_STATE_GAME_PLAY
+
+$On Gameplay start: [[turretSwap.lua]]
+
+$On Warp In: [[turretSwap.lua]]
+
+$On Frame: [[turretSwap.lua]]
+
+#End
