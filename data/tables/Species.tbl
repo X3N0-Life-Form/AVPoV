@@ -401,59 +401,30 @@ $end_multi_text
 ;: ;;					My stuff - Strikecraft Classification
 ;: ;; ==============================================================
 
-$Entry:
-$Name:        XSTR("---- Shivan Strikecrafts ----",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	1
-$Description:
-    XSTR("Shivan Strikecraft Classification",-1)
-$end_multi_text
 
 $Entry:
-$Name:        XSTR("Advanced Heavy Bomber",-1)
+$Name:        XSTR("Shivan Strikecrafts - Bombers",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Seraphim - Advanced Heavy Bomber
-	
+    XSTR("---- Seraphim - Advanced Heavy Bomber ----
 	Though some people refer to the Seraphim as a 'Mobile Fortress' more than a bomber, the Seraphim is much more versatile than the Nephilim, supporting a larger number a gun ports and types.
 
-    ",-1)
-$end_multi_text
+---- Nephilim - Heavy Bomber ----
+	Nothing to add.
 
-$Entry:
-$Name:        XSTR("Heavy Bomber",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Nephilim - Heavy Bomber
-	
-	Nothing to add.",-1)
-$end_multi_text
-
-$Entry:
-$Name:        XSTR("Swarm Bomber",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Taurvi - Swarm Bomber
-	
+---- Taurvi - Swarm Bomber ----
 	Capable of carrying large numbers of Advanced Swarmer Bombs, the Taurvi's capabilities are similar to the Seraphim's in terms of versatility, but with a significantly reduced firepower in most cases. Capable of moving in all 3 axis, the Taurvi falls right behind the Nahema in close range combat agility.
 
-    The Taurvi usually mount one of two primary weapon configuration: 1 large cannon for heavy anti-capital ship duty, combined with 2 flak weapons, or 2 heavy anti-capital laser for lighter anti-capital ship duty and the versatile scatter gun.",-1)
-$end_multi_text
+    The Taurvi usually mount one of two primary weapon configuration: 1 large cannon for heavy anti-capital ship duty, combined with 2 flak weapons, or 2 heavy anti-capital laser for lighter anti-capital ship duty and the versatile scatter gun.
 
-$Entry:
-$Name:        XSTR("Strike Bomber",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Nahema - Strike Bomber
-	
+---- Nahema - Strike Bomber ----
 	An interceptor's nightmare, the Nahema bomber is compatible with a large array of warheads, including Mega Bombs and Swarmer Bombs.
 
-    The Nahema is capable of moving on any axis.",-1)
+    The Nahema is capable of moving on any axis.
+",-1)
 $end_multi_text
+
 
 $Entry:
 $Name:        XSTR("Fire Support Gunship",-1)
@@ -468,76 +439,34 @@ $Description:
 $end_multi_text
 
 $Entry:
-$Name:        XSTR("Swarm Assault Fighter",-1)
+$Name:        XSTR("Shivan Strikecrafts - Fighters",-1)
 $Anim:                    
 $AlwaysInTechRoom:    	0
 $Description:
-    XSTR("Aeshma - Swarm Assault Fighter
-	
+    XSTR("---- Aeshma - Swarm Assault Fighter ----
 	Somewhere between the light bomber and the heavy fighter, the Aeshma is a versatile weapon platform, known to be capable of carrying the Swarmer Bomb and the Long Range Swarm Missile, hence his classification as a Swarm Fighter.
 
     The Assault part of its classification comes from the fact that it is also capable of mounting the Shivan Heavy Anti-Capital Laser, as well as the Advanced Dumbfire Rocket.
-    The Aeshma is capable of moving in all 3 axis.",-1)
-$end_multi_text
-
-$Entry:
-$Name:        XSTR("Heavy Fighter",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Basilisk - Heavy Fighter
+    The Aeshma is capable of moving in all 3 axis.
 	
+---- Basilisk - Heavy Fighter ----
 	Nothing to add.
 
-    ",-1)
-$end_multi_text
-
-$Entry:
-$Name:        XSTR("Elite Multirole Fighter",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Dragon - Elite Multirole Fighter
-	
+---- Dragon - Elite Multirole Fighter ----
 	Extremely rare fighter, the Dragon is akin to a miniature Mara in terms of size, agility and weapon compatibility, though it is better armed and faster, although it carries a much smaller ordnance.
 
-    Its high speed and minuscule target profile make this fighter ludicrously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets",-1)
-$end_multi_text
+    Its high speed and minuscule target profile make this fighter ludicrously hard to hit. This fighter is also capable of carrying large quantities of Shivan Advanced Dumbfire Rockets.
 
-$Entry:
-$Name:        XSTR("Advanced Multirole Fighter",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Mara - Advanced Multirole Fighter
-	
+---- Mara - Advanced Multirole Fighter ----
 	The bread and butter of the Shivan fighter force, the Mara fighter is capable of mounting most weapons in the Shivan arsenal, allowing it to fulfill almost any mission.
 
-    Pilots should also be aware of the fighter's exceptional agility and ability to move in all 3 axis",-1)
-$end_multi_text
+    Pilots should also be aware of the fighter's exceptional agility and ability to move in all 3 axis
 
-$Entry:
-$Name:        XSTR("Space Superiority Fighter",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Astaroth - Space Superiority Fighter
-	
+---- Astaroth - Space Superiority Fighter ----
 	Although the Astaroth fits the qualification of Advanced Space Superiority due to its agility and fragility, its poor performance in the field led analysts to class this fighter as simple Space Superiority.
 
-    ",-1)
-$end_multi_text
-
-$Entry:
-$Name:        XSTR("Interceptor",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("Manticore - Interceptor
-	
-	Nothing to add.
-
-    ",-1)
+---- Manticore - Interceptor ----
+	Nothing to add.",-1)
 $end_multi_text
 
 
@@ -761,66 +690,37 @@ $end_multi_text
 ;: ;; =====================================================
 
 $Entry:
-$Name:				XSTR("---- Armor ----",-1)
+$Name:				XSTR("---- Armor - GTVA ----",-1)
 $Anim:					
 $AlwaysInTechRoom:		1
-$Description:		XSTR("",-1)
+$Description:		XSTR("---- Light Armor ----
+Standard armor plating on every Alliance fighter. Lightweight without sacrificing durability, it is known to have a weaker resistance to Shivan weaponry.
+
+---- Medium Armor ----
+Standard hull plating for large civilian ships and non-combatant military units, this armor is designed to be highly durable against stellar dust and solar wind. However, is doesn't offer any particular resistance against Terran or Vasudan weaponry, and has been shown to be particularly vulnerable to Shivan weaponry.
+
+---- Heavy Armor ----
+The standard Alliance capital ship armor features an increased resistance against lighter weapons, but is vulnerable against Shivan anti-capital ship weaponry.",-1)
 $end_multi_text
 
 $Entry:					
-$Name:				XSTR("Light Armor",-1)
+$Name:				XSTR("---- Armor - Shivans ----",-1)
 $Anim:					none
 $AlwaysInTechRoom:		1
-$Description:		XSTR("Standard armor plating on every Alliance fighter. Lightweight without sacrificing durability, it is known to have a weaker resistance to Shivan weaponry.",-1)
-$end_multi_text
+$Description:		XSTR("---- Shivan Fighter Armor ----
+The shielding and hull plating present on all Shivan fighter is known to be more resilient than its Alliance equivalents against lighter armaments. However, it should in theory offer no particular resistance to the Shivans' own weapon systems.
 
-$Entry:					
-$Name:				XSTR("Medium Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		1
-$Description:		XSTR("Standard hull plating for large civilian ships and non-combatant military units, this armor is designed to be highly durable against stellar dust and solar wind. However, is doesn't offer any particular resistance against Terran or Vasudan weaponry, and has been shown to be particularly vulnerable to Shivan weaponry.",-1)
-$end_multi_text
+---- Shivan Bomber Armor ----
+Shivan bomber shielding and hull plating have been shown to be very resilient to fighter armaments, and has shown an unexplained resistance to anti-warship armament.
 
-$Entry:					
-$Name:				XSTR("Heavy Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		1
-$Description:		XSTR("The standard Alliance capital ship armor features an increased resistance against lighter weapons, but is vulnerable against Shivan anti-capital ship weaponry.",-1)
-$end_multi_text
+---- Shivan Capital Ship Armor ----
+The standard Shivan Capital ship armor is slightly tougher than its Alliance equivalent against lighter weapons.
 
-$Entry:					
-$Name:				XSTR("Shivan Fighter Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		0
-$Description:		XSTR("The shielding and hull plating present on all Shivan fighter is known to be more resilient than its Alliance equivalents against lighter armaments. However, it should in theory offer no particular resistance to the Shivans' own weapon systems.",-1)
-$end_multi_text
+---- Shivan Destroyer Armor ----
+The armor covering Shivan destroyers is different from the one present on smaller warships. It shows extreme resilience against fighter mounted weapons or light turrets, and an increased resistance against even heavier weapons.
 
-$Entry:					
-$Name:				XSTR("Shivan Bomber Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		0
-$Description:		XSTR("Shivan bomber shielding and hull plating have been shown to be very resilient to fighter armaments, and has shown an unexplained resistance to anti-warship armament.",-1)
-$end_multi_text
-
-$Entry:					
-$Name:				XSTR("Shivan Capital Ship Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		0
-$Description:		XSTR("The standard Shivan Capital ship armor is slightly tougher than its Alliance equivalent against lighter weapons.",-1)
-$end_multi_text
-
-$Entry:					
-$Name:				XSTR("Shivan Destroyer Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		0
-$Description:		XSTR("The armor covering Shivan destroyers is different from the one present on smaller warships. It shows extreme resilience against fighter mounted weapons or light turrets, and an increased resistance against even heavier weapons.",-1)
-$end_multi_text
-
-$Entry:					
-$Name:				XSTR("Shivan Elite Armor",-1)
-$Anim:					none
-$AlwaysInTechRoom:		0
-$Description:		XSTR("Critical Shivan ships have, on occasions, benefited from vastly superior hull and shielding compared to the rest of their fleet. Strangely enough, fighters and warships alike have been featuring the same type of armor.",-1)
+---- Shivan Elite Armor ----
+Critical Shivan ships have, on occasions, benefited from vastly superior hull and shielding compared to the rest of their fleet. Strangely enough, fighters and warships alike have been featuring the same type of armor.",-1)
 $end_multi_text
 
 $Entry:					
@@ -901,16 +801,6 @@ $Anim:
 $AlwaysInTechRoom:    	1
 $Description:
     XSTR("Description of various technologies and tactics used by the Shivans.",-1)
-$end_multi_text
-
-$Entry:
-$Name:        XSTR("Beam Refraction",-1)
-$Anim:                    
-$AlwaysInTechRoom:    	0
-$Description:
-    XSTR("CLASSIFIED - level Mu
-
-    ",-1)
 $end_multi_text
 
 $Entry:
