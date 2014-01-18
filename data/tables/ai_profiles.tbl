@@ -71,7 +71,7 @@ $use only single fov for turrets:                        YES
 $allow vertical dodge:                                   YES
 $force beam turrets to use normal fov:                   YES
 $fix AI class bug:                                       YES
-$allow primary link delay:                               NO
+$allow primary link at mission start:                    NO
 $disable weapon damage scaling for player:               YES
 
 #End
