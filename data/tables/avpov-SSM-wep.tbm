@@ -349,7 +349,7 @@ $Mass:				20.0
 $Velocity:			200.0
 $Fire Wait:			5.0
 $Damage:			100
-$Damage Type: 						NormalWeapon
+$Damage Type: 						ShivanWeapon
 $Blast Force:		1500.0
 $Inner Radius:		80.0
 $Outer Radius:		160.0
