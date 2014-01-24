@@ -2756,7 +2756,7 @@ $Species:                       Vasudan
 		XSTR("TODO", -1)
 	$end_multi_text
 $POF file:                      VasGS.pof
-$Detail distance:				(0, 400, 1200, 2500)
+$Detail distance:				(0) ;, 400, 1200, 2500)
 $Show damage:					YES
 $Density:                       1
 $Damp:                          0.2
