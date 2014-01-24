@@ -8,6 +8,6 @@ $On Gameplay start: [[turretSwap.lua]]
 
 $On Warp In: [[turretSwap.lua]]
 
-$On Frame: [[turretSwap.lua]]
+;$On Frame: [[turretSwap.lua]]
 
 #End
