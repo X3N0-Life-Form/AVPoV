@@ -770,7 +770,7 @@ $Velocity:                      1000.0          ;; speed of the weapon (initiall
 $Fire Wait:                     1.0
 $Damage:                        250
 $Damage Type:					LanceWeapon
-$Armor Factor:                  5.0
+$Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
 $Lifetime:                      20.0            ;; How long this thing lives
@@ -864,7 +864,7 @@ $Velocity:                      1000.0          ;; speed of the weapon (initiall
 $Fire Wait:                     15.0
 $Damage:                        450
 $Damage Type:					LanceWeapon
-$Armor Factor:                  5.0
+$Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
 $Lifetime:                      20.0            ;; How long this thing lives
@@ -958,7 +958,7 @@ $Velocity:                      1000.0          ;; speed of the weapon (initiall
 $Fire Wait:                     10.0
 $Damage:                        1250
 $Damage Type:					LanceWeapon
-$Armor Factor:                  5.0
+$Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
 $Lifetime:                      20.0            ;; How long this thing lives
@@ -1053,7 +1053,7 @@ $Velocity:                      1000.0          ;; speed of the weapon (initiall
 $Fire Wait:                     15.0
 $Damage:                        10000
 $Damage Type:					LanceWeapon
-$Armor Factor:                  5.0
+$Armor Factor:                  1.0
 $Shield Factor:                 1.0
 $Subsystem Factor:              1.0
 $Lifetime:                      20.0            ;; How long this thing lives
