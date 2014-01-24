@@ -58,7 +58,7 @@ A_Intro_00.									//ToDo
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-A_Intro_01.The Viper's Sting							//BetaReady
+A_Intro_01.The Viper's Sting							//AlphaReady
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
 		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;
@@ -543,7 +543,7 @@ F_Capella_04.Facing Goliath							//Need more testing
 		-GVD Apep (Hatshepsut class)		//destroyed
 		-GVC Searing Fate (Mentu Enforcer class)//destroyed
 		-GVC Crixalis (Aten class)		//destroyed
-		-GVC Stone of Dovka (Hemsut class)	//destroyed
+		-GVGb Stone of Dovka (Hemsut class)	//destroyed
 		-SC Hellknight (Rakshasa class)		//non-vital
 		-SC Plague (Cain class)			//non-vital
 		-Apocalypse BG (Ravana + 2xLilith)	//vital
