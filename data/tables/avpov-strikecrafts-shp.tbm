@@ -625,7 +625,95 @@ $Subsystem:                     communications,  		 5,0.0
 $Subsystem:                     engine,                 35,0.0
 
 
-
+$Name: 		GVF Nhu
+$Short name:            VF Nhu
+$Species:               Vasudan
+	+Type:                          XSTR("Heavy Fighter", -1)
+	+Maneuverability:   	    	XSTR("Average", -1)
+	+Armor:                         XSTR("Heavy", -1)
+	+Manufacturer:          		XSTR("Sahr Corporation", 3084)
+	+Description:					XSTR(" ", -1)
+$end_multi_text
+	+Tech Description:				XSTR("Designed to supplement the more fragile Tauret, the Nhu was originally envisioned as a Space Superiority fighter, a successor to the ageing Thoth. When Akheton's Serapis was chosen over this fighter, Sahr, instead of shelving the designed, spent several extra years developing materials that would allow beef up the fighter's armor (one of the Tauret's major source of criticism) while conserving its sleek space superiority profile.
+	
+	The result is a small, tough-as-nails, manoeuvrable heavy fighter, capable of carrying a wide array of weapons. Although it lacks the raw primary firepower of its Terran equivalents, the [REDACTED] and Hercules' inspired [REDACTED], the Nhu makes up for it in survivability and agility.", -1)
+$end_multi_text
+	+Length:          15 Meters
+	+Gun Mounts:      4
+	+Missile Banks:   2
+$POF file:                      Vnhu.pof
+$Detail distance:       (0, 70, 300, 700)
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.4
+$Max Velocity:          0.0, 0.0, 60.0
+$Rotation time:         3.8, 3.8, 4.0
+$Rear Velocity:         0.0
+$Forward accel:         3.1
+$Forward decel:         2.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        25.0
+$Expl outer rad:        55.0
+$Expl damage:           15.0
+$Expl blast:            1000.0
+$Expl Propagates:       NO
+$Shockwave Speed:       0.0
+$Allowed PBanks:        ( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus S" "Prometheus R" "Circe" "Lamprey" "Hayg Mas" "Sahr AS" "Maxim" "Fire Spitter" )
+$Allowed Dogfight PBanks:        ( "Mekhu HL-7D" "Prometheus D" )
+$Default PBanks:        ( "Sahr AS" "Maxim" )
+$Allowed SBanks:        ( "Rockeye" "Tempest" "Harpoon" "Hornet" "TAG-B" "Tornado" "Hornet#Weak" "EMP Adv." "Trebuchet" "Piranha" "Infyrno" "Stiletto II" )
+$Allowed Dogfight SBanks:        ( "Tempest D" "Hornet D" )
+$Default SBanks:        ( "Tempest" "Trebuchet" )
+$SBank Capacity:        ( 60, 80 )
+$Shields:               620
+$Shield Color:		100 255 100
+$Power Output:          4.0
+$Max Oclk Speed:        78.0
+$Max Weapon Eng:        140.0
+$Hitpoints:             300
+$Flags:                 ( "player_ship" "fighter" "in tech database")
+$AI Class:              Captain
+$Afterburner:           YES
+	+Aburn Max Vel:		0.0, 0.0, 130.0
+	+Aburn For accel:   0.7
+	+Aburn Fuel:        310.0
+	+Aburn Burn Rate:   47.0
+	+Aburn Rec Rate:    23.0
+$Countermeasures:       40
+$Scan time:             2000
+$EngineSnd:				129                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -27
+$Closeup_zoom:          0.5
+$Shield_icon:           Vnhu-shield
+$Ship_icon:				Vnhu-icon
+$Ship_anim:				Vnhu-show
+$Ship_overhead:			Vnhu-load
+$Score:					10
+$Trail:
+	+Offset:			-6.2 .20 -2.18
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Trail:
+	+Offset:			6.2 .20 -2.18
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Subsystem:                     weapons,                                15,0.0
+$Subsystem:                     sensors,                                 5,0.0
+$Subsystem:                     communications,  5,0.0
+$Subsystem:                     navigation,                      5,0.0
+$Subsystem:                     engine,                         35,0.0
 
 
 #End
