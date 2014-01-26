@@ -1,6 +1,8 @@
 #Ship Classes
-;; true hit points calculations: x*armor_value = normal_hp
 
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Shivan Strikecrafts ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 $Name: SF Dragon
 	+nocreate ;:
@@ -176,9 +178,113 @@ $Subsystem:                     turret02,5,1.0
 	$Default PBanks:        ( "Shivan Light Laser" )
 	$Flags:					("play fire sound for player")
 
+$Name:                          SF Mara#
+$Short name:            		SFight22#fuck_you
+$Species:                       Shivan
++Tech Description:
+XSTR("", -1)
+$end_multi_text
+$POF file:              fighter2s-02_elite.pof
+$Detail distance:       (0, 80, 220, 900)
+$Show damage:           YES
+$Density:               1
+$Damp:                  0.2
+$Rotdamp:               0.4
+$Max Velocity:          90.0, 90.0, 90.0
+$Rotation time:         2.0, 2.0, 2.5
+$Rear Velocity:         90.0
+$Forward accel:         2.5
+$Forward decel:         1.0
+$Slide accel:           2.0
+$Slide decel:           2.0
+$Glide: YES
+	+Glide Accel Mult:	1.0
+$Expl inner rad:        33.0
+$Expl outer rad:        66.0
+$Expl damage:           20.0
+$Expl blast:            1000.0
+$Expl Propagates:       NO
+$Shockwave Speed:       0.0
+$Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "Shivan Heavy Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Scatter Gun" "Shivan Sniper Gun" "Shivan Flak Weapon")
+$Default PBanks:        ( "Shivan Anticap Laser" "Shivan Heavy Laser Up" )
+$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan" "Shivan LR Swarm" "Shivan Mordiggian Bomb" "TAG-C#Barrage")
+$Default SBanks:        ( "Tempest Adv#Shivan" "Shivan LR Swarm" )
+$SBank Capacity:        ( 80, 80 )
+$Shields:               1240
+$Shield Color:			255 92 92
+$Power Output:          5.00
+$Shield Regeneration Rate:		0.08
+$Weapon Regeneration Rate:		0.20
+$Max Oclk Speed:        150.0
+$Max Weapon Eng:        250.0
+$Hitpoints:             400
+$Hull Repair Rate:				0.08
+$Subsystem Repair Rate:			0.15
+$Armor Type:			Shivan Elite Armor ;; Hell Armor ; hits vs normal= 4100	| 2343	;; hits vs normal= 16400 | 8200
+$Shield Armor Type:		Shivan Elite Armor ;; Hell Armor ; hits vs huge  = 2733	| 8200	;; hits vs huge  = 32800 | 164000
+$Flags:                 ( "fighter" "player_ship" )		 ; huge vs hull only = 667 | 2000 ;; 8000 | 40000
+$AI Class:              Demon
+$Afterburner:           YES
+	+Aburn Max Vel:		135.0, 135.0, 135.0
+	+Aburn For accel:   0.7
+	+Aburn Max Reverse Vel:	135.0
+	+Aburn Rev accel:		0.7
+	+Aburn Fuel:        300.0
+	+Aburn Burn Rate:   50.0
+	+Aburn Rec Rate:    25.0
+$Countermeasures:       20
+$Scan time:             2000
+$EngineSnd:				132                   ;; Engine sound of ship
+$Closeup_pos:           0.0, -2.0, -23
+$Closeup_zoom:          0.5
+$Shield_icon:           shieldfs-02
+$Score:					12
+$Trail:
+	+Offset:			9 -2.5 1.3
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Trail:
+	+Offset:			-9 -2.5 1.3
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Trail:
+	+Offset:			5.8 -5.6 6.5
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Trail:
+	+Offset:			-5.8 -5.6 6.5
+	+Start Width:		0.25
+	+End Width:			0.05
+	+Start Alpha:		1.0
+	+End Alpha:			0.0
+	+Max Life:			1.0
+	+Spew Time:			120
+	+Bitmap:			Contrail01
+$Radar Image 2D:    radar-fighter
+$Subsystem:             sensors,                        10,0.0
+$Subsystem:             communications, 10,0.0
+$Subsystem:             engine,                 35,0.0
+$Subsystem:             weapons,                        15,0.0
+$Subsystem:             navigation,              5,0.0
 
-
-;; GTVA ships
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Alliance Strikecrafts ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 $Name:					GTB Boanerges
 	+nocreate ;:
@@ -300,8 +406,6 @@ $Name:		GVF Ptah
 $Allowed PBanks:		( "Mekhu HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Hayg Mas")
 $Shield Armor Type:		LightArmor
 
-
-;; elite fighters
 
 $Name:					GVF Serapis Elite
 $Short name:            VFight21E
@@ -520,109 +624,7 @@ $Subsystem:                     navigation,              5,0.0
 $Subsystem:                     communications,  		 5,0.0
 $Subsystem:                     engine,                 35,0.0
 
-$Name:                          SF Mara#
-$Short name:            		SFight22#fuck_you
-$Species:                       Shivan
-+Tech Description:
-XSTR("", -1)
-$end_multi_text
-$POF file:              fighter2s-02_elite.pof
-$Detail distance:       (0, 80, 220, 900)
-$Show damage:           YES
-$Density:               1
-$Damp:                  0.2
-$Rotdamp:               0.4
-$Max Velocity:          90.0, 90.0, 90.0
-$Rotation time:         2.0, 2.0, 2.5
-$Rear Velocity:         90.0
-$Forward accel:         2.5
-$Forward decel:         1.0
-$Slide accel:           2.0
-$Slide decel:           2.0
-$Glide: YES
-	+Glide Accel Mult:	1.0
-$Expl inner rad:        33.0
-$Expl outer rad:        66.0
-$Expl damage:           20.0
-$Expl blast:            1000.0
-$Expl Propagates:       NO
-$Shockwave Speed:       0.0
-$Allowed PBanks:		("Shivan Light Laser" "Shivan Heavy Laser" "Shivan Mega Laser" "Shivan Light Laser Up" "Shivan Heavy Laser Up" "Shivan Anticap Laser" "Shivan Heavy Anticap Laser" "UD-6" "Shivan Light Scatter Gun" "Shivan Scatter Gun" "Shivan Sniper Gun" "Shivan Flak Weapon")
-$Default PBanks:        ( "Shivan Anticap Laser" "Shivan Heavy Laser Up" )
-$Allowed SBanks:		("Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "EMP Adv.#Shivan" "Piranha#Shivan" "Shivan Disruptor" "Shivan Area Bomb" "TAG-C#Shivan" "AntiFighterTAG#Shivan" "Tempest Adv#Shivan" "Shivan LR Swarm" "Shivan Mordiggian Bomb" "TAG-C#Barrage")
-$Default SBanks:        ( "Tempest Adv#Shivan" "Shivan LR Swarm" )
-$SBank Capacity:        ( 80, 80 )
-$Shields:               1240
-$Shield Color:			255 92 92
-$Power Output:          5.00
-$Shield Regeneration Rate:		0.08
-$Weapon Regeneration Rate:		0.20
-$Max Oclk Speed:        150.0
-$Max Weapon Eng:        250.0
-$Hitpoints:             400
-$Hull Repair Rate:				0.08
-$Subsystem Repair Rate:			0.15
-$Armor Type:			Shivan Elite Armor ;; Hell Armor ; hits vs normal= 4100	| 2343	;; hits vs normal= 16400 | 8200
-$Shield Armor Type:		Shivan Elite Armor ;; Hell Armor ; hits vs huge  = 2733	| 8200	;; hits vs huge  = 32800 | 164000
-$Flags:                 ( "fighter" "player_ship" )		 ; huge vs hull only = 667 | 2000 ;; 8000 | 40000
-$AI Class:              Demon
-$Afterburner:           YES
-	+Aburn Max Vel:		135.0, 135.0, 135.0
-	+Aburn For accel:   0.7
-	+Aburn Max Reverse Vel:	135.0
-	+Aburn Rev accel:		0.7
-	+Aburn Fuel:        300.0
-	+Aburn Burn Rate:   50.0
-	+Aburn Rec Rate:    25.0
-$Countermeasures:       20
-$Scan time:             2000
-$EngineSnd:				132                   ;; Engine sound of ship
-$Closeup_pos:           0.0, -2.0, -23
-$Closeup_zoom:          0.5
-$Shield_icon:           shieldfs-02
-$Score:					12
-$Trail:
-	+Offset:			9 -2.5 1.3
-	+Start Width:		0.25
-	+End Width:			0.05
-	+Start Alpha:		1.0
-	+End Alpha:			0.0
-	+Max Life:			1.0
-	+Spew Time:			120
-	+Bitmap:			Contrail01
-$Trail:
-	+Offset:			-9 -2.5 1.3
-	+Start Width:		0.25
-	+End Width:			0.05
-	+Start Alpha:		1.0
-	+End Alpha:			0.0
-	+Max Life:			1.0
-	+Spew Time:			120
-	+Bitmap:			Contrail01
-$Trail:
-	+Offset:			5.8 -5.6 6.5
-	+Start Width:		0.25
-	+End Width:			0.05
-	+Start Alpha:		1.0
-	+End Alpha:			0.0
-	+Max Life:			1.0
-	+Spew Time:			120
-	+Bitmap:			Contrail01
-$Trail:
-	+Offset:			-5.8 -5.6 6.5
-	+Start Width:		0.25
-	+End Width:			0.05
-	+Start Alpha:		1.0
-	+End Alpha:			0.0
-	+Max Life:			1.0
-	+Spew Time:			120
-	+Bitmap:			Contrail01
-$Radar Image 2D:    radar-fighter
-$Subsystem:             sensors,                        10,0.0
-$Subsystem:             communications, 10,0.0
-$Subsystem:             engine,                 35,0.0
-$Subsystem:             weapons,                        15,0.0
-$Subsystem:             navigation,              5,0.0
+
 
 
 
