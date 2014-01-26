@@ -14,15 +14,6 @@ ToDo : 	nameplates
 	SOC loop
 	more tech entries
 
-Refraction rules :
-	original beam dmg tick
-	+sum(SRed)*1.15
-	+sum(MRed+MRedUp)*1.10
-	+sum(LRed)*1.05
-	+sum(BFRed)*0.80
-
-	Respect every beam's RoF
-
 12th Vasudan Battlegroup
 CO : Rear-Admiral Obster
 Squadron: 456th Dust Bringers
