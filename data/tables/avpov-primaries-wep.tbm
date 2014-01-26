@@ -622,14 +622,14 @@ $Model File:                        none ;; laser1-1.pof
 @Laser Tail Radius:					2.0
 $Mass:                              0.25
 $Velocity:                          550.0
-$Fire Wait:                         0.12 
+$Fire Wait:                         0.20 
 $Damage:                            20
 $Damage Type:						ShivanWeapon
 $Armor Factor:                  	1.0
 $Shield Factor:         			1.0
 $Subsystem Factor:      			1.0
 $Lifetime:                          1.8 
-$Energy Consumed:               	0.35
+$Energy Consumed:               	0.40
 $Cargo Size:                    	0.0 
 $Homing:                            NO
 $LaunchSnd:                         100 
