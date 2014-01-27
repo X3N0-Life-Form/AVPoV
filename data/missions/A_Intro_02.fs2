@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 12/09/12 at 20:28:45
+$Modified: 01/27/14 at 21:04:35
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,12 +23,14 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1883.705933, 9215.499023, -2901.959473
++Viewer pos: -1911.290894, 3466.613281, 964.592957
 +Viewer orient:
-	0.996892, -0.000012, -0.078786,
-	0.060428, 0.641769, 0.764514,
-	0.050553, -0.766898, 0.639775
+	0.990092, -0.000012, -0.140417,
+	0.138374, 0.170047, 0.975672,
+	0.023866, -0.985436, 0.168364
 
+
+$Skybox Model: Starfield.pof
 
 $AI Profile: myProfile
 
@@ -300,10 +302,10 @@ $Ship Choices: (
 	"Mekhu HL-7"	30
 	"Prometheus R"	16
 	"Rockeye"	150
-	"Tempest"	1280
-	"Tornado"	256
-	"Harpoon"	128
-	"Hornet"	360
+	"Tempest"	2400
+	"Tornado"	128
+	"Harpoon"	64
+	"Hornet"	400
 )
 
 #Objects		;! 18 total
@@ -321,7 +323,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tornado" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -342,12 +344,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tornado" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -369,12 +372,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tornado" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -396,12 +400,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Harpoon" "Tornado" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -735,9 +740,9 @@ $Class: SC Cain
 $Team: Hostile
 $Location: -1225.133789, 547.653503, 5802.980957
 $Orientation:
-	-0.846408, 0.000000, -0.532535,
-	0.000000, 1.000000, 0.000000,
-	0.532535, 0.000000, -0.846408
+	0.845676, -0.041581, 0.532075,
+	-0.429726, -0.644269, 0.632656,
+	0.316493, -0.763669, -0.562711
 $AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-waypoints "Xana path" 50 ) )
@@ -755,12 +760,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret06
 +Primary Banks: ( "Light Flak" )
 +Subsystem: turret07
-+Primary Banks: ( "MRed" )
 +Subsystem: turret08
-+Secondary Banks: ( "Tornado#Shivan" )
++Secondary Banks: ( "Hornet#Shivan" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret09
-+Secondary Banks: ( "Tornado#Shivan" )
++Secondary Banks: ( "Hornet#Shivan" )
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
@@ -791,7 +795,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -818,7 +822,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -845,7 +849,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
++Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1058,7 +1062,7 @@ $Formula: ( when-argument
 +Name: fire shots of ULTRA-AAA
 +Repeat Count: -1
 +Trigger Count: 200
-+Interval: 6
++Interval: 3
 
 $Formula: ( when 
    ( not ( is-destroyed-delay 0 "Xana" ) ) 
@@ -1236,15 +1240,15 @@ $List: (		;! 1 points in list
 
 #Background bitmaps		;! 51 total
 
-$Num stars: 500
+$Num stars: 0
 $Ambient light level: 7895160
 
 $Bitmap List:
 $Sun: SunWhite
-+Angles: 0.000000 0.383972 1.570796
++Angles: 0.000000 0.366519 1.553343
 +Scale: 1.000000
 $Starbitmap: dneb16
-+Angles: 0.436332 0.000000 0.296706
++Angles: 0.418879 0.000000 0.296706
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1

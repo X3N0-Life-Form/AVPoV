@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("The Viper's Sting", -1)
 $Author: X3N0-Life-Form
 $Created: 01/19/08 at 15:37:34
-$Modified: 01/24/14 at 16:48:38
+$Modified: 01/27/14 at 20:48:35
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -5756.162598, 2730.041992, 4046.009521
++Viewer pos: 263.388977, 6007.295410, 1929.475830
 +Viewer orient:
-	-0.969280, -0.000002, 0.245959,
-	-0.095070, 0.922280, -0.374648,
-	-0.226842, -0.386522, -0.893948
+	-0.797730, -0.000003, 0.603015,
+	-0.546675, 0.422062, -0.723195,
+	-0.254507, -0.906567, -0.336693
 
 $Starting wing names: ( "Alpha" "Beta" "Epsilon" )
 $Squadron wing names: ( "Alpha" "Beta" "Epsilon" "Delta" "Gamma" )
@@ -264,14 +264,34 @@ $end_briefing
 
 #Debriefing_info
 
-$Num stages: 4
+$Num stages: 5
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Mission complete" 
+      0 
+   )
+   ( is-goal-false-delay 
+      "Good defence" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Good job pilot, both the cruisers and the sentry guns were destroyed. Although the corvette was able to engage enemy bombers at long range, this proved insufficient to weaken the Shivans enough before initiating their bombing run.
+
+Command estimates that further tests will be required to fully determine the effectiveness of corvette combattants equipped with long range weaponry.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
 
 $Formula: ( is-event-true-delay 
    "Mission complete" 
    0 
 )
 $Multi text
-    XSTR("Good job pilot, both the cruisers and the sentry guns were destroyed. Command considered the deployment of the corvette-sized long range flak to be successful, as the bombers were considerably weakened when entering bombing range.", -1)
+    XSTR("Good job pilot, both the cruisers and the sentry guns were destroyed. Your outstanding flying combined with the corvette's flak guns smashed the Shivan's offensive. However, Command estimates that further tests will be required to fully determine the effectiveness of corvette combattants equipped with long range weaponry.", -1)
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
@@ -580,7 +600,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Unknown Bomb" "Unknown Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -607,7 +627,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Unknown Bomb" "Unknown Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -635,7 +655,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Mega Laser" "Shivan Mega Laser" )
-+Secondary Banks: ( "Unknown Bomb" "Unknown Bomb" "Piranha#Shivan" )
++Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Piranha#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
