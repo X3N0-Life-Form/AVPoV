@@ -51,7 +51,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("With recent victories on the civil war front, the $y GTVA $f Security $f Council has authorized the deployment of two $y Deimos -class corvettes into the nebular theatre of operations. The $f Lysander and the $f Actium crossed the subspace portal in $b Gamma $b Draconis at 2335 hours and joined up with the $f Aquitaine's battle group.", 817)
+ XSTR("With recent victories on the civil war front, the $y GTVA $f Security $f Council has authorized the deployment of two $y Deimos$|-class corvettes into the nebular theatre of operations. The $f Lysander and the $f Actium crossed the subspace portal in $b Gamma $b Draconis at 2335 hours and joined up with the $f Aquitaine's battle group.", 817)
 $end_multi_text
 $voice: SM106_MB_01.wav
 $camera_pos: 0.831794, 2924.856934, -1063.638550
@@ -91,7 +91,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("On their last sortie, $f Epsilon and $f Iota wings encountered two Shivan warships: a $y Rakshasa -class cruiser designated the $r Iblis and a $y Lilith -class cruiser designated the $r Asuras. $w Admiral $w Petrarch has instructed our corvettes to hunt down and destroy these vessels. The $w 107th will provide fighter cover.", 818)
+ XSTR("On their last sortie, $f Epsilon and $f Iota wings encountered two Shivan warships: a $y Rakshasa$|-class cruiser designated the $r Iblis and a $y Lilith$|-class cruiser designated the $r Asuras$|. $w Admiral $w Petrarch has instructed our corvettes to hunt down and destroy these vessels. The $w 107th will provide fighter cover.", 818)
 $end_multi_text
 $voice: SM106_MB_02.wav
 $camera_pos: 9.592987, 10892.172852, -4462.078125
@@ -468,7 +468,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -507,7 +506,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 10 "Lysander" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -533,7 +532,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -574,7 +572,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 8 "Actium" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -597,7 +595,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -613,7 +610,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -786,7 +783,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -831,7 +827,7 @@ $Arrival Cue: ( or
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-warp" )
++Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1273,7 +1269,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1332,7 +1327,7 @@ $Departure Cue: ( destroyed-or-departed-delay
    "Lysander" 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50

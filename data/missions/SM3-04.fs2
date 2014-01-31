@@ -14,17 +14,13 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3000.000000
-
 +Storm: s_active
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -85,7 +81,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The attack must be executed quickly, before the transport escapes. Once its engines are disabled, defend the transport until the recovery team arrives on $f Lambda $f 1. They will dock with the $h Azrael and haul the vessel back to $b Gamma $b Draconis. $f Lambda $f 2 will be standing by in case $f Lambda $f 1 should fail.", 1660)
+ XSTR("The attack must be executed quickly, before the transport escapes. Once its engines are disabled, defend the transport until the recovery team arrives on $f Lambda $f 1$|. They will dock with the $h Azrael and haul the vessel back to $b Gamma $b Draconis$|. $f Lambda $f 2 will be standing by in case $f Lambda $f 1 should fail.", 1660)
 $end_multi_text
 $voice: SM304_MB_02.wav
 $camera_pos: 189.329575, 11623.538086, -7420.385742
@@ -394,16 +390,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "beam-protect-ship" )
++Flags: ( "cargo-known" "protect-ship" "invulnerable" "hidden-from-sensors" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -422,7 +416,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -488,7 +481,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "special-warp" )
++Flags: ( "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -611,7 +604,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -627,7 +619,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -647,7 +639,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -668,7 +659,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1152,7 +1143,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1192,7 +1182,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -1377,6 +1367,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 14
++Persona Index: 5
 
 $Name: Beta 2		;! Object #38
 $Class: GVF Serapis
@@ -1405,6 +1396,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 14
++Persona Index: 5
 
 $Name: Beta 3		;! Object #39
 $Class: GVF Serapis
@@ -1433,6 +1425,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 14
++Persona Index: 6
 
 $Name: Beta 4		;! Object #40
 $Class: GVF Serapis
@@ -1461,6 +1454,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 14
++Persona Index: 6
 
 $Name: Gemini 1		;! Object #41
 $Class: SF Astaroth

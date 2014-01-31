@@ -72,7 +72,7 @@ $pos: 1.766860, -0.000241, 203.453537
 $label: NTT Sunder
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -163,7 +163,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We arrive in $b Sirius in six hours. The $w 185th will be deployed immediately to rendezvous with the $f NTT $f Sunder. Our mission will be to escort the transport back to the $b Regulus jump node. The cargo on board the $f Sunder has been classified well beyond my level of clearance. Let's just say if the $f Sunder goes down, so do we.", 91)
+ XSTR("We arrive in $b Sirius in six hours. The $w 185th will be deployed immediately to rendezvous with the $f NTT $f Sunder$|. Our mission will be to escort the transport back to the $b Regulus jump node. The cargo on board the $f Sunder has been classified well beyond my level of clearance. Let's just say if the $f Sunder goes down, so do we.", 91)
 $end_multi_text
 $voice: LP1-2_MB_02.wav
 $camera_pos: 467.665344, 15248.609375, 97.104233
@@ -184,7 +184,7 @@ $pos: 1.766860, -0.000241, 203.453537
 $label: NTT Sunder
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -296,7 +296,7 @@ $pos: -325.732849, -0.000943, 8640.781250
 $label: NTT Sunder
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -1309,6 +1309,7 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 2
 
 $Name: Zeta 4		;! Object #27
 $Class: GTF Hercules Mark II
@@ -1339,6 +1340,7 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 3
 
 $Name: Sunder		;! Object #28
 $Class: GTT Argo
@@ -1372,7 +1374,7 @@ $Departure Cue: ( <
    1000 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1836,7 +1838,7 @@ $Arrival Cue: ( is-destroyed-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -2068,7 +2070,7 @@ $Departure Cue: ( or
    ( is-destroyed-delay 5 "Sunder" ) 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -2097,7 +2099,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -2404,7 +2406,7 @@ $Departure Cue: ( or
    ( has-departed-delay 0 "Sunder Decoy" ) 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 1		;! note that this is a bitfield!!!
@@ -2443,7 +2445,7 @@ $Departure Cue: ( or
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 257		;! note that this is a bitfield!!!
@@ -2714,7 +2716,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( is-event-true-delay "Not Happy" 8 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 1		;! note that this is a bitfield!!!
@@ -2946,7 +2948,7 @@ $Arrival Cue: ( is-destroyed-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0

@@ -155,7 +155,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("We're going in with a handpicked squad. You'll fly $f Alpha $f 1. I've got $f Alpha $f 2. Two of our top pilots, $w Xinny and $w Zero, will cover $f Alphas $f 3 and $f 4, respectively. Our $y Maras will be equipped with intersystem jump drives so we can use the node.", 215)
+ XSTR("We're going in with a handpicked squad. You'll fly $f Alpha $f 1$|. I've got $f Alpha $f 2$|. Two of our top pilots, $w Xinny and $w Zero, will cover $f Alphas $f 3 and $f 4, respectively. Our $y Maras will be equipped with intersystem jump drives so we can use the node.", 215)
 $end_multi_text
 $voice: LP2-2_MB_03.wav
 $camera_pos: 6821.267578, 10072.799805, 5038.605469
@@ -465,6 +465,7 @@ $Determination: 10
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 12
++Persona Index: 3
 
 $Name: Alpha 3		;! Object #2
 $Class: SF Mara (terrans)
@@ -528,7 +529,7 @@ $Determination: 10
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 12
-+Persona Index: 3
++Persona Index: 1
 
 $Name: Capricorn 1		;! Object #4
 $Class: SF Astaroth
@@ -597,7 +598,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -611,7 +611,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -655,7 +655,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -716,7 +715,7 @@ $Departure Location: Hyperspace
 +Departure delay: 2
 $Departure Cue: ( true ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -736,14 +735,13 @@ $AI Behavior: None
 +AI Class: None
 $Cargo 1:  XSTR("rtuyj64kj", 222)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "scannable" "don't-collide-invisible" )
++Flags: ( "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 10
@@ -770,7 +768,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -797,7 +794,7 @@ $Departure Cue: ( <
    800 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -818,7 +815,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -845,7 +841,7 @@ $Departure Cue: ( <
    800 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1194,7 +1190,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 4" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -1208,7 +1203,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1229,7 +1224,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -1243,7 +1237,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1260,16 +1254,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "don't-collide-invisible" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1287,16 +1279,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "don't-collide-invisible" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 9
@@ -1321,16 +1311,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "don't-collide-invisible" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 8
@@ -1694,7 +1682,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 5" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -1708,7 +1695,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1729,7 +1716,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -1743,7 +1729,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1764,7 +1750,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 6" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: In front of ship
 +Arrival Distance: 500
@@ -1778,7 +1763,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1799,7 +1784,6 @@ $AI Goals: ( goals ( ai-chase "Alpha 4" 50 ) ( ai-chase "Alpha 3" 50 ) ( ai-chas
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Shivan Multi Turret" )
@@ -1834,7 +1818,7 @@ $Arrival Cue: ( <
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1959,7 +1943,6 @@ $AI Goals: ( goals ( ai-chase "Alpha 4" 50 ) ( ai-chase "Alpha 3" 50 ) ( ai-chas
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +AI Class: Coward
@@ -2031,7 +2014,7 @@ $Arrival Cue: ( has-time-elapsed 847 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!

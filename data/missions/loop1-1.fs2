@@ -49,9 +49,9 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("Special Operations Command
 
-You have volunteered for a covert assignment with $w Special $w Operations $w Command $w (SOC), in conjunction with $w Galactic $w Terran-Vasudan $w Intelligence $w (GTVI). 
+You have volunteered for a covert assignment with $w Special $w Operations $w Command $w (SOC), in conjunction with $w Galactic $w Terran-Vasudan $w Intelligence $w (GTVI)$|. 
 
-Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the $y GTVA.", 46)
+Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the $y GTVA$|.", 46)
 $end_multi_text
 $Ani Filename: Cb_loop-a_a.ani
 +Wave Filename: LP1-1_CB_01.wav
@@ -89,7 +89,7 @@ $Ani Filename: Cb_sm2-10_c.ani
 $Stage Text:
  XSTR("A Final Warning
 
-We are working with the full cooperation of $f Vasudan $f Tactical $f Command and the $f Terran $f 6th $f Fleet. The probability that you will engage allied fighters will be minimal. However, should you come under allied attack, you have limited authorization to return fire in self-defense or to complete your mission objectives as defined by $w Lieutenant $w Commander $w Snipes. 
+We are working with the full cooperation of $f Vasudan $f Tactical $f Command and the $f Terran $f 6th $f Fleet$|. The probability that you will engage allied fighters will be minimal. However, should you come under allied attack, you have limited authorization to return fire in self-defense or to complete your mission objectives as defined by $w Lieutenant $w Commander $w Snipes$|. 
 
 Show restraint, and use your judgement.", 50)
 $end_multi_text
@@ -101,7 +101,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("This is $w Lieutenant $w Commander $w Snipes. For all you replacement pilots, welcome to the $w 185th. As you know, $w Admiral $w Koth's defeat in $b Epsilon $b Pegasi has opened the $b Polaris system to allied attack. At 1425 hours, $h GTVA expeditionary forces crossed our jump node blockade. The $h Colossus won't be far behind.", 51)
+ XSTR("This is $w Lieutenant $w Commander $w Snipes$|. For all you replacement pilots, welcome to the $w 185th$|. As you know, $w Admiral $w Koth's defeat in $b Epsilon $b Pegasi has opened the $b Polaris system to allied attack. At 1425 hours, $h GTVA expeditionary forces crossed our jump node blockade. The $h Colossus won't be far behind.", 51)
 $end_multi_text
 $voice: LP1-1_MB_01.wav
 $camera_pos: 1304.300537, 5800.468750, -5592.703613
@@ -476,7 +476,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" "scannable" )
++Flags: ( "escort" "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -648,7 +648,7 @@ $Departure Cue: ( or
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -770,6 +770,7 @@ $Determination: 10
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 3
 
 $Name: Beta 2		;! Object #11
 $Class: GTF Loki
@@ -1092,7 +1093,7 @@ $Departure Cue: ( or
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1238,7 +1239,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" "scannable" )
++Flags: ( "escort" "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1696,7 +1697,11 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Gemini" ) 
-   ( send-message "#Iceni" "High" "Time" ) 
+   ( send-message 
+      "Iceni"
+      "High" 
+      "Time" 
+   )
 )
 +Name: Time
 +Repeat Count: 1
@@ -1780,7 +1785,7 @@ $Formula: ( when
       "Cancer" 
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Get Out" 
    )
@@ -1792,7 +1797,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "Get Out" 9 ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Guard us" 
    )
@@ -1818,7 +1823,7 @@ $Formula: ( when
       6500 
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Asteroids" 
    )

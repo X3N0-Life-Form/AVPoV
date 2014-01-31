@@ -77,7 +77,7 @@ $Ani Filename: cb_sm1-05_c.ani
 $Stage Text:
  XSTR("A Way Home?
 
-By constructing our own portal, we might be able to reopen the $b Sol jump node in $b Delta $b Serpentis. Since the destruction of the $h Lucifer caused the node to collapse thirty-two years ago, $b Earth has remained isolated from the $y GTVA. 
+By constructing our own portal, we might be able to reopen the $b Sol jump node in $b Delta $b Serpentis$|. Since the destruction of the $h Lucifer caused the node to collapse thirty-two years ago, $b Earth has remained isolated from the $y GTVA$|. 
 
 We might also be able to stabilize subspace nodes that are currently too volatile for travel, thus creating routes to systems previously unexplored.", 725)
 $end_multi_text
@@ -87,7 +87,7 @@ $Ani Filename: cb_sm1-05_d.ani
 $Stage Text:
  XSTR("Beyond the Portal
 
-Our military operation will focus on what lies on the other side of the subspace portal. We must determine where the node leads and the extent of the Shivan presence there. Above all, we must prevent the Shivans from returning to $b Gamma $b Draconis. 
+Our military operation will focus on what lies on the other side of the subspace portal. We must determine where the node leads and the extent of the Shivan presence there. Above all, we must prevent the Shivans from returning to $b Gamma $b Draconis$|. 
 
 Because the portal will remain active while the research team studies the technology, our systems are vulnerable to attack.  Allied Command has deemed this an acceptable risk given the potential benefits.", 726)
 $end_multi_text
@@ -324,6 +324,11 @@ $Recommendation text:
     XSTR("Do not jump out unless ordered to do so.", 731)
 $end_multi_text
 
+#Alternate Types:
+$Alt: GTC Fenris
+$Alt: NTC Fenris
+#end
+
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
@@ -377,7 +382,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -411,7 +415,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -730,6 +734,7 @@ $Determination: 10
 
 $Name: Trinity		;! Object #13
 $Class: GTC Fenris
+$Alt: GTC Fenris
 $Team: Unknown
 $Location: 6908.302246, 1717.286011, 17073.541016
 $Orientation:
@@ -742,7 +747,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-play-dead 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 96
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -770,7 +774,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -946,6 +950,7 @@ $IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
++Initial Velocity: 33
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1108,7 +1113,6 @@ $AI Goals: ( goals ( ai-dock "Trinity" "topside docking" "Docking bay 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "" )
@@ -1117,7 +1121,7 @@ $Arrival Cue: ( is-event-true-delay "ac 6" 6 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "escort" )
++Flags: ( "cargo-known" "protect-ship" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -2231,6 +2235,17 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 10
+
+$Formula: ( when 
+   ( is-event-true "bad trinity bad" )
+   ( ship-change-alt-name
+      "NTC Fenris"
+      "Trinity"
+   )
+)
++Name: Your Designation
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( true ) 

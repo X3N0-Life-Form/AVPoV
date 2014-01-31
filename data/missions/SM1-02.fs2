@@ -29,6 +29,7 @@ $end_multi_text
 	-0.677897, -0.000000, -0.735157,
 	0.006244, 0.999964, -0.005758,
 	0.735130, -0.008494, -0.677873
+
 +SquadReassignName: 53rd Hammerheads
 +SquadReassignLogo: hammer1.pcx
 
@@ -434,16 +435,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -460,16 +459,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -486,16 +483,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -512,16 +507,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -538,16 +531,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "red-alert-carry" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -564,16 +555,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -590,16 +579,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -616,16 +603,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -652,7 +637,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "beam-protect-ship" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -702,9 +687,7 @@ $IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -713,7 +696,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -732,9 +715,7 @@ $IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -743,7 +724,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -760,16 +741,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -787,10 +766,8 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
-$Cargo 1:  XSTR("Unable To Scan", 571)
-+Initial Velocity: 33
+$Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -799,7 +776,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -818,9 +795,7 @@ $IFF: IFF 1
 $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -829,7 +804,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -850,7 +825,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-play-dead 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -924,7 +898,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( is-event-true-delay "Subspace" 2 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "no-arrival-warp" "hidden-from-sensors" "red-alert-carry" )
++Flags: ( "cargo-known" "protect-ship" "no-arrival-warp" "hidden-from-sensors" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 1		;! note that this is a bitfield!!!
@@ -945,7 +919,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -955,7 +928,7 @@ $Departure Location: Hyperspace
 +Departure delay: 15
 $Departure Cue: ( true ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 257		;! note that this is a bitfield!!!
@@ -973,16 +946,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Fighter Parts", 573)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "red-alert-carry" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Capricorn 1
@@ -1005,7 +976,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1017,7 +987,7 @@ $Departure Location: Hyperspace
 +Departure delay: 12
 $Departure Cue: ( true ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 257		;! note that this is a bitfield!!!
@@ -1035,16 +1005,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Munitions", 572)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "red-alert-carry" )
++Flags: ( "protect-ship" "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Capricorn 2
@@ -1125,7 +1093,6 @@ $AI Goals: ( goals ( ai-dock "TC 2 5" "cargo dock" "cargo dock" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1140,7 +1107,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 257		;! note that this is a bitfield!!!
@@ -1880,7 +1847,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Beta 1" 
+      "Beta 1" 
       "High" 
       "Unscanable" 
    )

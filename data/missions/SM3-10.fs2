@@ -64,7 +64,7 @@ $start_stage
 $multi_text
  XSTR("Excellent work. The detonation of the $f Bastion's $y Meson bombs created a subspace cataclysm that sealed off the node. You and the $w 70th $w Blue $w Lions deserve the highest commendation.
 
-The Security Council has authorized the deployment of the $f GTD $f Nereid. The destroyer will depart from the $b Vega system and collapse the node in fifteen minutes. We must therefore complete our evacuation of $b Capella by that time. Any ship that remains behind will be trapped with the Shivan armada.
+The Security Council has authorized the deployment of the $f GTD $f Nereid$|. The destroyer will depart from the $b Vega system and collapse the node in fifteen minutes. We must therefore complete our evacuation of $b Capella by that time. Any ship that remains behind will be trapped with the Shivan armada.
 
 Your objective is to defend our convoys as they flee through the $b Vega node. Cargo ships, personnel transports, medical vessels, and the remnants of the allied fleet are now in transit. These convoys are under heavy bomber fire. If we don't provide cover, thousands will die. 
 
@@ -236,7 +236,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 12
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Heavy Flak" )
@@ -260,7 +259,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 130
@@ -286,7 +285,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 32
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Heavy Flak" )
@@ -314,7 +312,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 140
@@ -339,14 +337,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -365,14 +362,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -391,14 +387,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -417,14 +412,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -443,17 +437,21 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 94
+$Special Explosion:
++Special Exp Damage: 475
++Special Exp Blast: 3500
++Special Exp Inner Radius: 500
++Special Exp Outer Radius: 4400
++Special Exp Shockwave Speed: 600
 +Group: 0
 +Score: 10000
 
@@ -470,14 +468,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -497,7 +494,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node high" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 88
 +Initial Hull: 87
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -523,7 +519,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 150
@@ -606,7 +602,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 2" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -654,7 +649,7 @@ $Departure Cue: ( and
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 200
@@ -680,7 +675,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Prometheus S" )
@@ -705,7 +699,7 @@ $Departure Cue: ( <
    411 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 164
@@ -730,7 +724,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -745,7 +738,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 74
@@ -767,7 +760,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -782,7 +774,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 55
@@ -804,7 +796,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -819,7 +810,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 55
@@ -841,7 +832,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -856,7 +846,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 55
@@ -878,7 +868,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -893,7 +882,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 55
@@ -916,7 +905,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump node high" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -948,7 +936,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 44
@@ -973,7 +961,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -994,7 +981,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 65
@@ -1016,7 +1003,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1037,7 +1023,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 55
@@ -1059,7 +1045,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump node low" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1074,7 +1059,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 54
@@ -1093,16 +1078,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Medical Supplies", 148)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Io
@@ -1128,7 +1111,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node low" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1146,7 +1128,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 68
@@ -1166,14 +1148,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Dravis' diary", 1948)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Miranda
@@ -1199,7 +1180,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node low" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1216,7 +1196,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 85
@@ -1235,16 +1215,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Sophron
@@ -1270,7 +1248,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node high" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-main
 +Subsystem: turret02
@@ -1291,7 +1268,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 65
@@ -1313,7 +1290,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node low" 50 ) )
 $Cargo 1:  XSTR("Machine tool parts", 1945)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-main
 +Subsystem: turret02
@@ -1331,7 +1307,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 87
@@ -1354,7 +1330,6 @@ $AI Goals: ( goals ( ai-chase "Thanatos" 50 ) ( ai-chase "Bane" 33 ) ( ai-chase 
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: Turret01
 +Primary Banks: ( "Wraith" )
@@ -1389,7 +1364,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 83
@@ -1410,7 +1385,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints "Jump node low" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1429,7 +1403,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 66
@@ -1454,7 +1428,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1466,7 +1439,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1487,7 +1460,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1506,7 +1478,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1524,16 +1496,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Abbot Laurent's Journal", 1949)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Resheph
@@ -1556,7 +1526,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump node high" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1572,7 +1541,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 86
@@ -1591,16 +1560,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Orenian koi", 1950)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Nephthys
@@ -1623,7 +1590,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1642,7 +1608,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 66
@@ -1661,16 +1627,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Parker's Boots", 1947)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Sesmu
@@ -1693,7 +1657,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Lemnos" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1724,7 +1687,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 190
@@ -1858,7 +1821,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump node high" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1876,7 +1838,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 84
@@ -1898,7 +1860,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1914,7 +1875,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 88
@@ -1936,7 +1897,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Taxation Census Reports", 1946)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-main
 +Subsystem: turret02
@@ -1954,7 +1914,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 85
@@ -1976,7 +1936,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Node right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1997,7 +1956,7 @@ $Departure Cue: ( <
    300 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 67
@@ -2020,7 +1979,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 7" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -2045,7 +2003,7 @@ $Arrival Cue: ( is-destroyed-delay 15 "Thanatos" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 180
@@ -2208,7 +2166,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 8" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -2233,7 +2190,7 @@ $Arrival Cue: ( is-destroyed-delay 15 "Thanatos" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 170
@@ -5314,16 +5271,10 @@ $Ambient light level: 0
 
 $Bitmap List:
 $Sun: SunCapellaA
-+Angles: 0.000000 0.000000 4.625119
++Angles: 0.000000 0.000000 4.625123
 +Scale: 3.200000
-$Sun: SunCapellaC
-+Angles: 0.261799 0.000000 0.750491
-+Scale: 0.050000
-$Sun: SunCapellaD
-+Angles: 0.279252 0.000000 0.698131
-+Scale: 0.050000
 $Starbitmap: NebulG8-Whisp
-+Angles: 0.000000 6.143554 3.700095
++Angles: 0.000000 6.126106 3.682645
 +ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 4
@@ -5449,25 +5400,25 @@ $Starbitmap: PlanetD
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas01
-+Angles: 0.034907 0.000000 4.537852
++Angles: 0.139626 0.000000 4.520403
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas02
-+Angles: 6.248274 0.000000 4.642572
++Angles: 6.230825 0.000000 4.520403
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas03
-+Angles: 0.000000 0.000000 4.712385
++Angles: 0.000000 0.000000 4.660029
 +ScaleX: 1.100000
 +ScaleY: 1.100000
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas01
-+Angles: 0.052360 0.000000 4.747292
++Angles: 0.052360 0.000000 4.590216
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1

@@ -84,7 +84,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -128,7 +128,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -147,7 +147,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("When you hit a target with the $y TAG warhead, the missile's beacon will illuminate the target for allied capital ships within range. All available firepower will be brought to bear for a quick resolution. This technology could be a decisive advantage for the $y GTVA. In this exercise, we will test the prototype $y TAG-A.", 1085)
+ XSTR("When you hit a target with the $y TAG warhead, the missile's beacon will illuminate the target for allied capital ships within range. All available firepower will be brought to bear for a quick resolution. This technology could be a decisive advantage for the $y GTVA$|. In this exercise, we will test the prototype $y TAG-A$|.", 1085)
 $end_multi_text
 $voice: SM202_MB_03.wav
 $camera_pos: -5.285526, 4645.368652, 11978.132813
@@ -168,7 +168,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -187,7 +187,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. The $f Lucidity will provide $y AWACS coverage.  ", 1086)
+ XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAG$|s. Stay within 3000 meters of the corvette for maximum effectiveness. The $f Lucidity will provide $y AWACS coverage.  ", 1086)
 $end_multi_text
 $voice: SM202_MB_04.wav
 $camera_pos: 1788.531738, 4645.368652, 11976.029297
@@ -212,7 +212,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -229,14 +229,14 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 1371.518677, 478.368774, 15361.457031
 $label: GTA Lucidity
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -255,7 +255,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAGs. Stay within 3000 meters of the corvette for maximum effectiveness. ", 1087)
+ XSTR("Command has deployed scout wings to Shivan positions. They will lure targets within range of our guns. Once the enemy approaches, get in behind the target quickly and launch your $y TAG$|s. Stay within 3000 meters of the corvette for maximum effectiveness. ", 1087)
 $end_multi_text
 $voice: SM202_MB_05.wav
 $camera_pos: 1788.531738, 4645.368652, 11976.029297
@@ -280,7 +280,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -332,7 +332,7 @@ $pos: 367.156799, 32.771877, 14600.122070
 $label: GTCv Warspite
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -588,7 +588,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -604,7 +603,7 @@ $Arrival Cue: ( is-previous-goal-true
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -626,7 +625,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 10
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +AI Class: General
@@ -705,7 +703,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 4
@@ -1693,7 +1691,7 @@ $Formula: ( when
    ( true ) 
    ( ship-no-guardian "Scout 1" ) 
    ( send-message-list 
-      "#Scout 1" 
+      "Scout 1" 
       "High" 
       "SCT- Pass la buck" 
       100 
@@ -1749,7 +1747,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 9 "Scout 3" ) 
    ( send-message 
-      "#Scout 3" 
+      "Scout 3" 
       "High" 
       "S3- Storm" 
    )
@@ -1778,11 +1776,11 @@ $Formula: ( when
       )
    )
    ( send-message-list 
-      "#Warspite" 
+      "Warspite" 
       "High" 
       "WAR- Trouble" 
       0 
-      "#Lucidity" 
+      "Lucidity" 
       "High" 
       "LUCID- Trouble" 
       10700 
@@ -1828,11 +1826,11 @@ $Formula: ( when
       )
    )
    ( send-message-list 
-      "#Warspite" 
+      "Warspite" 
       "High" 
       "WAR- Trouble" 
       0 
-      "#Lucidity" 
+      "Lucidity" 
       "High" 
       "LUCID- Trouble" 
       9000 
@@ -1971,7 +1969,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Warspite" ) 20 ) 
    ( send-message 
-      "#Warspite" 
+      "Warspite" 
       "High" 
       "WAR- Hurt" 
    )
@@ -2447,7 +2445,7 @@ $end_multi_text
 
 $Name: Com- Classified
 $Team: -1
-$MessageNew:  XSTR("All units, you will disregard Kappa 3's transmission. The communication record of this sortie has been classified level $b Phi.  ", 1125)
+$MessageNew:  XSTR("All units, you will disregard Kappa 3's transmission. The communication record of this sortie has been classified level Phi.  ", 1125)
 $end_multi_text
 +Persona: Terran Command
 +AVI Name: Head-CM2

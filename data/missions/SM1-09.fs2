@@ -49,7 +49,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("The $w 242nd will escort a supply convoy as it makes its rendezvous with the $f GTVA $f Colossus. As we prepare the $f Colossus for the allied counterattack, we must handle the logistics of supplying and maintaining this warship. Convoys of transports, gas miners, and freighters have been deployed for this purpose.", 943)
+ XSTR("The $w 242nd will escort a supply convoy as it makes its rendezvous with the $f GTVA $f Colossus$|. As we prepare the $f Colossus for the allied counterattack, we must handle the logistics of supplying and maintaining this warship. Convoys of transports, gas miners, and freighters have been deployed for this purpose.", 943)
 $end_multi_text
 $voice: SM109_MB_01.wav
 $camera_pos: 1441.968506, 35.682564, 2669.299805
@@ -70,7 +70,7 @@ $pos: 298.332672, -15.324831, 2652.656494
 $label: GTFr Parracombe
 +id: 4
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -82,7 +82,7 @@ $pos: 291.010529, -90.168144, 2379.147217
 $label: GTG Avila
 +id: 5
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -94,7 +94,7 @@ $pos: 282.016388, 59.957100, 2214.645020
 $label: GVG Jooyun
 +id: 6
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -122,7 +122,7 @@ $pos: -390.068878, 56.527981, 2529.532471
 $label: GTFr Parracombe
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -134,7 +134,7 @@ $pos: 291.010712, -193.193192, 2467.817383
 $label: GTG Avila
 +id: 5
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -146,7 +146,7 @@ $pos: 282.016388, 59.957100, 2214.645020
 $label: GVG Jooyun
 +id: 6
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -163,14 +163,14 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 6
+$type: 31
 $team: Friendly
 $class: GTVA Colossus
 $pos: -341.618774, 441.265167, 5225.889648
 $label: Colossus
 +id: 8
-$hlight: 0
-$mirror: 0
+$hlight: 1
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -189,7 +189,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("You will be leading $f Alpha wing, the main escort component. Your mission is to defend the $f GTFr $f Parracombe, the $f GTG $f Avila, and the $f GVG $f Jooyun. The $f Avila and $f Jooyun are mining vessels designed to collect fuel from gas giants for the reactors that power the $f Colossus.", 945)
+ XSTR("You will be leading $f Alpha wing, the main escort component. Your mission is to defend the $f GTFr $f Parracombe, the $f GTG $f Avila, and the $f GVG $f Jooyun$|. The $f Avila and $f Jooyun are mining vessels designed to collect fuel from gas giants for the reactors that power the $f Colossus$|.", 945)
 $end_multi_text
 $voice: SM109_MB_03.wav
 $camera_pos: 3046.262695, 45.531292, 3538.497314
@@ -210,7 +210,7 @@ $pos: -390.068878, 56.527981, 2529.532471
 $label: GTFr Parracombe
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -222,7 +222,7 @@ $pos: 291.010712, -193.193192, 2467.817383
 $label: GTG Avila
 +id: 5
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -234,7 +234,7 @@ $pos: 282.016388, 59.957100, 2214.645020
 $label: GVG Jooyun
 +id: 6
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -251,14 +251,14 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 6
+$type: 31
 $team: Friendly
 $class: GTVA Colossus
 $pos: -341.618774, 441.265167, 5225.889648
 $label: Colossus
 +id: 8
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -267,7 +267,7 @@ $type: 1
 $team: Friendly
 $class: GTF Perseus
 $pos: -75.162086, 361.856842, 2944.621582
-$label: Alpha 1
+$label: Alpha Wing
 +id: 9
 $hlight: 1
 $mirror: 0
@@ -289,7 +289,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The Vasudans have dispatched a wing of $y Serapis fighters to guard the $f Jooyun. You do not have command over this unit. However, the $w 242nd $w Suicide $w Kings are responsible for the $f Jooyun's safety. Eighteen months of civil war are beginning to strain Terran-Vasudan relations, especially in contested systems. See to it the $f Jooyun survives.", 946)
+ XSTR("The Vasudans have dispatched a wing of $y Serapis fighters to guard the $f Jooyun$|. You do not have command over this unit. However, the $w 242nd $w Suicide $w Kings are responsible for the $f Jooyun's safety. Eighteen months of civil war are beginning to strain Terran-Vasudan relations, especially in contested systems. See to it the $f Jooyun survives.", 946)
 $end_multi_text
 $voice: SM109_MB_04.wav
 $camera_pos: 3046.262695, 45.531292, 3538.497314
@@ -310,7 +310,7 @@ $pos: -390.068878, 56.527981, 2529.532471
 $label: GTFr Parracombe
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -322,7 +322,7 @@ $pos: 291.010712, -193.193192, 2467.817383
 $label: GTG Avila
 +id: 5
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -334,7 +334,7 @@ $pos: 282.016388, 59.957100, 2214.645020
 $label: GVG Jooyun
 +id: 6
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -351,14 +351,14 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 6
+$type: 31
 $team: Friendly
 $class: GTVA Colossus
 $pos: -341.618774, 441.265167, 5225.889648
 $label: Colossus
 +id: 8
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -367,7 +367,7 @@ $type: 1
 $team: Friendly
 $class: GTF Perseus
 $pos: -75.162086, 361.856842, 2944.621582
-$label: Alpha 1
+$label: Alpha Wing
 +id: 9
 $hlight: 0
 $mirror: 0
@@ -379,7 +379,7 @@ $type: 1
 $team: Friendly
 $class: GVF Serapis
 $pos: 521.605957, 314.458069, 2331.578369
-$label: Kappa
+$label: Kappa Wing
 +id: 10
 $hlight: 1
 $mirror: 0
@@ -747,7 +747,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jooyun point" 50 ) )
 $Cargo 1:  XSTR("Fuel", 958)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -759,7 +758,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 6
@@ -782,7 +781,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Avila Point" 50 ) )
 $Cargo 1:  XSTR("Fuel", 958)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -794,7 +792,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -818,7 +816,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Parra point" 50 ) )
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -827,7 +824,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -847,14 +844,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Parracombe
@@ -966,7 +962,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1043,7 +1038,7 @@ $Arrival Cue: ( <
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1063,7 +1058,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump point patrol" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1096,7 +1090,7 @@ $Arrival Cue: ( is-event-true-delay "Trigger II" 0 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1194,7 +1188,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1205,7 +1198,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1224,7 +1217,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1235,7 +1227,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1254,7 +1246,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1263,7 +1254,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1282,7 +1273,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1293,7 +1283,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1323,7 +1313,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1342,7 +1332,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1351,7 +1340,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1370,7 +1359,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1381,7 +1369,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1400,7 +1388,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1411,7 +1398,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1430,7 +1417,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1439,7 +1425,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 1
@@ -1458,7 +1444,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1469,7 +1454,7 @@ $Arrival Cue: ( is-event-true-delay "Presto" 0 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 2
@@ -1488,7 +1473,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 100
@@ -1499,7 +1483,7 @@ $Arrival Cue: ( is-event-true-delay "Presto" 0 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 2
@@ -1520,7 +1504,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 5" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1539,7 +1522,7 @@ $Arrival Cue: ( is-event-true-delay "Trigger II" 0 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -2179,7 +2162,6 @@ $AI Goals: ( goals ( ai-dock "Jooyun" "topside docking" "blahblah" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Arrival Location: Hyperspace
@@ -2187,7 +2169,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -2208,7 +2190,6 @@ $AI Goals: ( goals ( ai-dock "Avila" "topside docking" "blahblah" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Arrival Location: Hyperspace
@@ -2216,7 +2197,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!

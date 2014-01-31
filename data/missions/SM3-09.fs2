@@ -71,7 +71,7 @@ $pos: 5119.070801, -279.011261, 299.356476
 $label: GTD Bastion
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -90,7 +90,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The task force defending the $f Bastion has been decimated. Three ships remain: the $f Templar, the $f Malta, and the $f Ertanax. All are $y Aeolus -class cruisers. The Shivans continue to send wave after wave of fighters and bombers. Only a handful of the $f Bastion's original fighter complement have survived the onslaught.", 1912)
+ XSTR("The task force defending the $f Bastion has been decimated. Three ships remain: the $f Templar, the $f Malta, and the $f Ertanax. All are $y Aeolus$|-class cruisers. The Shivans continue to send wave after wave of fighters and bombers. Only a handful of the $f Bastion's original fighter complement have survived the onslaught.", 1912)
 $end_multi_text
 $voice: SM309_MB_02.wav
 $camera_pos: -8557.589844, 7217.096680, 4393.450684
@@ -111,7 +111,7 @@ $pos: 5119.070801, -279.011261, 299.356476
 $label: GTD Bastion
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -166,7 +166,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$f Alpha, $f Delta, and $f Beta wings will fly heavy intercept. Your mission is to take out enemy bombers before they close within targeting distance. You'll be armed with the $y Trebuchet missile, which has an effective range of four kilometers. $f Gamma wing will fly the $y Perseus. Their role will be to engage enemy fighters.", 1913)
+ XSTR("$f Alpha, $f Delta, and $f Beta wings will fly heavy intercept. Your mission is to take out enemy bombers before they close within targeting distance. You'll be armed with the $y Trebuchet missile, which has an effective range of four kilometers. $f Gamma wing will fly the $y Perseus$|. Their role will be to engage enemy fighters.", 1913)
 $end_multi_text
 $voice: SM309_MB_03.wav
 $camera_pos: 5042.188965, 11197.233398, -2916.219238
@@ -187,7 +187,7 @@ $pos: 5119.070801, -279.011261, 299.356476
 $label: GTD Bastion
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -254,7 +254,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The majority of the fleet is fending off a massive attack at the $b Vega node. Thousands of civilians await evacuation and the enemy continues to flood in from $b Gamma $b Draconis. We will not get a second chance to pull this off. If we fail here, we unleash the Second Shivan War. We must get the $f Bastion through at any cost.", 1914)
+ XSTR("The majority of the fleet is fending off a massive attack at the $b Vega node. Thousands of civilians await evacuation and the enemy continues to flood in from $b Gamma $b Draconis$|. We will not get a second chance to pull this off. If we fail here, we unleash the Second Shivan War. We must get the $f Bastion through at any cost.", 1914)
 $end_multi_text
 $voice: SM309_MB_04.wav
 $camera_pos: 5042.188965, 11197.233398, -2916.219238
@@ -275,7 +275,7 @@ $pos: 5119.070801, -279.011261, 299.356476
 $label: GTD Bastion
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -561,9 +561,7 @@ $Determination: 10
 +Persona Index: 2
 
 $Name: Bastion		;! Object #4
-$Class: GTD Orion#2 (Bastion)
-$Alt: Bastion
-
+$Class: GTD Orion
 $Team: Friendly
 $Location: 5119.070801, -279.011261, 299.356476
 $Orientation:
@@ -576,7 +574,6 @@ $AI Goals: ( goals ( ai-waypoints "Bastion Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 78
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 $Damage: 24
@@ -626,7 +623,7 @@ $Departure Cue: ( <
    640 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "escort" "red-alert-carry" )
++Flags: ( "cargo-known" "protect-ship" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -634,7 +631,7 @@ $Determination: 10
 +Group: 0
 +Score: 1000
 $Texture Replace:
-+old: nameplate
++old: capital01-05
 +new: GTD_Bastion
 
 $Name: Beta 1		;! Object #5
@@ -902,7 +899,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Malta Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 69
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Heavy Flak" )
@@ -923,7 +919,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "red-alert-carry" )
++Flags: ( "cargo-known" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 1
@@ -948,7 +944,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Ertanax Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 32
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Heavy Flak" )
@@ -969,7 +964,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "red-alert-carry" )
++Flags: ( "cargo-known" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
@@ -983,7 +978,7 @@ $Texture Replace:
 $Name: SJD Sathanas 15		;! Object #15
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -346558.250000, -4996.616211, 200271.843750
+$Location: -346558.250000, 95004.616211, 400271.843750
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -993,14 +988,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1009,7 +1003,7 @@ $Determination: 10
 $Name: SJD Sathanas 16		;! Object #16
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -348213.750000, -4996.615723, 191977.593750
+$Location: -348213.750000, 95004.615723, 391977.593750
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1019,14 +1013,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1035,7 +1028,7 @@ $Determination: 10
 $Name: SJD Sathanas 17		;! Object #17
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -337326.687500, -4996.616211, 183012.843750
+$Location: -337326.687500, 95004.616211, 383012.843750
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1045,14 +1038,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1061,7 +1053,7 @@ $Determination: 10
 $Name: SJD Sathanas 18		;! Object #18
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -385582.687500, 216.317627, 203014.109375
+$Location: -385582.687500, 100216.317627, 403014.109375
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1071,14 +1063,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1087,7 +1078,7 @@ $Determination: 10
 $Name: SJD Sathanas 19		;! Object #19
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -388239.312500, 216.318115, 196011.093750
+$Location: -388239.312500, 100216.318115, 396011.093750
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1097,14 +1088,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1113,7 +1103,7 @@ $Determination: 10
 $Name: SJD Sathanas 20		;! Object #20
 $Class: SJD Sathanas
 $Team: Hostile
-$Location: -373079.750000, 3550.367676, 199012.593750
+$Location: -373079.750000, 103550.367676, 399012.593750
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1123,14 +1113,13 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "ignore-count" "protect-ship" "no-shields" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
++Flags: ( "ignore-count" "protect-ship" "invulnerable" "hidden-from-sensors" "no-dynamic" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1499,7 +1488,6 @@ $AI Goals: ( goals ( ai-waypoints "Templar Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 88
 +Initial Hull: 87
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -1520,7 +1508,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "red-alert-carry" )
++Flags: ( "cargo-known" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -2947,7 +2935,7 @@ $Formula: ( when
       250 
    )
    ( send-message 
-      "#Bastion" 
+      "Bastion" 
       "High" 
       "COM- Time lock 1" 
    )
@@ -3439,15 +3427,6 @@ $Bitmap List:
 $Sun: SunCapellaA
 +Angles: 0.261799 0.000000 0.750491
 +Scale: 2.000000
-$Sun: SunCapellaC
-+Angles: 6.108648 0.000000 3.892081
-+Scale: 0.050000
-$Sun: SunCapellaB
-+Angles: 0.279252 0.000000 0.698131
-+Scale: 0.500000
-$Sun: SunCapellaD
-+Angles: 6.108648 0.000000 3.874628
-+Scale: 0.050000
 $Starbitmap: NebulG8-Whisp
 +Angles: 0.000000 6.143554 3.700095
 +ScaleX: 4.000000
@@ -3575,19 +3554,19 @@ $Starbitmap: PlanetD
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas01
-+Angles: 0.209439 0.000000 0.750491
++Angles: 0.191986 0.000000 0.628319
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas02
-+Angles: 0.331612 0.000000 0.767944
++Angles: 0.314159 0.000000 0.680678
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: SunSathanas03
-+Angles: 0.279252 0.017453 0.907570
++Angles: 0.261799 0.000000 0.785398
 +ScaleX: 1.100000
 +ScaleY: 1.100000
 +DivX: 1

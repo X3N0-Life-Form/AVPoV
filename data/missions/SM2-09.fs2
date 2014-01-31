@@ -79,7 +79,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("In the first phase, you will attack the $h SC $h Rephaim, a $y Rakshasa -class warship. Our recon flights have located the $h Rephaim near the allied secure zone. The cruiser is accompanied by two wings comprised of $y Mara -class fighters. Our analysis of the $h Rephaim's flight pattern suggests the vessel is patrolling the region.", 1389)
+ XSTR("In the first phase, you will attack the $h SC $h Rephaim, a $y Rakshasa$|-class warship. Our recon flights have located the $h Rephaim near the allied secure zone. The cruiser is accompanied by two wings comprised of $y Mara -class fighters. Our analysis of the $h Rephaim's flight pattern suggests the vessel is patrolling the region.", 1389)
 $end_multi_text
 $voice: SM209_MB_02.wav
 $camera_pos: -2281.261963, 757.092896, 207.137054
@@ -387,7 +387,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02
@@ -429,7 +428,7 @@ $Departure Cue: ( is-event-true-delay
    10 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 1		;! note that this is a bitfield!!!
@@ -448,7 +447,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
@@ -487,7 +485,7 @@ $Arrival Cue: ( is-destroyed-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 95
@@ -869,7 +867,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -893,7 +890,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -914,7 +911,6 @@ $AI Goals: ( goals ( ai-chase "Thutmose" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -936,7 +932,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
@@ -995,7 +991,7 @@ $Departure Cue: ( is-event-true-delay
    6 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98

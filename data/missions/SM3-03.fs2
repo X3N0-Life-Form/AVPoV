@@ -14,17 +14,13 @@ $Mission Desc:
 $end_multi_text
 
 +Game Type Flags: 1
-
 +Flags: 4
 +NebAwacs: 3000.000000
-
 +Storm: s_standard
-
-
++Red Alert: 0
++Scramble: 0
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
 +Player Entry Delay:
@@ -55,7 +51,7 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("Colossus Triumphant
 
-At 0345 hours, the $f GTVA $f Colossus destroyed the Shivan juggernaut $h Sathanas near the $b Gamma $b Draconis jump node in $b Capella. This victory proves without a doubt our technological superiority over our $y Great $y War nemesis. For the second time, the Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
+At 0345 hours, the $f GTVA $f Colossus destroyed the Shivan juggernaut $h Sathanas near the $b Gamma $b Draconis jump node in $b Capella$|. This victory proves without a doubt our technological superiority over our $y Great $y War nemesis. For the second time, the Alliance defeated a species which has annihilated entire civilizations across this galaxy. 
 
 With the $f Colossus, we will have nothing more to fear.", 1594)
 $end_multi_text
@@ -73,7 +69,7 @@ $Ani Filename: cb_sm3-03_b.ani
 $Stage Text:
  XSTR("Chasing the Iceni
 
-With the immediate Shivan threat neutralized, we must now focus on capturing $w Admiral $w Bosch. Recon units are scouring the nebula for any sign of his command ship. The $f Psamtik will lead a task force assigned to recover the $h Iceni once its position has been determined.
+With the immediate Shivan threat neutralized, we must now focus on capturing $w Admiral $w Bosch$|. Recon units are scouring the nebula for any sign of his command ship. The $f Psamtik will lead a task force assigned to recover the $h Iceni once its position has been determined.
 
 Command has disclosed new information concerning the $h NTF's secret agenda.", 1596)
 $end_multi_text
@@ -107,7 +103,7 @@ $Ani Filename: cb_sm1-01_b.ani
 $Stage Text:
  XSTR("Circe
 
-You are now authorized to use the $y GTW-19 $y Circe. Derived from advanced EM weaponry, the $y Circe disrupts shield systems by directing a barrage of fluctuating EM harmonics on the target. This energy is completely ineffective against armor plating or insulated subsystems. For this reason, the $y Circe is best paired with a weapon such as the $y Maxim or the $y Prometheus, which inflict heavy hull damage.", 1600)
+You are now authorized to use the $y GTW-19 $y Circe$|. Derived from advanced EM weaponry, the $y Circe disrupts shield systems by directing a barrage of fluctuating EM harmonics on the target. This energy is completely ineffective against armor plating or insulated subsystems. For this reason, the $y Circe is best paired with a weapon such as the $y Maxim or the $y Prometheus, which inflict heavy hull damage.", 1600)
 $end_multi_text
 $Ani Filename: Tech_GTW-Circe.ani
 +Wave Filename: SM303_CB_07.wav
@@ -117,7 +113,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("Reconnaissance has located the $h NTF $h Iceni. $w Bosch has made contact with the Shivans a second time. An $y Azrael -class transport is currently docked with the vessel. A second transport appears to be waiting nearby. We do not know if the Shivans are boarding the $h Iceni, or if $w Bosch and his followers are boarding the transports.", 1601)
+ XSTR("Reconnaissance has located the $h NTF $h Iceni$|. $w Bosch has made contact with the Shivans a second time. An $y Azrael$|-class transport is currently docked with the vessel. A second transport appears to be waiting nearby. We do not know if the Shivans are boarding the $h Iceni, or if $w Bosch and his followers are boarding the transports.", 1601)
 $end_multi_text
 $voice: SM303_MB_01.wav
 $camera_pos: 775.416016, 3204.856445, -3271.545410
@@ -157,7 +153,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our objective is to capture the $h Iceni and the $b ETAK technology. Two Shivan cruisers are guarding the vessel, the $h Azmedaj and the $h Sammael. Once the cruisers have been destroyed, we will deploy a Special Forces unit to board and secure the rebel command ship. Your second objective will be to defend our transport, the $f GTT $f Qeb.", 1602)
+ XSTR("Our objective is to capture the $h Iceni and the $b ETAK technology. Two Shivan cruisers are guarding the vessel, the $h Azmedaj and the $h Sammael. Once the cruisers have been destroyed, we will deploy a Special Forces unit to board and secure the rebel command ship. Your second objective will be to defend our transport, the $f GTT $f Qeb$|.", 1602)
 $end_multi_text
 $voice: SM303_MB_02.wav
 $camera_pos: 775.416016, 3690.816650, -4113.252441
@@ -550,7 +546,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -565,7 +560,7 @@ $Departure Cue: ( has-undocked-delay
    10 
 )
 $Determination: 10
-+Flags: ( "no-shields" "red-alert-carry" )
++Flags: ( "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -585,7 +580,6 @@ $AI Goals: ( goals ( ai-play-dead 89 ) )
 $Cargo 1:  XSTR("Survivors", 1610)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02
@@ -617,7 +611,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" )
++Flags: ( "cargo-known" "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Azrael
@@ -640,7 +634,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -659,7 +652,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -678,7 +671,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -701,7 +693,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -721,7 +713,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Iceni" "Frontside dock" "RightDock" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -764,7 +755,7 @@ $Departure Cue: ( or
    ( is-destroyed-delay 3 "Iceni" ) 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -2127,7 +2118,7 @@ $Formula: ( when
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Iceni" 
    )
 )
@@ -2179,7 +2170,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Extraction" 
    )
@@ -2661,7 +2652,7 @@ $Formula: ( when
       )
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Iceni Hurt" 
    )
@@ -2695,7 +2686,7 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Iceni" ) 
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "Normal" 
       "Out Of Time" 
    )
@@ -2725,7 +2716,7 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Iceni" ) 
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "Normal" 
       "Secret To Hell" 
    )
@@ -2772,7 +2763,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Killed" 
    )
@@ -2798,7 +2789,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Out Of Here Now" 
    )
@@ -2824,7 +2815,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Listen To Me" 
    )
@@ -2850,7 +2841,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "No Can Do" 
    )
@@ -2917,7 +2908,7 @@ $Formula: ( when
       )
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "No Time" 
    )
@@ -2985,7 +2976,7 @@ $Formula: ( when
       8 
    )
    ( send-message 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Slaughterhouse" 
    )

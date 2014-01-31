@@ -48,9 +48,9 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("Shivan Attack
 
-To the officers and crew of the $f GTD $f Aquitaine, this is $w Admiral $w Petrarch. At 0115 hours, we received a transmission from $f 3rd $f Fleet $f Headquarters. A Shivan cruiser and three fighter wings ambushed and destroyed the $f GTC $f Vigilant as it patrolled the $b Gamma $b Draconis jump node in the $b Capella system. 
+To the officers and crew of the $f GTD $f Aquitaine, this is $w Admiral $w Petrarch$|. At 0115 hours, we received a transmission from $f 3rd $f Fleet $f Headquarters. A Shivan cruiser and three fighter wings ambushed and destroyed the $f GTC $f Vigilant as it patrolled the $b Gamma $b Draconis jump node in the $b Capella system. 
 
-Command deployed the $f GTD $f Carthage and $f GVCv $f Dahshor. Though these vessels neutralized the immediate threat, all allied units are now in a state of enhanced vigilance.", 667)
+Command deployed the $f GTD $f Carthage and $f GVCv $f Dahshor$|. Though these vessels neutralized the immediate threat, all allied units are now in a state of enhanced vigilance.", 667)
 $end_multi_text
 $Ani Filename: cb_sm1-04_a.ani
 +Wave Filename: SM104_CB_01.wav
@@ -60,7 +60,7 @@ $Stage Text:
 
 Command has ordered the $f Aquitaine to spearhead the operation in $b Gamma $b Draconis as we investigate the origin and extent of this incursion.
 
-$b Gamma $b Draconis is a remote, uninhabited system discovered shortly before the outbreak of the $y Great $y War. The system has no planets and no viable resources. The $f GTSC $f Erikson visited the system 15 years ago and reported nothing out of the ordinary.", 668)
+$b Gamma $b Draconis is a remote, uninhabited system discovered shortly before the outbreak of the $y Great $y War$|. The system has no planets and no viable resources. The $f GTSC $f Erikson visited the system 15 years ago and reported nothing out of the ordinary.", 668)
 $end_multi_text
 $Ani Filename: cb_sm1-04_b.ani
 +Wave Filename: SM104_CB_02.wav
@@ -78,7 +78,7 @@ $Ani Filename: cb_sm1-04_c.ani
 $Stage Text:
  XSTR("The Shivans
 
-The Shivan vessels that destroyed the $f Vigilant were not of any class encountered in the Great War. The light cruiser, designated $h Rakshasa, and the fighters, designated $y Mara, have been added to your on-board database.
+The Shivan vessels that destroyed the $f Vigilant were not of any class encountered in the Great War. The light cruiser, designated $Y Rakshasa, and the fighters, designated $y Mara, have been added to your on-board database.
 
 This is our first contact with this species in over three decades. Our objectives are clear. We must secure $b Gamma $b Draconis or face annihilation a second time.", 670)
 $end_multi_text
@@ -90,7 +90,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("This is $w Lieutenant $w Samsa, squadron leader of the $w 107th $w Ravens. Here's the situation. The $f GTD $f Aquitaine entered $b Gamma $b Draconis at 1640. The flagship will defend the $b Capella node as we advance to secure the system. Recon discovered a Shivan supply depot near the subspace portal, and this will be our target.", 671)
+ XSTR("This is $w Lieutenant $w Samsa, squadron leader of the $w 107th $w Ravens$|. Here's the situation. The $f GTD $f Aquitaine entered $b Gamma $b Draconis at 1640. The flagship will defend the $b Capella node as we advance to secure the system. Recon discovered a Shivan supply depot near the subspace portal, and this will be our target.", 671)
 $end_multi_text
 $voice: SM104_MB_01.wav
 $camera_pos: -86.083946, 6764.244141, -6756.065430
@@ -118,7 +118,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Command believes the Shivans are preparing for a more aggressive attack on $b Capella. The $h SC $h Behemoth, a $y Rakshasa -class cruiser, guards the depot with a wing of $y Mara fighters. Enemy freighters are entering the system, dropping their cargo, and departing through the portal. Your mission, pilot, is to execute a clean sweep of the area.", 672)
+ XSTR("Command believes the Shivans are preparing for a more aggressive attack on $b Capella$|. The $h SC $h Behemoth, a $y Rakshasa$|-class cruiser, guards the depot with a wing of $y Mara fighters. Enemy freighters are entering the system, dropping their cargo, and departing through the portal. Your mission, pilot, is to execute a clean sweep of the area.", 672)
 $end_multi_text
 $voice: SM104_MB_02.wav
 $camera_pos: -1518.932495, 4444.805176, -2760.300781
@@ -151,7 +151,7 @@ $pos: -2017.270630, 0.004233, -283.093781
 $label: Behemoth
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -170,7 +170,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your primary target will be the $y Mara $h fighters. Once the escorts are down, destroy the $h Behemoth and any freighters in the vicinity. You'll need to hold down the fort until we deploy the $f Carthage and $f Dahshor. After you secure the area, we'll send wings $f Delta and $f Epsilon to relieve you.", 673)
+ XSTR("Your primary target will be the $y Mara $h fighters. Once the escorts are down, destroy the $h Behemoth and any freighters in the vicinity. You'll need to hold down the fort until we deploy the $f Carthage and $f Dahshor$|. After you secure the area, we'll send wings $f Delta and $f Epsilon to relieve you.", 673)
 $end_multi_text
 $voice: SM104_MB_03.wav
 $camera_pos: -1944.808105, 3833.736328, -1988.454834
@@ -210,7 +210,7 @@ $end_icon
 $start_icon
 $type: 1
 $team: Friendly
-$class: GTF Ulysses
+$class: GTF Myrmidon
 $pos: -2077.750977, 774.900635, -142.273376
 $label: Delta
 +id: 5
@@ -471,7 +471,6 @@ $AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -494,7 +493,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -513,16 +512,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Warheads", 680)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -539,16 +536,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Warheads", 680)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -565,16 +560,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Shielding Components", 681)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -591,16 +584,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Guidance Systems", 682)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -617,16 +608,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Sensor Arrays", 683)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "protect-ship" "no-shields" )
++Flags: ( "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -645,7 +634,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Shivan Personnel", 684)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +AI Class: Lieutenant
@@ -656,7 +644,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 20
@@ -678,7 +666,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Sentry Guns", 685)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -698,7 +685,7 @@ $Departure Cue: ( or
    ( is-destroyed-delay 0 "SC 5 11" ) 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" "special-warp" )
++Flags: ( "escort" "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 20
@@ -717,16 +704,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Propulsion Units", 686)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Maul
@@ -749,7 +734,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Sentry Guns", 685)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: a-turret01
 +Subsystem: a-turret02
@@ -775,7 +759,7 @@ $Departure Cue: ( or
    ( is-destroyed-delay 0 "SAC 2 14" ) 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" "special-warp" )
++Flags: ( "escort" "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 20
@@ -794,16 +778,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Sensor Arrays", 683)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Neqael
@@ -825,7 +807,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 89 ) )
 $Cargo 1:  XSTR("Sentry Guns", 685)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -842,7 +823,7 @@ $Arrival Cue: ( or
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" "special-warp" )
++Flags: ( "escort" "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 20
@@ -862,14 +843,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Missiles", 687)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Baraqel
@@ -1052,7 +1032,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Primary Banks: ( "Standard Flak" )
@@ -1082,7 +1061,7 @@ $Arrival Cue: ( is-event-true-delay "Subspace" 8 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -1107,7 +1086,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 4" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1136,7 +1114,7 @@ $Arrival Cue: ( has-arrived-delay 3 "Carthage" )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 8 "Carthage" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -1468,7 +1446,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1491,7 +1468,7 @@ $Arrival Cue: ( percent-ships-destroyed
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" "special-warp" )
++Flags: ( "escort" "special-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50
@@ -1862,16 +1839,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" )
++Flags: ( "cargo-known" "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -2327,13 +2302,13 @@ $Formula: ( when
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Carthage" 
    )
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Dahshor" 
    )
 )

@@ -51,7 +51,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("$f Alpha $f 1, you will pilot the new $y Ptah -class stealth fighter. Your mission is to scan the subsystems of the $h Sathanas $h Juggernaut. Allied Intelligence has requested data regarding the navigation, weapons, sensors, and communications subsystems of the warship.", 1345)
+ XSTR("$f Alpha $f 1, you will pilot the new $y Ptah$|-class stealth fighter. Your mission is to scan the subsystems of the $h Sathanas $h Juggernaut$|. Allied Intelligence has requested data regarding the navigation, weapons, sensors, and communications subsystems of the warship.", 1345)
 $end_multi_text
 $voice: SM208_MB_01.wav
 $camera_pos: 0.157497, 603.797058, -584.848999
@@ -401,7 +401,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -473,7 +472,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( has-time-elapsed 346 ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" "scannable" )
++Flags: ( "escort" "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -780,7 +779,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -820,7 +818,7 @@ $Departure Cue: ( and
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99

@@ -50,7 +50,7 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("70th Blue Lions
 
-Welcome back to the $f Aquitaine. Because of your outstanding service to the Alliance, the GTVA has granted you command of your own elite fighter squadron, the $w 70th $w Blue $w Lions. This is quite an honor, pilot. You'll receive all your briefings directly from quarterdeck. 
+Welcome back to the $f Aquitaine$|. Because of your outstanding service to the Alliance, the GTVA has granted you command of your own elite fighter squadron, the $w 70th $w Blue $w Lions$|. This is quite an honor, pilot. You'll receive all your briefings directly from quarterdeck. 
 
 As squadron leader of the $w Blue $w Lions, you will be granted the highest priority in ship and weapon selection, but choose your ordnance carefully. Review the techroom database if you have any questions.", 1749)
 $end_multi_text
@@ -70,7 +70,7 @@ $Ani Filename: cb_sm3-06_b.ani
 $Stage Text:
  XSTR("Exodus
 
-Allied Command is committed to evacuating all non-essential personnel. A contingency plan is in the works to hold the Shivans here, in $b Capella, and prevent the expansion of the Shivan incursion to other systems of the GTVA. 
+Allied Command is committed to evacuating all non-essential personnel. A contingency plan is in the works to hold the Shivans here, in $b Capella, and prevent the expansion of the Shivan incursion to other systems of the $y GTVA$|. 
 
 The $w 70th $w Blue $w Lions will provide the fighter cover needed to get our convoys out of the system. Millions of lives are at stake here, pilot. And if we fail, all our worlds and systems will be in jeopardy.", 1751)
 $end_multi_text
@@ -80,7 +80,7 @@ $Ani Filename: cb_sm3-06_c.ani
 $Stage Text:
  XSTR("Erinyes Fighter
 
-The $y GTVA has just unveiled the newly developed $y Erinyes -class heavy assault fighter. With eight gun banks, you'll have sufficient firepower to make short work of enemy targets at close range.  The $y Erinyes can accommodate fire control for up to two different primary systems. 
+The $y GTVA has just unveiled the newly developed $y Erinyes$|-class heavy assault fighter. With eight gun banks, you'll have sufficient firepower to make short work of enemy targets at close range.  The $y Erinyes can accommodate fire control for up to two different primary systems. 
 
 You may need to allocate more power to weapons to fight effectively, so make adjustments as needed.", 1752)
 $end_multi_text
@@ -90,7 +90,7 @@ $Ani Filename: cb_sm3-06_d.ani
 $Stage Text:
  XSTR("GTW UD-8 Kayser
 
-You have also been issued the $y GTW $y UD-08$y  Kayser. For its limited OpEval period, only select units will be authorized to carry this weapon. The $y Kayser emits focused wavelets of subatomic particles that bombard the target, causing the wave function of the particles to collapse and emit intense zero-point energy microbursts. The $y Kayser is the product of our research into Shivan weapon technology.", 1753)
+You have also been issued the $y GTW $y UD-08 $y Kayser$|. For its limited OpEval period, only select units will be authorized to carry this weapon. The $y Kayser emits focused wavelets of subatomic particles that bombard the target, causing the wave function of the particles to collapse and emit intense zero-point energy microbursts. The $y Kayser is the product of our research into Shivan weapon technology.", 1753)
 $end_multi_text
 $Ani Filename: Tech_GTW_UD-8_Kayser.ani
 +Wave Filename: SM306_CB_05.wav
@@ -108,7 +108,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("As we speak, convoys of transports, freighters, and medical ships are heading for the jump nodes to $b Vega and $b Epsilon $b Pegasi. The evacuation of civilian personnel proceeds on schedule, but the enemy offensive has intensified. We have blockaded the $b Gamma $b Draconis node, though Shivan forces are swarming into the system.", 1755)
+ XSTR("As we speak, convoys of transports, freighters, and medical ships are heading for the jump nodes to $b Vega and $b Epsilon $b Pegasi$|. The evacuation of civilian personnel proceeds on schedule, but the enemy offensive has intensified. We have blockaded the $b Gamma $b Draconis node, though Shivan forces are swarming into the system.", 1755)
 $end_multi_text
 $voice: SM306_mB_01.wav
 $camera_pos: -483.999817, 442.720856, 63353.480469
@@ -136,7 +136,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $w 53rd will relieve the $w 309th at the $b Gamma $b Draconis node, and we'll deploy the $w 19th to hold down the fort at $f 3rd $f Fleet $f Headquarters as we evacuate non-essential personnel. Command needs a closer look at the $h Juggernauts, so we'll be sending in the $w 91st. The $w 70th $w Blue $w Lions will be sortied to the $b Epsilon $b Pegasi node.", 1756)
+ XSTR("The $w 53rd will relieve the $w 309th at the $b Gamma $b Draconis node, and we'll deploy the $w 19th to hold down the fort at $f 3rd $f Fleet $f Headquarters as we evacuate non-essential personnel. Command needs a closer look at the $h Juggernauts, so we'll be sending in the $w 91st$|. The $w 70th $w Blue $w Lions will be sortied to the $b Epsilon $b Pegasi node.", 1756)
 $end_multi_text
 $voice: SM306_mB_02.wav
 $camera_pos: 59.892708, 7978.801270, 39777.628906
@@ -164,7 +164,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$w Blue $w Lions, your mission is to escort a four-ship convoy to $b Epsilon $b Pegasi. The group consists of civilian transports $f Lambda $f 1 and $f 2, $f GTFr $f Sulla, and the medical ship $f GTM $f Vesalius. All have minimal armaments and vulnerable hull plating. $f GVCv $f Nebtuu leads the escort.", 1757)
+ XSTR("$w Blue $w Lions, your mission is to escort a four-ship convoy to $b Epsilon $b Pegasi$|. The group consists of civilian transports $f Lambda $f 1 and $f 2, $f GTFr $f Sulla, and the medical ship $f GTM $f Vesalius$|. All have minimal armaments and vulnerable hull plating. $f GVCv $f Nebtuu leads the escort.", 1757)
 $end_multi_text
 $voice: SM306_mB_03.wav
 $camera_pos: 9163.455078, 7667.714844, 4125.337402
@@ -174,7 +174,7 @@ $camera_orient:
 	-0.936078, -0.351787, 0.002046
 $camera_time: 1000
 $num_lines: 0
-$num_icons: 10
+$num_icons: 8
 $Flags: 0
 $Formula: ( true ) 
 $start_icon
@@ -184,30 +184,6 @@ $class: GTNB Pharos
 $pos: 5445.813477, 1328.723877, 2793.748535
 $label: Gamma Draconis
 +id: 8
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 18
-$team: Hostile
-$class: SC Rakshasa
-$pos: 1041.275146, -0.000109, 4730.284668
-$label: Juesaes
-+id: 13
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 28
-$team: Hostile
-$class: SCv Moloch
-$pos: 623.017273, 0.001265, 2044.330078
-$label: Kemwer
-+id: 14
 $hlight: 0
 $mirror: 0
 $multi_text
@@ -245,7 +221,7 @@ $pos: -15351.167969, 280.498535, 1327.676147
 $label: GVCv Nebtuu
 +id: 18
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -310,7 +286,7 @@ $camera_orient:
 	-0.945664, -0.325140, 0.002067
 $camera_time: 1000
 $num_lines: 0
-$num_icons: 7
+$num_icons: 8
 $Flags: 0
 $Formula: ( true ) 
 $start_icon
@@ -369,7 +345,7 @@ $pos: -13747.049805, 280.498474, 3372.990234
 $label: GVCv Nebtuu
 +id: 18
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -381,7 +357,19 @@ $pos: -14428.750000, -0.001586, 323.405853
 $label: Abraxis
 +id: 22
 $hlight: 1
-$mirror: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: SF Manticore
+$pos: -10428.750000, -130.000000, 3023.405853
+$label: Enemy Wing
++id: 23
+$hlight: 1
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -391,7 +379,7 @@ $team: Friendly
 $class: GTFr Triton
 $pos: -9995.568359, 511.473816, 6757.880859
 $label: GTFr Sulla
-+id: 23
++id: 24
 $hlight: 0
 $mirror: 0
 $multi_text
@@ -748,7 +736,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump right" 50 ) ( ai-chase "Abraxis" 66
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 90
 +Initial Hull: 15
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -783,7 +770,7 @@ $Departure Cue: ( <
    600 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -813,7 +800,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -835,7 +822,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump left" 50 ) )
 $Cargo 1:  XSTR("Civilians", 145)
 +Initial Velocity: 30
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -844,7 +830,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -866,7 +852,6 @@ $AI Goals: ( goals ( ai-chase "Nebtuu" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 76
 +Initial Hull: 24
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
@@ -899,7 +884,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1006,7 +991,6 @@ $AI Goals: ( goals ( ai-chase "Lambda 1" 8 ) ( ai-chase "Lambda 2" 7 ) ( ai-chas
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1022,7 +1006,7 @@ $Arrival Cue: ( has-arrived-delay 35 "Scorpio" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1408,7 +1392,6 @@ $AI Goals: ( goals ( ai-waypoints-once "center" 89 ) )
 $Cargo 1:  XSTR("Troops", 1772)
 +Initial Velocity: 98
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1420,7 +1403,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
@@ -1442,7 +1425,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump left" 50 ) )
 $Cargo 1:  XSTR("Troops", 1772)
 +Initial Velocity: 100
 +Initial Hull: 99
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1451,7 +1433,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 1
@@ -1470,16 +1452,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Foodstuffs", 959)
-+Initial Velocity: 33
 +Initial Hull: 95
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Sulla
@@ -2959,9 +2939,9 @@ $Formula: ( has-departed-delay 1 "Sulla" )
 
 #Waypoints		;! 6 lists total
 
-
 $Jump Node: -10739.217773, 356.394287, -3609.241699
 $Jump Node Name: Epsilon Pegasi
+
 $Name: Jump right
 $List: (		;! 1 points in list
 	( -11051.226563, 324.453949, -2989.856445 )
@@ -3299,15 +3279,6 @@ $Bitmap List:
 $Sun: SunCapellaA
 +Angles: 0.261799 0.000000 0.750491
 +Scale: 2.000000
-$Sun: SunCapellaC
-+Angles: 6.108648 0.000000 3.892081
-+Scale: 0.050000
-$Sun: SunCapellaB
-+Angles: 0.279252 0.000000 0.698131
-+Scale: 0.500000
-$Sun: SunCapellaD
-+Angles: 6.108648 0.000000 3.874628
-+Scale: 0.050000
 $Starbitmap: NebulG8-Whisp
 +Angles: 0.000000 6.143554 0.000000
 +ScaleX: 4.000000

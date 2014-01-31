@@ -90,7 +90,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("To lure $w Koth into our trap, the first phase of the mission will involve an attack against the rebel cruisers $h Majestic and $h Refute. They are defended by a complement of twelve $y Hercules -class fighters. With the speed and agility of the $y Perseus, you should be able to outmaneuver the Hercs and take them down.", 994)
+ XSTR("To lure $w Koth into our trap, the first phase of the mission will involve an attack against the rebel cruisers $h Majestic and $h Refute$|. They are defended by a complement of twelve $y Hercules$|-class fighters. With the speed and agility of the $y Perseus, you should be able to outmaneuver the Hercs and take them down.", 994)
 $end_multi_text
 $voice: SM110_MB_02.wav
 $camera_pos: -1557.869629, 257.761414, 10436.378906
@@ -111,7 +111,7 @@ $pos: -1076.957764, 44.764584, 10532.399414
 $label: NTC Refute
 +id: 1
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -123,7 +123,7 @@ $pos: -1148.407104, -10.424735, 10528.488281
 $label: NTC Majestic
 +id: 2
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -187,7 +187,7 @@ $pos: -1056.761597, 44.764656, 10701.390625
 $label: NTC Refute
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -199,7 +199,7 @@ $pos: -1216.457642, -10.424653, 10660.614258
 $label: NTC Majestic
 +id: 2
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -275,7 +275,7 @@ $pos: -1267.587524, 44.764656, 10643.635742
 $label: NTC Refute
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -286,8 +286,8 @@ $class: GTC Fenris
 $pos: -1378.612183, -10.424779, 10626.562500
 $label: NTC Majestic
 +id: 2
-$hlight: 1
-$mirror: 0
+$hlight: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -322,8 +322,8 @@ $class: GTD Orion
 $pos: -828.195984, 0.002586, 10754.528320
 $label: Rebel Fleet
 +id: 10
-$hlight: 1
-$mirror: 0
+$hlight: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -375,7 +375,7 @@ $pos: -828.195984, 0.002586, 10754.528320
 $label: Rebel Fleet
 +id: 10
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -399,7 +399,7 @@ $pos: -1267.587524, 44.764656, 10643.635742
 $label: NTC Refute
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -410,8 +410,8 @@ $class: GTC Fenris
 $pos: -1378.612183, -10.424779, 10626.562500
 $label: NTC Majestic
 +id: 2
-$hlight: 1
-$mirror: 0
+$hlight: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -573,7 +573,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -652,7 +651,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -746,7 +745,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Rampart route" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -763,7 +761,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -789,7 +787,6 @@ $AI Goals: ( goals ( ai-chase "Colossus" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -815,10 +812,15 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "kamikaze" )
++Flags: ( "kamikaze" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 94
+$Special Explosion:
++Special Exp Damage: 475
++Special Exp Blast: 3500
++Special Exp Inner Radius: 500
++Special Exp Outer Radius: 4400
++Special Exp Shockwave Speed: 600
 +Kamikaze Damage: 100
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
@@ -842,7 +844,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Low evil" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -861,7 +862,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -887,7 +888,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Destination: evil" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -906,7 +906,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1901,7 +1901,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-arrived-delay 10 "Colossus" ) 
+   ( is-event-true-delay "RAM 5" 8 ) 
    ( beam-free-all "Colossus" ) 
 )
 +Name: Colosus Armed
@@ -2316,7 +2316,7 @@ $Formula: ( when
       7500 
    )
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "RAM 1" 
    )
@@ -2351,7 +2351,7 @@ $Formula: ( send-message
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "RAM 4" 
    )
@@ -2377,7 +2377,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "RAM 6" 
    )
@@ -2408,6 +2408,7 @@ $Formula: ( when
    )
    ( ship-vulnerable "Refute" ) 
    ( ship-vulnerable "Majestic" ) 
+   ( beam-lock-all "Colossus" ) 
 )
 +Name: Colossus
 +Repeat Count: 1
@@ -2438,7 +2439,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "Vic 2" 
    )

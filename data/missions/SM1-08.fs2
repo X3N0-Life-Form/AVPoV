@@ -60,7 +60,7 @@ $Stage Text:
 
 The $f GTD $f Aquitaine will lead the allied counterstrike against $w Koth and his warships. We will resupply in $b Capella before shipping out to the front. 
 
-We have also learned our campaign in $b Sirius has failed. A two-pronged offensive launched from $b Alpha $b Centauri and $b Deneb encountered fierce resistance. Unless we can devise a military solution for dealing with the rebels, the $y GTVA will be forced to recognize the $h NTF's authority in $b Sirius, $b Regulus, and $b Polaris.", 896)
+We have also learned our campaign in $b Sirius has failed. A two-pronged offensive launched from $b Alpha $b Centauri and $b Deneb encountered fierce resistance. Unless we can devise a military solution for dealing with the rebels, the $y GTVA will be forced to recognize the $h NTF's authority in $b Sirius, $b Regulus, and $b Polaris$|.", 896)
 $end_multi_text
 $Ani Filename: cb_sm1-08_b.ani
 +Wave Filename: SM108_CB_02.wav
@@ -68,7 +68,7 @@ $Ani Filename: cb_sm1-08_b.ani
 $Stage Text:
  XSTR("On the Vanguard
 
-Allied engineers in the meantime are developing and adapting technologies that will enable us to fight more effectively in the nebula. $w Dr. $w Hargrove and her research team continue to study the subspace portal. Their findings have been classified level $b Phi.
+Allied engineers in the meantime are developing and adapting technologies that will enable us to fight more effectively in the nebula. $w Dr. $w Hargrove and her research team continue to study the subspace portal. Their findings have been classified level $b Phi$|.
 
 Until the situation in $b Epsilon $b Pegasi has been normalized, the $y GTVA will suspend its operations in the nebula.", 897)
 $end_multi_text
@@ -80,7 +80,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("This is $w Lieutenant $w Commander $w Cordova, leader of the $w 242nd $w Suicide $w Kings. Welcome to $b Epsilon $b Pegasi, pilots. $f Enif $f Station, the Alliance's base of operations in this system, is now under attack. Though we have destroyed the $h NTC $h Outrage, the $h Cato continues to bombard the installation with heavy beam fire.", 898)
+ XSTR("This is $w Lieutenant $w Commander $w Cordova, leader of the $w 242nd $w Suicide $w Kings$|. Welcome to $b Epsilon $b Pegasi, pilots. $f Enif $f Station, the Alliance's base of operations in this system, is now under attack. Though we have destroyed the $h NTC $h Outrage, the $h Cato continues to bombard the installation with heavy beam fire.", 898)
 $end_multi_text
 $voice: SM108_MB_01.wav
 $camera_pos: -163.328064, 6031.839355, -3292.212402
@@ -125,7 +125,7 @@ $pos: -2824.985107, 498.099365, 5117.827637
 $label: NTC Cato
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -177,7 +177,7 @@ $pos: -2935.769775, 498.099976, 5112.047363
 $label: NTC Cato
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -189,7 +189,7 @@ $pos: -758.383179, 245.899170, 6168.578613
 $label: GTFr Calypso
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -208,7 +208,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your mission is to defend $f Enif $f Station. As leader of $f Alpha wing, you will command your squadmates to destroy the fighters and warships besieging our installation. If the rebels sortie their $y Zeus bombers, intercept the warheads before they impact the base. ", 900)
+ XSTR("Your mission is to defend $f Enif $f Station$|. As leader of $f Alpha wing, you will command your squadmates to destroy the fighters and warships besieging our installation. If the rebels sortie their $y Zeus bombers, intercept the warheads before they impact the base. ", 900)
 $end_multi_text
 $voice: SM108_MB_03.wav
 $camera_pos: -2978.636719, 3230.123779, 2776.869873
@@ -253,7 +253,7 @@ $pos: -2935.769775, 498.099976, 5112.047363
 $label: NTC Cato
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -265,7 +265,7 @@ $pos: -767.473816, 245.899841, 5670.544434
 $label: GTFr Calypso
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -353,7 +353,7 @@ $pos: -2935.769775, 498.099976, 5112.047363
 $label: NTC Cato
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -365,7 +365,7 @@ $pos: -954.659790, 245.900223, 5814.775391
 $label: GTFr Calypso
 +id: 4
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -604,7 +604,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-chase "Enif Station" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "" )
@@ -629,7 +628,7 @@ $Departure Cue: ( is-destroyed-delay
    "Enif Station" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -653,7 +652,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -726,7 +724,7 @@ $Arrival Cue: ( not
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -744,7 +742,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Medical Supplies", 148)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -763,7 +760,7 @@ $Departure Cue: ( and
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 80
@@ -888,7 +885,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 63
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -929,7 +925,7 @@ $Arrival Cue: ( is-destroyed-delay 10 "Cato" )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 8 "Enif Station" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -954,7 +950,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "" )
@@ -985,7 +980,7 @@ $Departure Cue: ( is-destroyed-delay
    "Enif Station" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 95
@@ -1679,7 +1674,6 @@ $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 82
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1717,7 +1711,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -1737,7 +1731,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Civilians", 145)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Arrival Location: Hyperspace
@@ -1749,7 +1742,7 @@ $Departure Cue: ( are-waypoints-done-delay
    0 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
++Flags: ( "cargo-known" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 70

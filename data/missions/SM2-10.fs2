@@ -96,7 +96,7 @@ $Ani Filename: cb_sm2-10_e.ani
 $Stage Text:
  XSTR("Allied Strategy
 
-A small task force will oversee the demolition of the $y Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated $b Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting $b Capella, the largest exodus since the $y Great $y War. The $f Colossus will remain in that system to engage the $h Sathanas should we fail.", 1431)
+A small task force will oversee the demolition of the $y Knossos while the bulk of the allied fleet blockades the jump node leading to the densely-populated $b Capella system. Command has begun the process of evacuating the two hundred fifty million civilians inhabiting $b Capella, the largest exodus since the $y Great $y War$|. The $f Colossus will remain in that system to engage the $h Sathanas should we fail.", 1431)
 $end_multi_text
 $Ani Filename: 
 +Wave Filename: SM210_CB_03.wav
@@ -106,7 +106,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("At 2230 hours, the $y GTVA announced its plan for the destruction of the $y Knossos device. For strategic and scientific reasons, we will not attack the portal with the main guns of our warships. The demolition of the subspace portal will be accomplished with the use of the experimental $y Meson $y Bomb.", 1432)
+ XSTR("At 2230 hours, the $y GTVA announced its plan for the destruction of the $y Knossos device. For strategic and scientific reasons, we will not attack the portal with the main guns of our warships. The demolition of the subspace portal will be accomplished with the use of the experimental $y Meson $y Bomb$|.", 1432)
 $end_multi_text
 $voice: SM210_mB_01.wav
 $camera_pos: 18.517078, 4546.434570, -11271.795898
@@ -134,7 +134,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our first objective will be to sanitize the area. Observers report that Shivan scouting wings have already entered $b Gamma $b Draconis, and enemy activity will intensify before the arrival of the $h Sathanas $h Juggernaut. The $f Renenet, a $y Sobek -class corvette, will monitor the operation and provide fire support.", 1433)
+ XSTR("Our first objective will be to sanitize the area. Observers report that Shivan scouting wings have already entered $b Gamma $b Draconis, and enemy activity will intensify before the arrival of the $h Sathanas $h Juggernaut$|. The $f Renenet, a $y Sobek$|-class corvette, will monitor the operation and provide fire support.", 1433)
 $end_multi_text
 $voice: SM210_mB_02.wav
 $camera_pos: -10.814144, 8129.271973, -18836.208984
@@ -219,7 +219,7 @@ $pos: -4324.864258, -6.155623, -2592.162354
 $label: Transport 1
 +id: 3
 $hlight: 1
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -482,19 +482,22 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "hidden-from-sensors" )
++Flags: ( "cargo-known" "protect-ship" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 94
+$Special Explosion:
++Special Exp Damage: 900
++Special Exp Blast: 3000
++Special Exp Inner Radius: 100
++Special Exp Outer Radius: 4000
++Special Exp Shockwave Speed: 1000
 +Group: 0
 +Score: 1000
 
@@ -511,7 +514,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
++Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -538,7 +541,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
++Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -565,7 +568,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
++Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -592,7 +595,7 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Subsystem: Pilot
-+Secondary Banks: ( "Harpoon#Weak#Shivan" "Hornet#Weak#Shivan" )
++Secondary Banks: ( "Harpoon#Weak" "Hornet#Weak#Shivan" )
 +Sbank Ammo: ( 20 20 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -837,7 +840,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "CENTER" 50 ) ( ai-undock 44 ) ( ai-waypoints-once "Center Fore" 33 ) ( ai-warp-out 22 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -849,7 +851,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -860,26 +862,30 @@ $Determination: 10
 $Name: Meson 1		;! Object #18
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: 75.200623, -253.170532, -1554.879395
+$Location: 75.200439, -253.170349, -1554.879395
 $Orientation:
-	-0.996227, -0.086656, 0.004602,
-	-0.082180, 0.925102, -0.370718,
-	0.027867, -0.369698, -0.928734
+	-0.996227, -0.086658, 0.004603,
+	-0.082182, 0.925101, -0.370718,
+	0.027866, -0.369698, -0.928733
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
++Flags: ( "cargo-known" "protect-ship" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 88
+$Special Explosion:
++Special Exp Damage: 500
++Special Exp Blast: 9000
++Special Exp Inner Radius: 2000
++Special Exp Outer Radius: 3550
++Special Exp Shockwave Speed: 1000
 +Docked With: Lambda 1
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
@@ -899,7 +905,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Knossos Right" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -919,7 +924,7 @@ $Departure Cue: ( <
    90 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 6
@@ -930,26 +935,30 @@ $Determination: 10
 $Name: Meson 2		;! Object #20
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: 2224.056152, 95.663887, -2153.743408
+$Location: 2224.056152, 95.663826, -2153.743408
 $Orientation:
-	-0.753717, 0.052115, -0.655127,
-	-0.133835, 0.963790, 0.230644,
+	-0.753717, 0.052114, -0.655128,
+	-0.133836, 0.963790, 0.230643,
 	0.643426, 0.261520, -0.719452
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
++Flags: ( "cargo-known" "protect-ship" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 82
+$Special Explosion:
++Special Exp Damage: 500
++Special Exp Blast: 9000
++Special Exp Inner Radius: 2000
++Special Exp Outer Radius: 3550
++Special Exp Shockwave Speed: 1000
 +Docked With: Lambda 2
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
@@ -969,7 +978,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Knossos Left" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -989,7 +997,7 @@ $Departure Cue: ( <
    90 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 7
@@ -1000,26 +1008,30 @@ $Determination: 10
 $Name: Meson 3		;! Object #22
 $Class: TC-Meson Bomb
 $Team: Friendly
-$Location: -1700.786255, 37.154152, -1351.520142
+$Location: -1700.786499, 37.154308, -1351.520020
 $Orientation:
 	-0.982318, -0.028058, 0.185102,
-	-0.000014, 0.988716, 0.149799,
-	-0.187217, 0.147147, -0.971236
+	-0.000013, 0.988716, 0.149799,
+	-0.187217, 0.147148, -0.971236
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" )
++Flags: ( "cargo-known" "protect-ship" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
-+Special Exp index: 76
+$Special Explosion:
++Special Exp Damage: 500
++Special Exp Blast: 9000
++Special Exp Inner Radius: 2000
++Special Exp Outer Radius: 3550
++Special Exp Shockwave Speed: 1000
 +Docked With: Lambda 3
 $Docker Point: Cargo Dock01
 $Dockee Point: Cargo Dock
@@ -1047,7 +1059,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "guardian" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1103,7 +1115,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "guardian" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1113,7 +1125,7 @@ $Determination: 10
 $Name: Renenet		;! Object #26
 $Class: GVCv Sobek
 $Team: Friendly
-$Location: 1984.208374, -2435.842285, -7584.850098
+$Location: 3828.097900, -2435.842285, -6959.105469
 $Orientation:
 	-0.995012, -0.091465, -0.039822,
 	0.033111, -0.679362, 0.733056,
@@ -1124,7 +1136,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 6" 55 ) ( ai-waypoints-once "Aim point" 33 ) ( ai-stay-still "Knossos Portal" 22 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -1158,7 +1169,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( and 
    ( is-event-true-delay 
       "May Continue" 
-      0 
+      15 
    )
    ( is-event-true-delay 
       "Early death fail" 
@@ -1166,7 +1177,7 @@ $Departure Cue: ( and
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "escort" )
++Flags: ( "cargo-known" "protect-ship" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1695,7 +1706,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1758,7 +1768,7 @@ $Arrival Cue: ( is-destroyed-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -2051,9 +2061,9 @@ $Formula: ( when
          ( < ( hits-left "Scorpio 3" ) 97 ) 
          ( < ( hits-left "Scorpio 4" ) 97 ) 
       )
-      ( < 
-         ( distance "Alpha" "CENTER:1" ) 
-         1400 
+      ( is-event-true-delay 
+         "A3 Pull them out" 
+         0 
       )
    )
    ( send-message 
@@ -2103,7 +2113,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( or 
-      ( and 
+      ( or 
          ( or 
             ( < ( hits-left "Alpha 1" ) 97 ) 
             ( < ( hits-left "Alpha 2" ) 97 ) 
@@ -2113,7 +2123,7 @@ $Formula: ( when
             ( < ( hits-left "Alpha 4" ) 97 ) 
          )
       )
-      ( and 
+      ( or 
          ( or 
             ( < ( hits-left "Alpha 1" ) 97 ) 
             ( < ( hits-left "Alpha 4" ) 97 ) 
@@ -2152,6 +2162,22 @@ $Formula: ( when
    ( protect-ship "Scorpio 4" ) 
    ( protect-ship "Aries 2" ) 
    ( protect-ship "Scorpio 3" ) 
+   ( alter-ship-flag 
+      "free-afterburner-use" 
+      ( true ) 
+      ( true ) 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
+   ( alter-ship-flag 
+      "no-dynamic" 
+      ( true ) 
+      ( true ) 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
 )
 +Name: Sneaky
 +Repeat Count: 1
@@ -2183,6 +2209,22 @@ $Formula: ( when
    ( unprotect-ship "Scorpio 2" ) 
    ( unprotect-ship "Scorpio 3" ) 
    ( unprotect-ship "Scorpio 4" ) 
+   ( alter-ship-flag 
+      "free-afterburner-use" 
+      ( false ) 
+      ( true ) 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
+   ( alter-ship-flag 
+      "no-dynamic" 
+      ( false ) 
+      ( true ) 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
 )
 +Name: Fight fight fight
 +Repeat Count: 1
@@ -2705,30 +2747,9 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Scorpio", 61)
 
 $Formula: ( when 
-   ( and 
-      ( or 
-         ( < ( hits-left "Alpha 1" ) 97 ) 
-         ( < ( hits-left "Alpha 4" ) 97 ) 
-         ( < ( hits-left "Alpha 3" ) 97 ) 
-         ( < ( hits-left "Alpha 2" ) 97 ) 
-         ( < ( hits-left "Aries 1" ) 97 ) 
-         ( < ( hits-left "Aries 2" ) 97 ) 
-         ( < ( hits-left "Aries 3" ) 97 ) 
-         ( < ( hits-left "Aries 4" ) 97 ) 
-         ( < ( hits-left "Scorpio 1" ) 97 ) 
-         ( < ( hits-left "Scorpio 2" ) 97 ) 
-         ( < ( hits-left "Scorpio 3" ) 97 ) 
-         ( < ( hits-left "Scorpio 4" ) 97 ) 
-      )
-      ( < 
-         ( distance "Alpha" "CENTER:1" ) 
-         1100 
-      )
-      ( < ( distance "Alpha" "Aries" ) 1100 ) 
-      ( < 
-         ( distance "Alpha" "Scorpio" ) 
-         1100 
-      )
+   ( is-event-true-delay 
+      "Engage Directive" 
+      0 
    )
    ( do-nothing ) 
 )
@@ -2760,6 +2781,11 @@ $Formula: ( when
       ( < 
          ( distance "Scorpio" "Renenet" ) 
          1400 
+      )
+      ( destroyed-or-departed-delay 
+         0 
+         "Aries" 
+         "Scorpio" 
       )
    )
    ( do-nothing ) 
@@ -2926,6 +2952,17 @@ $Formula: ( when
       4000 
    )
    ( beam-free-all "Sathanas" ) 
+   ( ship-no-guardian 
+      "Epsilon 1" 
+      "Epsilon 3" 
+   )
+   ( add-goal 
+      "Renenet" 
+      ( ai-waypoints-once 
+         "Rene Move Away" 
+         89 
+      )
+   )
 )
 +Name: Oops
 +Repeat Count: 1
@@ -3202,7 +3239,7 @@ $List: (		;! 1 points in list
 
 $Name: Waypoint path 6
 $List: (		;! 1 points in list
-	( 1778.744019, -629.376587, -6280.798340 )
+	( 3318.916748, -629.376587, -5655.053711 )
 )
 
 $Name: Center Fore
@@ -3241,14 +3278,19 @@ $List: (		;! 3 points in list
 
 $Name: Aim point
 $List: (		;! 1 points in list
-	( 1518.989990, 266.968262, -4939.795898 )
+	( 3059.162598, 266.968262, -4314.051270 )
+)
+
+$Name: Rene Move Away
+$List: (		;! 1 points in list
+	( 4204.686035, 0.001788, -2299.672852 )
 )
 
 #Messages		;! 46 total
 
 $Name: REN- Intro 1
 $Team: -1
-$MessageNew:  XSTR("Command, this is the Renenet. We have detected 2 wings of Mara fighters 4000 meters from our position. The enemy has not engaged.", 1448)
+$MessageNew:  XSTR("Command, this is the Renenet. We have detected 2 wings of Astaroth fighters 4000 meters from our position. The enemy has not engaged.", 1448)
 $end_multi_text
 +Persona: Large Ship Vasudan
 +AVI Name: Head-VC

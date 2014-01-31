@@ -62,7 +62,7 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("The $h Sathanas entered the $b Capella system and obliterated the line of defense we had established to intercept it. We now have no choice but to send in the $f Colossus. With its beam cannons still operational, the $h Sathanas has sufficient firepower to win this engagement.
+ XSTR("The $h Sathanas entered the $b Capella system and obliterated the line of defense we had established to intercept it. We now have no choice but to send in the $f Colossus$|. With its beam cannons still operational, the $h Sathanas has sufficient firepower to win this engagement.
 
 Your wing will be scrambled immediately. There is no time to select your ship or armaments. Your mission is to neutralize these remaining beam cannons as quickly as possible. If you fail, we risk losing the $f Colossus and the $b Capella system. ", 1560)
 $end_multi_text
@@ -108,7 +108,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $h Sathanas has entered the $b Capella system and engaged the $f Colossus. Your exceptional performance in $b Gamma $b Draconis has significantly improved the odds for the Alliance. We are deploying your wing to provide bomber support for the $f Colossus. Eliminate any target of opportunity, but do not take unnecessary risks.", 1561)
+ XSTR("The $h Sathanas has entered the $b Capella system and engaged the $f Colossus$|. Your exceptional performance in $b Gamma $b Draconis has significantly improved the odds for the Alliance. We are deploying your wing to provide bomber support for the $f Colossus$|. Eliminate any target of opportunity, but do not take unnecessary risks.", 1561)
 $end_multi_text
 $voice: sm302_mb_02.wav
 $camera_pos: 36016.648438, 8628.259766, 21203.224609
@@ -402,7 +402,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -462,7 +461,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" "red-alert-carry" )
++Flags: ( "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -484,7 +483,6 @@ $AI Goals: ( goals ( ai-chase "Sathanas" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -575,7 +573,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -996,7 +994,7 @@ $Formula: ( when
    ( is-previous-goal-false 
       "sm3-01" 
       "Gun 1" 
-      ( true ) 
+      ( false ) 
    )
    ( validate-goal "Gun 1" ) 
 )
@@ -1024,7 +1022,7 @@ $Formula: ( when
    ( is-previous-goal-false 
       "sm3-01" 
       "Gun 2" 
-      ( false ) 
+      ( true ) 
    )
    ( validate-goal "Gun 2" ) 
 )
@@ -1052,7 +1050,7 @@ $Formula: ( when
    ( is-previous-goal-false 
       "sm3-01" 
       "Gun 3" 
-      ( true ) 
+      ( false ) 
    )
    ( validate-goal "Gun 3" ) 
 )
@@ -1092,7 +1090,7 @@ $Formula: ( when
    ( is-previous-event-true 
       "sm3-01" 
       "Flak 49" 
-      ( false ) 
+      ( true ) 
    )
    ( set-subsystem-strength 
       "Sathanas" 
@@ -1201,7 +1199,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 80 ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "COL 80" 
    )
@@ -1213,7 +1211,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 50 ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "COL 50" 
    )
@@ -1225,7 +1223,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Colossus" ) 20 ) 
    ( send-message 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "COL 20" 
    )
@@ -1258,7 +1256,7 @@ $Formula: ( when
       "High" 
       "SAM 70 a" 
       0 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "SAM 70 b" 
       4544 
@@ -1280,7 +1278,7 @@ $Formula: ( when
       "High" 
       "SAM 45 a" 
       0 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "SAM 45 b" 
       4544 
@@ -1302,7 +1300,7 @@ $Formula: ( when
       "High" 
       "SAM 20 a" 
       0 
-      "#Colossus" 
+      "Colossus" 
       "High" 
       "SAM 20 b" 
       4544 
@@ -1880,15 +1878,6 @@ $Bitmap List:
 $Sun: SunCapellaA
 +Angles: 0.261799 0.000000 0.750491
 +Scale: 2.000000
-$Sun: SunCapellaC
-+Angles: 6.108648 0.000000 3.892081
-+Scale: 0.050000
-$Sun: SunCapellaB
-+Angles: 0.279252 0.000000 0.698131
-+Scale: 0.500000
-$Sun: SunCapellaD
-+Angles: 6.108648 0.000000 3.874628
-+Scale: 0.050000
 $Starbitmap: NebulG8-Whisp
 +Angles: 0.000000 6.143554 0.000000
 +ScaleX: 4.000000

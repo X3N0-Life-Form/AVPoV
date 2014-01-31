@@ -51,7 +51,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("At 3320 Vasudan Galactic Time, we received a distress signal from the $f GTD $f Aquitaine. The destroyer came under attack 4,000 meters from the $b Gamma $b Draconis jump node. The $h SC $h Urobach and its fighter escort incapacitated the $f Aquitaine's engines and fighterbay.", 1703)
+ XSTR("At 3320 Vasudan Galactic Time, we received a distress signal from the $f GTD $f Aquitaine$|. The destroyer came under attack 4,000 meters from the $b Gamma $b Draconis jump node. The $h SC $h Urobach and its fighter escort incapacitated the $f Aquitaine's engines and fighterbay.", 1703)
 $end_multi_text
 $voice: SM305_MB_01.wav
 $camera_pos: -11335.354492, 5441.892090, 4933.421875
@@ -72,7 +72,7 @@ $pos: -1094.627197, -0.000034, 2940.668213
 $label: GTD Aquitaine
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -112,7 +112,7 @@ $pos: -1094.627197, -0.000034, 2940.668213
 $label: GTD Aquitaine
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -131,7 +131,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("A damage control team is currently en route from $b Gamma $b Draconis. The $f GTC $f Agrippa, an $y Aeolus -class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
+ XSTR("A damage control team is currently en route from $b Gamma $b Draconis$|. The $f GTC $f Agrippa, an $y Aeolus$|-class warship, escorts the $f Argo transport carrying the team and the components needed for the repair. When the $f Argo arrives, your objective will be to ensure it docks safely with the damaged destroyer.", 1705)
 $end_multi_text
 $voice: SM305_MB_03.wav
 $camera_pos: -5912.104980, 3232.332764, 3762.261475
@@ -152,7 +152,7 @@ $pos: -1094.627197, -0.000034, 2940.668213
 $label: GTD Aquitaine
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -176,7 +176,7 @@ $pos: 637.788757, -1067.399658, 4927.394531
 $label: GTC Agrippa
 +id: 3
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -187,15 +187,15 @@ $class: GTT Argo
 $pos: 1662.275635, -885.300232, 5540.536621
 $label: Argo
 +id: 4
-$hlight: 0
-$mirror: 0
+$hlight: 1
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the Shivans sufficient time to launch additional wings and threaten the $f Aquitaine.", 1706)
+ XSTR("The $f Aquitaine's Engineering Officer estimates that once the damage control team arrives with the required materials, the repair will be accomplished in a matter of minutes. However, this provides the Shivans sufficient time to launch additional wings and threaten the $f Aquitaine$|.", 1706)
 $end_multi_text
 $voice: SM305_MB_04.wav
 $camera_pos: -11255.395508, 5561.112793, 5206.678223
@@ -216,7 +216,7 @@ $pos: -3103.852539, 0.000497, 4851.168457
 $label: GTD Aquitaine
 +id: 1
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -373,7 +373,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 32
 +Initial Hull: 67
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Damage: 100
@@ -450,7 +449,7 @@ $Departure Cue: ( <
    900 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -721,7 +720,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "MRed" )
@@ -749,7 +747,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -880,7 +878,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -916,7 +913,7 @@ $Departure Cue: ( and
    )
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -940,7 +937,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Aquitaine" "Frontside dock" "Dock01" 89 ) )
 $Cargo 1:  XSTR("Repair Crew", 1711)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -949,7 +945,7 @@ $Arrival Cue: ( has-arrived-delay 1 "Agrippa" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -2819,7 +2815,7 @@ $Formula: ( when
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Abaddon" 
    )
 )
@@ -3956,6 +3952,7 @@ $Name: Repair Status 3
 $Team: -1
 $MessageNew:  XSTR("Command, we're initiating drive core power-up sequence now. Give us 60 seconds.", 1746)
 $end_multi_text
++Persona: Large Ship
 +AVI Name: Head-CM1
 +Wave Name: SM3-05_Aq_15.wav
 

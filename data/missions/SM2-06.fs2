@@ -51,7 +51,7 @@ $start_briefing
 $num_stages: 6
 $start_stage
 $multi_text
- XSTR("The $h NTF has attacked our warships defending the $y Knossos. We repelled their first offensive, but the $h NTC $h Alexandria reached the portal and made the jump into the nebula. We believe the rebels are regrouping to launch a second assault. Command has positioned the $f GTA $f Monitor to hold off the attack, and reinforcements are on their way.", 1262)
+ XSTR("The $h NTF has attacked our warships defending the $y Knossos$|. We repelled their first offensive, but the $h NTC $h Alexandria reached the portal and made the jump into the nebula. We believe the rebels are regrouping to launch a second assault. Command has positioned the $f GTA $f Monitor to hold off the attack, and reinforcements are on their way.", 1262)
 $end_multi_text
 $voice: SM206_MB_01.wav
 $camera_pos: 128.038696, 5814.479004, -3748.433838
@@ -77,7 +77,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -722.374512, 1030.687134, 833.627686
@@ -91,7 +91,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("The $w 64th will play a fighter role in this mission. The $h NTF have a few $y Zeus and $y Medusa wings remaining, so your objective will be to engage all rebel bombers and neutralize their fighter escort. The $f Colossus has engaged the $h NTC $h Vanguard and the $h NTCv $h Congreve. We will move the $f Colossus into position as soon as this battle has been resolved.", 1263)
+ XSTR("The $w 64th will play a fighter role in this mission. The $h NTF have a few $y Zeus and $y Medusa wings remaining, so your objective will be to engage all rebel bombers and neutralize their fighter escort. The $f Colossus has engaged the $h NTC $h Vanguard and the $h NTCv $h Congreve$|. We will move the $f Colossus into position as soon as this battle has been resolved.", 1263)
 $end_multi_text
 $voice: SM206_MB_02.wav
 $camera_pos: -735.939514, 6257.894531, -3322.756104
@@ -117,7 +117,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -722.374512, 1030.687134, 833.627686
@@ -143,7 +143,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Keep an eye out for the $h NTF $h Iceni. If this vessel emerges within range, you are authorized to engage and destroy it. $w Bosch has eluded our forces since he entered the $b Gamma $b Draconis system. Though we anticipate $w Bosch will either attempt to gain control of the $y Knossos or enter the portal itself, be prepared for any development.", 1264)
+ XSTR("Keep an eye out for the $h NTF $h Iceni$|. If this vessel emerges within range, you are authorized to engage and destroy it. $w Bosch has eluded our forces since he entered the $b Gamma $b Draconis system. Though we anticipate $w Bosch will either attempt to gain control of the $y Knossos or enter the portal itself, be prepared for any development.", 1264)
 $end_multi_text
 $voice: SM206_MB_03.wav
 $camera_pos: 2652.629395, 6272.645020, -3308.595215
@@ -209,7 +209,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -722.374512, 1030.687134, 833.627686
@@ -261,7 +261,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -722.374512, 1030.687134, 833.627686
@@ -316,7 +316,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 18
+$type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -722.374512, 1030.687134, 833.627686
@@ -514,16 +514,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "invulnerable" "beam-protect-ship" )
++Flags: ( "cargo-known" "protect-ship" "invulnerable" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -542,7 +540,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -634,7 +631,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -733,7 +730,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02
@@ -775,7 +771,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -796,7 +792,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 97
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -837,7 +832,7 @@ $Departure Cue: ( is-event-true-delay
    3 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
@@ -861,7 +856,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 99
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -877,7 +871,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -1426,7 +1420,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1446,7 +1439,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
@@ -1935,7 +1928,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1969,7 +1961,7 @@ $Arrival Cue: ( is-destroyed-delay 8 "Loyola" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
@@ -3032,7 +3024,7 @@ $end_multi_text
 
 $Name: Wheres The Iceni
 $Team: -1
-$MessageNew:  XSTR("So where's the Iceni, Command? Letâ€™s end this now.", 3419)
+$MessageNew:  XSTR("So where's the Iceni, Command? Let’s end this now.", 3419)
 $end_multi_text
 +Persona: Wingman 4
 +AVI Name: Head-TP7

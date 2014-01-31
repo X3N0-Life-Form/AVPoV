@@ -131,7 +131,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("You are now authorized to carry the $y GTM-10 $y Piranhas. A third-generation version of the $y Synaptic bomb, the $y Piranha provides a high-explosive anti-fighter screen. Trigger the $y Piranha's detonation by pressing your launch button a second time.", 1225)
+ XSTR("You are now authorized to carry the $y GTM-10 $y Piranhas$|. A third-generation version of the $y Synaptic bomb, the $y Piranha provides a high-explosive anti-fighter screen. Trigger the $y Piranha's detonation by pressing your launch button a second time.", 1225)
 $end_multi_text
 $voice: SM205_MB_03.wav
 $camera_pos: 0.985757, 651.364929, -1226.640747
@@ -288,20 +288,22 @@ $Alt: NTF Hercules
 $Alt: NTF Loki
 $Alt: NTF Ulysses
 $Alt: NTT Argo
+
 #end
+
 
 #Players		;! 1 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
-	"GTF Ulysses"	4
+	"GTF Ulysses"		4
 	"GTF Hercules Mark II"	4
-	"GTF Perseus"	4
-	"GTF Myrmidon"	4
+	"GTF Perseus"		4
+	"GTF Myrmidon"		4
 	"GTB Artemis D.H."	4
-	"GTB Medusa"	4
-	"GTB Ursa"	4
-	"GTB Boanerges"	4
+	"GTB Medusa"		4
+	"GTB Ursa"			4
+	"GTB Boanerges"		4
 )
 
 +Weaponry Pool: (
@@ -419,7 +421,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 78
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -445,7 +446,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( has-time-elapsed 360 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
@@ -470,7 +471,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 83
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -517,7 +517,7 @@ $Arrival Cue: ( is-destroyed-delay 8 "Vindicator" )
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Yoshitomo" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 89
@@ -542,7 +542,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 56
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -566,7 +565,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Alba" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 87
@@ -591,7 +590,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 88
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -635,7 +633,7 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Epigoni" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 88
@@ -660,7 +658,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 79
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -669,7 +666,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Venture" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50
@@ -795,7 +792,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -831,7 +827,7 @@ $Departure Cue: ( destroyed-or-departed-delay
    "Venture" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -1154,7 +1150,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1194,7 +1189,7 @@ $Departure Cue: ( destroyed-or-departed-delay
    "Venture" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
@@ -2837,6 +2832,7 @@ $List: (		;! 1 points in list
 
 #Messages		;! 22 total
 
+
 $Name: Iceni Not Here
 $Team: -1
 $MessageNew:  XSTR("I've got a visual on the Vindicator, but the Iceni's nowhere to be found.", 1238)
@@ -3159,7 +3155,6 @@ $Starbitmap: NebulB2-Main
 +DivY: 1
 
 #Asteroid Fields
-
 
 #Music
 

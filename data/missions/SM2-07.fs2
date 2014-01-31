@@ -50,9 +50,9 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("Twilight
 
-This is $w Admiral $w Khafre, commanding officer of the $f GVD $f Psamtik, $f 13th $f Vasudan $f Battle $f Group.
+This is $w Admiral $w Khafre, commanding officer of the $f GVD $f Psamtik, $f 13th $f Vasudan $f Battle $f Group$|.
 
-The $h NTF rebellion is over. $b Polaris, $b Regulus, and $b Sirius are now under allied control, and we begin the process of rebuilding these systems after 18 months of bloodshed. $h NTF officers responsible for the genocide of Vasudan civilians will face a war crimes tribunal in $b Beta $b Aquilae. $y GTVA warships in the nebula are now hunting down the $h Iceni and the other blockade runners.", 1308)
+The $h NTF rebellion is over. $b Polaris, $b Regulus, and $b Sirius are now under allied control, and we begin the process of rebuilding these systems after 18 months of bloodshed. $h NTF officers responsible for the genocide of Vasudan civilians will face a war crimes tribunal in $b Beta $b Aquilae$|. $y GTVA warships in the nebula are now hunting down the $h Iceni and the other blockade runners.", 1308)
 $end_multi_text
 $Ani Filename: <default>
 +Wave Filename: SM207_CB_01.wav
@@ -72,7 +72,7 @@ $Stage Text:
 
 With the rebellion defeated, we are now able to focus on our exploration and containment operation in the nebula. 
 
-We have three objectives in this theatre: to locate uncharted Shivan jump nodes, to destroy all hostiles encountered, and to apprehend $w Admiral $w Aken $w Bosch. 
+We have three objectives in this theatre: to locate uncharted Shivan jump nodes, to destroy all hostiles encountered, and to apprehend $w Admiral $w Aken $w Bosch$|. 
 
 We begin launching our squadrons at 3230, Vasudan Galactic Time.", 1310)
 $end_multi_text
@@ -82,7 +82,7 @@ $Ani Filename: cb_sm2-07_c.ani
 $Stage Text:
  XSTR("Maxim
 
-The $f Psamtik has received a shipment of the new $y GTW-66 $y Maxim $y Gun. The $y Maxim is by definition an energy weapon, though it behaves like a mass-driver, accelerating caseless uranium slugs along its smoothbore barrel. The $y Maxim has difficulty penetrating shield defenses but its effect on hull plating is devastating. 
+The $f Psamtik has received a shipment of the new $y GTW-66 $y Maxim $y Gun$|. The $y Maxim is by definition an energy weapon, though it behaves like a mass-driver, accelerating caseless uranium slugs along its smoothbore barrel. The $y Maxim has difficulty penetrating shield defenses but its effect on hull plating is devastating. 
 
 Use the $y Maxim at your discretion.", 1311)
 $end_multi_text
@@ -92,7 +92,7 @@ $Ani Filename: Tech_GTW-66_Maxim_Gun.ani
 $Stage Text:
  XSTR("Lamprey
 
-You have also been issued the $y GTW-83 $y Lamprey $y Cannon. A second-generation Leech gun, the $y Lamprey affects the energy systems of your target, draining its weapon, shield, and afterburner reserves. Coupled with a balanced hull and shield damaging weapon, the $y Lamprey is highly effective against smaller vessels.", 1312)
+You have also been issued the $y GTW-83 $y Lamprey $y Cannon$|. A second-generation Leech gun, the $y Lamprey affects the energy systems of your target, draining its weapon, shield, and afterburner reserves. Coupled with a balanced hull and shield damaging weapon, the $y Lamprey is highly effective against smaller vessels.", 1312)
 $end_multi_text
 $Ani Filename: Tech_GTW-83_Lamprey.ani
 +Wave Filename: SM207_CB_05.wav
@@ -100,7 +100,7 @@ $Ani Filename: Tech_GTW-83_Lamprey.ani
 $Stage Text:
  XSTR("Mekhu HL-7
 
-All Terrans be advised that Vasudan fighters and bombers may be equipped with the $y  Mekhu $y HL-7. A modified version of the $y Subach $y HL-7, the $y Mekhu design has been optimized for the reactor grids of Vasudan craft to increase the cannon's rate of fire.", 1313)
+All Terrans be advised that Vasudan fighters and bombers may be equipped with the $y  Mekhu $y HL-7$|. A modified version of the $y Subach $y HL-7, the $y Mekhu design has been optimized for the reactor grids of Vasudan craft to increase the cannon's rate of fire.", 1313)
 $end_multi_text
 $Ani Filename: Tech_Mekhu_HL-7.ani
 +Wave Filename: SM207_CB_06.wav
@@ -222,7 +222,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Allied Command has ordered the $w 203rd to nullify a gas mining operation in the vicinity of our secured perimeter. Reconnaissance has located six $y Rahu -class miners, defended by a screen of sentry guns. Your primary objective is to destroy the miners. Your secondary objective is to neutralize the sentry guns.", 1315)
+ XSTR("Allied Command has ordered the $w 203rd to nullify a gas mining operation in the vicinity of our secured perimeter. Reconnaissance has located six $y Rahu$|-class miners, defended by a screen of sentry guns. Your primary objective is to destroy the miners. Your secondary objective is to neutralize the sentry guns.", 1315)
 $end_multi_text
 $voice: SM207_MB_02.wav
 $camera_pos: 231.638550, 9422.657227, -846.923523
@@ -595,7 +595,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -605,7 +604,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -627,7 +626,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 2" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -637,7 +635,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 96
@@ -659,7 +657,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 3" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -669,7 +666,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 95
@@ -691,7 +688,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 4" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -701,7 +697,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 94
@@ -723,7 +719,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 5" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -733,7 +728,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 93
@@ -755,7 +750,6 @@ $AI Goals: ( goals ( ai-waypoints "Waypoint path 6" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -765,7 +759,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 92
@@ -869,7 +863,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -899,11 +892,11 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 98
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 400
 
@@ -919,7 +912,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -929,11 +921,11 @@ $Arrival Cue: ( has-arrived-delay 2 "Tatenen" )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 6 "Tatenen" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 50
 
@@ -1060,9 +1052,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1073,7 +1063,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1090,9 +1080,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1103,7 +1091,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1120,9 +1108,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1133,7 +1119,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1150,9 +1136,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1163,7 +1147,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1180,9 +1164,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1193,7 +1175,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1210,9 +1192,7 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -1223,7 +1203,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1601,7 +1581,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1665,7 +1644,7 @@ $Arrival Cue: ( is-destroyed-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 10 "Tatenen" ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0

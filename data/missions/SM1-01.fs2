@@ -56,7 +56,7 @@ $Variables:
 $Stage Text:
  XSTR("Welcome to the Aquitaine
 
-This is $w Admiral $w Petrarch, commanding officer of the $f GTD $f Aquitaine. For those squadrons joining us here in $b Vega, welcome aboard. 
+This is $w Admiral $w Petrarch, commanding officer of the $f GTD $f Aquitaine$|. For those squadrons joining us here in $b Vega, welcome aboard. 
 
 With a complement of 150 combat spacecraft, the $f Aquitaine serves as flagship of the $f GTVA $f 3rd $f Fleet, based in the $b Capella system. You join an elite crew of 10,000, the finest officers and enlisted personnel serving the Alliance today.", 507)
 $end_multi_text
@@ -78,7 +78,7 @@ $Stage Text:
 
 Integral to $h NTF ideology is $w Bosch's vision of $h Neo-Terra, a utopian society where the lost grandeur of $b Earth will be restored. $h Bosch and his followers oppose any alliance with the Vasudans as a threat to the future of the human race.
 
-The rebels are entrenched in $b Polaris, $b Regulus, and $b Sirius. But before we hit these strongholds, we must secure $b Epsilon $b Pegasi, $b Alpha $b Centauri, and $b Deneb. These contested systems are now the focal point of allied operations.", 509)
+The rebels are entrenched in $b Polaris, $b Regulus, and $b Sirius$|. But before we hit these strongholds, we must secure $b Epsilon $b Pegasi, $b Alpha $b Centauri, and $b Deneb$|. These contested systems are now the focal point of allied operations.", 509)
 $end_multi_text
 $Ani Filename: cb_sm1-01_c.ani
 +Wave Filename: SM101_CB_03.wav
@@ -86,9 +86,9 @@ $Ani Filename: cb_sm1-01_c.ani
 $Stage Text:
  XSTR("The Battle of Deneb
 
-Allied Command has ordered the $f Aquitaine into the $b Deneb system. There we will reinforce the $f 13th $f Vasudan $f Battle $f Group, led by the $f GVD $f Psamtik. 
+Allied Command has ordered the $f Aquitaine into the $b Deneb system. There we will reinforce the $f 13th $f Vasudan $f Battle $f Group, led by the $f GVD $f Psamtik$|. 
 
-Both the $h NTF and the $f GTVA have sustained heavy casualties in the battle for $b Deneb. In the past seventy-two hours, we have lost the $f GVC $f Andromeda, the $f GTC $f Trafalgar, and over 15 fighter wings. Command anticipates the arrival of the $f Aquitaine and the $f Psamtik will shift the battle for $b Deneb in our favor and force the $h NTF to withdraw to $b Sirius.", 510)
+Both the $h NTF and the $f GTVA have sustained heavy casualties in the battle for $b Deneb$|. In the past seventy-two hours, we have lost the $f GVC $f Andromeda, the $f GTC $f Trafalgar, and over 15 fighter wings. Command anticipates the arrival of the $f Aquitaine and the $f Psamtik will shift the battle for $b Deneb in our favor and force the $h NTF to withdraw to $b Sirius$|.", 510)
 $end_multi_text
 $Ani Filename: cb_sm1-01_d.ani
 +Wave Filename: SM101_CB_04.wav
@@ -98,7 +98,7 @@ $start_briefing
 $num_stages: 4
 $start_stage
 $multi_text
- XSTR("This is $w Captain $w Loukakis, squadron leader of the $w 53rd $w Hammerheads. At 0320 hours, the $f Aquitaine entered the $b Deneb system. $w Admiral $w Petrarch launched fighter and bomber wings as part of an all-out attack against $h NTF positions throughout the system. He has kept the $w Hammerheads on standby, until now.", 511)
+ XSTR("This is $w Captain $w Loukakis, squadron leader of the $w 53rd $w Hammerheads$|. At 0320 hours, the $f Aquitaine entered the $b Deneb system. $w Admiral $w Petrarch launched fighter and bomber wings as part of an all-out attack against $h NTF positions throughout the system. He has kept the $w Hammerheads on standby, until now.", 511)
 $end_multi_text
 $voice: SM101_MB_01.wav
 $camera_pos: -2755.950439, 16520.009766, 16621.408203
@@ -126,7 +126,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("A situation is developing near the inhabited planet of $b Cygnus $b Prime. We have over 100,000 Vasudan refugees fleeing their colonies in transports. Allied ships are rescuing the Vasudans as quickly as possible, though the logistics of this operation leave many refugees still vulnerable to rebel attack.", 512)
+ XSTR("A situation is developing near the inhabited planet of $b Cygnus $b Prime$|. We have over 100,000 Vasudan refugees fleeing their colonies in transports. Allied ships are rescuing the Vasudans as quickly as possible, though the logistics of this operation leave many refugees still vulnerable to rebel attack.", 512)
 $end_multi_text
 $voice: SM101_MB_02.wav
 $camera_pos: -8920.729492, 16520.009766, 16620.251953
@@ -166,7 +166,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("At 0545, we received a distress signal from a refugee convoy 900 clicks, or kilometers, from the outer orbit of $b Cygnus $b Prime. The Vasudans responded with a wing of $y Serapis fighters, designated $f Epsilon, which have just called in for reinforcements. $f Alpha wing, you're going in.", 513)
+ XSTR("At 0545, we received a distress signal from a refugee convoy 900 clicks, or kilometers, from the outer orbit of $b Cygnus $b Prime$|. The Vasudans responded with a wing of $y Serapis fighters, designated $f Epsilon, which have just called in for reinforcements. $f Alpha wing, you're going in.", 513)
 $end_multi_text
 $voice: SM101_MB_03.wav
 $camera_pos: -8920.729492, 16520.009766, 16620.251953
@@ -408,7 +408,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Refugees", 519)
 +Initial Hull: 67
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-main
 +Subsystem: turret02
@@ -420,7 +419,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
++Flags: ( "cargo-known" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -440,7 +439,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Refugees", 519)
 +Initial Hull: 78
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-main
 $Damage: 2
@@ -464,7 +462,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
++Flags: ( "cargo-known" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 97
@@ -513,7 +511,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 97
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -564,7 +561,7 @@ $Departure Cue: ( or
    ( is-destroyed-delay 10 "Iota" ) 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "invulnerable" )
++Flags: ( "cargo-known" "escort" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 96
@@ -644,7 +641,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 24
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Damage: 5
@@ -694,7 +690,7 @@ $Arrival Cue: ( is-event-true-delay "As you wish" 10 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50

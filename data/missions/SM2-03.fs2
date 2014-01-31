@@ -52,7 +52,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("In this mission, the $w 134th will participate in a test of the new $y Pegasus -class stealth fighter, developed for allied operations in the nebula. The unusual design of the $y Pegasus minimizes the EM signature emitted by the fighter, making it all but impossible to detect with sensors. This exercise will be the first simulation of the $y Pegasus under combat conditions in the nebula environment.", 1128)
+ XSTR("In this mission, the $w 134th will participate in a test of the new $y Pegasus$|-class stealth fighter, developed for allied operations in the nebula. The unusual design of the $y Pegasus minimizes the EM signature emitted by the fighter, making it all but impossible to detect with sensors. This exercise will be the first simulation of the $y Pegasus under combat conditions in the nebula environment.", 1128)
 $end_multi_text
 $voice: SM203_MB_01.wav
 $camera_pos: 1990.279663, 563.291321, 1128.158813
@@ -120,7 +120,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Your weapons will be neutralized for the duration of the test. Though you may fire your lasers and missiles, they will inflict only superficial damage against $f Delta wing. Engineers on board the $f GTD $f Aquitaine will monitor the progress of the exercise and gather data to verify the stealth capability and combat potential of the $y Pegasus.", 1130)
+ XSTR("Your weapons will be neutralized for the duration of the test. Though you may fire your lasers and missiles, they will inflict only superficial damage against $f Delta wing. Engineers on board the $f GTD $f Aquitaine will monitor the progress of the exercise and gather data to verify the stealth capability and combat potential of the $y Pegasus$|.", 1130)
 $end_multi_text
 $voice: SM203_MB_03.wav
 $camera_pos: 121.859673, 7432.537109, -1116.354614
@@ -522,7 +522,6 @@ $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Standard Flak" )
@@ -572,7 +571,7 @@ $Departure Cue: ( <
    1500 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" )
++Flags: ( "cargo-known" "protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -596,7 +595,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-play-dead 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -615,7 +613,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
@@ -970,7 +968,6 @@ $AI Goals: ( goals ( ai-chase "Aquitaine" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1003,7 +1000,7 @@ $Departure Cue: ( or
    ( has-departed-delay 10 "Aquitaine" ) 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 60
@@ -2112,7 +2109,7 @@ $Formula: ( when
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Aquitaine" 
    )
 )
@@ -2249,7 +2246,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Aquitaine" ) 75 ) 
    ( send-message 
-      "#Aquitaine" 
+      "Aquitaine" 
       "High" 
       "Aquitaine Damaged" 
    )
@@ -2261,7 +2258,7 @@ $Formula: ( when
 $Formula: ( when 
    ( < ( hits-left "Aquitaine" ) 25 ) 
    ( send-message 
-      "#Aquitaine" 
+      "Aquitaine" 
       "High" 
       "Aquitaine Severely Damaged" 
    )
@@ -2347,7 +2344,7 @@ $Formula: ( when
    ( good-secondary-time 
       "Hostile" 
       100 
-      "Cyclops" 
+      "Shivan Bomb" 
       "Aquitaine" 
    )
 )

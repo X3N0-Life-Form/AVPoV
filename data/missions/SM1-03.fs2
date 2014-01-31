@@ -270,6 +270,7 @@ $Determination: 10
 +Orders Accepted: 97		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 3
 
 $Name: Alpha 3		;! Object #2
 $Class: GTF Myrmidon
@@ -299,6 +300,7 @@ $Determination: 10
 +Orders Accepted: 97		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 0
 
 $Name: Capricorn 1		;! Object #3
 $Class: GTFr Triton
@@ -315,7 +317,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Destination" 80 ) )
 $Cargo 1:  XSTR("Unscannable", 626)
 +Initial Velocity: 55
 +Initial Hull: 89
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Morning Star" )
@@ -334,7 +335,7 @@ $Departure Cue: ( <
    666 
 )
 $Determination: 10
-+Flags: ( "no-shields" "escort" "scannable" )
++Flags: ( "escort" "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -354,14 +355,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Fighter Parts", 573)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Capricorn 1
@@ -385,7 +385,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Jump Destination" 80 ) )
 $Cargo 1:  XSTR("Unscannable", 626)
 +Initial Velocity: 33
 +Initial Hull: 93
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -407,7 +406,7 @@ $Departure Cue: ( <
    666 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "no-shields" "escort" )
++Flags: ( "cargo-known" "protect-ship" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
@@ -426,16 +425,14 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Munitions", 572)
-+Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "red-alert-carry" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Capricorn 2
@@ -459,7 +456,6 @@ $AI Goals: ( goals ( ai-waypoints "Jump Destination" 80 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 69
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02
@@ -494,7 +490,7 @@ $Departure Cue: ( is-event-true-delay
    16 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 1
@@ -602,7 +598,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Rebel Path" 60 ) ( ai-waypoints-once "Ju
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 40
 +Initial Hull: 78
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Terran Turret Weak" )
@@ -637,7 +632,7 @@ $Departure Cue: ( <
    660 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -662,7 +657,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Jump Destination" 80 ) ( ai-waypoints-once "Jump Destination" 60 ) ( ai-chase "Psamtik" 88 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 83
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -695,7 +689,7 @@ $Departure Cue: ( <
    660 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -720,7 +714,6 @@ $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Allied Path" 70 ) ( ai-waypoints-once "Jump Destination" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "" )
@@ -782,7 +775,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -1083,6 +1076,7 @@ $Determination: 10
 +Orders Accepted: 97		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 4
 
 $Name: Beta 2		;! Object #24
 $Class: GTF Myrmidon
@@ -1112,6 +1106,7 @@ $Determination: 10
 +Orders Accepted: 97		;! note that this is a bitfield!!!
 +Group: 0
 +Score: 10
++Persona Index: 4
 
 $Name: Beta 3		;! Object #25
 $Class: GTF Myrmidon
@@ -1458,7 +1453,7 @@ $Formula: ( when
       700 
    )
    ( send-message-list 
-      "#Iceni" 
+      "Iceni" 
       "High" 
       "Efforts to Intercept" 
       9000 
@@ -1570,7 +1565,6 @@ $Formula: ( when
       "Impervious" 
    )
    ( beam-free-all "Impervious" ) 
-;  ( beam-free-all "Glorious" )
 )
 
 +Name: Rebels Armed
@@ -1606,7 +1600,7 @@ $Formula: ( when
       ( is-destroyed-delay 4 "Beta" ) 
    )
    ( send-message-list 
-      "#Psamtik" 
+      "Psamtik" 
       "High" 
       "Delta Launch" 
       5000 
@@ -2285,10 +2279,10 @@ $Starbitmap: NebulB3-Main
 +ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
-$Starbitmap: dneb18
-+Angles: 0.000000 1.308996 0.558505
-+ScaleX: 2.000000
-+ScaleY: 3.000000
+$Starbitmap: NebulB6-Whisp
++Angles: 6.108648 0.000000 4.712385
++ScaleX: 5.000000
++ScaleY: 5.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB5-Whisp

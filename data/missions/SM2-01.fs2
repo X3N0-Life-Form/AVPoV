@@ -31,7 +31,8 @@ $end_multi_text
 	0.005219, 0.000002, -0.999986,
 	0.998399, -0.056324, 0.005211,
 	-0.056323, -0.998413, -0.000296
-+SquadReassignName: 134th Barracuda
+
++SquadReassignName: 134th Barracudas
 +SquadReassignLogo: barracudas.pcx
 
 $AI Profile: myProfile
@@ -56,7 +57,7 @@ $Variables:
 $Stage Text:
  XSTR("News from the Front
 
-At 2150, the $f Colossus entered the $b Polaris system and neutralized the $h NTD $h Andronicus and the $h NTC $h Camisard, securing the jump node from $b Epsilon $b Pegasi. Meanwhile, the $f 13th $f Vasudan $f Battle $f Group has destroyed the $h NTD $h Cyrene and gained foothold in $b Sirius. Intelligence reports that $w Admiral $w Bosch and his elite guard have withdrawn to the rebel enclave of $b Regulus. 
+At 2150, the $f Colossus entered the $b Polaris system and neutralized the $h NTD $h Andronicus and the $h NTC $h Camisard, securing the jump node from $b Epsilon $b Pegasi$|. Meanwhile, the $f 13th $f Vasudan $f Battle $f Group has destroyed the $h NTD $h Cyrene and gained foothold in $b Sirius$|. Intelligence reports that $w Admiral $w Bosch and his elite guard have withdrawn to the rebel enclave of $b Regulus$|. 
 
 Command anticipates a total allied victory in less than 30 days.", 1034)
 $end_multi_text
@@ -66,7 +67,7 @@ $Ani Filename: cb_sm2-01_a.ani
 $Stage Text:
  XSTR("The Subspace Portal
 
-$w Dr. $w Hargrove's task force has determined that the subspace portal in $b Gamma $b Draconis was constructed by the $y Ancients, an extinct civilization discovered near the end of the $y Great $y War. Artifacts excavated in the $b Altair system contained data that enabled the $f GTA and $f PVN to destroy the $h SD $h Lucifer. Many Terran and Vasudan systems once belonged to the $y Ancients' empire, which the Shivans obliterated eight thousand years ago. The portal has been renamed $b $y Knossos, after the Earth's Minoan civilization.", 1035)
+$w Dr. $w Hargrove's task force has determined that the subspace portal in $b Gamma $b Draconis was constructed by the $y Ancients, an extinct civilization discovered near the end of the $y Great $y War$|. Artifacts excavated in the $b Altair system contained data that enabled the $f GTA and $f PVN to destroy the $h SD $h Lucifer$|. Many Terran and Vasudan systems once belonged to the $y Ancients' empire, which the Shivans obliterated eight thousand years ago. The portal has been renamed $b $y Knossos, after the Earth's Minoan civilization.", 1035)
 $end_multi_text
 $Ani Filename: cb_sm2-01_b.ani
 +Wave Filename: SM201_CB_02.wav
@@ -114,7 +115,7 @@ $Ani Filename: cb_sm2-01_e.ani
 $Stage Text:
  XSTR("GTW ML-70 Morning Star
 
-Two next-generation weapons are now available: the $y Morning $y Star and the $y EMP $y Missile. The $y GTW $y ML-70 $y Morning $y Star improves upon the $y Flail gun developed during the $y Great $y War. Recent advances in high-temperature optics enable the primary focusing chamber of the $y Morning $y Star to produce a more coherent charge. Though an energy weapon, the $y Morning $y Star has a powerful kinetic effect on its target.", 1040)
+Two next-generation weapons are now available: the $y Morning $y Star and the $y EMP $y Missile$|. The $y GTW $y ML-70 $y Morning $y Star improves upon the $y Flail gun developed during the $y Great $y War$|. Recent advances in high-temperature optics enable the primary focusing chamber of the $y Morning $y Star to produce a more coherent charge. Though an energy weapon, the $y Morning $y Star has a powerful kinetic effect on its target.", 1040)
 $end_multi_text
 $Ani Filename: Tech_GTW_ML-70.ani
 +Wave Filename: SM201_CB_07.wav
@@ -122,7 +123,7 @@ $Ani Filename: Tech_GTW_ML-70.ani
 $Stage Text:
  XSTR("EMP Missile
 
-The $y EMP $y Missile interferes with the electronics systems of vessels caught within the blast radius of the warhead. The detonation scrambles targeting data and jams communications. Tactically, the EMP is an effective anti-bomber weapon. It prevents these craft from acquiring aspect lock and temporarily shuts down the guidance and propulsion systems of warheads in flight.", 1041)
+The $y EMP $y Missile interferes with the electronics systems of vessels caught within the blast radius of the warhead. The detonation scrambles targeting data and jams communications. Tactically, the $y EMP is an effective anti-bomber weapon. It prevents these craft from acquiring aspect lock and temporarily shuts down the guidance and propulsion systems of warheads in flight.", 1041)
 $end_multi_text
 $Ani Filename: Tech_EMP.ani
 +Wave Filename: SM201_CB_08.wav
@@ -162,7 +163,7 @@ $type: 9
 $team: Friendly
 $class: GTNB Pharos
 $pos: -20.112946, -109.419815, -767.108887
-$label: Capella
+$label: Gamma Draconis
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -170,7 +171,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: 1800.613281, -16.736555, 2023.145874
@@ -194,7 +195,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: -1666.777466, -14.473908, 2046.384399
@@ -208,7 +209,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("In this mission, our primary objective is to escort two $y Triton -class freighters, the $f Erinpura and the $f Vauban. They will enter the nebula at the $b Gamma $b Draconis node and travel to their waypoint, where they will rendezvous with the $f GTCv $f Warspite. Their cargo is the new $y Target $y Acquisition and $y Guidance missile system. ", 1043)
+ XSTR("In this mission, our primary objective is to escort two $y Triton$|-class freighters, the $f Erinpura and the $f Vauban$|. They will enter the nebula at the $b Gamma $b Draconis node and travel to their waypoint, where they will rendezvous with the $f GTCv $f Warspite$|. Their cargo is the new $y Target $y Acquisition and $y Guidance missile system. ", 1043)
 $end_multi_text
 $voice: SM201_MB_02.wav
 $camera_pos: 1136.876709, 21339.244141, 6772.349121
@@ -238,7 +239,7 @@ $type: 9
 $team: Friendly
 $class: GTNB Pharos
 $pos: -20.112946, -109.419815, -767.108887
-$label: Capella
+$label: Gamma Draconis
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -246,7 +247,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: 2018.430054, -16.736059, 5004.134766
@@ -270,7 +271,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: -1478.226929, -14.475400, 4952.784668
@@ -326,7 +327,7 @@ $type: 9
 $team: Friendly
 $class: GTNB Pharos
 $pos: -20.112946, -109.419815, -767.108887
-$label: Capella
+$label: Gamma Draconis
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -334,7 +335,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: 2018.430054, -16.736059, 5004.134766
@@ -358,7 +359,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: -1478.226929, -14.475400, 4952.784668
@@ -414,7 +415,7 @@ $type: 9
 $team: Friendly
 $class: GTNB Pharos
 $pos: -20.112946, -109.419815, -767.108887
-$label: Capella
+$label: Gamma Draconis
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -422,7 +423,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: 2568.628906, -16.737167, 7948.719727
@@ -446,7 +447,7 @@ $multi_text
 $end_multi_text
 $end_icon
 $start_icon
-$type: 12
+$type: 11
 $team: Friendly
 $class: GTFr Triton
 $pos: -1392.126953, -14.475071, 7957.075195
@@ -822,7 +823,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Lucidity Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -835,7 +835,7 @@ $Arrival Cue: ( has-arrived-delay 3 "Vauban" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -857,7 +857,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Erinpura Path" 50 ) )
 $Cargo 1:  XSTR("TAG Missiles", 1054)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -869,7 +868,7 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 1
@@ -891,7 +890,6 @@ $AI Goals: ( goals ( ai-waypoints-once "Vauban Path" 50 ) )
 $Cargo 1:  XSTR("TAG Missiles", 1054)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -900,7 +898,7 @@ $Arrival Cue: ( has-arrived-delay 2 "Erinpura" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" )
++Flags: ( "cargo-known" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 2
@@ -921,7 +919,6 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -954,7 +951,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "hidden-from-sensors" )
++Flags: ( "cargo-known" "hidden-from-sensors" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1288,7 +1285,6 @@ $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Erinpura" 43 ) ( ai-ch
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -1308,7 +1304,7 @@ $Arrival Cue: ( is-destroyed-delay 0 "Libra" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1517,14 +1513,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("TAG Missiles", 1054)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "invulnerable" )
++Flags: ( "cargo-known" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Vauban
@@ -1547,14 +1542,13 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("TAG Missiles", 1054)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "invulnerable" )
++Flags: ( "cargo-known" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Docked With: Erinpura
@@ -2410,7 +2404,7 @@ $Formula: ( and
 #Waypoints		;! 4 lists total
 
 $Jump Node: 151.452057, -109.419754, -1662.140503
-$Jump Node Name: Capella
+$Jump Node Name: Gamma Draconis
 
 $Name: Lucidity Path
 $List: (		;! 4 points in list

@@ -50,7 +50,7 @@ $Next Mission Failure: Blah
 $Stage Text:
  XSTR("Special Operations Command
 
-You have been selected for a covert assignment with $w Special $w Operations $w Command $w (SOC), in conjunction with $w Galactic $w Terran-Vasudan $w Intelligence $w (GTVI). Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the $y GTVA.", 170)
+You have been selected for a covert assignment with $w Special $w Operations $w Command $w (SOC), in conjunction with $w Galactic $w Terran-Vasudan $w Intelligence $w (GTVI)$|. Our primary objective is to provide the Alliance with accurate and comprehensive information regarding the tactics, technologies, activities, and strategic objectives of forces hostile to the $y GTVA$|.", 170)
 $end_multi_text
 $Ani Filename: Cb_loop-a_e.ani
 +Wave Filename: LP2-1_CB_01.wav
@@ -58,7 +58,7 @@ $Ani Filename: Cb_loop-a_e.ani
 $Stage Text:
  XSTR("Lieutenant Commander Snipes
 
-At 0437 reconnaissance units received a coded transmission from $w Lieutenant $w Commander $w Snipes. The Commander's vessel, the $f NTT $f Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The $f Grall was docked to the $h NTC $h Alexandria when the cruiser ran our blockade of the Knossos portal in $b Gamma $b Draconis.", 171)
+At 0437 reconnaissance units received a coded transmission from $w Lieutenant $w Commander $w Snipes$|. The Commander's vessel, the $f NTT $f Grall, is now adrift in a Shivan-infested region of the nebula and will not survive much longer. The $f Grall was docked to the $h NTC $h Alexandria when the cruiser ran our blockade of the Knossos portal in $b Gamma $b Draconis$|.", 171)
 $end_multi_text
 $Ani Filename: Cb_loop-b_b.ani
 +Wave Filename: LP2-1_CB_02a.wav
@@ -86,7 +86,7 @@ $start_briefing
 $num_stages: 3
 $start_stage
 $multi_text
- XSTR("You know why you're here, pilot, so let's get down to work. Recon located a $y Pharos navigation buoy not far from where $w Snipes's transmission was received. Your wing will be inserted at that position to find the $f Grall and make contact with $w Snipes. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
+ XSTR("You know why you're here, pilot, so let's get down to work. Recon located a $y Pharos navigation buoy not far from where $w Snipes's transmission was received. Your wing will be inserted at that position to find the $f Grall and make contact with $w Snipes$|. His transport has been incapacitated, and there's a high probability he's already a goner.", 174)
 $end_multi_text
 $voice: LP2-1_MB_01.wav
 $camera_pos: 420.264740, 13972.686523, 6672.515625
@@ -126,7 +126,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding $w Snipes and the $f Grall. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with $y Tempests and $y Rockeyes.", 175)
+ XSTR("This sector of the nebula is extremely volatile. Recon reports heavy EM interference, scrambling sensors and communications. These buoys are the only chance we have of finding $w Snipes and the $f Grall$|. The EM storm will make aspect lock difficult to acquire and maintain, so we recommend you loadout with $y Tempests and $y Rockeyes$|.", 175)
 $end_multi_text
 $voice: LP2-1_MB_02.wav
 $camera_pos: 842.049438, 14636.061523, 5293.390137
@@ -190,7 +190,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once you locate $w Snipes, call in $f Lambda $f 1. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the $f Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
+ XSTR("Once you locate $w Snipes, call in $f Lambda $f 1$|. This is critical. Do not deploy the recovery craft until you are ready. Our transport will dock with the $f Grall and extract the survivors. You'll need to buy them some time as they complete this procedure. Good hunting. ", 176)
 $end_multi_text
 $voice: LP2-1_MB_03.wav
 $camera_pos: 1039.498047, 15408.145508, 6231.711914
@@ -393,7 +393,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 10
-+Persona Index: 0
++Persona Index: 1
 
 $Name: Alpha 3		;! Object #2
 $Class: GTF Erinyes
@@ -420,7 +420,7 @@ $Determination: 10
 +Respawn priority: 0
 +Group: 0
 +Score: 10
-+Persona Index: 1
++Persona Index: 0
 
 $Name: Alpha 4		;! Object #3
 $Class: GTF Erinyes
@@ -460,15 +460,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -589,15 +587,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 10 "Virgo" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" )
++Flags: ( "cargo-known" "no-arrival-music" "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -616,7 +612,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Personel", 182)
 +Initial Hull: 89
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: engine
 $Damage: 100
@@ -638,7 +633,7 @@ $Arrival Cue: ( <
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" "escort" "no-arrival-music" "no-arrival-warp" )
++Flags: ( "cargo-known" "escort" "no-arrival-music" "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -902,15 +897,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -928,7 +921,6 @@ $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
-+Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 $Arrival Location: Near Ship
@@ -943,7 +935,7 @@ $Departure Cue: ( has-undocked-delay
    2 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "reinforcement" "no-shields" "escort" "no-arrival-warp" )
++Flags: ( "cargo-known" "reinforcement" "escort" "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 0
@@ -962,15 +954,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1195,15 +1185,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1220,15 +1208,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1245,15 +1231,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1270,15 +1254,13 @@ $Orientation:
 $IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Velocity: 33
-+Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -2042,7 +2024,7 @@ $Formula: ( when
    )
    ( do-nothing ) 
 )
-+Name: Teloron Depart
++Name: Lambda Depart
 +Repeat Count: 1
 +Interval: 1
 
@@ -2145,7 +2127,7 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "#Grall" 
+      "Grall" 
       "High" 
       "Hey there" 
    )
@@ -2164,11 +2146,11 @@ $Formula: ( when
       )
    )
    ( send-message-list 
-      "#Grall" 
+      "Grall" 
       "High" 
       "Commence docking" 
       0 
-      "#Grall" 
+      "Grall" 
       "High" 
       "Commence docking 2" 
       7000 
@@ -2181,11 +2163,11 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "Undock" 0 ) 
    ( send-message-list 
-      "#Lambda 1" 
+      "Lambda 1" 
       "High" 
       "Received Crew" 
       0 
-      "#Lambda 1" 
+      "Lambda 1" 
       "High" 
       "Outta here" 
       7000 
@@ -2215,7 +2197,7 @@ $Formula: ( when
    ( has-departed-delay 0 "Lambda 1" ) 
    ( do-nothing ) 
 )
-+Name: Protect Teloron
++Name: Protect Lambda
 +Repeat Count: 1
 +Interval: 1
 +Objective:  XSTR("Protect Lambda 1", 185)
@@ -2277,7 +2259,7 @@ $Formula: ( when
       4 
    )
    ( send-message 
-      "#Grall" 
+      "Grall" 
       "High" 
       "Alexandria was" 
    )
@@ -2307,7 +2289,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "#Grall" 
+      "Grall" 
       "High" 
       "17 of us" 
    )
@@ -2334,7 +2316,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "#Grall" 
+      "Grall" 
       "High" 
       "The Alexandria deployed" 
    )
@@ -2364,7 +2346,7 @@ $Formula: ( when
       2 
    )
    ( send-message 
-      "#Grall" 
+      "Grall" 
       "High" 
       "Yeah, but I" 
    )
