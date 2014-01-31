@@ -4,16 +4,14 @@ $Version: 0.10
 $Name:  XSTR("Fangs in the Mist", -1)
 $Author: X3N0-Life-Form
 $Created: 04/03/10 at 21:24:44
-$Modified: 10/13/12 at 12:03:00
+$Modified: 01/31/14 at 18:09:29
 $Notes:
 Fairly easy.$End Notes:
 
 $Mission Desc:
  XSTR("The mission introducing the SD Vampire.", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 262276
 +NebAwacs: 3000.000000
 
@@ -23,18 +21,15 @@ $end_multi_text
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -6853.439453, 3878.870117, -327.092987
++Viewer pos: -3348.920898, 825.271179, 5387.271484
 +Viewer orient:
-	0.943679, 0.000006, -0.330864,
-	0.134977, 0.912996, 0.384993,
-	0.302080, -0.407969, 0.861574
+	0.974451, 0.000001, 0.224602,
+	-0.094646, 0.906879, 0.410624,
+	-0.203687, -0.421391, 0.883709
 
 $Starting wing names: ( "Alpha" "Epsilon" "Gamma" )
 
@@ -65,7 +60,7 @@ $Formula: ( true )
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTC Fenris
+$class: Volition Bravos
 $pos: 243.431702, 303.057495, -557.291626
 $label: Gamma Draconis
 +id: 1
@@ -121,7 +116,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Instead of blockading the $y subspace $y portal, which would prevent further studies of the device, we will defend the node on this end. Several allied capital ships will be patroling the nebula within a relatively small radius around the $b Gamma $b Draconnis node.
+ XSTR("Instead of blockading the $y subspace $y portal, which would prevent further studies of the device, we will defend the node on this end. Several allied capital ships will be patroling the nebula within a relatively small radius around the $b Gamma $b Draconis node.
 
 Our squadron has been assigned with the task of escorting these warships as they sweep the area and engage any hostile forces.", -1)
 $end_multi_text
@@ -139,7 +134,7 @@ $Formula: ( true )
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTC Fenris
+$class: Volition Bravos
 $pos: 243.431702, 303.057495, -557.291626
 $label: Gamma Draconis
 +id: 1
@@ -238,7 +233,7 @@ $Formula: ( true )
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTC Fenris
+$class: Volition Bravos
 $pos: 243.431702, 303.057495, -557.291626
 $label: Gamma Draconis
 +id: 1
@@ -321,7 +316,7 @@ $pos: 221.309830, 0.000046, 623.811401
 $label: GVC Melek
 +id: 8
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -360,7 +355,7 @@ $Formula: ( true )
 $start_icon
 $type: 33
 $team: Friendly
-$class: GTC Fenris
+$class: Volition Bravos
 $pos: 243.431702, 303.057495, -557.291626
 $label: Gamma Draconis
 +id: 1
@@ -443,7 +438,7 @@ $pos: 221.309830, 0.000046, 623.811401
 $label: GVC Melek
 +id: 8
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -462,12 +457,12 @@ $end_icon
 $start_icon
 $type: 6
 $team: Hostile
-$class: SD Ravana
+$class: SD Demon
 $pos: -935.069885, -0.000288, 1042.922363
 $label: Shivan Destroyer
 +id: 11
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -475,11 +470,11 @@ $start_icon
 $type: 28
 $team: Hostile
 $class: SF Mara
-$pos: -724.552429, 0.000273, 583.157471
+$pos: -651.250122, 0.000211, 488.611481
 $label: Shivan Corvettes
 +id: 12
 $hlight: 0
-$mirror: 0
+$mirror: 1
 $multi_text
 $end_multi_text
 $end_icon
@@ -527,10 +522,10 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Mekhu HL-7"	20
+	"Mekhu HL-7"	17
 	"Morning Star"	4
 	"Prometheus R"	8
-	"Hayg Mas"	4
+	"Hayg Mas"	7
 	"Rockeye"	40
 	"Tempest"	3440
 	"Hornet"	1500
@@ -538,7 +533,7 @@ $Ship Choices: (
 	"Circe"	3
 )
 
-#Objects		;! 41 total
+#Objects		;! 38 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Tauret
@@ -553,6 +548,7 @@ $AI Goals: ( goals ( ai-guard "Melek" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Hayg Mas" "Mekhu HL-7" )
 +Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -575,11 +571,11 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: Colonel
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Hayg Mas" "Mekhu HL-7" )
 +Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -603,11 +599,11 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: Major
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Hayg Mas" "Mekhu HL-7" )
 +Secondary Banks: ( "Tempest" "Hornet" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -720,7 +716,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Subsystem: Turret01
 +AI Class: Colonel
-+Primary Banks: ( "Standard Flak" )
++Primary Banks: ( "Wraith" )
 +Subsystem: Turret02
 +Primary Banks: ( "Wraith" )
 +Subsystem: Turret03
@@ -736,9 +732,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Turret13
 +Subsystem: Turret14
 +Subsystem: Turret15
-+Primary Banks: ( "SVas" )
++Primary Banks: ( "Mass Driver" )
 +Subsystem: Turret16
-+Primary Banks: ( "SVas" )
++Primary Banks: ( "Mass Driver" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -812,11 +808,12 @@ $Class: SC Cain
 $Team: Hostile
 $Location: -2514.466064, 303.057587, 185.031830
 $Orientation:
-	0.238244, 0.151835, -0.959264,
-	0.260504, 0.941521, 0.213725,
+	-0.246354, -0.181500, 0.952035,
+	-0.252849, -0.936256, -0.243919,
 	0.935617, -0.300811, 0.184758
 $AI Behavior: None
 +AI Class: Major
+$AI Goals: ( goals ( ai-waypoints-once "shambler path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -993,7 +990,7 @@ $Arrival Cue: ( is-destroyed-delay 0 "Shambler" )
 $Departure Location: Hyperspace
 $Departure Cue: ( is-destroyed-delay 25 "Melek" ) 
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "no-shields" "escort" "guardian" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -1002,12 +999,10 @@ $Determination: 10
 +Use Table Score:
 +Score: 670
 $Texture Replace:
-+old: capital04-01
-+new: capital04-01_cmd
-+old: capital04-03-glow
-+new: capital04-03_cmd-glow
-+old: corvstile2
-+new: corvstile2_cmd
++old: supertile1-glow
++new: supertile1_cmd-glow
++old: scap02-glow
++new: scap02_cmd-glow
 +old: htlravana-glow
 +new: htlravana_cmd-glow
 +old: scap02-glow
@@ -1067,33 +1062,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Aries 3		;! Object #16
-$Class: SF Manticore
-$Team: Hostile
-$Location: 3562.509766, 0.000844, 2473.427246
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 12
-
-$Name: Gemini 1		;! Object #17
+$Name: Gemini 1		;! Object #16
 $Class: SB Nahema
 $Team: Hostile
 $Location: 4091.124756, 361.762268, 3347.997070
@@ -1121,7 +1090,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 2		;! Object #18
+$Name: Gemini 2		;! Object #17
 $Class: SB Nahema
 $Team: Hostile
 $Location: 3689.053223, 361.762360, 3191.818604
@@ -1149,7 +1118,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 3		;! Object #19
+$Name: Gemini 3		;! Object #18
 $Class: SB Nahema
 $Team: Hostile
 $Location: 3939.111816, 361.762238, 3605.317139
@@ -1176,7 +1145,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Cancer 1		;! Object #20
+$Name: Cancer 1		;! Object #19
 $Class: SF Basilisk
 $Team: Hostile
 $Location: 1996.229980, -77.157883, 718.202271
@@ -1202,7 +1171,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 2		;! Object #21
+$Name: Cancer 2		;! Object #20
 $Class: SF Basilisk
 $Team: Hostile
 $Location: 2524.489746, -0.000038, 942.696289
@@ -1228,7 +1197,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 3		;! Object #22
+$Name: Cancer 3		;! Object #21
 $Class: SF Basilisk
 $Team: Hostile
 $Location: 2114.649414, -0.000044, 466.214661
@@ -1254,33 +1223,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Cancer 4		;! Object #23
-$Class: SF Basilisk
-$Team: Hostile
-$Location: 2339.873291, 175.971924, 659.076965
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Subsystem: Pilot
-+Secondary Banks: ( "Hornet" "Hornet" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 12
-
-$Name: Libra 1		;! Object #24
+$Name: Libra 1		;! Object #22
 $Class: SF Mara
 $Team: Hostile
 $Location: 2447.813721, -476.781616, 515.476501
@@ -1308,7 +1251,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra 2		;! Object #25
+$Name: Libra 2		;! Object #23
 $Class: SF Mara
 $Team: Hostile
 $Location: 2507.776367, -476.783142, 210.222168
@@ -1336,7 +1279,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Libra 3		;! Object #26
+$Name: Libra 3		;! Object #24
 $Class: SF Mara
 $Team: Hostile
 $Location: 3214.815186, -476.783203, 447.157257
@@ -1364,7 +1307,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Epsilon 1		;! Object #27
+$Name: Epsilon 1		;! Object #25
 $Class: GVF Thoth
 $Team: Friendly
 $Location: -980.565247, -0.000270, -199.111160
@@ -1392,7 +1335,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Epsilon 2		;! Object #28
+$Name: Epsilon 2		;! Object #26
 $Class: GVF Thoth
 $Team: Friendly
 $Location: -825.611938, -0.000203, -20.773836
@@ -1420,7 +1363,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Epsilon 3		;! Object #29
+$Name: Epsilon 3		;! Object #27
 $Class: GVF Thoth
 $Team: Friendly
 $Location: -737.854492, -0.000293, -116.631020
@@ -1448,7 +1391,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 1		;! Object #30
+$Name: Gamma 1		;! Object #28
 $Class: GVF Horus
 $Team: Friendly
 $Location: -1033.460571, -0.000426, 1779.753784
@@ -1476,7 +1419,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 2		;! Object #31
+$Name: Gamma 2		;! Object #29
 $Class: GVF Horus
 $Team: Friendly
 $Location: -667.916687, -0.000389, 1462.480225
@@ -1503,7 +1446,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 3		;! Object #32
+$Name: Gamma 3		;! Object #30
 $Class: GVF Horus
 $Team: Friendly
 $Location: -909.472229, -0.000327, 1447.390747
@@ -1531,35 +1474,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Libra 4		;! Object #33
-$Class: SF Mara
-$Team: Hostile
-$Location: 2249.469727, -150.112000, 244.848373
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Laser" "Shivan Heavy Laser" )
-+Secondary Banks: ( "Hornet#Weak" "Rockeye" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 12
-
-$Name: Delta 1		;! Object #34
+$Name: Delta 1		;! Object #31
 $Class: GVF Seth
 $Team: Friendly
 $Location: 508.336395, -0.002597, -941.554749
@@ -1586,7 +1501,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Delta 2		;! Object #35
+$Name: Delta 2		;! Object #32
 $Class: GVF Seth
 $Team: Friendly
 $Location: 233.731949, -0.002680, -988.507507
@@ -1613,7 +1528,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Delta 3		;! Object #36
+$Name: Delta 3		;! Object #33
 $Class: GVF Seth
 $Team: Friendly
 $Location: 205.206482, -0.002757, -859.618896
@@ -1640,7 +1555,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Beta 1		;! Object #37
+$Name: Beta 1		;! Object #34
 $Class: GVF Serapis
 $Team: Friendly
 $Location: 4323.771484, -0.000078, 972.451111
@@ -1668,7 +1583,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Beta 2		;! Object #38
+$Name: Beta 2		;! Object #35
 $Class: GVF Serapis
 $Team: Friendly
 $Location: 4738.107910, 0.000057, 753.956238
@@ -1696,7 +1611,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Beta 3		;! Object #39
+$Name: Beta 3		;! Object #36
 $Class: GVF Serapis
 $Team: Friendly
 $Location: 4833.225098, 0.000089, 963.608093
@@ -1724,7 +1639,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Beta 4		;! Object #40
+$Name: Beta 4		;! Object #37
 $Class: GVF Serapis
 $Team: Friendly
 $Location: 4734.378418, -0.000119, 1095.112427
@@ -1768,6 +1683,7 @@ $Ships: (		;! 3 total
 	"Alpha 2"
 	"Alpha 3"
 )
+$AI Goals: ( goals ( ai-guard "Melek" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -1799,7 +1715,10 @@ $Special Ship: 0		;! Leo 1
 
 $Arrival Location: Hyperspace
 +Arrival delay: 18
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( is-event-true-delay 
+   "stop accelerating" 
+   0 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 2 total
@@ -1844,10 +1763,9 @@ $Arrival Anchor: Gemini 1
 $Arrival Cue: ( has-arrived-delay 0 "Gemini" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 3 total
+$Ships: (		;! 2 total
 	"Aries 1"
 	"Aries 2"
-	"Aries 3"
 )
 $AI Goals: ( goals ( ai-guard-wing "Gemini" 50 ) )
 +Flags: ( )
@@ -1884,11 +1802,10 @@ $Arrival Anchor: Melek
 $Arrival Cue: ( is-destroyed-delay 6 "Gemini" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 4 total
+$Ships: (		;! 3 total
 	"Cancer 1"
 	"Cancer 2"
 	"Cancer 3"
-	"Cancer 4"
 )
 $AI Goals: ( goals ( ai-chase "Melek" 50 ) ( ai-chase-wing "Alpha" 45 ) )
 +Flags: ( )
@@ -1906,11 +1823,10 @@ $Arrival Anchor: Melek
 $Arrival Cue: ( has-arrived-delay 4 "Cancer" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 4 total
+$Ships: (		;! 3 total
 	"Libra 1"
 	"Libra 2"
 	"Libra 3"
-	"Libra 4"
 )
 $AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) ( ai-chase "Melek" 45 ) )
 +Flags: ( )
@@ -2017,11 +1933,35 @@ $Formula: ( when
    ( true ) 
    ( never-warp "Alpha 1" ) 
    ( set-post-effect "lightshafts" 100 ) 
+   ( fade-out ) 
+   ( set-time-compression 102400 ) 
+   ( set-immobile 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Melek" 
+   )
 )
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( fade-in 750 ) 
+   ( reset-time-compression ) 
+   ( set-mobile 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Melek" 
+   )
+)
++Name: stop accelerating
++Repeat Count: 1
++Interval: 1
++Chained: 1800
 
 $Formula: ( when 
    ( true ) 
@@ -2144,20 +2084,29 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 2 "Cancer" ) 
-   ( send-message-list 
+   ( send-message 
       "Melek" 
       "High" 
       "Cancer arrived - melek" 
-      6000 
-      "#Command" 
-      "High" 
-      "Deploying gamma - cmd" 
    )
 )
 +Name: msg - Cancer arrived
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Deploying gamma - cmd" 
+   )
+)
++Name: msg - deploying gamma
++Repeat Count: 1
++Interval: 1
++Chained: 6
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Cancer" ) 
@@ -2186,7 +2135,6 @@ $Formula: ( when
       "High" 
       "Shambler arrived - melek" 
    )
-   ( beam-lock "Shambler" "turret07" ) 
    ( cap-waypoint-speed "Melek" 1 ) 
    ( ship-maneuver 
       "Melek" 
@@ -2208,47 +2156,17 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( fire-beam 
-      "Shambler" 
-      "turret07" 
-      "Melek" 
-      "navigation" 
+   ( set-object-position 
+      "shambler path:1" 
+      ( get-object-x "Melek" ) 
+      ( + ( get-object-y "Melek" ) 500 ) 
+      ( get-object-z "Melek" ) 
    )
 )
-+Name: Shambler firing
-+Repeat Count: 1
-+Interval: 1
-+Chained: 4
-+Team: 0
-
-$Formula: ( when 
-   ( true ) 
-   ( sabotage-subsystem 
-      "Melek" 
-      "navigation" 
-      100 
-   )
-   ( send-message 
-      "Melek" 
-      "High" 
-      "Shambler firing - melek" 
-   )
-)
-+Name: blast nav
-+Repeat Count: 1
-+Interval: 1
-+Chained: 3
-+Team: 0
-
-$Formula: ( when 
-   ( true ) 
-   ( beam-free-all "Shambler" ) 
-)
-+Name: beam free shambler
-+Repeat Count: 1
-+Interval: 1
-+Chained: 28
-+Team: 0
++Name: update shambler path
++Repeat Count: 200
++Interval: 5
++Chained: 0
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Pisces" ) 
@@ -2262,15 +2180,10 @@ $Formula: ( when
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Shambler" ) 
-   ( send-message-list 
+   ( send-message 
       "#Command" 
       "High" 
       "Shambler destroyed 1 - cmd" 
-      2500 
-      "Melek" 
-      "High" 
-      "Shambler destroyed 2 - melek" 
-      4000 
    )
    ( beam-lock-all "Melek" ) 
    ( cap-waypoint-speed "Melek" -1 ) 
@@ -2334,6 +2247,7 @@ $Formula: ( when
       "<all engines>" 
       100 
    )
+   ( beam-free-all "Unknown Ravana" ) 
 )
 +Name: msg 2 - cmd
 +Repeat Count: 1
@@ -2348,7 +2262,6 @@ $Formula: ( when
       "High" 
       "Vampire arrived 3 - melek" 
    )
-   ( beam-free-all "Unknown Ravana" ) 
 )
 +Name: msg 3 - melek
 +Repeat Count: 1
@@ -2398,7 +2311,7 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
-+Objective:  XSTR(" return to base", -1)
++Objective:  XSTR("Return to base", -1)
 +Team: 0
 
 $Formula: ( when 
@@ -2466,7 +2379,7 @@ $Formula: ( and
 )
 +Score: 50
 
-#Waypoints		;! 1 lists total
+#Waypoints		;! 2 lists total
 
 $Name: Melek path
 $List: (		;! 3 points in list
@@ -2475,7 +2388,12 @@ $List: (		;! 3 points in list
 	( 8219.822266, 0.002189, 170.918365 )
 )
 
-#Messages		;! 18 total
+$Name: shambler path
+$List: (		;! 1 points in list
+	( 459.713470, -0.000045, 1557.022461 )
+)
+
+#Messages		;! 16 total
 
 
 $Name: Leo destroyed - melek
@@ -2512,7 +2430,7 @@ $Name: Deploying gamma - cmd
 $Team: -1
 $MessageNew:  XSTR("Acknowledged. We are deploying gamma wing now. Hang in there Melek.", -1)
 $end_multi_text
-+AVI Name: Head-CM1
++AVI Name: Head-CM2
 
 $Name: Shambler arrived - melek
 $Team: -1
@@ -2522,13 +2440,13 @@ $end_multi_text
 
 $Name: Vampire arrived 1 - melek
 $Team: -1
-$MessageNew:  XSTR("Command, a Ravana class destroyer has entered the field of engagement !", -1)
+$MessageNew:  XSTR("Command, a Ravana class destroyer has entered the field of engagement!", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
 $Name: Vampire arrived 2 - cmd
 $Team: -1
-$MessageNew:  XSTR("Get out of there Melek ! You are no match for that destroyer.", -1)
+$MessageNew:  XSTR("Get out of there Melek! Jump out now!", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
@@ -2558,19 +2476,7 @@ $end_multi_text
 
 $Name: Vampire arrived 3 - melek
 $Team: -1
-$MessageNew:  XSTR("Roger that, we'll be jump ready in 20 seconds.", -1)
-$end_multi_text
-+AVI Name: Head-VC
-
-$Name: Shambler firing - melek
-$Team: -1
-$MessageNew:  XSTR("Direct hit to nav control. Once the Shambler is destroyed, we'll have to redo our jump calculations.", -1)
-$end_multi_text
-+AVI Name: Head-VC
-
-$Name: Shambler destroyed 2 - melek
-$Team: -1
-$MessageNew:  XSTR("Rerouting our targeting computers on navigation. It will take a while until we can jump.", -1)
+$MessageNew:  XSTR("Roger that, we'll be jump ready in 10 seconds.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
@@ -2591,9 +2497,9 @@ $end_multi_text
 
 #Background bitmaps		;! 0 total
 
-$Num stars: 500
+$Num stars: 0
 $Ambient light level: 7895160
-+Neb2: 02
++Neb2: nbackyellow
 
 +Neb2Flags: 36
 

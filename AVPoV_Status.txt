@@ -49,7 +49,7 @@ A_Intro_00.									//ToDo
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-A_Intro_01.The Viper's Sting							//AlphaReady
+A_Intro_01.The Viper's Sting							//Alpha Ready
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
 		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;
@@ -104,11 +104,10 @@ A_Intro_02.Blue Storm								//Needs messages
 # Losses : GTD Wizard ; GVCv Glamdring ; GVC Harakhti ; GVC Somtus (optionnal) ;#
 #	GTCv Yakiba ; GVC Melek ; GVCv Sphinx ;	GVC Ennead ;			#	
 ///////////////////////////////////////////////////////////////////////////////////
-B_Vampire_Arc_01.Fangs in the Mist						//?
+B_Vampire_Arc_01.Fangs in the Mist						//Alpha Ready
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		New equipment : Hayg Mas
-		Background : todo
 		FS2 Timeline : After "Slaying Ravana"
 
 		Introduction of the SD Vampire. Alpha wing escorts the GVC Melek.

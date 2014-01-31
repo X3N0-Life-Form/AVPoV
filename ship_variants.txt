@@ -495,7 +495,7 @@ Sobek:
 	turret 02:Wraith/Heavy Flak
 	turret 05:Wraith/Heavy Flak
 
-Mentu:		Beam
+Mentu:		Beam		//no longer needed
 	turret 01:Standard Flak/Wraith
 	turret 15:SVas
 	turret 16:SVas
