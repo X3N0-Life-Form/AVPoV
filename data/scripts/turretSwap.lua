@@ -13,6 +13,14 @@ for index=0, #mn.Ships do
 		end
 
 	end
+	
 	-- gunships
 	---- need to decide on weapon packages first
+	---- examples:
+	--		long range support
+	--		close range support
+	--		anti-capital support
+	--		hull/shield repair
+	--		kinetic support
+	--		disarm/disable
 end
