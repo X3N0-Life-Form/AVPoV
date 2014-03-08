@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////
-		Shivan Ships
+//		Shivan Ships
 /////////////////////////////////////////////////////--add stalker & streaker
+--TODO: put actual turret names in there
 Sathanas:	Multi-purpose Juggernaught
 	turret 05:MRed
 	turret 06:MRed
@@ -88,7 +89,8 @@ Lucifer:	Planetary Bombardment Super Destroyer
 
 Ravana :	Battle Destroyer
 	hull:  200k
-	armor: Shivan Elite Armor (on turrets as well)
+	armor: Shivan Elite Armor
+	turret armor: Shivan Elite Armor
 	turret 01:LRed - Hell Armor
 	turret 02:LRed - Hell Armor
 	turret 03:MRedUp - Hell Armor
