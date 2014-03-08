@@ -3084,7 +3084,7 @@ $Species:					Terran
 		Despite being a severely under-tested spaceframe, the Sparta has demonstrated an extensive versatility and endurance, its on-board logistics facilities making field repairs easier, but more importantly allowing correction of design flaws as they are discovered without needing to send the ships back to dock.", -1)
 	$end_multi_text
 $POF file:					diomedes.pof
-$Detail distance:			(0, 5000, 5000, 10000)
+$Detail distance:			(0, 5000);, 5000, 10000)
 $Damp:						0.2
 $Rotdamp:					0.6
 $Max Velocity:				0.0, 0.0, 25.0
@@ -3261,7 +3261,7 @@ $Species:					Terran
 	Mounting the 'Pulsar Lance' weapon system, the original Sparta design was meant to be the Alliance's response to the Shivan threat, providing an extremely versatile platform for both special assignments and front line duties. By the end of the Battle of Capella, only one of the original prototypes remained unchanged, and was deployed to assist the GTD Streaker on its final assignment, marking the first combat deployment of a Lance-capable warship.", -1)
 	$end_multi_text
 $POF file:					diomedes.pof
-$Detail distance:			(0, 5000, 5000, 10000)
+$Detail distance:			(0, 5000);, 5000, 10000)
 $Damp:						0.2
 $Rotdamp:					0.6
 $Max Velocity:				0.0, 0.0, 25.0
@@ -3447,7 +3447,7 @@ $Species:					Terran
 	
 	Following the tremendous success of Lance-capable corvettes Selket and Sparta after the events of Capella, the GTVA Security Council green-litted the research and development of true assault warships and hunter-killer combat groups. The first product of this endeavor is the Stratos-class Corvette. Based on the Sparta design, the Stratos carries a single forward-facing 'Cluster Lance' weapon system, supplemented by a pair of fast-firing upper medium class Terran beams as its main anti-ship weapon array, sacrificing the Sparta's missile tubes and fighter bay for additional shock power.
 	
-	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capabilities are on par with its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independent close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
+	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capabilities are superior to its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independent close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
 $end_multi_text
 $POF file:					corvette3t-03.pof
 $Detail distance:			(0, 4500, 4500, 10000)
