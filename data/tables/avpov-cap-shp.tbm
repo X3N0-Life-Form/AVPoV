@@ -2626,6 +2626,151 @@ $Subsystem:		engine,				35,0.0
 $Subsystem:		weapons,			15,0.0
 $Subsystem:		navigation,			5,0.0
 
+
+$Name:		SCv Scylla
+$Short name:					SCorvette2
+$Species:						Shivan
+	+Tech Description:
+		XSTR("TODO - post Capella corvette", -1)
+	$end_multi_text
+$POF file:						ScyllaRelease.pof
+$Detail distance:				(0, 1600, 3200, 7000)
+$Show damage:					YES
+$Density:						30000
+$Damp:							0.25
+$Rotdamp:						2.0
+$Max Velocity:					0.0, 0.0, 30.0
+$Rotation time:					110.0, 110.0, 95.0
+$Rear Velocity:					0.0
+$Forward accel:					8.0
+$Forward decel:					4.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				250.0
+$Expl outer rad:				1350.0
+$Expl damage:					200.0
+$Expl blast:					11000.0
+$Expl Propagates:				YES
+$Shockwave Speed:				650.0
+$Shockwave Count: 				3
+$Default PBanks: 				()
+$Default SBanks:				()
+$SBank Capacity: 				()
+$Shields: 						0
+$Power Output:					120.0
+$Max Oclk Speed: 				60.0
+$Max Weapon Eng: 				120.0
+$Hitpoints:						90000
+$Armor Type:					Shivan Capital Ship Armor
+$Flags:							( "big damage" "corvette" "in tech database" )
+$AI Class:						Captain
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:						2000
+$EngineSnd:						134
+$Closeup_pos:					0.0, 0.0, -800
+$Closeup_zoom:					0.6
+$Score:							440
+$Subsystem:		turret01,5.0,1.0
+	$Default PBanks:	( "MRed" "MRed" )
+	$Flags: 			( "check hull" "fire down normals" "use multiple guns" )
+$Subsystem:		turret02,5.0,1.0
+	$Default PBanks: 	( "MRed" "MRed" ) 
+	$Flags: 			( "check hull" "fire down normals" "use multiple guns" )
+$Subsystem:		turret03,5.0,1.0
+	$Default PBanks: 	( "MRed" "MRed" )
+	$Flags: 			( "check hull" "fire down normals" "use multiple guns" )
+$Subsystem:		turret04,1.0,1.0
+	$Default PBanks:	( "Standard Flak")
+	$Flags:				( "check hull" "fire down normals" "fire on Target")
+$Subsystem:		turret05,1.0,1.0
+	$Default PBanks: 	( "Standard Flak")
+	$Flags:				( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret06,1.0,1.0
+	$Default PBanks: 	( "SAAA")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret07,1.0,1.0
+	$Default PBanks: 	( "SAAA")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret08,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret09,1.0,1.0
+	$Default PBanks:	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret10,1.0,1.0
+	$Default PBanks: 	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret11,1.0,1.0
+	$Default PBanks:	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem:	 	turret12,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret13,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret14,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret15,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret16,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret17,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem:		turret18,1.0,1.0
+	$Default PBanks: 	( "Shivan Lance" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret19,1.0,1.0
+	$Default PBanks: 	( "Shivan Lance" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret20,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret21,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret22,1.0,1.0
+	$Default SBanks: 	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret23,1.0,1.0
+	$Default SBanks: 	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret24,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret25,1.0,1.0
+	$Default PBanks: 	( "Shivan Turret Laser Up")
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret26,1.0,1.0
+	$Default PBanks: 	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret27,1.0,1.0
+	$Default PBanks: 	( "Standard Flak" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret28,1.0,1.0
+	$Default PBanks: 	( "Shivan Lance" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	turret29,1.0,1.0
+	$Default PBanks:	( "Shivan Lance" )
+	$Flags: 			( "check hull" "fire down normals" "fire on Target")
+$Subsystem: 	engine01, 5, 0.0
+	$Engine Wash: Default500
+$Subsystem: 	engine02, 5, 0.0
+	$Engine Wash: Default500
+$Subsystem: communications, 5,0.0
+$Subsystem: sensors, 5,0.0
+$Subsystem: navigation, 5,0.0
+$Subsystem: weapons, 5,0.0
+$Subsystem: reactor, 5,0.0
+$Subsystem: fighterbay, 0,0.0
+
+
+
 $Name:                          GVC Mentu Enforcer
 $Short name:					HTL-Mentu-b.pof
 $Species:                       Vasudan
@@ -3450,7 +3595,7 @@ $Species:					Terran
 	With a full array of Pulsar Lance weapon systems, six anti-fighter beams and five Advanced Flak turrets, the Stratos' anti-fighter capabilities are superior to its predecessor. In addition, the corvette is equipped with a class-1 subspace jamming suite, impairing (but not blocking entirely) hostile independent close-range subspace strikes. The jamming suite is ineffective against TAG-based subspace strikes.", -1 )
 $end_multi_text
 $POF file:					corvette3t-03.pof
-$Detail distance:			(0, 4500, 4500, 10000)
+$Detail distance:			(0, 4500);, 4500, 10000)
 $Density:					1
 $Damp:						0.2
 $Rotdamp:					0.6
