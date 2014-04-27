@@ -31,12 +31,12 @@ function parseVariantFile(fileName)
 					if (matrix[className] == nil) then
 						matrix[className] = {}
 					end
-					ba.print("className="..className.."; variantName="..variantName)
+					ba.print("parseVariantFile: className="..className.."; variantName="..variantName)
 					matrix[className][variantName] = {}
 				else
 					attributeName = trim(string.sub(line, 0, cut - 1))		-- turret, hull, armor
 					attributeValue = trim(string.sub(line, cut + 1))		-- weapon type, armor type, hull value
-					ba.print("attributeName="..attributeName.."; attributeValue="..attributeValue)
+					ba.print("parseVariantFile: attributeName="..attributeName.."; attributeValue="..attributeValue)
 					matrix[className][variantName][attributeName] = attributeValue
 				end
 				--TODO: error proof previous if then else block
@@ -47,7 +47,7 @@ function parseVariantFile(fileName)
 		file:close()
 		return matrix
 	else
-		ba.warning("Variant file not found "..filename)
+		ba.warning("parseVariantFile: Variant file not found "..filename)
 		return nil
 	end
 end
@@ -62,7 +62,7 @@ function setVariant(shipName, variantName)
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
 	if (ship == nil) then
-		ba.warning("Could not find ship "..shipName)
+		ba.warning("setVariant: Could not find ship "..shipName)
 		return nil
 	end
 	local className = ship.Class.Name
@@ -81,16 +81,16 @@ function setVariant(shipName, variantName)
 		elseif (attribute == "subsystem armor") then
 			subsystemArmor = value
 		else -- turret
-			-- TODO: multi-bank stuff
-			ba.warning("Weapon class="..value.."; attribute="..attribute)
-			--ba.warning(ship[attribute])
-			--for i = 0, #ship do
-			--	ba.warning(ship[i])
-			--end
 			if (ship[attribute].PrimaryBanks) then -- primary banks
-				ship[attribute].PrimaryBanks[1].WeaponClass = tb.WeaponClasses[value]
+				for i = 0, #ship[attribute].PrimaryBanks do
+					ba.print("setVariant: Prim "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name)
+					ship[attribute].PrimaryBanks[i].WeaponClass = tb.WeaponClasses[value]
+				end
 			else -- secondary banks
-				ship[attribute].SecondaryBanks[1].WeaponClass = tb.WeaponClasses[value]
+				for i = 0, #ship[attribute].SecondaryBanks do
+					ba.print("setVariant: Sec "..attribute.." - "..ship[attribute].SecondaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name)
+					ship[attribute].SecondaryBanks[i].WeaponClass = tb.WeaponClasses[value]
+				end
 			end
 		end
 		

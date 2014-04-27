@@ -1,447 +1,447 @@
 /////////////////////////////////////////////////////
 //		Shivan Ships
 /////////////////////////////////////////////////////--add stalker & streaker
---TODO- put actual turret names in there
+--TODO- put actual turretnames in there
 $SJ Sathanas:	Multi-purpose Juggernaught
-	turret 05:MRed
-	turret 06:MRed
-	turret 17:MRed
-	turret 18:Mred
+	turret05:MRed
+	turret06:MRed
+	turret17:MRed
+	turret18:Mred
 	--------------
-	turret 28:SAAA
-	turret 29:MRed
-	turret 30:SAAA
-	turret 31:MRed
-	turret 32:SAAA
-	turret 33:MRed
-	turret 34:SAAA
-	turret 35:MRed
+	turret28:SAAA
+	turret29:MRed
+	turret30:SAAA
+	turret31:MRed
+	turret32:SAAA
+	turret33:MRed
+	turret34:SAAA
+	turret35:MRed
 
-	turret 39:SAAA
-	turret 40:MRed
-	turret 41:SAAA
-	turret 42:MRed
-	turret 43:SAAA
-	turret 44:MRed
-	turret 45:SAAA
-	turret 46:MRed
+	turret39:SAAA
+	turret40:MRed
+	turret41:SAAA
+	turret42:MRed
+	turret43:SAAA
+	turret44:MRed
+	turret45:SAAA
+	turret46:MRed
 	--------------
-	turret 21:MRedUp
-	turret 26:MRedUp
+	turret21:MRedUp
+	turret26:MRedUp
 
-	turret 52:MRedUp
-	turret 53:MRedUp
+	turret52:MRedUp
+	turret53:MRedUp
 	--------------
-	turret 07:Fast Flak
-	turret 08:Fast Flak
-	turret 10:Fast Flak
+	turret07:Fast Flak
+	turret08:Fast Flak
+	turret10:Fast Flak
 
-	turret 22:Fast Flak
-	turret 23:Fast Flak
-	turret 25:Fast Flak
+	turret22:Fast Flak
+	turret23:Fast Flak
+	turret25:Fast Flak
 	--------------
-	turret 36:Long Range Flak
-	turret 37:Long Range Flak
+	turret36:Long Range Flak
+	turret37:Long Range Flak
 
-	turret 47:Long Range Flak
-	turret 48:Long Range Flak
+	turret47:Long Range Flak
+	turret48:Long Range Flak
 	--------------
-	turret 09:SAAA
-	turret 11:SAAA
-	turret 12:SAAA
+	turret09:SAAA
+	turret11:SAAA
+	turret12:SAAA
 
-	turret 38:SAAA
-	turret 15:SAAA
-	turret 16:SAAA
+	turret38:SAAA
+	turret15:SAAA
+	turret16:SAAA
 	--------------
-	turret 13:Long Range Flak
-	turret 24:Long Range Flak
+	turret13:Long Range Flak
+	turret24:Long Range Flak
 	--------------
-	turret 14:Fast Flak
-	turret 27:Fast Flak
+	turret14:Fast Flak
+	turret27:Fast Flak
 	--------------
-	turret 50:Suppression Flak
-	turret 51:Suppression Flak
+	turret50:Suppression Flak
+	turret51:Suppression Flak
 
 
 $SD Lucifer:	Planetary Bombardment Super Destroyer
-	turret armor: Shivan Elite Armor
-	turret 01:LRLRed
-	turret 02:LRLRed
-	turret 03:Advanced Flak
-	turret 04:Advanced Flak
-	turret 05:Shivan LR Swarm
-	turret 06:Advanced Flak
-	turret 07:Advanced Flak
-	turret 08:Shivan LR Swarm
-	turret 09:Suppression Flak
-	turret 10:Shivan Turret Laser Up
-	turret 11:Shivan Turret Laser Up
-	turret 12:Shivan Turret Laser Up
-	turret 13:Shivan Turret Laser Up
-	turret 14:Shivan Turret Laser Up
-	turret 15:Suppression Flak
-	turret 16:Shivan Turret Laser Up
-	turret 17:Shivan Turret Laser Up
-	turret 18:MRedUp
-	turret 19:MRedUp
+	turretarmor: Shivan Elite Armor
+	turret01:LRLRed
+	turret02:LRLRed
+	turret03:Advanced Flak
+	turret04:Advanced Flak
+	turret05:Shivan LR Swarm
+	turret06:Advanced Flak
+	turret07:Advanced Flak
+	turret08:Shivan LR Swarm
+	turret09:Suppression Flak
+	turret10:Shivan turretLaser Up
+	turret11:Shivan turretLaser Up
+	turret12:Shivan turretLaser Up
+	turret13:Shivan turretLaser Up
+	turret14:Shivan turretLaser Up
+	turret15:Suppression Flak
+	turret16:Shivan turretLaser Up
+	turret17:Shivan turretLaser Up
+	turret18:MRedUp
+	turret19:MRedUp
 
 
 $SD Ravana:	Battle Destroyer
 	hull:  200k
 	armor: Shivan Elite Armor
-	turret armor: Shivan Elite Armor
-	turret 01:LRed - Hell Armor
-	turret 02:LRed - Hell Armor
-	turret 03:MRedUp - Hell Armor
-	turret 04:MRedUp - Hell Armor
-	turret 05:SAAA
-	turret 06:SAAA
-	turret 07:Fast Flak
-	turret 08:SAAA
-	turret 09:SAAA
-	turret 10:SAAA
-	turret 11:SAAA
-	turret 12:Fast Flak
-	turret 13:SAAA
-	turret 14:Fast Flak
-	turret 15:MRed
-	turret 16:Fast Flak
-	turret 17:Fast Flak
-	turret 18:Fast Flak
-	turret 19:Pirahna#Shivan
-	turret 20:Fast Flak
-	turret 21:Fast Flak
-	turret 22:Fast Flak
-	turret 23:Fast Flak
-	turret 24:SAAA
-	turret 25:MRed
-	turret 26:Pirahna#Shivan
-	turret 27:MRed
-	turret 28:MRed
-	turret 29:SAAA
-	turret 30:Fast Flak
+	turretarmor: Shivan Elite Armor
+	turret01:LRed - Hell Armor
+	turret02:LRed - Hell Armor
+	turret03:MRedUp - Hell Armor
+	turret04:MRedUp - Hell Armor
+	turret05:SAAA
+	turret06:SAAA
+	turret07:Fast Flak
+	turret08:SAAA
+	turret09:SAAA
+	turret10:SAAA
+	turret11:SAAA
+	turret12:Fast Flak
+	turret13:SAAA
+	turret14:Fast Flak
+	turret15:MRed
+	turret16:Fast Flak
+	turret17:Fast Flak
+	turret18:Fast Flak
+	turret19:Pirahna#Shivan
+	turret20:Fast Flak
+	turret21:Fast Flak
+	turret22:Fast Flak
+	turret23:Fast Flak
+	turret24:SAAA
+	turret25:MRed
+	turret26:Pirahna#Shivan
+	turret27:MRed
+	turret28:MRed
+	turret29:SAAA
+	turret30:Fast Flak
 
 --		Standard		--
 $SD Ravana:	Hunter Killer Destroyer
-	turret 01:LRed
-	turret 02:LRed
-	turret 03:MRed
-	turret 04:MRed
-	turret 06:Standard Flak
-	turret 13:Standard Flak
-	turret 18:Standard Flak
-	turret 19:Pirahna#Shivan
-	turret 24:Standard Flak
-	turret 25:Heavy Flak
-	turret 26:Pirahna#Shivan
-	turret 27:Shivan Large Canon/SRed
-	turret 29:Shivan Large Canon/SRed
-	turret 30:Heavy Flak
+	turret01:LRed
+	turret02:LRed
+	turret03:MRed
+	turret04:MRed
+	turret06:Standard Flak
+	turret13:Standard Flak
+	turret18:Standard Flak
+	turret19:Pirahna#Shivan
+	turret24:Standard Flak
+	turret25:Heavy Flak
+	turret26:Pirahna#Shivan
+	turret27:Shivan Large Canon/SRed
+	turret29:Shivan Large Canon/SRed
+	turret30:Heavy Flak
 
 --		Vampire			--
 $SD Ravana:	Long Range Hunter Killer Destroyer
 	armor: Shivan Elite Armor
-	turret 01:LRLred
-	turret 02:LRLRed
-	turret 03:MRedUp
-	turret 04:MRedUp
-	turret 05:SRed
-	turret 06:SAAA
-	turret 13:SAAA
-	turret 18:Standard Flak
-	turret 19:Pirahna#Shivan
-	turret 24:Standard Flak
-	turret 25:Standard Flak
-	turret 26:Pirahna#Shivan
-	turret 27:SRed
-	turret 29:SRed
-	turret 30:Standard Flak
+	turret01:LRLred
+	turret02:LRLRed
+	turret03:MRedUp
+	turret04:MRedUp
+	turret05:SRed
+	turret06:SAAA
+	turret13:SAAA
+	turret18:Standard Flak
+	turret19:Pirahna#Shivan
+	turret24:Standard Flak
+	turret25:Standard Flak
+	turret26:Pirahna#Shivan
+	turret27:SRed
+	turret29:SRed
+	turret30:Standard Flak
 
 
 --		Susl'Arh Morc		--
 $SD Demon:		Command Destroyer
 	armor: Shivan Elite Armor
-	turret 03:MRedUp
-	turret 06:MRed
-	turret 07:MRed
-	turret 08:Fast Flak
-	turret 09:Fast Flak
-	turret 10:Fast Flak
-	turret 11:Fast Flak
-	turret 12:Fast Flak
-	turret 13:Fast Flak
-	turret 14:Fast Flak
-	turret 15:Fast Flak
-	turret 16:SAAA
-	turret 17:SAAA
-	turret 18:SAAA
-	turret 19:SAAA
-	turret 20:Fast Flak
-	turret 21:Fast Flak
-	turret 22:Shivan Advanced Swarmer Bomb
-	turret 23:Shivan Advanced Swarmer Bomb
-	turret 24:Shivan Advanced Swarmer Bomb
-	turret 25:Shivan Advanced Swarmer Bomb
-	turret 26:Shivan Advanced Swarmer Bomb
+	turret03:MRedUp
+	turret06:MRed
+	turret07:MRed
+	turret08:Fast Flak
+	turret09:Fast Flak
+	turret10:Fast Flak
+	turret11:Fast Flak
+	turret12:Fast Flak
+	turret13:Fast Flak
+	turret14:Fast Flak
+	turret15:Fast Flak
+	turret16:SAAA
+	turret17:SAAA
+	turret18:SAAA
+	turret19:SAAA
+	turret20:Fast Flak
+	turret21:Fast Flak
+	turret22:Shivan Advanced Swarmer Bomb
+	turret23:Shivan Advanced Swarmer Bomb
+	turret24:Shivan Advanced Swarmer Bomb
+	turret25:Shivan Advanced Swarmer Bomb
+	turret26:Shivan Advanced Swarmer Bomb
 
 
 --		SSM Launcher		--
 $SD Demon:		Support Destroyer
-	turret 03:MRed
-	turret 06:Shivan Heavy Anticap Laser
-	turret 07:Shivan Heavy Anticap Laser
-	turret 16:Shivan Multi Turret
-	turret 17:Shivan Multi Turret
-	turret 18:Shivan Multi Turret
-	turret 19:Shivan Multi Turret
-	turret 20:Standard Flak
-	turret 21:Standard Flak
-	turret 22:Shivan SSM
-	turret 23:Shivan SSM
-	turret 24:Shivan SSM
-	turret 25:Shivan SSM
-	turret 26:Shivan SSM
+	turret03:MRed
+	turret06:Shivan Heavy Anticap Laser
+	turret07:Shivan Heavy Anticap Laser
+	turret16:Shivan Multi Turret
+	turret17:Shivan Multi Turret
+	turret18:Shivan Multi Turret
+	turret19:Shivan Multi Turret
+	turret20:Standard Flak
+	turret21:Standard Flak
+	turret22:Shivan SSM
+	turret23:Shivan SSM
+	turret24:Shivan SSM
+	turret25:Shivan SSM
+	turret26:Shivan SSM
 
 
 $SD Demon:		Combat Destroyer
-	turret 03:MRed
-	turret 06:SRed
-	turret 15:SRed
-	turret 16:Heavy Flak
-	turret 17:Heavy Flak
-	turret 18:Heavy Flak
-	turret 19:Heavy Flak
-	turret 20:Standard Flak
-	turret 21:Standard Flak
-	turret 22:Shivan LR Swarm
-	turret 23:Shivan LR Swarm
-	turret 24:Shivan LR Swarm
-	turret 25:Shivan LR Swarm
-	turret 26:Shivan LR Swarm
+	turret03:MRed
+	turret06:SRed
+	turret15:SRed
+	turret16:Heavy Flak
+	turret17:Heavy Flak
+	turret18:Heavy Flak
+	turret19:Heavy Flak
+	turret20:Standard Flak
+	turret21:Standard Flak
+	turret22:Shivan LR Swarm
+	turret23:Shivan LR Swarm
+	turret24:Shivan LR Swarm
+	turret25:Shivan LR Swarm
+	turret26:Shivan LR Swarm
 
 --		Standard		--
 $SCv Moloch:	Carrier Corvette
-	turret 01:MRed
-	turret 02:Shivan Multi Turret
-	turret 03:Heavy Flak
-	turret 04:Pirahna#Shivan
-	turret 05:MRed
-	turret 06:MRed
-	turret 10:SAAA
-	turret 11:Heavy Flak
-	turret 12:Standard Flak
-	turret 14:Standard Flak
-	turret 16:Pirahna#Shivan
+	turret01:MRed
+	turret02:Shivan Multi Turret
+	turret03:Heavy Flak
+	turret04:Pirahna#Shivan
+	turret05:MRed
+	turret06:MRed
+	turret10:SAAA
+	turret11:Heavy Flak
+	turret12:Standard Flak
+	turret14:Standard Flak
+	turret16:Pirahna#Shivan
 
 --		SSM Link		--
 $SCv Moloch:	Support Corvette
-	turret 02:Advanced Flak
-	turret 03:Long Range Flak
-	turret 04:Anti-Fighter TAG
-	turret 10:Long Range Flak
-	turret 11:Heavy Flak
-	turret 13:Anti-Fighter TAG
-	turret 16:Anti-Fighter TAG
+	turret02:Advanced Flak
+	turret03:Long Range Flak
+	turret04:Anti-Fighter TAG
+	turret10:Long Range Flak
+	turret11:Heavy Flak
+	turret13:Anti-Fighter TAG
+	turret16:Anti-Fighter TAG
 
 $SCv Moloch:	Strike Corvette
-	turret 02:MRedUp
-	turret 03:SAAA
-	turret 04:Pirahna#Shivan
-	turret 10:SAAA
-	turret 11:Heavy Flak
-	turret 14:SAAA
-	turret 16:Pirahna#Shivan
+	turret02:MRedUp
+	turret03:SAAA
+	turret04:Pirahna#Shivan
+	turret10:SAAA
+	turret11:Heavy Flak
+	turret14:SAAA
+	turret16:Pirahna#Shivan
 
 -- 		Cyaegha			--
 $SCv Moloch:	Command Corvette
 	armor: Shivan Elite Armor
-	turret 01:MRed/MRedUp
-	turret 02:Suppression Flak
-	turret 03:Shivan Multi Turret
-	turret 04:Piranha#Shivan
-	turret 05:MRed/MRedUp
-	turret 06:MRed/MRedUp
-	turret 07:Fast Flak
-	turret 08:Fast Flak
-	turret 09:Fast Flak
-	turret 10:Shivan Multi Turret
-	turret 11:Shivan Multi Turret
-	turret 12:SAAA
-	turret 14:SAAA
-	turret 15:Shivan Multi Turret
-	turret 16:Piranha#Shivan
+	turret01:MRed/MRedUp
+	turret02:Suppression Flak
+	turret03:Shivan Multi Turret
+	turret04:Piranha#Shivan
+	turret05:MRed/MRedUp
+	turret06:MRed/MRedUp
+	turret07:Fast Flak
+	turret08:Fast Flak
+	turret09:Fast Flak
+	turret10:Shivan Multi Turret
+	turret11:Shivan Multi Turret
+	turret12:SAAA
+	turret14:SAAA
+	turret15:Shivan Multi Turret
+	turret16:Piranha#Shivan
 	
 
 $SC Lilith:	Hunter Killer Heavy Cruiser
-	turret 05:Shivan Multi Turret
-	turret 06:Shivan Multi Turret
-	turret 08:Piranha#Shivan
-	turret 09:Piranha#Shivan
+	turret05:Shivan Multi Turret
+	turret06:Shivan Multi Turret
+	turret08:Piranha#Shivan
+	turret09:Piranha#Shivan
 
 --		Reaper		--
 $SC Lilith:	Command Heavy Cruiser
 	armor: Shivan Elite Armor
-	turret 05:Fast Flak
-	turret 06:Fast Flak
-	turret 08:Piranha#Shivan
-	turret 09:Piranha#Shivan
+	turret05:Fast Flak
+	turret06:Fast Flak
+	turret08:Piranha#Shivan
+	turret09:Piranha#Shivan
 
 
 $SC Rakshasa:	Strike Cruiser
-	turret 04:SRed
-	turret 07:Shivan Multi Turret
-	turret 08:Shivan Multi Turret
-	turret 10:SAAA
+	turret04:SRed
+	turret07:Shivan Multi Turret
+	turret08:Shivan Multi Turret
+	turret10:SAAA
 
 $SC Rakshasa:	SC
-	turret 04:SRed
-	turret 07:Shivan Multi Turret
-	turret 08:Shivan Multi Turret
-	turret 10:SAAA
+	turret04:SRed
+	turret07:Shivan Multi Turret
+	turret08:Shivan Multi Turret
+	turret10:SAAA
 
 
 $SC Rakshasa:	Support Cruiser
-	turret 01:Shivan Multi Turret
-	turret 04:Shivan Multi Turret
-	turret 07:Standard Flak
-	turret 08:Standard Flak
-	turret 10:Standard Flak
+	turret01:Shivan Multi Turret
+	turret04:Shivan Multi Turret
+	turret07:Standard Flak
+	turret08:Standard Flak
+	turret10:Standard Flak
 	+improved AWACS range (6000)
 
 --		Hellknight		--
 $SC Rakshasa:	Hunter Killer Cruiser
 	armor: Shivan Elite Armor
-	turret armor:Hell Armor
-	turret 01:MRed
-	turret 02:MRed
-	turret 03:MRed
-	turret 04:MRed
-	turret 05:Shivan Multi Turret
-	turret 06:Shivan Multi Turret
-	turret 07:SAAA
-	turret 08:SAAA
-	turret 10:SAAA
-	turret 11:Shivan Multi Turret
-	turret 12:Shivan Multi Turret
-	turret 13:Shivan Multi Turret
-	turret 14:Shivan Multi Turret
+	turretarmor:Hell Armor
+	turret01:MRed
+	turret02:MRed
+	turret03:MRed
+	turret04:MRed
+	turret05:Shivan Multi Turret
+	turret06:Shivan Multi Turret
+	turret07:SAAA
+	turret08:SAAA
+	turret10:SAAA
+	turret11:Shivan Multi Turret
+	turret12:Shivan Multi Turret
+	turret13:Shivan Multi Turret
+	turret14:Shivan Multi Turret
 
 $SC Rakshasa:	Heavy Assault Cruiser
 	armor: Shivan Elite Armor
-	turret 04:SRed
-	turret 05:Shivan Turret Laser Up
-	turret 06:Shivan Turret Laser Up
-	turret 07:SAAA
-	turret 08:SAAA
-	turret 10:SAAA
-	turret 11:Shivan Turret Laser Up
-	turret 12:Shivan Turret Laser Up
-	turret 13:Shivan Turret Laser Up
-	turret 14:Shivan Turret Laser Up
+	turret04:SRed
+	turret05:Shivan turretLaser Up
+	turret06:Shivan turretLaser Up
+	turret07:SAAA
+	turret08:SAAA
+	turret10:SAAA
+	turret11:Shivan turretLaser Up
+	turret12:Shivan turretLaser Up
+	turret13:Shivan turretLaser Up
+	turret14:Shivan turretLaser Up
 
 $SC Rakshasa:	Heavy Flak Cruiser
 	armor: Shivan Elite Armor
-	turret 03:SAAA
-	turret 04:SAAA
-	turret 05:Standard Flak
-	turret 06:Standard Flak
-	turret 07:SAAA
-	turret 08:SAAA
-	turret 10:SAAA
-	turret 11:Standard Flak
-	turret 12:Standard Flak
-	turret 13:Standard Flak
-	turret 14:Standard Flak
+	turret03:SAAA
+	turret04:SAAA
+	turret05:Standard Flak
+	turret06:Standard Flak
+	turret07:SAAA
+	turret08:SAAA
+	turret10:SAAA
+	turret11:Standard Flak
+	turret12:Standard Flak
+	turret13:Standard Flak
+	turret14:Standard Flak
 
 $SC Rakshasa:	Lance Assault Cruiser
 	subsystem armor: Hell Armor
 	hull armor:	 Shivan Destroyer Armor
 	hull:		 80k
-	turret 01:Shivan Multi Turret Up + Rof * 2
-	turret 02:Shivan Huge Lance
-	turret 03:Shivan Huge Lance
-	turret 04:Shivan Multi Turret Up + Rof * 2
-	turret 05:Shivan Multi Turret Up
-	turret 06:Shivan Multi Turret Up
-	turret 07:Shivan Lance
-	turret 08:Shivan Lance
-	turret 09:Shivan Lance
-	turret 10:Shivan Lance
-	turret 11:Shivan Multi Turret Up
-	turret 12:Shivan Multi Turret Up
-	turret 13:Shivan Multi Turret Up
-	turret 14:Shivan Multi Turret Up
+	turret01:Shivan Multi turretUp + Rof * 2
+	turret02:Shivan Huge Lance
+	turret03:Shivan Huge Lance
+	turret04:Shivan Multi turretUp + Rof * 2
+	turret05:Shivan Multi turretUp
+	turret06:Shivan Multi turretUp
+	turret07:Shivan Lance
+	turret08:Shivan Lance
+	turret09:Shivan Lance
+	turret10:Shivan Lance
+	turret11:Shivan Multi turretUp
+	turret12:Shivan Multi turretUp
+	turret13:Shivan Multi turretUp
+	turret14:Shivan Multi turretUp
 
 
 $SC Cain:		Light Support Cruiser
 	hull:  32k
-	turret 05:Standard Flak/Shivan Multi Turret
-	turret 06:Standard Flak/Shivan Multi Turret
-	turret 08:Tornado#Shivan
-	turret 09:Tornado#Shivan
+	turret05:Standard Flak/Shivan Multi Turret
+	turret06:Standard Flak/Shivan Multi Turret
+	turret08:Tornado#Shivan
+	turret09:Tornado#Shivan
 
 
 $SC Cain:		Light Cruiser
 	hull:  20k
-	turret 05:Shivan Anticap Laser
-	turret 06:Shivan Anticap Laser
-	turret 08:Tornado#Shivan
-	turret 09:Tornado#Shivan
+	turret05:Shivan Anticap Laser
+	turret06:Shivan Anticap Laser
+	turret08:Tornado#Shivan
+	turret09:Tornado#Shivan
 
 $SC Cain:		Flak Cruiser
 	hull:  20k
-	turret 02:Heavy Flak
-	turret 03:Heavy Flak
-	turret 04:Heavy Flak
-	turret 05:Fast Flak
-	turret 06:Fast Flak
-	turret 07:SAAA
-	turret 08:Shivan Area Bomb
-	turret 09:Shivan Area Bomb
+	turret02:Heavy Flak
+	turret03:Heavy Flak
+	turret04:Heavy Flak
+	turret05:Fast Flak
+	turret06:Fast Flak
+	turret07:SAAA
+	turret08:Shivan Area Bomb
+	turret09:Shivan Area Bomb
 
 
 $SSG Belial: 	Anti-Fighter Defence
-	turret 01:Shivan Light Laser/Up
-	turret 02:Shivan Light Laser/Up
-	turret 03:Shivan Light Laser/Up
-	turret 04:Shivan Light Laser/Up
+	turret01:Shivan Light Laser/Up
+	turret02:Shivan Light Laser/Up
+	turret03:Shivan Light Laser/Up
+	turret04:Shivan Light Laser/Up
 
 $SSG Belial:	Anti-Capital Defence
-	turret 01:Shivan Heavy Anticap Laser
-	turret 02:Shivan Light Laser/Up
-	turret 03:Shivan Heavy Anticap Laser
-	turret 04:Shivan Light Laser/Up
+	turret01:Shivan Heavy Anticap Laser
+	turret02:Shivan Light Laser/Up
+	turret03:Shivan Heavy Anticap Laser
+	turret04:Shivan Light Laser/Up
 
 $SSG Belial:	Area Denial Defence
-	turret 01:Shivan Sniper Gun
-	turret 02:Shivan Scatter Gun
-	turret 03:Shivan Sniper Gun
-	turret 04:Shivan Scatter Gun
+	turret01:Shivan Sniper Gun
+	turret02:Shivan Scatter Gun
+	turret03:Shivan Sniper Gun
+	turret04:Shivan Scatter Gun
 
 $SSG Belial:	Long Range Defence
-	turret 01:Shivan Sniper Gun
-	turret 02:Shivan Sniper Gun
-	turret 03:Shivan Sniper Gun
-	turret 04:Shivan Sniper Gun
+	turret01:Shivan Sniper Gun
+	turret02:Shivan Sniper Gun
+	turret03:Shivan Sniper Gun
+	turret04:Shivan Sniper Gun
 
 $SSG Belial:	Close Range Defence
-	turret 01:Shivan Flak Weapon
-	turret 02:Shivan Flak Weapon
-	turret 03:Shivan Flak Weapon
-	turret 04:Shivan Flak Weapon
+	turret01:Shivan Flak Weapon
+	turret02:Shivan Flak Weapon
+	turret03:Shivan Flak Weapon
+	turret04:Shivan Flak Weapon
 
 $SSG Belial:	Anti-Capital Specialist
-	turret 01:Shivan Heavy Anticap Laser
-	turret 02:Shivan Heavy Anticap Laser
-	turret 03:Shivan Heavy Anticap Laser
-	turret 04:Shivan Heavy Anticap Laser
+	turret01:Shivan Heavy Anticap Laser
+	turret02:Shivan Heavy Anticap Laser
+	turret03:Shivan Heavy Anticap Laser
+	turret04:Shivan Heavy Anticap Laser
 
 $SSG Belial:	Multirole Defence
-	turret 01:Shivan Heavy Anticap Laser
-	turret 02:Shivan Sniper Gun
-	turret 03:Shivan Scatter Gun
-	turret 04:Shivan Light Laser Up
+	turret01:Shivan Heavy Anticap Laser
+	turret02:Shivan Sniper Gun
+	turret03:Shivan Scatter Gun
+	turret04:Shivan Light Laser Up
 
 --Seraphim:	Heavy Bomber
 --Nephilim:	Heavy Bomber
@@ -464,137 +464,137 @@ $SSG Belial:	Multirole Defence
 /////////////////////////////////////////////////////
 --		Apep		--
 $GVD Hatshepsut:	Combat
-	turret 05:Vasudan Torpedo
-	turret 06:Vasudan Torpedo
-	turret 07:Vasudan Torpedo
-	turret 08:Vasudan Torpedo
-	turret 09:Vasudan Torpedo
-	turret 10:Vasudan Torpedo
-	turret 12:Wraith
-	turret 18:Wraith
-	turret 19:Wraith
-	turret 22:Wraith
-	turret 28:Wraith
-	turret 29:Wraith
+	turret05:Vasudan Torpedo
+	turret06:Vasudan Torpedo
+	turret07:Vasudan Torpedo
+	turret08:Vasudan Torpedo
+	turret09:Vasudan Torpedo
+	turret10:Vasudan Torpedo
+	turret12:Wraith
+	turret18:Wraith
+	turret19:Wraith
+	turret22:Wraith
+	turret28:Wraith
+	turret29:Wraith
 
 
 $GVD Hatshepsut:	Command
-	turret 05:Trebuchet/Tornado
-	turret 06:Trebuchet/Tornado
-	turret 07:Trebuchet/Tornado
-	turret 08:Trebuchet/Tornado
-	turret 09:Trebuchet/Tornado
-	turret 10:Trebuchet/Tornado
+	turret05:Trebuchet/Tornado
+	turret06:Trebuchet/Tornado
+	turret07:Trebuchet/Tornado
+	turret08:Trebuchet/Tornado
+	turret09:Trebuchet/Tornado
+	turret10:Trebuchet/Tornado
 
 -- review that
 $GVD Typhon:
-	turret 01:SVas/Mass Driver/Wraith
-	turret 02:SVas/Mass Driver/Wraith
-	turret 07:Rockeye/Trebuchet
-	turret 08:Rockeye/Trebuchet
-	turret 09:Rockeye/Trebuchet
-	turret 13:Rockeye/Trebuchet
+	turret01:SVas/Mass Driver/Wraith
+	turret02:SVas/Mass Driver/Wraith
+	turret07:Rockeye/Trebuchet
+	turret08:Rockeye/Trebuchet
+	turret09:Rockeye/Trebuchet
+	turret13:Rockeye/Trebuchet
 
 
 $GVCv Sobek:		Standard
-	turret 01:Wraith
-	turret 02:Wraith
-	turret 05:Wraith
+	turret01:Wraith
+	turret02:Wraith
+	turret05:Wraith
 
 
 
 $GVC Mentu:		Mass Driver
-	turret 01:Mass Driver
-	turret 02:Mass Driver
-	turret 15:Mass Driver
-	turret 16:Mass Driver
+	turret01:Mass Driver
+	turret02:Mass Driver
+	turret15:Mass Driver
+	turret16:Mass Driver
 
 $GVC Aten:		Mass Driver
-	turret 01:Mass Driver
-	turret 02:Mass Driver
-	turret 03:Wraith/Standard Flak
-	turret 04:Wraith/Standard Flak
-	turret 05:AAAf
-	turret 06:AAAf
+	turret01:Mass Driver
+	turret02:Mass Driver
+	turret03:Wraith/Standard Flak
+	turret04:Wraith/Standard Flak
+	turret05:AAAf
+	turret06:AAAf
 
 
 
 $GTD Hecate:	Standard
-	turret 01:Mass Driver
-	turret 03:Wraith
-	turret 04:Mass Driver
-	turret 05:Mass Driver
-	turret 06:Mass Driver
-	turret 07:Mass Driver
-	turret 08:Mass Driver
-	turret 10:Wraith
-	turret 22:MGreenUp
-	turret 24:MGreenUp
-	turret 26:MGreenUp
-	turret 27:MGreenUp
+	turret01:Mass Driver
+	turret03:Wraith
+	turret04:Mass Driver
+	turret05:Mass Driver
+	turret06:Mass Driver
+	turret07:Mass Driver
+	turret08:Mass Driver
+	turret10:Wraith
+	turret22:MGreenUp
+	turret24:MGreenUp
+	turret26:MGreenUp
+	turret27:MGreenUp
 
 $GTD Hecate:	Streaker
 	hull:	200k
-	turret 01:Mass Driver
-	turret 03:Wraith
-	turret 04:Mass Driver
-	turret 05:Mass Driver
-	turret 06:Mass Driver
-	turret 07:Mass Driver
-	turret 08:Mass Driver
-	turret 10:Wraith
-	turret 17:Advanced Flak
-	turret 18:Advanced Flak
-	turret 20:LRed
-	turret 22:MGreenUp
-	turret 23:Advanced Flak
-	turret 24:MGreenUp
-	turret 25:Advanced Flak
-	turret 26:MGreenUp
-	turret 27:MGreenUp
+	turret01:Mass Driver
+	turret03:Wraith
+	turret04:Mass Driver
+	turret05:Mass Driver
+	turret06:Mass Driver
+	turret07:Mass Driver
+	turret08:Mass Driver
+	turret10:Wraith
+	turret17:Advanced Flak
+	turret18:Advanced Flak
+	turret20:LRed
+	turret22:MGreenUp
+	turret23:Advanced Flak
+	turret24:MGreenUp
+	turret25:Advanced Flak
+	turret26:MGreenUp
+	turret27:MGreenUp
 	+improved AWACS range (8000)
 
 
 $GTCv Deimos:	Standard
-	turret 01:Wraith
-	turret 02:Wraith
-	turret 03:Wraith
-	turret 04:Wraith
-	turret 21:Wraith
-	turret 22:Wraith
+	turret01:Wraith
+	turret02:Wraith
+	turret03:Wraith
+	turret04:Wraith
+	turret21:Wraith
+	turret22:Wraith
 
 $GTCv Deimos:	Mass Driver
-	turret 01:Wraith
-	turret 02:Wraith
-	turret 03:Wraith
-	turret 04:Wraith
-	turret 21:Mass Driver
-	turret 22:Mass Driver
+	turret01:Wraith
+	turret02:Wraith
+	turret03:Wraith
+	turret04:Wraith
+	turret21:Mass Driver
+	turret22:Mass Driver
 
 $GTCv Deimos:	Viper
-	turret 01:Long Range Flak
-	turret 02:Long Range Flak
-	turret 03:Long Range Flak
-	turret 04:Long Range Flak
-	turret 05:Long Range Flak
-	turret 06:Long Range Flak
-	turret 09:Long Range Flak
-	turret 10:Long Range Flak
-	turret 11:Green Beam
-	turret 12:Green Beam
-	turret 13:Long Range Flak
-	turret 17:Long Range Flak
-	turret 21:Morning Star
-	turret 22:Morning Star
-	turret 23:Green Beam
-	turret 24:Green Beam
-	turret 25:Trebuchet
-	turret 26:Trebuchet
+	turret01:Long Range Flak
+	turret02:Long Range Flak
+	turret03:Long Range Flak
+	turret04:Long Range Flak
+	turret05:Long Range Flak
+	turret06:Long Range Flak
+	turret09:Long Range Flak
+	turret10:Long Range Flak
+	turret11:Green Beam
+	turret12:Green Beam
+	turret13:Long Range Flak
+	turret17:Long Range Flak
+	turret21:Morning Star
+	turret22:Morning Star
+	turret23:Green Beam
+	turret24:Green Beam
+	turret25:Trebuchet
+	turret26:Trebuchet
 
 
 $GTC Aeolus:	Upgraded
-	turret 01:Wraith
-	turret 04:Wraith
-	turret 11:MGreen
-	turret 12:MGreen
+	turret01:Wraith
+	turret04:Wraith
+	turret11:MGreen
+	turret12:MGreen
 
