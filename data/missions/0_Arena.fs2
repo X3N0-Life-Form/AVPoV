@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("testing arena", -1)
 $Author: X3N0-Life-Form
 $Created: 10/10/10 at 15:16:55
-$Modified: 03/08/14 at 12:01:23
+$Modified: 04/27/14 at 20:04:39
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -414.483154, 2763.631836, 3579.767334
++Viewer pos: -1135.333496, 1920.459839, 3542.067627
 +Viewer orient:
-	0.052228, 0.000001, -0.998635,
-	0.649445, 0.759649, 0.033966,
-	0.758612, -0.650333, 0.039675
+	0.052228, 0.000000, -0.998635,
+	0.801407, 0.596650, 0.041914,
+	0.595835, -0.802502, 0.031162
 
 $Starting wing names: ( "Alpha" "Virgo" "Gemini" )
 $Squadron wing names: ( "Alpha" "Friendlies" "Gemini" "Snipers" "Libra" )
@@ -35,6 +35,16 @@ $Squadron wing names: ( "Alpha" "Friendlies" "Gemini" "Snipers" "Libra" )
 $Skybox Model: Starfield.pof
 
 $AI Profile: myProfile
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"@SC"		"Strike Cruiser"		"string"
+		1		"bg"		"'Bad Guy'"		"string"
+		2		"BG"		"Bad Guy"		"string"
+		3		"setVar"		"setVariant()"		"string"
+)
 
 #Command Briefing
 
@@ -78,7 +88,7 @@ $Ship Choices: (
 	"Cyclops"	8
 )
 
-#Objects		;! 8 total
+#Objects		;! 4 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVB Hathor
@@ -192,14 +202,15 @@ $Determination: 10
 +Score: 670
 
 $Name: Friend		;! Object #2
-$Class: GTCv Sparta#Original
+$Class: GTC Aeolus
 $Team: Friendly
-$Location: 2660.781494, -284.025543, 4784.271973
+$Location: 3022.731445, -284.024872, 5291.260254
 $Orientation:
 	-0.999209, -0.032015, 0.023662,
-	-0.039568, 0.733108, -0.678961,
-	0.004390, -0.679358, -0.733794
+	-0.036359, 0.975969, -0.214855,
+	-0.016216, -0.215544, -0.976360
 $AI Behavior: None
++AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Initial Shields: 100
@@ -216,16 +227,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret10
 +Subsystem: turret11
 +Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -240,13 +241,13 @@ $Determination: 10
 +Score: 90
 
 $Name: Bad Guy		;! Object #3
-$Class: SCv Moloch
+$Class: SC Rakshasa
 $Team: Hostile
-$Location: 2427.186279, -117.792107, 3789.671875
+$Location: 2458.501221, -117.792038, 3405.599365
 $Orientation:
 	0.997551, 0.002797, -0.069887,
-	-0.062013, 0.497484, -0.865255,
-	0.032347, 0.867469, 0.496438
+	-0.004892, 0.999543, -0.029826,
+	0.069771, 0.030093, 0.997110
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -254,14 +255,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
-+Primary Banks: ( "MRed" )
 +Subsystem: turret02
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
-+Primary Banks: ( "MRed" )
 +Subsystem: turret06
-+Primary Banks: ( "MRed" )
 +Subsystem: turret07
 +Subsystem: turret08
 +Subsystem: turret09
@@ -270,8 +268,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret12
 +Subsystem: turret13
 +Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -285,119 +281,7 @@ $Determination: 10
 +Group: 0
 +Score: 150
 
-$Name: One 1		;! Object #4
-$Class: SF Aeshma
-$Team: Hostile
-$Location: 1756.489502, -0.000930, 3682.021729
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Use Table Score:
-+Score: 12
-
-$Name: One 2		;! Object #5
-$Class: SF Aeshma
-$Team: Hostile
-$Location: 1717.563110, -0.000910, 3758.455322
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Use Table Score:
-+Score: 12
-
-$Name: One 3		;! Object #6
-$Class: SF Aeshma
-$Team: Hostile
-$Location: 1658.977661, -0.000935, 3702.012207
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Use Table Score:
-+Score: 12
-
-$Name: One 4		;! Object #7
-$Class: SF Aeshma
-$Team: Hostile
-$Location: 1596.854614, -0.001035, 3744.885742
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Primary Banks: ( "Shivan Heavy Anticap Laser" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan Swarmer Bomb" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Use Table Score:
-+Score: 12
-
-#Wings		;! 2 total
+#Wings		;! 1 total
 
 $Name: Alpha
 $Waves: 1
@@ -414,25 +298,7 @@ $Ships: (		;! 1 total
 +Hotkey: 0
 +Flags: ( )
 
-$Name: One
-$Waves: 1
-$Wave Threshold: 0
-$Special Ship: 0		;! One 1
-
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Ships: (		;! 4 total
-	"One 1"
-	"One 2"
-	"One 3"
-	"One 4"
-)
-$AI Goals: ( goals ( ai-chase "Friend" 50 ) )
-+Flags: ( )
-
-#Events		;! 1 total
+#Events		;! 2 total
 
 $Formula: ( when 
    ( true ) 
@@ -479,6 +345,17 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( script-eval 
+      "setVariant('Bad Guy','SC')" 
+   )
+)
++Name: variant test
++Repeat Count: 1
++Interval: 1
++Chained: 2
 
 #Goals		;! 0 total
 
