@@ -1,1 +1,71 @@
 $Max Escort Ships:			8
+
+#Gauge Config
+$Base:		(1024,768)
+$Gauges:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;	Shivan Task Status	;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
++Custom:
+	Scale Gauge:	YES
+	Origin:			(0.85, 0.3)
+	Offset:			(0, 0)
+	Color:				(240, 0, 0)
+	Name:				ShivTaskStatusTop
+	Text:				Task Status
+	Gauge Type:			WINGMEN_STATUS
+	Slew: 				NO
+	Active by default: 	NO
+	Filename:			escort1
+	
++Custom:
+	Scale Gauge:	YES
+	Origin:			(0.85, 0.3)
+	Offset:			(0, 13)
+	Color:				(240, 0, 0)
+	Name:				ShivTaskStatusBody1
+	Text:
+	Gauge Type:			WINGMEN_STATUS
+	Slew: 				NO
+	Active by default: 	NO
+	Filename:			escort2
+
++Custom:
+	Scale Gauge:	YES
+	Origin:			(0.85, 0.3)
+	Offset:			(0, 24)
+	Color:				(240, 0, 0)
+	Name:				ShivTaskStatusBody2
+	Text:
+	Gauge Type:			WINGMEN_STATUS
+	Slew: 				NO
+	Active by default: 	NO
+	Filename:			escort2
+
++Custom:
+	Scale Gauge:	YES
+	Origin:			(0.85, 0.3)
+	Offset:			(0, 35)
+	Color:				(240, 0, 0)
+	Name:				ShivTaskStatusBody3
+	Text:
+	Gauge Type:			WINGMEN_STATUS
+	Slew: 				NO
+	Active by default: 	NO
+	Filename:			escort2
+	
++Custom:
+	Scale Gauge:	YES
+	Origin:			(0.85, 0.3)
+	Offset:			(0, 46)
+	Color:				(240, 0, 0)
+	Name:				ShivTaskStatusBottom
+	Text:
+	Gauge Type:			WINGMEN_STATUS
+	Slew: 				NO
+	Active by default: 	NO
+	Filename:			escort3
+	
+$End Gauges
+#End

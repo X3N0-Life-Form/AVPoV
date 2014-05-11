@@ -1,0 +1,6 @@
+#Conditional Hooks
+$Application: FS2_Open
+
+$On Game Init: [[shivanHUD.lua]]
+
+#End
