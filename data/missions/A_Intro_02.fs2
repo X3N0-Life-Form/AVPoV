@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 01/28/14 at 21:23:30
+$Modified: 05/11/14 at 21:26:39
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1495.338501, 622.482605, 29161.447266
++Viewer pos: -1320.044556, 4883.779297, 26938.595703
 +Viewer orient:
-	0.999248, -0.000013, -0.038771,
-	0.009873, 0.967116, 0.254143,
-	0.037493, -0.254335, 0.966389
+	0.999980, -0.000011, 0.006399,
+	-0.005994, 0.348240, 0.937386,
+	-0.002239, -0.937405, 0.348233
 
 
 $Skybox Model: Starfield.pof
@@ -38,7 +38,8 @@ $AI Profile: myProfile
 
 $Variables:
 (
-		0		"shots"		"0"		"number"
+		0		"debug"		"1"		"number"
+		1		"shots"		"0"		"number"
 )
 
 #Command Briefing
@@ -92,9 +93,9 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Our target is the Cain-class cruiser $h Xana and her escort wing. Command believes that attacking such a small target won't provoke the $r Shivans into committing a large force.
+ XSTR("Our target is the Cain-class cruiser $h Armaros and her escort wing. Command believes that attacking such a small target won't provoke the $r Shivans into committing a large force.
 
-For this mission, the $f Warspite will also be mounting Mass Drivers on its dorsal turrets, giving the corvette sufficient firepower to engage and destroy the $h Xana on its own. However, I expect you to assist the $f Warspite by taking out the cruiser's main beam.", -1)
+For this mission, the $f Warspite will also be mounting Mass Drivers on its forward turrets, giving the corvette sufficient firepower to engage and destroy the $h Armaros on its own. However, I expect you to assist the $f Warspite by taking out the cruiser's main beam.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -1883.705933, 9215.499023, -2901.959473
@@ -124,7 +125,7 @@ $type: 18
 $team: Hostile
 $class: SC Cain
 $pos: -3295.390381, 547.653198, 2467.684082
-$label: Xana
+$label: Armaros
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -192,7 +193,7 @@ $type: 18
 $team: Hostile
 $class: SC Cain
 $pos: -2955.644531, 547.652893, -1316.871216
-$label: Xana
+$label: Armaros
 +id: 2
 $hlight: 1
 $mirror: 0
@@ -263,7 +264,7 @@ I regret to inform you that the Rear-Admiral has decided to reassign you to one 
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
-    XSTR("Have your wingmen focus on enemy fighters, while you disable the Xana's beam and destroy incoming bombers.", -1)
+    XSTR("Have your wingmen focus on enemy fighters, while you disable the Armaros's beam and destroy incoming bombers.", -1)
 $end_multi_text
 
 $Formula: ( is-goal-true-delay "good defence" 0 ) 
@@ -314,7 +315,7 @@ $Ship Choices: (
 	"Hornet"	400
 )
 
-#Objects		;! 50 total
+#Objects		;! 53 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Horus
@@ -468,7 +469,9 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret19
 +Subsystem: turret20
 +Subsystem: turret21
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret22
++Primary Banks: ( "Mass Driver" )
 +Subsystem: turret23
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret24
@@ -517,7 +520,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -543,7 +546,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -569,7 +572,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -598,7 +601,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -627,7 +630,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -656,7 +659,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -682,7 +685,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -708,7 +711,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -734,14 +737,14 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
 +Score: 12
 
-$Name: Xana		;! Object #14
+$Name: Armaros		;! Object #14
 $Class: SC Cain
 $Team: Hostile
 $Location: -1225.133789, 547.653503, 5802.980957
@@ -751,7 +754,7 @@ $Orientation:
 	0.316493, -0.763669, -0.562711
 $AI Behavior: None
 +AI Class: Lieutenant
-$AI Goals: ( goals ( ai-waypoints "Xana path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints "Armaros path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -775,9 +778,12 @@ $Cargo 1:  XSTR("Nothing", -1)
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "mission complete" 
+   0 
+)
 $Determination: 10
-+Flags: ( "no-shields" "escort" )
++Flags: ( "no-shields" "escort" "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -1863,7 +1869,90 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-#Wings		;! 10 total
+$Name: Elite Space Superiority 1		;! Object #50
+$Class: SF Mara
+$Team: Friendly
+$Location: -576.302368, 325.494293, 31339.910156
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Scatter Gun" "Shivan Heavy Laser Up" )
++Secondary Banks: ( "Tempest Adv#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Elite Space Superiority 2		;! Object #51
+$Class: SF Mara
+$Team: Friendly
+$Location: -416.115540, 325.494476, 31257.707031
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Scatter Gun" "Shivan Heavy Laser Up" )
++Secondary Banks: ( "Tempest Adv#Shivan" "Hornet#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: skip to shivans		;! Object #52
+$Class: GTNB Pharos
+$Team: Friendly
+$Location: 2820.204102, 0.000145, 39458.304688
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( = @debug[1] 1 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "reinforcement" "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+#Wings		;! 11 total
 
 $Name: Alpha
 $Waves: 1
@@ -1895,14 +1984,17 @@ $Special Ship: 0		;! Leo 1
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "mission complete" 
+   0 
+)
 $Ships: (		;! 3 total
 	"Leo 1"
 	"Leo 2"
 	"Leo 3"
 )
-$AI Goals: ( goals ( ai-guard "Xana" 50 ) )
-+Flags: ( )
+$AI Goals: ( goals ( ai-guard "Armaros" 50 ) )
++Flags: ( "no-departure-warp" )
 
 $Name: Gemini
 $Waves: 1
@@ -1912,16 +2004,19 @@ $Special Ship: 0		;! Gemini 1
 $Arrival Location: Near Ship
 +Arrival Distance: 1500
 $Arrival Anchor: Warspite
-$Arrival Cue: ( < ( hits-left "Xana" ) 80 ) 
+$Arrival Cue: ( < ( hits-left "Armaros" ) 80 ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "mission complete" 
+   0 
+)
 $Ships: (		;! 3 total
 	"Gemini 1"
 	"Gemini 2"
 	"Gemini 3"
 )
 $AI Goals: ( goals ( ai-chase "Warspite" 50 ) )
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Wave Delay Min: 5
 +Wave Delay Max: 8
 
@@ -1935,14 +2030,17 @@ $Arrival Location: Near Ship
 $Arrival Anchor: Gemini 1
 $Arrival Cue: ( has-arrived-delay 2 "Gemini" ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "mission complete" 
+   0 
+)
 $Ships: (		;! 3 total
 	"Aquarius 1"
 	"Aquarius 2"
 	"Aquarius 3"
 )
 $AI Goals: ( goals ( ai-guard-wing "Gemini" 50 ) )
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 +Wave Delay Min: 2
 +Wave Delay Max: 6
 
@@ -1953,7 +2051,7 @@ $Special Ship: 0		;! Beta 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 2500
-$Arrival Anchor: Xana
+$Arrival Anchor: Armaros
 $Arrival Cue: ( is-goal-true-delay 
    "Test ULTRA-AAA" 
    15 
@@ -1968,7 +2066,7 @@ $Ships: (		;! 3 total
 	"Beta 2"
 	"Beta 3"
 )
-$AI Goals: ( goals ( ai-chase "Xana" 50 ) ( ai-guard "Warspite" 48 ) )
+$AI Goals: ( goals ( ai-chase "Armaros" 50 ) ( ai-guard "Warspite" 48 ) )
 +Hotkey: 1
 +Flags: ( )
 +Wave Delay Min: 5
@@ -2074,7 +2172,26 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Hostile Cruiser" 50 ) )
 +Flags: ( )
 
-#Events		;! 17 total
+$Name: Elite Space Superiority
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Elite Space Superiority 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 
+   5 
+   "Cruiser Defence" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Elite Space Superiority 1"
+	"Elite Space Superiority 2"
+)
+$AI Goals: ( goals ( ai-chase-wing "Cruiser Defence" 50 ) ( ai-guard "Alpha 1" 48 ) )
++Flags: ( )
+
+#Events		;! 25 total
 
 $Formula: ( when 
    ( is-goal-true-delay 
@@ -2185,32 +2302,46 @@ $Formula: ( when-argument
 )
 +Name: fire shots of ULTRA-AAA
 +Repeat Count: -1
-+Trigger Count: 16
++Trigger Count: 8
 +Interval: 3
 
 $Formula: ( when 
-   ( not ( is-destroyed-delay 0 "Xana" ) ) 
+   ( not 
+      ( is-destroyed-delay 0 "Armaros" ) 
+   )
    ( set-object-position 
-      "Xana path:1" 
+      "Armaros path:1" 
       ( get-object-x "Warspite" ) 
       ( - ( get-object-y "Warspite" ) 750 ) 
       ( get-object-z "Warspite" ) 
    )
    ( if-then-else 
       ( < 
-         ( distance "Warspite" "Xana" ) 
+         ( distance "Warspite" "Armaros" ) 
          2000 
       )
-      ( cap-waypoint-speed "Xana" 5 ) 
-      ( cap-waypoint-speed "Xana" -1 ) 
+      ( cap-waypoint-speed "Armaros" 5 ) 
+      ( cap-waypoint-speed "Armaros" -1 ) 
    )
 )
-+Name: update Xana path
++Name: update Armaros path
 +Repeat Count: -1
 +Trigger Count: 200
 +Interval: 5
 
 $Formula: ( when ( true ) ( do-nothing ) ) 
++Name: ===============================
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( if-then-else 
+      ( = @debug[1] 1 ) 
+      ( training-msg "debug on" ) 
+      ( do-nothing ) 
+   )
+)
 +Name: mission start
 +Repeat Count: 1
 +Interval: 1
@@ -2224,14 +2355,24 @@ $Formula: ( when
       "turret23" 
       "turret24" 
    )
+   ( send-message 
+      "Warspite" 
+      "High" 
+      "ws arrives - warspite" 
+   )
 )
 +Name: Warspite arrives
 +Repeat Count: 1
 +Interval: 1
++Chained: 0
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Leo" ) 
-   ( do-nothing ) 
+   ( send-message 
+      "Warspite" 
+      "High" 
+      "leo destroyed - warspite" 
+   )
 )
 +Name: destroy leo
 +Repeat Count: 1
@@ -2239,13 +2380,33 @@ $Formula: ( when
 +Objective:  XSTR("Destroy Leo", -1)
 
 $Formula: ( when 
-   ( is-destroyed-delay 0 "Xana" ) 
-   ( do-nothing ) 
+   ( is-destroyed-delay 0 "Armaros" ) 
+   ( send-message 
+      "Warspite" 
+      "High" 
+      "armaros destroyed - warspite" 
+   )
 )
-+Name: destroy SC Xana
++Name: destroy SC Armaros
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("Destroy the SC Xana", -1)
++Objective:  XSTR("Destroy the SC Armaros", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      2 
+      "Gemini" 
+      "Aquarius" 
+   )
+   ( send-message 
+      "<any wingman>" 
+      "High" 
+      "shiv rein arrive - anyw" 
+   )
+)
++Name: Event name
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( is-destroyed-delay 0 "Gemini" ) 
@@ -2268,10 +2429,67 @@ $Formula: ( when
 $Formula: ( when 
    ( is-destroyed-delay 
       0 
-      "Xana" 
-      "Leo" 
       "Gemini" 
       "Aquarius" 
+   )
+   ( send-message 
+      "Warspite" 
+      "High" 
+      "rein destroyed - warspite" 
+   )
+)
++Name: rein destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: == Fail ==
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Warspite" ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "warspite destroyed - cmd" 
+   )
+)
++Name: Warspite destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Alpha 1" ) 
+   ( do-nothing ) 
+)
++Name: RTB - fail
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Return to base", -1)
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: == Win ==
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-destroyed-delay 
+         0 
+         "Armaros" 
+         "Leo" 
+         "Gemini" 
+         "Aquarius" 
+      )
+      ( and 
+         ( = @debug[1] 1 ) 
+         ( has-arrived-delay 
+            0 
+            "skip to shivans" 
+         )
+      )
    )
    ( key-reset-multiple "Alt-J" ) 
 )
@@ -2366,6 +2584,9 @@ $Formula: ( when
       0 
       "Shivan Swarmer Bomb" 
    )
+   ( change-soundtrack "<No Music>" ) 
+   ( disable-builtin-messages ) 
+   ( script-eval "activateShivanHUD()" ) 
 )
 +Name: switch
 +Repeat Count: 1
@@ -2406,6 +2627,30 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 +Chained: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      0 
+      "Elite Space Superiority" 
+   )
+   ( set-armor-type 
+      "Elite Space Superiority 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Elite Space Superiority 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+)
++Name: Elite Space Sup Armor
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( and 
@@ -2511,7 +2756,7 @@ $List: (		;! 1 points in list
 	( -2786.973877, 0.000383, 4950.930664 )
 )
 
-$Name: Xana path
+$Name: Armaros path
 $List: (		;! 1 points in list
 	( -3173.876709, -0.000465, 1807.934814 )
 )
@@ -2524,11 +2769,64 @@ $List: (		;! 4 points in list
 	( 285.780243, 395.758118, 32867.796875 )
 )
 
-#Messages		;! 0 total
+#Messages		;! 8 total
 
 
-#Reinforcements		;! 0 total
+$Name: debug on
+$Team: -1
+$MessageNew:  XSTR("Debug Mode On", -1)
+$end_multi_text
 
+$Name: ws arrives - warspite
+$Team: -1
+$MessageNew:  XSTR("Warspite in position. Engaging Shivan targets.", -1)
+$end_multi_text
++AVI Name: Head-CM3
+
+$Name: shiv rein arrive - anyw
+$Team: -1
+$MessageNew:  XSTR("The Shivans are deploying reinforcements. Break and engage.", -1)
+$end_multi_text
++AVI Name: Head-VP1
+
+$Name: mission complete - cmd
+$Team: -1
+$MessageNew:  XSTR("All hostiles have been neutralized. Job well done. Return to base.", -1)
+$end_multi_text
++AVI Name: Head-CM2
+
+$Name: armaros destroyed - warspite
+$Team: -1
+$MessageNew:  XSTR("The SC Armaros has been destroyed", -1)
+$end_multi_text
++AVI Name: Head-CM3
+
+$Name: leo destroyed - warspite
+$Team: -1
+$MessageNew:  XSTR("Scratch one Shivan escort wing.", -1)
+$end_multi_text
++AVI Name: Head-CM3
+
+$Name: rein destroyed - warspite
+$Team: -1
+$MessageNew:  XSTR("Enemy reinforcements have been eliminated.", -1)
+$end_multi_text
++AVI Name: Head-CM3
+
+$Name: warspite destroyed - cmd
+$Team: -1
+$MessageNew:  XSTR("We've lost the Warspite! Mission aborted, all pilots return to base.", -1)
+$end_multi_text
++AVI Name: Head-CM2
+
+#Reinforcements		;! 1 total
+
+$Name: skip to shivans
+$Type: Attack/Protect
+$Num times: 1
++Arrival Delay: 0
++No Messages: ( )
++Yes Messages: ( )
 
 #Background bitmaps		;! 51 total
 
