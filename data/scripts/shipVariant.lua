@@ -73,8 +73,13 @@ function setVariant(shipName, variantName)
 	for attribute, value in pairs(variantInfo) do
 		--Note: value = variantInfo[attribute]
 		if (attribute == "armor") then
-			ship.armorClass = value --what about shield armor?
+			ba.print("setVariant: Armor ==> "..value)
+			ship.armorClass = value
+		elseif (attribute == "shield armor") then
+			ba.print("setVariant: Shield Armor ==> "..value)
+			ship.ShieldArmorClass = value
 		elseif (attribute == "hull") then
+			--TODO: deal with 'k's
 			ship.HitpointsMax = value
 		elseif (attribute == "turret armor") then
 			turretArmor = value
