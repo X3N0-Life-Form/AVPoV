@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 05/11/14 at 21:26:39
+$Modified: 05/12/14 at 22:44:49
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -25,9 +25,9 @@ $end_multi_text
 
 +Viewer pos: -1320.044556, 4883.779297, 26938.595703
 +Viewer orient:
-	0.999980, -0.000011, 0.006399,
-	-0.005994, 0.348240, 0.937386,
-	-0.002239, -0.937405, 0.348233
+	0.999980, -0.000012, 0.006399,
+	-0.004667, 0.682729, 0.730657,
+	-0.004377, -0.730672, 0.682715
 
 
 $Skybox Model: Starfield.pof
@@ -39,7 +39,12 @@ $AI Profile: myProfile
 $Variables:
 (
 		0		"debug"		"1"		"number"
-		1		"shots"		"0"		"number"
+		1		"rld-countdown"		"15"		"number"
+		2		"rld-toggle"		"0"		"number"
+		3		"rld-txt"		" "		"string"
+		4		"rld-txt-cst"		"Reload Cycle: "		"string"
+		5		"rld-txt-var"		"-"		"string"
+		6		"shots"		"0"		"number"
 )
 
 #Command Briefing
@@ -315,7 +320,7 @@ $Ship Choices: (
 	"Hornet"	400
 )
 
-#Objects		;! 53 total
+#Objects		;! 52 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Horus
@@ -1843,32 +1848,6 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Cruiser Defence 4		;! Object #49
-$Class: GVF Nhu
-$Team: Hostile
-$Location: -127.064957, -190.731354, 32309.474609
-$Orientation:
-	0.141221, -0.975723, 0.167393,
-	0.629172, 0.219007, 0.745773,
-	-0.764329, 0.000000, 0.644827
-$AI Behavior: None
-+AI Class: Colonel
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "cargo-known" "no-arrival-warp" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Use Table Score:
-+Score: 10
-
 $Name: Elite Space Superiority 1		;! Object #50
 $Class: SF Mara
 $Team: Friendly
@@ -2154,7 +2133,7 @@ $AI Goals: ( goals ( ai-chase-wing "Space Superiority" 50 ) ( ai-chase-wing "Dis
 $Name: Cruiser Defence
 $Waves: 1
 $Wave Threshold: 0
-$Special Ship: 3		;! Cruiser Defence 4
+$Special Ship: 0		;! Cruiser Defence 1
 
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
@@ -2163,11 +2142,10 @@ $Arrival Cue: ( has-arrived-delay
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 4 total
+$Ships: (		;! 3 total
 	"Cruiser Defence 1"
 	"Cruiser Defence 2"
 	"Cruiser Defence 3"
-	"Cruiser Defence 4"
 )
 $AI Goals: ( goals ( ai-guard "Hostile Cruiser" 50 ) )
 +Flags: ( )
@@ -2179,7 +2157,7 @@ $Special Ship: 0		;! Elite Space Superiority 1
 
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
-   5 
+   1 
    "Cruiser Defence" 
 )
 $Departure Location: Hyperspace
@@ -2191,7 +2169,15 @@ $Ships: (		;! 2 total
 $AI Goals: ( goals ( ai-chase-wing "Cruiser Defence" 50 ) ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( )
 
-#Events		;! 25 total
+#Events		;! 28 total
+
+$Formula: ( when 
+   ( true ) 
+   ( training-msg "debug" ) 
+)
++Name: debug
++Repeat Count: 99999
++Interval: 1
 
 $Formula: ( when 
    ( is-goal-true-delay 
@@ -2328,6 +2314,80 @@ $Formula: ( when
 +Repeat Count: -1
 +Trigger Count: 200
 +Interval: 5
+
+$Formula: ( when 
+   ( = @rld-toggle[0] 1 ) 
+   ( modify-variable 
+      @rld-countdown[15] 
+      ( - @rld-countdown[15] 1 ) 
+   )
+)
++Name: reload counter
++Repeat Count: -1
++Trigger Count: 80000
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "switch" 0 ) 
+   ( string-concatenate 
+      "@rld-txt-cst[Reload Cycle: ]" 
+      "@rld-txt-var[-]" 
+      "@rld-txt[ ]" 
+   )
+   ( hud-set-text 
+      "ShivTaskStatusBody1" 
+      "@rld-txt[ ]" 
+   )
+   ( if-then-else 
+      ( and 
+         ( = 
+            ( get-secondary-ammo "Alpha 1" 0 ) 
+            0 
+         )
+         ( not ( = @rld-toggle[0] 1 ) ) 
+      )
+      ( when 
+         ( true ) 
+         ( modify-variable @rld-toggle[0] 1 ) 
+         ( modify-variable 
+            @rld-countdown[15] 
+            15 
+         )
+      )
+      ( do-nothing ) 
+   )
+   ( if-then-else 
+      ( = @rld-toggle[0] 1 ) 
+      ( int-to-string 
+         @rld-countdown[15] 
+         "@rld-txt-var[-]" 
+      )
+      ( modify-variable 
+         "@rld-txt-var[-]" 
+         "-" 
+      )
+   )
+   ( if-then-else 
+      ( and 
+         ( = @rld-countdown[15] 0 ) 
+         ( = @rld-toggle[0] 1 ) 
+      )
+      ( when 
+         ( true ) 
+         ( set-secondary-ammo "Alpha 1" 0 9999 ) 
+         ( modify-variable @rld-toggle[0] 0 ) 
+         ( modify-variable 
+            @rld-countdown[15] 
+            15 
+         )
+         ( play-sound-from-file "m_lock.wav" ) 
+      )
+      ( do-nothing ) 
+   )
+)
++Name: update shivan hud
++Repeat Count: 8000
++Interval: 1
 
 $Formula: ( when ( true ) ( do-nothing ) ) 
 +Name: ===============================
@@ -2769,7 +2829,7 @@ $List: (		;! 4 points in list
 	( 285.780243, 395.758118, 32867.796875 )
 )
 
-#Messages		;! 8 total
+#Messages		;! 9 total
 
 
 $Name: debug on
@@ -2818,6 +2878,11 @@ $Team: -1
 $MessageNew:  XSTR("We've lost the Warspite! Mission aborted, all pilots return to base.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
+
+$Name: debug
+$Team: -1
+$MessageNew:  XSTR("rld-toggle=$rld-toggle", -1)
+$end_multi_text
 
 #Reinforcements		;! 1 total
 

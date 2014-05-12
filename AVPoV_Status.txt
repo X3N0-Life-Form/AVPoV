@@ -76,7 +76,7 @@ A_Intro_02.Blue Storm								//Needs messages
 		Assist the Warspite while it tests ULTRA-AAA. Small scale mission.
 		Ships :
 			-GTCv Warspite (Deimos class)		//vital
-			-SC Xana (Cain class)			//destroyed
+			-SC Armaros (Cain class)		//destroyed
 
 
 /********************************************************************************/
