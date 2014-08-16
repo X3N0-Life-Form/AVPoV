@@ -3,7 +3,6 @@ $Max Escort Ships:			8
 #Gauge Config
 $Base:		(1024,768)
 $Gauges:
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;	Shivan Task Status	;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
