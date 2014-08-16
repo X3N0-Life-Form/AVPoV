@@ -10,6 +10,6 @@ function activateShivanHUD()
       "ShivTaskStatusBottom" 
    )
 )]])
-
-
+	gr.Cameras[0].FOV = 0.80
+	gr.setPostEffect("saturation", 200)
 end
