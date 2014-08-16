@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 05/12/14 at 22:44:49
+$Modified: 08/16/14 at 21:18:09
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1320.044556, 4883.779297, 26938.595703
++Viewer pos: -2022.817261, 943.106262, 37208.734375
 +Viewer orient:
-	0.999980, -0.000012, 0.006399,
-	-0.004667, 0.682729, 0.730657,
-	-0.004377, -0.730672, 0.682715
+	-0.982936, -0.000001, -0.183948,
+	0.149442, 0.583080, -0.798552,
+	0.107257, -0.812415, -0.573130
 
 
 $Skybox Model: Starfield.pof
@@ -39,12 +39,13 @@ $AI Profile: myProfile
 $Variables:
 (
 		0		"debug"		"1"		"number"
-		1		"rld-countdown"		"15"		"number"
-		2		"rld-toggle"		"0"		"number"
-		3		"rld-txt"		" "		"string"
-		4		"rld-txt-cst"		"Reload Cycle: "		"string"
-		5		"rld-txt-var"		"-"		"string"
-		6		"shots"		"0"		"number"
+		1		"points"		" "		"string"
+		2		"rld-countdown"		"15"		"number"
+		3		"rld-toggle"		"0"		"number"
+		4		"rld-txt"		" "		"string"
+		5		"rld-txt-cst"		" Reload Cycle: "		"string"
+		6		"rld-txt-var"		"-"		"string"
+		7		"shots"		"0"		"number"
 )
 
 #Command Briefing
@@ -117,7 +118,7 @@ $start_icon
 $type: 28
 $team: Friendly
 $class: GTCv Deimos
-$pos: -1341.289673, 278.241211, -1876.198242
+$pos: 958.174194, 278.241211, -351.123535
 $label: Warspite
 +id: 1
 $hlight: 0
@@ -129,7 +130,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: -3295.390381, 547.653198, 2467.684082
+$pos: 626.015015, 547.653320, 1645.318115
 $label: Armaros
 +id: 2
 $hlight: 0
@@ -141,7 +142,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Horus
-$pos: -4507.235352, 215.485306, -1281.567993
+$pos: -1852.019775, 215.485352, -435.477539
 $label: Alpha
 +id: 3
 $hlight: 0
@@ -153,7 +154,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Astaroth
-$pos: -5653.694336, 177.615402, 1573.410400
+$pos: -2079.632568, 177.615234, 1527.117920
 $label: Escort Wing
 +id: 4
 $hlight: 0
@@ -185,7 +186,7 @@ $start_icon
 $type: 28
 $team: Friendly
 $class: GTCv Deimos
-$pos: 451.362671, 278.241333, -1245.603760
+$pos: 958.174194, 278.241211, -351.123535
 $label: Warspite
 +id: 1
 $hlight: 0
@@ -197,7 +198,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: -2955.644531, 547.652893, -1316.871216
+$pos: 626.015015, 547.653320, 1645.318115
 $label: Armaros
 +id: 2
 $hlight: 1
@@ -209,7 +210,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Horus
-$pos: 3048.241943, 215.485687, 343.139740
+$pos: -1852.019775, 215.485352, -435.477539
 $label: Alpha
 +id: 3
 $hlight: 0
@@ -221,7 +222,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Astaroth
-$pos: 567.437256, 177.614853, 1197.237549
+$pos: -2079.632568, 177.615234, 1527.117920
 $label: Escort Wing
 +id: 4
 $hlight: 0
@@ -233,7 +234,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Seth
-$pos: -4900.711426, 0.000329, 924.511414
+$pos: -4147.538574, 0.000000, -362.421143
 $label: Beta
 +id: 5
 $hlight: 0
@@ -320,7 +321,7 @@ $Ship Choices: (
 	"Hornet"	400
 )
 
-#Objects		;! 52 total
+#Objects		;! 64 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Horus
@@ -909,7 +910,7 @@ $Determination: 10
 $Name: Swarm Assault 2		;! Object #19
 $Class: SF Aeshma
 $Team: Friendly
-$Location: -1456.588135, -0.000138, 31081.746094
+$Location: -1444.664185, -0.000122, 30985.773438
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -963,7 +964,7 @@ $Determination: 10
 $Name: Swarm Assault 4		;! Object #21
 $Class: SF Aeshma
 $Team: Friendly
-$Location: -1353.881226, 0.000155, 30257.410156
+$Location: -1347.452393, 87.372498, 30438.521484
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1080,6 +1081,7 @@ $Orientation:
 	0.186933, -0.168397, 0.967833,
 	-0.981854, 0.000000, 0.189641
 $AI Behavior: None
++AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints "Newet path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1425,7 +1427,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1451,7 +1452,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1477,7 +1477,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1503,7 +1502,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1529,7 +1527,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1555,7 +1552,6 @@ $Determination: 10
 +Flags: ( "no-arrival-warp" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 13
@@ -1784,6 +1780,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Mekhu HL-7" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1810,6 +1807,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Mekhu HL-7" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1836,6 +1834,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Primary Banks: ( "Sahr AS" "Mekhu HL-7" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1848,7 +1847,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Elite Space Superiority 1		;! Object #50
+$Name: Elite Space Superiority 1		;! Object #49
 $Class: SF Mara
 $Team: Friendly
 $Location: -576.302368, 325.494293, 31339.910156
@@ -1877,7 +1876,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Elite Space Superiority 2		;! Object #51
+$Name: Elite Space Superiority 2		;! Object #50
 $Class: SF Mara
 $Team: Friendly
 $Location: -416.115540, 325.494476, 31257.707031
@@ -1906,7 +1905,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: skip to shivans		;! Object #52
+$Name: skip to shivans		;! Object #51
 $Class: GTNB Pharos
 $Team: Friendly
 $Location: 2820.204102, 0.000145, 39458.304688
@@ -1931,7 +1930,347 @@ $Determination: 10
 +Use Table Score:
 +Score: 0
 
-#Wings		;! 11 total
+$Name: Swarm Assault 5		;! Object #52
+$Class: SF Aeshma
+$Team: Friendly
+$Location: -1264.900024, -100.000000, 30633.500000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Swarm Assault 6		;! Object #53
+$Class: SF Aeshma
+$Team: Friendly
+$Location: -1502.500000, -100.000000, 30633.099609
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Shivan Swarmer Bomb" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capture 1 Escort 1		;! Object #54
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: -319.000000, 800.000000, 34498.500000
+$Orientation:
+	0.396417, 0.000000, 0.918071,
+	-0.591438, 0.764843, 0.255379,
+	-0.702180, -0.644218, 0.303197
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Morning Star" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capture 1 Escort 2		;! Object #55
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: -119.798004, 952.760925, 34502.343750
+$Orientation:
+	0.396417, 0.000000, 0.918071,
+	-0.591437, 0.764842, 0.255379,
+	-0.702179, -0.644218, 0.303197
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Morning Star" )
++Secondary Banks: ( "Harpoon" "Tornado" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capture 2 Escort 1		;! Object #56
+$Class: GTF Perseus
+$Team: Hostile
+$Location: -1547.642578, -823.444275, 35072.402344
+$Orientation:
+	-0.938826, 0.258736, 0.227294,
+	0.303998, 0.312450, 0.899978,
+	0.161839, 0.914019, -0.371992
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Capture 2 Escort 2		;! Object #57
+$Class: GTF Perseus
+$Team: Hostile
+$Location: -1562.598022, -979.331238, 35131.570313
+$Orientation:
+	-0.938826, 0.258736, 0.227294,
+	0.303998, 0.312450, 0.899978,
+	0.161839, 0.914019, -0.371992
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Capture 2 Escort 3		;! Object #58
+$Class: GTF Perseus
+$Team: Hostile
+$Location: -1413.300049, -1000.000000, 35088.300781
+$Orientation:
+	-0.938826, 0.258736, 0.227294,
+	0.303999, 0.312451, 0.899979,
+	0.161839, 0.914020, -0.371992
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Tempest" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 14
+
+$Name: Long Range Strike 1		;! Object #59
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: -1634.698975, 600.000000, 36990.207031
+$Orientation:
+	0.108652, -0.994043, 0.008537,
+	-0.990990, -0.108987, -0.077860,
+	0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "Maxim" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Long Range Strike 2		;! Object #60
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: -1650.311279, 760.880798, 36963.734375
+$Orientation:
+	0.108652, -0.994043, 0.008537,
+	-0.990989, -0.108987, -0.077860,
+	0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "Maxim" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Long Range Strike 3		;! Object #61
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: -1640.464600, 682.435303, 36948.195313
+$Orientation:
+	0.108652, -0.994043, 0.008537,
+	-0.990989, -0.108987, -0.077860,
+	0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Cap_Killer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Maxim" "Maxim" )
++Secondary Banks: ( "Trebuchet" "Trebuchet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Sweeper 1		;! Object #62
+$Class: SF Dragon
+$Team: Friendly
+$Location: -2039.387939, -0.000183, 35722.414063
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Sweeper 2		;! Object #63
+$Class: SF Dragon
+$Team: Friendly
+$Location: -2108.730469, -0.000183, 35652.316406
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Shivan Sniper Gun" "Shivan Light Scatter Gun" )
++Secondary Banks: ( "Tempest Adv#Shivan" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 16
+
+#Wings		;! 15 total
 
 $Name: Alpha
 $Waves: 1
@@ -2063,13 +2402,15 @@ $Arrival Cue: ( is-event-true-delay
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 4 total
+$Ships: (		;! 6 total
 	"Swarm Assault 1"
 	"Swarm Assault 2"
 	"Swarm Assault 3"
 	"Swarm Assault 4"
+	"Swarm Assault 5"
+	"Swarm Assault 6"
 )
-$AI Goals: ( goals ( ai-guard "Alpha 1" 48 ) ( ai-chase "Hostile Cruiser" 50 ) )
+$AI Goals: ( goals ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( "no-arrival-warp" )
 
 $Name: Space Superiority
@@ -2125,7 +2466,7 @@ $Ships: (		;! 6 total
 	"Diversion Strike 5"
 	"Diversion Strike 6"
 )
-$AI Goals: ( goals ( ai-chase-wing "Space Superiority" 50 ) ( ai-chase-wing "Disable Strike" 48 ) ( ai-guard "Alpha 1" 46 ) )
+$AI Goals: ( goals ( ai-chase-wing "Cruiser Defence" 50 ) ( ai-chase-wing "Space Superiority" 48 ) ( ai-chase-wing "Disable Strike" 46 ) ( ai-guard "Alpha 1" 44 ) )
 +Flags: ( )
 +Wave Delay Min: 4
 +Wave Delay Max: 12
@@ -2161,7 +2502,10 @@ $Arrival Cue: ( has-arrived-delay
    "Cruiser Defence" 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-destroyed-delay 
+   0 
+   "Cruiser Defence" 
+)
 $Ships: (		;! 2 total
 	"Elite Space Superiority 1"
 	"Elite Space Superiority 2"
@@ -2169,15 +2513,85 @@ $Ships: (		;! 2 total
 $AI Goals: ( goals ( ai-chase-wing "Cruiser Defence" 50 ) ( ai-guard "Alpha 1" 48 ) )
 +Flags: ( )
 
-#Events		;! 28 total
+$Name: Capture 1 Escort
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Capture 1 Escort 1
 
-$Formula: ( when 
-   ( true ) 
-   ( training-msg "debug" ) 
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Capture 1" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Capture 1 Escort 1"
+	"Capture 1 Escort 2"
 )
-+Name: debug
-+Repeat Count: 99999
-+Interval: 1
+$AI Goals: ( goals ( ai-guard "Capture 1" 50 ) ( ai-chase-any 46 ) )
++Flags: ( )
+
+$Name: Capture 2 Escort
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 2		;! Capture 2 Escort 3
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Capture 2" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Capture 2 Escort 1"
+	"Capture 2 Escort 2"
+	"Capture 2 Escort 3"
+)
+$AI Goals: ( goals ( ai-guard "Capture 2" 50 ) ( ai-chase-any 46 ) )
++Flags: ( )
+
+$Name: Long Range Strike
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Long Range Strike 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 
+   3 
+   "Hostile Cruiser" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-destroyed-delay 
+   6 
+   "Capture 1" 
+   "Capture 2" 
+)
+$Ships: (		;! 3 total
+	"Long Range Strike 1"
+	"Long Range Strike 2"
+	"Long Range Strike 3"
+)
+$AI Goals: ( goals ( ai-destroy-subsystem "Command Corvette" "turret07" 50 ) ( ai-destroy-subsystem "Command Corvette" "turret08" 46 ) ( ai-destroy-subsystem "Command Corvette" "turret13" 44 ) ( ai-destroy-subsystem "Command Corvette" "turret14" 42 ) ( ai-destroy-subsystem "Command Corvette" "weapons" 40 ) )
++Flags: ( )
+
+$Name: Sweeper
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Sweeper 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 1600
+$Arrival Anchor: Command Corvette
+$Arrival Cue: ( is-event-true-delay 
+   "both transports destroyed" 
+   4 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Sweeper 1"
+	"Sweeper 2"
+)
+$AI Goals: ( goals ( ai-chase-wing "Capture 1 Escort" 50 ) ( ai-chase-wing "Capture 2 Escort" 45 ) ( ai-chase-wing "Long Range Strike" 42 ) ( ai-guard "Command Corvette" 40 ) )
++Flags: ( )
+
+#Events		;! 45 total
 
 $Formula: ( when 
    ( is-goal-true-delay 
@@ -2330,7 +2744,7 @@ $Formula: ( when
 $Formula: ( when 
    ( is-event-true-delay "switch" 0 ) 
    ( string-concatenate 
-      "@rld-txt-cst[Reload Cycle: ]" 
+      "@rld-txt-cst[ Reload Cycle: ]" 
       "@rld-txt-var[-]" 
       "@rld-txt[ ]" 
    )
@@ -2689,6 +3103,14 @@ $Formula: ( when
 +Chained: 2
 
 $Formula: ( when 
+   ( is-event-true-delay "back in" 2 ) 
+   ( training-msg "swarmer bombs" ) 
+)
++Name: training msg - swarmer bombs
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
    ( has-arrived-delay 
       0 
       "Elite Space Superiority" 
@@ -2754,6 +3176,243 @@ $Formula: ( when
 +Trigger Count: 999
 +Interval: 20
 
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Hostile Cruiser" 
+   )
+   ( do-nothing ) 
+)
++Name: destroy hostile cruiser
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Hostile Cruiser", -1)
++Objective key:  XSTR("Use Swarmer Bombs", -1)
+
+$Formula: ( when 
+   ( true ) 
+   ( beam-lock 
+      "Command Corvette" 
+      "turret05" 
+   )
+)
++Name: lock turret05
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Cruiser Defence" 
+   )
+   ( do-nothing ) 
+)
++Name: cruiser defence wing
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Hostile defence wing status", -1)
+
+$Formula: ( when 
+   ( is-event-true-delay "back in" 8 ) 
+   ( add-goal 
+      "Swarm Assault" 
+      ( ai-chase "Hostile Cruiser" 50 ) 
+   )
+)
++Name: Swarm Assault engages cruiser
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Capture 1" ) 
+   ( do-nothing ) 
+)
++Name: destroy capture 1
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Capture 1", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Capture 2" ) 
+   ( do-nothing ) 
+)
++Name: destroy capture 2
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Capture 2", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Long Range Strike" 
+   )
+   ( do-nothing ) 
+)
++Name: neutralize long range strike
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Neutralize Long Range Strike", -1)
++Objective key:  XSTR("F12", -1)
+
+$Formula: ( when 
+   ( or 
+      ( has-docked-delay 
+         "Capture 1" 
+         "Command Corvette" 
+         1 
+         0 
+      )
+      ( has-docked-delay 
+         "Capture 2" 
+         "Command Corvette" 
+         1 
+         0 
+      )
+   )
+   ( training-msg "capture docked" ) 
+)
++Name: dock warning
++Repeat Count: -1
++Trigger Count: 2
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( has-docked-delay 
+         "Capture 1" 
+         "Command Corvette" 
+         1 
+         10 
+      )
+      ( has-docked-delay 
+         "Capture 2" 
+         "Command Corvette" 
+         1 
+         10 
+      )
+   )
+   ( training-msg 
+      "command corvette captured" 
+   )
+)
++Name: command corvette captured
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( fade-out 2000 ) ) 
++Name: fade out
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: mission ends - failure
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Capture 1" 
+      "Capture 2" 
+   )
+   ( do-nothing ) 
+)
++Name: both transports destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Space Superiority" 
+      "Disable Strike" 
+      "Capture 1 Escort" 
+      "Capture 2 Escort" 
+   )
+   ( do-nothing ) 
+)
++Name: mop up the area
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Neutralize remaining threats", -1)
+
+$Formula: ( when-argument 
+   ( in-sequence 
+      " " 
+      "." 
+      ".." 
+      "..." 
+      "." 
+      ".." 
+      "..." 
+   )
+   ( destroyed-or-departed-delay 
+      0 
+      "Hostile Cruiser" 
+      "Capture 1" 
+      "Capture 2" 
+      "Space Superiority" 
+      "Disable Strike" 
+      "Capture 1 Escort" 
+      "Capture 2 Escort" 
+      "Long Range Strike" 
+   )
+   ( training-msg 
+      "all threats neutralized" 
+   )
+   ( modify-variable 
+      "@points[ ]" 
+      "<argument>" 
+   )
+)
++Name: all threats neutralized
++Repeat Count: 7
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( warp-effect 
+      ( get-object-x 
+         "warp effect position:1" 
+      )
+      ( get-object-y 
+         "warp effect position:1" 
+      )
+      ( get-object-z 
+         "warp effect position:1" 
+      )
+      ( get-object-x "Command Corvette" ) 
+      ( get-object-y "Command Corvette" ) 
+      ( get-object-z "Command Corvette" ) 
+      1000 
+      10 
+      69 
+      70 
+      0 
+      0 
+   )
+)
++Name: warp effect
++Repeat Count: 1
++Interval: 1
++Chained: 6
+
+$Formula: ( when ( true ) ( fade-out 2000 ) ) 
++Name: fade out
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: mission ends - success
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
 #Goals		;! 4 total
 
 $Type: Primary
@@ -2799,7 +3458,7 @@ $Formula: ( is-event-true-delay
    2 
 )
 
-#Waypoints		;! 5 lists total
+#Waypoints		;! 6 lists total
 
 $Name: Warspite path
 $List: (		;! 1 points in list
@@ -2829,7 +3488,12 @@ $List: (		;! 4 points in list
 	( 285.780243, 395.758118, 32867.796875 )
 )
 
-#Messages		;! 9 total
+$Name: warp effect position
+$List: (		;! 1 points in list
+	( -1682.800049, 600.000000, 32806.300781 )
+)
+
+#Messages		;! 13 total
 
 
 $Name: debug on
@@ -2879,9 +3543,31 @@ $MessageNew:  XSTR("We've lost the Warspite! Mission aborted, all pilots return 
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: debug
+$Name: == switch tips ==
 $Team: -1
-$MessageNew:  XSTR("rld-toggle=$rld-toggle", -1)
+$MessageNew:  XSTR("", -1)
+$end_multi_text
+
+$Name: swarmer bombs
+$Team: -1
+$MessageNew:  XSTR("Your fighter is equipped with Swarmer Bombs.
+Use them to engage the hostile cruiser.
+Avoid the cruiser's defensive wing.", -1)
+$end_multi_text
+
+$Name: capture docked
+$Team: -1
+$MessageNew:  XSTR("WARNING: Terran troups entering Command Corvette", -1)
+$end_multi_text
+
+$Name: command corvette captured
+$Team: -1
+$MessageNew:  XSTR("Command Corvette compromised. Abort Mission.", -1)
+$end_multi_text
+
+$Name: all threats neutralized
+$Team: -1
+$MessageNew:  XSTR("All threats neutralized. Stand by for mission update $points", -1)
 $end_multi_text
 
 #Reinforcements		;! 1 total
