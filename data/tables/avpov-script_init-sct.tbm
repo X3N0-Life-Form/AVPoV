@@ -2,5 +2,6 @@
 $Application: FS2_Open
 
 $On Game Init: [[shivanHUD.lua]]
+$On Game Init: [[shipVariant.lua]]
 
 #End

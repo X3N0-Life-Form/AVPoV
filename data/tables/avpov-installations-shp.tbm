@@ -61,7 +61,7 @@ XSTR("Developed after the Great War, and continuously upgraded in the years that
 Designed with modularity and customisation in mind, the Comet is often altered to enhance it cargo storage or other capabilities. Common additions include cargo pads, additional storage facilities for atypical cargoes or additional habitable space. Further to this, the GTVA have designed a variant with its own onboard weapons systems, for use in more volatile systems, however these are not presently available to the civilian market.", -1)
 $end_multi_text
 $POF file:				CivDepotArmed.pof
-$Detail distance:			(0, 5000, 10000, 35000)
+$Detail distance:			(0, 5000);, 10000, 35000)
 $Show damage:			NO
 $Density:				1
 $Damp:				0.2

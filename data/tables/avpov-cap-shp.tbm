@@ -3789,7 +3789,7 @@ $Species:					Vasudan
 	; Mounting the 'Pulsar Lance' weapon system, the original Sparta design was meant to be the Alliance's response to the Shivan threat, providing an extremely versatile platform for both special assignments and front line duties. By the end of the Battle of Capella, only one of the original prototypes remained unchanged, and was deployed to assist the GTD Streaker on its final assignment, marking the first combat deployment of a Lance-capable warship.", -1)
 	; $end_multi_text
 $POF file:					selket_custom.pof
-$Detail distance:			(0, 5000, 5000, 10000)
+$Detail distance:			(0, 5000, 10000)
 $Damp:						0.2
 $Rotdamp:					0.6
 $Max Velocity:				0.0, 0.0, 25.0
