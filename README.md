@@ -24,6 +24,8 @@ bombers have been altered to be able to glide (like in Vassago's Dirge), with FS
 
 Armor and damage types
 ----------------------
+In general, Shivan strike crafts and capital ship are more resistant to the Alliance's lighter weapon -
+aside from the Kayser, while Shivan weapons are all around more deadly.
 
 Ship variants
 -------------
