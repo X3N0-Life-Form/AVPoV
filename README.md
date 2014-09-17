@@ -63,8 +63,8 @@ New ships
 
 Requirements
 ============
-MediaVPS_2014
-fs2 open 3.7.2 or higher
+- MediaVPS_2014
+- fs2 open 3.7.2 or higher
 
 
 Credit
