@@ -64,6 +64,22 @@ Both Alliance and Shivan arsenal have been expanded a bit:
 
 New ships
 ---------
+Most of the "new" GTVA warships are supposed to be cutting/bleeding edge assets that are only beginning to enter
+active duty.
+* Vasudan capital ships:
+  - GVC Mentu Enforcer: More fragile than a regular *Mentu*, it carries a powerful beam cannon.
+  - GVC Newet: Has a terrifying array of anti-fighter weapons, but lack the anti-capital punch of the *Enforcer*
+  - GVGb Hemsut: Torpedo gunboat.
+  - GVCv Selket (asset status pending): Vasudan equivalent to the Sparta (see below), but closer to enter active duty.
+* Vasudan fighters:
+  - GVB Hathor: 6 DoF capable bomber, an improvement upon the *Sekhmet*.
+  - GVF Nhu: Small, tough and agile, but lacks the raw firepower of the *Erinyes* and *Ares*, its Terran counterparts.
+  - GVF Serapis Elite: 6 DoF capable variant of the *Serapis*, has more armor/shield, and a wider weapon compatibility.
+* Terran capital ships:
+  - GTGb Cretheus: Flak gunboat, has a pair of mass driver turrets for anti-ship duty.
+  - GTCv Sparta: Powerful bleeding edge warship. Boasts formidable anti-capital firepower.
+* Shivan capital ships:
+  - SGb Asura: Powerful, but fragile gunboat.
 
 
 Requirements
