@@ -79,7 +79,17 @@ function setVariant(shipName, variantName)
 			ba.print("setVariant: Shield Armor ==> "..value)
 			ship.ShieldArmorClass = value
 		elseif (attribute == "hull") then
-			--TODO: deal with 'k's
+			-- deal with orders of magnitude
+			if not (string.find(value, "k") == nil) then
+				value = string.gsub(value, "k", "")
+				value = value * 1000
+			elseif not (string.find(value, "M") == nil) then
+				value = string.gsub(value, "M", "")
+				value = value * 1000000
+			elseif not (string.find(value, "G") == nil) then
+				value = string.gsub(value, "G", "")
+				value = value * 1000000000
+			end
 			ship.HitpointsMax = value
 		elseif (attribute == "turret armor") then
 			turretArmor = value
