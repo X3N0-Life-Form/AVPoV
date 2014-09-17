@@ -80,13 +80,13 @@ function setVariant(shipName, variantName)
 			ship.ShieldArmorClass = value
 		elseif (attribute == "hull") then
 			-- deal with orders of magnitude
-			if (string.find(value, "k") != nil) then
+			if not (string.find(value, "k") == nil) then
 				value = string.gsub(value, "k", "")
 				value = value * 1000
-			elseif (string.find(value, "M") != nil) then
+			elseif not (string.find(value, "M") == nil) then
 				value = string.gsub(value, "M", "")
 				value = value * 1000000
-			elseif (string.find(value, "G") != nil) then
+			elseif not (string.find(value, "G") == nil) then
 				value = string.gsub(value, "G", "")
 				value = value * 1000000000
 			end
