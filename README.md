@@ -29,6 +29,11 @@ aside from the Kayser, while Shivan weapons are all around more deadly.
 
 Ship variants
 -------------
+Some capital ships (particularily Shivan vessels) come up in different "variants" of varying turret loadout,
+armor type or hit points meant to fulfil certain roles better than others, without needing a new specialized
+asset. For exemple, the standard Rakshasa variant come with 4 SRed beams, while another variant trades two
+of these for multi turrets (see "New Weapons" below). The file *ship_variants.txt* lists the different variants
+for each vessel (may contain mild spoilers).
 
 New weapons
 -----------
