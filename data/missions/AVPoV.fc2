@@ -1,3 +1,4 @@
+
 $Name: A Vasudan Point of View
 $Type: Single
 
@@ -136,7 +137,7 @@ $Mission: D_NTF_Arc_02.fs2
 
 $Mission: E_Sathanas_Arc_01.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -144,7 +145,7 @@ $Mission: E_Sathanas_Arc_01.fs2
 
 $Mission: E_Sathanas_Arc_02.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -152,7 +153,7 @@ $Mission: E_Sathanas_Arc_02.fs2
 
 $Mission: E_Sathanas_Arc_03.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -160,7 +161,7 @@ $Mission: E_Sathanas_Arc_03.fs2
 
 $Mission: E_Sathanas_Arc_04.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -168,7 +169,7 @@ $Mission: E_Sathanas_Arc_04.fs2
 
 $Mission: E_Sathanas_Arc_05.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -176,7 +177,7 @@ $Mission: E_Sathanas_Arc_05.fs2
 
 $Mission: E_Sathanas_Arc_06.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
@@ -184,7 +185,7 @@ $Mission: E_Sathanas_Arc_06.fs2
 
 $Mission: E_Sathanas_Arc_07.fs2
 	+Flags: 0
-	+Main Hall: 1
+	+Main Hall: 0
 	+Debriefing Persona Index: 0
 	+Formula: ( true )
 	+Level: 0
