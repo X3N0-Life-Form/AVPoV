@@ -23,7 +23,16 @@ function parseVariantFile(fileName)
 			
 			cut = string.find(line, ":")
 			if not (cut == nil) then -- we've got a parsable line
-				if not (string.find(line, "[$]") == nil) then
+				if not (string.find(line, "[+]") == nil) then
+					if (attributeName == nil) then
+						ba.warning("parseVariantFile: assigning a sub-attribute without a super-attribute: "..line)
+					else
+						subAttributeName = trim(string.sub(line, 2, cut - 1))	-- armor
+						subAttributeValue = trim(string.sub(line, cut + 1))		-- armor type
+						ba.print("parseVariantFile: subAttributeName="..subAttributeName.."; subAttributeValue="..subAttributeValue)
+						matrix[className][variantName]["+"..attributeName..":"..subAttributeName] = subAttributeValue
+					end
+				elseif not (string.find(line, "[$]") == nil) then
 					className = trim(string.sub(line, 2, cut - 1))
 					variantName = trim(string.sub(line, cut + 1))
 					
@@ -33,13 +42,17 @@ function parseVariantFile(fileName)
 					end
 					ba.print("parseVariantFile: className="..className.."; variantName="..variantName)
 					matrix[className][variantName] = {}
+					
+					-- clean up potential leftovers
+					attributeName = nil
+					attributeValue = nil
 				else
 					attributeName = trim(string.sub(line, 0, cut - 1))		-- turret, hull, armor
 					attributeValue = trim(string.sub(line, cut + 1))		-- weapon type, armor type, hull value
 					ba.print("parseVariantFile: attributeName="..attributeName.."; attributeValue="..attributeValue)
 					matrix[className][variantName][attributeName] = attributeValue
 				end
-				--TODO: error proof previous if then else block
+				--TODO: error check results of previous if then else block?
 			end
 			
 			line = file:read("*l")
@@ -53,10 +66,9 @@ function parseVariantFile(fileName)
 end
 
 function setVariant(shipName, variantName)
-	local variantFolder = "."
-	local variantFilename = "ship_variants.txt"
-	local matrix = {}
-	matrix = parseVariantFile(variantFilename)
+	if (variantMatrix == nil) then
+		variantMatrix = parseVariantFile(variantFilename)
+	end
 	-- get ship class
 	-- lookup variant for that class
 	-- start going through the attributes
@@ -65,11 +77,17 @@ function setVariant(shipName, variantName)
 		ba.warning("setVariant: Could not find ship "..shipName)
 		return nil
 	end
+	
 	local className = ship.Class.Name
-	local variantInfo = matrix[className][variantName]
+	local variantInfo = variantMatrix[className][variantName]
+	if (variantInfo == nil) then
+		ba.warning("setVariant: Could not find variant info for "..className..":"..variantName)
+		return nil
+	end
 	
 	local turretArmor = ""
 	local subsystemArmor = ""
+	local subToSkip = {}
 	for attribute, value in pairs(variantInfo) do
 		--Note: value = variantInfo[attribute]
 		if (attribute == "armor") then
@@ -90,11 +108,31 @@ function setVariant(shipName, variantName)
 				value = string.gsub(value, "G", "")
 				value = value * 1000000000
 			end
+			
+			-- set max & current hit points
+			ba.print("setVariant: hull ==> "..value)
+			ratio = value / ship.HitpointsMax
 			ship.HitpointsMax = value
+			ship.HitpointsLeft = ship.HitpointsLeft * ratio
 		elseif (attribute == "turret armor") then
 			turretArmor = value
 		elseif (attribute == "subsystem armor") then
 			subsystemArmor = value
+		elseif not (string.find(attribute, "+") == nil) then -- sub-attribute
+			-- note: logic borrowed from the parser
+			line = attribute
+			cut = string.find(line, ":")
+			attribute = string.sub(line, 2, cut - 1)
+			subAttribute = string.sub(line, cut + 1)
+			ba.print("setVariant: setting sub attribute for "..attribute)
+			ba.print("setVariant: "..subAttribute.." ==> "..value)
+			if (subAttribute == "armor") then
+				ship[attribute].ArmorClass = value
+				-- also, need to make sure general armor settings don't override this
+				subToSkip[attribute] = true
+			else
+				ba.warning("Unrecognised sub attribute: "..subAttribute)
+			end
 		else -- turret
 			if (ship[attribute].PrimaryBanks) then -- primary banks
 				for i = 0, #ship[attribute].PrimaryBanks do
@@ -112,7 +150,7 @@ function setVariant(shipName, variantName)
 		-- set turrets & subsystems armor
 		for subIndex = 0, #ship do
 			local subsystem = ship[subIndex]
-			if (subsystem:isTurret() and not (turretArmor == "")) then
+			if (subsystem:isTurret() and not (turretArmor == "") and not (subToSkip[subsystem])) then
 				subsystem.ArmorClass = turretArmor
 			elseif not (subsystemArmor == "") then
 				subsystem.ArmorClass = subsystemArmor
@@ -126,6 +164,6 @@ end
 ----------
 variantFolder = "./"
 variantFilename = "ship_variants.txt"
-matrix = {}
+variantMatrix = {}
 
-matrix = parseVariantFile(variantFilename)
+variantMatrix = parseVariantFile(variantFilename)

@@ -1,5 +1,7 @@
 //TODO-->variants of variants
 //	idea: $Class: nuVariant@oldVariant
+//    -->armor value
+//    -->RoF
 /////////////////////////////////////////////////////
 //		Shivan Ships
 /////////////////////////////////////////////////////--add stalker & streaker
@@ -66,7 +68,7 @@ $SJ Sathanas:	Multi-purpose Juggernaught
 
 
 $SD Lucifer:	Planetary Bombardment Super Destroyer
-	turretarmor: Shivan Elite Armor
+	turret armor: Shivan Elite Armor
 	turret01:LRLRed
 	turret02:LRLRed
 	turret03:Advanced Flak
@@ -92,10 +94,14 @@ $SD Ravana:	Battle Destroyer
 	hull:  200k
 	armor: Shivan Elite Armor
 	turret armor: Shivan Elite Armor
-	turret01:LRed - Hell Armor
-	turret02:LRed - Hell Armor
-	turret03:MRedUp - Hell Armor
-	turret04:MRedUp - Hell Armor
+	turret01:LRed
+		+armor:Hell Armor
+	turret02:LRed
+		+armor:Hell Armor
+	turret03:MRedUp
+		+armor:Hell Armor
+	turret04:MRedUp
+		+armor:Hell Armor
 	turret05:SAAA
 	turret06:SAAA
 	turret07:Fast Flak
@@ -296,11 +302,12 @@ $SC Rakshasa:	Strike Cruiser
 	turret10:SAAA
 
 $SC Rakshasa:	SC
-	armor:Hell Armor
+	hull: 200k
 	turret04:SRed
 	turret07:Shivan Multi Turret
 	turret08:Shivan Multi Turret
 	turret10:SAAA
+		+armor:Hell Armor
 
 
 $SC Rakshasa:	Support Cruiser
