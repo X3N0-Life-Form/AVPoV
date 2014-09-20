@@ -1,3 +1,13 @@
+----------------------
+-- global variables --
+----------------------
+variantFilename = "ship_variants.txt"
+variantMatrix = {}
+
+
+-----------------------
+-- utility functions --
+-----------------------
 
 function trim(str)
 	return str:find'^%s*$' and '' or str:match'^%s*(.*%S)'
@@ -6,6 +16,11 @@ end
 function removeComments(line)
 	return line:gsub("--(.)*|//(.)*|;;(.)*", "")
 end
+
+
+--------------------
+-- core functions --
+--------------------
 
 function parseVariantFile(fileName)
 	if (matrix == nil) then
@@ -125,7 +140,7 @@ function setVariant(shipName, variantName)
 			attribute = string.sub(line, 2, cut - 1)
 			subAttribute = string.sub(line, cut + 1)
 			ba.print("setVariant: setting sub attribute for "..attribute)
-			ba.print("setVariant: "..subAttribute.." ==> "..value)
+			ba.print("setVariant:     "..subAttribute.." ==> "..value)
 			if (subAttribute == "armor") then
 				ship[attribute].ArmorClass = value
 				-- also, need to make sure general armor settings don't override this
@@ -159,11 +174,9 @@ function setVariant(shipName, variantName)
 	end
 end
 
+
 ----------
 -- main --
 ----------
-variantFolder = "./"
-variantFilename = "ship_variants.txt"
-variantMatrix = {}
 
 variantMatrix = parseVariantFile(variantFilename)
