@@ -1,3 +1,53 @@
+--[[
+		---------------------------------
+		-- ship variant manager script --
+		---------------------------------
+In order to work, this script needs:
+	- a descriptor text file
+	- the global variable variantFileName needs to point to this file, eg. "data/config/ship_variants.txt"
+	- call the setVariant() or sv() function via scrip-eval, with the name of the ship you want to alter and the name of the variant of the appropriate class as the function's argument.
+		For instance "sv(Colly, bunny)" means you want Colly to be of the "bunny" variant.
+		Keep in mind that, as of this writing, script-eval suffers from FSO's infamous 32 character limit, so you may want to keep your variant names short for the time being.
+		
+Descriptor file logic:
+	- A new variant is identified by a '$', followed by the ship class, a ':' and then the variant's name, like this:
+		$GTC Aeolus:	nerfed		--> defines the "nerf" variant for the GTC Aeolus
+	- Following the variant definition is a list of attributes or turret names, potentially with their own sub-attributes.
+		
+			
+Valid attributes:
+	hull: special hit points
+	armor: hull armor type
+	turret armor: ship-wide turret armor type
+	subsystem armor: ship-wide subsystem armor type
+	
+Valid sub-attributes:
+	armor: armor type
+	
+Sample entry:
+	$GTC Aeolus: nerfed
+			hull: 15k
+			armor: Fancy Armor
+			turret armor: Fancy Armor
+			subsystem armor: Fancy Armor
+			turret01: Terran Huge Turret
+				+armor: Weak Armor
+			turret02: Terran Huge Turret
+				+armor: Weak Armor
+			turret03: Terran Huge Turret
+			turret04: Terran Huge Turret
+			turret05: Terran Huge Turret
+]]--
+----------------------
+-- global variables --
+----------------------
+variantFileName = "ship_variants.txt" -- change this
+variantMatrix = {}
+
+
+-----------------------
+-- utility functions --
+-----------------------
 
 function trim(str)
 	return str:find'^%s*$' and '' or str:match'^%s*(.*%S)'
@@ -6,6 +56,14 @@ end
 function removeComments(line)
 	return line:gsub("--(.)*|//(.)*|;;(.)*", "")
 end
+
+-- screw you, 32 char limit
+function sv(shipName, variantName)
+	setVariant(shipName, variantName)
+end
+--------------------
+-- core functions --
+--------------------
 
 function parseVariantFile(fileName)
 	if (matrix == nil) then
@@ -67,7 +125,7 @@ end
 
 function setVariant(shipName, variantName)
 	if (variantMatrix == nil) then
-		variantMatrix = parseVariantFile(variantFilename)
+		variantMatrix = parseVariantFile(variantFileName)
 	end
 	-- get ship class
 	-- lookup variant for that class
@@ -125,7 +183,7 @@ function setVariant(shipName, variantName)
 			attribute = string.sub(line, 2, cut - 1)
 			subAttribute = string.sub(line, cut + 1)
 			ba.print("setVariant: setting sub attribute for "..attribute)
-			ba.print("setVariant: "..subAttribute.." ==> "..value)
+			ba.print("setVariant:     "..subAttribute.." ==> "..value)
 			if (subAttribute == "armor") then
 				ship[attribute].ArmorClass = value
 				-- also, need to make sure general armor settings don't override this
@@ -159,11 +217,9 @@ function setVariant(shipName, variantName)
 	end
 end
 
+
 ----------
 -- main --
 ----------
-variantFolder = "./"
-variantFilename = "ship_variants.txt"
-variantMatrix = {}
 
-variantMatrix = parseVariantFile(variantFilename)
+variantMatrix = parseVariantFile(variantFileName)
