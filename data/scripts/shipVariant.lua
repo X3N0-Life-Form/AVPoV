@@ -16,10 +16,13 @@ Descriptor file logic:
 		
 			
 Valid attributes:
-	hull: special hit points
-	armor: hull armor type
-	turret armor: ship-wide turret armor type
-	subsystem armor: ship-wide subsystem armor type
+	hull						: special hit points
+	armor						: hull armor type
+	turret armor				: ship-wide turret armor type
+	subsystem armor				: ship-wide subsystem armor type
+	texture:name=replacement	: doesn't work
+	team color					: change team color
+	ai class					: change ai class
 	
 Valid sub-attributes:
 	armor: armor type
@@ -57,6 +60,18 @@ function removeComments(line)
 	return line:gsub("--(.)*|//(.)*|;;(.)*", "")
 end
 
+function extractLeft(attribute)
+	local line = attribute
+	local cut = string.find(line, ":")
+	return trim(string.sub(line, 2, cut - 1))
+end
+
+function extractRight(attribute)
+	local line = attribute
+	local cut = string.find(line, ":")
+	return trim(string.sub(line, cut + 1))
+end
+
 -- screw you, 32 char limit
 function sv(shipName, variantName)
 	setVariant(shipName, variantName)
@@ -85,8 +100,8 @@ function parseVariantFile(fileName)
 					if (attributeName == nil) then
 						ba.warning("parseVariantFile: assigning a sub-attribute without a super-attribute: "..line)
 					else
-						subAttributeName = trim(string.sub(line, 2, cut - 1))	-- armor
-						subAttributeValue = trim(string.sub(line, cut + 1))		-- armor type
+						subAttributeName = trim(string.sub(line, 2, cut - 1))	-- armor, texture
+						subAttributeValue = trim(string.sub(line, cut + 1))		-- armor type, texture name
 						ba.print("parseVariantFile: subAttributeName="..subAttributeName.."; subAttributeValue="..subAttributeValue)
 						matrix[className][variantName]["+"..attributeName..":"..subAttributeName] = subAttributeValue
 					end
@@ -105,8 +120,16 @@ function parseVariantFile(fileName)
 					attributeName = nil
 					attributeValue = nil
 				else
-					attributeName = trim(string.sub(line, 0, cut - 1))		-- turret, hull, armor
-					attributeValue = trim(string.sub(line, cut + 1))		-- weapon type, armor type, hull value
+					attributeName = trim(string.sub(line, 0, cut - 1))		-- turret, hull, armor, texture, team color
+					attributeValue = trim(string.sub(line, cut + 1))		-- weapon type, armor type, hull value, texture name, color name
+					
+					-- special case: texture attribute
+					if (attributeName == "texture") then
+						equal = string.find(line, "=")
+						attributeName = trim(string.sub(line, 0, equal - 1))	-- attributeName = texture:name
+						attributeValue = trim(string.sub(line, equal + 1))		-- attributeValue = replacement name
+					end
+					
 					ba.print("parseVariantFile: attributeName="..attributeName.."; attributeValue="..attributeValue)
 					matrix[className][variantName][attributeName] = attributeValue
 				end
@@ -154,6 +177,11 @@ function setVariant(shipName, variantName)
 		elseif (attribute == "shield armor") then
 			ba.print("setVariant: Shield Armor ==> "..value)
 			ship.ShieldArmorClass = value
+		elseif (attribute == "turret armor") then
+			turretArmor = value
+		elseif (attribute == "subsystem armor") then
+			subsystemArmor = value
+			
 		elseif (attribute == "hull") then
 			-- deal with orders of magnitude
 			if not (string.find(value, "k") == nil) then
@@ -172,25 +200,55 @@ function setVariant(shipName, variantName)
 			ratio = value / ship.HitpointsMax
 			ship.HitpointsMax = value
 			ship.HitpointsLeft = ship.HitpointsLeft * ratio
-		elseif (attribute == "turret armor") then
-			turretArmor = value
-		elseif (attribute == "subsystem armor") then
-			subsystemArmor = value
+			
+		elseif (attribute == "team color") then
+			mn.evaluateSEXP([[
+				(when (true)
+					(change-team-color
+						"]]..value..[["
+						0
+						"]]..shipName..[["
+					)
+				)
+			]])
+			
+		elseif (attribute == "ai class") then
+			mn.evaluateSEXP([[[
+				(when (true)
+					(change-ai-class
+						"]]..shipName..[["
+						"]]..value..[["
+					)
+				)
+			]])
+			
+		elseif not (string.find(attribute, "texture") == nil) then --note: this doesn't work
+			local textureName = extractRight(attribute)
+			local texture = gr.loadTexture(textureName)
+			if (texture:isValid()) then
+				ba.print("setVariant: Replacing texture '"..textureName.."' with texture '"..value.."'.")
+				ship.Textures[textureName] = texture
+			else
+				ba.warning("setVariant: Texture "..value.." is invalid.")
+			end
+			
 		elseif not (string.find(attribute, "+") == nil) then -- sub-attribute
 			-- note: logic borrowed from the parser
 			line = attribute
 			cut = string.find(line, ":")
 			attribute = string.sub(line, 2, cut - 1)
-			subAttribute = string.sub(line, cut + 1)
-			ba.print("setVariant: setting sub attribute for "..attribute)
+			local subAttribute = string.sub(line, cut + 1)
+			ba.print("setVariant: Setting sub attribute for "..attribute)
 			ba.print("setVariant:     "..subAttribute.." ==> "..value)
+			
 			if (subAttribute == "armor") then
 				ship[attribute].ArmorClass = value
 				-- also, need to make sure general armor settings don't override this
 				subToSkip[attribute] = true
 			else
-				ba.warning("Unrecognised sub attribute: "..subAttribute)
+				ba.warning("setVariant: Unrecognised sub attribute: "..subAttribute)
 			end
+			
 		else -- turret
 			if (ship[attribute].PrimaryBanks) then -- primary banks
 				for i = 0, #ship[attribute].PrimaryBanks do
@@ -204,15 +262,15 @@ function setVariant(shipName, variantName)
 				end
 			end
 		end
-		
-		-- set turrets & subsystems armor
-		for subIndex = 0, #ship do
-			local subsystem = ship[subIndex]
-			if (subsystem:isTurret() and not (turretArmor == "") and not (subToSkip[subsystem])) then
-				subsystem.ArmorClass = turretArmor
-			elseif not (subsystemArmor == "") then
-				subsystem.ArmorClass = subsystemArmor
-			end
+	end
+	
+	-- set turrets & subsystems armor
+	for subIndex = 0, #ship do
+		local subsystem = ship[subIndex]
+		if (subsystem:isTurret() and not (turretArmor == "") and not (subToSkip[subsystem])) then
+			subsystem.ArmorClass = turretArmor
+		elseif not (subsystemArmor == "") then
+			subsystem.ArmorClass = subsystemArmor
 		end
 	end
 end

@@ -1,11 +1,13 @@
-//TODO-->variants of variants
+//TODO	-->variants of variants
 //	idea: $Class: nuVariant@oldVariant
-//    -->armor value
-//    -->RoF
-//    --AI class
+//    	-->armor value
+//    	-->RoF
+//    	-->AI class - needs testing
+//	-->alternate texture ==> doesn't seem doable right now
+//	-->team color - needs testing
 /////////////////////////////////////////////////////
 //		Shivan Ships
-/////////////////////////////////////////////////////--add stalker & streaker
+/////////////////////////////////////////////////////--add stalker & streaker (btw, rename streaker creideiki?)
 $SJ Sathanas:	Multi-purpose Juggernaught
 	turret05:MRed
 	turret06:MRed
@@ -94,6 +96,7 @@ $SD Lucifer:	Planetary Bombardment Super Destroyer
 $SD Ravana:	Battle Destroyer
 	hull:  200k
 	armor: Shivan Elite Armor
+	ai class: Big
 	turret armor: Shivan Elite Armor
 	turret01:LRed
 		+armor:Hell Armor
@@ -149,6 +152,7 @@ $SD Ravana:	Hunter Killer Destroyer
 
 --		Vampire			--
 $SD Ravana:	Long Range Hunter Killer Destroyer
+	ai class: Big
 	armor: Shivan Elite Armor
 	turret01:LRLred
 	turret02:LRLRed
@@ -169,6 +173,7 @@ $SD Ravana:	Long Range Hunter Killer Destroyer
 
 --		Susl'Arh Morc		--
 $SD Demon:	Command Destroyer
+	ai class: Big
 	armor: Shivan Elite Armor
 	turret03:MRedUp
 	turret06:MRed
@@ -264,6 +269,7 @@ $SCv Moloch:	Strike Corvette
 -- 		Cyaegha			--
 $SCv Moloch:	Command Corvette
 	armor: Shivan Elite Armor
+	ai class: Big
 	turret01:MRed/MRedUp
 	turret02:Suppression Flak
 	turret03:Shivan Multi Turret
@@ -289,6 +295,7 @@ $SC Lilith:	Hunter Killer Heavy Cruiser
 
 --		Reaper		--
 $SC Lilith:	Command Heavy Cruiser
+	ai class: Big
 	armor: Shivan Elite Armor
 	turret05:Fast Flak
 	turret06:Fast Flak
@@ -303,12 +310,14 @@ $SC Rakshasa:	Strike Cruiser
 	turret10:SAAA
 
 $SC Rakshasa:	SC
-	hull: 200k
 	turret04:SRed
 	turret07:Shivan Multi Turret
 	turret08:Shivan Multi Turret
 	turret10:SAAA
 		+armor:Hell Armor
+
+$GTC Aeolus: test
+	texture:nameplate=gtc_stalwart
 
 
 $SC Rakshasa:	Support Cruiser
@@ -321,6 +330,7 @@ $SC Rakshasa:	Support Cruiser
 
 --		Hellknight		--
 $SC Rakshasa:	Hunter Killer Cruiser
+	ai class: Big
 	armor: Shivan Elite Armor
 	turretarmor:Hell Armor
 	turret01:MRed
@@ -365,6 +375,7 @@ $SC Rakshasa:	Heavy Flak Cruiser
 	turret14:Standard Flak
 
 $SC Rakshasa:	Lance Assault Cruiser
+	ai class: Big
 	subsystem armor: Hell Armor
 	hull armor:	 Shivan Destroyer Armor
 	hull:		 80k
@@ -474,6 +485,7 @@ $SSG Belial:	Multirole Defence
 /////////////////////////////////////////////////////
 --			Apep			--
 $GVD Hatshepsut:	Combat
+	ai class: Big
 	turret05:Vasudan Torpedo
 	turret06:Vasudan Torpedo
 	turret07:Vasudan Torpedo
@@ -544,6 +556,7 @@ $GTD Hecate:	Standard
 	turret27:MGreenUp
 
 $GTD Hecate:	Streaker
+	ai class: Big
 	hull:	200k
 	turret01:Mass Driver
 	turret03:Wraith
