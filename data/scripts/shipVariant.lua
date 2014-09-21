@@ -233,11 +233,8 @@ function setVariant(shipName, variantName)
 			end
 			
 		elseif not (string.find(attribute, "+") == nil) then -- sub-attribute
-			-- note: logic borrowed from the parser
-			line = attribute
-			cut = string.find(line, ":")
-			attribute = string.sub(line, 2, cut - 1)
-			local subAttribute = string.sub(line, cut + 1)
+			attribute = extractLeft(line)
+			local subAttribute = extractRight(line)
 			ba.print("setVariant: Setting sub attribute for "..attribute)
 			ba.print("setVariant:     "..subAttribute.." ==> "..value)
 			
@@ -245,6 +242,18 @@ function setVariant(shipName, variantName)
 				ship[attribute].ArmorClass = value
 				-- also, need to make sure general armor settings don't override this
 				subToSkip[attribute] = true
+				
+			elseif (subAttribute == "RoF") then
+				mn.evaluateSEXP([[
+					(when (true)
+						(turret-set-rate-of-fire
+							"]]..shipName..[["
+							]]..value..[[
+							"]]..attribute..[["
+						)
+					)
+				]])
+				
 			else
 				ba.warning("setVariant: Unrecognised sub attribute: "..subAttribute)
 			end
