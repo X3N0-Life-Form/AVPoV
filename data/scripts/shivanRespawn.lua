@@ -32,9 +32,96 @@ end
 -------------------------
 -- respawn subroutines --
 -------------------------
+function swapShips(origin, target)
+	local buffer
+	-- swap class if necessary
+	buffer = origin.Class.Name
+	mn.evaluateSEXP([[
+		(when (true)
+			(change-ship-class
+				"]]..target.Class.Name..[["
+				"]]..origin.Name..[["
+		)
+	]])
+	mn.evaluateSEXP([[
+		(when (true)
+			(change-ship-class
+				"]]..buffer..[["
+				"]]..target.Name..[["
+		)
+	]])
+	-- swap position & orientation
+	buffer = origin.Position
+	origin.Position = target.Position
+	target.Position = buffer
+	buffer = origin.Orientation
+	origin.Orientation = target.Orientation
+	target.Orientation = buffer
+	-- swap momentum
+	buffer = origin.Physics
+	origin.Physics = target.Physics
+	target.Physics = buffer
+	-- swap weapon loadout
+	buffer = origin.PrimaryBanks
+	origin.PrimaryBanks = target.PrimaryBanks
+	target.PrimaryBanks = buffer
+	buffer = origin.SecondaryBanks
+	origin.SecondaryBanks = target.SecondaryBanks
+	target.SecondaryBanks = buffer
+	-- swap cm loadout
+	buffer = origin.CountermeasureClass
+	origin.CountermeasureClass = target.CountermeasureClass
+	target.CountermeasureClass = buffer
+	buffer = origin.CountermeasureLeft
+	origin.CountermeasureLeft = target.CountermeasureLeft
+	target.CountermeasureLeft = buffer
+	-- swap damage
+	buffer = origin.HitpointsLeft
+	mn.evaluateSEXP([[
+		(when (true)
+			(ship-copy-damage
+				"]]..target.Name..[["
+				"]]..origin.Name..[["
+			)
+		)
+	]])
+	target.HitpointsLeft = buffer -- not perfect, but that will have to do for now
+	-- swap weapon energy & afterburner energy
+	buffer = origin.WeaponEnergyLeft
+	origin.WeaponEnergyLeft = target.WeaponEnergyLeft
+	target.WeaponEnergyLeft = buffer
+	buffer = origin.AfterburnerFuelLeft
+	origin.AfterburnerFuelLeft = target.AfterburnerFuelLeft
+	target.AfterburnerFuelLeft = buffer
+end
+
 
 function jumpToShip(targetShip)
-	local cam = createCamera("jumpCam")
+	local cam = gr.createCamera("jumpCam")
+	local playerShip = mn.Ships[0]
+	cam.Position = playerShip.Position
+	local vector = playerShip.Position:getCrossProduct(targetShip.Position)
+	gr:setCamera(cam)
+	-- face target ship
+	cam.setOrientation(vector:getOrientation(), 0.5)
+	-- go to target ship
+	cam.setPosition(targetShip.Position, 1.5, 0.3, 0.1)
+	-- fade out
+	mn.evaluateSEXP([[
+		(when (true)
+			(fade-out 200)
+		)
+	]])
+	-- swap ship
+	swapShips(playerShip, targetShip)
+	-- reset camera
+	gr:setCamera()
+	-- fade in
+	mn.evaluateSEXP([[
+		(when (true)
+			(fade-in 100)
+		)
+	]])
 end
 
 function respawn()
@@ -46,11 +133,12 @@ function respawn()
 			--go through ships in wing
 		end
 		
-		--if targetShip = nil then
+		if (targetShip == nil) then
 			-- trigger warp in
-		--else
+		else
 			-- trigger freeze
-		--end
+			jumpToShip(targetShip)
+		end
 	end
 end
 
