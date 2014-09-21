@@ -25,7 +25,8 @@ Valid attributes:
 	ai class					: change ai class
 	
 Valid sub-attributes:
-	armor: armor type
+	armor	: armor type
+	RoF		: new rate of fire (in percentage)
 	
 Sample entry:
 	$GTC Aeolus: nerfed
