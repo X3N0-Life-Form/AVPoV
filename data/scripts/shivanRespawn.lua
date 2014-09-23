@@ -136,8 +136,9 @@ function respawn()
 		if (targetShip == nil) then
 			-- trigger warp in
 		else
-			-- trigger freeze
+			mn.runSEXP("set-time-compression !0.01!")
 			jumpToShip(targetShip)
+			mn.runSEXP("set-time-compression !1.0!")
 		end
 	end
 end
