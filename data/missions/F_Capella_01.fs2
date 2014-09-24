@@ -4924,7 +4924,7 @@ $Determination: 10
 +Score: 12
 
 $Name: Hunter 1		;! Object #163
-$Class: SC Asura
+$Class: SGb Asura
 $Team: Hostile
 $Location: -1468.527466, 3122.163086, 10229.141602
 $Orientation:
@@ -4966,7 +4966,7 @@ $Determination: 10
 +Score: 50
 
 $Name: Hunter 2		;! Object #164
-$Class: SC Asura
+$Class: SGb Asura
 $Team: Hostile
 $Location: -1317.550049, 3122.163086, 10407.271484
 $Orientation:
