@@ -1,10 +1,10 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("A lion is home", -1)
+$Name:  XSTR("A Lion in the House", -1)
 $Author: X3N0-Life-Form
 $Created: 06/26/10 at 17:23:48
-$Modified: 05/28/12 at 19:35:29
+$Modified: 09/26/14 at 21:17:50
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -13,49 +13,55 @@ $Mission Desc:
  XSTR("Put mission description here
 ", -1)
 $end_multi_text
-
 +Game Type Flags: 1
-
 +Flags: 128
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
-
 +Disallow Support: 0
-
 +Hull Repair Ceiling: 0.000000
-
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -2617.922363, 1666.578369, 4930.241211
++Viewer pos: -6338.355469, 1738.123169, -1958.949341
 +Viewer orient:
-	0.071473, -0.000004, -0.997443,
-	0.013169, 0.999913, 0.000940,
-	0.997356, -0.013203, 0.071467
+	0.981099, -0.000001, -0.193508,
+	0.044912, 0.972694, 0.227703,
+	0.188224, -0.232090, 0.954309
 
 $Starting wing names: ( "Alpha" "Beta" "Kappa" )
 $Squadron wing names: ( "Alpha" "Beta" "Zeta" "Sigma" "Kappa" )
 
+$Skybox Model: Starfield.pof
+
 $AI Profile: myProfile
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"temp"		" "		"string"
+)
 
 #Command Briefing
 
 #Briefing
 $start_briefing
-$num_stages: 4
+$num_stages: 3
 $start_stage
 $multi_text
- XSTR("$g Command has decided to try and break the blockade at the subspace portal before the $r Shivans deploy more forces there, and assist allied forces still in system.
+ XSTR("With the $h SD $h Vampire rampaging through $b Gamma $b Draconis, the $r Shivans have set up a blocade at the subspace portal, preventing us from joining forces with Alliance assets in-system.
 
-Our scouts have spotted four Shivan cruisers, designated $h Doom wing, one bomber wing, designated $h Taurus, and two fighter wings, designated $h Scorpio and $h Cancer.", -1)
+Admiral Obster has decided to force the blockade using the $f Apep itself. Our squadron will be deployed ahead to clean up any bombers in the area and soften up hostile cruisers before the destroyer arrives.
+
+GTVA scout wings in $b Gamma $b Draconis have been able to recon the area ahead: four Shivan cruisers, designated $h Doom, a single bomber wing, designated $h Taurus, and two fighter wings, designated $h Scorpio and $h Cancer are currently guarding the portal.", -1)
 $end_multi_text
 $voice: none.wav
-$camera_pos: 0.000000, 1457.250732, -1029.160400
+$camera_pos: 0.000000, 3668.338867, -2487.970459
 $camera_orient:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 0.164140, 0.986437,
-	0.000000, -0.986437, 0.164140
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.106474, 0.994316,
+	0.000000, -0.994316, 0.106474
 $camera_time: 500
 $num_lines: 0
 $num_icons: 11
@@ -65,7 +71,7 @@ $start_icon
 $type: 26
 $team: Friendly
 $class: Knossos
-$pos: -848.410400, -0.000229, -821.428955
+$pos: -859.463135, -0.000244, -2095.155762
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -76,7 +82,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: -334.824463, -85.406738, -433.039001
+$pos: 114.173706, -85.406738, -1741.531006
 $label: Doom 4
 +id: 2
 $hlight: 0
@@ -88,7 +94,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Basilisk
-$pos: 124.459328, 8.305294, -436.585297
+$pos: -334.873810, 8.305176, -1665.704590
 $label: Cancer
 +id: 3
 $hlight: 0
@@ -100,7 +106,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Rakshasa
-$pos: 586.855713, -0.000846, -405.172028
+$pos: 643.966248, -0.000977, -1796.241455
 $label: Doom 2
 +id: 4
 $hlight: 0
@@ -112,7 +118,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Mara
-$pos: 54.585850, 266.756134, -1045.494263
+$pos: -293.816376, 266.756104, -2362.390625
 $label: Scorpio
 +id: 5
 $hlight: 0
@@ -124,7 +130,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Rakshasa
-$pos: -299.719055, 392.358948, -1094.423950
+$pos: 103.758926, 392.358887, -2257.999268
 $label: Doom 1
 +id: 6
 $hlight: 0
@@ -136,7 +142,7 @@ $start_icon
 $type: 17
 $team: Hostile
 $class: SB Nephilim
-$pos: 798.714111, 160.428970, -976.833130
+$pos: 1252.880981, 160.428955, -2047.262207
 $label: Taurus
 +id: 7
 $hlight: 0
@@ -148,7 +154,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: 436.493561, 237.590759, -1110.673950
+$pos: 680.680725, 237.590820, -2241.404541
 $label: Doom 3
 +id: 8
 $hlight: 0
@@ -172,7 +178,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Seth
-$pos: -996.938354, 250.259491, -1346.051270
+$pos: -1303.109375, 250.259521, -2429.650879
 $label: Beta
 +id: 10
 $hlight: 0
@@ -184,7 +190,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Serapis
-$pos: -1422.617920, 59.533863, -435.392426
+$pos: -1271.371338, 59.533936, -1689.661255
 $label: Alpha
 +id: 11
 $hlight: 0
@@ -195,14 +201,16 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("Once the $g Apep is in position, we will deploy our bombers, additionnal fighter wing and a support ship to assist you. Then, she'll recharge her subspace drive and clear out as soon as possible to avoid being embushed by the $r Vampire.", -1)
+ XSTR("Once the $f Apep is in position, she will engage the $r Shivan cruisers while deploying several fighter and bomber wing, before warping to prevent the $h SD $h Vampire from ambushing us at the portal. The rest of our battlegroup will remain in the nebula for the time being.
+
+If the $r Shivans do decide to deploy the $h Vampire, $y Command will send in additional warships to assist in our counter-attack. However, successfully neutralizing that destroyer in not this mission's primary objective. $y Command would prefer to engage her on their own terms.", -1)
 $end_multi_text
 $voice: none.wav
-$camera_pos: 0.000000, 1457.250732, -1029.160400
+$camera_pos: 0.000000, 3668.338867, -2487.970459
 $camera_orient:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 0.164140, 0.986437,
-	0.000000, -0.986437, 0.164140
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.106474, 0.994316,
+	0.000000, -0.994316, 0.106474
 $camera_time: 500
 $num_lines: 0
 $num_icons: 11
@@ -212,7 +220,7 @@ $start_icon
 $type: 26
 $team: Friendly
 $class: Knossos
-$pos: -848.410400, -0.000229, -821.428955
+$pos: -859.463135, -0.000244, -2095.155762
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -223,7 +231,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: -334.824463, -85.406738, -433.039001
+$pos: 114.173706, -85.406738, -1741.531006
 $label: Doom 4
 +id: 2
 $hlight: 0
@@ -235,7 +243,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Basilisk
-$pos: 124.459328, 8.305294, -436.585297
+$pos: -334.873810, 8.305176, -1665.704590
 $label: Cancer
 +id: 3
 $hlight: 0
@@ -247,7 +255,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Rakshasa
-$pos: 586.855713, -0.000846, -405.172028
+$pos: 643.966248, -0.000977, -1796.241455
 $label: Doom 2
 +id: 4
 $hlight: 0
@@ -259,7 +267,7 @@ $start_icon
 $type: 1
 $team: Hostile
 $class: SF Mara
-$pos: 54.585850, 266.756134, -1045.494263
+$pos: -293.816376, 266.756104, -2362.390625
 $label: Scorpio
 +id: 5
 $hlight: 0
@@ -271,7 +279,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Rakshasa
-$pos: -299.719055, 392.358948, -1094.423950
+$pos: 103.758926, 392.358887, -2257.999268
 $label: Doom 1
 +id: 6
 $hlight: 0
@@ -283,7 +291,7 @@ $start_icon
 $type: 17
 $team: Hostile
 $class: SB Nephilim
-$pos: 798.714111, 160.428970, -976.833130
+$pos: 1252.880981, 160.428955, -2047.262207
 $label: Taurus
 +id: 7
 $hlight: 0
@@ -295,7 +303,7 @@ $start_icon
 $type: 18
 $team: Hostile
 $class: SC Cain
-$pos: 436.493561, 237.590759, -1110.673950
+$pos: 680.680725, 237.590820, -2241.404541
 $label: Doom 3
 +id: 8
 $hlight: 0
@@ -319,7 +327,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Seth
-$pos: -679.540710, 250.259521, -1028.658325
+$pos: -1303.109375, 250.259521, -2429.650879
 $label: Beta
 +id: 10
 $hlight: 0
@@ -331,7 +339,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Serapis
-$pos: -748.107361, 59.533955, -484.558228
+$pos: -1271.371338, 59.533936, -1689.661255
 $label: Alpha
 +id: 11
 $hlight: 0
@@ -342,15 +350,16 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("No additionnal warship will be deployed until the portal is secured.
-You are ordered to neutralize any reinforcements the $r Shivan might deploy until $f Epsilon, $f Delta and $f Gamma wing arrive.", -1)
+ XSTR("Once the blocade force and $r Shivan reinforcements have been neutralized, additonal strike crafts will be deployed from the nebula while we return to the $f Apep and prepare our counter-attack.
+
+We must contain the $r Destroyers in $b Gamma $b Draconis, we cannot risk leaving the $b Capella open to attack.", -1)
 $end_multi_text
 $voice: none.wav
-$camera_pos: 0.000000, 1457.250732, -1029.160400
+$camera_pos: 0.000000, 3668.338867, -2487.970459
 $camera_orient:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 0.164140, 0.986437,
-	0.000000, -0.986437, 0.164140
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.106474, 0.994316,
+	0.000000, -0.994316, 0.106474
 $camera_time: 500
 $num_lines: 0
 $num_icons: 5
@@ -360,7 +369,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Seth
-$pos: -309.810303, 250.259537, -1115.561768
+$pos: 849.404236, 250.259521, -2446.573242
 $label: Beta
 +id: 10
 $hlight: 0
@@ -372,7 +381,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Serapis
-$pos: -280.228699, 59.533894, -677.864075
+$pos: 812.319031, 59.533936, -1804.093750
 $label: Alpha
 +id: 11
 $hlight: 0
@@ -384,83 +393,7 @@ $start_icon
 $type: 17
 $team: Friendly
 $class: GVB Sekhmet
-$pos: 63.745899, -0.000160, -908.600830
-$label: Bombers
-+id: 13
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 1
-$team: Hostile
-$class: SF Basilisk
-$pos: 610.849854, -6.070674, -923.960938
-$label: Shivan forces
-+id: 14
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 1
-$team: Friendly
-$class: GVF Tauret
-$pos: -759.301270, 0.000029, -911.385193
-$label: Kappa
-+id: 16
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$end_stage
-$start_stage
-$multi_text
- XSTR("Once these fighters are in position, you will be returning to the $g Apep to assist in our counter attack.", -1)
-$end_multi_text
-$voice: none.wav
-$camera_pos: 0.000000, 1457.250732, -1029.160400
-$camera_orient:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 0.164140, 0.986437,
-	0.000000, -0.986437, 0.164140
-$camera_time: 500
-$num_lines: 0
-$num_icons: 5
-$Flags: 0
-$Formula: ( true ) 
-$start_icon
-$type: 1
-$team: Friendly
-$class: GVF Seth
-$pos: 117.219482, 250.259521, -1168.069092
-$label: Beta
-+id: 10
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 1
-$team: Friendly
-$class: GVF Serapis
-$pos: 146.801086, 59.533878, -730.371399
-$label: Alpha
-+id: 11
-$hlight: 0
-$mirror: 0
-$multi_text
-$end_multi_text
-$end_icon
-$start_icon
-$type: 17
-$team: Friendly
-$class: GVB Sekhmet
-$pos: 490.775665, -0.000175, -961.108154
+$pos: 2.489136, 0.000000, -2370.015381
 $label: Bombers
 +id: 13
 $hlight: 0
@@ -472,7 +405,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Seth
-$pos: -471.270294, 250.259506, -954.165588
+$pos: -1111.106323, 250.259521, -2081.633545
 $label: Reinforcements
 +id: 15
 $hlight: 0
@@ -484,7 +417,7 @@ $start_icon
 $type: 1
 $team: Friendly
 $class: GVF Tauret
-$pos: -759.301270, 0.000029, -911.385193
+$pos: 30.246948, 0.000244, -1787.522949
 $label: Kappa
 +id: 16
 $hlight: 0
@@ -549,7 +482,7 @@ $Ship Choices: (
 	"Cyclops"	20
 )
 
-#Objects		;! 61 total
+#Objects		;! 75 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVF Serapis
@@ -689,7 +622,7 @@ $Determination: 10
 $Name: Apep		;! Object #5
 $Class: GVD Hatshepsut
 $Team: Friendly
-$Location: 0.000000, -0.001184, 14.275007
+$Location: 0.000000, -0.001184, 14.275024
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -768,11 +701,11 @@ $Determination: 10
 $Name: Doom 1		;! Object #6
 $Class: SC Rakshasa
 $Team: Hostile
-$Location: 1252.561157, 392.358765, 2425.616699
+$Location: -634.206787, 397.269775, 2920.222168
 $Orientation:
-	-0.597696, 0.370920, 0.710758,
-	-0.102059, 0.844124, -0.526344,
-	-0.795200, -0.387133, -0.466674
+	0.275956, 0.942407, 0.188992,
+	0.802186, -0.117500, -0.585400,
+	-0.529478, 0.313152, -0.788411
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -816,11 +749,11 @@ $Determination: 10
 $Name: Doom 2		;! Object #7
 $Class: SC Rakshasa
 $Team: Hostile
-$Location: -1777.371948, -0.000590, 3296.939697
+$Location: -356.770142, 3560.720459, 2796.052734
 $Orientation:
-	-0.351529, 0.000000, -0.936177,
-	0.000000, 1.000000, 0.000000,
-	0.936177, 0.000000, -0.351529
+	-0.952702, 0.254591, -0.165961,
+	0.297250, 0.666939, -0.683255,
+	-0.063265, -0.700270, -0.711071
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -864,11 +797,11 @@ $Determination: 10
 $Name: Doom 3		;! Object #8
 $Class: SC Cain
 $Team: Hostile
-$Location: 1137.543701, 237.590088, 3052.503174
+$Location: -870.758911, 740.085938, 3427.091064
 $Orientation:
-	-0.960614, 0.000000, 0.277886,
-	0.000000, 1.000000, 0.000000,
-	-0.277886, 0.000000, -0.960614
+	-0.780876, 0.296411, 0.549884,
+	0.585025, 0.038344, 0.810108,
+	0.219040, 0.954291, -0.203349
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -909,11 +842,11 @@ $Determination: 10
 $Name: Doom 4		;! Object #9
 $Class: SC Cain
 $Team: Hostile
-$Location: -1469.143921, -85.406525, 2035.255371
+$Location: -275.837402, 2877.807373, 1690.548340
 $Orientation:
-	-0.563985, 0.000000, -0.825785,
-	0.000000, 1.000000, 0.000000,
-	0.825785, 0.000000, -0.563985
+	-0.964845, 0.254591, 0.065255,
+	0.258397, 0.873528, 0.412529,
+	0.048024, 0.414889, -0.908606
 $AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1058,11 +991,11 @@ $Determination: 10
 $Name: Cancer 1		;! Object #14
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1670.817261, -0.002227, 2506.474365
+$Location: -232.250641, 3202.337646, 2094.202637
 $Orientation:
-	-0.998295, -0.057111, 0.012078,
-	-0.058374, 0.976694, -0.206549,
-	0.000000, -0.206902, -0.978362
+	-0.504298, 0.393122, 0.768855,
+	0.837415, 0.005330, 0.546542,
+	0.210760, 0.919471, -0.331894
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1084,11 +1017,11 @@ $Determination: 10
 $Name: Cancer 2		;! Object #15
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1824.532349, 28.750095, 2685.862061
+$Location: -198.473816, 3397.727295, 2225.907959
 $Orientation:
-	-0.998295, -0.057111, 0.012078,
-	-0.058374, 0.976693, -0.206549,
-	0.000000, -0.206902, -0.978362
+	-0.504298, 0.393122, 0.768855,
+	0.837415, 0.005330, 0.546542,
+	0.210760, 0.919471, -0.331894
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1110,11 +1043,11 @@ $Determination: 10
 $Name: Cancer 3		;! Object #16
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1838.295776, -5.689773, 2472.169678
+$Location: -185.836792, 3346.936035, 2015.370605
 $Orientation:
-	-0.998295, -0.057111, 0.012078,
-	-0.058374, 0.976693, -0.206549,
-	0.000000, -0.206902, -0.978362
+	-0.504298, 0.393122, 0.768855,
+	0.837415, 0.005330, 0.546542,
+	0.210760, 0.919471, -0.331894
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1136,11 +1069,11 @@ $Determination: 10
 $Name: Cancer 4		;! Object #17
 $Class: SF Basilisk
 $Team: Hostile
-$Location: -1724.156372, -12.139285, 2639.992432
+$Location: -255.212158, 3297.912598, 2199.886719
 $Orientation:
-	-0.998295, -0.057111, 0.012078,
-	-0.058374, 0.976693, -0.206549,
-	0.000000, -0.206902, -0.978362
+	-0.504298, 0.393122, 0.768855,
+	0.837415, 0.005330, 0.546542,
+	0.210760, 0.919471, -0.331894
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1162,11 +1095,11 @@ $Determination: 10
 $Name: Taurus 1		;! Object #18
 $Class: SB Nephilim
 $Team: Hostile
-$Location: 1253.233398, 179.705002, 3811.510010
+$Location: -1103.688721, 894.128174, 4144.849121
 $Orientation:
-	-0.921680, 0.000000, 0.387951,
-	0.000000, 1.000000, 0.000000,
-	-0.387951, 0.000000, -0.921680
+	-0.128495, 0.254591, 0.958474,
+	0.972580, -0.156566, 0.171974,
+	0.193847, 0.954291, -0.227492
 $AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1192,11 +1125,11 @@ $Determination: 10
 $Name: Taurus 2		;! Object #19
 $Class: SB Nephilim
 $Team: Hostile
-$Location: 1266.779663, 156.734344, 3596.254639
+$Location: -1087.285034, 815.339722, 3943.368164
 $Orientation:
-	-0.921680, 0.000000, 0.387951,
-	0.000000, 1.000000, 0.000000,
-	-0.387951, 0.000000, -0.921680
+	-0.128495, 0.254591, 0.958474,
+	0.972580, -0.156566, 0.171974,
+	0.193847, 0.954291, -0.227492
 $AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1222,11 +1155,11 @@ $Determination: 10
 $Name: Taurus 3		;! Object #20
 $Class: SB Nephilim
 $Team: Hostile
-$Location: 1118.975708, 179.704956, 3840.471436
+$Location: -1073.118652, 1027.717529, 4135.083984
 $Orientation:
-	-0.921680, 0.000000, 0.387951,
-	0.000000, 1.000000, 0.000000,
-	-0.387951, 0.000000, -0.921680
+	-0.128495, 0.254591, 0.958474,
+	0.972580, -0.156566, 0.171974,
+	0.193847, 0.954291, -0.227492
 $AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1252,11 +1185,11 @@ $Determination: 10
 $Name: Taurus 4		;! Object #21
 $Class: SB Nephilim
 $Team: Hostile
-$Location: 1036.666992, 141.153503, 3612.364014
+$Location: -1043.093384, 1036.339966, 3891.450928
 $Orientation:
-	-0.921680, 0.000000, 0.387951,
-	0.000000, 1.000000, 0.000000,
-	-0.387951, 0.000000, -0.921680
+	-0.128495, 0.254591, 0.958474,
+	0.972580, -0.156566, 0.171974,
+	0.193847, 0.954291, -0.227492
 $AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1282,11 +1215,11 @@ $Determination: 10
 $Name: Scorpio 1		;! Object #22
 $Class: SF Mara
 $Team: Hostile
-$Location: 1418.987549, 381.290222, 2432.889648
+$Location: -690.910156, 248.045990, 2969.284912
 $Orientation:
-	-0.704976, 0.000000, 0.709232,
-	0.000000, 1.000000, 0.000000,
-	-0.709232, 0.000000, -0.704976
+	0.245554, 0.254591, 0.935354,
+	0.964931, -0.156566, -0.210704,
+	0.092801, 0.954291, -0.284108
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1309,11 +1242,11 @@ $Determination: 10
 $Name: Scorpio 2		;! Object #23
 $Class: SF Mara
 $Team: Hostile
-$Location: 1291.994995, 381.290253, 2793.662842
+$Location: -726.623535, 484.025421, 3268.282959
 $Orientation:
-	-0.704976, 0.000000, 0.709231,
-	0.000000, 1.000000, 0.000000,
-	-0.709231, 0.000000, -0.704976
+	0.245555, 0.254591, 0.935354,
+	0.964931, -0.156566, -0.210704,
+	0.092801, 0.954291, -0.284108
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1336,11 +1269,11 @@ $Determination: 10
 $Name: Scorpio 3		;! Object #24
 $Class: SF Mara
 $Team: Hostile
-$Location: 1101.639648, 381.290192, 2499.899658
+$Location: -618.378052, 563.330322, 2944.860596
 $Orientation:
-	-0.704976, 0.000000, 0.709231,
-	0.000000, 1.000000, 0.000000,
-	-0.709231, 0.000000, -0.704976
+	0.245555, 0.254591, 0.935354,
+	0.964931, -0.156566, -0.210704,
+	0.092801, 0.954291, -0.284108
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1363,11 +1296,11 @@ $Determination: 10
 $Name: Scorpio 4		;! Object #25
 $Class: SF Mara
 $Team: Hostile
-$Location: 1390.117065, 381.290192, 2755.443604
+$Location: -745.658875, 380.786377, 3259.656738
 $Orientation:
-	-0.704976, 0.000000, 0.709231,
-	0.000000, 1.000000, 0.000000,
-	-0.709231, 0.000000, -0.704976
+	0.245555, 0.254591, 0.935354,
+	0.964931, -0.156566, -0.210704,
+	0.092801, 0.954291, -0.284108
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1502,7 +1435,7 @@ $Determination: 10
 $Name: Iron Maiden		;! Object #30
 $Class: SC Lilith
 $Team: Hostile
-$Location: -1583.614868, 257.969910, 4262.210449
+$Location: -2834.312744, 1080.392212, 2977.246094
 $Orientation:
 	-0.723738, 0.000000, -0.690076,
 	0.000000, 1.000000, 0.000000,
@@ -1539,7 +1472,7 @@ $Determination: 10
 $Name: Libra 1		;! Object #31
 $Class: SF Manticore
 $Team: Hostile
-$Location: -1476.241211, 332.237152, 4101.729004
+$Location: -2726.938965, 1154.659424, 2816.765137
 $Orientation:
 	-0.909629, 0.000000, 0.415423,
 	0.000000, 1.000000, 0.000000,
@@ -1564,7 +1497,7 @@ $Determination: 10
 $Name: Libra 2		;! Object #32
 $Class: SF Manticore
 $Team: Hostile
-$Location: -1685.522095, 332.237213, 3928.966309
+$Location: -2936.219971, 1154.659424, 2644.002441
 $Orientation:
 	-0.909629, 0.000000, 0.415423,
 	0.000000, 1.000000, 0.000000,
@@ -1589,7 +1522,7 @@ $Determination: 10
 $Name: Libra 3		;! Object #33
 $Class: SF Manticore
 $Team: Hostile
-$Location: -1623.977783, 332.237213, 3900.860107
+$Location: -2874.676025, 1154.659424, 2615.896240
 $Orientation:
 	-0.909629, 0.000000, 0.415423,
 	0.000000, 1.000000, 0.000000,
@@ -1614,7 +1547,7 @@ $Determination: 10
 $Name: Libra 4		;! Object #34
 $Class: SF Manticore
 $Team: Hostile
-$Location: -1474.362427, 332.237274, 3869.603516
+$Location: -2725.060059, 1154.659546, 2584.639648
 $Orientation:
 	-0.909629, 0.000000, 0.415423,
 	0.000000, 1.000000, 0.000000,
@@ -1639,11 +1572,11 @@ $Determination: 10
 $Name: Gemini 1		;! Object #35
 $Class: SB Nahema
 $Team: Hostile
-$Location: 615.368958, -226.852371, 1945.137695
+$Location: -953.584595, 949.719788, 2136.767090
 $Orientation:
-	0.850856, 0.000000, 0.525401,
-	0.000000, 1.000000, 0.000000,
-	-0.525401, 0.000000, 0.850856
+	0.855102, 0.254591, -0.451646,
+	-0.424427, -0.156566, -0.891824,
+	-0.297763, 0.954291, -0.025824
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1667,11 +1600,11 @@ $Determination: 10
 $Name: Gemini 2		;! Object #36
 $Class: SB Nahema
 $Team: Hostile
-$Location: 570.877502, -226.852448, 2306.304199
+$Location: -1011.605347, 1109.592163, 2458.585693
 $Orientation:
-	0.850855, 0.000000, 0.525400,
-	0.000000, 1.000000, 0.000000,
-	-0.525400, 0.000000, 0.850855
+	0.855102, 0.254591, -0.451646,
+	-0.424427, -0.156566, -0.891823,
+	-0.297763, 0.954291, -0.025824
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1695,11 +1628,11 @@ $Determination: 10
 $Name: Gemini 3		;! Object #37
 $Class: SB Nahema
 $Team: Hostile
-$Location: 863.205017, -226.852417, 2055.049316
+$Location: -1041.681641, 756.841309, 2305.851074
 $Orientation:
-	0.850855, 0.000000, 0.525400,
-	0.000000, 1.000000, 0.000000,
-	-0.525400, 0.000000, 0.850855
+	0.855102, 0.254591, -0.451646,
+	-0.424427, -0.156566, -0.891823,
+	-0.297763, 0.954291, -0.025824
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1720,35 +1653,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Gemini 4		;! Object #38
-$Class: SB Nahema
-$Team: Hostile
-$Location: 769.755859, -226.852371, 1879.810303
-$Orientation:
-	0.850855, 0.000000, 0.525400,
-	0.000000, 1.000000, 0.000000,
-	-0.525400, 0.000000, 0.850855
-$AI Behavior: None
-+AI Class: Major
-$Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
-+Initial Hull: 100
-+Subsystem: Pilot
-+Secondary Banks: ( "Shivan Bomb" "Shivan Bomb" "Hornet#Shivan" )
-$Arrival Location: Hyperspace
-$Arrival Cue: ( false ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( )
-+Flags2: ( )
-+Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 14
-
-$Name: Kappa 1		;! Object #39
+$Name: Kappa 1		;! Object #38
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -260.500000, 800.000000, -861.099976
@@ -1775,7 +1680,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Kappa 2		;! Object #40
+$Name: Kappa 2		;! Object #39
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -186.650620, 800.000000, -840.618042
@@ -1802,7 +1707,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Kappa 3		;! Object #41
+$Name: Kappa 3		;! Object #40
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -242.684036, 800.000000, -790.684387
@@ -1829,7 +1734,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Kappa 4		;! Object #42
+$Name: Kappa 4		;! Object #41
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -290.737366, 800.000000, -801.710632
@@ -1856,7 +1761,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Epsilon 1		;! Object #43
+$Name: Epsilon 1		;! Object #42
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -671.298462, -164.911133, 11.023554
@@ -1881,7 +1786,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 2		;! Object #44
+$Name: Epsilon 2		;! Object #43
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -615.315674, -135.259415, 7.622848
@@ -1906,7 +1811,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 3		;! Object #45
+$Name: Epsilon 3		;! Object #44
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -562.682373, -42.959736, 7.622858
@@ -1931,7 +1836,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Epsilon 4		;! Object #46
+$Name: Epsilon 4		;! Object #45
 $Class: GTF Ulysses
 $Team: Friendly
 $Location: -631.308838, -43.572163, 8.756533
@@ -1956,7 +1861,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Gamma 1		;! Object #47
+$Name: Gamma 1		;! Object #46
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 350.072113, 69.283073, 11.023560
@@ -1982,7 +1887,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 2		;! Object #48
+$Name: Gamma 2		;! Object #47
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 321.471405, 10.353015, 11.023544
@@ -2008,7 +1913,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 3		;! Object #49
+$Name: Gamma 3		;! Object #48
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 383.287994, 148.346725, 8.756517
@@ -2034,7 +1939,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Gamma 4		;! Object #50
+$Name: Gamma 4		;! Object #49
 $Class: GTB Medusa
 $Team: Friendly
 $Location: 437.085083, 59.030724, 7.622874
@@ -2060,7 +1965,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 1		;! Object #51
+$Name: Delta 1		;! Object #50
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -327.632935, 468.174591, 8.154502
@@ -2085,7 +1990,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 2		;! Object #52
+$Name: Delta 2		;! Object #51
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -407.660217, 471.693024, 10.980037
@@ -2110,7 +2015,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 3		;! Object #53
+$Name: Delta 3		;! Object #52
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -370.941956, 441.447205, 10.038200
@@ -2135,7 +2040,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Delta 4		;! Object #54
+$Name: Delta 4		;! Object #53
 $Class: GVF Tauret
 $Team: Friendly
 $Location: -357.764740, 491.717438, 15.689320
@@ -2160,7 +2065,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Iota 1		;! Object #55
+$Name: Iota 1		;! Object #54
 $Class: GTF Myrmidon
 $Team: Friendly
 $Location: -1813.150391, 1685.506226, 4860.706055
@@ -2188,7 +2093,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Iota 2		;! Object #56
+$Name: Iota 2		;! Object #55
 $Class: GTF Myrmidon
 $Team: Friendly
 $Location: -1880.283936, 1685.506226, 4831.525391
@@ -2216,7 +2121,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Iota 3		;! Object #57
+$Name: Iota 3		;! Object #56
 $Class: GTF Myrmidon
 $Team: Friendly
 $Location: -1875.485229, 1685.506470, 4914.832031
@@ -2244,7 +2149,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Iota 4		;! Object #58
+$Name: Iota 4		;! Object #57
 $Class: GTF Myrmidon
 $Team: Friendly
 $Location: -1922.475708, 1685.506104, 4885.263672
@@ -2272,7 +2177,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Upsilon 1		;! Object #59
+$Name: Upsilon 1		;! Object #58
 $Class: GTF Perseus
 $Team: Friendly
 $Location: -1887.417969, 1560.935181, 4972.854492
@@ -2300,7 +2205,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 14
 
-$Name: Upsilon 2		;! Object #60
+$Name: Upsilon 2		;! Object #59
 $Class: GTF Perseus
 $Team: Friendly
 $Location: -1948.192993, 1603.747437, 4987.962402
@@ -2327,6 +2232,426 @@ $Determination: 10
 +Group: 0
 +Use Table Score:
 +Score: 14
+
+$Name: Cargo 1		;! Object #60
+$Class: SC 5
+$Team: Hostile
+$Location: -6544.000000, 2200.000000, -1631.400024
+$Orientation:
+	-0.188077, -0.982155, 0.000000,
+	0.982155, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 2		;! Object #61
+$Class: SC 5
+$Team: Hostile
+$Location: -6546.999512, 2184.335205, -2055.697266
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 3		;! Object #62
+$Class: SC 5
+$Team: Hostile
+$Location: -6600.623535, 1904.308105, -2005.658081
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 4		;! Object #63
+$Class: SC 5
+$Team: Hostile
+$Location: -6590.388184, 1957.758545, -1590.415894
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 5		;! Object #64
+$Class: SC 5
+$Team: Hostile
+$Location: -6634.122559, 1729.375366, -1661.788452
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 6		;! Object #65
+$Class: SAC 2
+$Team: Hostile
+$Location: -6656.378906, 1613.146729, -1819.736450
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 7		;! Object #66
+$Class: SAC 2
+$Team: Hostile
+$Location: -6613.070313, 1839.302979, -2364.944336
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 8		;! Object #67
+$Class: SAC 2
+$Team: Hostile
+$Location: -6527.442871, 2286.454834, -2281.721191
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Cargo 9		;! Object #68
+$Class: SAC 2
+$Team: Hostile
+$Location: -6474.746094, 2561.645020, -1814.213989
+$Orientation:
+	-0.188077, -0.982154, 0.000000,
+	0.982154, -0.188077, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Sentry Gun 1		;! Object #69
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6027.700195, 2200.000000, -1888.099976
+$Orientation:
+	-0.069148, 0.000000, -0.997607,
+	0.000000, 1.000000, 0.000000,
+	0.997607, 0.000000, -0.069148
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Sentry Gun 2		;! Object #70
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6382.979004, 2200.000000, -2248.049316
+$Orientation:
+	-0.992998, 0.000000, -0.118131,
+	0.000000, 1.000000, 0.000000,
+	0.118131, 0.000000, -0.992998
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Sentry Gun 3		;! Object #71
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6338.365723, 2700.002441, -1961.425537
+$Orientation:
+	0.153148, 0.275258, 0.949095,
+	0.987847, -0.068472, -0.139543,
+	0.026576, 0.958930, -0.282399
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Sentry Gun 4		;! Object #72
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6340.365723, 1700.002441, -1954.525513
+$Orientation:
+	0.999800, 0.000000, 0.019999,
+	-0.019936, -0.079121, 0.996667,
+	0.001582, -0.996865, -0.079105
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Sentry Gun 5		;! Object #73
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6319.970215, 2200.000000, -1542.369995
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
+
+$Name: Sentry Gun 6		;! Object #74
+$Class: SSG Belial
+$Team: Hostile
+$Location: -6841.684570, 2200.000000, -1805.765381
+$Orientation:
+	0.506220, 0.000000, -0.862405,
+	0.000000, 1.000000, 0.000000,
+	0.862405, 0.000000, 0.506220
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: turret04a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 5
 
 #Wings		;! 16 total
 
@@ -2502,11 +2827,10 @@ $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 0 "Iron Maiden" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
-$Ships: (		;! 4 total
+$Ships: (		;! 3 total
 	"Gemini 1"
 	"Gemini 2"
 	"Gemini 3"
-	"Gemini 4"
 )
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
@@ -2623,7 +2947,58 @@ $Ships: (		;! 2 total
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
 
-#Events		;! 19 total
+#Events		;! 21 total
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Sentry Gun 1" 
+      "Sentry Gun 2" 
+      "Sentry Gun 3" 
+      "Sentry Gun 4" 
+      "Sentry Gun 5" 
+      "Sentry Gun 6" 
+   )
+   ( true ) 
+   ( string-concatenate 
+      "sv('" 
+      "<argument>" 
+      "@temp[ ]" 
+   )
+   ( string-concatenate 
+      "@temp[ ]" 
+      "', 'Area Denial')" 
+      "@temp[ ]" 
+   )
+   ( script-eval "@temp[ ]" ) 
+)
++Name: set variants - sentries
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Cargo 1" 
+      "Cargo 2" 
+      "Cargo 3" 
+      "Cargo 4" 
+      "Cargo 5" 
+      "Cargo 6" 
+      "Cargo 7" 
+      "Cargo 8" 
+      "Cargo 9" 
+      "Sentry Gun 1" 
+      "Sentry Gun 2" 
+      "Sentry Gun 3" 
+      "Sentry Gun 4" 
+      "Sentry Gun 5" 
+      "Sentry Gun 6" 
+   )
+   ( do-nothing ) 
+)
++Name: destroy sentries
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( true ) 
@@ -2846,7 +3221,7 @@ $Formula: ( when ( true ) ( do-nothing ) )
 +Repeat Count: 1
 +Interval: 1
 
-#Goals		;! 4 total
+#Goals		;! 5 total
 
 $Type: Primary
 +Name: Break the blockade
@@ -2875,6 +3250,15 @@ $Type: Primary
 $MessageNew:  XSTR("Secure the portal", -1)
 $end_multi_text
 $Formula: ( has-arrived-delay 0 "Epsilon" ) 
+
+$Type: Bonus
++Name: Destroy depot
+$MessageNew:  XSTR("Destroy Shivan Depot", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "destroy sentries" 
+   0 
+)
 
 #Waypoints		;! 1 lists total
 
@@ -2945,7 +3329,7 @@ $end_multi_text
 
 #Background bitmaps		;! 34 total
 
-$Num stars: 500
+$Num stars: 0
 $Ambient light level: 7895160
 
 $Bitmap List:
@@ -2953,7 +3337,7 @@ $Sun: SunWhite
 +Angles: 0.000000 0.000000 0.000000
 +Scale: 1.000000
 $Starbitmap: neb04
-+Angles: 0.000000 2.321286 0.000000
++Angles: 0.000000 2.303835 0.000000
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1

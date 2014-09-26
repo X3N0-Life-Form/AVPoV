@@ -139,7 +139,7 @@ B_Vampire_Arc_02.You Shall not Pass !						//ReWork in progress
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-B_Vampire_Arc_03.A Lion is Home							//need more messages & events
+B_Vampire_Arc_03.A Lion in the House						//need more messages & events
 /////////////////////////////////////////////////////////////////////////////////
 		2nd gen mission
 		Background : done
