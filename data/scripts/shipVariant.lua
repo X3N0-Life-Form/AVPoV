@@ -48,6 +48,8 @@ Sample entry:
 variantFileName = "ship_variants.txt" -- change this
 variantMatrix = {}
 
+shipsToSet = {}
+
 
 -----------------------
 -- utility functions --
@@ -77,6 +79,8 @@ end
 function sv(shipName, variantName)
 	setVariant(shipName, variantName)
 end
+
+
 --------------------
 -- core functions --
 --------------------
@@ -156,7 +160,9 @@ function setVariant(shipName, variantName)
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
 	if (ship == nil) then
-		ba.warning("setVariant: Could not find ship "..shipName)
+		ba.print("setVariant: Could not find ship "..shipName)
+		ba.print("setVariant: adding ship/variant to shipsToSet")
+		shipsToSet[shipName] = variantName
 		return nil
 	end
 	
@@ -281,6 +287,19 @@ function setVariant(shipName, variantName)
 			subsystem.ArmorClass = turretArmor
 		elseif not (subsystemArmor == "") then
 			subsystem.ArmorClass = subsystemArmor
+		end
+	end
+end
+
+
+
+function setVariantDelayed()
+	for shipName, variantName in pairs(shipsToSet) do
+		local ship = mn.Ships[shipName]
+		if not (ship == nil) then
+			ba.warning("setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
+			shipsToSet[shipName] = nil
+			setVariant(shipName, variantName)
 		end
 	end
 end
