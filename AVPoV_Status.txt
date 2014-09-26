@@ -49,7 +49,7 @@ A_Intro_00.									//ToDo
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-A_Intro_01.The Viper's Sting							//Alpha Ready - to rename: The Viper's Bite
+A_Intro_01.The Viper's Bite							//Alpha Ready
 /////////////////////////////////////////////////////////////////////////////////
 		1st gen mission
 		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;

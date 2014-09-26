@@ -1,10 +1,10 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("The Viper's Sting", -1)
+$Name:  XSTR("The Viper's Bite", -1)
 $Author: X3N0-Life-Form
 $Created: 01/19/08 at 15:37:34
-$Modified: 01/27/14 at 20:48:35
+$Modified: 09/26/14 at 20:15:58
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -25,7 +25,7 @@ $end_multi_text
 
 +Viewer pos: 263.388977, 6007.295410, 1929.475830
 +Viewer orient:
-	-0.797730, -0.000003, 0.603015,
+	-0.797730, -0.000004, 0.603015,
 	-0.546675, 0.422062, -0.723195,
 	-0.254507, -0.906567, -0.336693
 
