@@ -424,31 +424,31 @@ $SC Cain:	Flak Cruiser
 	turret09:Shivan Area Bomb
 
 
-$SSG Belial: 	Anti-Fighter Defence
+$SSG Belial: 	Anti-Fighter
 	turret01:Shivan Light Laser/Up
 	turret02:Shivan Light Laser/Up
 	turret03:Shivan Light Laser/Up
 	turret04:Shivan Light Laser/Up
 
-$SSG Belial:	Anti-Capital Defence
+$SSG Belial:	Anti-Capita
 	turret01:Shivan Heavy Anticap Laser
 	turret02:Shivan Light Laser/Up
 	turret03:Shivan Heavy Anticap Laser
 	turret04:Shivan Light Laser/Up
 
-$SSG Belial:	Area Denial Defence
+$SSG Belial:	Area Denial
 	turret01:Shivan Sniper Gun
 	turret02:Shivan Scatter Gun
 	turret03:Shivan Sniper Gun
 	turret04:Shivan Scatter Gun
 
-$SSG Belial:	Long Range Defence
+$SSG Belial:	Long Range
 	turret01:Shivan Sniper Gun
 	turret02:Shivan Sniper Gun
 	turret03:Shivan Sniper Gun
 	turret04:Shivan Sniper Gun
 
-$SSG Belial:	Close Range Defence
+$SSG Belial:	Close Range
 	turret01:Shivan Flak Weapon
 	turret02:Shivan Flak Weapon
 	turret03:Shivan Flak Weapon
