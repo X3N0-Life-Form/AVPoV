@@ -155,7 +155,7 @@ function setVariant(shipName, variantName)
 	-- lookup variant for that class
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
-	if (ship == nil) then
+	if not (ship:isValid()) then
 		ba.warning("setVariant: Could not find ship "..shipName)
 		return nil
 	end
@@ -234,6 +234,7 @@ function setVariant(shipName, variantName)
 			end
 			
 		elseif not (string.find(attribute, "+") == nil) then -- sub-attribute
+			local line = attribute
 			attribute = extractLeft(line)
 			local subAttribute = extractRight(line)
 			ba.print("setVariant: Setting sub attribute for "..attribute)
