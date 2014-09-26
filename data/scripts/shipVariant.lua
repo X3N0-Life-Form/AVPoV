@@ -298,7 +298,7 @@ function setVariantDelayed()
 	for shipName, variantName in pairs(shipsToSet) do
 		local ship = mn.Ships[shipName]
 		if not (ship == nil) then
-			ba.warning("setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
+			ba.print("setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
 			shipsToSet[shipName] = nil
 			setVariant(shipName, variantName)
 		end
