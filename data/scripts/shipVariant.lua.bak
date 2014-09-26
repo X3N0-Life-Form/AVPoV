@@ -159,10 +159,15 @@ function setVariant(shipName, variantName)
 	-- lookup variant for that class
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
+<<<<<<< HEAD
 	if not (ship:isValid()) then
+		ba.warning("setVariant: Could not find ship "..shipName)
+=======
+	if (ship == nil) then
 		ba.print("setVariant: Could not find ship "..shipName)
 		ba.print("setVariant: adding ship/variant to shipsToSet")
 		shipsToSet[shipName] = variantName
+>>>>>>> 7fc815acc20337940a7392f6f60dbead714b40b9
 		return nil
 	end
 	

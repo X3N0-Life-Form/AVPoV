@@ -2518,7 +2518,7 @@ $Subsystem:                 turret30,0.125,0.5
 ;; New Ships
 ;; -------------------------------------------------------------- ;;
 
-$Name:		SC Asura
+$Name:		SGb Asura
 $Short name:					Asura
 $Species:                       Shivan
 +Tech Description:

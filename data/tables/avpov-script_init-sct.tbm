@@ -5,5 +5,6 @@ $On Game Init: [[shivanHUD.lua]]
 $On Game Init: [[shivanRespawn.lua]]
 
 $On Game Init: [[shipVariant.lua]]
+$On Warp In: [setVariantDelayed()]
 
 #End
