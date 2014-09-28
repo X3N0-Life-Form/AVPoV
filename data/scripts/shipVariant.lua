@@ -8,6 +8,12 @@ In order to work, this script needs:
 	- call the setVariant() or sv() function via scrip-eval, with the name of the ship you want to alter and the name of the variant of the appropriate class as the function's argument.
 		For instance "sv(Colly, bunny)" means you want Colly to be of the "bunny" variant.
 		Keep in mind that, as of this writing, script-eval suffers from FSO's infamous 32 character limit, so you may want to keep your variant names short for the time being.
+	- alternatively, you can set the lua variable g_sn (global ship name) and g_vn (global variant name) and call the setVariant_g() function:
+		( script-eval
+			"g_sn = Colly"
+			"g_vn = bunny"
+			"setVariant_g()"
+		)
 		
 Descriptor file logic:
 	- A new variant is identified by a '$', followed by the ship class, a ':' and then the variant's name, like this:
@@ -49,6 +55,10 @@ variantFileName = "ship_variants.txt" -- change this
 variantMatrix = {}
 
 shipsToSet = {}
+
+-- these variables need to be set through FRED's script-eval SEXP
+g_sn = nil -- global ship name
+g_vn = nil -- global variant name
 
 
 -----------------------
@@ -306,6 +316,20 @@ function setVariantDelayed()
 end
 
 
+--[[
+	set variant using global variables g_sn & g_vn
+]]--
+function setVariant_g()
+	if (g_sn == nil) then
+		ba.warning("setVariant_g: global variable g_sn unset.")
+	elseif (g_vn == nil) then
+		ba.warning("setVariant_g: global variable g_vn unset.")
+	else
+		setVariant(g_sn, g_vn)
+		g_sn = nil
+		g_vn = nil
+	end
+end
 ----------
 -- main --
 ----------
