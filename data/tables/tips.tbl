@@ -5,7 +5,7 @@
 +Tip: XSTR("GTVA weaponry inflicts reduced damage to Shivan crafts. See armor entries in the techroom for more details, or the armor table itself.", -1)
 +Tip: XSTR("Shivan weaponry inflicts extra damage to GTVA crafts. See armor entries in the techroom for more details, or the armor table itself.", -1)
 +Tip: XSTR("Just like in Vassago's Dirge, all Shivan fighters are capable of gliding. Some of the most advanced crafts also have side and reverse thrusters and afterburners.", -1)
-+Tip: XSTR("Capital ships tend to have a different loadout from their default retail loadout. Look in the techroom for more details regarding each new variant, and/or the Renewed ships.txt file in the mod folder.", -1)
++Tip: XSTR("Capital ships tend to have a different loadout from their default retail loadout. Look in the techroom for more details regarding each new variant.", -1)
 +Tip: XSTR("Shivan Command ships are tougher and usually carry better armament than the standard variants.", -1)
 +Tip: XSTR("During the Battle of Capella, Shivan are starting to use improved versions of their standard weapons. Be careful.", -1)
 +Tip: XSTR("", -1)
