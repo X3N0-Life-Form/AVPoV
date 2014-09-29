@@ -41,6 +41,8 @@ $AI Profile: myProfile
 $Variables:
 (
 		0		"temp"		" "		"string"
+		1		"shipName"	" "		"string"
+		2		"variantName"	" "		"string"
 )
 
 #Command Briefing
@@ -2960,16 +2962,20 @@ $Formula: ( when-argument
    )
    ( true ) 
    ( string-concatenate 
-      "sv('" 
-      "<argument>" 
-      "@temp[ ]" 
+      "g_sn = " 
+      "'<argument>'" 
+      "@shipName[ ]" 
    )
    ( string-concatenate 
-      "@temp[ ]" 
-      "', 'Area Denial')" 
-      "@temp[ ]" 
+      "g_vn = " 
+      "'Area Denial'" 
+      "@variantName[ ]" 
    )
-   ( script-eval "@temp[ ]" ) 
+   ( script-eval
+     "@shipName[ ]"
+     "@variantName[ ]"
+     "setVariant_g()"
+   ) 
 )
 +Name: set variants - sentries
 +Repeat Count: 1
