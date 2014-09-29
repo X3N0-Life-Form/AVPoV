@@ -156,7 +156,7 @@ function parseVariantFile(fileName)
 		file:close()
 		return matrix
 	else
-		ba.warning("parseVariantFile: Variant file not found "..filename)
+		ba.warning("parseVariantFile: Variant file not found "..fileName)
 		return nil
 	end
 end
