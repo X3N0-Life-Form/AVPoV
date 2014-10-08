@@ -23,6 +23,8 @@ data/music/PST_Sigil-btl1.ogg
 data/music/PST_Sigil-btl2.ogg
 data/music/PST_Sigil-btl3.ogg
 
+data/scripts/*.bak
+
 data/missions/*.bak
 data/missions/Backup.*
 data/missions/torpedoes.fs2
