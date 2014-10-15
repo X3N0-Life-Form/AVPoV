@@ -4,7 +4,7 @@ Hostiles collapsed a jump node.
 
 Sending scouts to invistigate activity beyond second second outgoing node.
 
-Hostile must not be allowed to escape.
+Hostiles must not be allowed to escape.
 
 Sun operations almost complete.
 
@@ -16,4 +16,10 @@ Hostile resistance almost eliminated in Capella.
 
 Begin preparations to terminate hostile resistance in adjacent systems as soon as sun operations are complete.
 
-Upgrade rules of engagement from "subspace-beam-shield" to "subspace-electronic-node forge".
+Upgrade rules of engagement:
+	subspace-movement add "shifting"
+	subspace-weapon add  "direct-fire", "piercing"
+	new rule: subspace-defence at "passive"
+	new rule: node-forge at "level 1"
+	hull from "regular" to "shielded"
+	shield from "regular" to "armored"
