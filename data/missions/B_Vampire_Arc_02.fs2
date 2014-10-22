@@ -1,7 +1,7 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("You shall not pass !", -1)
+$Name:  XSTR("Uninvited Guest", -1)
 $Author: X3N0-Life-Form
 $Created: 06/25/10 at 15:23:00
 $Modified: 02/01/13 at 19:17:26
@@ -10,7 +10,7 @@ This is a FRED2_OPEN created mission.
 $End Notes:
 
 $Mission Desc:
- XSTR("The SD Vampire is moving on the Gamma Draconnis jump node.", -1)
+ XSTR("The SD Vampire is moving towards the Gamma Draconis jump node.", -1)
 $end_multi_text
 +Game Type Flags: 1
 +Flags: 132
@@ -52,9 +52,9 @@ $start_briefing
 $num_stages: 2
 $start_stage
 $multi_text
- XSTR("Over the past hour, the $r Shivans have been attempting to engage our warships at the node. Although we have been able to repell the initial attack, a significant portion of our capital ships have been damaged, leaving only the $g GTD $g Olorin and the $g GVCv $g Glamdring to defend the node.
+ XSTR("Over the past hour, the $r Shivans have been attempting to engage our warships at the node. Although we have been able to repell the initial attack, a significant portion of our capital ships have been damaged, leaving only the $g GTD $g Guardian and the $g GVCv $g Forgefire to defend the node.
 
-Since the $g GTD $g Olorin is able to defend itself with its fighter squadrons, our squadron is being dispatched to escort the $g GVCv $g Glamdring. We are to engage any fighter, bomber or capital ship attacking the $g Glamdring.", -1)
+Since the $g GTD $g Guardian is able to defend itself with its fighter squadrons, our squadron is being dispatched to escort the $g GVCv $g Forgefire. We are to engage any fighter, bomber or capital ship attacking the $g Forgefire.", -1)
 $end_multi_text
 $voice: none.wav
 $camera_pos: -1095.531860, 11670.341797, -4596.857422
@@ -84,7 +84,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -670.663574, -0.000844, -10349.944336
-$label: GTD Olorin
+$label: GTD Guardian
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -96,7 +96,7 @@ $type: 28
 $team: Friendly
 $class: GVCv Sobek
 $pos: -831.761169, -0.000470, -16508.373047
-$label: GVCv Glamdring
+$label: GVCv Forgefire
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -108,7 +108,7 @@ $start_stage
 $multi_text
  XSTR("Command believes the $r Shivans will eventually send the $r SD $r Vampire to secure the node. Therefore, the $g GTCv $g Yakiba, $f Delta and $f Zeta wing will be standing by to engage the destroyer as soon as it exits subspace.
 Command wishes to avoid to repeat the disaster of the initial attack against the $r SD $r Ravana, which led to the destruction of the $g GTD $g Delacroix.
-The $g Glamdring and the $g Olorin are ordered to warp out of the field of engagement, should the $r Vampire perform a close range shock attack on either of them, leaving the other warship outside the $r Vampire's beam-lock range. You, $f Delta and $f Zeta wing will have to destroy that destroyer's front beam canons in order to allow allied warships to engage.
+The $g Forgefire and the $g Guardian are ordered to warp out of the field of engagement, should the $r Vampire perform a close range shock attack on either of them, leaving the other warship outside the $r Vampire's beam-lock range. You, $f Delta and $f Zeta wing will have to destroy that destroyer's front beam canons in order to allow allied warships to engage.
 
 Good luck pilots.", -1)
 $end_multi_text
@@ -140,7 +140,7 @@ $type: 6
 $team: Friendly
 $class: GTD Hecate
 $pos: -108.134781, -0.000954, -10903.826172
-$label: GTD Olorin
+$label: GTD Guardian
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -152,7 +152,7 @@ $type: 28
 $team: Friendly
 $class: GVCv Sobek
 $pos: -831.761169, -0.000470, -16508.373047
-$label: GVCv Glamdring
+$label: GVCv Forgefire
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -274,7 +274,7 @@ $Determination: 10
 +Group: 0
 +Score: 8
 
-$Name: Olorin		;! Object #1
+$Name: Guardian		;! Object #1
 $Class: GTD Hecate
 $Team: Friendly
 $Location: -493.870605, -0.000123, -4542.204590
@@ -284,7 +284,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: Colonel
-$AI Goals: ( goals ( ai-waypoints "Olorin path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints "Guardian path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 95
@@ -334,7 +334,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( and 
    ( has-arrived-delay 12 "Vampire" ) 
-   ( < ( hits-left "Olorin" ) 30 ) 
+   ( < ( hits-left "Guardian" ) 30 ) 
 )
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
@@ -430,7 +430,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Glamdring		;! Object #5
+$Name: Forgefire		;! Object #5
 $Class: GVCv Sobek
 $Team: Friendly
 $Location: 7579.793945, 0.000942, -2583.156494
@@ -440,7 +440,7 @@ $Orientation:
 	-0.398609, 0.000000, 0.917121
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-waypoints "Glamdring path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints "Forgefire path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 87
@@ -477,7 +477,7 @@ $Departure Location: Hyperspace
 +Departure delay: 9
 $Departure Cue: ( and 
    ( has-arrived-delay 0 "Vampire" ) 
-   ( < ( hits-left "Glamdring" ) 30 ) 
+   ( < ( hits-left "Forgefire" ) 30 ) 
 )
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" "escort" )
@@ -606,7 +606,7 @@ $Orientation:
 	-0.996009, -0.079009, -0.041527,
 	0.041230, 0.005390, -0.999135
 $AI Behavior: None
-$AI Goals: ( goals ( ai-waypoints-once "Glamdring position path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Forgefire position path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -757,7 +757,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-chase "Olorin" 50 ) )
+$AI Goals: ( goals ( ai-chase "Guardian" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -806,7 +806,7 @@ $Orientation:
 	-0.118057, -0.057059, -0.991367
 $AI Behavior: None
 +AI Class: Big
-$AI Goals: ( goals ( ai-chase "Olorin" 50 ) ( ai-chase "Glamdring" 49 ) ( ai-chase "Yakiba" 48 ) )
+$AI Goals: ( goals ( ai-chase "Guardian" 50 ) ( ai-chase "Forgefire" 49 ) ( ai-chase "Yakiba" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1935,7 +1935,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-waypoints-once "Glamdring position path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Forgefire position path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1952,7 +1952,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 $Arrival Location: In front of ship
 +Arrival Distance: 3600
-$Arrival Anchor: Glamdring
+$Arrival Anchor: Forgefire
 $Arrival Cue: ( has-arrived-delay 33 "Vellard" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2541,7 +2541,7 @@ $Ships: (		;! 4 total
 	"Alpha 3"
 	"Alpha 4"
 )
-$AI Goals: ( goals ( ai-guard "Glamdring" 50 ) )
+$AI Goals: ( goals ( ai-guard "Forgefire" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -2560,7 +2560,7 @@ $Ships: (		;! 4 total
 	"Iota 3"
 	"Iota 4"
 )
-$AI Goals: ( goals ( ai-guard "Olorin" 50 ) )
+$AI Goals: ( goals ( ai-guard "Guardian" 50 ) )
 +Flags: ( )
 
 $Name: Virgo
@@ -2598,7 +2598,7 @@ $Ships: (		;! 2 total
 	"Taurus 1"
 	"Taurus 2"
 )
-$AI Goals: ( goals ( ai-chase "Olorin" 50 ) )
+$AI Goals: ( goals ( ai-chase "Guardian" 50 ) )
 +Flags: ( )
 
 $Name: Aquarius
@@ -2647,7 +2647,7 @@ $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1600
-$Arrival Anchor: Glamdring
+$Arrival Anchor: Forgefire
 $Arrival Cue: ( is-destroyed-delay 6 "Vellard" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2656,7 +2656,7 @@ $Ships: (		;! 3 total
 	"Gemini 2"
 	"Gemini 3"
 )
-$AI Goals: ( goals ( ai-chase "Glamdring" 50 ) ( ai-chase "Olorin" 48 ) )
+$AI Goals: ( goals ( ai-chase "Forgefire" 50 ) ( ai-chase "Guardian" 48 ) )
 +Hotkey: 6
 +Flags: ( )
 
@@ -2743,7 +2743,7 @@ $Special Ship: 0		;! Beta 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: Olorin
+$Arrival Anchor: Guardian
 $Arrival Cue: ( has-arrived-delay 10 "Vampire" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2812,7 +2812,7 @@ $Ships: (		;! 2 total
 	"Leo 1"
 	"Leo 2"
 )
-$AI Goals: ( goals ( ai-chase "Glamdring" 50 ) )
+$AI Goals: ( goals ( ai-chase "Forgefire" 50 ) )
 +Hotkey: 7
 +Flags: ( )
 
@@ -2842,7 +2842,7 @@ $Special Ship: 0		;! Epsilon 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 800
-$Arrival Anchor: Glamdring
+$Arrival Anchor: Forgefire
 $Arrival Cue: ( destroyed-or-departed-delay 
    5 
    "Alpha 2" 
@@ -2856,7 +2856,7 @@ $Ships: (		;! 3 total
 	"Epsilon 2"
 	"Epsilon 3"
 )
-$AI Goals: ( goals ( ai-guard "Glamdring" 50 ) )
+$AI Goals: ( goals ( ai-guard "Forgefire" 50 ) )
 +Flags: ( )
 
 $Name: Kappa
@@ -2866,7 +2866,7 @@ $Special Ship: 0		;! Kappa 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: Olorin
+$Arrival Anchor: Guardian
 $Arrival Cue: ( is-destroyed-delay 5 "Iota" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2876,7 +2876,7 @@ $Ships: (		;! 4 total
 	"Kappa 3"
 	"Kappa 4"
 )
-$AI Goals: ( goals ( ai-guard "Olorin" 50 ) )
+$AI Goals: ( goals ( ai-guard "Guardian" 50 ) )
 +Flags: ( )
 
 $Name: Rho
@@ -2886,7 +2886,7 @@ $Special Ship: 0		;! Rho 1
 
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
-$Arrival Anchor: Olorin
+$Arrival Anchor: Guardian
 $Arrival Cue: ( has-arrived-delay 18 "Vellard" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -2897,7 +2897,7 @@ $Ships: (		;! 5 total
 	"Rho 4"
 	"Rho 5"
 )
-$AI Goals: ( goals ( ai-chase "Vellard" 50 ) ( ai-guard "Olorin" 48 ) )
+$AI Goals: ( goals ( ai-chase "Vellard" 50 ) ( ai-guard "Guardian" 48 ) )
 +Flags: ( )
 
 $Name: Ferret Alpha
@@ -2932,18 +2932,18 @@ $Formula: ( when
    )
    ( ship-subsys-guardian-threshold 
       90 
-      "Olorin" 
+      "Guardian" 
       "turret27" 
    )
    ( set-post-effect "lightshafts" 100 ) 
    ( awacs-set-radius 
-      "Olorin" 
+      "Guardian" 
       "sensors" 
       20000 
    )
    ( ship-subsys-guardian-threshold 
       85 
-      "Glamdring" 
+      "Forgefire" 
       "engine" 
    )
 )
@@ -2960,13 +2960,13 @@ $Formula: ( when
       "Haagenti arrives - cmd" 
    )
    ( add-goal 
-      "Glamdring" 
+      "Forgefire" 
       ( ai-waypoints-once 
-         "Glamdring dynamic path" 
+         "Forgefire dynamic path" 
          89 
       )
    )
-   ( cap-waypoint-speed "Glamdring" 10 ) 
+   ( cap-waypoint-speed "Forgefire" 10 ) 
    ( add-goal 
       "Alpha" 
       ( ai-chase "Virgo" 60 ) 
@@ -2987,16 +2987,16 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Haagenti" ) 
    )
    ( set-object-position 
-      "Glamdring dynamic path:1" 
+      "Forgefire dynamic path:1" 
       ( get-object-x "Haagenti" ) 
       ( - ( get-object-y "Haagenti" ) 1000 ) 
       ( get-object-z "Haagenti" ) 
    )
    ( set-object-position 
-      "Glamdring position path:1" 
-      ( get-object-x "Glamdring" ) 
-      ( get-object-y "Glamdring" ) 
-      ( get-object-z "Glamdring" ) 
+      "Forgefire position path:1" 
+      ( get-object-x "Forgefire" ) 
+      ( get-object-y "Forgefire" ) 
+      ( get-object-z "Forgefire" ) 
    )
 )
 +Name: set glam path to haagenti
@@ -3013,13 +3013,13 @@ $Formula: ( when
       "Haagenti destroyed - cmd" 
    )
    ( remove-goal 
-      "Glamdring" 
+      "Forgefire" 
       ( ai-waypoints-once 
-         "Glamdring dynamic path" 
+         "Forgefire dynamic path" 
          89 
       )
    )
-   ( cap-waypoint-speed "Glamdring" -1 ) 
+   ( cap-waypoint-speed "Forgefire" -1 ) 
 )
 +Name: Destroy Haagenti
 +Repeat Count: 1
@@ -3045,7 +3045,7 @@ $Formula: ( when
       "Vellard arrives - cmd" 
    )
    ( fire-beam 
-      "Olorin" 
+      "Guardian" 
       "turret27" 
       "Vellard" 
    )
@@ -3058,16 +3058,16 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Olorin" 
+      "Guardian" 
       "High" 
-      "We can handle Vellard - Olorin" 
+      "We can handle Vellard - Guardian" 
    )
    ( remove-goal 
-      "Olorin" 
-      ( ai-waypoints "Olorin path" 50 ) 
+      "Guardian" 
+      ( ai-waypoints "Guardian path" 50 ) 
    )
    ( ship-rot-maneuver 
-      "Olorin" 
+      "Guardian" 
       30000 
       0 
       -100 
@@ -3083,7 +3083,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( < ( hits-left "Olorin" ) 52 ) 
+      ( < ( hits-left "Guardian" ) 52 ) 
       ( not 
          ( is-destroyed-delay 0 "Vellard" ) 
       )
@@ -3094,7 +3094,7 @@ $Formula: ( when
       100 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Catapult" 
       ( get-object-x "Vellard" ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3105,7 +3105,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Catapult" 
       ( + ( get-object-x "Vellard" ) 150 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3116,7 +3116,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( turret-set-rate-of-fire 
-      "Olorin" 
+      "Guardian" 
       300 
       "turret01" 
       "turret04" 
@@ -3125,20 +3125,20 @@ $Formula: ( when
       "turret07" 
    )
    ( set-armor-type 
-      "Olorin" 
+      "Guardian" 
       ( true ) 
       "Shivan Bomber Armor" 
       "Hull" 
    )
 )
-+Name: Olorin vs Vellard < 52
++Name: Guardian vs Vellard < 52
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
    ( true ) 
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 150 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3149,7 +3149,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 140 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3160,7 +3160,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 100 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3171,7 +3171,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 90 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3182,7 +3182,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 150 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3193,7 +3193,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( + ( get-object-x "Vellard" ) 150 ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3204,7 +3204,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( get-object-x "Vellard" ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3215,7 +3215,7 @@ $Formula: ( when
       "Vellard" 
    )
    ( weapon-create 
-      "Olorin" 
+      "Guardian" 
       "Trebuchet" 
       ( get-object-x "Vellard" ) 
       ( + ( get-object-y "Vellard" ) 4000 ) 
@@ -3239,11 +3239,11 @@ $Formula: ( when
       "Vellard destroyed - cmd" 
    )
    ( add-goal 
-      "Olorin" 
-      ( ai-waypoints "Olorin path" 50 ) 
+      "Guardian" 
+      ( ai-waypoints "Guardian path" 50 ) 
    )
    ( turret-set-rate-of-fire 
-      "Olorin" 
+      "Guardian" 
       0 
       "turret01" 
       "turret04" 
@@ -3260,18 +3260,18 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 2 "Putana" ) 
    ( send-message 
-      "Glamdring" 
+      "Forgefire" 
       "High" 
-      "Putana arrives - glamdring" 
+      "Putana arrives - Forgefire" 
    )
    ( add-goal 
-      "Glamdring" 
+      "Forgefire" 
       ( ai-waypoints-once 
-         "Glamdring dynamic path" 
+         "Forgefire dynamic path" 
          89 
       )
    )
-   ( cap-waypoint-speed "Glamdring" 10 ) 
+   ( cap-waypoint-speed "Forgefire" 10 ) 
    ( cap-waypoint-speed "Putana" 10 ) 
 )
 +Name: Putana arrives
@@ -3284,16 +3284,16 @@ $Formula: ( when
       ( is-destroyed-delay 0 "Putana" ) 
    )
    ( set-object-position 
-      "Glamdring dynamic path:1" 
+      "Forgefire dynamic path:1" 
       ( get-object-x "Putana" ) 
       ( - ( get-object-y "Putana" ) 1000 ) 
       ( get-object-z "Putana" ) 
    )
    ( set-object-position 
-      "Glamdring position path:1" 
-      ( get-object-x "Glamdring" ) 
-      ( + ( get-object-y "Glamdring" ) 1500 ) 
-      ( get-object-z "Glamdring" ) 
+      "Forgefire position path:1" 
+      ( get-object-x "Forgefire" ) 
+      ( + ( get-object-y "Forgefire" ) 1500 ) 
+      ( get-object-z "Forgefire" ) 
    )
 )
 +Name: set glam path to putana
@@ -3305,15 +3305,15 @@ $Formula: ( when
 $Formula: ( when 
    ( is-destroyed-delay 0 "Putana" ) 
    ( send-message 
-      "Glamdring" 
+      "Forgefire" 
       "Normal" 
       "putana destroyed - glam" 
    )
-   ( cap-waypoint-speed "Glamdring" -1 ) 
+   ( cap-waypoint-speed "Forgefire" -1 ) 
    ( remove-goal 
-      "Glamdring" 
+      "Forgefire" 
       ( ai-waypoints-once 
-         "Glamdring dynamic path" 
+         "Forgefire dynamic path" 
          89 
       )
    )
@@ -3378,14 +3378,14 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 3 "Vampire" ) 
    ( send-message 
-      "Olorin" 
+      "Guardian" 
       "High" 
-      "Vampire arrives - Olorin" 
+      "Vampire arrives - Guardian" 
    )
    ( add-remove-escort "Vampire" 1 ) 
    ( add-goal 
-      "Olorin" 
-      ( ai-chase "Olorin" 89 ) 
+      "Guardian" 
+      ( ai-chase "Guardian" 89 ) 
    )
    ( change-soundtrack "<No Music>" ) 
    ( play-sound-from-file 
@@ -3405,18 +3405,18 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 0 "Yakiba" ) 
    ( if-then-else 
-      ( is-destroyed-delay 0 "Glamdring" ) 
+      ( is-destroyed-delay 0 "Forgefire" ) 
       ( when 
          ( true ) 
          ( send-message 
-            "Olorin" 
+            "Guardian" 
             "High" 
             "vamp arrived - no glam" 
          )
          ( add-remove-escort "Zeta 1" 30 ) 
       )
       ( send-message 
-         "Olorin" 
+         "Guardian" 
          "High" 
          "vamp arrived - glam" 
       )
@@ -3432,12 +3432,12 @@ $Formula: ( when
    ( fire-beam 
       "Vampire" 
       "turret01" 
-      "Olorin" 
+      "Guardian" 
    )
    ( fire-beam 
       "Vampire" 
       "turret02" 
-      "Olorin" 
+      "Guardian" 
    )
    ( fire-beam 
       "Vampire" 
@@ -3450,9 +3450,9 @@ $Formula: ( when
       "Yakiba" 
    )
    ( send-message-list 
-      "Olorin" 
+      "Guardian" 
       "High" 
-      "Vampire fires 1 - olorin" 
+      "Vampire fires 1 - Guardian" 
       4750 
       "#Command" 
       "High" 
@@ -3635,13 +3635,13 @@ $Formula: ( when
    ( fire-beam 
       "Vampire" 
       "turret01" 
-      "Olorin" 
+      "Guardian" 
       "turret20" 
    )
    ( fire-beam 
       "Vampire" 
       "turret02" 
-      "Glamdring" 
+      "Forgefire" 
       "navigation" 
    )
 )
@@ -3651,14 +3651,14 @@ $Formula: ( when
 +Team: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 2 "Glamdring" ) 
+   ( is-destroyed-delay 2 "Forgefire" ) 
    ( send-message 
       "#Command" 
       "High" 
-      "GVCv Glamdring destroyed - cmd" 
+      "GVCv Forgefire destroyed - cmd" 
    )
 )
-+Name: Glamdring destroyed
++Name: Forgefire destroyed
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
@@ -3666,31 +3666,31 @@ $Formula: ( when
 $Formula: ( when 
    ( and 
       ( has-arrived-delay 0 "Vampire" ) 
-      ( < ( hits-left "Glamdring" ) 30 ) 
+      ( < ( hits-left "Forgefire" ) 30 ) 
    )
    ( send-message 
-      "Glamdring" 
+      "Forgefire" 
       "High" 
-      "Glamdring pulling out - glamdr" 
+      "Forgefire pulling out - glamdr" 
    )
 )
-+Name: Glamdring pulling out
++Name: Forgefire pulling out
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
    ( and 
       ( has-arrived-delay 0 "Vampire" ) 
-      ( is-destroyed-delay 0 "Olorin" ) 
+      ( is-destroyed-delay 0 "Guardian" ) 
    )
    ( send-message-list 
       "#Command" 
       "High" 
-      "GTD Olorin destroyed - cmd" 
+      "GTD Guardian destroyed - cmd" 
       0 
    )
 )
-+Name: Vampire destroys Olorin
++Name: Vampire destroys Guardian
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
@@ -3698,26 +3698,26 @@ $Formula: ( when
 $Formula: ( when 
    ( and 
       ( has-arrived-delay 0 "Vampire" ) 
-      ( has-departed-delay 0 "Olorin" ) 
+      ( has-departed-delay 0 "Guardian" ) 
    )
    ( send-message 
       "#Command" 
       "High" 
-      "Olorin escapes - cmd" 
+      "Guardian escapes - cmd" 
    )
 )
-+Name: Olorin escapes
++Name: Guardian escapes
 +Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
    ( destroyed-or-departed-delay 
       0 
-      "Olorin" 
+      "Guardian" 
    )
    ( do-nothing ) 
 )
-+Name: Olorin out
++Name: Guardian out
 +Repeat Count: 1
 +Interval: 1
 
@@ -3734,16 +3734,16 @@ $Formula: ( when
 #Goals		;! 2 total
 
 $Type: Primary
-+Name: Defend the GTD Olorin
-$MessageNew:  XSTR("Defend the GTD Olorin", -1)
++Name: Defend the GTD Guardian
+$MessageNew:  XSTR("Defend the GTD Guardian", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "Olorin" ) 
+$Formula: ( has-departed-delay 0 "Guardian" ) 
 
 $Type: Secondary
-+Name: Defend the GVCv Glamdring
-$MessageNew:  XSTR("Defend the GVCv Glamdring", -1)
++Name: Defend the GVCv Forgefire
+$MessageNew:  XSTR("Defend the GVCv Forgefire", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "Glamdring" ) 
+$Formula: ( has-departed-delay 0 "Forgefire" ) 
 +Score: 60
 
 #Waypoints		;! 6 lists total
@@ -3751,7 +3751,7 @@ $Formula: ( has-departed-delay 0 "Glamdring" )
 
 $Jump Node: 1256.487183, 0.000152, -2901.871826
 $Jump Node Name: Gamma Draconis
-$Name: Olorin path
+$Name: Guardian path
 $List: (		;! 4 points in list
 	( -1221.420654, 0.000770, -748.990479 )
 	( 2335.893311, 0.001297, 927.459717 )
@@ -3759,7 +3759,7 @@ $List: (		;! 4 points in list
 	( 3225.300537, 0.001228, -6611.845703 )
 )
 
-$Name: Glamdring path
+$Name: Forgefire path
 $List: (		;! 4 points in list
 	( 6370.541504, -0.003872, 1047.645386 )
 	( 1868.136475, -0.003876, 4164.627930 )
@@ -3772,7 +3772,7 @@ $List: (		;! 1 points in list
 	( 1107.923828, 0.003262, -2947.974609 )
 )
 
-$Name: Glamdring dynamic path
+$Name: Forgefire dynamic path
 $List: (		;! 1 points in list
 	( 7346.875000, -0.004102, 2655.993896 )
 )
@@ -3782,7 +3782,7 @@ $List: (		;! 1 points in list
 	( -5217.291992, 0.004441, 10753.799805 )
 )
 
-$Name: Glamdring position path
+$Name: Forgefire position path
 $List: (		;! 1 points in list
 	( 9742.868164, 0.000149, -1480.320068 )
 )
@@ -3792,7 +3792,7 @@ $List: (		;! 1 points in list
 
 $Name: Haagenti arrives - cmd
 $Team: -1
-$MessageNew:  XSTR("The SC Haagenti has arrived to engage the Glamdring. Pilots, neutralize the escort and assist the Glamdring.", -1)
+$MessageNew:  XSTR("The SC Haagenti has arrived to engage the Forgefire. Pilots, neutralize the escort and assist the Forgefire.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
@@ -3810,43 +3810,43 @@ $end_multi_text
 
 $Name: Vellard destroyed - cmd
 $Team: -1
-$MessageNew:  XSTR("Vellard has been destroyed. Good work Olorin.", -1)
+$MessageNew:  XSTR("Vellard has been destroyed. Good work Guardian.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
 $Name: Gemini arrives
 $Team: -1
-$MessageNew:  XSTR("A wing of Nahema bomber has just jumped in. They are going for the Glamdring.", -1)
+$MessageNew:  XSTR("A wing of Nahema bomber has just jumped in. They are going for the Forgefire.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Vampire arrives - Olorin
+$Name: Vampire arrives - Guardian
 $Team: -1
 $MessageNew:  XSTR("Command, the Vampire has arrived, we are dispatching bombers to destroy it. All units, stand by for mission update.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
-$Name: GTD Olorin destroyed - cmd
+$Name: GTD Guardian destroyed - cmd
 $Team: -1
-$MessageNew:  XSTR("The Olorin has been destroyed ! Pilots, we are pulling you out.", -1)
+$MessageNew:  XSTR("The Guardian has been destroyed ! Pilots, we are pulling you out.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: We can handle Vellard - Olorin
+$Name: We can handle Vellard - Guardian
 $Team: -1
-$MessageNew:  XSTR("We can handle it. Glamdring, continue with your patrol.", -1)
+$MessageNew:  XSTR("We can handle it. Forgefire, continue with your patrol.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
-$Name: Putana arrives - glamdring
+$Name: Putana arrives - Forgefire
 $Team: -1
 $MessageNew:  XSTR("Now engaging the SC Putana. Alpha wing, neutralize incoming Taurvis.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: GVCv Glamdring destroyed - cmd
+$Name: GVCv Forgefire destroyed - cmd
 $Team: -1
-$MessageNew:  XSTR("The Glamdring is down ! Alpha wing, neutralize the remaining enemies and assist the Olorin.", -1)
+$MessageNew:  XSTR("The Forgefire is down ! Alpha wing, neutralize the remaining enemies and assist the Guardian.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
@@ -3862,7 +3862,7 @@ $MessageNew:  XSTR("The Yakiba has been destroyed !", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Vampire fires 1 - olorin
+$Name: Vampire fires 1 - Guardian
 $Team: -1
 $MessageNew:  XSTR("Command, the SD Vampire has managed to acquire beam lock! Requesting status update!", -1)
 $end_multi_text
@@ -3876,7 +3876,7 @@ $end_multi_text
 
 $Name: Mission start 1 - alpha 2
 $Team: -1
-$MessageNew:  XSTR("Alpha wing in position, we'll take care of the Glamdring.", -1)
+$MessageNew:  XSTR("Alpha wing in position, we'll take care of the Forgefire.", -1)
 $end_multi_text
 +AVI Name: Head-VP1
 
@@ -3886,15 +3886,15 @@ $MessageNew:  XSTR("Roger that, returning to base.", -1)
 $end_multi_text
 +AVI Name: Head-TP1
 
-$Name: Olorin escapes - cmd
+$Name: Guardian escapes - cmd
 $Team: -1
-$MessageNew:  XSTR("The Olorin has warped out safely. All fighters, return to base.", -1)
+$MessageNew:  XSTR("The Guardian has warped out safely. All fighters, return to base.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Glamdring pulling out - glamdr
+$Name: Forgefire pulling out - glamdr
 $Team: -1
-$MessageNew:  XSTR("This is the Glamdring, we have sustained heavy damage and are attempting to pull out.", -1)
+$MessageNew:  XSTR("This is the Forgefire, we have sustained heavy damage and are attempting to pull out.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
@@ -3924,7 +3924,7 @@ $end_multi_text
 
 $Name: vamp arrived - glam
 $Team: -1
-$MessageNew:  XSTR("Glamdring and escort, keep your distance, the Yakiba will spearhead the assault on the Vampire.", -1)
+$MessageNew:  XSTR("Forgefire and escort, keep your distance, the Yakiba will spearhead the assault on the Vampire.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
