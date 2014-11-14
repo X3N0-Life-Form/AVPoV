@@ -103,9 +103,7 @@ function parseVariantFile(fileName)
 		local file = cf.openFile(fileName, "r")
 		
 		local line = file:read("*l")
-		i = 0
 		while (not (line == nil)) do
-			i = i+1
 			line = removeComments(line)
 			line = trim(line)
 			
