@@ -70,7 +70,7 @@ function trim(str)
 end
 
 function removeComments(line)
-	return line:gsub("--(.)*|//(.)*|;;(.)*", "")
+	return line:gsub("(%a|%s|%d|$)*(--(.)*|//(.)*|;;(.)*)", "")
 end
 
 function extractLeft(attribute)
@@ -103,9 +103,9 @@ function parseVariantFile(fileName)
 		local file = cf.openFile(fileName, "r")
 		
 		local line = file:read("*l")
-		i = 0
+		--i = 0
 		while (not (line == nil)) do
-			i = i+1
+			--i = i+1
 			line = removeComments(line)
 			line = trim(line)
 			
