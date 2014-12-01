@@ -10958,7 +10958,7 @@ $List: (		;! 1 points in list
 
 $Name: mission start 1 - eb siliss
 $Team: -1
-$MessageNew:  XSTR("Its beams are coming online, they are targeting us!", -1)
+$MessageNew:  XSTR("Hostile beams are coming online, targeting us!", -1)
 $end_multi_text
 +AVI Name: Head-VC2
 
@@ -10970,7 +10970,7 @@ $end_multi_text
 
 $Name: mission start 3 - ballard
 $Team: -1
-$MessageNew:  XSTR("Same here, Paxton, unloading everything we have. Maybe it'll slow them down.", -1)
+$MessageNew:  XSTR("Same here, Paxton, unloading everything we have. Let's hope it's enough to slow them down.", -1)
 $end_multi_text
 +AVI Name: Head-CM1
 
@@ -10981,7 +10981,7 @@ $end_multi_text
 
 $Name: ballard down - ballard
 $Team: -1
-$MessageNew:  XSTR("Shit, they're firing on -", -1)
+$MessageNew:  XSTR("Shit, they're firing on u -", -1)
 $end_multi_text
 
 $Name: paxton down - paxton
@@ -10991,12 +10991,12 @@ $end_multi_text
 
 $Name: on our own - apep#obster
 $Team: -1
-$MessageNew:  XSTR("This is the Admiral. No reinforcement is coming to save us now. We are on our own againt that beast and its defenders. Time to get even.", -1)
+$MessageNew:  XSTR("This is the Admiral. No reinforcement is available, we are on our own. Now let's kill that beast.", -1)
 $end_multi_text
 
 $Name: apep fires - apep
 $Team: -1
-$MessageNew:  XSTR("We have a lock on the Sathanas' rear beam cannon. Opening fire.", -1)
+$MessageNew:  XSTR("Lock acquired on the Sathanas' rear beam cannon. Opening fire.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
@@ -11014,51 +11014,51 @@ $end_multi_text
 
 $Name: engage sath - apep
 $Team: -1
-$MessageNew:  XSTR("We need to prevent the Juggernaught from running away. Destroying the navigation subsystem should delay it.", -1)
+$MessageNew:  XSTR("We need to prevent the Juggernaugt from running away. Destroying its navigation subsystem.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
 $Name: engage sath 2 - any wingman
 $Team: -1
-$MessageNew:  XSTR("Between the point defences and the fighter screen, we are going to suffer heavy casualties.", -1)
+$MessageNew:  XSTR("Between the point defences and the fighter screen, I expect few of us will live to tell tale of this battle.", -1)
 $end_multi_text
 +AVI Name: Head-VP2
 
 $Name: apep deploys bombers - apep
 $Team: -1
-$MessageNew:  XSTR("launching additionnal bombers. We will then prep the fighterbays to launch our entire reserve of Catapult missiles, just like Paxton Shipyard and that destroyer did.", -1)
+$MessageNew:  XSTR("Deploying additional bombers. We will then prepare the fighterbays to launch our entire supply of Catapult missiles.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
 $Name: switching to BVas - apep#gun
 $Team: -1
-$MessageNew:  XSTR("This is Apep Gunnery Control. We have started pumping more juice into the main beams. It is unlikely that either the emitters or the powergrid will last very long at this level of use.", -1)
+$MessageNew:  XSTR("This is Apep Gunnery Control. We are beginning overloading procedure on our main beams. Expecting powergrid and emitter failure within the next 3 minutes.", -1)
 $end_multi_text
 
 $Name: vas torpedo fest - apep#gun
 $Team: -1
-$MessageNew:  XSTR("Gunnery Control here. We've stripped the torpedo launchers from most safeties to reduce loading times. Be advised that torpedoes are bound to misfire sooner or later.", -1)
+$MessageNew:  XSTR("Gunnery Control here. We've stripped the torpedo launchers from most safeties and are now loading live warheads into the tubes. Be advised that torpedoes are bound to misfire sooner or later.", -1)
 $end_multi_text
 
 $Name: beam overload - apep#engin
 $Team: -1
-$MessageNew:  XSTR("This is Apep Engineering. Both main beam emitters have overloaded. Our powergrid is holding up for now, but one of our secondary reactor took a nasty hit.", -1)
+$MessageNew:  XSTR("This is Apep Engineering. Both main beam emitters have melted down. Our powergrid is holding up for now, but one of our secondary reactors took a nasty hit.", -1)
 $end_multi_text
 
 $Name: sath rotate - apep
 $Team: -1
-$MessageNew:  XSTR("The Sathanas is rotating to engage us with its dorsal beam. The Apep will ont survive long against that amount of firepower.", -1)
+$MessageNew:  XSTR("The Sathanas is rotating to engage us with its dorsal beam. The Apep will won't survive long against that amount of firepower.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
 $Name: apep < 55 - apep#obster
 $Team: -1
-$MessageNew:  XSTR("We are taking some serious hits. I am authorizing our gunnery crews to do whatever is possible to increase our weapons' rate of fire.", -1)
+$MessageNew:  XSTR("We are taking some serious hits. I am authorizing our gunnery crews to increase our guns' cycling rates, they should not have time to overheat anyway.", -1)
 $end_multi_text
 
 $Name: apep < 39 - apep#obster
 $Team: -1
-$MessageNew:  XSTR("This is the Apep. The hull won't last for much longer. We are commencing our final run. Engineering report our main reactor will soon go into meltdown. I am ordering the evacuation of the ship. Do not concern yourselves we the escape pods.", -1)
+$MessageNew:  XSTR("The Apep will not last much longer. We are commencing our final run. Engineering report our main reactor will soon go into meltdown. I am ordering the evacuation of the ship. Do not concern yourselves we the escape pods.", -1)
 $end_multi_text
 
 $Name: firing catapults - apep
@@ -11069,7 +11069,7 @@ $end_multi_text
 
 $Name: babylon arrives 1 - babylon
 $Team: -1
-$MessageNew:  XSTR("GCv Babylon in position. Sorry to be this late, we had to keep Shivan capital ships from jumping the Bastion.", -1)
+$MessageNew:  XSTR("GTCv Babylon in position. Sorry to be this late, we had to keep Shivan capital ships from jumping the Bastion.", -1)
 $end_multi_text
 +AVI Name: Head-CM3
 
@@ -11087,7 +11087,7 @@ $end_multi_text
 
 $Name: babylon arrives 4 - babylon
 $Team: -1
-$MessageNew:  XSTR("Opening up our attack profile. Communications, signal the Streaker that we are assisting the Apep's battlegroup in their assault.", -1)
+$MessageNew:  XSTR("Opening up our attack profile. Coms, signal the Streaker that we are assisting the Apep's battlegroup.", -1)
 $end_multi_text
 +AVI Name: Head-CM3
 
@@ -11105,7 +11105,7 @@ $end_multi_text
 
 $Name: babylon < 37 - babylon
 $Team: -1
-$MessageNew:  XSTR("Looks like the Streaker isn't comming. We have to pull out. Jump engines will be back online in under two minutes. All units, prepare to retreat to the Vega node.", -1)
+$MessageNew:  XSTR("Looks like the Streaker isn't coming. We have to pull out. Jump engines will be back online in under two minutes. All units, prepare to retreat to the Vega node.", -1)
 $end_multi_text
 +AVI Name: Head-CM3
 
