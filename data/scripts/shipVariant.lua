@@ -51,7 +51,7 @@ Sample entry:
 ----------------------
 -- global variables --
 ----------------------
-variantFileName = "ship_variants.txt" -- change this
+variantFileName = "data/script-data/ship_variants.txt" -- change this
 variantMatrix = {}
 
 shipsToSet = {}
