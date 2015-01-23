@@ -7,6 +7,7 @@ $On Game Init: [[shivanRespawn.lua]]
 $On Game Init: [[shipVariant.lua]]
 $On Warp In: [setVariantDelayed()]
 
+$On Game Init: [[autoSSM-targetting.lua]]
 $On Game Init: [[autoSSM.lua]]
 
 #End

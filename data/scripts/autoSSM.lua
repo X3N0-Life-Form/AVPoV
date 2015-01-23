@@ -49,7 +49,7 @@ function auto_ssm_addTarget(name, target)
 end
 
 function auto_ssm_removeTarget(name, target)
---TODO
+	strike_target_list[name][target] = nil
 end
 
 --------------------------
@@ -81,8 +81,28 @@ function auto_ssm_fire(name)
 end
 
 --- updates the given strike's current target, according to its seeking algorithm
+--- algorithms defined in autoSSM-targetting.lua
 function auto_ssm_updateTarget(name)
-
+	algo = auto_ssm_algo[name]
+	if (algo == "list" || algo == nil) then
+		auto_ssm_seekList(name)
+	elseif (algo == "round-robin") then
+		auto_ssm_seekRoundRobin(name)
+	elseif (algo == "random") then
+		auto_ssm_seekRandom(name)
+	elseif (algo == "random-death") then
+		auto_ssm_seekRandomDeath(name)
+	elseif (algo == "weakest") then
+		auto_ssm_seekWeakest(name)
+	elseif (algo == "strongest") then
+		auto_ssm_seekStrongest(name)
+	elseif (algo == "proximity") then
+		auto_ssm_seekProximity(name)
+	elseif (algo == "all") then
+		auto_ssm_seekAll(name)
+	else
+		ba.warning("auto_ssm: Warning: Unrecognized seeking algorithm ".algo) --or fall back to default behavior???
+	end
 end
 
 ------------
