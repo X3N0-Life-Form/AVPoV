@@ -77,7 +77,7 @@ end
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	target = strike_current_target[name]
-
+--TODO: don't fire if algo set to "all"?
 end
 
 --- updates the given strike's current target, according to its seeking algorithm

@@ -1,7 +1,8 @@
 #Automated Strikes
 
-$Name:		auto-strike name
-$Type:		Shivan SSM Barrage
-$Cooldown:	22
+$Name:				auto-strike name	; required
+$Type:				Shivan SSM Barrage	; required, must match ssm.tbl entry
+$Cooldown:			22			; required
+$Default Seeking Algorithm:	round-robin		; optional, defaults to list
 
 #End
