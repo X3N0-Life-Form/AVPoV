@@ -60,7 +60,8 @@ end
 --- Seeks a random target
 --- Changes target upon call
 function auto_ssm_seekRandom(name)
---TODO
+	targetId = math.random(#strike_target_list[name])
+	strike_current_target[name] = strike_target_list[name][targetId]
 end
 
 --- Seeks a random target
@@ -103,8 +104,7 @@ end
 --- Calls a strike on every target in the list
 function auto_ssm_seekAll(name)
 	for target, value in pairs(ssm_target_list[name]) do
-		--TODO: it's missing a "when", if I'm not mistaken
-		mn.evaluateSEXP("(call-ssm-strike \"".strike_info_type[name]."\" \"".strike_info_team[name]."\" \"".target.Name."\")")
+		mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strike_info_type[name].."\" \""..strike_team[name].."\" \""..target.Name.."\"))")
 	end
 end
 

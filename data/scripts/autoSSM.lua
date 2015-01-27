@@ -15,10 +15,10 @@ strike_info_id = {}	-- [index] = name; contains the name of our automated strike
 --- strike info arrays ---
 --> indexed by auto strike name (see strike_info_id above)
 --> contains data parsed from the table
-
 strike_info_type = {}		-- SSM name, as defined in ssm.tbl
 strike_info_cooldown = {}	-- cooldown, in seconds
-strike_info_team = {}		-- team name
+strike_info_seeker_algo = {}		-- what target algorithm should be used?
+
 
 
 --- active strike info ---
@@ -29,7 +29,7 @@ strike_last_fired = {}		-- mission time at which this strike was last fired
 strike_current_target = {}	-- ship name, current target
 strike_target_list = {}		-- [name][target] = boolean; list of potential targets, used by target-seeking algorithms
 strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
-strike_seeker_algo = {}		-- what target algorithm should be used?
+strike_team = {}		-- team name
 
 
 ----------------------------
@@ -77,7 +77,13 @@ end
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	target = strike_current_target[name]
---TODO: don't fire if algo set to "all"?
+	auto_ssm_updateTarget(name)
+	strikeType = strike_info_type[name]
+	strikeTeam = strike_team[name]
+	-- don't fire if algo set to "all"
+	if not (strike_info_seeker_algo[name] == "all") then
+		mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strikeType.."\" \""..strikeTeam.."\" \""..target.Name.."\"))")
+	end
 end
 
 --- updates the given strike's current target, according to its seeking algorithm
@@ -104,6 +110,10 @@ function auto_ssm_updateTarget(name)
 		ba.warning("auto_ssm: Warning: Unrecognized seeking algorithm ".algo) --or fall back to default behavior???
 	end
 end
+
+-------------------------
+--- Functions - parse ---
+-------------------------
 
 ------------
 --- main ---
