@@ -90,7 +90,7 @@ end
 --- algorithms defined in autoSSM-targetting.lua
 function auto_ssm_updateTarget(name)
 	algo = auto_ssm_algo[name]
-	if (algo == "list" || algo == nil) then
+	if (algo == "list" or algo == nil) then
 		auto_ssm_seekList(name)
 	elseif (algo == "round-robin") then
 		auto_ssm_seekRoundRobin(name)
@@ -107,7 +107,7 @@ function auto_ssm_updateTarget(name)
 	elseif (algo == "all") then
 		auto_ssm_seekAll(name)
 	else
-		ba.warning("auto_ssm: Warning: Unrecognized seeking algorithm ".algo) --or fall back to default behavior???
+		ba.warning("auto_ssm: Warning: Unrecognised seeking algorithm "..algo) --or fall back to default behavior???
 	end
 end
 

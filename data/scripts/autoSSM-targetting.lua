@@ -50,7 +50,7 @@ function auto_ssm_seekRoundRobin(name)
 	for target, value in pairs(strike_target_list[name]) do
 		if (target == strike_current_target[name]) then
 			lookUpCurrentTarget = false
-		elseif (lookUpCurrentTarget == false && not (target == strike_current_target[name])) then
+		elseif (lookUpCurrentTarget == false and not (target == strike_current_target[name])) then
 			strike_current_target[name] = target
 			break
 		end
