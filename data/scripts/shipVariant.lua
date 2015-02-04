@@ -51,7 +51,8 @@ Sample entry:
 ----------------------
 -- global variables --
 ----------------------
-variantFileName = "data/script-data/ship_variants.txt" -- change this
+variantPath = "data/script-data/"
+variantFileName = "ship_variants.txt"
 variantMatrix = {}
 
 shipsToSet = {}
@@ -95,12 +96,12 @@ end
 -- core functions --
 --------------------
 
-function parseVariantFile(fileName)
+function parseVariantFile(fileName, filePath)
 	if (matrix == nil) then
 		matrix = {}
 	end
-	if cf.fileExists(fileName, "", true) then
-		local file = cf.openFile(fileName, "r")
+	if cf.fileExists(fileName, filePath, true) then
+		local file = cf.openFile(fileName, "r", filePath)
 		
 		local line = file:read("*l")
 		while (not (line == nil)) do
@@ -332,4 +333,4 @@ end
 -- main --
 ----------
 
-variantMatrix = parseVariantFile(variantFileName)
+variantMatrix = parseVariantFile(variantFileName, variantPath)
