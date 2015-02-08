@@ -5,10 +5,11 @@ table file syntax:
 ]]--
 
 
------------------------
---- Global Variable ---
------------------------
-tableFile = "data/script-data/auto_ssm.tbl"
+------------------------
+--- Global Variables ---
+------------------------
+auto_ssm_filePath = "data/script-data/"
+auto_ssm_fileName = "auto_ssm.tbl"
 
 strike_info_id = {}	-- [index] = name; contains the name of our automated strikes
 
@@ -111,11 +112,29 @@ function auto_ssm_updateTarget(name)
 	end
 end
 
--------------------------
---- Functions - parse ---
--------------------------
 
 ------------
 --- main ---
 ------------
+auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 
+i = 0
+for name, attributes in pairs(auto_ssm_table) do
+	strike_info_id[i] = name
+	for attribute, value in pairs(auto_ssm_table[name]) do
+		if (attribute == "Type") then
+			ba.warning("type="..attribute)
+			strike_info_type[name] = value --TODO: extract ssm reference directly???
+		elseif (attribute == "Cooldown") then
+			ba.warning("cd="..attribute)
+			strike_info_cooldown[name] = value
+		elseif (attribute == "Default Seeking Algorithm") then
+			strike_info_seeker_algo[name] = value
+		else
+			ba.warning("[autoSSM.lua]: Unrecognised attribute "..attribute);
+		end
+	end
+	i = i + 1
+end
+
+--TODO: init other tables at gameplay start
