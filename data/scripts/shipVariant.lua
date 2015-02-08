@@ -66,25 +66,7 @@ g_vn = nil -- global variant name
 -- utility functions --
 -----------------------
 
-function trim(str)
-	return str:find'^%s*$' and '' or str:match'^%s*(.*%S)'
-end
 
-function removeComments(line)
-	return line:gsub("--(.)*|//(.)*|;;(.)*", "")
-end
-
-function extractLeft(attribute)
-	local line = attribute
-	local cut = string.find(line, ":")
-	return trim(string.sub(line, 2, cut - 1))
-end
-
-function extractRight(attribute)
-	local line = attribute
-	local cut = string.find(line, ":")
-	return trim(string.sub(line, cut + 1))
-end
 
 -- screw you, 32 char limit
 function sv(shipName, variantName)

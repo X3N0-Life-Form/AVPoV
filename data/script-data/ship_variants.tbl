@@ -1,0 +1,174 @@
+#Variants: SJ Sathanas
+$Name:		Multi-purpose Juggernaut
+	$turret05:MRed
+	$turret06:MRed
+	$turret17:MRed
+	$turret18:Mred
+	--------------
+	$turret28:SAAA
+	$turret29:MRed
+	$turret30:SAAA
+	$turret31:MRed
+	$turret32:SAAA
+	$turret33:MRed
+	$turret34:SAAA
+	$turret35:MRed
+
+	$turret39:SAAA
+	$turret40:MRed
+	$turret41:SAAA
+	$turret42:MRed
+	$turret43:SAAA
+	$turret44:MRed
+	$turret45:SAAA
+	$turret46:MRed
+	--------------
+	$turret21:MRedUp
+	$turret26:MRedUp
+
+	$turret52:MRedUp
+	$turret53:MRedUp
+	--------------
+	$turret07:Fast Flak
+	$turret08:Fast Flak
+	$turret10:Fast Flak
+
+	$turret22:Fast Flak
+	$turret23:Fast Flak
+	$turret25:Fast Flak
+	--------------
+	$turret36:Long Range Flak
+	$turret37:Long Range Flak
+
+	$turret47:Long Range Flak
+	$turret48:Long Range Flak
+	--------------
+	$turret09:SAAA
+	$turret11:SAAA
+	$turret12:SAAA
+
+	$turret38:SAAA
+	$turret15:SAAA
+	$turret16:SAAA
+	--------------
+	$turret13:Long Range Flak
+	$turret24:Long Range Flak
+	--------------
+	$turret14:Fast Flak
+	$turret27:Fast Flak
+	--------------
+	$turret50:Suppression Flak
+	$turret51:Suppression Flak
+#End
+
+
+#Variants:		SD Lucifer
+$Name:		Planetary Bombardment Super Destroyer
+$turret armor: Shivan Elite Armor
+$turret01:LRLRed
+$turret02:LRLRed
+$turret03:Advanced Flak
+$turret04:Advanced Flak
+$turret05:Shivan LR Swarm
+$turret06:Advanced Flak
+$turret07:Advanced Flak
+$turret08:Shivan LR Swarm
+$turret09:Suppression Flak
+$turret10:Shivan Turret Laser Up
+$turret11:Shivan Turret Laser Up
+$turret12:Shivan Turret Laser Up
+$turret13:Shivan Turret Laser Up
+$turret14:Shivan Turret Laser Up
+$turret15:Suppression Flak
+$turret16:Shivan Turret Laser Up
+$turret17:Shivan Turret Laser Up
+$turret18:MRedUp
+$turret19:MRedUp
+#End
+
+#Variants:		SD Ravana
+$Name: Battle Destroyer
+$hull:  200k
+$armor: Shivan Elite Armor
+$ai class: Big
+$turret armor: Shivan Elite Armor
+$turret01:LRed
+	+armor:Hell Armor
+$turret02:LRed
+	+armor:Hell Armor
+$turret03:MRedUp
+	+armor:Hell Armor
+$turret04:MRedUp
+	+armor:Hell Armor
+$turret05:SAAA
+$turret06:SAAA
+$turret07:Fast Flak
+$turret08:SAAA
+$turret09:SAAA
+$turret10:SAAA
+$turret11:SAAA
+$turret12:Fast Flak
+$turret13:SAAA
+$turret14:Fast Flak
+$turret15:MRed
+$turret16:Fast Flak
+$turret17:Fast Flak
+$turret18:Fast Flak
+$turret19:Pirahna#Shivan
+$turret20:Fast Flak
+$turret21:Fast Flak
+$turret22:Fast Flak
+$turret23:Fast Flak
+$turret24:SAAA
+$turret25:MRed
+$turret26:Pirahna#Shivan
+$turret27:MRed
+$turret28:MRed
+$turret29:SAAA
+$turret30:Fast Flak
+
+;;		Standard		;;
+$Name:	Hunter Killer Destroyer
+$turret01:LRed
+$turret02:LRed
+$turret03:MRed
+$turret04:MRed
+$turret06:Standard Flak
+$turret13:Standard Flak
+$turret18:Standard Flak
+$turret19:Pirahna#Shivan
+$turret24:Standard Flak
+$turret25:Heavy Flak
+$turret26:Pirahna#Shivan
+$turret27:SRed
+$turret29:SRed
+$turret30:Heavy Flak
+
+;;		Vampire			;;
+$Name:	Long Range Hunter Killer Destroyer
+$ai class: Big
+$armor: Shivan Elite Armor
+$turret01:LRLred
+$turret02:LRLRed
+$turret03:MRedUp
+$turret04:MRedUp
+$turret05:SRed
+$turret06:SAAA
+$turret13:SAAA
+$turret18:Standard Flak
+$turret19:Pirahna#Shivan
+$turret24:Standard Flak
+$turret25:Standard Flak
+$turret26:Pirahna#Shivan
+$turret27:SRed
+$turret29:SRed
+$turret30:Standard Flak
+
+#End
+
+
+#Variants: SD Demon
+
+#End
+
+

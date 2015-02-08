@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////////
 //		Shivan Ships
 /////////////////////////////////////////////////////--add stalker & streaker (btw, rename streaker creideiki?)
-$SJ Sathanas:	Multi-purpose Juggernaught
+$SJ Sathanas:	Multi-purpose Juggernaut
 	turret05:MRed
 	turret06:MRed
 	turret17:MRed
