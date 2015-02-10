@@ -8,7 +8,7 @@ table file syntax:
 ------------------------
 --- Global Variables ---
 ------------------------
-auto_ssm_filePath = "data/script-data/"
+auto_ssm_filePath = "data/config/"
 auto_ssm_fileName = "auto_ssm.tbl"
 
 strike_info_id = {}	-- [index] = name; contains the name of our automated strikes
@@ -58,7 +58,7 @@ end
 --------------------------
 
 --- cycles through the automated strikes and fires them if necessary
---- the responsability of calling it is left to the FREDer
+--- the responsibility of calling it is left to the FREDer
 function auto_ssm_cycle()
 	for index, name in pairs(strike_info_id) do
 		if strike_active[name] then
@@ -88,7 +88,7 @@ function auto_ssm_fire(name)
 end
 
 --- updates the given strike's current target, according to its seeking algorithm
---- algorithms defined in autoSSM-targetting.lua
+--- algorithms defined in autoSSM-targeting.lua
 function auto_ssm_updateTarget(name)
 	algo = auto_ssm_algo[name]
 	if (algo == "list" or algo == nil) then
@@ -121,12 +121,12 @@ auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 i = 0
 for name, attributes in pairs(auto_ssm_table) do
 	strike_info_id[i] = name
+	ba.print("[auto_ssm.lua] Name="..name)
 	for attribute, value in pairs(auto_ssm_table[name]) do
+		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value)
 		if (attribute == "Type") then
-			ba.warning("type="..attribute)
 			strike_info_type[name] = value --TODO: extract ssm reference directly???
 		elseif (attribute == "Cooldown") then
-			ba.warning("cd="..attribute)
 			strike_info_cooldown[name] = value
 		elseif (attribute == "Default Seeking Algorithm") then
 			strike_info_seeker_algo[name] = value

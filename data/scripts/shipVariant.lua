@@ -51,7 +51,7 @@ Sample entry:
 ----------------------
 -- global variables --
 ----------------------
-variantPath = "data/script-data/"
+variantPath = "data/config/"
 variantFileName = "ship_variants.txt"
 variantMatrix = {}
 
