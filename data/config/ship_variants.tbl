@@ -386,8 +386,8 @@ $turret14:Shivan Multi Turret Up
 #Variants: SC Cain
 $Name:	Light Support Cruiser
 $hull:  32k
-$turret05:Standard Flak/Shivan Multi Turret
-$turret06:Standard Flak/Shivan Multi Turret
+$turret05:Shivan Multi Turret
+$turret06:Shivan Multi Turret
 $turret08:Tornado#Shivan
 $turret09:Tornado#Shivan
 
