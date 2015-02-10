@@ -112,6 +112,17 @@ function auto_ssm_updateTarget(name)
 	end
 end
 
+--- Called at gameplay start
+function auto_ssm_init_strike_tables()
+	for index, name in pairs(strike_info_id) do
+		strike_active[name] = false
+		strike_last_fired[name] = 0
+		strike_current_target[name] = nil
+		strike_target_list[name] = {}
+		--strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
+		strike_team[name] = "Friendly"
+	end
+end
 
 ------------
 --- main ---
@@ -137,4 +148,3 @@ for name, attributes in pairs(auto_ssm_table) do
 	i = i + 1
 end
 
---TODO: init other tables at gameplay start
