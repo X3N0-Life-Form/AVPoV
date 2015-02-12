@@ -1,4 +1,4 @@
-$SSM:				; 0
+$SSM:				Shivan SSM Strike
 	+Weapon:		Shivan Subspace Missile
 	+Count:			3
 	+WarpRadius:	40
@@ -8,7 +8,7 @@ $SSM:				; 0
 	+Custom Message:*Inbound Shivan SSM Strike*
 	+Alarm Sound:	185 ;; comnode
 
-$SSM:				; 1
+$SSM:				Shivan AF SSM Strike
 	+Weapon:		AntiFighterSSM
 	+Count:			8 ;12
 	+WarpRadius:	15
@@ -18,7 +18,7 @@ $SSM:				; 1
 	+Custom Message:*Inbound Anti-Strikecraft SSMs*
 	+Alarm Sound:	185
 
-$SSM:				; 2
+$SSM:				Shivan SSM Barrage
 	+Weapon:		Shivan Subspace Missile
 	+Count:			6
 	+WarpRadius:	40
@@ -28,7 +28,7 @@ $SSM:				; 2
 	+Custom Message:*Inbound Shivan SSM Barrage*
 	+Alarm Sound:	185
 	
-$SSM:				; 3
+$SSM:				Mordiggian Strike
 	+Weapon:		Shivan Mordiggian Bomb
 	+Count:			1
 	+WarpRadius:	40
@@ -38,7 +38,7 @@ $SSM:				; 3
 	+Custom Message:*Inbound Mordiggian Bomb*
 	+Alarm Sound:	185
 
-$SSM:				; 4
+$SSM:				Shivan Cluster Strike
 	+Weapon:		Shivan Cluster SSM
 	+Count:			1
 	+WarpRadius:	25
@@ -47,5 +47,14 @@ $SSM:				; 4
 	+Offset:		1
 	+Custom Message:*Inbound Cluster Strike*
 	+Alarm Sound:	185
-	
+
+$SSM:				Shivan Lance Strike x8
+	+Weapon:		Shivan Lance
+	+Count:			8
+	+WarpRadius:	15
+	+WarpTime:		4
+	+Radius:		400
+	+Offset:		1
+	+Custom Message:*Unkown Subspace Disturbance*
+	+Alarm Sound:	185
 #end

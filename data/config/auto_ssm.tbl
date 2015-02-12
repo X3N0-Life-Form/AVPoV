@@ -1,8 +1,28 @@
 #Automated Strikes
 
-$Name:				auto-strike name	; required
+$Name:				rr-barrage		; required
 $Type:				Shivan SSM Barrage	; required, must match ssm.tbl entry
 $Cooldown:			22			; required
 $Default Seeking Algorithm:	round-robin		; optional, defaults to list
+
+$Name:				moloch-std-insane
+$Type:				Shivan SSM Strike
+$Cooldown:			13
+
+$Name:				moloch-std-hard
+$Type:				Shivan SSM Strike
+$Cooldown:			15
+
+$Name:				moloch-std-medium
+$Type:				Shivan SSM Strike
+$Cooldown:			17
+
+$Name:				moloch-std-easy
+$Type:				Shivan SSM Strike
+$Cooldown:			20
+
+$Name:				moloch-std-very-easy
+$Type:				Shivan SSM Strike
+$Cooldown:			24
 
 #End
