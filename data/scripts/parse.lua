@@ -1,3 +1,4 @@
+ba.warning("TODO: array list of things, ie. +R: 128, 128, 128, 128")
 --[[
 	--------------------------------
 	--- Generic FSO Table Parser ---
