@@ -1,4 +1,3 @@
-ba.warning("TODO: array list of things, ie. +R: 128, 128, 128, 128")
 --[[
 	--------------------------------
 	--- Generic FSO Table Parser ---
@@ -19,6 +18,7 @@ ba.warning("TODO: array list of things, ie. +R: 128, 128, 128, 128")
 		
 		$Name:				second entry
 		$Another attribute:	value
+		$Attribute list: item1, item2, item3
 		#End
 		
 		;; The following categories do have names
@@ -43,6 +43,9 @@ ba.warning("TODO: array list of things, ie. +R: 128, 128, 128, 128")
 		tab['entry name']['Attribute2'] = attribute 2 value
 		tab['entry name']['Attribute2']['sub']['sub attribute'] = sub value
 		tab['second entry']['Another attribute'] = value
+		tab['second entry']['Attribute list'][0] = item1
+		tab['second entry']['Attribute list'][1] = item2
+		tab['second entry']['Attribute list'][2] = item3
 		tab['primary']['n1']['Attr'] = val
 		tab['primary']['n2']['Attr'] = val
 		tab['tertiary']['n1']['Attr'] = val
@@ -86,9 +89,38 @@ function extractRight(attribute)
 	end
 end
 
+-- copied from lua-user wiki
+function split(str, pat)
+	local t = {}  -- NOTE: use {n = 0} in Lua-5.0
+	local fpat = "(.-)" .. pat
+	local last_end = 1
+	local s, e, cap = str:find(fpat, 1)
+	while s do
+		if s ~= 1 or cap ~= "" then
+			cap = trim(cap)
+			table.insert(t,cap)
+		end
+		last_end = e+1
+		s, e, cap = str:find(fpat, last_end)
+	end
+	if last_end <= #str then
+		cap = str:sub(last_end)
+		table.insert(t, cap)
+	end
+	return t
+end
+
 ----------------------
 --- Core Functions ---
 ----------------------
+
+function stuffAttribute(attributeTable, value)
+	if (isList == nil) then
+		attributeTable = value
+	else
+		attributeTable = split(value, ",")
+	end
+end
 
 --[[
 	@return a lua table containing data from the parsed table.
@@ -104,11 +136,12 @@ function parseTableFile(filePath, fileName)
 		while (not (line == nil)) do
 			line = removeComments(line)
 			line = trim(line)
-			attribute = extractLeft(line)
-			value = extractRight(line)
+			local attribute = extractLeft(line)
+			local value = extractRight(line)
 			isCat = string.find(line, "#(.)+:")
 			isAttr = string.find(line, "($)")
 			isSubAttr = string.find(line, "+")
+			isList = string.find(line, ",")
 			--
 			ba.print("[parse.lua] Parsing line: "..line)
 			if not (isCat == nil) then
@@ -124,10 +157,10 @@ function parseTableFile(filePath, fileName)
 					ba.print("[parse.lua] Name="..name)
 				else
 					currentAttribute = attribute -- save attribute name in case we run into sub attributes
-					if (hasCategory) then
-						tableObject[category][name][attribute] = value
+					if (hasCategory) then --TODO: refactor into functions
+						stuffAttribute(tableObject[category][name][attribute], value)
 					else
-						tableObject[name][attribute] = value
+						stuffAttribute(tableObject[name][attribute], value)
 					end
 					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value)
 				end
@@ -139,10 +172,10 @@ function parseTableFile(filePath, fileName)
 					tableObject[name][currentAttribute]['sub'] = {}
 				end
 				
-				if (hasCategory) then		
-					tableObject[category][name][currentAttribute]['sub'][attribute] = value
+				if (hasCategory) then
+					stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
 				else
-					tableObject[name][currentAttribute]['sub'][attribute] = value
+					stuffAttribute(tableObject[name][currentAttribute]['sub'][attribute], value)
 				end
 				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value)
 			end
