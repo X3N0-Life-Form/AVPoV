@@ -53,7 +53,9 @@ Sample entry:
 ----------------------
 variantPath = "data/config/"
 variantFileName = "ship_variants.txt"
+variantTableName = "ship_variants.tbl"
 variantMatrix = {}
+variantTable = {}
 
 shipsToSet = {}
 
@@ -315,4 +317,5 @@ end
 -- main --
 ----------
 
-variantMatrix = parseVariantFile(variantFileName, variantPath)
+--variantMatrix = parseVariantFile(variantFileName, variantPath)
+variantTable = parseTableFile(variantPath, variantTableName)
