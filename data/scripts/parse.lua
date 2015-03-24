@@ -39,8 +39,8 @@
 		#End
 		
 	Will result in the following lua table:
-		tab['entry name']['Attribute1'] = attribute 1 value
-		tab['entry name']['Attribute2'] = attribute 2 value
+		tab['entry name']['Attribute1']['value'] = attribute 1 value
+		tab['entry name']['Attribute2']['value'] = attribute 2 value
 		tab['entry name']['Attribute2']['sub']['sub attribute'] = sub value
 		tab['second entry']['Another attribute'] = value
 		tab['second entry']['Attribute list'][0] = item1
@@ -156,11 +156,13 @@ function parseTableFile(filePath, fileName)
 					end
 					ba.print("[parse.lua] Name="..name)
 				else
-					currentAttribute = attribute -- save attribute name in case we run into sub attributes
+					currentAttribute = attribute	-- save attribute name in case we run into sub attributes
 					if (hasCategory) then --TODO: refactor into functions
-						stuffAttribute(tableObject[category][name][attribute], value)
+						tableObject[category][name][attribute] = {}
+						stuffAttribute(tableObject[category][name][attribute]['value'], value)
 					else
-						stuffAttribute(tableObject[name][attribute], value)
+						tableObject[name][attribute] = {}
+						stuffAttribute(tableObject[name][attribute]['value'], value)
 					end
 					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value)
 				end
