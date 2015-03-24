@@ -34,7 +34,7 @@ end
 --- Algorithms ---
 ------------------
 
---- Seeks the next target in the targetting list
+--- Seeks the next target in the targeting list
 --- Changes target upon death of the current target
 function auto_ssm_seekList(name)
 	if not (auto_ssm_isCurrentTargetValid(name)) then

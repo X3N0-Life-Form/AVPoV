@@ -133,8 +133,9 @@ i = 0
 for name, attributes in pairs(auto_ssm_table) do
 	strike_info_id[i] = name
 	ba.print("[auto_ssm.lua] Name="..name)
-	for attribute, value in pairs(auto_ssm_table[name]) do
-		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value)
+	for attribute, prefix in pairs(auto_ssm_table[name]) do
+		value = prefix['value']
+		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value.."\n")
 		if (attribute == "Type") then
 			strike_info_type[name] = value --TODO: extract ssm reference directly???
 		elseif (attribute == "Cooldown") then
@@ -142,7 +143,7 @@ for name, attributes in pairs(auto_ssm_table) do
 		elseif (attribute == "Default Seeking Algorithm") then
 			strike_info_seeker_algo[name] = value
 		else
-			ba.warning("[autoSSM.lua]: Unrecognised attribute "..attribute);
+			ba.warning("[autoSSM.lua]: Unrecognised attribute "..attribute.."\n");
 		end
 	end
 	i = i + 1

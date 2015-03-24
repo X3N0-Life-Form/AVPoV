@@ -133,6 +133,7 @@ function parseTableFile(filePath, fileName)
 		
 		local hasCategory = false
 		local line = file:read("*l")
+		local lineNumber = 1;
 		while (not (line == nil)) do
 			line = removeComments(line)
 			line = trim(line)
@@ -143,7 +144,7 @@ function parseTableFile(filePath, fileName)
 			isSubAttr = string.find(line, "+")
 			isList = string.find(line, ",")
 			--
-			ba.print("[parse.lua] Parsing line: "..line)
+			ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.."\n")
 			if not (isCat == nil) then
 				hasCategory = true
 			elseif not (isAttr == nil) then
@@ -154,7 +155,7 @@ function parseTableFile(filePath, fileName)
 					else
 						tableObject[name] = {}
 					end
-					ba.print("[parse.lua] Name="..name)
+					ba.print("[parse.lua] Name="..name.."\n")
 				else
 					currentAttribute = attribute	-- save attribute name in case we run into sub attributes
 					if (hasCategory) then --TODO: refactor into functions
@@ -164,7 +165,7 @@ function parseTableFile(filePath, fileName)
 						tableObject[name][attribute] = {}
 						stuffAttribute(tableObject[name][attribute]['value'], value)
 					end
-					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value)
+					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
 				end
 			elseif not (isSubAttr == nil) then
 				-- initialize if needs be
@@ -179,13 +180,14 @@ function parseTableFile(filePath, fileName)
 				else
 					stuffAttribute(tableObject[name][currentAttribute]['sub'][attribute], value)
 				end
-				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value)
+				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
 			end
 			--
 			line = file:read("*l")
+			lineNumber = lineNumber + 1;
 		end
 	else
-		ba.warning("[parse.lua] Table file not found: "..filePath..fileName)
+		ba.warning("[parse.lua] Table file not found: "..filePath..fileName.."\n")
 	end
 
 	return tableObject
