@@ -132,7 +132,7 @@ auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 i = 0
 for name, attributes in pairs(auto_ssm_table) do
 	strike_info_id[i] = name
-	ba.print("[auto_ssm.lua] Name="..name)
+	ba.print("[auto_ssm.lua] Name="..name.."\n")
 	for attribute, prefix in pairs(auto_ssm_table[name]) do
 		value = prefix['value']
 		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value.."\n")
