@@ -143,10 +143,13 @@ function parseTableFile(filePath, fileName)
 			isAttr = string.find(line, "($)")
 			isSubAttr = string.find(line, "+")
 			isList = string.find(line, ",")
+			isEnd = string.find(line, "#End")
 			--
 			ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.."\n")
 			if not (isCat == nil) then
 				hasCategory = true
+				category = value
+				ba.print("[parse.lua] Entering category: "..category.."\n")
 			elseif not (isAttr == nil) then
 				if (attribute == "Name") then
 					name = value
@@ -161,11 +164,12 @@ function parseTableFile(filePath, fileName)
 					if (hasCategory) then --TODO: refactor into functions
 						tableObject[category][name][attribute] = {}
 						stuffAttribute(tableObject[category][name][attribute]['value'], value)
+						ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
 					else
 						tableObject[name][attribute] = {}
 						stuffAttribute(tableObject[name][attribute]['value'], value)
+						ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
 					end
-					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
 				end
 			elseif not (isSubAttr == nil) then
 				-- initialize if needs be
@@ -181,6 +185,9 @@ function parseTableFile(filePath, fileName)
 					stuffAttribute(tableObject[name][currentAttribute]['sub'][attribute], value)
 				end
 				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
+			elseif not (isEnd == nil) then
+				hasCategory = false
+				ba.print("[parse.lua] Reached an #End marker\n")
 			end
 			--
 			line = file:read("*l")
