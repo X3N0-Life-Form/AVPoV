@@ -1,4 +1,8 @@
 --[[
+	-----------------------------------------------------
+	-- Automated SSM Strike Framework - Target Seeking --
+	-----------------------------------------------------
+
 	Contains target seeking algorithms & associated utility functions
 	See auto_ssm_updateTarget function @ autoSSM.lua
 	Valid algorithms are:
