@@ -114,7 +114,7 @@ end
 --- Core Functions ---
 ----------------------
 
-function stuffAttribute(attributeTable, value)
+function stuffAttribute(attributeTable, value, isList)
 	if (isList == nil) then
 		attributeTable = value
 	else
@@ -139,11 +139,11 @@ function parseTableFile(filePath, fileName)
 			line = trim(line)
 			local attribute = extractLeft(line)
 			local value = extractRight(line)
-			isCat = string.find(line, "#(.)+:")
-			isAttr = string.find(line, "($)")
-			isSubAttr = string.find(line, "+")
-			isList = string.find(line, ",")
-			isEnd = string.find(line, "#End")
+			local isCat = string.find(line, "#(.)+:")
+			local isAttr = string.find(line, "($)")
+			local isSubAttr = string.find(line, "+")
+			local isList = string.find(line, ",")
+			local isEnd = string.find(line, "#End")
 			--
 			ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.."\n")
 			if not (isCat == nil) then
@@ -163,13 +163,14 @@ function parseTableFile(filePath, fileName)
 					currentAttribute = attribute	-- save attribute name in case we run into sub attributes
 					if (hasCategory) then --TODO: refactor into functions
 						tableObject[category][name][attribute] = {}
-						stuffAttribute(tableObject[category][name][attribute]['value'], value)
-						ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
+						tableObject[name][attribute]['value'] = "none"
+						stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
 					else
 						tableObject[name][attribute] = {}
-						stuffAttribute(tableObject[name][attribute]['value'], value)
-						ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..value.."\n")
+						tableObject[name][attribute]['value'] = "none"
+						stuffAttribute(tableObject[name][attribute]['value'], value, isList)
 					end
+					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[name][attribute]['value'].."\n")
 				end
 			elseif not (isSubAttr == nil) then
 				-- initialize if needs be

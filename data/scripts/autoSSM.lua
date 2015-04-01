@@ -129,7 +129,7 @@ end
 ------------
 auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 
-i = 0
+local i = 0
 for name, attributes in pairs(auto_ssm_table) do
 	strike_info_id[i] = name
 	ba.print("[auto_ssm.lua] Name="..name.."\n")
