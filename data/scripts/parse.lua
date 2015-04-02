@@ -10,7 +10,7 @@
 	
 	Example:
 	The following Freespace table:
-		#Category			; note that this category doesn't have a name
+		#Category
 		$Name:				entry name
 		$Attribute1:		attribute 1 value
 		$Attribute2:		attribute 2 value
@@ -21,7 +21,6 @@
 		$Attribute list: item1, item2, item3
 		#End
 		
-		;; The following categories do have names
 		#Weapons: primary
 		$Name:	n1
 		$Attr:	val
@@ -39,17 +38,17 @@
 		#End
 		
 	Will result in the following lua table:
-		tab['entry name']['Attribute1']['value'] = attribute 1 value
-		tab['entry name']['Attribute2']['value'] = attribute 2 value
-		tab['entry name']['Attribute2']['sub']['sub attribute'] = sub value
-		tab['second entry']['Another attribute'] = value
-		tab['second entry']['Attribute list'][0] = item1
-		tab['second entry']['Attribute list'][1] = item2
-		tab['second entry']['Attribute list'][2] = item3
-		tab['primary']['n1']['Attr'] = val
-		tab['primary']['n2']['Attr'] = val
-		tab['tertiary']['n1']['Attr'] = val
-		tab['tertiary']['n2']['Attr'] = val
+		tab['Category']				['entry name']['Attribute1']['value']					= attribute 1 value
+		tab['Category']				['entry name']['Attribute2']['value']					= attribute 2 value
+		tab['Category']				['entry name']['Attribute2']['sub']['sub attribute']	= sub value
+		tab['Category']				['second entry']['Another attribute']					= value
+		tab['Category']				['second entry']['Attribute list']				[0]		= item1
+		tab['Category']				['second entry']['Attribute list']				[1]		= item2
+		tab['Category']				['second entry']['Attribute list']				[2]		= item3
+		tab['Weapons: primary']		['n1']['Attr']											= val
+		tab['Weapons: primary']		['n2']['Attr']											= val
+		tab['Weapons: tertiary']	['n1']['Attr']											= val
+		tab['Weapons: tertiary']	['n2']['Attr']											= val
 ]]--
 
 -------------------------
@@ -66,6 +65,15 @@ function removeComments(line)
 		return line
 	else
 		return line:sub(0, cut - 1)
+	end
+end
+
+function extractCategory(line)
+	local cut = string.find(line, ":")
+	if (cut == nil) then
+		return trim(line)
+	else
+		return trim(string.sub(line, cut + 1))
 	end
 end
 
@@ -131,7 +139,6 @@ function parseTableFile(filePath, fileName)
 	if cf.fileExists(fileName, filePath, true) then
 		local file = cf.openFile(fileName, "r", filePath)
 		
-		local hasCategory = false
 		local line = file:read("*l")
 		local lineNumber = 1;
 		while (not (line == nil)) do
@@ -139,7 +146,7 @@ function parseTableFile(filePath, fileName)
 			line = trim(line)
 			local attribute = extractLeft(line)
 			local value = extractRight(line)
-			local isCat = string.find(line, "#(.)+:")
+			local isCat = string.find(line, "#(.)+")
 			local isAttr = string.find(line, "($)")
 			local isSubAttr = string.find(line, "+")
 			local isList = string.find(line, ",")
@@ -147,47 +154,31 @@ function parseTableFile(filePath, fileName)
 			--
 			ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.."\n")
 			if not (isCat == nil) then
-				hasCategory = true
-				category = value
+				category = extractCategory(line)
 				ba.print("[parse.lua] Entering category: "..category.."\n")
 			elseif not (isAttr == nil) then
 				if (attribute == "Name") then
 					name = value
-					if (hasCategory) then
-						tableObject[category][name] = {}
-					else
-						tableObject[name] = {}
-					end
+					tableObject[category][name] = {}
+
 					ba.print("[parse.lua] Name="..name.."\n")
 				else
 					currentAttribute = attribute	-- save attribute name in case we run into sub attributes
-					if (hasCategory) then --TODO: refactor into functions
-						tableObject[category][name][attribute] = {}
-						tableObject[name][attribute]['value'] = "none"
-						stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
-					else
-						tableObject[name][attribute] = {}
-						tableObject[name][attribute]['value'] = "none"
-						stuffAttribute(tableObject[name][attribute]['value'], value, isList)
-					end
+					tableObject[category][name][attribute] = {}
+					tableObject[name][attribute]['value'] = "none"
+					stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
+					
 					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[name][attribute]['value'].."\n")
 				end
 			elseif not (isSubAttr == nil) then
 				-- initialize if needs be
-				if (hasCategory and tableObject[category][name][currentAttribute]['sub'] == nil) then
+				if (tableObject[category][name][currentAttribute]['sub'] == nil) then
 					tableObject[category][name][currentAttribute]['sub'] = {}
-				elseif (tableObject[name][currentAttribute]['sub'] == nil) then
-					tableObject[name][currentAttribute]['sub'] = {}
 				end
+				stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
 				
-				if (hasCategory) then
-					stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
-				else
-					stuffAttribute(tableObject[name][currentAttribute]['sub'][attribute], value)
-				end
 				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
 			elseif not (isEnd == nil) then
-				hasCategory = false
 				ba.print("[parse.lua] Reached an #End marker\n")
 			end
 			--
