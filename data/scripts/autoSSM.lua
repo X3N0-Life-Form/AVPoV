@@ -158,7 +158,7 @@ for name, attributes in pairs(auto_ssm_table) do
 		if (attribute == "Type") then
 			strike_info_type[name] = value --TODO: extract ssm reference directly???
 		elseif (attribute == "Cooldown") then
-			strike_info_cooldown[name] = value
+			strike_info_cooldown[name] = value --TODO: handle lists
 		elseif (attribute == "Default Seeking Algorithm") then
 			strike_info_seeker_algo[name] = value
 		else
