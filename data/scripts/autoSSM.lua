@@ -1,6 +1,26 @@
 --[[
+	------------------------------------------------
+	-- Automated SSM Strike Framework - Main file --
+	------------------------------------------------
 
-table file syntax:
+	Table file syntax:
+		#Automated Strikes
+
+		$Name:							String		; required
+		$Type:							String		; required, must match ssm.tbl entry
+		$Cooldown:						Integer		; required
+		$Default Seeking Algorithm:		String		; optional, defaults to list - autoSSM-targeting.lua
+
+		#End
+	Notable Functions:
+		- auto_ssm_cycle():
+				needs to be called by the FREDer
+				cycles through the auto strikes, and fires SSMs if necessary
+		- auto_ssm_setActive(name, boolean):	sets the strike as active
+		- auto_ssm_setTarget(name, target):		sets the current target
+		- auto_ssm_addTarget(name, target):		adds a target to the target list
+		- auto_ssm_removeTarget(name, target):	removes a target from the target list
+		- auto_ssm_fire(name):					fires a strike at its current target
 
 ]]--
 
@@ -16,21 +36,21 @@ strike_info_id = {}	-- [index] = name; contains the name of our automated strike
 --- strike info arrays ---
 --> indexed by auto strike name (see strike_info_id above)
 --> contains data parsed from the table
-strike_info_type = {}		-- SSM name, as defined in ssm.tbl
-strike_info_cooldown = {}	-- cooldown, in seconds
-strike_info_seeker_algo = {}		-- what target algorithm should be used?
+strike_info_type = {}			-- SSM name, as defined in ssm.tbl
+strike_info_cooldown = {}		-- cooldown, in seconds
+strike_info_seeker_algo = {}	-- what target algorithm should be used?
 
 
 
 --- active strike info ---
 --> indexed by name
 --> contains data related to active automated strikes
-strike_active = {}		-- boolean, is that automated strike type active? Defaults to false
+strike_active = {}			-- boolean, is that automated strike type active? Defaults to false
 strike_last_fired = {}		-- mission time at which this strike was last fired
 strike_current_target = {}	-- ship name, current target
 strike_target_list = {}		-- [name][target] = boolean; list of potential targets, used by target-seeking algorithms
 strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
-strike_team = {}		-- team name
+strike_team = {}			-- team name
 
 
 ----------------------------
@@ -74,7 +94,6 @@ function auto_ssm_cycle()
 end
 
 --- fires the given strike
---- returns true if fired successfully
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	target = strike_current_target[name]
@@ -129,7 +148,7 @@ end
 ------------
 auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 
-i = 0
+local i = 0
 for name, attributes in pairs(auto_ssm_table) do
 	strike_info_id[i] = name
 	ba.print("[auto_ssm.lua] Name="..name.."\n")
@@ -139,7 +158,7 @@ for name, attributes in pairs(auto_ssm_table) do
 		if (attribute == "Type") then
 			strike_info_type[name] = value --TODO: extract ssm reference directly???
 		elseif (attribute == "Cooldown") then
-			strike_info_cooldown[name] = value
+			strike_info_cooldown[name] = value --TODO: handle lists
 		elseif (attribute == "Default Seeking Algorithm") then
 			strike_info_seeker_algo[name] = value
 		else
