@@ -69,7 +69,7 @@ function removeComments(line)
 end
 
 function extractCategory(line)
-	local cut = string.find(line, ":")
+	local cut = string.find(line, "#")
 	if (cut == nil) then
 		return trim(line)
 	else
@@ -140,48 +140,55 @@ function parseTableFile(filePath, fileName)
 		local file = cf.openFile(fileName, "r", filePath)
 		
 		local line = file:read("*l")
-		local lineNumber = 1;
+		local lineNumber = 1
 		while (not (line == nil)) do
 			line = removeComments(line)
 			line = trim(line)
-			local attribute = extractLeft(line)
-			local value = extractRight(line)
-			local isCat = string.find(line, "#(.)+")
-			local isAttr = string.find(line, "($)")
-			local isSubAttr = string.find(line, "+")
-			local isList = string.find(line, ",")
-			local isEnd = string.find(line, "#End")
-			--
-			ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.."\n")
-			if not (isCat == nil) then
-				category = extractCategory(line)
-				ba.print("[parse.lua] Entering category: "..category.."\n")
-			elseif not (isAttr == nil) then
-				if (attribute == "Name") then
-					name = value
-					tableObject[category][name] = {}
-
-					ba.print("[parse.lua] Name="..name.."\n")
+			-- don't parse empty lines
+			if not (line == "") then
+				local attribute = extractLeft(line)
+				local value = extractRight(line)
+				local isCat = string.find(line, "^#")
+				local isAttr = string.find(line, "$")
+				local isSubAttr = string.find(line, "+")
+				local isList = string.find(line, ",")
+				local isEnd = string.find(line, "#End")
+				--
+				ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.." ("..attribute.." = "..value..")\n")
+				if  not (isEnd == nil) then
+					ba.print("[parse.lua] Reached an #End marker\n")
 				else
-					currentAttribute = attribute	-- save attribute name in case we run into sub attributes
-					tableObject[category][name][attribute] = {}
-					tableObject[name][attribute]['value'] = "none"
-					stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
-					
-					ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[name][attribute]['value'].."\n")
+					if not (isCat == nil) then
+						category = extractCategory(line)
+						ba.print("[parse.lua] Entering category: "..category.."\n")
+						tableObject[category] = {}
+					elseif not (isAttr == nil) then
+						if (attribute == "Name") then
+							name = value
+							ba.print("[parse.lua] Name="..name.."\n")
+							tableObject[category][name] = {}
+							
+						else
+							currentAttribute = attribute	-- save attribute name in case we run into sub attributes
+							ba.print(category.." - "..name.." - "..attribute)
+							tableObject[category][name][attribute] = {}
+							tableObject[category][name][attribute]['value'] = "none"
+							stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
+							
+							ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
+						end
+					elseif not (isSubAttr == nil) then
+						-- initialize if needs be
+						if (tableObject[category][name][currentAttribute]['sub'] == nil) then
+							tableObject[category][name][currentAttribute]['sub'] = {}
+						end
+						stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
+						
+						ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
+					end
 				end
-			elseif not (isSubAttr == nil) then
-				-- initialize if needs be
-				if (tableObject[category][name][currentAttribute]['sub'] == nil) then
-					tableObject[category][name][currentAttribute]['sub'] = {}
-				end
-				stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
-				
-				ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
-			elseif not (isEnd == nil) then
-				ba.print("[parse.lua] Reached an #End marker\n")
+				--
 			end
-			--
 			line = file:read("*l")
 			lineNumber = lineNumber + 1;
 		end
