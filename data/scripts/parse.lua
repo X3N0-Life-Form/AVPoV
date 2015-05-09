@@ -51,9 +51,18 @@
 		tab['Weapons: tertiary']	['n2']['Attr']											= val
 ]]--
 
+-- set to true to enable prints
+enableDebugPrints = false
+
 -------------------------
 --- Utility Functions ---
 -------------------------
+
+function dPrint_parse(message)
+	if (enableDebugPrints) then
+		ba.parse("[parse.lua] "..message)
+	end
+end
 
 function trim(str)
 	return str:find'^%s*$' and '' or str:match'^%s*(.*%S)'
@@ -141,6 +150,7 @@ function parseTableFile(filePath, fileName)
 		
 		local line = file:read("*l")
 		local lineNumber = 1
+		ba.print("[parse.lua] Parsing file "..fileName.."\n");
 		while (not (line == nil)) do
 			line = removeComments(line)
 			line = trim(line)
@@ -154,28 +164,28 @@ function parseTableFile(filePath, fileName)
 				local isList = string.find(line, ",")
 				local isEnd = string.find(line, "#End")
 				--
-				ba.print("[parse.lua] Parsing line #"..lineNumber..": "..line.." ("..attribute.." = "..value..")\n")
+				dPrint_parse("Parsing line #"..lineNumber..": "..line.." ("..attribute.." = "..value..")\n")
 				if  not (isEnd == nil) then
-					ba.print("[parse.lua] Reached an #End marker\n")
+					dPrint_parse("Reached an #End marker\n")
 				else
 					if not (isCat == nil) then
 						category = extractCategory(line)
-						ba.print("[parse.lua] Entering category: "..category.."\n")
+						dPrint_parse("Entering category: "..category.."\n")
 						tableObject[category] = {}
 					elseif not (isAttr == nil) then
 						if (attribute == "Name") then
 							name = value
-							ba.print("[parse.lua] Name="..name.."\n")
+							dPrint_parse("Name="..name.."\n")
 							tableObject[category][name] = {}
 							
 						else
 							currentAttribute = attribute	-- save attribute name in case we run into sub attributes
-							ba.print(category.." - "..name.." - "..attribute)
+							dPrint_parse(category.." - "..name.." - "..attribute)
 							tableObject[category][name][attribute] = {}
 							tableObject[category][name][attribute]['value'] = "none"
 							stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
 							
-							ba.print("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
+							dPrint_parse("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
 						end
 					elseif not (isSubAttr == nil) then
 						-- initialize if needs be
@@ -184,7 +194,7 @@ function parseTableFile(filePath, fileName)
 						end
 						stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
 						
-						ba.print("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
+						dPrint_parse("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
 					end
 				end
 				--
