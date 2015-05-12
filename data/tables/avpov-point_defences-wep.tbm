@@ -16,7 +16,7 @@ $Damage Type:	ShivanWeapon
 $Name:                                  Shivan Weak Turret Laser
 	+nocreate
 	+Tech Title:		XSTR("Shivan Weak Turret Laser",-1)
-	+Tech Description:	XSTR("Shivan Inferior Point Defence Turret
+	+Tech Description:	XSTR("Shivan Light Point Defence Turret
 	
 	A seemingly downgraded version of the Shivan Standard All-Purpose turret, it poses little threat to GTVA strikecrafts.",-1)
 	$end_multi_text
@@ -25,11 +25,11 @@ $Damage Type:	ShivanWeapon
 $Name:                                  Shivan Megafunk Turret
 	+nocreate
 	+Tech Title:		XSTR("Shivan Megafunk Laser",-1)
-	+Tech Description:	XSTR("Shivan Superior Point Defence Turret
+	+Tech Description:	XSTR("Shivan Heavy Point Defence Turret
 	
-	While its tactical role is seemingly identical to the old Terran Superior Point Defence Turret, it sacrifices range, velocity and refire rate in favor of increased damage per shot. This weapon poses little threat to strikecrafts due to its low shield penetration, fire rate and velocity.
+	While its tactical role is seemingly identical to the old Terran Heavy Point Defence Turret, it sacrifices range, velocity and refire rate in favor of increased damage per shot. This weapon poses little threat to strikecrafts due to its low shield penetration, fire rate and velocity.
 
-	More recent scans of the weapon indicate that it is in fact related to the Shivan Heavy Anti-Capital Laser and the Shivan Large Cannon. The former is an apparently stripped down version of the turret's gun, featuring a better refire rate which makes it more dangerous to allied ships than the Superior Turret, despite its lower damage output per shot. The latter actually appear to be identical to the Superior Turret, which is troubling since the Shivan Large Cannon packs more than 3 times the firepower of the turret at a much faster refire rate, and some Shivan capital ships actually seem to have traded their Superior Turret for a Large Cannon Turret on occasions.",-1)
+	More recent scans of the weapon indicate that it is in fact related to the Shivan Heavy Anti-Capital Laser and the Shivan Large Cannon. The former is an apparently stripped down version of the turret's gun, featuring a better refire rate which makes it more dangerous to allied ships than the Heavy Turret, despite its lower damage output per shot. The latter actually appear to be identical to the Heavy Turret, which is troubling since the Shivan Large Cannon packs more than 3 times the firepower of the turret at a much faster refire rate, and some Shivan capital ships actually seem to have traded their Superior Turret for a Large Cannon Turret on occasions.",-1)
 	$end_multi_text
 $Damage Type:	ShivanHugeWeapon
 
@@ -79,7 +79,7 @@ $Muzzleflash:						Cmuzzle_small
 
 $Name:                          Shivan Multi Turret
 	+Tech Title:		XSTR("Shivan Multi Turret",-1)
-	+Tech Description:	XSTR("Shivan warship mounted multi-shot turret
+	+Tech Description:	XSTR("Shivan Warship-Mounted Mlti-Shot Turret
 	
 	Conflicting reports exist concerning the exact nature and behavior of this weapon. Early mission reports established it as a very deadly anti-capital weapon capable of firing 5 shots at once, posing a serious threat against warships and bombers, limited effectiveness against fighters.
 	
@@ -136,7 +136,7 @@ $Burst Flags:						()
 
 $Name:                          Shivan Multi Turret Up
 	+Tech Title:		XSTR("Upgraded Shivan Multi Turret",-1)
-	+Tech Description:	XSTR("Upgraded Shivan warship mounted multi-shot turret
+	+Tech Description:	XSTR("Advanced Shivan Warship Mounted Multi-Shot Turret
 	
 	TODO",-1)
 	$end_multi_text
@@ -194,11 +194,11 @@ $Burst Flags:						()
 
 $Name:                              Mass Driver 
 	+Tech Title:		XSTR("Mass Driver",-1)
-	+Tech Description:	XSTR("Initially developed for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and is particularly popular in the Vasudan Navy, which now often equips lighter variants on its warships.
+	+Tech Description:	XSTR("Initially developed for the Terran Hecate-class destroyer, the Alliance's next generation mass driver cannon has proven to be a very versatile weapon system and is particularly popular in the Vasudan Navy, which now often equips lighter variants on its older cruisers and destroyers, giving the former a much needed anti-capital option.
 	
-	Before the Terran Navy decided to replace these expansive weapons with cheaper flak systems, the Mass Driver gave the Hecate punishing anti-warship firepower from almost any direction, backed up by the ship's beam weapons, delivering a near-constant stream of armor-piercing accelerated uranium slugs.
+	Before the Terran Navy decided to replace these expansive weapons with cheaper flak systems, the Mass Driver gave the Hecate punishing anti-warship firepower from almost any direction, backed up by the ship's beam weapons, delivering a near-constant stream of armor-piercing slugs.
 	
-	While the lighter versions of this gun have a much lighter refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts heavier versions of this weapon, with a much greater refire rate, transforming these turrets into true corvette-killing weapons.",-1)
+	While the lighter versions of this gun have a much lighter refire rate compared to the Hecate's dedicated turrets, it was recently revealed that the GTVA Colossus also mounts this weapon, but with an even greater rate of fire.",-1)
 	$end_multi_text
 $Model File:						none
 @Laser Bitmap:						Maxim
@@ -253,7 +253,7 @@ $FOF:								1.4
 $Name:								Wraith
 	+Tech Title:		XSTR("Wraith Point Defence Turret",-1)
 	+Tech Description:	XSTR("Based on the successful Banshee, the Wraith is capable of inflicting devastating damage on shields, while still being able to inflict significant hull damage to its target at medium range.
-	This pride of Terran design is expected to replace the old Heavy Point Defence Turrets on Alliance warships in the coming years.",-1)
+	A very effective joint design is expected to replace the old Heavy Point Defence Turrets on Alliance warships in the coming years.",-1)
 	$end_multi_text
 $Model File: 						none
 @Laser Bitmap:						Banshee_Bitmap
@@ -442,15 +442,15 @@ $Pspew:
 
 ;; Shivan Long Range Flak -- to be used only on Sathanas & Lucifer
 $Name:							Suppression Flak
-	+Tech Title: XSTR("Shivan Suppression Flak",-1)
-	+Tech Description: XSTR("Mounted on the front of the Sathanas Juggernaut, the Suppression Flak fills a similar role to the Alliance's Long Range Flak cannons, namely harassing bombers at long range to make the kill easier for close range point defence systems. The Suppression Flak, however is significantly more dangerous than a regular Long Range Flak, boasting an increased range, projectile speed, and damage output per projectile.",-1)
+	+Tech Title: XSTR("Suppression Flak",-1)
+	+Tech Description: XSTR("The Suppression Flak fills a similar role to the Alliance's Long Range Flak cannons, namely harassing bombers at long range to make the kill easier for close range point defence systems. The Suppression Flak, however is significantly more dangerous than a regular Long Range Flak, boasting an increased range, projectile speed, and damage output per projectile.",-1)
 	$end_multi_text
 $Model File:					none
 $Mass:							1.2
 $Velocity:						850.0
 $Fire Wait:						0.35
 $Damage:						30
-$Damage Type:					ShivanWeapon
+$Damage Type:					NormalWeapon
 $Blast Force:             		115.0
 $Inner Radius:            		15.0
 $Outer Radius:            		55.0
