@@ -514,7 +514,7 @@ $BeamInfo:
 	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
 	+BeamSound:					178
 	+WarmupSound:				182
-	+WarmdownSound:				189
+	+WarmdownSound:				none
 	+Muzzleglow:				SbeamAglow_white
 	+Shots:						0				;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)

@@ -300,10 +300,10 @@ $turret09:Piranha#Shivan
 
 #SC Rakshasa
 $Name:	Strike Cruiser
-	turret04:SRed
-	turret07:Shivan Multi Turret
-	turret08:Shivan Multi Turret
-	turret10:SAAA
+$turret04:SRed
+$turret07:Shivan Multi Turret
+$turret08:Shivan Multi Turret
+$turret10:SAAA
 
 $Name:	Support Cruiser
 $turret01:Shivan Multi Turret

@@ -103,7 +103,7 @@ function setVariant(shipName, variantName)
 	end
 	
 	local className = ship.Class.Name
-	local variantInfo = variantMatrix[className][variantName]
+	local variantInfo = variantTable[className][variantName]
 	if (variantInfo == nil) then
 		ba.warning("[shipVariant.lua] Could not find variant info for "..className..":"..variantName.."\n")
 		return nil
@@ -182,7 +182,7 @@ function setVariant(shipName, variantName)
 			
 		
 			
-		else -- turret
+		elseif not (string.find(attribute, "turret") == nil) then -- turret
 			if (ship[attribute].PrimaryBanks) then -- primary banks
 				for i = 0, #ship[attribute].PrimaryBanks do
 					ba.print("[ShipVariant.lua] Primary Bank: "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
@@ -194,6 +194,8 @@ function setVariant(shipName, variantName)
 					ship[attribute].SecondaryBanks[i].WeaponClass = tb.WeaponClasses[value]
 				end
 			end
+		else
+			ba.warning("[ShipVariant.lua] Unrecognised attribute: "..attribute.."\n")
 		end
 		
 		 -- sub-attributes
@@ -249,7 +251,7 @@ function setVariantDelayed()
 	for shipName, variantName in pairs(shipsToSet) do
 		local ship = mn.Ships[shipName]
 		if not (ship == nil) then
-			ba.print("setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
+			ba.print("[shipVariant.lua] setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
 			shipsToSet[shipName] = nil
 			setVariant(shipName, variantName)
 		end
@@ -262,3 +264,10 @@ end
 ----------
 
 variantTable = parseTableFile(variantPath, variantTableName)
+
+-- print what we've parsed
+for shipClass, variants in pairs(variantTable) do
+	for variantName, prefix in pairs(variants) do
+		ba.print("[shipVariant.lua] "..shipClass..": "..variantName.."\n")
+	end
+end

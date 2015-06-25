@@ -149,10 +149,10 @@ end
 auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 
 local i = 0
-for name, attributes in pairs(auto_ssm_table) do
+for name, attributes in pairs(auto_ssm_table['Automated Strikes']) do
 	strike_info_id[i] = name
 	ba.print("[auto_ssm.lua] Name="..name.."\n")
-	for attribute, prefix in pairs(auto_ssm_table[name]) do
+	for attribute, prefix in pairs(attributes) do
 		value = prefix['value']
 		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value.."\n")
 		if (attribute == "Type") then
