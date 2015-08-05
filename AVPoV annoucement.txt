@@ -15,10 +15,21 @@ As time went by, I picked up a few more modding skill, which usually ushered in 
 
 Fortunately, the campaign is structured around mostly unrelated story arcs, which mean that I don't actually [i]need[/i] the finish the whole 27-something missions to have something release worthy, and the more experimental stuff is mostly confined to the later parts of the campaign.
 
-[size=12][b]Sounds interesting, any ETA on release ?[/b][/size]
+[size=12][b]Sounds interesting, any ETA on release?[/b][/size]
 Hopefully, sometimes within the next 5 years. Failing that, sometimes within the next decade.
 
 [size=12][b]So it's a Vasudan-centric campaign, what's your take on Vasudanity ? How is it different from Humanity ? What parts of their canon portrayal did you expand on ?[/b][/size]
-Nothing ground breaking really, since story-wise I'm mostly emulating Retail's approach and portrayal, meaning throwing in the occasional prideful remark, or pseudo-philosophic or somewhat poetic sounding statement, that kind of thing. Outside of raw story writing, I've given the Vasudan some endgame gear  of their own, 
+Nothing ground breaking really, since story-wise I'm mostly emulating Retail's approach and portrayal, meaning throwing in the occasional prideful remark, or pseudo-philosophic / poetic sounding statement, that kind of thing. Outside of raw story writing, I've given the Vasudan some endgame gear of their own, so that they don't look pathetic next to Kayser-wielding Ares et Erinyes, plus a couple of extra guns. I've also made sure to include zod ships in most, if not all SOC operations shown, though these might get divided between all-Terran and all-Vasudan ops at some point.
 
-url to README.md
+I'd love to delve a bit more deeply into Vasudan characterisation, but I would probably stick it into fiction pieces or techroom entries rather than in-mission dialogue & reactions.
+
+[size=12][b]What would you say are the selling points of your mod then?[/b][/size]
+- A straight forward story: battle Shivans, the occasional rebels, witness the Fall of Capella
+- A revised balance, with improved AI, armor types, new weapons and ships on both sides, plus a few extra tweaks shaking things up
+- New variants of old ships, especially on the Shivan's side
+- As a bonus, I've had some fun applying my tweaks to the Retail campaign as well (and removed most of those trebuchets from Maras and Basilisks)
+
+
+url to/copy of README.md
+
+I'm hoping to turn this thread into a dev blog of some sort, posting tech entries, fiction pieces and other modding-related bits.
