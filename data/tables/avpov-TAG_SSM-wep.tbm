@@ -69,7 +69,7 @@ $SSM:									0
 $Name:                                 	AntiFighterTAG#Shivan
 	+Title:								XSTR("Shivan Anti-Fighter TAG",-1)
 	+Tech Description:
-		XSTR("The most worrying variant of Shivan subspace TAG technology, this missile calls in salvos of 8 anti-strikecraft missiles on its target.
+		XSTR("The most worrying variant of Shivan subspace TAG technology, this missile calls in salvoes of 8 anti-strikecraft missiles on its target.
 
 The fact that the Shivans are able to fit such small missiles with subspace drive raises some questions regarding Shivan weapon technology, which might be significantly more dangerous than early analysis in the nebula campaign anticipated.",-1)
 		$end_multi_text
@@ -272,7 +272,7 @@ $Thruster Glow Effect:				missileglow06
 
 $Name:		Shivan Subspace Missile
 	+Tech Description:
-		XSTR("The recently-appeared Shivan Subspace Missile seems to be an offshoot of the Shivan Megabomb. A slightly larger warhead, the Shivan SSM is equipped with a lightweight, possibly one-shot, subspace drive, a much stronger engine with an extended fuel cell, at the cost of a slightly inferior payload when compared to the Megabomb. On the field, these weapons pose a much greater threat to allied warships than flights of Shivan bombers equipped with a more traditional ordnance, as it often takes gunners and escort pilots by surprise, and reach their target within a few seconds of their arrival.
+		XSTR("The recently-appeared Shivan Subspace Missile seems to be an offshoot of the Shivan 'Megabomb'. A slightly larger warhead, the Shivan SSM is equipped with a lightweight, possibly one-shot, subspace drive, a much stronger engine with an extended fuel cell, at the cost of a slightly inferior payload when compared to the Megabomb. On the field, these weapons pose a much greater threat to allied warships than flights of Shivan bombers equipped with a more traditional ordnance, as it often takes gunners and escort pilots by surprise, and reach their target within a few seconds of their arrival.
 
 			The Subspace Missiles are fired from some variants of the Demon-class destroyer. Engaging these vessels is a high priority, as it limits the Shivan's ability to launch SSM strikes on vulnerable allied warships.",-1)
 		$end_multi_text
@@ -485,7 +485,7 @@ $Name:				Shivan Mordiggian Bomb
 	+Tech Description:
 		XSTR("Little information is available regarding the Mordiggian Bomb. Slightly less powerful the the standard Shivan Bomb, this bomb is also equipped with its own subspace TAG beacon, which calls in another Mordiggian Bomb upon hitting a target.
 
-		It is unclear who fires the additional bombs, as no shivan bomber or warship as been seen firing out-bound Mordiggian bombs to this day. Some have theorized that the warheads could be fired from inside a large Shivan capital ship, most likely a Juggernaut since these bombs started being deployed after the arrival of the Sathanas fleet in Capella. Others suggest that a new type of specialized capital ship may be firing them, staying hidden far away from the battlefields and having evaded contact with allied ships in the confusion reigning in the Capella system.",-1)
+		It is unclear who fires the additional bombs, as no Shivan bomber or warship as been seen firing out-bound Mordiggian bombs to this day. Some have theorized that the warheads could be fired from inside a large Shivan capital ship, most likely a Juggernaut since these bombs started being deployed after the arrival of the Sathanas fleet in Capella. Others suggest that a new type of specialized capital ship may be firing them, staying hidden far away from the battlefields and having evaded contact with allied ships in the confusion reigning in the Capella system.",-1)
 		$end_multi_text
 $Model File:		S_MegaBomb.pof
 $POF target LOD: 	0
