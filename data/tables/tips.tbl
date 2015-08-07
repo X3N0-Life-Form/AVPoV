@@ -8,8 +8,5 @@
 +Tip: XSTR("Capital ships tend to have a different loadout from their default retail loadout. Look in the techroom for more details regarding each new variant.", -1)
 +Tip: XSTR("Shivan Command ships are tougher and usually carry better armament than the standard variants.", -1)
 +Tip: XSTR("During the Battle of Capella, Shivan are starting to use improved versions of their standard weapons. Be careful.", -1)
-+Tip: XSTR("", -1)
-+Tip: XSTR("", -1)
-+Tip: XSTR("", -1)
 
 #end

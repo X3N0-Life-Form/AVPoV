@@ -52,15 +52,15 @@
 ]]--
 
 -- set to true to enable prints
-enableDebugPrints = false
+parse_enableDebugPrints = false
 
 -------------------------
 --- Utility Functions ---
 -------------------------
 
 function dPrint_parse(message)
-	if (enableDebugPrints) then
-		ba.parse("[parse.lua] "..message)
+	if (parse_enableDebugPrints) then
+		ba.print("[parse.lua] "..message)
 	end
 end
 
@@ -162,7 +162,7 @@ function parseTableFile(filePath, fileName)
 				local isAttr = string.find(line, "$")
 				local isSubAttr = string.find(line, "+")
 				local isList = string.find(line, ",")
-				local isEnd = string.find(line, "#End")
+				local isEnd = string.find(line, "^#End")
 				--
 				dPrint_parse("Parsing line #"..lineNumber..": "..line.." ("..attribute.." = "..value..")\n")
 				if  not (isEnd == nil) then

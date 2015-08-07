@@ -66,7 +66,7 @@ $SSM:				Shivan Lance Strike x8
 
 	
 ; $SSM:				Shivan Lance Strike Recursive
-;	+Weapon:		Shivan Lance
+;	+Weapon:		Shivan Lance#Recursive
 ;	+Count:			0,2
 ;	+WarpRadius:	15
 ;	+WarpTime:		1

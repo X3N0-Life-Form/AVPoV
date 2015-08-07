@@ -24,6 +24,8 @@
 
 ]]--
 
+-- set to true to enable prints
+autoSSM_enableDebugPrints = true
 
 ------------------------
 --- Global Variables ---
@@ -73,36 +75,22 @@ function auto_ssm_removeTarget(name, target)
 	strike_target_list[name][target] = nil
 end
 
---------------------------
---- functions - strike ---
---------------------------
+---------------------------
+--- functions - utility ---
+---------------------------
 
---- cycles through the automated strikes and fires them if necessary
---- the responsibility of calling it is left to the FREDer
-function auto_ssm_cycle()
-	for index, name in pairs(strike_info_id) do
-		if strike_active[name] then
-			cd = strike_info_cooldown[name]
-			lastFired = strike_last_fired[name]
-			if (lastFired + cd >= mn.getMissionTime()) then
-				if (auto_ssm_fire(name)) then
-					strike_last_fired[name] = mn.getMissionTime()
-				end
-			end
-		end
+function dPrint_autoSSM(message)
+	if (autoSSM_enableDebugPrints) then
+		ba.print("[auto_ssm.lua] "..message)
 	end
 end
 
---- fires the given strike
---- Note: the strike's target should be its current target, as determined by its seeking algorithm
-function auto_ssm_fire(name)
-	target = strike_current_target[name]
-	auto_ssm_updateTarget(name)
-	strikeType = strike_info_type[name]
-	strikeTeam = strike_team[name]
-	-- don't fire if algo set to "all"
-	if not (strike_info_seeker_algo[name] == "all") then
-		mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strikeType.."\" \""..strikeTeam.."\" \""..target.Name.."\"))")
+function auto_ssm_get_cooldown(name)
+	-- if we have a difficulty-based cooldown
+	if type(strike_info_cooldown[name]) == 'array' then
+		return strike_info_cooldown[name][ba.getGameDifficulty()]
+	else
+		return strike_info_cooldown[name]
 	end
 end
 
@@ -127,12 +115,63 @@ function auto_ssm_updateTarget(name)
 	elseif (algo == "all") then
 		auto_ssm_seekAll(name)
 	else
-		ba.warning("auto_ssm: Warning: Unrecognised seeking algorithm "..algo) --or fall back to default behavior???
+		ba.warning("auto_ssm: Warning: Unrecognised seeking algorithm: "..algo.."\nFalling back to default behavior")
+		auto_ssm_seekList(name)
 	end
 end
 
---- Called at gameplay start
+--------------------------
+--- functions - strike ---
+--------------------------
+
+--- cycles through the automated strikes and fires them if necessary
+--- the responsibility of calling it is left to the FREDer
+function auto_ssm_cycle()
+	-- for each active strike
+	for index, name in pairs(strike_info_id) do
+		if strike_active[name] then
+		
+			-- retrieve the strike's cooldown
+			cd = auto_ssm_get_cooldown(name)
+			
+			-- retrieve the time stamp of the last strike fired
+			lastFired = strike_last_fired[name]
+			
+			-- if our strike is off cooldown
+			if (lastFired + cd >= mn.getMissionTime()) then
+				-- fire our strike and record the firing time if successful
+				if (auto_ssm_fire(name)) then
+					strike_last_fired[name] = mn.getMissionTime()
+				end
+			end
+			
+		end
+	end
+end
+
+--- fires the given strike
+--- Note: the strike's target should be its current target, as determined by its seeking algorithm
+function auto_ssm_fire(name)
+	-- select the current target
+	target = strike_current_target[name]
+	-- update the target's list if necessary
+	auto_ssm_updateTarget(name)
+	
+	-- select the strike type
+	strikeType = strike_info_type[name]
+	
+	-- select the strike's team
+	strikeTeam = strike_team[name]
+	
+	-- special case: don't fire if algo set to "all"
+	if not (strike_info_seeker_algo[name] == "all") then
+		mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strikeType.."\" \""..strikeTeam.."\" \""..target.Name.."\"))")
+	end
+end
+
+--- Called at gameplay start, initializes all the global variables
 function auto_ssm_init_strike_tables()
+	dPrint_autoSSM("Initializing arrays")
 	for index, name in pairs(strike_info_id) do
 		strike_active[name] = false
 		strike_last_fired[name] = 0
@@ -141,6 +180,7 @@ function auto_ssm_init_strike_tables()
 		--strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
 		strike_team[name] = "Friendly"
 	end
+	dPrint_autoSSM(" - done\n")
 end
 
 ------------
@@ -148,23 +188,30 @@ end
 ------------
 auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
 
-local i = 0
+local id = 0
 for name, attributes in pairs(auto_ssm_table['Automated Strikes']) do
-	strike_info_id[i] = name
-	ba.print("[auto_ssm.lua] Name="..name.."\n")
+	-- record the strike's id
+	strike_info_id[id] = name
+	dPrint_autoSSM("Name="..name.."\n")
+	
+	-- for each attribute
 	for attribute, prefix in pairs(attributes) do
 		value = prefix['value']
-		ba.print("[auto_ssm.lua] attribute="..attribute.."; value="..value.."\n")
+		dPrint_autoSSM("attribute="..attribute.."; value="..value.."\n")
+		
+		-- store this attribute in the relevant array
 		if (attribute == "Type") then
-			strike_info_type[name] = value --TODO: extract ssm reference directly???
+			strike_info_type[name] = value
 		elseif (attribute == "Cooldown") then
-			strike_info_cooldown[name] = value --TODO: handle lists
+			strike_info_cooldown[name] = value
 		elseif (attribute == "Default Seeking Algorithm") then
 			strike_info_seeker_algo[name] = value
 		else
-			ba.warning("[autoSSM.lua]: Unrecognised attribute "..attribute.."\n");
+			ba.warning("[autoSSM.lua] Unrecognised attribute "..attribute.."\n");
 		end
 	end
-	i = i + 1
+	
+	-- increment id count
+	id = id + 1
 end
 
