@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("High Noon", 1558)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 07/03/12 at 20:57:40
+$Modified: 07/10/15 at 23:19:28
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -12,11 +12,12 @@ $End Notes:
 $Mission Desc:
  XSTR("The Colossus and the Sathanas face off in the Capella system.", 1559)
 $end_multi_text
-
 +Game Type Flags: 1
 +Flags: 131072
-+Red Alert: 0
-+Scramble: 1
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -26,34 +27,16 @@ $end_multi_text
 
 +Viewer pos: -6950.979004, 14286.835938, 21613.533203
 +Viewer orient:
-	-0.078116, 0.000001, -0.996944,
-	0.758403, 0.649071, -0.059424,
+	-0.078116, 0.000002, -0.996944,
+	0.758404, 0.649071, -0.059424,
 	0.647087, -0.760728, -0.050704
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
+
 $Skybox Model: Starfield.pof
+
 $AI Profile: myProfile
-#Plot Info
-
-$Tour:  XSTR("Blah", 6)
-$Pre-Briefing Cutscene: Blah
-$Pre-Mission Cutscene: Blah
-$Next Mission Success: Blah
-$Next Mission Partial: Blah
-$Next Mission Failure: Blah
-
-#Sexp_variables
-
-$Variables:
-(
-		94		"SJD Sathanas 19"		"10000"		"block"
-		95		"SJD Sathanas 19"		"10000"		"block"
-		96		"SJD Sathanas 19"		"10000"		"block"
-		97		"SJD Sathanas 19"		"8500"		"block"
-		98		"SJD Sathanas 19"		"1"		"block"
-		99		"SJD Sathanas 19"		"5000"		"block"
-)
 
 #Command Briefing
 
@@ -228,8 +211,8 @@ $Formula: ( and
       ( is-event-true-delay 
          "All 4 down C out" 
          0 
-      ) 
-   ) 
+      )
+   )
 )
 $Multi text
     XSTR("The GTVA Colossus, the largest Terran-Vasudan warship ever constructed, over twenty years in the making, has been destroyed. Thirty thousand perished in the Juggernaut's attack, and millions more are in jeopardy. You failed to neutralize the forward beam cannons, pilot, and now we will all pay the price of that failure.", 1565)
@@ -242,10 +225,10 @@ $end_multi_text
 $Formula: ( and 
    ( not 
       ( is-destroyed-delay 0 "Colossus" ) 
-   ) 
+   )
    ( not 
       ( is-destroyed-delay 0 "Sathanas" ) 
-   ) 
+   )
 )
 $Multi text
     XSTR("A Vasudan never leaves the field of battle without authorization from a superior officer. Your cowardice jeopardized the lives of our brothers and sisters. You are hereby stripped of your wings and all privileges bestowed upon you as an officer of the Galactic Terran-Vasudan Alliance. You will be taken into custody and handed over to the Terran 3rd Battle Group authority, where you will face a court martial. You are a disgrace to your species, Terran.", 1318)
@@ -282,7 +265,6 @@ $Orientation:
 	-0.989534, 0.000000, -0.144303,
 	-0.011077, 0.997049, 0.075959,
 	0.143877, 0.076762, -0.986614
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -309,7 +291,6 @@ $Orientation:
 	-0.990004, 0.000000, -0.141041,
 	-0.010759, 0.997086, 0.075522,
 	0.140630, 0.076285, -0.987119
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -338,7 +319,6 @@ $Orientation:
 	-0.988212, 0.000000, -0.153092,
 	-0.011719, 0.997066, 0.075649,
 	0.152643, 0.076551, -0.985312
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -367,7 +347,6 @@ $Orientation:
 	-0.990641, 0.000000, -0.136495,
 	-0.010520, 0.997025, 0.076353,
 	0.136089, 0.077074, -0.987694
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
@@ -396,12 +375,12 @@ $Orientation:
 	0.984596, 0.000000, 0.174847,
 	0.024569, 0.990078, -0.138353,
 	-0.173112, 0.140518, 0.974827
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -461,11 +440,12 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "escort" "red-alert-carry" )
++Flags: ( "no-shields" "escort" "red-alert-carry" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
 +Group: 0
++Use Table Score:
 +Score: 10000
 
 $Name: Colossus		;! Object #5
@@ -476,13 +456,13 @@ $Orientation:
 	-0.998462, -0.034167, -0.043676,
 	-0.029340, 0.993853, -0.106756,
 	0.047055, -0.105310, -0.993326
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $AI Goals: ( goals ( ai-chase "Sathanas" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01a
 +Subsystem: turret02a
@@ -523,28 +503,47 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret37
 +Subsystem: turret38
 +Primary Banks: ( "AAAf" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret39
 +Primary Banks: ( "AAAf" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret40
 +Subsystem: turret41
 +Subsystem: turret42
 +Primary Banks: ( "AAAf" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret43
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
 +Subsystem: turret44
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret45
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret46
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret47
 +Primary Banks: ( "LRBGreen" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret48
 +Primary Banks: ( "LRBGreen" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret49
 +Primary Banks: ( "LRBGreen" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret50
 +Primary Banks: ( "TerSlash" )
++Secondary Banks: ( "Catapult" )
++Sbank Ammo: ( 0 )
 +Subsystem: turret51
 +Primary Banks: ( "LRBGreen" )
 +Subsystem: turret52
@@ -573,11 +572,12 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
 +Group: 0
++Use Table Score:
 +Score: 10000
 
 $Name: Cancer 1		;! Object #6
@@ -588,7 +588,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -603,6 +602,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #7
@@ -613,7 +613,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -628,6 +627,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #8
@@ -638,7 +638,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -653,6 +652,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 4		;! Object #9
@@ -663,7 +663,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -678,6 +677,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Beta 1		;! Object #10
@@ -1636,8 +1636,8 @@ $Formula: ( and
       "Sathanas" 
       "turret01" 
       0 
-   ) 
-   ( not
+   )
+   ( not 
       ( is-destroyed-delay 0 "Sathanas" ) 
    )
 )
@@ -1652,8 +1652,8 @@ $Formula: ( and
       "Sathanas" 
       "turret02" 
       0 
-   ) 
-   ( not
+   )
+   ( not 
       ( is-destroyed-delay 0 "Sathanas" ) 
    )
 )
@@ -1668,8 +1668,8 @@ $Formula: ( and
       "Sathanas" 
       "turret03" 
       0 
-   ) 
-   ( not
+   )
+   ( not 
       ( is-destroyed-delay 0 "Sathanas" ) 
    )
 )
@@ -1684,8 +1684,8 @@ $Formula: ( and
       "Sathanas" 
       "turret04" 
       0 
-   ) 
-   ( not
+   )
+   ( not 
       ( is-destroyed-delay 0 "Sathanas" ) 
    )
 )
@@ -1693,18 +1693,19 @@ $Formula: ( and
 
 #Waypoints		;! 1 lists total
 
+
 $Jump Node: 4744.500000, 0.000000, 9450.900391
 $Jump Node Name: Gamma Draconis
 
 $Jump Node: -3137.150391, -11088.758789, -21666.789063
 $Jump Node Name: Vega
-
 $Name: Waypoint path 1
 $List: (		;! 1 points in list
 	( -51584.738281, 2083.418213, 100050.437500 )
 )
 
 #Messages		;! 20 total
+
 
 $Name: COM Mop
 $Team: -1
@@ -1872,7 +1873,7 @@ $end_multi_text
 #Background bitmaps		;! 20 total
 
 $Num stars: 2000
-$Ambient light level: 0
+$Ambient light level: 7895160
 
 $Bitmap List:
 $Sun: SunCapellaA
@@ -2000,7 +2001,6 @@ $Starbitmap: PlanetE
 +DivY: 1
 
 #Asteroid Fields
-
 
 #Music
 
