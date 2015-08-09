@@ -265,9 +265,18 @@ end
 
 variantTable = parseTableFile(variantPath, variantTableName)
 
+-- TODO: move that into parse.lua
 -- print what we've parsed
 for shipClass, variants in pairs(variantTable) do
-	for variantName, prefix in pairs(variants) do
+	for variantName, attributes in pairs(variants) do
 		ba.print("[shipVariant.lua] "..shipClass..": "..variantName.."\n")
+		for attributeName, prefixes in pairs(attributes) do
+			ba.print("[shipVariant.lua] \t"..attributeName.." = "..prefixes['value'].."\n")
+			if not (prefixes['sub'] == nil) then
+				for subAttributeName, subAttributeValue in pairs(prefixes['sub']) do
+					ba.print()
+				end
+			end
+		end
 	end
 end
