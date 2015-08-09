@@ -42,6 +42,39 @@ $SSM:				Mordiggian Strike
 	+Custom Message:*Inbound Mordiggian Bomb*
 	+Alarm Sound:	185
 
+$SSM:				Mordiggian Strike x2
+	+Weapon:		Shivan Mordiggian Bomb
+	+Count:			1
+	+WarpRadius:	40
+	+WarpTime:		8
+	+Radius:		1600
+	+Offset:		1
+	+Shape:			Sphere
+	+Custom Message:*Inbound Mordiggian Bomb*
+	+Alarm Sound:	185
+	
+$SSM:				Mordiggian Strike x4
+	+Weapon:		Shivan Mordiggian Bomb
+	+Count:			1
+	+WarpRadius:	40
+	+WarpTime:		8
+	+Radius:		1600
+	+Offset:		1
+	+Shape:			Sphere
+	+Custom Message:*Inbound Mordiggian Bomb*
+	+Alarm Sound:	185
+	
+$SSM:				Mordiggian Strike x6
+	+Weapon:		Shivan Mordiggian Bomb
+	+Count:			1
+	+WarpRadius:	40
+	+WarpTime:		8
+	+Radius:		1600
+	+Offset:		1
+	+Shape:			Sphere
+	+Custom Message:*Inbound Mordiggian Bomb*
+	+Alarm Sound:	185
+
 $SSM:				Shivan Cluster Strike
 	+Weapon:		Shivan Cluster SSM
 	+Count:			1
