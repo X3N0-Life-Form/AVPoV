@@ -100,10 +100,12 @@ $SSM:				Shivan Lance Strike x8
 	
 ; $SSM:				Shivan Lance Strike Recursive
 ;	+Weapon:		Shivan Lance#Recursive
-;	+Count:			0,2
+;	+Min Count:		0
+;	+Max Count:		2
 ;	+WarpRadius:	15
 ;	+WarpTime:		1
-;	+Radius:		800,1600
+;	+Min Radius:	800
+;	+Max Radius:	1600
 ;	+Offset:		1
 ;	+Shape:			Sphere
 ;	+Custom Message:*Unknown Subspace Disturbance*
