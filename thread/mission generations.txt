@@ -1,6 +1,6 @@
 - 1st gen barely had any SEXPs beyond arrival/departure cues most of which were mission-time based
 - 2nd gen had event chains, waypoints, better mission flow and arrival/departure cues
-- 3rd gen were more scripted and had new weapons, armor and AI, and some abuse of the fire-beam SEXP ; these were also hit by a mild case of "self-playing mission syndrome"
-- 4th was about using variables and conditional SEXPs to better react to player actions, as well as reducing the number of ships present rather than increasing it to tweak mission balance, resulting in more grounded missions
-- 5th was about dynamic waypoints, new ships, SSM strikes and abuse of the weapon-create SEXP ; the downside was that the first few iterations tended to have a rather severe case of "self-playing mission syndrome"
+- 3rd gen were more scripted and had new weapons, armor and AI, and some abuse of the fire-beam SEXP ; these were also hit by a mild case of "self-playing mission syndrome". I believe this is also when I started standardizing my warship loadouts.
+- 4th was about using variables and conditional SEXPs to better react to player actions, as well as reducing the number of ships present rather than increasing it to tweak mission balance, resulting in more grounded missions. This also the point where older missions started getting some sort of rework/makeover.
+- 5th was about dynamic waypoints, new ships, SSM strikes and abuse of the weapon-create SEXP ; the downside was that the first few iterations tended to have a rather severe case of "self-playing mission syndrome". This is also the point where warships would systematically belong to a specific variant, each with their own loadouts and stats.
 - 6th will probably be about making use of lua scripts
