@@ -94,6 +94,15 @@ function auto_ssm_get_cooldown(name)
 	end
 end
 
+function auto_ssm_get_strikeType(name)
+	-- if we have a difficulty-based type
+	if type(strike_info_type[name]) == 'array' then
+		return strike_info_type[name][ba.getGameDifficulty()]
+	else
+		return strike_info_type[name]
+	end
+end
+
 --- updates the given strike's current target, according to its seeking algorithm
 --- algorithms defined in autoSSM-targeting.lua
 function auto_ssm_updateTarget(name)
@@ -153,15 +162,15 @@ end
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	-- select the current target
-	target = strike_current_target[name]
+	local target = strike_current_target[name]
 	-- update the target's list if necessary
 	auto_ssm_updateTarget(name)
 	
 	-- select the strike type
-	strikeType = strike_info_type[name]
+	local strikeType = auto_ssm_get_strikeType(name)
 	
 	-- select the strike's team
-	strikeTeam = strike_team[name]
+	local strikeTeam = strike_team[name]
 	
 	-- special case: don't fire if algo set to "all"
 	if not (strike_info_seeker_algo[name] == "all") then
