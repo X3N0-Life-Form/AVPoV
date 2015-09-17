@@ -595,8 +595,6 @@ $Icon:                          icongun05
 $Anim:                          LoadGun07
 $Impact Explosion:              exp04
 $Impact Explosion Radius:       15.0
-$Tag:							3 1.0
-$SSM:							Shivan Lance Strike Recursive
 $BeamInfo:
 	+Type:						0				;; 0 - 4 are valid #'s
 	+Life:			  			0.5
@@ -662,7 +660,8 @@ $BeamInfo:
 		+RGBA Outer:	60 0 0 10
 		+Flicker:		0.2
 		+Zadd:			0.0
-
+$Tag:							3 12.0;1
+$SSM:							Shivan Lance Strike Recursive
 
 $Name:					Shivan Huge Lance
 $Model File:                    none ; laser1-1.pof

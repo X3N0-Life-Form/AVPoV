@@ -103,7 +103,7 @@ $SSM:				Shivan Lance Strike Recursive
 	+Min Count:		0
 	+Max Count:		2
 	+WarpRadius:	15
-	+WarpTime:		1
+	+WarpTime:		4; 1
 	+Min Radius:	800
 	+Max Radius:	1600
 	+Offset:		1
