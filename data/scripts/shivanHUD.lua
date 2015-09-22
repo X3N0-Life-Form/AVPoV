@@ -1,3 +1,8 @@
+--[[
+
+]]
+
+--- TODO: description
 function activateShivanHUD()
 	mn.evaluateSEXP([[( when
 	( true )

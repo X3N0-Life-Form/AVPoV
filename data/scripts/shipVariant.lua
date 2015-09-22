@@ -265,6 +265,13 @@ end
 
 variantTable = parseTableFile(variantPath, variantTableName)
 
+--TODO: automate ship variant attribution by having a separate variant file for each mission
+-- --> config/ SM03-variants.tbl
+--       $Name:		ship name
+--		 $Variant:	variant name
+-- or a master file of all named ship variants and each mission
+-- then run the variant change script at the beginning of every mission
+
 -- TODO: move that into parse.lua
 -- print what we've parsed
 for shipClass, variants in pairs(variantTable) do

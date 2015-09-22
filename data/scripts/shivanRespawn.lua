@@ -1,3 +1,14 @@
+--[[
+	-----------------------
+	-- Respawn Framework --
+	-----------------------
+]]
+
+
+----------------------
+-- Global variables --
+----------------------
+
 spawnTickets = 0
 respawnActive = false
 validWings = {}
@@ -18,7 +29,7 @@ function setSpawnTickets(tickets)
 	spawnTickets = tickets
 end
 
--- adds the new wing at the 'end' of the array
+--- Adds a new wing at the 'end' of the array
 function addValidWing(wingName)
 	local size = #validWings
 	validWings[size] = wingName
@@ -30,10 +41,15 @@ end
 
 
 -------------------------
--- respawn subroutines --
+-- Respawn subroutines --
 -------------------------
+
+--- Swaps the position and stats of the specified ships
+--- @param origin : ship handle
+--- @param target : ship handle
 function swapShips(origin, target)
 	local buffer
+	
 	-- swap class if necessary
 	buffer = origin.Class.Name
 	mn.evaluateSEXP([[
@@ -50,6 +66,7 @@ function swapShips(origin, target)
 				"]]..target.Name..[["
 		)
 	]])
+	
 	-- swap position & orientation
 	buffer = origin.Position
 	origin.Position = target.Position
@@ -57,10 +74,12 @@ function swapShips(origin, target)
 	buffer = origin.Orientation
 	origin.Orientation = target.Orientation
 	target.Orientation = buffer
+	
 	-- swap momentum
 	buffer = origin.Physics
 	origin.Physics = target.Physics
 	target.Physics = buffer
+	
 	-- swap weapon loadout
 	buffer = origin.PrimaryBanks
 	origin.PrimaryBanks = target.PrimaryBanks
@@ -68,6 +87,7 @@ function swapShips(origin, target)
 	buffer = origin.SecondaryBanks
 	origin.SecondaryBanks = target.SecondaryBanks
 	target.SecondaryBanks = buffer
+	
 	-- swap cm loadout
 	buffer = origin.CountermeasureClass
 	origin.CountermeasureClass = target.CountermeasureClass
@@ -75,6 +95,7 @@ function swapShips(origin, target)
 	buffer = origin.CountermeasureLeft
 	origin.CountermeasureLeft = target.CountermeasureLeft
 	target.CountermeasureLeft = buffer
+	
 	-- swap damage
 	buffer = origin.HitpointsLeft
 	mn.evaluateSEXP([[
@@ -86,6 +107,7 @@ function swapShips(origin, target)
 		)
 	]])
 	target.HitpointsLeft = buffer -- not perfect, but that will have to do for now
+	
 	-- swap weapon energy & afterburner energy
 	buffer = origin.WeaponEnergyLeft
 	origin.WeaponEnergyLeft = target.WeaponEnergyLeft
@@ -95,27 +117,34 @@ function swapShips(origin, target)
 	target.AfterburnerFuelLeft = buffer
 end
 
-
+--- Triggers the jump-to-ship cutscene and call swapShips() on the player and the target ship.
+--- @param targetShip : ship handle
 function jumpToShip(targetShip)
 	local cam = gr.createCamera("jumpCam")
 	local playerShip = mn.Ships[0]
 	cam.Position = playerShip.Position
 	local vector = playerShip.Position:getCrossProduct(targetShip.Position)
 	gr:setCamera(cam)
+	
 	-- face target ship
 	cam.setOrientation(vector:getOrientation(), 0.5)
+	
 	-- go to target ship
 	cam.setPosition(targetShip.Position, 1.5, 0.3, 0.1)
+	
 	-- fade out
 	mn.evaluateSEXP([[
 		(when (true)
 			(fade-out 200)
 		)
 	]])
-	-- swap ship
+	
+	-- swap ships
 	swapShips(playerShip, targetShip)
+	
 	-- reset camera
 	gr:setCamera()
+	
 	-- fade in
 	mn.evaluateSEXP([[
 		(when (true)
@@ -124,6 +153,7 @@ function jumpToShip(targetShip)
 	]])
 end
 
+--- Called whenever the player needs to respawn
 function respawn()
 	if spawnTickets > 0 then
 		local targetWing = nil
