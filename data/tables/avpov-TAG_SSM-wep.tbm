@@ -439,8 +439,8 @@ $Homing:			YES
 	+Lock Pixels/Sec:		30
 	+Catch-up Pixels/Sec:	20
 	+Catch-up Penalty:		15
-; $Swarm:				3
-;	+SwarmWait:		0.7
+$Swarm:				3
+	+SwarmWait:		0.7
 $LaunchSnd:			97
 $ImpactSnd:			101
 $FlyBySnd:			-1
