@@ -49,10 +49,10 @@ strike_info_seeker_algo = {}	-- what target algorithm should be used?
 --> contains data related to active automated strikes
 strike_active = {}			-- boolean, is that automated strike type active? Defaults to false
 strike_last_fired = {}		-- mission time at which this strike was last fired
-strike_current_target = {}	-- ship name, current target
+strike_current_target = {}	-- ship name, current target (ship handle)
 strike_target_list = {}		-- [name][target] = boolean; list of potential targets, used by target-seeking algorithms
 strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
-strike_team = {}			-- team name
+strike_team = {}			-- [name] = team name
 
 
 ----------------------------
@@ -64,10 +64,12 @@ function auto_ssm_setActive(name, bool)
 end
 
 function auto_ssm_setTarget(name, target)
+	--TODO: get ship handle
 	strike_current_target[name] = target
 end
 
 function auto_ssm_addTarget(name, target)
+	--TODO: get ship handle
 	strike_target_list[name][target] = true
 end
 
@@ -94,10 +96,19 @@ function auto_ssm_get_cooldown(name)
 	end
 end
 
+function auto_ssm_get_strikeType(name)
+	-- if we have a difficulty-based type
+	if type(strike_info_type[name]) == 'array' then
+		return strike_info_type[name][ba.getGameDifficulty()]
+	else
+		return strike_info_type[name]
+	end
+end
+
 --- updates the given strike's current target, according to its seeking algorithm
 --- algorithms defined in autoSSM-targeting.lua
 function auto_ssm_updateTarget(name)
-	algo = auto_ssm_algo[name]
+	algo = strike_info_seeker_algo[name]
 	if (algo == "list" or algo == nil) then
 		auto_ssm_seekList(name)
 	elseif (algo == "round-robin") then
@@ -132,7 +143,7 @@ function auto_ssm_cycle()
 		if strike_active[name] then
 		
 			-- retrieve the strike's cooldown
-			cd = auto_ssm_get_cooldown(name)
+			local cd = auto_ssm_get_cooldown(name)
 			
 			-- retrieve the time stamp of the last strike fired
 			lastFired = strike_last_fired[name]
@@ -153,15 +164,15 @@ end
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	-- select the current target
-	target = strike_current_target[name]
+	local target = strike_current_target[name]
 	-- update the target's list if necessary
 	auto_ssm_updateTarget(name)
 	
 	-- select the strike type
-	strikeType = strike_info_type[name]
+	local strikeType = auto_ssm_get_strikeType(name)
 	
 	-- select the strike's team
-	strikeTeam = strike_team[name]
+	local strikeTeam = strike_team[name]
 	
 	-- special case: don't fire if algo set to "all"
 	if not (strike_info_seeker_algo[name] == "all") then
