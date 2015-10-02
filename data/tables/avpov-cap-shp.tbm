@@ -479,7 +479,7 @@ $Subsystem: 	turret04, 			0.5, 0.5
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Default PBanks:		 	( "Trebuchet#Shivan" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			0.5, 0.5
@@ -494,7 +494,7 @@ $Subsystem: 	turret07, 			0.5, 0.5
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret08, 			0.25, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Shivan LR Swarm" )
+	$Default PBanks:		 	( "Trebuchet#Shivan" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret09, 			1.0, 6.5
