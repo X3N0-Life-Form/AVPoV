@@ -131,11 +131,13 @@ end
 --- Core Functions ---
 ----------------------
 
-function stuffAttribute(attributeTable, value, isList)
+function getAttribute(value, isList)
 	if (isList == nil) then
-		attributeTable = value
+		dPrint_parse("\t\tStuffing attribute value: "..value.."\n")
+		return value
 	else
-		attributeTable = split(value, ",")
+		dPrint_parse("\t\tStuffing attribute list: "..value.."\n")
+		return split(value, ",")
 	end
 end
 
@@ -180,21 +182,25 @@ function parseTableFile(filePath, fileName)
 							
 						else
 							currentAttribute = attribute	-- save attribute name in case we run into sub attributes
-							dPrint_parse(category.." - "..name.." - "..attribute)
+							dPrint_parse(category.." - "..name.." - "..attribute.."\n")
 							tableObject[category][name][attribute] = {}
-							tableObject[category][name][attribute]['value'] = "none"
-							stuffAttribute(tableObject[category][name][attribute]['value'], value, isList)
+							tableObject[category][name][attribute]['value'] = getAttribute(value, isList)
 							
-							dPrint_parse("[parse.lua] name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
+							if (isList == nil) then
+								dPrint_parse("name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
+							else
+								--TODO: print list
+								dPrint_parse("name="..name.."; attribute="..attribute.."; value="..value.."\n")
+							end
 						end
 					elseif not (isSubAttr == nil) then
 						-- initialize if needs be
 						if (tableObject[category][name][currentAttribute]['sub'] == nil) then
 							tableObject[category][name][currentAttribute]['sub'] = {}
 						end
-						stuffAttribute(tableObject[category][name][currentAttribute]['sub'][attribute], value)
+						tableObject[category][name][currentAttribute]['sub'][attribute] = getAttribute( value, isList)
 						
-						dPrint_parse("[parse.lua] name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
+						dPrint_parse("name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
 					end
 				end
 				--
@@ -208,3 +214,49 @@ function parseTableFile(filePath, fileName)
 
 	return tableObject
 end
+
+--[[
+	Prints the specified table object to a string
+	@param tableObject : the table to print
+	@return a string representing the table object
+]]
+function getTableObjectAsString(tableObject)
+	local str = ""
+	-- for each #Category
+	for category, entries in pairs(tableObject) do
+		str = str.."[parse.lua] #"..category.."\n\n"
+		
+		-- for each $Name:
+		for name, attributes in pairs(entries) do
+			str = str.."[parse.lua] $Name: \t"..name.."\n"
+			
+			-- for each $Attribute:
+			for attributeName, prefixes in pairs(attributes) do
+				if not (type(prefixes['value']) == 'table') then
+					str = str.."[parse.lua] \t$"..attributeName.." = "..prefixes['value'].."\n"
+				else
+					str = str.."[parse.lua] \t"
+					for index, value in pairs(prefixes['value']) do
+						str = str..value.." "
+					end
+					str = str.."\n"
+				end
+				
+				-- if there are any sub-attributes
+				if not (prefixes['sub'] == nil) then
+					-- for each +Sub Attribute:
+					for subAttributeName, subAttributeValue in pairs(prefixes['sub']) do
+						str = str.."[parse.lua] \t\t+"..subAttributeName.." = "..subAttributeValue.."\n"
+					end -- end for each attribute
+				end
+				
+			end -- end for each attribute
+			
+		end -- end for each entry
+		
+		str = str.."\n[parse.lua] #End\n"
+	end -- end for each category
+	
+	return str
+end
+

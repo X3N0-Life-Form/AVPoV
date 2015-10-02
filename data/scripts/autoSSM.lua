@@ -59,22 +59,21 @@ strike_team = {}			-- [name] = team name
 --- functions - settings ---
 ----------------------------
 
-function auto_ssm_setActive(name, bool)
-	strike_active[name] = bool
+function auto_ssm_setActive(strikeName, bool)
+	strike_active[strikeName] = bool
 end
 
-function auto_ssm_setTarget(name, target)
-	--TODO: get ship handle
-	strike_current_target[name] = target
+function auto_ssm_setTarget(strikeName, targetName)
+	local target = mn.Ships[targetName]
+	strike_current_target[strikeName] = target
 end
 
-function auto_ssm_addTarget(name, target)
-	--TODO: get ship handle
-	strike_target_list[name][target] = true
+function auto_ssm_addTarget(strikeName, targetName)
+	strike_target_list[strikeName][targetName] = true
 end
 
-function auto_ssm_removeTarget(name, target)
-	strike_target_list[name][target] = nil
+function auto_ssm_removeTarget(strikeName, targetName)
+	strike_target_list[strikeName][targetName] = nil
 end
 
 ---------------------------
@@ -198,6 +197,7 @@ end
 --- main ---
 ------------
 auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
+dPrint_autoSSM(getTableObjectAsString(auto_ssm_table))
 
 local id = 0
 for name, attributes in pairs(auto_ssm_table['Automated Strikes']) do
@@ -208,7 +208,15 @@ for name, attributes in pairs(auto_ssm_table['Automated Strikes']) do
 	-- for each attribute
 	for attribute, prefix in pairs(attributes) do
 		value = prefix['value']
-		dPrint_autoSSM("attribute="..attribute.."; value="..value.."\n")
+		if not (type(value) == 'table') then
+			dPrint_autoSSM("attribute="..attribute.."; value="..value.."\n")
+		else
+			local str = ""
+			for index, val in pairs(value) do
+				str = str..val.." "
+			end
+			dPrint_autoSSM(str.."\n")
+		end
 		
 		-- store this attribute in the relevant array
 		if (attribute == "Type") then
