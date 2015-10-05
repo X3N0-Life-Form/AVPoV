@@ -27,7 +27,7 @@ function auto_ssm_isCurrentTargetValid(name)
 	if(strike_current_target[name].HitpointsLeft > 0) then
 		return true
 	else
-		strike_target_list[name][strike_current_target[name]] = nil
+		strike_target_list[name][strike_current_target[name].Name] = nil
 		strike_current_target[name] = nil
 		return false
 	end

@@ -88,7 +88,7 @@ end
 
 function auto_ssm_get_cooldown(name)
 	-- if we have a difficulty-based cooldown
-	if type(strike_info_cooldown[name]) == 'array' then
+	if type(strike_info_cooldown[name]) == 'table' then
 		return strike_info_cooldown[name][ba.getGameDifficulty()]
 	else
 		return strike_info_cooldown[name]
@@ -97,7 +97,7 @@ end
 
 function auto_ssm_get_strikeType(name)
 	-- if we have a difficulty-based type
-	if type(strike_info_type[name]) == 'array' then
+	if type(strike_info_type[name]) == 'table' then
 		return strike_info_type[name][ba.getGameDifficulty()]
 	else
 		return strike_info_type[name]
