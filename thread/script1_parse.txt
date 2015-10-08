@@ -1,0 +1,20 @@
+[RELEASE] FS-style table parser v1.0
+
+[size=8]old dev thread: http://www.hard-light.net/forums/index.php?topic=89168.0 [/size]
+
+Greetings, fellow modders
+
+Earlier this year, I started working on a script capable of parsing text files written in the style of Freespace tables. This idea was to have a generic parser that would allow me to read config files for other scripts. 
+
+[b]How to use it:[/b]
+Call the function parseTableFile(filePath, fileName) from a script or scripting table, and store its results in a variable. Now the resulting data is basically a big multi-dimensional lua table:
+ - The first layer represents [i]categories[/i], marked in the table file by a '#' followed the category's name, and ended by "#End". For instance, [b]#Ship Classes[/b] will be accessed by tableObject['Ship Classes']
+ 
+ - The second layer represents [i]entries[/i], identified by their name attribute. For instance, [b]$Name: GTF Ulysses[/b] will be access by tableObject['Ship Classes']['GTF Ulysses']
+ 
+ - The third layer are attributes, identified by a '$' followed by their name, and composed of a value and sub-attributes. Continuing with our example, $Hitpoints: 180 with accessed this way tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'], which will have a value of 180.
+ Note: you can also have an array of values, such as [b]$Hitpoints: 340, 300, 260, 220, 180[/b], which are then access by their index: tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'][0] will return a value of 340.
+ 
+ - The fourth layer represents sub-attributes, identified by a '+' and their name. For instance, [b]+Armor: None[/b] will be accessed as tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['sub']['Armor'], and will have a value of "None"
+ 
+ Since it's a bit difficult to manipulate, I recommend splitting that big blob into sub tables or objects or whatever you feel comfortable with.
