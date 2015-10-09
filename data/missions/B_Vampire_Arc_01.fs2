@@ -212,7 +212,7 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("$f Alpha wing, your task is to escort the $g GVC $g Melek.
+ XSTR("$f Alpha wing, your task is to escort the $g GVC $g Khufu.
 $f Beta will be escorting the $g GVCv $g Thebes.
 
 $f Delta and $f Gamma will assist the $g GVD $g Pharaoh in the defence of the jump node.
@@ -313,7 +313,7 @@ $type: 18
 $team: Friendly
 $class: GVC Mentu
 $pos: 221.309830, 0.000046, 623.811401
-$label: GVC Melek
+$label: GVC Khufu
 +id: 8
 $hlight: 0
 $mirror: 1
@@ -435,7 +435,7 @@ $type: 18
 $team: Friendly
 $class: GVC Mentu
 $pos: 221.309830, 0.000046, 623.811401
-$label: GVC Melek
+$label: GVC Khufu
 +id: 8
 $hlight: 0
 $mirror: 1
@@ -487,7 +487,7 @@ $Num stages: 2
 
 $Formula: ( is-event-true-delay "fail" 0 ) 
 $Multi text
-    XSTR("You have failed to protect the Melek against shivan forces. Your failure has cost many lives.", -1)
+    XSTR("You have failed to protect the Khufu against shivan forces. Your failure has cost many lives.", -1)
 $end_multi_text
 $Voice: none.wav
 $Recommendation text:
@@ -495,11 +495,11 @@ $Recommendation text:
 $end_multi_text
 
 $Formula: ( is-event-true-delay 
-   "msg 1 - melek" 
+   "msg 1 - Khufu" 
    0 
 )
 $Multi text
-    XSTR("The melek was destroyed by a Ravana-class destroyer, designated the SD Vampire. Command agreed there was nothing you could have done to prevent that.
+    XSTR("The Khufu was destroyed by a Ravana-class destroyer, designated the SD Vampire. Command agreed there was nothing you could have done to prevent that.
 
 The presence of another shivan destroyer in the nebula is quite worrying. Our ressources are limited until positive development on the civil war front, meaning that we can't stage attacks against the Vampire or the Vorvadoss at the moment.
 
@@ -544,7 +544,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) )
+$AI Goals: ( goals ( ai-guard "Khufu" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -698,7 +698,7 @@ $Determination: 10
 +Use Table Score:
 +Score: 12
 
-$Name: Melek		;! Object #6
+$Name: Khufu		;! Object #6
 $Class: GVC Mentu
 $Team: Friendly
 $Location: -369.719849, -0.000057, 128.401642
@@ -708,7 +708,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-waypoints "Melek path" 50 ) )
+$AI Goals: ( goals ( ai-waypoints "Khufu path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 100
 +Initial Hull: 100
@@ -830,7 +830,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret09
 $Arrival Location: In front of ship
 +Arrival Distance: 2800
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( is-destroyed-delay 15 "Cancer" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -984,11 +984,11 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Primary Banks: ( "Standard Flak" )
 $Arrival Location: In front of ship
 +Arrival Distance: 4200
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 +Arrival Delay: 15
 $Arrival Cue: ( is-destroyed-delay 0 "Shambler" ) 
 $Departure Location: Hyperspace
-$Departure Cue: ( is-destroyed-delay 25 "Melek" ) 
+$Departure Cue: ( is-destroyed-delay 25 "Khufu" ) 
 $Determination: 10
 +Flags: ( "no-shields" "escort" "guardian" )
 +Flags2: ( )
@@ -1683,7 +1683,7 @@ $Ships: (		;! 3 total
 	"Alpha 2"
 	"Alpha 3"
 )
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) )
+$AI Goals: ( goals ( ai-guard "Khufu" 50 ) )
 +Hotkey: 0
 +Flags: ( )
 
@@ -1694,7 +1694,7 @@ $Special Ship: 0		;! Virgo 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1800
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( is-destroyed-delay 9 "Leo" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1703,7 +1703,7 @@ $Ships: (		;! 3 total
 	"Virgo 2"
 	"Virgo 3"
 )
-$AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) ( ai-chase "Melek" 45 ) )
+$AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) ( ai-chase "Khufu" 45 ) )
 +Flags: ( )
 +Wave Delay Min: 15
 +Wave Delay Max: 25
@@ -1777,7 +1777,7 @@ $Special Ship: 0		;! Gemini 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1800
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( is-destroyed-delay 3 "Virgo" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1786,7 +1786,7 @@ $Ships: (		;! 3 total
 	"Gemini 2"
 	"Gemini 3"
 )
-$AI Goals: ( goals ( ai-chase "Melek" 50 ) )
+$AI Goals: ( goals ( ai-chase "Khufu" 50 ) )
 +Flags: ( )
 +Wave Delay Min: 10
 +Wave Delay Max: 20
@@ -1798,7 +1798,7 @@ $Special Ship: 0		;! Cancer 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1800
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( is-destroyed-delay 6 "Gemini" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1807,7 +1807,7 @@ $Ships: (		;! 3 total
 	"Cancer 2"
 	"Cancer 3"
 )
-$AI Goals: ( goals ( ai-chase "Melek" 50 ) ( ai-chase-wing "Alpha" 45 ) )
+$AI Goals: ( goals ( ai-chase "Khufu" 50 ) ( ai-chase-wing "Alpha" 45 ) )
 +Flags: ( )
 +Wave Delay Min: 12
 +Wave Delay Max: 18
@@ -1819,7 +1819,7 @@ $Special Ship: 0		;! Libra 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1900
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( has-arrived-delay 4 "Cancer" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1828,7 +1828,7 @@ $Ships: (		;! 3 total
 	"Libra 2"
 	"Libra 3"
 )
-$AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) ( ai-chase "Melek" 45 ) )
+$AI Goals: ( goals ( ai-chase-wing "Alpha" 50 ) ( ai-chase "Khufu" 45 ) )
 +Flags: ( )
 +Wave Delay Min: 5
 +Wave Delay Max: 10
@@ -1840,7 +1840,7 @@ $Special Ship: 0		;! Epsilon 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1000
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 +Arrival delay: 9
 $Arrival Cue: ( or 
    ( and 
@@ -1853,7 +1853,7 @@ $Arrival Cue: ( or
          "Alpha 2" 
       )
    )
-   ( < ( hits-left "Melek" ) 58 ) 
+   ( < ( hits-left "Khufu" ) 58 ) 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1862,7 +1862,7 @@ $Ships: (		;! 3 total
 	"Epsilon 2"
 	"Epsilon 3"
 )
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) ( ai-chase-any 48 ) )
+$AI Goals: ( goals ( ai-guard "Khufu" 50 ) ( ai-chase-any 48 ) )
 +Hotkey: 1
 +Flags: ( )
 +Wave Delay Min: 10
@@ -1875,7 +1875,7 @@ $Special Ship: 0		;! Gamma 1
 
 $Arrival Location: Near Ship
 +Arrival Distance: 1200
-$Arrival Anchor: Melek
+$Arrival Anchor: Khufu
 $Arrival Cue: ( has-arrived-delay 8 "Cancer" ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
@@ -1884,7 +1884,7 @@ $Ships: (		;! 3 total
 	"Gamma 2"
 	"Gamma 3"
 )
-$AI Goals: ( goals ( ai-guard "Melek" 50 ) ( ai-chase-any 48 ) )
+$AI Goals: ( goals ( ai-guard "Khufu" 50 ) ( ai-chase-any 48 ) )
 +Hotkey: 6
 +Flags: ( )
 
@@ -1939,7 +1939,7 @@ $Formula: ( when
       "Alpha 1" 
       "Alpha 2" 
       "Alpha 3" 
-      "Melek" 
+      "Khufu" 
    )
 )
 +Name: mission start
@@ -1955,7 +1955,7 @@ $Formula: ( when
       "Alpha 1" 
       "Alpha 2" 
       "Alpha 3" 
-      "Melek" 
+      "Khufu" 
    )
 )
 +Name: stop accelerating
@@ -1990,21 +1990,21 @@ $Formula: ( when
 +Chained: 4
 
 $Formula: ( when 
-   ( has-departed-delay 0 "Melek" ) 
+   ( has-departed-delay 0 "Khufu" ) 
    ( do-nothing ) 
 )
-+Name: Defend the Melek
++Name: Defend the Khufu
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("Defend the GVC Melek", -1)
++Objective:  XSTR("Defend the GVC Khufu", -1)
 +Team: 0
 
 $Formula: ( when 
    ( has-arrived-delay 0 "Leo" ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Leo arrived - melek" 
+      "Leo arrived - Khufu" 
    )
 )
 +Name: msg - Leo arrived
@@ -2015,9 +2015,9 @@ $Formula: ( when
 $Formula: ( when 
    ( is-destroyed-delay 3 "Leo" ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Leo destroyed - melek" 
+      "Leo destroyed - Khufu" 
    )
 )
 +Name: Destroy Leo
@@ -2052,9 +2052,9 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 1 "Gemini" ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Gemini arrived - melek" 
+      "Gemini arrived - Khufu" 
    )
 )
 +Name: msg - Gemini arrived
@@ -2085,9 +2085,9 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 2 "Cancer" ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Cancer arrived - melek" 
+      "Cancer arrived - Khufu" 
    )
 )
 +Name: msg - Cancer arrived
@@ -2131,13 +2131,13 @@ $Formula: ( when
 $Formula: ( when 
    ( has-arrived-delay 2 "Shambler" ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Shambler arrived - melek" 
+      "Shambler arrived - Khufu" 
    )
-   ( cap-waypoint-speed "Melek" 1 ) 
+   ( cap-waypoint-speed "Khufu" 1 ) 
    ( ship-maneuver 
-      "Melek" 
+      "Khufu" 
       3500 
       30 
       0 
@@ -2158,9 +2158,9 @@ $Formula: ( when
    ( true ) 
    ( set-object-position 
       "shambler path:1" 
-      ( get-object-x "Melek" ) 
-      ( + ( get-object-y "Melek" ) 500 ) 
-      ( get-object-z "Melek" ) 
+      ( get-object-x "Khufu" ) 
+      ( + ( get-object-y "Khufu" ) 500 ) 
+      ( get-object-z "Khufu" ) 
    )
 )
 +Name: update shambler path
@@ -2185,8 +2185,8 @@ $Formula: ( when
       "High" 
       "Shambler destroyed 1 - cmd" 
    )
-   ( beam-lock-all "Melek" ) 
-   ( cap-waypoint-speed "Melek" -1 ) 
+   ( beam-lock-all "Khufu" ) 
+   ( cap-waypoint-speed "Khufu" -1 ) 
 )
 +Name: Destroy the SC Shambler
 +Repeat Count: 1
@@ -2219,9 +2219,9 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Vampire arrived 1 - melek" 
+      "Vampire arrived 1 - Khufu" 
    )
    ( set-subsystem-strength 
       "Unknown Ravana" 
@@ -2229,7 +2229,7 @@ $Formula: ( when
       0 
    )
 )
-+Name: msg 1 - melek
++Name: msg 1 - Khufu
 +Repeat Count: 1
 +Interval: 1
 +Chained: 2
@@ -2258,12 +2258,12 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( send-message 
-      "Melek" 
+      "Khufu" 
       "High" 
-      "Vampire arrived 3 - melek" 
+      "Vampire arrived 3 - Khufu" 
    )
 )
-+Name: msg 3 - melek
++Name: msg 3 - Khufu
 +Repeat Count: 1
 +Interval: 1
 +Chained: 2
@@ -2271,7 +2271,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( is-destroyed-delay 0 "Melek" ) 
+      ( is-destroyed-delay 0 "Khufu" ) 
       ( has-arrived-delay 
          0 
          "Unknown Ravana" 
@@ -2280,11 +2280,11 @@ $Formula: ( when
    ( send-message 
       "#Command" 
       "High" 
-      "Melek destroyed 1 - cmd" 
+      "Khufu destroyed 1 - cmd" 
    )
    ( allow-warp "Alpha 1" ) 
 )
-+Name: Melek destroyed by SD Vampire
++Name: Khufu destroyed by SD Vampire
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
@@ -2294,7 +2294,7 @@ $Formula: ( when
    ( send-message 
       "#Command" 
       "High" 
-      "Melek destroyed 2a - cmd" 
+      "Khufu destroyed 2a - cmd" 
    )
 )
 +Name: cmd - we are pulling you out
@@ -2316,7 +2316,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( is-destroyed-delay 0 "Melek" ) 
+      ( is-destroyed-delay 0 "Khufu" ) 
       ( not 
          ( is-event-true-delay 
             "Vampire arrives" 
@@ -2327,11 +2327,11 @@ $Formula: ( when
    ( send-message 
       "#Command" 
       "High" 
-      "Melek destroyed 1 - cmd" 
+      "Khufu destroyed 1 - cmd" 
    )
    ( allow-warp "Alpha 1" ) 
 )
-+Name: Melek destroyed
++Name: Khufu destroyed
 +Repeat Count: 1
 +Interval: 1
 +Team: 0
@@ -2341,7 +2341,7 @@ $Formula: ( when
    ( send-message 
       "#Command" 
       "High" 
-      "Melek destroyed 2b - cmd" 
+      "Khufu destroyed 2b - cmd" 
    )
 )
 +Name: fail
@@ -2364,10 +2364,10 @@ $Formula: ( when
 #Goals		;! 2 total
 
 $Type: Primary
-+Name: Escort the Melek
-$MessageNew:  XSTR("Escort the Melek", -1)
++Name: Escort the Khufu
+$MessageNew:  XSTR("Escort the Khufu", -1)
 $end_multi_text
-$Formula: ( has-departed-delay 0 "Melek" ) 
+$Formula: ( has-departed-delay 0 "Khufu" ) 
 
 $Type: Secondary
 +Name: Eliminate all hostiles
@@ -2381,7 +2381,7 @@ $Formula: ( and
 
 #Waypoints		;! 2 lists total
 
-$Name: Melek path
+$Name: Khufu path
 $List: (		;! 3 points in list
 	( 721.780945, -0.001383, 4368.329102 )
 	( 5607.882324, -0.002894, 6725.761719 )
@@ -2396,13 +2396,13 @@ $List: (		;! 1 points in list
 #Messages		;! 16 total
 
 
-$Name: Leo destroyed - melek
+$Name: Leo destroyed - Khufu
 $Team: -1
 $MessageNew:  XSTR("Enemy scout wing destroyed. Keep your eyes open pilots. They probably had time to signal our position.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: Leo arrived - melek
+$Name: Leo arrived - Khufu
 $Team: -1
 $MessageNew:  XSTR("Detecting two inbound dragons. Intercept leo wing.", -1)
 $end_multi_text
@@ -2414,13 +2414,13 @@ $MessageNew:  XSTR("Here they come, virgo wing on attack vector.", -1)
 $end_multi_text
 +AVI Name: Head-VP1
 
-$Name: Gemini arrived - melek
+$Name: Gemini arrived - Khufu
 $Team: -1
 $MessageNew:  XSTR("Picking up a wing of nahema bombers. Intercept Gemini wing them before they launch their warheads.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: Cancer arrived - melek
+$Name: Cancer arrived - Khufu
 $Team: -1
 $MessageNew:  XSTR("Two more fighter wings on attack vector. Command, we are going to need more fighter cover if we are to survive this patrol.", -1)
 $end_multi_text
@@ -2428,17 +2428,17 @@ $end_multi_text
 
 $Name: Deploying gamma - cmd
 $Team: -1
-$MessageNew:  XSTR("Acknowledged. We are deploying gamma wing now. Hang in there Melek.", -1)
+$MessageNew:  XSTR("Acknowledged. We are deploying gamma wing now. Hang in there Khufu.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Shambler arrived - melek
+$Name: Shambler arrived - Khufu
 $Team: -1
 $MessageNew:  XSTR("Shivan cruiser now exiting subspace. Moving to engage.", -1)
 $end_multi_text
 +AVI Name: Head-VC
 
-$Name: Vampire arrived 1 - melek
+$Name: Vampire arrived 1 - Khufu
 $Team: -1
 $MessageNew:  XSTR("Command, a Ravana class destroyer has entered the field of engagement!", -1)
 $end_multi_text
@@ -2446,25 +2446,25 @@ $end_multi_text
 
 $Name: Vampire arrived 2 - cmd
 $Team: -1
-$MessageNew:  XSTR("Get out of there Melek! Jump out now!", -1)
+$MessageNew:  XSTR("Get out of there Khufu! Jump out now!", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Melek destroyed 1 - cmd
+$Name: Khufu destroyed 1 - cmd
 $Team: -1
-$MessageNew:  XSTR("Melek we have lost your signal, please come in.", -1)
+$MessageNew:  XSTR("Khufu we have lost your signal, please come in.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Melek destroyed 2a - cmd
+$Name: Khufu destroyed 2a - cmd
 $Team: -1
-$MessageNew:  XSTR("The Melek has been destroyed. Pilots, we are pulling you out. You will be scrambled immediatly to defend the node.", -1)
+$MessageNew:  XSTR("The Khufu has been destroyed. Pilots, we are pulling you out. You will be scrambled immediatly to defend the node.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Melek destroyed 2b - cmd
+$Name: Khufu destroyed 2b - cmd
 $Team: -1
-$MessageNew:  XSTR("The Melek has been destroyed. We are aborting this mission.", -1)
+$MessageNew:  XSTR("The Khufu has been destroyed. We are aborting this mission.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
@@ -2474,7 +2474,7 @@ $MessageNew:  XSTR("The Shambler is history. Well done pilots.", -1)
 $end_multi_text
 +AVI Name: Head-CM2
 
-$Name: Vampire arrived 3 - melek
+$Name: Vampire arrived 3 - Khufu
 $Team: -1
 $MessageNew:  XSTR("Roger that, we'll be jump ready in 10 seconds.", -1)
 $end_multi_text

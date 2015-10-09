@@ -72,19 +72,24 @@ Sample entry:
 ----------------------
 -- global variables --
 ----------------------
+variant_enableDebugPrint = false
+
 variantPath = "data/config/"
 variantTableName = "ship_variants.tbl"
 variantTable = {}
 
-shipsToSet = {}
+variantShipsToSet = {}
 
 
 -----------------------
 -- utility functions --
 -----------------------
 
-
-
+function dPrint_shipVariant(message)
+	if (variant_enableDebugPrint) then
+		ba.print("[shipVariant.lua] "..message)
+	end
+end
 
 --------------------
 -- core functions --
@@ -96,9 +101,9 @@ function setVariant(shipName, variantName)
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
 	if not (ship:isValid()) then
-		ba.print("[shipVariant.lua] Could not find ship "..shipName.."\n")
-		ba.print("[shipVariant.lua] adding ship/variant to shipsToSet\n")
-		shipsToSet[shipName] = variantName
+		dPrint_shipVariant("Could not find ship "..shipName.."\n")
+		dPrint_shipVariant("adding ship/variant to variantShipsToSet\n")
+		variantShipsToSet[shipName] = variantName
 		return nil
 	end
 	
@@ -116,16 +121,16 @@ function setVariant(shipName, variantName)
 		local value = prefix['value']
 		
 		if (attribute == "armor") then
-			ba.print("[shipVariant.lua] Armor ==> "..value.."\n")
+			dPrint_shipVariant("Armor ==> "..value.."\n")
 			ship.armorClass = value
 		elseif (attribute == "shield armor") then
-			ba.print("[shipVariant.lua] Shield Armor ==> "..value.."\n")
+			dPrint_shipVariant("Shield Armor ==> "..value.."\n")
 			ship.ShieldArmorClass = value
 		elseif (attribute == "turret armor") then
-			ba.print("[shipVariant.lua] Global Turret Armor ==> "..value.."\n");
+			dPrint_shipVariant("Global Turret Armor ==> "..value.."\n");
 			turretArmor = value
 		elseif (attribute == "subsystem armor") then
-			ba.print("[shipVariant.lua] Global Subsystem Armor ==> "..value.."\n");
+			dPrint_shipVariant("Global Subsystem Armor ==> "..value.."\n");
 			subsystemArmor = value
 			
 		elseif (attribute == "hull") then
@@ -142,13 +147,13 @@ function setVariant(shipName, variantName)
 			end
 			
 			-- set max & current hit points
-			ba.print("[shipVariant.lua] Hull Max Hitpoints ==> "..value.."\n")
+			dPrint_shipVariant("Hull Max Hitpoints ==> "..value.."\n")
 			ratio = value / ship.HitpointsMax
 			ship.HitpointsMax = value
 			ship.HitpointsLeft = ship.HitpointsLeft * ratio
 			
 		elseif (attribute == "team color") then
-			ba.print("[shipVariant.lua] Team Color ==> "..value.."\n");
+			dPrint_shipVariant("Team Color ==> "..value.."\n");
 			mn.evaluateSEXP([[
 				(when (true)
 					(change-team-color
@@ -160,7 +165,7 @@ function setVariant(shipName, variantName)
 			]])
 			
 		elseif (attribute == "ai class") then
-			ba.print("[shipVariant.lua] AI Class ==> "..value.."\n");
+			dPrint_shipVariant("AI Class ==> "..value.."\n");
 			mn.evaluateSEXP([[[
 				(when (true)
 					(change-ai-class
@@ -185,23 +190,23 @@ function setVariant(shipName, variantName)
 		elseif not (string.find(attribute, "turret") == nil) then -- turret
 			if (ship[attribute].PrimaryBanks) then -- primary banks
 				for i = 0, #ship[attribute].PrimaryBanks do
-					ba.print("[ShipVariant.lua] Primary Bank: "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
+					dPrint_shipVariant("Primary Bank: "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
 					ship[attribute].PrimaryBanks[i].WeaponClass = tb.WeaponClasses[value]
 				end
 			else -- secondary banks
 				for i = 0, #ship[attribute].SecondaryBanks do
-					ba.print("[ShipVariant.lua] Secondary Bank: "..attribute.." - "..ship[attribute].SecondaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
+					dPrint_shipVariant("Secondary Bank: "..attribute.." - "..ship[attribute].SecondaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
 					ship[attribute].SecondaryBanks[i].WeaponClass = tb.WeaponClasses[value]
 				end
 			end
 		else
-			ba.warning("[ShipVariant.lua] Unrecognised attribute: "..attribute.."\n")
+			ba.warning("[shipVariant.lua] Unrecognised attribute: "..attribute.."\n")
 		end
 		
 		 -- sub-attributes
 		if not (prefix['sub'] == nil) then
 			for subAttribute, subValue in pairs(prefix['sub']) do
-				ba.print("[shipVariant.lua]     "..subAttribute.." ==> "..subValue)
+				dPrint_shipVariant("     "..subAttribute.." ==> "..subValue)
 				
 				if (subAttribute == "armor") then
 					ship[attribute].ArmorClass = subValue
@@ -226,12 +231,12 @@ function setVariant(shipName, variantName)
 		end
 		
 	end
-	ba.print("[shipVariant.lua] all attributes set, moving on to global settings...\n");
+	dPrint_shipVariant("all attributes set, moving on to global settings...\n");
 	if not (turretArmor == "") then
-		ba.print("[shipVariant.lua] Turret Armor ==> "..turretArmor.."\n")
+		dPrint_shipVariant("Turret Armor ==> "..turretArmor.."\n")
 	end
 	if not (subsystemArmor == "") then
-		ba.print("[shipVariant.lua] Subsystem Armor ==> "..subsystemArmor.."\n")
+		dPrint_shipVariant("Subsystem Armor ==> "..subsystemArmor.."\n")
 	end
 	
 	-- set turrets & subsystems armor
@@ -248,11 +253,11 @@ end
 
 
 function setVariantDelayed()
-	for shipName, variantName in pairs(shipsToSet) do
+	for shipName, variantName in pairs(variantShipsToSet) do
 		local ship = mn.Ships[shipName]
 		if not (ship == nil) then
-			ba.print("[shipVariant.lua] setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
-			shipsToSet[shipName] = nil
+			dPrint_shipVariant("setVariantDelayed: setting ship variant "..shipName.." ==> "..variantName)
+			variantShipsToSet[shipName] = nil
 			setVariant(shipName, variantName)
 		end
 	end
@@ -265,11 +270,5 @@ end
 
 variantTable = parseTableFile(variantPath, variantTableName)
 
---TODO: automate ship variant attribution by having a separate variant file for each mission
--- --> config/ SM03-variants.tbl
---       $Name:		ship name
---		 $Variant:	variant name
--- or a master file of all named ship variants and each mission
--- then run the variant change script at the beginning of every mission
 
 

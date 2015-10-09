@@ -1,0 +1,398 @@
+;; idea: allow variants for groups of ships
+
+;; Generic categories
+
+;; 12th Vasudan Battlegroup ;;
+#12th Vasudan BG
+
+; Hatshepsut class
+$Name:		Apep
+$Variant:	Combat
+
+; Typhon class
+$Name:		Pharaoh
+$Variant:	Combat Refit
+
+;		-GVC Searing Fate (Mentu Enforcer class)//destroyed
+
+; Aten class
+$Name:		Crixalis
+$Variant:	
+;		-GVGb Stone of Dovka (Hemsut class)	//destroyed
+
+; Sobek class
+$Name:		Blade
+$Variant:	Standard
+	+Wing:	2
+
+; Aeolus class
+$Name:		Hammer
+$Variant:	Upgraded
+	+Wing: 3
+
+#End
+
+
+
+#A_Intro_00
+
+;-GTD Carthage (Orion class)		//vital
+
+; Sobek class
+$Name:		Dahshor
+$Variant:	Standard
+
+;			-SC Fallen (Cain class)			//destroyed
+;			-SC Hadji (Rakshasa class)		//destroyed
+;			-SCv Cyaegha (Moloch class)		//vital
+;-GVD Apep (Hatshepsut class)		//vital
+;-GVC Searing Fate (Mentu Enforcer class)//vital
+
+#End
+
+
+#A_Intro_01
+
+; Deimos class
+$Name:		Viper
+$Variant:	Viper
+
+; Rakshasa class
+$Name:		Curse
+$Variant:	Strike Cruiser
+
+; Rakshasa class
+$Name:		Black Beast
+$Variant:	Strike Cruiser
+
+;-GVGb Stone of Dovka (Hemsut class)
+;+sentry guns
+#End
+			
+
+#A_Intro_02
+;			-GTCv Warspite (Deimos class)		//vital
+;			-SC Armaros (Cain class)		//destroyed
+;		+ after mission switch
+#End
+
+
+#B_Vampire_Arc_01
+
+; Ravana class
+$Name:		Vampire
+$Variant:	Long Range Hunter Killer Destroyer
+
+; Mentu class
+$Name:		Khufu
+$Variant:	Standard
+
+#End
+
+
+#B_Vampire_Arc_02
+
+; Ravana class
+$Name:		Vampire
+$Variant:	Long Range Hunter Killer Destroyer
+
+;-GTD Guardian (Hecate class)	//non-vital
+
+; Sobek class
+$Name:		Forgefire
+$Variant:	Standard
+
+;-GTCv Yakiba (Deimos class)	//destroyed
+;-SC Haagenti (Rakshasa class)	//destroyed
+;-SC Putana (Cain class)		//destroyed
+
+#End
+
+
+#B_Vampire_Arc_03
+
+;			-Doom Combat Group (Rakshasa & Cain class) 	//destroyed
+;			-GVD Apep (Hatshepsut class)			//vital
+
+; Lilith class
+$Name:		Iron Maiden
+$Variant:	Hunter Killer Heavy Cruiser
+
+			
+#End
+			
+
+#B_Vampire_Arc_04
+
+; Ravana class
+$Name:		Vampire
+$Variant:	Long Range Hunter Killer Destroyer
+;			-GVC Harakhti (Mentu class)		//non-vital
+;			-SC Kayla (Rakshasa class)		//destroyed
+;			-SC Abel (Cain class)			//destroyed
+;			-SCv Grelier (Moloch class)		//destroyed
+#End
+
+
+#B_Vampire_Arc_05
+
+; Ravana class
+$Name:		Vampire
+$Variant:	Long Range Hunter Killer Destroyer
+
+; -GVD Pharaoh (Typhon class)	//vital
+
+; Sobek class
+$Name:		Sphinx 
+$Variant:	Standard
+;			-GVC Ennead (Mentu class)	//destroyed
+;			-SCv Devil (Moloch class)	//destroyed
+;		Other:
+;			-GTC Herbert Jung (Leviathan class)//destroyed - mentionned in briefing
+;			-GVC Serkp'Pha (Aten class)	//destroyed - mentionned in briefing
+#End
+
+
+#B_Vampire_Arc_06
+
+;			-GVD Pharaoh (Typhon class)		//vital
+
+; Deimos class
+$Name:		Viper
+$Variant:	Viper
+
+
+;			-Hammer Combat Group (Aeolus class)	//vital
+;			-GVC Somtus (Mentu class)		//non-vital
+;			-SCv Kraken (Moloch class)		//destroyed
+;			-SC Familiar (Rakshasa class)		//destroyed
+#End
+
+
+#C_Shivan_Tech_Arc_01
+
+;			-GTC Hammer 1 (Aeolus class)		//vital
+;			-SC Morpheus (Rakshasa class)		//vital
+
+#End
+
+
+#C_Shivan_Tech_Arc_02
+
+;			-Jupiter mining vessels (2 Zephyrus & 2 Anuket class)	//semi vital
+
+; Sobek class
+$Name:		Dahshor
+$Variant:	Standard
+
+; Lilith class
+$Name:		Reaper
+$Variant:	Command Heavy Cruiser
+
+#End
+
+
+#C_Shivan_Tech_Arc_03a
+
+#End
+
+
+#C_Shivan_Tech_Arc_03b
+
+#End
+
+
+
+#D_NTF_Arc_01
+
+;			-NTD Stalker (Orion class)		//destroyed
+;			-NTT Feral (Argo class)			//destroyed
+;			-NTCv Byzance (Deimos class)		//destroyed
+;			-NTC Tanto (Fenris class)		//destroyed
+;			-NTC Reno (Fenris class)		//destroyed
+;			-NTC Valiant (Leviathan class)		//destroyed
+
+; Deimos class
+$Name:		Lamia
+$Variant:	Mass Driver
+
+#End
+
+
+#D_NTF_Arc_02
+
+;			-NTC Alexandria (Fenris class)		//vital
+;			-GTC Blair (Fenris class)		//vital
+
+; Hecate class
+$Name:		Streaker
+$Variant:	Streaker
+
+#End
+
+
+#E_Sathanas_Arc_01
+
+;			-GTCv Xeus (Deimos class)		//vital
+;			-GTA Devil's Eye (Charybdis class)	//non vital
+;			-SC Baator (Rakshasa class)		//destroyed
+;			-SC Feargus (Cain class)		//destroyed
+
+#End
+
+
+#E_Sathanas_Arc_02
+
+; Sobek class
+$Name:		Sopedu
+$Variant:	Standard
+;			-SC Harbinger (Rakshasa class)		//destroyed
+;			-SC Butcher (Cain class)		//destroyed
+;			-SC Garbad (Cain class)			//destroyed
+#End
+
+#E_Sathanas_Arc_03
+
+;			-GTD Carthage (Orion class)		//vital
+;			-GVD Pharaoh (Typhon class)		//destroyed
+;			-GVD Black Mamba (Hatshepsut class)	//
+;			-Lighter RBCs (Mjolnir class)		//destroyed
+;			-SC Nyoghta (Rakshasa class)		//destroyed
+;			-SC Nergal (Lilith class)		//destroyed
+;			-SD Lamashtu (Demon class)		//destroyed
+;			-SJ Sathanas (Sathanas class)		//vital
+;			-GVA Watcher (Setekh class)		//vital
+;			-GTA Seer (Charybdis class)		//vital
+;			-SCv Kohl'Taar (Moloch class)		//destroyed
+;			-SC Danjal (Rakshasa class)		//destroyed
+;			-SC Abyzou (Cain class)			//destroyed
+
+#End
+
+
+#E_Sathanas_Arc_04
+
+; Deimos class
+$Name:		Warihu
+$Variant:	Standard
+
+; Moloch class
+$Name:		Cyaegha
+$Variant:	Command Corvette
+
+;			-GTC Lexington (Leviathan class)	//non-vital
+
+; Rakshasa class
+$Name:		Hellknight
+$Variant:	Hunter Killer Cruiser
+;		Other :
+;			-GTA Seer (Charibdys class) - mentionned during briefing
+;			-SD Nix (Demon class) - idem
+
+#End
+
+
+
+#E_Sathanas_Arc_05
+
+
+;			-Hammer CG (3xAeolus class)		//semi-vital
+; Moloch class
+$Name:		Cyaegha
+$Variant:	Command Corvette
+;			//SC Obizoth (Lilith class)
+;			-SD Nix (Demon class)			//vital
+;			-Blade CG (2xSobek class)		//vital
+;			-GVD Apep (Hatshepsut class)		//vital
+;			-Wrath CG (3xCain class)		//destroyed
+
+#End
+
+
+#E_Sathanas_06
+
+; Hecate class
+$Name:		Olympus Shadow
+$Variant:	Standard
+
+;			-GTC Julius (Leviathan class)		//non-vital
+;			-GTC Axius (Leviathan class)		//non-vital
+
+;			-SC Lurz (Cain class)			//destroyed
+;			-SC Mekleth (Cain class)		//destroyed
+
+; Moloch class
+$Name:		Ish'Kafel
+$Variant:	Strike Corvette
+
+; Deimos class
+$Name:		Monere
+$Variant:	Standard
+
+#End
+
+
+#E_Sathanas_07
+
+; Hecate class
+$Name:		Olympus Shadow
+$Variant:	Standard
+
+;			-GTCv Kendrick Smith (Deimos class)	//non-vital
+;			-Blade CG (2xSobek class)		//vital
+;			-SC Lotode (Rakshasa class)		//destroyed
+; Rakshasa class
+$Name:		Hellknight
+$Variant:	Hunter Killer Cruiser
+;			-SCv Toffolon (Moloch class)		//destroyed
+
+#End
+
+
+
+#F_Capella_01
+
+;		-Blade CG (2xSobek class)	//destroyed
+;		-SD Susl'Arh Mork (Demon class)	//vital
+;		-GTA Fox (Charybdis class)	//non-vital
+;		-SC Ragnarok (Lilith class)	//non-vital
+;		-Vor CG (2xRakshasa class)	//non-vital
+#End
+
+
+#F_Capella_02
+
+#End
+
+
+
+#F_Capella_03
+
+#End
+
+
+
+#F_Capella_04
+
+;		-SJ Sathanas (Sathanas class)		//non-vital
+;		-GTI Paxton Shipyards (Arcadia class)	//destroyed
+;		-GTI Ganymede Alpha			//destroyed
+;		-GTI Ganymede Beta			//destroyed
+;		-GTD Ballard (Hecate class)		//destroyed
+;		-GVCv Eb'Siliss (Sobek class)		//destroyed
+;		-GTCv Babylon (Sparta class)		//non-vital
+
+
+		; Rakshasa class
+$Name:		Hellknight
+$Variant:	Hunter Killer Cruiser
+
+;		-SC Plague (Cain class)			//non-vital
+;		-Apocalypse BG (Ravana + 2xLilith)	//vital
+
+#End
+		
+#F_Capella_05
+
+#End
+

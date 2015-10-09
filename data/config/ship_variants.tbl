@@ -1,3 +1,7 @@
+;; TODO: awacs range
+;; strike craft variants
+
+
 #SJ Sathanas
 $Name:		Multi-Purpose Juggernaut
 	$turret05:MRed
@@ -509,14 +513,13 @@ $turret10:Tornado ;;or treb?
 
 
 #GVD Typhon
-;; review that
-;;$GVD Typhon:
-;;	turret01:SVas/Mass Driver/Wraith
-;;	turret02:SVas/Mass Driver/Wraith
-;;	turret07:Rockeye/Trebuchet
-;;	turret08:Rockeye/Trebuchet
-;;	turret09:Rockeye/Trebuchet
-;;	turret13:Rockeye/Trebuchet
+$Name:	Combat Refit
+$turret01:Mass Driver
+$turret02:Mass Driver
+$turret07:Piranha
+$turret08:Piranha
+$turret09:Piranha
+$turret13:Piranha
 #End
 
 #GVCv Sobek
@@ -529,6 +532,12 @@ $turret05:Wraith
 
 
 #GVC Mentu
+$Name:	Standard
+$turret01:Wraith
+$turret02:Wraith
+$turret15:Mass Driver
+$turret16:Mass Driver
+
 $Name:	Mass Driver
 $turret01:Mass Driver
 $turret02:Mass Driver
@@ -549,6 +558,14 @@ $turret06:AAAf
 
 #GTD Hecate
 $Name:	Standard
+$turret03:Wraith
+$turret10:Wraith
+$turret22:MGreenUp
+$turret24:MGreenUp
+$turret26:MGreenUp
+$turret27:MGreenUp
+
+$Name:	Combat
 $turret01:Mass Driver
 $turret03:Wraith
 $turret04:Mass Driver
@@ -561,6 +578,7 @@ $turret22:MGreenUp
 $turret24:MGreenUp
 $turret26:MGreenUp
 $turret27:MGreenUp
+
 
 $Name:	Streaker
 $ai class: Big
