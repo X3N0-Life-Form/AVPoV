@@ -1,4 +1,5 @@
 ;; idea: allow variants for groups of ships
+;; + case by case overrides?
 
 ;; Generic categories
 
@@ -44,9 +45,11 @@ $Variant:	Standard
 
 ;			-SC Fallen (Cain class)			//destroyed
 ;			-SC Hadji (Rakshasa class)		//destroyed
-;			-SCv Cyaegha (Moloch class)		//vital
-;-GVD Apep (Hatshepsut class)		//vital
-;-GVC Searing Fate (Mentu Enforcer class)//vital
+
+; Moloch class
+$Name:		Cyaegha
+$Variant:	Command Corvette
+
 
 #End
 
@@ -59,19 +62,20 @@ $Variant:	Viper
 
 ; Rakshasa class
 $Name:		Curse
-$Variant:	Strike Cruiser
+$Variant:	Support Cruiser
 
 ; Rakshasa class
 $Name:		Black Beast
-$Variant:	Strike Cruiser
+$Variant:	Support Cruiser
 
-;-GVGb Stone of Dovka (Hemsut class)
+; Stone of Dovka (Hemsut class) --> default
+
 ;+sentry guns
 #End
 			
 
 #A_Intro_02
-;			-GTCv Warspite (Deimos class)		//vital
+; Warspite (Deimos class) --> one shot variant
 ;			-SC Armaros (Cain class)		//destroyed
 ;		+ after mission switch
 #End
@@ -96,15 +100,21 @@ $Variant:	Standard
 $Name:		Vampire
 $Variant:	Long Range Hunter Killer Destroyer
 
-;-GTD Guardian (Hecate class)	//non-vital
+; Hecate class
+$Name:		Guardian
+$Variant:	Mass Driver
 
 ; Sobek class
 $Name:		Forgefire
 $Variant:	Standard
 
-;-GTCv Yakiba (Deimos class)	//destroyed
-;-SC Haagenti (Rakshasa class)	//destroyed
-;-SC Putana (Cain class)		//destroyed
+; Yakiba (Deimos class)	--> default
+
+; Rakshasa class
+$Name:		Haagenti
+$Variant:	Support Cruiser
+
+; Putana (Cain class) --> default
 
 #End
 
@@ -140,46 +150,53 @@ $Variant:	Long Range Hunter Killer Destroyer
 $Name:		Vampire
 $Variant:	Long Range Hunter Killer Destroyer
 
-; -GVD Pharaoh (Typhon class)	//vital
-
 ; Sobek class
 $Name:		Sphinx 
 $Variant:	Standard
-;			-GVC Ennead (Mentu class)	//destroyed
-;			-SCv Devil (Moloch class)	//destroyed
-;		Other:
-;			-GTC Herbert Jung (Leviathan class)//destroyed - mentionned in briefing
-;			-GVC Serkp'Pha (Aten class)	//destroyed - mentionned in briefing
+
+; Mentu class
+$Name:		Ennead
+$Variant:	Standard
+
+; Moloch class
+$Name:		Devil
+$Variant:	Carrier Corvette
+
 #End
 
 
 #B_Vampire_Arc_06
 
-;			-GVD Pharaoh (Typhon class)		//vital
-
 ; Deimos class
 $Name:		Viper
 $Variant:	Viper
 
+; Mentu class
+$Name:		Somtus
+$Variant:	Standard
 
-;			-Hammer Combat Group (Aeolus class)	//vital
-;			-GVC Somtus (Mentu class)		//non-vital
-;			-SCv Kraken (Moloch class)		//destroyed
-;			-SC Familiar (Rakshasa class)		//destroyed
+; Moloch class
+$Name:		Kraken
+$Variant:	Carrier Corvette
+
+; Rakshasa class
+$Name:		Familiar
+$Variant:	Strike Cruiser
+
+
 #End
 
 
 #C_Shivan_Tech_Arc_01
 
-;			-GTC Hammer 1 (Aeolus class)		//vital
-;			-SC Morpheus (Rakshasa class)		//vital
+; Morpheus (Rakshasa class)	--> unnammed derelict
 
 #End
 
 
 #C_Shivan_Tech_Arc_02
 
-;			-Jupiter mining vessels (2 Zephyrus & 2 Anuket class)	//semi vital
+; Jupiter mining vessels (2 Zephyrus & 2 Anuket class) --> default
 
 ; Sobek class
 $Name:		Dahshor
@@ -205,12 +222,12 @@ $Variant:	Command Heavy Cruiser
 
 #D_NTF_Arc_01
 
-;			-NTD Stalker (Orion class)		//destroyed
-;			-NTT Feral (Argo class)			//destroyed
-;			-NTCv Byzance (Deimos class)		//destroyed
-;			-NTC Tanto (Fenris class)		//destroyed
-;			-NTC Reno (Fenris class)		//destroyed
-;			-NTC Valiant (Leviathan class)		//destroyed
+; NTD Stalker (Orion class) --> default
+; NTT Feral (Argo class) --> default
+; NTCv Byzance (Deimos class) --> default
+; NTC Tanto (Fenris class) --> default
+; NTC Reno (Fenris class) --> default
+; NTC Valiant (Leviathan class) --> default
 
 ; Deimos class
 $Name:		Lamia
@@ -221,8 +238,8 @@ $Variant:	Mass Driver
 
 #D_NTF_Arc_02
 
-;			-NTC Alexandria (Fenris class)		//vital
-;			-GTC Blair (Fenris class)		//vital
+; NTC Alexandria (Fenris class) --> one-shot variant
+; GTC Blair (Fenris class) --> one-shot variant
 
 ; Hecate class
 $Name:		Streaker
@@ -233,10 +250,16 @@ $Variant:	Streaker
 
 #E_Sathanas_Arc_01
 
-;			-GTCv Xeus (Deimos class)		//vital
-;			-GTA Devil's Eye (Charybdis class)	//non vital
-;			-SC Baator (Rakshasa class)		//destroyed
-;			-SC Feargus (Cain class)		//destroyed
+; GTCv Xeus (Deimos class) --> default
+; GTA Devil's Eye (Charybdis class) --> default
+
+; Rakshasa class
+$Name:		Baator
+$Variant:	Strike Cruiser
+
+; Cain class
+$Name:		Feargus
+$Variant:	Light Cruiser
 
 #End
 
@@ -246,23 +269,37 @@ $Variant:	Streaker
 ; Sobek class
 $Name:		Sopedu
 $Variant:	Standard
-;			-SC Harbinger (Rakshasa class)		//destroyed
-;			-SC Butcher (Cain class)		//destroyed
-;			-SC Garbad (Cain class)			//destroyed
+
+; Rakshasa class
+$Name:		Harbinger
+$Variant:	Strike Cruiser
+
+; Cain class
+$Name:		Butcher
+$Variant:	Light Cruiser
+
+; Cain class
+$Name:		Garbad
+$Variant:	Light Cruiser
+
 #End
 
 #E_Sathanas_Arc_03
 
-;			-GTD Carthage (Orion class)		//vital
-;			-GVD Pharaoh (Typhon class)		//destroyed
+; GTD Carthage (Orion class) --> default
+
 ;			-GVD Black Mamba (Hatshepsut class)	//
-;			-Lighter RBCs (Mjolnir class)		//destroyed
+
 ;			-SC Nyoghta (Rakshasa class)		//destroyed
 ;			-SC Nergal (Lilith class)		//destroyed
-;			-SD Lamashtu (Demon class)		//destroyed
-;			-SJ Sathanas (Sathanas class)		//vital
-;			-GVA Watcher (Setekh class)		//vital
-;			-GTA Seer (Charybdis class)		//vital
+
+; Demon class
+$Name:		Lamashtu
+$Variant:	Support Destroyer#local
+
+; GVA Watcher (Setekh class) --> default
+; GTA Seer (Charybdis class) --> default
+
 ;			-SCv Kohl'Taar (Moloch class)		//destroyed
 ;			-SC Danjal (Rakshasa class)		//destroyed
 ;			-SC Abyzou (Cain class)			//destroyed
@@ -280,31 +317,31 @@ $Variant:	Standard
 $Name:		Cyaegha
 $Variant:	Command Corvette
 
-;			-GTC Lexington (Leviathan class)	//non-vital
+; GTC Lexington (Leviathan class) --> default
 
 ; Rakshasa class
 $Name:		Hellknight
 $Variant:	Hunter Killer Cruiser
-;		Other :
-;			-GTA Seer (Charibdys class) - mentionned during briefing
-;			-SD Nix (Demon class) - idem
 
 #End
 
 
-
 #E_Sathanas_Arc_05
 
-
-;			-Hammer CG (3xAeolus class)		//semi-vital
 ; Moloch class
 $Name:		Cyaegha
 $Variant:	Command Corvette
-;			//SC Obizoth (Lilith class)
-;			-SD Nix (Demon class)			//vital
-;			-Blade CG (2xSobek class)		//vital
-;			-GVD Apep (Hatshepsut class)		//vital
-;			-Wrath CG (3xCain class)		//destroyed
+
+;			//SC Obizoth (Lilith class)???
+
+; Demon class
+$Name:		Nix
+$Variant:	Support Destroyer
+
+; 3xCain class
+$Name:		Wrath
+$Variant:	Light Support Cruiser
+	+Wing:	3
 
 #End
 
@@ -315,11 +352,16 @@ $Variant:	Command Corvette
 $Name:		Olympus Shadow
 $Variant:	Standard
 
-;			-GTC Julius (Leviathan class)		//non-vital
-;			-GTC Axius (Leviathan class)		//non-vital
+; GTC Julius (Leviathan class) --> default
+; GTC Axius (Leviathan class) --> default
 
-;			-SC Lurz (Cain class)			//destroyed
-;			-SC Mekleth (Cain class)		//destroyed
+; Cain class
+$Name:		Lurz
+$Variant:	Light Cruiser
+
+; Cain class
+$Name:		Mekleth
+$Variant:	Light Cruiser
 
 ; Moloch class
 $Name:		Ish'Kafel
@@ -339,11 +381,12 @@ $Name:		Olympus Shadow
 $Variant:	Standard
 
 ;			-GTCv Kendrick Smith (Deimos class)	//non-vital
-;			-Blade CG (2xSobek class)		//vital
 ;			-SC Lotode (Rakshasa class)		//destroyed
+
 ; Rakshasa class
 $Name:		Hellknight
 $Variant:	Hunter Killer Cruiser
+
 ;			-SCv Toffolon (Moloch class)		//destroyed
 
 #End
@@ -352,11 +395,21 @@ $Variant:	Hunter Killer Cruiser
 
 #F_Capella_01
 
-;		-Blade CG (2xSobek class)	//destroyed
-;		-SD Susl'Arh Mork (Demon class)	//vital
-;		-GTA Fox (Charybdis class)	//non-vital
-;		-SC Ragnarok (Lilith class)	//non-vital
-;		-Vor CG (2xRakshasa class)	//non-vital
+; Demon class
+$Name:		Susl'Arh Mork
+$Variant:	Command Destroyer
+
+; GTA Fox (Charybdis class) --> default
+
+; Lilith class
+$Name:		Ragnarok
+$Variant:	Hunter Killer Heavy Cruiser
+
+; 2xRakshasa class
+$Name:		Vor
+$Variant:	Heavy Flak Cruiser
+	+Wing:	2
+
 #End
 
 
@@ -383,7 +436,7 @@ $Variant:	Hunter Killer Cruiser
 ;		-GTCv Babylon (Sparta class)		//non-vital
 
 
-		; Rakshasa class
+; Rakshasa class
 $Name:		Hellknight
 $Variant:	Hunter Killer Cruiser
 

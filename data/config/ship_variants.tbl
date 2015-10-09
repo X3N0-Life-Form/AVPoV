@@ -217,6 +217,22 @@ $turret24:Shivan SSM
 $turret25:Shivan SSM
 $turret26:Shivan SSM
 
+$Name:	Support Destroyer#local
+$turret03:MRed
+$turret06:Shivan Heavy Anticap Laser
+$turret07:Shivan Heavy Anticap Laser
+$turret16:Shivan Multi Turret
+$turret17:Shivan Multi Turret
+$turret18:Shivan Multi Turret
+$turret19:Shivan Multi Turret
+$turret20:Standard Flak
+$turret21:Standard Flak
+$turret22:Shivan SSM#local
+$turret23:Shivan SSM#local
+$turret24:Shivan SSM#local
+$turret25:Shivan SSM#local
+$turret26:Shivan SSM#local
+
 
 $Name:	Combat Destroyer
 $turret03:MRed
@@ -228,11 +244,11 @@ $turret18:Heavy Flak
 $turret19:Heavy Flak
 $turret20:Standard Flak
 $turret21:Standard Flak
-$turret22:Shivan LR Swarm
-$turret23:Shivan LR Swarm
-$turret24:Shivan LR Swarm
-$turret25:Shivan LR Swarm
-$turret26:Shivan LR Swarm
+$turret22:Piranha#Shivan
+$turret23:Piranha#Shivan
+$turret24:Piranha#Shivan
+$turret25:Piranha#Shivan
+$turret26:Piranha#Shivan
 #End
 
 #SCv Moloch
@@ -403,6 +419,7 @@ $turret06:Shivan Anticap Laser
 $turret08:Tornado#Shivan
 $turret09:Tornado#Shivan
 
+
 $Name:	Flak Cruiser
 $hull:  20k
 $turret02:Heavy Flak
@@ -413,6 +430,13 @@ $turret06:Fast Flak
 $turret07:SAAA
 $turret08:Shivan Area Bomb
 $turret09:Shivan Area Bomb
+
+
+$Name:	Light Flak Cruiser
+$hull:  20k
+$turret05:Light Flak
+$turret06:Light Flak
+
 #End
 
 
