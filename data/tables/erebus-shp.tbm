@@ -3,7 +3,7 @@
 $Name:		GTD Erebus
 $Short name:				TCapAdv
 $Species:					Terran
-	+Tech Description:		XSTR( "TODO", -1 )
+	+Tech Description:		XSTR( "Combining unparalleled agility and fire-power, the Erebus-class destroyer is an outstanding example of the Alliance's post-Capella fleet doctrine: a heavy brawler, capable of going toe to toe with Shivan destroyers and win, while still be able to repel unending waves of fighters and bombers. The Erebus is meant to excel at both offence and defence, and therefore carries", -1 )
 $end_multi_text
 $POF file:					GTD_Erebus.pof
 $Detail distance: 			(0, 1500, 1500, 1500)

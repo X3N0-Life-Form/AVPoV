@@ -427,13 +427,20 @@ $Variant:	Heavy Flak Cruiser
 
 #F_Capella_04
 
-;		-SJ Sathanas (Sathanas class)		//non-vital
-;		-GTI Paxton Shipyards (Arcadia class)	//destroyed
-;		-GTI Ganymede Alpha			//destroyed
-;		-GTI Ganymede Beta			//destroyed
+; SJ Sathanas (Sathanas class) --> one-shot
+; GTI Paxton Shipyards (Arcadia class) --> one-shot variant
+; GTI Ganymede Alpha --> default
+; GTI Ganymede Beta  --> idem
+
 ;		-GTD Ballard (Hecate class)		//destroyed
-;		-GVCv Eb'Siliss (Sobek class)		//destroyed
-;		-GTCv Babylon (Sparta class)		//non-vital
+
+; Sobek class
+$Name:		Eb'Siliss
+$Variant:	Standard
+
+; Sparta class
+$Name:		Babylon
+$Variant:	Standard
 
 
 ; Rakshasa class
@@ -441,11 +448,23 @@ $Name:		Hellknight
 $Variant:	Hunter Killer Cruiser
 
 ;		-SC Plague (Cain class)			//non-vital
-;		-Apocalypse BG (Ravana + 2xLilith)	//vital
+; Apocalypse BG (Ravana + 2xLilith)
+
+; Lilith class
+$Name:		Apocalypse 2
+$Variant:	Hunter Killer Heavy Cruiser Up
+
+; Lilith class
+$Name:		Apocalypse 3
+$Variant:	Hunter Killer Heavy Cruiser Up
 
 #End
 		
 #F_Capella_05
+
+; Sparta class
+$Name:		Sparta
+$Variant:	Lance Corvette
 
 #End
 

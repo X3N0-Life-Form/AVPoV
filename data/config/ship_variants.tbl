@@ -306,6 +306,15 @@ $turret06:Shivan Multi Turret
 $turret08:Piranha#Shivan
 $turret09:Piranha#Shivan
 
+$Name:	Hunter Killer Heavy Cruiser Up
+$turret02:Shivan Turret Laser Up
+$turret03:Shivan Turret Laser Up
+$turret04:Shivan Turret Laser Up
+$turret05:Shivan Multi Turret Up
+$turret06:Shivan Multi Turret Up
+$turret08:Piranha#Shivan
+$turret09:Piranha#Shivan
+
 ;;		Reaper		;;
 $Name:	Command Heavy Cruiser
 $ai class: Big
