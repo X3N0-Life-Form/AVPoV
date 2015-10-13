@@ -3440,7 +3440,7 @@ $Closeup_zoom:				0.5
 $Score:						40
 $Radar Image 2D:    radar-corvette
 $Subsystem:		turret01,			5.5, 20.0
-	$Default PBanks:			( "Heavy Flak#Fast )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
@@ -3452,15 +3452,13 @@ $Subsystem:		turret01,			5.5, 20.0
 	$type:						initial
 		+relative_angle:	70, 0, 0
 $Subsystem:		turret02, 			5.5, 20.0
-	$Default PBanks:			( "Long Range Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
 	$Turret GunSnd Volume: 		1.0
 	$Turret Reset Delay:		15000
 	$Max Turrets per Bomb:		1
-	$ROF:
-		+Multiplier:	3.0
 	$Flags: 					( "check hull" "reset when idle" )
 	$animation:					triggered
 	$type:						initial
