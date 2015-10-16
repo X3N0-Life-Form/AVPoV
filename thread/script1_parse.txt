@@ -6,7 +6,10 @@ Greetings, fellow modders
 
 Earlier this year, I started working on a script capable of parsing text files written in the style of Freespace tables. This idea was to have a generic parser that would allow me to read config files for other scripts. 
 
-[b]How to use it:[/b]
+[url=https://github.com/X3N0-Life-Form/AVPoV/blob/master/data/scripts/parse.lua]Source[/url]
+or [code][/code] tags ?
+
+[size=12][b]How to use it:[/b][/size]
 Call the function parseTableFile(filePath, fileName) from a script or scripting table, and store its results in a variable. Now the resulting data is basically a big multi-dimensional lua table:
  - The first layer represents [i]categories[/i], marked in the table file by a '#' followed the category's name, and ended by "#End". For instance, [b]#Ship Classes[/b] will be accessed by tableObject['Ship Classes']
  
@@ -17,4 +20,148 @@ Call the function parseTableFile(filePath, fileName) from a script or scripting 
  
  - The fourth layer represents sub-attributes, identified by a '+' and their name. For instance, [b]+Armor: None[/b] will be accessed as tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['sub']['Armor'], and will have a value of "None"
  
- Since it's a bit difficult to manipulate, I recommend splitting that big blob into sub tables or objects or whatever you feel comfortable with.
+Since this structure is a bit difficult to manipulate, I recommend splitting that big blob into sub tables or objects or whatever you feel comfortable with. Note that the script doesn't check the type of the parsed data, or whether a required attribute is present or not.
+
+[size=12][b]Examples:[/b][/size]
+ 
+I am currently developing 3 different scripts that use this parser for their config data, so here are a few code samples on how to use it. Note: these are code samples, meaning that they are missing several vital components.
+
+
+[b]mission-wide ship variant[/b]
+
+Here we have a fairly simple table, with multiple categories, each entry has a single attribute, "Variant" with an optional sub-attribute, "Wing". The script function takes a category name, then processes each entry in that category.
+
+Table:
+[code]
+#12th Vasudan BG
+
+; Hatshepsut class
+$Name:		Apep
+$Variant:	Combat
+
+; Typhon class
+$Name:		Pharaoh
+$Variant:	Combat Refit
+
+; Sobek class
+$Name:		Blade
+$Variant:	Standard
+	+Wing:	2
+
+#End
+
+#A01.fs2
+
+; Rakshasa class
+$Name:		Haagenti
+$Variant:	Strike Cruiser
+
+#End
+[/code]
+
+Script:
+[code]
+shipVariantMissionsTable = parseTableFile("data/config/", "ship_variant_missions.tbl")
+
+function setShipVariants(categoryName)
+	if not (shipVariantMissionsTable[categoryName] == nil) then
+		for shipName, attributes in pairs(shipVariantMissionsTable[categoryName]) do
+			local variantName = attributes['Variant']['value']
+			
+			-- if this is a single ship
+			if (attributes['Variant']['sub']['Wing'] == nil) then
+				setVariant(shipName, variantName)
+			else -- or if this is a wing
+				local wingSize = attributes['Variant']['sub']['Wing']
+				for i = 1, i <= wingSize, i = i + 1 do
+					setVariant(shipName.." "..i, variantName)
+				end
+			end
+			
+		end
+	else
+		ba.warning("[shipVariantMissions.lua] Could not find entry "..categoryName)
+	end
+end
+[/code]
+
+[b]auto ssm strikes[/b]
+
+Here we a table with a single category. Each entry has two required attributes, "Type" and "Cooldown", one of which accepts either a single value or a list of values, and an optional attribute, "Default Seeking Algorithm". The script sample splits the parsed data into a bunch of one-dimensional tables to make them easier to use afterwards.
+
+Table:
+[code]
+#Automated Strikes
+
+$Name:				rr-barrage		; required
+$Type:				Shivan SSM Barrage	; required, must match ssm.tbl entry
+$Cooldown:			22			; required
+$Default Seeking Algorithm:	round-robin		; optional, defaults to list
+
+$Name:				moloch-std
+$Type:				Shivan SSM Strike
+$Cooldown:			24, 20, 17, 15, 13
+
+$Name:				moloch-std-insane
+$Type:				Shivan SSM Strike
+$Cooldown:			13
+
+$Name:				moloch-std-hard
+$Type:				Shivan SSM Strike
+$Cooldown:			15
+
+$Name:				moloch-std-medium
+$Type:				Shivan SSM Strike
+$Cooldown:			17
+
+$Name:				moloch-std-easy
+$Type:				Shivan SSM Strike
+$Cooldown:			20
+
+$Name:				moloch-std-very-easy
+$Type:				Shivan SSM Strike
+$Cooldown:			24
+
+#End
+[/code]
+
+Script:
+[code]
+auto_ssm_table = parseTableFile(auto_ssm_filePath, auto_ssm_fileName)
+dPrint_autoSSM(getTableObjectAsString(auto_ssm_table))
+
+local id = 0
+for name, attributes in pairs(auto_ssm_table['Automated Strikes']) do
+	-- record the strike's id
+	strike_info_id[id] = name
+	dPrint_autoSSM("Name="..name.."\n")
+	
+	-- for each attribute
+	for attribute, prefix in pairs(attributes) do
+		value = prefix['value']
+		if not (type(value) == 'table') then
+			dPrint_autoSSM("attribute="..attribute.."; value="..value.."\n")
+		else
+			local str = ""
+			for index, val in pairs(value) do
+				str = str..val.." "
+			end
+			dPrint_autoSSM(str.."\n")
+		end
+		
+		-- store this attribute in the relevant array
+		if (attribute == "Type") then
+			strike_info_type[name] = value
+		elseif (attribute == "Cooldown") then
+			strike_info_cooldown[name] = value
+		elseif (attribute == "Default Seeking Algorithm") then
+			strike_info_seeker_algo[name] = value
+		else
+			ba.warning("[autoSSM.lua] Unrecognised attribute "..attribute.."\n");
+		end
+	end
+	
+	-- increment id count
+	id = id + 1
+end
+[/code]
