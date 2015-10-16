@@ -211,11 +211,11 @@ $turret18:Shivan Multi Turret
 $turret19:Shivan Multi Turret
 $turret20:Standard Flak
 $turret21:Standard Flak
-$turret22:Shivan SSM
-$turret23:Shivan SSM
-$turret24:Shivan SSM
-$turret25:Shivan SSM
-$turret26:Shivan SSM
+$turret22:Shivan Subspace Missile
+$turret23:Shivan Subspace Missile
+$turret24:Shivan Subspace Missile
+$turret25:Shivan Subspace Missile
+$turret26:Shivan Subspace Missile
 
 $Name:	Support Destroyer#local
 $turret03:MRed
@@ -227,11 +227,11 @@ $turret18:Shivan Multi Turret
 $turret19:Shivan Multi Turret
 $turret20:Standard Flak
 $turret21:Standard Flak
-$turret22:Shivan SSM#local
-$turret23:Shivan SSM#local
-$turret24:Shivan SSM#local
-$turret25:Shivan SSM#local
-$turret26:Shivan SSM#local
+$turret22:Shivan Subspace Missile#local
+$turret23:Shivan Subspace Missile#local
+$turret24:Shivan Subspace Missile#local
+$turret25:Shivan Subspace Missile#local
+$turret26:Shivan Subspace Missile#local
 
 
 $Name:	Combat Destroyer

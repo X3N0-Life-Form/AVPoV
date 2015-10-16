@@ -74,8 +74,6 @@ Sample entry:
 ----------------------
 variant_enableDebugPrint = false
 
-variantPath = "data/config/"
-variantTableName = "ship_variants.tbl"
 variantTable = {}
 
 variantShipsToSet = {}
@@ -112,6 +110,8 @@ function setVariant(shipName, variantName)
 	if (variantInfo == nil) then
 		ba.warning("[shipVariant.lua] Could not find variant info for "..className..":"..variantName.."\n")
 		return nil
+	else
+		dPrint_shipVariant("Setting ship variant '"..className..":"..variantName.."' for ship '"..shipName.."'\n")
 	end
 	
 	local turretArmor = ""
@@ -188,7 +188,7 @@ function setVariant(shipName, variantName)
 		
 			
 		elseif not (string.find(attribute, "turret") == nil) then -- turret
-			if (ship[attribute].PrimaryBanks) then -- primary banks
+			if (tb.WeaponClasses[value]:isPrimary()) then -- primary banks
 				for i = 0, #ship[attribute].PrimaryBanks do
 					dPrint_shipVariant("Primary Bank: "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
 					ship[attribute].PrimaryBanks[i].WeaponClass = tb.WeaponClasses[value]
@@ -231,7 +231,8 @@ function setVariant(shipName, variantName)
 		end
 		
 	end
-	dPrint_shipVariant("all attributes set, moving on to global settings...\n");
+	
+	dPrint_shipVariant("all attributes set, moving on to global settings...\n")
 	if not (turretArmor == "") then
 		dPrint_shipVariant("Turret Armor ==> "..turretArmor.."\n")
 	end
@@ -248,6 +249,8 @@ function setVariant(shipName, variantName)
 			subsystem.ArmorClass = subsystemArmor
 		end
 	end
+	
+	dPrint_shipVariant("setVariant() ends\n")
 end
 
 
@@ -268,7 +271,7 @@ end
 -- main --
 ----------
 
-variantTable = parseTableFile(variantPath, variantTableName)
+variantTable = parseTableFile("data/config/", "ship_variants.tbl")
 
 
 
