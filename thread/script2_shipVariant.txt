@@ -1,0 +1,32 @@
+[RELEASE] Ship variant management framework v1.0
+
+Mentioned in the parsing script [url]release thread[/url], this script allows modders to change a capship's loadout and a few other characteristics through a single lua call. The idea was that if a ship or a group of ships has a specific set of characteristics (turret loadout, armor type, AI class, etc.) that differentiate that ship from others of the same class, instead of having to manually copy these from mission to mission, and potentially introduce errors in the process, you would define a "ship variant" in a config table file, then only have to copy a single script-eval-block SEXP referencing that variant and the ship you want to apply it to.
+
+While you can probably get similar results by defining different ship templates in your regular ship tables (since I remember reading that they were working again), I personally have several reasons to use that script over that :
+- Ship templates were not working when I started writing it, so I have no idea how to use them
+- The extra variants won't show up in FRED (or use extra table slots, if that's a concern), which is nice when you have several dozen new variants, and plan to introduce more
+- I am also working on another script that will allow me to automate the variant-switching deal even more
+
+[url]Source code[/url]
+
+[size=12][b]How to use it:[/b][/size]
+
+In data/config/shipVariants.tbl:
+[code]
+
+[/code]
+
+In data/tables/init-sct.tbm:
+[code]
+
+[/code]
+
+In FRED:
+[code]
+( script-eval-block
+	"setVariant("
+	"'ship name',"
+	"'variant name')"
+)
+[/code]
+
