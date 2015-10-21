@@ -10,7 +10,15 @@ Earlier this year, I started working on a script capable of parsing text files w
 or [code][/code] tags ?
 
 [size=12][b]How to use it:[/b][/size]
-Call the function parseTableFile(filePath, fileName) from a script or scripting table, and store its results in a variable. Now the resulting data is basically a big multi-dimensional lua table:
+
+Put [i]parse.lua[/i] in data/scripts.
+
+In data/tables/init-sct.tbm, under #Conditional Hooks:
+[code]
+$On Game Init: [[parse.lua]]
+[/code]
+
+Call the function [font=courier]parseTableFile(filePath, fileName)[/font] on a "$On Game Init:" hook, and store its results in a variable. Now the resulting data is basically a big multi-dimensional lua table:
  - The first layer represents [i]categories[/i], marked in the table file by a '#' followed the category's name, and ended by "#End". For instance, [b]#Ship Classes[/b] will be accessed by tableObject['Ship Classes']
  
  - The second layer represents [i]entries[/i], identified by their name attribute. For instance, [b]$Name: GTF Ulysses[/b] will be access by tableObject['Ship Classes']['GTF Ulysses']
