@@ -9,6 +9,8 @@ $On Game Init: [[shivanRespawn.lua]]
 $On Game Init: [[shipVariant.lua]]
 $On Warp In: [setVariantDelayed()]
 
+$On Game Init: [[shipVariantMissions.lua]]
+
 $On Game Init: [[autoSSM-targeting.lua]]
 $On Game Init: [[autoSSM.lua]]
 $On Gameplay Start: [auto_ssm_init_strike_tables()]
