@@ -43,7 +43,7 @@ Descriptor table sample:
 		
 			
 Valid attributes:
-	hull						: special hit points
+	hull						: special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)
 	armor						: hull armor type
 	turret armor				: ship-wide turret armor type
 	subsystem armor				: ship-wide subsystem armor type
