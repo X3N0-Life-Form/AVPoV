@@ -16,8 +16,67 @@ While you can probably get similar results by defining different ship templates 
 Put [i]shipVariant.lua[/i] in data/scripts.
 
 In data/config/shipVariants.tbl:
+Table specification:
+Each category specifies variants for a ship class (GTC Aeolus, GVD Sobek, etc.).
+Each entry defines a variant.
+Valid attributes:
+	hull						: special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)
+	armor						: hull armor type
+	turret armor				: ship-wide turret armor type
+	subsystem armor				: ship-wide subsystem armor type
+	team color					: change team color
+	ai class					: change ai class
+	
+Valid sub-attributes:
+	armor	: armor type
+	RoF		: new rate of fire (in percentage)
+
+
+Example:
 [code]
-TODO
+#SD Ravana
+$Name: Battle Destroyer
+$hull:  200k
+$armor: Shivan Elite Armor
+$ai class: General
+$turret armor: Shivan Elite Armor
+$turret01:LRed
+	+armor:Hell Armor
+$turret02:LRed
+	+armor:Hell Armor
+$turret03:SRed
+	+Rof:200
+	+armor:Hell Armor
+$turret04:SRed
+	+Rof:200
+	+armor:Hell Armor
+$turret05:SAAA
+$turret06:SAAA
+$turret07:Standard Flak
+$turret08:SAAA
+$turret09:SAAA
+$turret10:SAAA
+$turret11:SAAA
+$turret12:Standard Flak
+$turret13:SAAA
+$turret14:Standard Flak
+$turret15:SRed
+$turret16:Standard Flak
+$turret17:Standard Flak
+$turret18:Standard Flak
+$turret19:Piranha#Shivan
+$turret20:Standard Flak
+$turret21:Standard Flak
+$turret22:Standard Flak
+$turret23:Standard Flak
+$turret24:SAAA
+$turret25:SRed
+$turret26:Piranha#Shivan
+$turret27:SRed
+$turret28:SRed
+$turret29:SAAA
+$turret30:Standard Flak
+#End
 [/code]
 
 In data/tables/init-sct.tbm, under #Conditional Hooks:
