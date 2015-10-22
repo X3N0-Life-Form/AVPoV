@@ -122,7 +122,7 @@ $Subsystem: 	turret10, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 0, 0
@@ -136,7 +136,7 @@ $Subsystem: 	turret12, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 0, 0
@@ -150,7 +150,7 @@ $Subsystem: 	turret13, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 0, 0
@@ -164,13 +164,13 @@ $Subsystem: 	turret14, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 0, 0
 $Subsystem: 	turret15, 			7, 6.0
 	$Alt Subsystem Name: 		Heavy Turret
-	$Default PBanks:			( "use multiple guns" "Mass Driver" "Heavy Flak#Fast" )
+	$Default PBanks:			( "Mass Driver" "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	256
 	$Turret Gun RotationSnd: 	257
 	$Turret BaseSnd Volume: 	1.0
@@ -178,7 +178,7 @@ $Subsystem: 	turret15, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
@@ -192,7 +192,7 @@ $Subsystem: 	turret16, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
@@ -206,7 +206,7 @@ $Subsystem: 	turret17, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
@@ -220,7 +220,7 @@ $Subsystem: 	turret18, 			7, 6.0
 	$Turret Reset Delay:		15000
 	$ROF:
 		+Use firingpoints ;:
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
@@ -235,19 +235,19 @@ $Subsystem: 	turret19, 			3, 3.0
 	$Turret BaseSnd Volume: 	1.0
 	$Turret GunSnd Volume: 		1.0
 	$Turret Reset Delay:		15000
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
 $Subsystem: 	turret20, 			3, 3.0
 	$Alt Subsystem Name: 		Light Turret
-	$Default PBanks:			( "use multiple guns" "Mass Driver" "Standard Flak" )
+	$Default PBanks:			( "Mass Driver" "Standard Flak" )
 	$Turret Base RotationSnd: 	256
 	$Turret Gun RotationSnd: 	257
 	$Turret BaseSnd Volume: 	1.0
 	$Turret GunSnd Volume: 		1.0
 	$Turret Reset Delay:		15000
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 0, 0
@@ -259,7 +259,7 @@ $Subsystem: 	turret21, 			3, 3.0
 	$Turret BaseSnd Volume: 	1.0
 	$Turret GunSnd Volume: 		1.0
 	$Turret Reset Delay:		15000
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0
@@ -271,7 +271,7 @@ $Subsystem: 	turret22, 			3, 3.0
 	$Turret BaseSnd Volume: 	1.0
 	$Turret GunSnd Volume: 		1.0
 	$Turret Reset Delay:		15000
-	$Flags:			 			( "use multiple guns" "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
 	$animation:					triggered
 	$type:						initial
 		+relative_angle:		90, 180, 0

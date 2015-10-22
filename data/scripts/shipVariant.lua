@@ -166,11 +166,11 @@ function setVariant(shipName, variantName)
 			
 		elseif (attribute == "ai class") then
 			dPrint_shipVariant("AI Class ==> "..value.."\n");
-			mn.evaluateSEXP([[[
+			mn.evaluateSEXP([[
 				(when (true)
 					(change-ai-class
-						"]]..shipName..[["
 						"]]..value..[["
+						"]]..shipName..[["
 					)
 				)
 			]])
