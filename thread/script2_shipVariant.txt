@@ -5,7 +5,7 @@ Mentioned in the parsing script [url=TODO]release thread[/url], this script allo
 While you can probably get similar results by defining different ship templates in your regular ship tables (since I remember reading that they were working again), I personally have several reasons to use that script over that :
 - Ship templates were not working when I started writing it, so I have no idea how to use them
 - The extra variants won't show up in FRED (or use extra table slots, if that's a concern), which is nice when you have several dozen new variants, and plan to introduce more
-- I am also working on another script that will allow me to automate the variant-switching deal even more
+- My mission-wide script automates the process even more and is fairly helpful to keep track of each ship's role and presence throughout the campaign
 
 -->[url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/shipVariant.lua] Source code[/url]
 
@@ -23,7 +23,7 @@ $On Warp In: [setVariantDelayed()]
 
 In data/config/ship_variants.tbl:
 Table specification:
-Each category specifies variants for a ship class (GTC Aeolus, GVD Sobek, etc.).
+Each category specifies variants for a ship class (GTC Aeolus, GVCv Sobek, etc.).
 Each entry defines a variant.
 Valid attributes:
 	hull						: special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)

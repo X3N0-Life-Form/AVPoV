@@ -7,7 +7,6 @@ Greetings, fellow modders
 Earlier this year, I started working on a script capable of parsing text files written in the style of Freespace tables. This idea was to have a generic parser that would allow me to read config files for other scripts. 
 
 -->[url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/parse.lua] Source code[/url]
-or [code][/code] tags ?
 
 [size=12][b]How to use it:[/b][/size]
 
