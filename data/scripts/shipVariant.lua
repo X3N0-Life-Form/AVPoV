@@ -122,7 +122,7 @@ function setVariant(shipName, variantName)
 		
 		if (attribute == "armor") then
 			dPrint_shipVariant("Armor ==> "..value.."\n")
-			ship.armorClass = value
+			ship.ArmorClass = value
 		elseif (attribute == "shield armor") then
 			dPrint_shipVariant("Shield Armor ==> "..value.."\n")
 			ship.ShieldArmorClass = value
