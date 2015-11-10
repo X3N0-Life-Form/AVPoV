@@ -1,21 +1,26 @@
-[RELEASE] Ship variant manager v1.0
+Greeting, fellow modders
 
-Mentioned in the parsing script [url=TODO]release thread[/url], this script allows modders to change a capship's loadout and a few other characteristics through a single lua call. The idea was that if a ship or a group of ships has a specific set of characteristics (turret loadout, armor type, AI class, etc.) that differentiate that ship from others of the same class, instead of having to manually copy these from mission to mission, and potentially introduce errors in the process, you would define a "ship variant" in a config table file, then only have to copy a single script-eval-block SEXP referencing that variant and the ship you want to apply it to.
+Mentioned in the parsing script [url=http://www.hard-light.net/forums/index.php?topic=89168.msg1776654#msg1776654]release thread[/url], this script allows modders to change a capship's loadout and a few other characteristics through a single lua call. The idea was that if a ship or a group of ships has a specific set of characteristics (turret loadout, armor type, AI class, etc.) that differentiate that ship from others of the same class, instead of having to manually copy these from mission to mission, and potentially introduce errors in the process, you would define a "ship variant" in a config table file, then only have to copy a single [font=courier]script-eval-block[/font] SEXP referencing that variant and the ship you want to apply it to.
 
 While you can probably get similar results by defining different ship templates in your regular ship tables (since I remember reading that they were working again), I personally have several reasons to use that script over that :
-- Ship templates were not working when I started writing it, so I have no idea how to use them
-- The extra variants won't show up in FRED (or use extra table slots, if that's a concern), which is nice when you have several dozen new variants, and plan to introduce more
-- My mission-wide script automates the process even more and is fairly helpful to keep track of each ship's role and presence throughout the campaign
+[list]
+[li]Ship templates were not working when I started writing it, so I have no idea how to use them[/li]
 
--->[url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/shipVariant.lua] Source code[/url]
+[li]The extra variants won't show up in FRED (or use extra table slots, if that's a concern), which is nice when you have several dozen new variants, and plan to introduce more[/li]
 
-[size=12][b]How to use it:[/b][/size]
+[li]My mission-wide script automates the process even more and is fairly helpful to keep track of each ship's role and presence throughout the campaign[/li]
+[/list]
 
-[color=red]REQUIRES [url=TODO][b]parse.lua[/b][/url][/color]
+
+Source code is available [url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/shipVariant.lua]here[/url].
+
+[size=12pt][b]How to use it:[/b][/size]
+
+Note: [color=red]REQUIRES [url=http://www.hard-light.net/forums/index.php?topic=89168.msg1776654#msg1776654][b]parse.lua[/b][/url][/color]
 
 Put [i]shipVariant.lua[/i] in data/scripts.
 
-In data/tables/init-sct.tbm, under #Conditional Hooks:
+In data/tables/init-sct.tbm, under [color=green]#Conditional Hooks[/color]:
 [code]
 $On Game Init: [[shipVariant.lua]]
 $On Warp In: [setVariantDelayed()]
@@ -23,19 +28,29 @@ $On Warp In: [setVariantDelayed()]
 
 In data/config/ship_variants.tbl:
 Table specification:
-Each category specifies variants for a ship class (GTC Aeolus, GVCv Sobek, etc.).
-Each entry defines a variant.
-Valid attributes:
-	hull						: special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)
-	armor						: hull armor type
-	turret armor				: ship-wide turret armor type
-	subsystem armor				: ship-wide subsystem armor type
-	team color					: change team color
-	ai class					: change ai class
-	
-Valid sub-attributes:
-	armor	: armor type
-	RoF		: new rate of fire (in percentage)
+[list]
+[li]Each category specifies variants for a ship class (GTC Aeolus, GVCv Sobek, etc.).[/li]
+
+[li]Each entry defines a variant.[/li]
+
+[li]Valid attributes:
+[list]
+[li][b][u]hull:[/u][/b] special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)[/li]
+[li][b][u]armor:[/u][/b] hull armor type[/li]
+[li][b][u]turret armor:[/u][/b] ship-wide turret armor type[/li]
+[li][b][u]subsystem armor:[/u][/b] ship-wide subsystem armor type[/li]
+[li][b][u]team color:[/u][/b] change team color[/li]
+[li][b][u]ai class:[/u][/b] change ai class[/li]
+[/list]
+[/li]
+
+[li]Valid sub-attributes:[/li]
+[list]
+[li][b][u]armor:[/u][/b] armor type[/li]
+[li][b][u]RoF:[/u][/b] new rate of fire (in percentage)[/li]
+[/list]
+[/list]
+
 
 
 Example:
@@ -94,4 +109,4 @@ In FRED:
 )
 [/code]
 
-I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8](in other words: I'm not sure if I'm explaining things properly here)[/size].
+I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8pt](in other words: I'm not sure if I'm explaining things properly here)[/size].
