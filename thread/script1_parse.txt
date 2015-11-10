@@ -1,14 +1,10 @@
-[RELEASE] FS-style table parser v1.0
-
-[size=8]old dev thread: http://www.hard-light.net/forums/index.php?topic=89168.0 [/size]
-
 Greetings, fellow modders
 
 Earlier this year, I started working on a script capable of parsing text files written in the style of Freespace tables. This idea was to have a generic parser that would allow me to read config files for other scripts. 
 
--->[url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/parse.lua] Source code[/url]
+Source code is available [url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/parse.lua]here[/url].
 
-[size=12][b]How to use it:[/b][/size]
+[size=12pt][b]How to use it:[/b][/size]
 
 Put [i]parse.lua[/i] in data/scripts.
 
@@ -17,25 +13,34 @@ In data/tables/init-sct.tbm, under #Conditional Hooks:
 $On Game Init: [[parse.lua]]
 [/code]
 
-Call the function [font=courier]parseTableFile(filePath, fileName)[/font] on a "$On Game Init:" hook, and store its results in a variable. Now the resulting data is basically a big multi-dimensional lua table:
- - The first layer represents [i]categories[/i], marked in the table file by a '#' followed the category's name, and ended by "#End". For instance, [b]#Ship Classes[/b] will be accessed by tableObject['Ship Classes']
- 
- - The second layer represents [i]entries[/i], identified by their name attribute. For instance, [b]$Name: GTF Ulysses[/b] will be access by tableObject['Ship Classes']['GTF Ulysses']
- 
- - The third layer are attributes, identified by a '$' followed by their name, and composed of a value and sub-attributes. Continuing with our example, $Hitpoints: 180 with accessed this way tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'], which will have a value of 180.
- Note: you can also have an array of values, such as [b]$Hitpoints: 340, 300, 260, 220, 180[/b], which are then access by their index: tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'][0] will return a value of 340.
- 
- - The fourth layer represents sub-attributes, identified by a '+' and their name. For instance, [b]+Armor: None[/b] will be accessed as tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['sub']['Armor'], and will have a value of "None"
+Call the function [font=courier][color=green]parseTableFile(filePath, fileName)[/color][/font] on a [color=green][i]$On Game Init:[/i][/color] hook, and store its results in a variable. The resulting data is basically a big multi-dimensional lua table:
+[size=8pt]Note: the things in yellow can be change to whatever you want.[/size]
+
+[list type=decimal]
+[li][u][b]Categories:[/b][/u] Begin with [color=green]#[/color][color=yellow]A name[/color], end with [color=green]#End[/color].
+[b]#Ship Classes[/b] is accessed by [font=courier]tableObject['Ship Classes'][/font][/li]
+[li][u][b]Entries:[/b][/u] Begin with [color=green]$Name:[/color] [color=yellow]some name[/color].
+[b]$Name: GTF Ulysses[/b] is access by[font=courier] tableObject['Ship Classes']['GTF Ulysses'][/font][/li]
+
+[li][u][b]Attributes:[/b][/u] Single line that begins with [color=green]$[/color][color=yellow]attribute name[/color][color=green]:[/color] [color=yellow]some value[/color].
+[b]$Hitpoints: 180[/b] is accessed by [font=courier]tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'][/font], which will have a value of [i]180[/i].
+Note: you can also have an array of values, such as [b]$Hitpoints: 340, 300, 260, 220, 180[/b], which are then access by their index: [font=courier]tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['value'][0][/font] will return a value of [i]340[/i].[/li]
+
+[li][u][b]Sub-attributes:[/b][/u] Single line that begins with [color=green]+[/color][color=yellow]sub attribute name[/color][color=green]:[/color] [color=yellow]some value[/color].
+[b]+Armor: None[/b] will be accessed as [font=courier]tableObject['Ship Classes']['GTF Ulysses']['Hitpoints']['sub']['Armor'][/font], and will have a value of "[i]None[/i]".
+Note : Sub-attributes can also have an array of values.
+[/li]
+[/list]
+
  
 Since this structure is a bit difficult to manipulate, I recommend splitting that big blob into sub tables or objects or whatever you feel comfortable with. Note that the script doesn't check the type of the parsed data, or whether a required attribute is present or not.
 
-[size=12][b]Examples:[/b][/size]
+[size=12pt][b]Examples:[/b][/size]
  
-I am currently developing 3 different scripts that use this parser for their config data, so here are a few code samples on how to use it. Note: these are code samples, meaning that they are missing several vital components.
+I currently have 3 different scripts that use this parser for their config data, so here are a few code samples on how to use it. Note: these are code samples, meaning that they are missing several vital components.
 
 
 [b]mission-wide ship variant[/b]
-
 Here we have a fairly simple table, with multiple categories, each entry has a single attribute, "Variant" with an optional sub-attribute, "Wing". The script function takes a category name, then processes each entry in that category.
 
 Table:
@@ -93,7 +98,6 @@ end
 [/code]
 
 [b]auto ssm strikes[/b]
-
 Here we a table with a single category. Each entry has two required attributes, "Type" and "Cooldown", one of which accepts either a single value or a list of values, and an optional attribute, "Default Seeking Algorithm". The script sample splits the parsed data into a bunch of one-dimensional tables to make them easier to use afterwards.
 
 Table:
@@ -174,4 +178,4 @@ end
 [/code]
 
 
-I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8](in other words: I'm not sure if I'm explaining things properly here)[/size].
+I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8pt](in other words: I'm not sure if I'm explaining things properly here)[/size].
