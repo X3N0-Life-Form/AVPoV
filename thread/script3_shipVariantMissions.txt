@@ -1,16 +1,17 @@
-[RELEASE] Mission-wide ship variant manager v1.0
+Greeting, fellow modders
+
 
 The final part of my ship variant framework is a script capable of assigning a variant to any number of ships in a mission with a single lua call. The script relies on the ship variant infrastructure, as well as another config table which specifies which variant is used by which ships within a certain number of categories. The ships are grouped by table category.
 
--->[url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/shipVariantMissionWide.lua] Source code[/url]
+Source code is available [url=https://raw.githubusercontent.com/X3N0-Life-Form/AVPoV/master/data/scripts/shipVariantMissionWide.lua]here[/url].
 
-[size=12][b]How to use it:[/b][/size]
+[size=12pt][b]How to use it:[/b][/size]
 
-[color=red]REQUIRES [url=TODO][b]parse.lua[/b][/url] and [url=TODO][b]shipVariant.lua[/b][/url][/color]
+[color=red]REQUIRES [url=http://www.hard-light.net/forums/index.php?topic=89168.msg1776654#msg1776654][b]parse.lua[/b][/url] and [url=http://www.hard-light.net/forums/index.php?topic=90898.msg1802705#msg1802705][b]shipVariant.lua[/b][/url][/color]
 
 Put [i]shipVariantMissionWide.lua[/i] in data/scripts.
 
-In data/tables/init-sct.tbm, under #Conditional Hooks:
+In data/tables/init-sct.tbm, under [color=green]#Conditional Hooks[/color]:
 [code]
 $On Game Init: [[shipVariantMissionWide.lua]]
 [/code]
@@ -62,4 +63,4 @@ $Variant:	PromR-Subach
 [/code]
 
 
-I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8](in other words: I'm not sure if I'm explaining things properly here)[/size].
+I am open to suggestions, remarks, questions regarding both this script and the way it is presented in this thread [size=8pt](in other words: I'm not sure if I'm explaining things properly here)[/size].
