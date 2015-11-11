@@ -158,6 +158,13 @@ $Variant:	Standard
 $Name:		Ennead
 $Variant:	Standard
 
+; Mentu class
+$Name:		Somtus
+$Variant:	Standard
+
+$Name:		Serkp'Pha
+$Variant:	Mass Driver
+
 ; Moloch class
 $Name:		Devil
 $Variant:	Carrier Corvette
