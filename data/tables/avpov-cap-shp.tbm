@@ -2781,7 +2781,7 @@ XSTR(
 Although its next generation beam cannon gives the enforcer enough firepower to challenge corvettes, its hull and subsystem strength is much lower than that of the standard Mentu.", -1)
 $end_multi_text
 $POF file:                      HTL-Mentu_b.pof
-$Detail distance:				(0, 1000, 1600, 11000)
+$Detail distance:				(0, 1000, 1600);, 11000)
 $Show damage:					YES
 $Density:                       1
 $Damp:                          0.2

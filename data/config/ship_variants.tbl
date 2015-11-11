@@ -578,7 +578,7 @@ $turret15:Mass Driver
 $turret16:Mass Driver
 #End
 
-#Variants: GVC Aten
+#GVC Aten
 $Name:	Mass Driver
 $turret01:Mass Driver
 $turret02:Mass Driver
@@ -586,6 +586,8 @@ $turret03:Wraith
 $turret04:Wraith
 $turret05:AAAf
 $turret06:AAAf
+
+;; TODO : flak variant
 #End
 
 
