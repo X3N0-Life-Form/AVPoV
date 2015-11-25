@@ -154,9 +154,9 @@ $Variant:	Long Range Hunter Killer Destroyer
 $Name:		Sphinx 
 $Variant:	Standard
 
-; Mentu class
-$Name:		Ennead
-$Variant:	Standard
+; Mentu Enforcer class
+;$Name:		Ennead
+;$Variant:	Standard
 
 ; Mentu class
 $Name:		Somtus
@@ -166,7 +166,7 @@ $Name:		Serkp'Pha
 $Variant:	Mass Driver
 
 ; Moloch class
-$Name:		Devil
+$Name:		Puloman
 $Variant:	Carrier Corvette
 
 #End
