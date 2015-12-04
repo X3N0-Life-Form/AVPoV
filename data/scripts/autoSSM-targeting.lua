@@ -119,7 +119,10 @@ function auto_ssm_seekProximity(name)
 	local closest = nil
 	for target, value in pairs(ssm_target_list[name]) do
 		-- if distance between target & proximityTarget < distance
-		-- nu distance
+		if (target.Position.getDistance(proximityTarget.Position) < distance) then
+			distance = target.Position.getDistance(proximityTarget.Position)
+		end
+		
 		closest = target
 	end
 	strike_current_target[name] = closest
