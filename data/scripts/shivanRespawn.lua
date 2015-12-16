@@ -2,6 +2,9 @@
 	-----------------------
 	-- Respawn Framework --
 	-----------------------
+	This script provides a framework to re-spawn the player by either
+	jumping to a ship in another wing, or to warp back into the
+	battle space.
 ]]
 
 

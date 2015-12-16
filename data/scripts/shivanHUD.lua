@@ -1,8 +1,10 @@
 --[[
-
+	----------------------------------
+	-- Shivan HUD activation script --
+	----------------------------------
+	This script activate Shivan-specific elements of the HUD.
 ]]
 
---- TODO: description
 function activateShivanHUD()
 	mn.evaluateSEXP([[( when
 	( true )

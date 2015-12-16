@@ -1,5 +1,11 @@
 --[[
-
+	-------------------------------
+	-- Waypoint highlight script --
+	-------------------------------
+	This script is meant to highlight the position of waypoints when debugging a mission.
+	Waypoints within the same path will use the same color.
+	Additional information such as the waypoint's position  and distance to selected
+	target will also be displayed.
 ]]
 
 ------------------------
