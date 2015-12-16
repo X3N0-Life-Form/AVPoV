@@ -2,7 +2,7 @@
 	-----------------------
 	-- turret set script --
 	-----------------------
-	Sets (Shivan) turret guns according to what is in the st primary bank.
+	Sets (Shivan) turret guns according to what is in the 1st primary bank.
 	Should be called on gamestart & warpin, or when creating a new bomber through ship-create.
 	Will also be responsible for properly setting up gunships according to which weapon package was selected.
 ]]
