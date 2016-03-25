@@ -9345,7 +9345,7 @@ $Formula: ( when-argument
          )
       )
       ( call-ssm-strike 
-         0 
+         "Shivan SSM Strike" 
          "Hostile" 
          "<argument>" 
       )
@@ -9420,7 +9420,7 @@ $Formula: ( when
             )
          )
       )
-      ( call-ssm-strike 2 "Hostile" "Apep" ) 
+      ( call-ssm-strike "Shivan SSM Barrage" "Hostile" "Apep" ) 
       ( do-nothing ) 
    )
 )
@@ -9440,7 +9440,7 @@ $Formula: ( when
       )
       ( do-nothing ) 
       ( call-ssm-strike 
-         2 
+         "Shivan SSM Barrage" 
          "Hostile" 
          "Ganymede Alpha" 
       )
@@ -9452,7 +9452,7 @@ $Formula: ( when
       )
       ( do-nothing ) 
       ( call-ssm-strike 
-         2 
+         "Shivan SSM Barrage" 
          "Hostile" 
          "Ganymede Beta" 
       )
