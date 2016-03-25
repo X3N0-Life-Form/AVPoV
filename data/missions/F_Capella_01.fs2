@@ -6325,9 +6325,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( has-arrived-delay 22 "Fox" ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
 )
 +Name: 2nd ssm vs Fox
 +Repeat Count: 1
@@ -6504,9 +6504,9 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
-   ( call-ssm-strike 1 "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
+   ( call-ssm-strike "Shivan AF SSM Strike" "Hostile" "Fox" ) 
 )
 +Name: 3rd ssm vs fox
 +Repeat Count: 1
@@ -6536,7 +6536,7 @@ $Formula: ( when-argument
       "Fox" 
    )
    ( call-ssm-strike 
-      1 
+      "Shivan AF SSM Strike" 
       "Hostile" 
 	  "<argument>" 
    )
@@ -6550,7 +6550,7 @@ $Formula: ( when-argument
    ( random-of "<any friendly>" ) 
    ( true ) 
    ( call-ssm-strike 
-      1 
+      "Shivan AF SSM Strike" 
       "Hostile" 
 	  "<argument>" 
    )
@@ -6566,7 +6566,7 @@ $Formula: ( when-argument
    ( random-of "<any friendly>" ) 
    ( true ) 
    ( call-ssm-strike 
-      1 
+      "Shivan AF SSM Strike" 
       "Hostile" 
 	  "<argument>" 
    )
