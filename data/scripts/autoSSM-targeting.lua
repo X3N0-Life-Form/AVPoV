@@ -16,19 +16,29 @@
 		- all
 ]]--
 
+-- set to true to enable prints
+autoSSMTargeting_enableDebugPrints = true
+
 -------------------------
 --- Utility Functions ---
 -------------------------
 
+function dPrint_autoSSMTargeting(message)
+	if (autoSSMTargeting_enableDebugPrints) then
+		ba.print("[auto_ssm-targeting.lua] "..message)
+	end
+end
+
 --- checks whether the current target is valid
 --- & removes it from the target list if it isn't
---- @param name: auto ssm name
-function auto_ssm_isCurrentTargetValid(name)
-	if(strike_current_target[name].HitpointsLeft > 0) then
+--- @param strikeName: auto ssm name
+function auto_ssm_isCurrentTargetValid(strikeName)
+	local target = mn.Ships[strike_current_target[strikeName]]
+	if (target.HitpointsLeft > 0) then
 		return true
 	else
-		strike_target_list[name][strike_current_target[name].Name] = nil
-		strike_current_target[name] = nil
+		strike_target_list[strikeName][target.Name] = nil
+		strike_current_target[strikeName] = nil
 		return false
 	end
 end
@@ -49,13 +59,14 @@ end
 
 --- Seeks the next target in the list
 --- Changes target upon call
-function auto_ssm_seekRoundRobin(name)
+function auto_ssm_seekRoundRobin(strikeName)
 	local lookUpCurrentTarget = true
-	for target, value in pairs(strike_target_list[name]) do
-		if (target == strike_current_target[name]) then
+	for targetName, value in pairs(strike_target_list[strikeName]) do
+		local target = mn.Ships[targetName]
+		if (target.Name == strike_current_target[strikeName]) then
 			lookUpCurrentTarget = false
-		elseif (lookUpCurrentTarget == false and not (target == strike_current_target[name])) then
-			strike_current_target[name] = target
+		elseif (lookUpCurrentTarget == false and not (target.Name == strike_current_target[strikeName])) then
+			strike_current_target[strikeName] = target.Name
 			break
 		end
 	end
@@ -79,16 +90,17 @@ end
 
 --- Seeks the target with the lowest number of hitpoints
 --- Changes target upon call
-function auto_ssm_seekWeakest(name)
+function auto_ssm_seekWeakest(strikeName)
 	local weakest = nil
 	local weakestHull = 10000000000 -- hopefully, should be high enough
-	for target, value in pairs(ssm_target_list[name]) do
+	for targetName, value in pairs(ssm_target_list[strikeName]) do
+		local target = mn.Ships[targetName]
 		if (target.HitpointsLeft < weakestHull) then
 			weakest = target
 			weakestHull = target.HitpointsLeft
 		end
 	end
-	strike_current_target[name] = weakest
+	strike_current_target[strikeName] = weakest
 end
 
 --- Seeks the target with the largest number of hitpoints
@@ -117,7 +129,8 @@ end
 function auto_ssm_seekProximity(name)
 	local distance = 1000000000 -- again, let's hope this is high enough
 	local closest = nil
-	for target, value in pairs(ssm_target_list[name]) do
+	for targetName, value in pairs(ssm_target_list[name]) do
+		local target = mn.Ships[targetName]
 		-- if distance between target & proximityTarget < distance
 		if (target.Position.getDistance(proximityTarget.Position) < distance) then
 			distance = target.Position.getDistance(proximityTarget.Position)

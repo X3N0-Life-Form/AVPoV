@@ -150,6 +150,9 @@ $Variant:	Long Range Hunter Killer Destroyer
 $Name:		Vampire
 $Variant:	Long Range Hunter Killer Destroyer
 
+$Name:		Pharaoh
+$Variant:	Combat Refit
+
 ; Sobek class
 $Name:		Sphinx 
 $Variant:	Standard
@@ -359,24 +362,33 @@ $Variant:	Light Support Cruiser
 $Name:		Olympus Shadow
 $Variant:	Standard
 
-; GTC Julius (Leviathan class) --> default
-; GTC Axius (Leviathan class) --> default
+; OS-E01 (Cretheus class) --> default
+; OS-E02 (Cretheus class) --> default
 
 ; Cain class
 $Name:		Lurz
-$Variant:	Light Cruiser
+$Variant:	Light Support Cruiser
 
 ; Cain class
 $Name:		Mekleth
-$Variant:	Light Cruiser
+$Variant:	Light Support Cruiser
 
 ; Moloch class
 $Name:		Ish'Kafel
 $Variant:	Strike Corvette
+; TODO : calls SSM strikes
 
 ; Deimos class
 $Name:		Monere
 $Variant:	Standard
+
+
+$Name:		Tal Niis
+$Variant:	Support Cruiser
+
+; Rakshasa class
+$Name:		Hellknight
+$Variant:	Hunter Killer Cruiser
 
 #End
 

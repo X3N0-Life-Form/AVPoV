@@ -25,7 +25,7 @@
 ]]--
 
 -- set to true to enable prints
-autoSSM_enableDebugPrints = true
+autoSSM_enableDebugPrints = false
 
 ------------------------
 --- Global Variables ---
@@ -64,8 +64,7 @@ function auto_ssm_setActive(strikeName, bool)
 end
 
 function auto_ssm_setTarget(strikeName, targetName)
-	local target = mn.Ships[targetName]
-	strike_current_target[strikeName] = target
+	strike_current_target[strikeName] = targetName
 end
 
 function auto_ssm_addTarget(strikeName, targetName)
@@ -74,6 +73,10 @@ end
 
 function auto_ssm_removeTarget(strikeName, targetName)
 	strike_target_list[strikeName][targetName] = nil
+end
+
+function auto_ssm_setStrikeTeam(strikeName, teamName)
+	strike_team[strikeName] = teamName
 end
 
 ---------------------------
@@ -137,8 +140,10 @@ end
 --- cycles through the automated strikes and fires them if necessary
 --- the responsibility of calling it is left to the FREDer
 function auto_ssm_cycle()
+	dPrint_autoSSM("Beginning auto_SSM cycle...\n")
 	-- for each active strike
 	for index, name in pairs(strike_info_id) do
+		dPrint_autoSSM(name.." : "..tostring(strike_active[name]).."\n")
 		if strike_active[name] then
 		
 			-- retrieve the strike's cooldown
@@ -148,9 +153,11 @@ function auto_ssm_cycle()
 			lastFired = strike_last_fired[name]
 			
 			-- if our strike is off cooldown
-			if (lastFired + cd >= mn.getMissionTime()) then
+			dPrint_autoSSM("\t"..lastFired.." + "..cd.." >= "..mn.getMissionTime().." ?\n")
+			if (lastFired == 0 or lastFired + cd >= mn.getMissionTime()) then
 				-- fire our strike and record the firing time if successful
 				if (auto_ssm_fire(name)) then
+					dPrint_autoSSM("\tStrike fired at "..mn.getMissionTime().."\n")
 					strike_last_fired[name] = mn.getMissionTime()
 				end
 			end
@@ -163,7 +170,7 @@ end
 --- Note: the strike's target should be its current target, as determined by its seeking algorithm
 function auto_ssm_fire(name)
 	-- select the current target
-	local target = strike_current_target[name]
+	local target = mn.Ships[strike_current_target[name]]
 	-- update the target's list if necessary
 	auto_ssm_updateTarget(name)
 	
@@ -173,6 +180,7 @@ function auto_ssm_fire(name)
 	-- select the strike's team
 	local strikeTeam = strike_team[name]
 	
+	dPrint_autoSSM("Firing "..strikeType.." from team "..strikeTeam.." at "..target.Name.."\n")
 	-- special case: don't fire if algo set to "all"
 	if not (strike_info_seeker_algo[name] == "all") then
 		mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strikeType.."\" \""..strikeTeam.."\" \""..target.Name.."\"))")

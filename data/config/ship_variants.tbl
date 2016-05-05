@@ -267,12 +267,21 @@ $turret14:Standard Flak
 $turret16:Piranha#Shivan
 
 $Name:	Strike Corvette
+$turret01:MRed
 $turret02:MRedUp
 $turret03:SAAA
 $turret04:Piranha#Shivan
+$turret05:MRed
+$turret06:MRed
+$turret07:Standard Flak
+$turret08:Standard Flak
+$turret09:Shivan Multi Turret
 $turret10:SAAA
-$turret11:Heavy Flak
+$turret11:Standard Flak
+$turret12:Shivan Multi Turret
+$turret13:SAAA
 $turret14:SAAA
+$turret15:Standard Flak
 $turret16:Piranha#Shivan
 
 ;; 		Cyaegha			;;
