@@ -43,7 +43,7 @@ strike_info_cooldown = {}		-- cooldown, in seconds
 strike_info_seeker_algo = {}	-- what target algorithm should be used?
 
 
-
+-- ! deprecated ! --
 --- active strike info ---
 --> indexed by name
 --> contains data related to active automated strikes
@@ -54,6 +54,21 @@ strike_target_list = {}		-- [name][target] = boolean; list of potential targets,
 strike_target_type = {}		-- [name][target] = ship/target type; may be used by target-seeking algorithms ??? maybe move this to info ???
 strike_team = {}			-- [name] = team name
 
+-- TODO : instance system
+-- indexed by a name
+strike_instances = {}
+
+function auto_ssm_create(instanceName, strikeClass, strikeTeam)
+	strike_instances[instanceName] = {
+		StrikeClass = strikeClass,
+		Team = strikeTeam,
+		Active = false,
+		TargetList = {},
+		LastFired = 0
+		-- + algo
+		-- + ship
+	}
+end;
 
 ----------------------------
 --- functions - settings ---
