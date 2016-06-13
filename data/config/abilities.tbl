@@ -1,12 +1,40 @@
 #Abilities
 
-$Name: string
-$Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
-$Target Team: list of string (hostile, friendly, neutral, relative to the caster)
-$Range: integer (optional)
-  +Min: integer (minimum range) (optional)
-$Cost: integer/list of integer (tied to diffculty level) (optional)
-  +Cost type: string (weapon energy reserve, "ammo" specific to that ability, "mana" reserve shared by all abilities) (optional)
-$Buff: list of string (optional)
+; $Name: string
+; $Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
+; $Target Team: list of string (hostile, friendly, neutral, relative to the caster)
+; $Range: integer (optional)
+;   +Min: integer (minimum range) (optional)
+; $Cost: integer/list of integer (tied to diffculty level) (optional)
+;   +Cost type: string (weapon energy reserve, "ammo" specific to that ability, "mana" reserve shared by all abilities) (optional)
+; $Buff: list of string (optional)
+; $Duration: list of int (optional)
+; $Ability Data: metadata used by whatever script actually uses the ability
+
+$Name:          SSM-moloch
+$Target Type:   big ship
+$Target Team:   Hostile
+$Cost:          1
+  +Cost Type:   global-ammo:SSM-moloch-ammo
+;; how about having multiple cost types ?
+$Ability Data:
+  +Strike Type: Shivan SSM Strike
+
+$Name:          Shivan Command aura ;; TODO: ai buff ?
+$Target Type:   fighter, bomber
+$Target Team:   Friendly
+$Range:         4000
+$Buff:          command aura
+$Ability Data:
+  +Max AI:      Colonel
+
+$Name:          Energy Dampening Field ;; TODO : energy drain thingy
+$Target Type:   fighter, bomber
+$Target Team:   Hostile
+$Range:         1500
+$Cost:          70
+  +Cost Type:   energy:weapon
+$Cooldown:      90
+$Duration:      15
 
 #End
