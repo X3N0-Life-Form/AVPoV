@@ -1,0 +1,12 @@
+#Abilities
+
+$Name: string
+$Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
+$Target Team: list of string (hostile, friendly, neutral, relative to the caster)
+$Range: integer (optional)
+  +Min: integer (minimum range) (optional)
+$Cost: integer/list of integer (tied to diffculty level) (optional)
+  +Cost type: string (weapon energy reserve, "ammo" specific to that ability, "mana" reserve shared by all abilities) (optional)
+$Buff: list of string (optional)
+
+#End
