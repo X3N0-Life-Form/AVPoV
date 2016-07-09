@@ -15,7 +15,7 @@ $Name:          SSM-moloch
 $Target Type:   big ship
 $Target Team:   Hostile
 $Cost:          1
-  +Cost Type:   global-ammo:SSM-moloch-ammo/ammo
+  +Cost Type:   global:SSM-moloch-ammo/ammo
 ;; how about having multiple cost types ?
 $Ability Data:
   +Strike Type: Shivan SSM Strike

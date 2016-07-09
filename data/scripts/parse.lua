@@ -52,7 +52,7 @@
 ]]--
 
 -- set to true to enable prints
-parse_enableDebugPrints = false
+parse_enableDebugPrints = true
 
 -------------------------
 --- Utility Functions ---
@@ -127,17 +127,42 @@ function split(str, pat)
 	return t
 end
 
+--[[
+	Returns the specified value as a string. If the value is a table, return each value separated by a space.
+	
+	@return value
+]]
+function getValueAsString(value)
+	if (value == nil) then
+		return "nil"
+	elseif (type(value) == 'table') then
+		local str = ""
+		for index, currentValue in pairs(value) do
+			str = str..currentValue.." "
+		end
+		return str
+	elseif (type(value) == 'boolean') then
+		if (value) then
+			return "true"
+		else
+			return "false"
+		end
+	else
+		return value
+	end
+end
+
 ----------------------
 --- Core Functions ---
 ----------------------
 
 function getAttribute(value, isList)
-	if (isList == nil) then
-		dPrint_parse("\t\tStuffing attribute value: "..value.."\n")
-		return value
-	else
+	if (isList) then
 		dPrint_parse("\t\tStuffing attribute list: "..value.."\n")
 		return split(value, ",")
+	else
+		dPrint_parse("\t\tStuffing attribute value: "..value.."\n")
+		return value
 	end
 end
 
@@ -152,31 +177,39 @@ function parseTableFile(filePath, fileName)
 		
 		local line = file:read("*l")
 		local lineNumber = 1
+		
+		dPrint_parse("#############################################\n")
 		ba.print("[parse.lua] Parsing file "..fileName.."\n");
+		dPrint_parse("#############################################\n")
+		
 		while (not (line == nil)) do
 			line = removeComments(line)
 			line = trim(line)
-			-- don't parse empty lines
+			-- Don't parse empty lines
 			if not (line == "") then
+				-- Extract values
 				local attribute = extractLeft(line)
 				local value = extractRight(line)
-				local isCat = string.find(line, "^#")
-				local isAttr = string.find(line, "$")
-				local isSubAttr = string.find(line, "+")
-				local isList = string.find(line, ",")
-				local isEnd = string.find(line, "^#End")
-				--
+				-- Extract flags
+				local isCat = not (string.find(line, "^#") == nil)
+				local isAttr = not (string.find(line, "[$]") == nil)
+				local isSubAttr = not (string.find(line, "[+]") == nil)
+				local isList = not (string.find(line, ",") == nil)
+				local isEnd = not (string.find(line, "^#End") == nil)
+				
 				dPrint_parse("Parsing line #"..lineNumber..": "..line.." ("..attribute.." = "..value..")\n")
-				if  not (isEnd == nil) then
+				dPrint_parse("\tLine flags: Category = "..getValueAsString(isCat)..", Attribute = "..getValueAsString(isAttr)..", Sub Attribute = "..getValueAsString(isSubAttr)..", List = "..getValueAsString(isList)..", End = "..getValueAsString(isEnd).."\n")
+				if  (isEnd) then
 					dPrint_parse("Reached an #End marker\n")
 				else
-					if not (isCat == nil) then
+					if (isCat) then
 						category = extractCategory(line)
 						dPrint_parse("Entering category: "..category.."\n")
 						tableObject[category] = {}
-					elseif not (isAttr == nil) then
+					elseif (isAttr) then
 						if (attribute == "Name") then
 							name = value
+							dPrint_parse("\n")
 							dPrint_parse("Name="..name.."\n")
 							tableObject[category][name] = {}
 							
@@ -186,19 +219,14 @@ function parseTableFile(filePath, fileName)
 							tableObject[category][name][attribute] = {}
 							tableObject[category][name][attribute]['value'] = getAttribute(value, isList)
 							
-							if (isList == nil) then
-								dPrint_parse("name="..name.."; attribute="..attribute.."; value="..tableObject[category][name][attribute]['value'].."\n")
-							else
-								--TODO: print list
-								dPrint_parse("name="..name.."; attribute="..attribute.."; value="..value.."\n")
-							end
+							dPrint_parse("name="..name.."; attribute="..attribute.."; value="..getValueAsString(value).."\n")
 						end
-					elseif not (isSubAttr == nil) then
+					elseif (isSubAttr) then
 						-- initialize if needs be
 						if (tableObject[category][name][currentAttribute]['sub'] == nil) then
 							tableObject[category][name][currentAttribute]['sub'] = {}
 						end
-						tableObject[category][name][currentAttribute]['sub'][attribute] = getAttribute( value, isList)
+						tableObject[category][name][currentAttribute]['sub'][attribute] = getAttribute(value, isList)
 						
 						dPrint_parse("name="..name.."; current attribute="..currentAttribute.."; sub attribute="..attribute.."; value="..value.."\n")
 					end
@@ -217,6 +245,7 @@ end
 
 --[[
 	Prints the specified table object to a string
+	
 	@param tableObject : the table to print
 	@return a string representing the table object
 ]]

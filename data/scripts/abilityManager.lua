@@ -25,16 +25,53 @@ end
 
 function dPrint_ability(message)
 	if (ability_enableDebugPrints) then
-		ba.print("[abilityManager.lua] "..message)
+		ba.print("[abilityManager.lua] "..message.."\n")
 	end
 end
 
 --[[
-	Return the specified class as a string.
+	Returns the specified class as a string.
 	
 	@param className : name of the class
+	@return class as printable string
 ]]
 function ability_getClassAsString(className)
+	local class = ability_classes[className]
+	return "Ability class:\t"..class.Name.."\n"
+		.."\tTargetType = "..getValueAsString(class.TargetType).."\n"
+		.."\tTargetTeam = "..getValueAsString(class.TargetTeam).."\n"
+		.."\tCooldown = "..getValueAsString(class.Cooldown).."\n"
+		.."\tDuration = "..getValueAsString(class.Duration).."\n"
+		.."\tRange = "..getValueAsString(class.Range).."\n"
+		.."\tCost = "..getValueAsString(class.Cost).."\n"
+		.."\t\tCostType = "..ability_getCostTypeAsString(class.CostType).."\n"
+end
+
+--[[
+	Returns a cost type as a string.
+	
+	@param costType structure
+	@return cost type as printable string
+]]
+function ability_getCostTypeAsString(costType)
+	local str = "nil"
+	
+	if not (costType == nil) then
+		str = costType.Type
+		
+		if (costType.Global) then
+			str = str.."(global)"
+		end
+		
+		if (costType.Energy) then
+			str = str.."(energy)"
+		end
+	end
+	
+	return str
+end
+
+function ability_getInstanceAsString(instanceId)
 	--TODO
 end
 
@@ -42,8 +79,11 @@ end
 --- Core Functions ---
 ----------------------
 
-
+--[[
+	Creates a class of the specified name and attributes
+]]
 function ability_createClass(name, attributes)
+	dPrint_ability("Creating class : "..name)
 	-- Initialize the class
 	ability_classes[name] = {
 	  Name = name,
@@ -68,7 +108,7 @@ function ability_createClass(name, attributes)
 		ability_classes[name].Cost = attributes['Cost']['value']
 		if not (attributes['Cost']['sub'] == nil) then --TODO : utility function to grab a sub attributes' value ???
 			if not (attributes['Cost']['sub']['Cost Type'] == nil) then
-				ability_classes[name].CostType = attributes['Cost']['sub']['Cost Type']
+				ability_classes[name].CostType = ability_createCostType(attributes['Cost']['sub']['Cost Type'])
 			end
 		end
 	end
@@ -82,7 +122,37 @@ function ability_createClass(name, attributes)
 end
 
 --[[
-	Reset the instance array. Should be called $On Gameplay Start.
+	Creates a cost type
+]]
+function ability_createCostType(costTypeValue)
+	dPrint_ability("Creating cost type : "..costTypeValue)
+	-- Init
+	local costType = {
+		Type = "none",
+		Global = false,
+		Energy = false
+	}
+	
+	-- Extract value
+	costType.Type = extractRight(costTypeValue)
+	
+	-- Identify subType
+	if not (costTypeValue:find(":") == nil) then
+		local subType = extractLeft(costTypeValue)
+		if (subType == "global") then
+			costType.Global = true
+		elseif (subType == "energy") then
+			costType.Energy = true
+		else
+			ba.warning("[abilityManager.lua] Unrecognised cost sub type : "..subType)
+		end
+	end
+	
+	return costType
+end
+
+--[[
+	Resets the instance array. Should be called $On Gameplay Start.
 ]]
 function ability_resetInstances()
 	ability_instances = {}
@@ -90,7 +160,7 @@ end
 
 
 --[[
-	Create an instance of the specified ability and tie it to the specified shipName.
+	Creates an instance of the specified ability and tie it to the specified shipName.
 	
 	@param instanceId : unique identifier for this instance
 	@param className : name of the ability
@@ -103,18 +173,18 @@ function ability_createInstance(instanceId, className, shipName)
 		LastFired = 0,
 		Active = true,
 		Manual = false, --if that instance must be fire manually
-		Ammo = -1 --needs to be set after creation if necessarys
+		Ammo = -1 --needs to be set after creation if necessary
 	}
 end
 
 --[[
-	Verify that this ability instance can be fired
+	Verifies that this ability instance can be fired
 	
 	@param instanceId : id of the ability instance to test
 	@return true if it can
 ]]
 function ability_canBeFired(instanceId)
-	-- Check that this is a valid idea
+	-- Check that this is a valid id
 	if (ability_instances[instanceId] == nil) then
 		ba.warning("[abilityManager.lua] Unknown instance id : "..instanceId)
 		return false
@@ -128,8 +198,10 @@ function ability_canBeFired(instanceId)
 		local missionTime = mn.getMissionTime()
 		local cooldown = class.Cooldown
 		if (instance.LastFired + cooldown >= missionTime) then
-			--TODO : Verify cost
-			return true
+			-- Verify cost
+			if (class.Cost >= 0) then
+				--TODO type
+			end
 		end
 	end
 	
