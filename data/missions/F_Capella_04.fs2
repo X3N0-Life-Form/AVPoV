@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Facing Goliath", -1)
 $Author: X3N0-Life-Form
 $Created: 12/02/12 at 10:51:47
-$Modified: 10/11/13 at 23:15:14
+$Modified: 07/09/16 at 10:53:14
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 757.092834, -1043.514404, 14136.609375
++Viewer pos: 734.069641, 17531.970703, 7052.253418
 +Viewer orient:
-	-0.919862, 0.000001, 0.392241,
-	-0.274992, 0.713082, -0.644898,
-	-0.279701, -0.701080, -0.655937
+	0.998925, 0.000000, -0.046347,
+	0.045317, 0.209611, 0.976734,
+	0.009715, -0.977785, 0.209385
 
 
 $Skybox Model: Starfield.pof
@@ -40,6 +40,7 @@ $Variables:
 (
 		0		"Sath-hull"		"94"		"number"		"player-persistent"
 )
+
 #Fiction Viewer
 
 $File: F04.txt
@@ -109,6 +110,7 @@ $Ship Choices: (
 	"GVB Bakha"	12
 	"GVF Serapis Elite"	4
 	"GVB Hathor"	4
+	"GVF Nhu"	8
 )
 
 +Weaponry Pool: (
@@ -413,11 +415,11 @@ $Dockee Point: Dock01
 $Name: Dockpoint dummies 1		;! Object #6
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8739.858398, -42.109100, 9201.695313
+$Location: 8739.858398, -42.109108, 9201.695313
 $Orientation:
 	0.074548, 0.928340, -0.364181,
-	0.631052, 0.238858, 0.738052,
-	0.772151, -0.284837, -0.568024
+	0.631052, 0.238858, 0.738051,
+	0.772150, -0.284838, -0.568024
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -442,11 +444,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 2		;! Object #7
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8706.747070, 12.704044, 9213.975586
+$Location: 8706.747070, 12.704047, 9213.975586
 $Orientation:
-	-0.074364, -0.928411, 0.364037,
+	-0.074365, -0.928411, 0.364038,
 	0.670575, 0.223638, 0.707329,
-	-0.738105, 0.296714, 0.605938
+	-0.738105, 0.296716, 0.605938
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -471,11 +473,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 3		;! Object #8
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8741.630859, -2.463392, 9187.414063
+$Location: 8741.635742, -2.462693, 9187.408203
 $Orientation:
-	0.755427, -0.290366, -0.587381,
-	0.652750, 0.255537, 0.713175,
-	-0.056984, -0.922166, 0.382576
+	0.755422, -0.290428, -0.587358,
+	0.652752, 0.255535, 0.713173,
+	-0.057034, -0.922147, 0.382614
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -500,11 +502,11 @@ $Dockee Point: topside docking
 $Name: Dockpoint dummies 4		;! Object #9
 $Class: GTT Elysium
 $Team: Unknown
-$Location: 8704.365234, -30.218206, 9229.854492
+$Location: 8704.359375, -30.218431, 9229.861328
 $Orientation:
-	0.755451, -0.290067, -0.587499,
-	0.652744, 0.255539, 0.713180,
-	-0.056741, -0.922259, 0.382386
+	0.755391, -0.290825, -0.587202,
+	0.652760, 0.255532, 0.713167,
+	-0.057358, -0.922022, 0.382865
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -592,11 +594,11 @@ $Determination: 10
 $Name: Rho 2		;! Object #11
 $Class: GTT Argo
 $Team: Friendly
-$Location: 13005.545898, 14.516876, 11767.515625
+$Location: 13019.577148, 4.514992, 11689.767578
 $Orientation:
-	0.177691, 0.000023, -0.984131,
-	0.984138, 0.000032, 0.177692,
-	0.000036, -1.000000, -0.000017
+	0.178501, 0.000022, -0.983984,
+	0.983991, 0.000032, 0.178502,
+	0.000036, -1.000000, -0.000016
 $AI Behavior: None
 $AI Goals: ( goals ( ai-undock 50 ) ( ai-waypoints-once "Rho path" 48 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1213,7 +1215,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1242,7 +1244,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1271,7 +1273,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1300,7 +1302,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1329,7 +1331,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1358,7 +1360,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1388,7 +1390,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -1419,7 +1421,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -1450,7 +1452,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -1481,7 +1483,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -1512,7 +1514,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -1543,7 +1545,7 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Shivan Sniper Gun" "Shivan Heavy Laser Up" )
-+Secondary Banks: ( "Shivan LR Swarm" )
++Secondary Banks: ( "" )
 $Arrival Location: Hyperspace
 +Arrival Delay: 1
 $Arrival Cue: ( true ) 
@@ -9420,7 +9422,11 @@ $Formula: ( when
             )
          )
       )
-      ( call-ssm-strike "Shivan SSM Barrage" "Hostile" "Apep" ) 
+      ( call-ssm-strike 
+         "Shivan SSM Barrage" 
+         "Hostile" 
+         "Apep" 
+      )
       ( do-nothing ) 
    )
 )
@@ -11233,7 +11239,7 @@ $Ambient light level: 7895160
 
 $Bitmap List:
 $Sun: SunCapellaC
-+Angles: 0.715585 0.000000 0.000000
++Angles: 0.715585 5.899213 0.000000
 +Scale: 1.000000
 
 #Asteroid Fields

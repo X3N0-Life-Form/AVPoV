@@ -424,10 +424,10 @@ The result was an expansive fighter, integrating the brand new gliding feature, 
 While the Serapis Elite is not quite as expensive as the Terran Ares or Erinyes, its still-low life expectancy in particularly intense combat situation has dissuaded Vasudan Command from committing this fighter for mass-production, and thus the Serapis remained the Vasudan's main Space Superiority fighter, while this model was taken over by Special Operations Command and Vasudan aces.", -1)
 $end_multi_text
 +Length:				14 Meters
-+Gun Mounts:			2
-+Missile Banks:			2
-$POF file:				fighter2v-01.pof
-$Detail distance:       (0, 70, 200, 700)
+	+Gun Mounts:		2 (2, 2)
+	+Missile Banks:		2 (60, 30)
+$POF file:				Serapis.pof
+$Detail distance:		( 0, 68, 201, 617 )
 $Show damage:           YES
 $Density:				1
 $Damp:					0.2
