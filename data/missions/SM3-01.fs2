@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Bearbaiting", 1494)
 $Author: James Agay
 $Created: 08/13/99 at 10:40:35
-$Modified: 06/13/13 at 15:10:00
+$Modified: 07/13/16 at 19:41:00
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -12,11 +12,12 @@ $End Notes:
 $Mission Desc:
  XSTR("Alpha wing of the 203rd must destroy the forward beam cannons of the Sathanas before it reaches the Capella jump node in Gamma Draconis", 1495)
 $end_multi_text
-
 +Game Type Flags: 1
-+Flags: 0
-+Red Alert: 0
-+Scramble: 1
++Flags: 131072
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -26,23 +27,16 @@ $end_multi_text
 
 +Viewer pos: -5050.512207, 9551.056641, -2709.371582
 +Viewer orient:
-	-0.716339, 0.000000, -0.697752,
-	0.690130, 0.147406, -0.708514,
-	0.102853, -0.989076, -0.105593
+	-0.847462, -0.000001, -0.530855,
+	0.529672, 0.066730, -0.845573,
+	0.035425, -0.997771, -0.056551
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
+
 $Skybox Model: Starfield.pof
+
 $AI Profile: myProfile
-
-#Plot Info
-
-$Tour:  XSTR("Blah", 6)
-$Pre-Briefing Cutscene: Blah
-$Pre-Mission Cutscene: Blah
-$Next Mission Success: Blah
-$Next Mission Partial: Blah
-$Next Mission Failure: Blah
 
 #Command Briefing
 
@@ -252,7 +246,6 @@ $Orientation:
 	-0.931615, 0.000000, -0.363446,
 	-0.026409, 0.997357, 0.067694,
 	0.362485, 0.072663, -0.929153
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -279,7 +272,6 @@ $Orientation:
 	-0.933479, 0.000000, -0.358633,
 	-0.025341, 0.997500, 0.065960,
 	0.357736, 0.070661, -0.931146
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -308,7 +300,6 @@ $Orientation:
 	-0.918919, 0.000000, -0.394447,
 	-0.028362, 0.997412, 0.066074,
 	0.393426, 0.071904, -0.916540
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -336,7 +327,6 @@ $Orientation:
 	-0.919483, 0.000000, -0.393131,
 	-0.027163, 0.997610, 0.063531,
 	0.392191, 0.069094, -0.917285
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -364,12 +354,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -433,11 +423,12 @@ $Departure Cue: ( <
    3500 
 )
 $Determination: 10
-+Flags: ( "escort" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 8
 +Group: 0
++Use Table Score:
 +Score: 10000
 
 $Name: Virgo 1		;! Object #5
@@ -448,12 +439,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -464,6 +455,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 2		;! Object #6
@@ -474,12 +466,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -490,6 +482,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 3		;! Object #7
@@ -500,12 +493,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -516,6 +509,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 4		;! Object #8
@@ -526,12 +520,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -542,6 +536,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Scorpio 1		;! Object #9
@@ -552,10 +547,10 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -576,10 +571,10 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon#Shivan" "Hornet#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -600,7 +595,6 @@ $Orientation:
 	-0.936747, 0.000000, -0.350008,
 	-0.023693, 0.997706, 0.063411,
 	0.349205, 0.067692, -0.934598
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -628,7 +622,6 @@ $Orientation:
 	-0.935194, 0.000000, -0.354136,
 	-0.023562, 0.997784, 0.062223,
 	0.353351, 0.066535, -0.933122
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -656,7 +649,6 @@ $Orientation:
 	-0.928844, 0.000000, -0.370470,
 	-0.024947, 0.997730, 0.062546,
 	0.369629, 0.067338, -0.926736
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -684,7 +676,6 @@ $Orientation:
 	-0.926046, 0.000000, -0.377410,
 	-0.024876, 0.997825, 0.061039,
 	0.376589, 0.065913, -0.924033
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -712,7 +703,6 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -740,7 +730,6 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -767,7 +756,6 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -794,7 +782,6 @@ $Orientation:
 	0.808028, 0.000000, -0.589145,
 	0.000000, 1.000000, 0.000000,
 	0.589145, 0.000000, 0.808028
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -821,13 +808,13 @@ $Orientation:
 	-0.870473, -0.385370, 0.306216,
 	-0.421681, 0.904752, -0.060081,
 	-0.253896, -0.181424, -0.950065
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 3" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -861,7 +848,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( < ( hits-left "Phoenicia" ) 4 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "beam-protect-ship" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" "beam-protect-ship" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
@@ -880,7 +867,6 @@ $Orientation:
 	-0.955612, 0.000000, -0.294628,
 	-0.021222, 0.997402, 0.068833,
 	0.293863, 0.072030, -0.953130
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -909,7 +895,6 @@ $Orientation:
 	-0.943793, 0.000000, -0.330537,
 	-0.023365, 0.997498, 0.066716,
 	0.329710, 0.070689, -0.941432
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -937,7 +922,6 @@ $Orientation:
 	-0.955778, 0.000000, -0.294090,
 	-0.020807, 0.997494, 0.067621,
 	0.293353, 0.070750, -0.953383
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -965,7 +949,6 @@ $Orientation:
 	-0.942794, 0.000000, -0.333375,
 	-0.023116, 0.997593, 0.065372,
 	0.332573, 0.069339, -0.940525
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
@@ -993,12 +976,12 @@ $Orientation:
 	-0.931779, 0.228279, 0.282270,
 	0.060956, 0.864891, -0.498244,
 	-0.357872, -0.447047, -0.819803
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Big
 $AI Goals: ( goals ( ai-chase "Beleth" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Primary Banks: ( "Wraith" )
@@ -1029,7 +1012,7 @@ $Arrival Cue: ( has-departed-delay 22 "Sathanas" )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -1045,12 +1028,12 @@ $Orientation:
 	0.980157, 0.000000, -0.198221,
 	0.000000, 1.000000, 0.000000,
 	0.198221, 0.000000, 0.980157
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Jump Node" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01-base
 +Subsystem: turret02-base
@@ -1098,7 +1081,7 @@ $Departure Cue: ( <
    1400 
 )
 $Determination: 10
-+Flags: ( "escort" )
++Flags: ( "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 1
@@ -1115,12 +1098,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1131,6 +1114,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Gemini 3		;! Object #27
@@ -1141,12 +1125,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1157,6 +1141,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Gemini 4		;! Object #28
@@ -1167,12 +1152,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1183,6 +1168,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Gemini 2		;! Object #29
@@ -1193,12 +1179,12 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Tornado#Shivan" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1209,6 +1195,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Epsilon 1		;! Object #30
@@ -1219,7 +1206,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1244,7 +1230,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1269,7 +1254,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -1294,7 +1278,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
@@ -2958,9 +2941,9 @@ $Formula: ( is-destroyed-delay 0 "Beleth" )
 
 #Waypoints		;! 3 lists total
 
+
 $Jump Node: -2319.147461, 0.000293, 157.318573
 $Jump Node Name: Capella
-
 $Name: Jump Node
 $List: (		;! 1 points in list
 	( -2350.842041, 0.000597, 197.803833 )
@@ -2978,6 +2961,7 @@ $List: (		;! 1 points in list
 )
 
 #Messages		;! 36 total
+
 
 $Name: HEC Bye
 $Team: -1
@@ -3279,7 +3263,7 @@ $Num times: 1
 #Background bitmaps		;! 22 total
 
 $Num stars: 2000
-$Ambient light level: 0
+$Ambient light level: 7895160
 
 $Bitmap List:
 $Sun: SunEtamin
@@ -3419,7 +3403,6 @@ $Starbitmap: NebulB2-Main
 +DivY: 1
 
 #Asteroid Fields
-
 
 #Music
 

@@ -469,12 +469,12 @@ $Subsystem: 	turret02, 			1.0, 6.5
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret03, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Advanced Flak" )
+	$Default PBanks:		 	( "Suppression Flak" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Advanced Flak" )
+	$Default PBanks:		 	( "Suppression Flak" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret05, 			0.5, 0.5
@@ -484,12 +484,12 @@ $Subsystem: 	turret05, 			0.5, 0.5
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret06, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Advanced Flak" )
+	$Default PBanks:		 	( "Suppression Flak" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret07, 			0.5, 0.5
 	$Armor Type:				Shivan Elite Armor
-	$Default PBanks:		 	( "Advanced Flak" )
+	$Default PBanks:		 	( "Suppression Flak" )
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret08, 			0.25, 0.5
@@ -1388,11 +1388,11 @@ $Subsystem:                     Turret10a, 1.0, 3.0
 ;Flak type turrets
 
 $Subsystem:                     Turret11, 1.0, 3.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret12, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret13, 0.3, 2.0
@@ -1402,7 +1402,7 @@ $Subsystem:                     Turret13, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret14, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret15, 0.3, 2.0
@@ -1412,7 +1412,7 @@ $Subsystem:                     Turret15, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret16, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret17, 0.3, 2.0
@@ -1422,7 +1422,7 @@ $Subsystem:                     Turret17, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret18, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret19, 0.3, 2.0
@@ -1432,7 +1432,7 @@ $Subsystem:                     Turret19, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret20, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret21, 0.3, 2.0
@@ -1442,11 +1442,11 @@ $Subsystem:                     Turret21, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret22, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret23, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret24, 0.3, 2.0
@@ -1456,7 +1456,7 @@ $Subsystem:                     Turret24, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret25, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret26, 0.3, 2.0
@@ -1466,7 +1466,7 @@ $Subsystem:                     Turret26, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret27, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret28, 0.3, 2.0
@@ -1476,11 +1476,11 @@ $Subsystem:                     Turret28, 0.3, 2.0
 		+Multiplier:	2.0
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret29, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 $Subsystem:                     Turret30, 0.3, 2.0
-	$Default PBanks:        ( "Advanced Flak" )
+	$Default PBanks:        ( "Heavy Flak#Fast" )
 	$Max Turrets per Bomb:		1
 	$Flags:				( "check hull" )
 
@@ -3641,7 +3641,7 @@ $Subsystem: 	turret03, 			5.5, 20.0
 		+Multiplier:	2.0
 	$Flags:			 			( "check hull" )
 $Subsystem: 	turret04, 			3.4, 20.0
-	$Default PBanks:			( "Advanced Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
@@ -3653,7 +3653,7 @@ $Subsystem: 	turret04, 			3.4, 20.0
 	$type:						initial
 		+relative_angle:		80, 0, 0
 $Subsystem: 	turret05, 			3.4, 20.0
-	$Default PBanks:			( "Advanced Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
@@ -3665,7 +3665,7 @@ $Subsystem: 	turret05, 			3.4, 20.0
 	$type:						initial
 		+relative_angle:		80, 0, 0
 $Subsystem: 	turret06, 			3.4, 20.0
-	$Default PBanks:			( "Advanced Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
@@ -3677,7 +3677,7 @@ $Subsystem: 	turret06, 			3.4, 20.0
 	$type:						initial
 		+relative_angle:		80, 0, 0
 $Subsystem: 	turret07, 			3.4, 20.0
-	$Default PBanks:			( "Advanced Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0
@@ -3689,7 +3689,7 @@ $Subsystem: 	turret07, 			3.4, 20.0
 	$type:						initial
 		+relative_angle:		80, 180, 0
 $Subsystem: 	turret08, 			3.4, 20.0
-	$Default PBanks:			( "Advanced Flak" )
+	$Default PBanks:			( "Heavy Flak#Fast" )
 	$Turret Base RotationSnd: 	254
 	$Turret Gun RotationSnd: 	255
 	$Turret BaseSnd Volume: 	1.0

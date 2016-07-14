@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("High Noon", 1558)
 $Author: James Agay @ V
 $Created: 06/14/99 at 14:59:27
-$Modified: 07/10/15 at 23:19:28
+$Modified: 07/14/16 at 10:55:57
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -25,11 +25,11 @@ $end_multi_text
 +Player Entry Delay:
 2.000000
 
-+Viewer pos: -6950.979004, 14286.835938, 21613.533203
++Viewer pos: 1933.980347, 12913.882813, 26766.140625
 +Viewer orient:
-	-0.078116, 0.000002, -0.996944,
-	0.758404, 0.649071, -0.059424,
-	0.647087, -0.760728, -0.050704
+	-0.830580, 0.000002, -0.556899,
+	0.499472, 0.442275, -0.744930,
+	0.246301, -0.896880, -0.367346
 +SquadReassignName: 203rd Scorpions
 +SquadReassignLogo: vasudan1.pcx
 
@@ -255,7 +255,7 @@ $Ship Choices: (
 	"Tempest"	1600
 )
 
-#Objects		;! 15 total
+#Objects		;! 14 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GVB Bakha
@@ -292,7 +292,7 @@ $Orientation:
 	-0.010759, 0.997086, 0.075522,
 	0.140630, 0.076285, -0.987119
 $AI Behavior: None
-+AI Class: General
++AI Class: Cap_Killer
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -320,7 +320,7 @@ $Orientation:
 	-0.011719, 0.997066, 0.075649,
 	0.152643, 0.076551, -0.985312
 $AI Behavior: None
-+AI Class: General
++AI Class: Cap_Killer
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -348,7 +348,7 @@ $Orientation:
 	-0.010520, 0.997025, 0.076353,
 	0.136089, 0.077074, -0.987694
 $AI Behavior: None
-+AI Class: General
++AI Class: Cap_Killer
 $AI Goals: ( goals ( ai-destroy-subsystem "Sathanas" "turret01" 50 ) ( ai-destroy-subsystem "Sathanas" "turret02" 33 ) ( ai-destroy-subsystem "Sathanas" "turret03" 22 ) ( ai-destroy-subsystem "Sathanas" "turret04" 11 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
@@ -527,6 +527,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Sbank Ammo: ( 0 )
 +Subsystem: turret46
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
++Secondary Banks: ( "Catapult" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret47
 +Primary Banks: ( "LRBGreen" )
@@ -541,7 +542,7 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Secondary Banks: ( "Catapult" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret50
-+Primary Banks: ( "TerSlash" )
++Primary Banks: ( "VSlash" )
 +Secondary Banks: ( "Catapult" )
 +Sbank Ammo: ( 0 )
 +Subsystem: turret51
@@ -788,63 +789,6 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Noliun		;! Object #14
-$Class: GVCv Sobek
-$Team: Friendly
-$Location: 5000.000000, -600.000000, 26000.000000
-$Orientation:
-	-0.995162, 0.000000, 0.098248,
-	0.000000, 1.000000, 0.000000,
-	-0.098248, 0.000000, -0.995162
-$AI Behavior: None
-+AI Class: Big
-$Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 76
-+Initial Shields: 100
-+Subsystem: Pilot
-+Subsystem: turret01
-+Primary Banks: ( "Wraith" )
-+Subsystem: turret02
-+Primary Banks: ( "Wraith" )
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Primary Banks: ( "Wraith" )
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-$Arrival Location: Hyperspace
-$Arrival Cue: ( is-previous-event-true 
-   "sm3-01" 
-   "All beams dead" 
-   ( false ) 
-)
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "no-shields" "escort" )
-+Flags2: ( )
-+Respawn priority: 0
-+Escort priority: 6
-+Orders Accepted: 0		;! note that this is a bitfield!!!
-+Group: 0
-+Use Table Score:
-+Score: 400
-
 #Wings		;! 3 total
 
 $Name: Alpha
@@ -907,7 +851,7 @@ $AI Goals: ( goals ( ai-guard "Alpha 1" 50 ) ( ai-chase-wing "Cancer" 60 ) )
 +Hotkey: 1
 +Flags: ( )
 
-#Events		;! 38 total
+#Events		;! 40 total
 
 $Formula: ( when 
    ( true ) 
@@ -1616,6 +1560,27 @@ $Formula: ( when
    ( tech-add-weapons "Circe" ) 
 )
 +Name: New Stuff
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: -- AVPoV stuff --
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( <= 
+      ( distance "Beta" "Cancer" ) 
+      5600 
+   )
+   ( good-secondary-time 
+      "Friendly" 
+      100 
+      "Trebuchet" 
+      "Cancer 1" 
+   )
+)
++Name: help the moronic AI - Beta
 +Repeat Count: 1
 +Interval: 1
 
