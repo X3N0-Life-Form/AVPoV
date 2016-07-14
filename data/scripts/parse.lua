@@ -52,7 +52,7 @@
 ]]--
 
 -- set to true to enable prints
-parse_enableDebugPrints = true
+parse_enableDebugPrints = false
 
 -------------------------
 --- Utility Functions ---
@@ -92,7 +92,11 @@ function extractLeft(attribute)
 	if (cut == nil) then
 		return trim(line)
 	else
-		return trim(string.sub(line, 2, cut - 1))
+		if (string.find(line, "[#$+]") == nil) then
+			return trim(string.sub(line, 1, cut - 1))
+		else
+			return trim(string.sub(line, 2, cut - 1))
+		end
 	end
 end
 

@@ -60,19 +60,31 @@ function ability_getCostTypeAsString(costType)
 		str = costType.Type
 		
 		if (costType.Global) then
-			str = str.."(global)"
+			str = str.." (global)"
 		end
 		
 		if (costType.Energy) then
-			str = str.."(energy)"
+			str = str.." (energy)"
 		end
 	end
 	
 	return str
 end
 
+--[[
+	Returns an instance as a string.
+	
+	@param instanceId instance id
+	@return instance as a printable string
+]]
 function ability_getInstanceAsString(instanceId)
-	--TODO
+	local instance = ability_instances[instanceId]
+	return "Ability instance:\t"..instance.Class.."\n"
+		.."\tShip = "..getValueAsString(instance.Ship).."\n"
+		.."\tLastFired = "..getValueAsString(instance.LastFired).."\n"
+		.."\tActive = "..getValueAsString(instance.Active).."\n"
+		.."\tManual = "..getValueAsString(instance.Manual).."\n"
+		.."\tAmmo = "..getValueAsString(instance.Ammo).."\n"
 end
 
 ----------------------
@@ -167,6 +179,7 @@ end
 	@param shipName : ship to tie the ability to. Can be nil.
 ]]
 function ability_createInstance(instanceId, className, shipName)
+	dPrint_ability("Creating instance of class "..className.." with id "..instanceId.." for ship "..getValueAsString(shipName))
 	ability_instances[instanceId] = {
 		Class = className,
 		Ship = shipName,
@@ -175,6 +188,8 @@ function ability_createInstance(instanceId, className, shipName)
 		Manual = false, --if that instance must be fire manually
 		Ammo = -1 --needs to be set after creation if necessary
 	}
+	
+	dPrint_ability(getInstantceAsString(instanceId))
 end
 
 --[[
