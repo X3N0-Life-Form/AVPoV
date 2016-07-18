@@ -156,6 +156,20 @@ function getValueAsString(value)
 	end
 end
 
+--[[
+	Returns either the passed value, or the value according to the current difficulty level.
+
+	@param value value or table of values
+	@return actual value
+]]
+function getValue(value)
+	if (type(value) == 'table') then
+		return value[ba.getGameDifficulty()]
+	else
+		return value
+	end
+end
+
 ----------------------
 --- Core Functions ---
 ----------------------

@@ -50,7 +50,7 @@ end
 --[[
 	Returns a cost type as a string.
 	
-	@param costType structure
+	@param costType : structure
 	@return cost type as printable string
 ]]
 function ability_getCostTypeAsString(costType)
@@ -74,7 +74,7 @@ end
 --[[
 	Returns an instance as a string.
 	
-	@param instanceId instance id
+	@param instanceId : instance id
 	@return instance as a printable string
 ]]
 function ability_getInstanceAsString(instanceId)
@@ -135,6 +135,8 @@ end
 
 --[[
 	Creates a cost type
+	
+	@return cost type
 ]]
 function ability_createCostType(costTypeValue)
 	dPrint_ability("Creating cost type : "..costTypeValue)
@@ -189,7 +191,7 @@ function ability_createInstance(instanceId, className, shipName)
 		Ammo = -1 --needs to be set after creation if necessary
 	}
 	
-	dPrint_ability(getInstantceAsString(instanceId))
+	dPrint_ability(ability_getInstanceAsString(instanceId))
 end
 
 --[[
@@ -207,21 +209,60 @@ function ability_canBeFired(instanceId)
 	
 	local instance = ability_instances[instanceId]
 	local class = ability_classes[instance.Class]
+	dPrint_ability("Can '"..instanceId.."' ("..instance.Class..") be fired ?")
+	
 	-- Verify that this instance is active
 	if (instance.Active) then
+		
 		-- Verify cooldown
 		local missionTime = mn.getMissionTime()
-		local cooldown = class.Cooldown
+		local cooldown = getValue(class.Cooldown)
 		if (instance.LastFired + cooldown >= missionTime) then
+			
+			dPrint_ability("\tCooldown OK")
 			-- Verify cost
-			if (class.Cost >= 0) then
-				--TODO type
+			if (class.Cost >= 0) then --TODO : successive ifs, not nested ones
+				-- Handle cost type
+				-- TODO : refactor cost handling into a sub function
+				local costType = class.CostType
+				local costTest = -1
+				if (costType == nil) then
+					costTest = instance.Ammo - class.Cost
+				elseif (costType.Global) then
+					ba.warning("Not yet implemented")--TODO
+				elseif (costType.Energy) then
+					ba.warning("Not yet implemented")--TODO
+				else
+					costTest = instance.Ammo - class.Cost
+				end
+				
+				-- Actual cost test
+				if (costTest >= 0) then
+					dPrint_ability("\tCost OK")
+					return true
+				end
+				
+			else
+				-- Case : no cost
+				dPrint_ability("\tNo ammo cost")
+				return true
 			end
 		end
 	end
 	
 	-- Default
 	return false
+end
+
+--[[
+	Verify that the target is in range and of a valid type
+	
+	@param instanceId : id of the ability instance to test
+	@param target : name of the target ship
+	@return true if it can
+]]
+function ability_canBeFiredAt(instanceId, target)
+	
 end
 
 ------------
