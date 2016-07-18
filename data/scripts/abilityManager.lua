@@ -224,6 +224,34 @@ function ability_canBeFired(instanceId)
 	return false
 end
 
+function ability_canBeFiredAt(instanceId, targetName)
+	local instance = ability_instances[instanceId]
+	-- Verify id
+	if (ability_instances[instanceId] == nil) then --TODO : refactor that into a function ?
+		ba.warning("[abilityManager.lua] Unknown instance id : "..instanceId)
+		return false
+	end
+	
+	local class = ability_classes[instance.Class]
+	local firingShip = mn.Ships[instance.Ship]
+	local targetShip = mn.Ships[targetName]
+	-- Verify that both handles are valid
+	if (firingShip == nil or targetShip == nil) then
+		ba.warning("TODO")
+		return false
+	else
+		local distance = TODO
+		-- Verify range
+		if (distance <= class.Range) then
+			-- Verify target team
+			-- Verify target type
+		end
+		
+		-- Default
+		return false
+	end
+end
+
 ------------
 --- main ---
 ------------
