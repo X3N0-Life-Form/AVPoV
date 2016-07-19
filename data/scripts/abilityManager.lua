@@ -99,8 +99,8 @@ function ability_createClass(name, attributes)
 	-- Initialize the class
 	ability_classes[name] = {
 	  Name = name,
-	  TargetType = attributes['Target Type']['value'],
-	  TargetTeam = attributes['Target Team']['value'],
+	  TargetType = attributes['Target Type']['value'],--TODO : use getValue ?
+	  TargetTeam = attributes['Target Team']['value'],--TODO : ditto
 	  Cooldown = nil,
 	  Duration = nil,
 	  Range = -1,
@@ -231,7 +231,8 @@ function ability_canBeFired(instanceId)
 				elseif (costType.Global) then
 					ba.warning("Not yet implemented")--TODO
 				elseif (costType.Energy) then
-					ba.warning("Not yet implemented")--TODO
+					local ship = mn.Ships[instance.Ship]
+					costTest = ship.WeaponEnergyLeft - class.Cost
 				else
 					costTest = instance.Ammo - class.Cost
 				end
@@ -281,7 +282,16 @@ function ability_canBeFiredAt(instanceId, targetName)
 		-- Verify range
 		if (distance <= class.Range) then
 			-- Verify target team
+			-- TODO : see if we can access IFF
+			firingShip.Team
+			targetShip.Team
 			-- Verify target type
+			-- TODO : refactor into hasShipType ?
+			for i, typeName in pairs(instance.TargetType) do
+				if (targetShip.Type.Name == typeName) then
+					return true
+				end
+			end
 		end
 		
 		-- Default
