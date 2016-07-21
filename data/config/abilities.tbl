@@ -2,7 +2,7 @@
 
 ; $Name: string
 ; $Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
-; $Target Team: list of string (hostile, friendly, neutral, relative to the caster)
+; $Target Team: list of string (hostile, friendly, relative to the caster)
 ; $Range: integer (optional)
 ;   +Min: integer (minimum range) (optional)
 ; $Cost: integer/list of integer (tied to diffculty level) (optional)

@@ -221,7 +221,7 @@ function ability_canBeFired(instanceId)
 			
 			dPrint_ability("\tCooldown OK")
 			-- Verify cost
-			if (class.Cost >= 0) then --TODO : successive ifs, not nested ones
+			if (class.Cost >= 0) then
 				-- Handle cost type
 				-- TODO : refactor cost handling into a sub function
 				local costType = class.CostType
@@ -256,7 +256,7 @@ function ability_canBeFired(instanceId)
 end
 
 --[[
-	Verify that the target is in range and of a valid type
+	Verifies that the target is in range and of a valid type
 	
 	@param instanceId : id of the ability instance to test
 	@param target : name of the target ship
@@ -265,30 +265,33 @@ end
 function ability_canBeFiredAt(instanceId, targetName)
 	local instance = ability_instances[instanceId]
 	-- Verify id
-	if (ability_instances[instanceId] == nil) then --TODO : refactor that into a function ?
+	if (ability_instances[instanceId] == nil) then
 		ba.warning("[abilityManager.lua] Unknown instance id : "..instanceId)
 		return false
 	end
 	
+	dPrint_ability("Can "..instanceId.." be fired at "..targetName.." ?")
 	local class = ability_classes[instance.Class]
 	local firingShip = mn.Ships[instance.Ship]
 	local targetShip = mn.Ships[targetName]
 	-- Verify that both handles are valid
 	if (firingShip == nil or targetShip == nil) then
-		ba.warning("TODO")
+		ba.warning("TODO")--TODO : warning + handle checks
 		return false
 	else
-		local distance = TODO
+		local distance = firingShip.Position:getDistance(targetShip.Position)
+		dPrint_ability("\tDistance to target: "..distance)
 		-- Verify range
-		if (distance <= class.Range) then
+		if (distance <= class.Range or class.Range == -1) then
+			dPrint_ability("\tTarget in range")
+			
 			-- Verify target team
-			-- TODO : see if we can access IFF
-			firingShip.Team
-			targetShip.Team
-			-- Verify target type
-			-- TODO : refactor into hasShipType ?
-			for i, typeName in pairs(instance.TargetType) do
-				if (targetShip.Type.Name == typeName) then
+			if (ability_isValidTeam(class, firingShip, targetShip)) then
+				dPrint_ability("\tTarget team is valid")
+			
+				-- Verify target type
+				if (ability_isValidShipType(class, targetShip)) then
+					dPrint_ability("\tTarget type is valid")
 					return true
 				end
 			end
@@ -296,6 +299,44 @@ function ability_canBeFiredAt(instanceId, targetName)
 		
 		-- Default
 		return false
+	end
+end
+
+--[[
+	Verifies the IFF of two ships compared to who the ability can target
+	
+	@param class : ability class
+	@param firingShip : handle for the ship firing the ability
+	@param targetShip : handle for the targetted ship
+	@return true if the team is a valid target
+]]
+function ability_isValidTeam(class, firingShip, targetShip)
+	dPrint_ability("Is "..targetShip.Team.Name.." a valid target for a "..class.Name.." called by "..firingShip.Team.Name.." ?")
+	
+	local isHostile = firingShip.Team:attacks(targetShip.Team)
+	if (isHostile and contains(class.TargetTeam, "Hostile")) then
+		return true
+	elseif (not isHostile and contains(class.TargetTeam, "Friendly")) then
+		return true
+	end
+	
+	return false
+end
+
+--[[
+	Verifies that a ship is of a valid type for an ability
+
+	@param class : ability class
+	@param targetShip : valid ship handle
+	@return true if the target ship is of a valid type
+]]
+function ability_isValidShipType(class, targetShip)
+	dPrint_ability("Is "..targetShip.Type.Name.." a valid target type for "..class.Name.." ?")
+
+	for i, typeName in pairs(class.TargetType) do
+		if (targetShip.Type.Name == typeName) then
+			return true
+		end
 	end
 end
 

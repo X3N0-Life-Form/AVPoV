@@ -170,6 +170,21 @@ function getValue(value)
 	end
 end
 
+--TODO : doc
+function contains(value_table, value)
+	if (type(value_table) == 'table') then
+		for i, currentValue in pairs(value_table) do
+			if (currentValue == value) then
+				return true
+			end
+		end
+	else
+		return value_table == value
+	end
+	
+	return false
+end
+
 ----------------------
 --- Core Functions ---
 ----------------------
