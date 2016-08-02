@@ -232,6 +232,7 @@ function ability_canBeFired(instanceId)
 					ba.warning("Not yet implemented")--TODO
 				elseif (costType.Energy) then
 					local ship = mn.Ships[instance.Ship]
+					ba.warning("Hey genius, fix this")--needs to handle shield & AB type
 					costTest = ship.WeaponEnergyLeft - class.Cost
 				else
 					costTest = instance.Ammo - class.Cost
