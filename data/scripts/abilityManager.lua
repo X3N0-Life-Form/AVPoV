@@ -270,7 +270,7 @@ function ability_canBeFiredAt(instanceId, targetName)
 		return false
 	end
 	
-	dPrint_ability("Can "..instanceId.." be fired at "..targetName.." ?")
+	dPrint_ability("Can '"..instanceId.."' be fired at "..targetName.." ?")
 	local class = ability_classes[instance.Class]
 	local firingShip = mn.Ships[instance.Ship]
 	local targetShip = mn.Ships[targetName]
@@ -333,17 +333,27 @@ end
 function ability_isValidShipType(class, targetShip)
 	dPrint_ability("Is "..targetShip.Type.Name.." a valid target type for "..class.Name.." ?")
 
-	for i, typeName in pairs(class.TargetType) do
-		if (targetShip.Type.Name == typeName) then
-			return true
+	if (type(class.TargetType) == 'table') then
+		for i, typeName in pairs(class.TargetType) do
+			if (targetShip.Type.Name == typeName) then
+				return true
+			end
+		end
+	else
+		if (targetShip.Type.Name == class.TargetType) then
+				return true
 		end
 	end
+	
+	-- Default
+	return false
 end
 
 ------------
 --- main ---
 ------------
 
+--TODO : PR for .tbl support in config
 abilityTable = parseTableFile("data/config/", "abilities.tbl")
 
 ba.print(getTableObjectAsString(abilityTable))
