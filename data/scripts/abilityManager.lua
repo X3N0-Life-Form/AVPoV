@@ -1,3 +1,4 @@
+--TODO : doc
 
 ------------------------
 --- Global Variables ---
@@ -10,9 +11,49 @@ ability_instances = {}
 -- set to true to enable prints
 ability_enableDebugPrints = true
 
-----------------------
---- ??? Functions ---
-----------------------
+----------------------------
+--- High Level Functions ---
+----------------------------
+
+--[[
+	Fires an ability
+
+	@param instanceId : id of the ability instance to fire
+	@param targetName : name of the target ship
+]]
+function ability_fire(instanceId, targetName)
+	local instance = ability_instances[instanceId]
+	local class = ability_classes[instance.Class]
+	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
+	
+	-- Route the firing to the proper script
+	if (class.Name == "SSM-moloch-std") then
+		fireSSM(instance, class, targetName)
+	end
+	
+	-- Update instance status
+	instance.LastFired = mn.getMissionTime()
+	instance.Ammo = instance.Ammo - class.Cost
+	dPrint_ability("Instance new status :")
+	dPrint_ability(ability_getInstanceAsString(instanceId))
+end
+
+
+--[[
+	Fires an ability at the specified target if possible
+	
+	@param instanceId : id of the ability instance to fire
+	@param targetName : name of the target ship
+]]
+function ability_fireIfPossible(instanceId, targetName)
+	dPrint_ability("Fire '"..instanceId.."' at "..targetName.." if possible")
+	-- TODO : handle target-less abilities
+	if (ability_canBeFired(instanceId)) then
+		if (ability_canBeFiredAt(instanceId, targetName)) then
+			ability_fire(instanceId, targetName)
+		end
+	end
+end
 
 
 function ability_fireAllPossible()
@@ -45,6 +86,7 @@ function ability_getClassAsString(className)
 		.."\tRange = "..getValueAsString(class.Range).."\n"
 		.."\tCost = "..getValueAsString(class.Cost).."\n"
 		.."\t\tCostType = "..ability_getCostTypeAsString(class.CostType).."\n"
+		.."\tAbilityData = "..getValueAsString("-- TODO --").."\n" --TODO : print ability data
 end
 
 --[[
@@ -105,7 +147,8 @@ function ability_createClass(name, attributes)
 	  Duration = nil,
 	  Range = -1,
 	  Cost = 0,
-	  CostType = nil
+	  CostType = nil,
+	  AbilityData = nil
 	}
 	
 	if not (attributes['Cooldown'] == nil) then
@@ -127,6 +170,10 @@ function ability_createClass(name, attributes)
 	
 	if not (attributes['Duration'] == nil) then
 		ability_classes[name].Duration = attributes['Duration']['value']
+	end
+	
+	if not (attributes['Ability Data'] == nil) then
+		ability_classes[name].AbilityData = attributes['Ability Data']['sub']
 	end
 	
 	-- Print class
@@ -221,7 +268,7 @@ function ability_canBeFired(instanceId)
 			
 			dPrint_ability("\tCooldown OK")
 			-- Verify cost
-			if (class.Cost >= 0) then
+			if (class.Cost > 0) then
 				-- Handle cost type
 				-- TODO : refactor cost handling into a sub function
 				local costType = class.CostType
@@ -242,6 +289,8 @@ function ability_canBeFired(instanceId)
 				if (costTest >= 0) then
 					dPrint_ability("\tCost OK")
 					return true
+				else
+					dPrint_ability("\tCost KO "..costTest)
 				end
 				
 			else
@@ -260,7 +309,7 @@ end
 	Verifies that the target is in range and of a valid type
 	
 	@param instanceId : id of the ability instance to test
-	@param target : name of the target ship
+	@param targetName : name of the target ship
 	@return true if it can
 ]]
 function ability_canBeFiredAt(instanceId, targetName)
@@ -332,16 +381,19 @@ end
 	@return true if the target ship is of a valid type
 ]]
 function ability_isValidShipType(class, targetShip)
-	dPrint_ability("Is "..targetShip.Type.Name.." a valid target type for "..class.Name.." ?")
+	local shipTypeName = trim(targetShip.Class.Type.Name:lower())
+	dPrint_ability("Is '"..shipTypeName.."' a valid target type for "..class.Name.." ?")
 
 	if (type(class.TargetType) == 'table') then
 		for i, typeName in pairs(class.TargetType) do
-			if (targetShip.Type.Name == typeName) then
+			dPrint_ability("\tTesting type "..typeName)
+			if (shipTypeName == typeName) then
 				return true
 			end
 		end
 	else
-		if (targetShip.Type.Name == class.TargetType) then
+		dPrint_ability("\tTesting type "..class.TargetType)
+		if (shipTypeName == class.TargetType) then
 				return true
 		end
 	end
@@ -349,6 +401,7 @@ function ability_isValidShipType(class, targetShip)
 	-- Default
 	return false
 end
+
 
 ------------
 --- main ---

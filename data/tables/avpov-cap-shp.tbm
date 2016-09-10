@@ -588,7 +588,7 @@ $Subsystem:                     sensors,                        2, 0.0
 $Name:		SCv Moloch
 	+nocreate ;:
 $Armor Type:				Shivan Capital Ship Armor
-$Flags:             ( "big damage" "corvette" "awacs" )
+$Flags:             ( "big damage" "corvette" )
 $Subsystem: 	turret01, 			0.500, 1.0
 	$Max Turrets per Bomb:		1
 	$Flags:			 			( "check hull" )

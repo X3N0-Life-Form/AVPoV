@@ -13,14 +13,14 @@
 ; $Ability Data: metadata used by whatever script actually uses the ability
 
 $Name:			SSM-moloch-std
-$Target Type:   big ship
+$Target Type:   cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
 $Target Team:   Hostile
 $Cooldown:		24, 20, 17, 15, 13
 $Ability Data:
   +Strike Type: Shivan SSM Strike
 
 $Name:          SSM-moloch-std-global ;; concept : global ammo
-$Target Type:   big ship
+$Target Type:   cruiser, capital, corvette
 $Target Team:   Hostile
 $Cost:          1
   +Cost Type:   global:SSM-moloch-ammo
