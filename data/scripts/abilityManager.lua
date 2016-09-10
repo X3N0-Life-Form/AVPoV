@@ -6,15 +6,30 @@
 
 ability_classes = {}
 ability_instances = {}
+ability_lastCast = 0
 
-
+------------------------
+--- Global Constants ---
+------------------------
 -- set to true to enable prints
 ability_enableDebugPrints = true
+
+ability_castInterval = 0.1
 
 ----------------------------
 --- High Level Functions ---
 ----------------------------
 
+--[[
+	Triggers the fireAllPossible function at regular intervals
+]]
+function ability_cycleTrigger()
+	local missionTime = mn.getMissionTime()
+	if (missionTime > ability_lastCast + ability_castInterval) then
+		ability_fireAllPossible()
+		ability_lastCast = missionTime
+	end
+end
 
 --[[
 	Fires an ability at the specified target if possible
@@ -231,8 +246,9 @@ end
 --[[
 	Resets the instance array. Should be called $On Gameplay Start.
 ]]
-function ability_resetInstances()
+function ability_resetMissionVariables()
 	ability_instances = {}
+	ability_lastCast = 0
 end
 
 
@@ -472,6 +488,7 @@ function ability_getTargetInRange(instanceId)
 	
 	return nil
 end
+
 
 ------------
 --- main ---

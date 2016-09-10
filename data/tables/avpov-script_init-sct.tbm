@@ -21,8 +21,10 @@ $On Gameplay Start: [auto_ssm_init_strike_tables()]
 
 ;; Ability Management
 $On Game Init:[[abilityManager.lua]]
-$On Gameplay Start:[ability_resetInstances()]
-
+$On Gameplay Start:[ability_resetMissionVariables()]
 $On Game Init:[[abilityLibrary.lua]]
+
+$State:	GS_STATE_GAME_PLAY
+$On Frame:[ability_cycleTrigger()]
 
 #End
