@@ -32,9 +32,21 @@ function ability_fireIfPossible(instanceId, targetName)
 	end
 end
 
-
+--[[
+	Fires all abilities if possible. Also includes target lookup.
+]]
 function ability_fireAllPossible()
-	-- TODO : cycle through ability instances & fire them
+	dPrint_ability("Fire all possible instances !")
+	
+	-- Cycle through ability instances & fire them
+	for instanceId, instance in pairs(ability_instances) do
+		local target = ability_getTargetInRange(instanceId)
+		
+		-- If we grabbed a valid target
+		if (not (target == nil) and target:isValid()) then
+			ability_fireIfPossible(instanceId, target.Name)
+		end
+	end
 end
 
 -------------------------
@@ -236,7 +248,7 @@ function ability_createInstance(instanceId, className, shipName)
 	ability_instances[instanceId] = {
 		Class = className,
 		Ship = shipName,
-		LastFired = 0,
+		LastFired = -1,
 		Active = true,
 		Manual = false, --if that instance must be fire manually
 		Ammo = -1 --needs to be set after creation if necessary
@@ -259,7 +271,7 @@ function ability_canBeFired(instanceId)
 	end
 	
 	local instance = ability_instances[instanceId]
-	local castingShip = mn.Ships[instanceId.Ship]
+	local castingShip = mn.Ships[instance.Ship]
 	local class = ability_classes[instance.Class]
 	dPrint_ability("Can '"..instanceId.."' ("..instance.Class..") be fired ?")
 	
@@ -275,23 +287,29 @@ function ability_canBeFired(instanceId)
 		-- Verify cooldown
 		local missionTime = mn.getMissionTime()
 		local cooldown = getValue(class.Cooldown)
-		if (instance.LastFired + cooldown >= missionTime) then
-			
+		
+		-- If it has never been fired or is off cooldown
+		if ((instance.LastFired == -1) or (instance.LastFired + cooldown <= missionTime)) then
 			dPrint_ability("\tCooldown OK")
+			
 			-- Verify cost
 			if (class.Cost > 0) then
 				-- Handle cost type
 				-- TODO : refactor cost handling into a sub function
 				local costType = class.CostType
 				local costTest = -1
+				
 				if (costType == nil) then
 					costTest = instance.Ammo - class.Cost
+					
 				elseif (costType.Global) then
 					ba.warning("Not yet implemented")--TODO
+					
 				elseif (costType.Energy) then
 					local ship = mn.Ships[instance.Ship]
 					ba.warning("Hey genius, fix this")--needs to handle shield & AB type
 					costTest = ship.WeaponEnergyLeft - class.Cost
+					
 				else
 					costTest = instance.Ammo - class.Cost
 				end
@@ -309,6 +327,8 @@ function ability_canBeFired(instanceId)
 				dPrint_ability("\tNo ammo cost")
 				return true
 			end
+		else
+			dPrint_ability("\tStill under cooldown")
 		end
 	end
 	
@@ -425,9 +445,32 @@ function ability_attachAbility(className, shipName)
 	ability_createInstance(instanceId, className, shipName)
 end
 
---TODO : doc
+--[[
+	Looks for a target in range that instanceId can fire at.
+	
+	@param instanceId : instance to look a target for
+	@return ship handle or nil
+]]
 function ability_getTargetInRange(instanceId)
-
+	local instance = ability_instances[instanceId]
+	local castingShip = mn.Ships[instance.Ship]
+	
+	if (castingShip:isValid()) then
+		dPrint_ability("Looking for target in range of "..instanceId)
+		
+		-- Iterate through every ship in missionTime
+		local ships = #mn.Ships
+		for index = 0, ships do
+			local currentShip = mn.Ships[index]
+			if (ability_canBeFiredAt(instanceId, currentShip.Name)) then
+				return currentShip
+			end
+		end
+		
+		-- TODO : iterate through other object types
+	end
+	
+	return nil
 end
 
 ------------
