@@ -171,7 +171,6 @@ $Ship Choices: (
 	"Shivan Mordiggian Bomb"	500
 	"Shivan Swarmer Bomb"	500
 	"Shivan Advanced Swarmer Bomb"	500
-	"Shivan LR Swarm"	500
 	"Tempest Adv#Shivan"	500
 )
 
@@ -4696,7 +4695,7 @@ $Formula: ( when-argument
          0 
       )
       ( call-ssm-strike 
-         1 
+         "Shivan AF SSM Strike" 
          "Hostile" 
 		 "<argument>" 
       )
@@ -4722,7 +4721,7 @@ $Formula: ( when-argument
          0 
       )
       ( call-ssm-strike 
-         3 
+         "Mordiggian Strike" 
          "Hostile" 
 		 "<argument>" 
       )
@@ -5628,7 +5627,7 @@ $Formula: ( when
       ( false ) 
    )
    ( call-ssm-strike 
-      0 
+      "Shivan SSM Strike" 
       "Hostile" 
 	  "Hand of Truth" 
    )
