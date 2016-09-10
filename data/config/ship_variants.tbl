@@ -252,6 +252,8 @@ $turret26:Piranha#Shivan
 #End
 
 #SCv Moloch
+;; TODO : add SSM abilities
+
 ;;		Standard		;;
 $Name:	Carrier Corvette
 $turret01:MRed

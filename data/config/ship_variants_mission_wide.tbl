@@ -1,5 +1,14 @@
-;; idea: allow variants for groups of ships
-;; + case by case overrides?
+;;;;;;;;;;;;;;;;;;;;;;;;; 
+;; Table Specification ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; #Categories represent variant groups
+;;
+;; $Name:		ship name
+;; $Variant: 	(optional) variant name, requires ship_variants.tbl
+;; $Abilities:	(optional) list of abilities, requires abilities.tbl
+
+
 
 ;; Generic categories
 
@@ -33,6 +42,13 @@ $Variant:	Upgraded
 
 #End
 
+#Testing
+
+$Name:		E
+$Variant:	Carrier Corvette
+$Abilities:	SSM-moloch-std
+
+#End
 
 
 #A_Intro_00
@@ -376,7 +392,7 @@ $Variant:	Light Support Cruiser
 ; Moloch class
 $Name:		Ish'Kafel
 $Variant:	Strike Corvette
-; TODO : calls SSM strikes
+$Abilities:	SSM-moloch-std
 
 ; Deimos class
 $Name:		Monere

@@ -15,29 +15,6 @@ ability_enableDebugPrints = true
 --- High Level Functions ---
 ----------------------------
 
---[[
-	Fires an ability
-
-	@param instanceId : id of the ability instance to fire
-	@param targetName : name of the target ship
-]]
-function ability_fire(instanceId, targetName)
-	local instance = ability_instances[instanceId]
-	local class = ability_classes[instance.Class]
-	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
-	
-	-- Route the firing to the proper script
-	if (class.Name == "SSM-moloch-std") then
-		fireSSM(instance, class, targetName)
-	end
-	
-	-- Update instance status
-	instance.LastFired = mn.getMissionTime()
-	instance.Ammo = instance.Ammo - class.Cost
-	dPrint_ability("Instance new status :")
-	dPrint_ability(ability_getInstanceAsString(instanceId))
-end
-
 
 --[[
 	Fires an ability at the specified target if possible
@@ -134,7 +111,33 @@ end
 ----------------------
 
 --[[
+	Fires an ability
+
+	@param instanceId : id of the ability instance to fire
+	@param targetName : name of the target ship
+]]
+function ability_fire(instanceId, targetName)
+	local instance = ability_instances[instanceId]
+	local class = ability_classes[instance.Class]
+	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
+	
+	-- Route the firing to the proper script
+	if (class.Name == "SSM-moloch-std") then
+		fireSSM(instance, class, targetName)
+	end
+	
+	-- Update instance status
+	instance.LastFired = mn.getMissionTime()
+	instance.Ammo = instance.Ammo - class.Cost
+	dPrint_ability("Instance new status :")
+	dPrint_ability(ability_getInstanceAsString(instanceId))
+end
+
+--[[
 	Creates a class of the specified name and attributes
+	
+	@param name : class name
+	@param attributes : attribute table
 ]]
 function ability_createClass(name, attributes)
 	dPrint_ability("Creating class : "..name)
@@ -183,6 +186,7 @@ end
 --[[
 	Creates a cost type
 	
+	@param costTypeValue : cost type value
 	@return cost type
 ]]
 function ability_createCostType(costTypeValue)
@@ -255,8 +259,15 @@ function ability_canBeFired(instanceId)
 	end
 	
 	local instance = ability_instances[instanceId]
+	local castingShip = mn.Ships[instanceId.Ship]
 	local class = ability_classes[instance.Class]
 	dPrint_ability("Can '"..instanceId.."' ("..instance.Class..") be fired ?")
+	
+	-- Make sure that the ship is actually there
+	if not (castingShip:isValid()) then
+		dPrint_ability("Invalid ship : "..instanceId.Ship)-- TODO : test this/look into auto_ssm, see if we did it there
+		return false
+	end
 	
 	-- Verify that this instance is active
 	if (instance.Active) then
@@ -402,6 +413,22 @@ function ability_isValidShipType(class, targetShip)
 	return false
 end
 
+--[[
+	Instanciates the specified ability for the specified ship.
+	
+	@param className : ability name
+	@param shipName : ship to attach the ability to
+]]
+function ability_attachAbility(className, shipName)
+	local instanceId = shipName.."::"..className
+	dPrint_ability("Attaching ability : "..instanceId)
+	ability_createInstance(instanceId, className, shipName)
+end
+
+--TODO : doc
+function ability_getTargetInRange(instanceId)
+
+end
 
 ------------
 --- main ---

@@ -1,8 +1,8 @@
 
 ------------------------
---- global variables ---
+--- Global Variables ---
 ------------------------
-shipVariantMissions_enableDebugPrint = false
+shipVariantMissions_enableDebugPrint = true
 
 shipVariantMissionsTable = {}
 
@@ -12,33 +12,54 @@ shipVariantMissionsTable = {}
 
 function dPrint_shipVariantMissions(message)
 	if (shipVariantMissions_enableDebugPrint) then
-		ba.print("[shipVariantMissionWide.lua] "..message)
+		ba.print("[shipVariantMissionWide.lua] "..message.."\n")
 	end
 end
 
-------------------------
---- functions - core ---
-------------------------
+----------------------
+--- Core Functions ---
+----------------------
 
 --[[
 	Sets ship variants for the entire mission
+	
 	@param categoryName name of the category in the table file
 ]]
 function setShipVariants(categoryName)
 	if not (shipVariantMissionsTable[categoryName] == nil) then
-		dPrint_shipVariantMissions("Setting mission-wide variants using variant list "..categoryName.."\n")
+		dPrint_shipVariantMissions("Setting mission-wide variants using variant list "..categoryName)
+		
 		for shipName, attributes in pairs(shipVariantMissionsTable[categoryName]) do
-			local variantName = attributes['Variant']['value']
+			-- Set up variant
+			if not (attributes['Variant'] == nil) then
+				local variantName = attributes['Variant']['value']
+				
+				-- if this is a single ship
+				if (attributes['Variant']['sub'] == nil) or (attributes['Variant']['sub']['Wing'] == nil) then
+					dPrint_shipVariantMissions("\tSetting variant "..variantName.." for ship "..shipName)
+					
+					setVariant(shipName, variantName)
+				else -- or if this is a wing
+					dPrint_shipVariantMissions("\tSetting variant "..variantName.." for wing "..shipName)
+					
+					local wingSize = attributes['Variant']['sub']['Wing']
+					for i = 1, i <= wingSize do
+						setVariant(shipName.." "..i, variantName)
+					end
+				end
+			end
 			
-			-- if this is a single ship
-			if (attributes['Variant']['sub'] == nil) or (attributes['Variant']['sub']['Wing'] == nil) then
-				dPrint_shipVariantMissions("\tSetting variant "..variantName.." for ship "..shipName.."\n")
-				setVariant(shipName, variantName)
-			else -- or if this is a wing
-				dPrint_shipVariantMissions("\tSetting variant "..variantName.." for wing "..shipName.."\n")
-				local wingSize = attributes['Variant']['sub']['Wing']
-				for i = 1, i <= wingSize do
-					setVariant(shipName.." "..i, variantName)
+			-- Set up mission-specific abilities
+			if not (attributes['Abilities'] == nil) then
+				dPrint_shipVariantMissions("\tSetting mission-specific abilities")
+				
+				local abilities = attributes['Abilities']['value']
+				if (type(abilities) == 'table') then
+					for index, currentAbility in pairs(abilities) do
+						ability_attachAbility(currentAbility, shipName)
+					end
+				else
+					ability_attachAbility(abilities, shipName)
 				end
 			end
 			
