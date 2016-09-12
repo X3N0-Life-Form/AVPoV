@@ -29,13 +29,12 @@ $Cooldown:		24, 20, 17, 15, 13
 $Ability Data:
   +Strike Type: Shivan SSM Strike
 
-$Name:          Shivan Command aura ;; concept : passive ability
+$Name:          Shield Recharge Aura ;; concept : passive ability
 $Target Type:   fighter, bomber
 $Target Team:   Friendly
 $Range:         4000
-$Buff:          command aura
 $Ability Data:
-  +Max AI:      Colonel
+  +Regen Rate:  1%/s
 
 $Name:          Energy Dampening Field ;; concept : energy cost type
 $Target Type:   fighter, bomber
