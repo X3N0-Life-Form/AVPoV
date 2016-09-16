@@ -302,7 +302,7 @@ function ability_canBeFired(instanceId)
 		
 		-- Verify cooldown
 		local missionTime = mn.getMissionTime()
-		local cooldown = getValue(class.Cooldown)
+		local cooldown = getValueForDifficulty(class.Cooldown)
 		
 		-- If it has never been fired or is off cooldown
 		if ((instance.LastFired == -1) or (instance.LastFired + cooldown <= missionTime)) then

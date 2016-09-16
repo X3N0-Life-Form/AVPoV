@@ -51,8 +51,17 @@
 		tab['Weapons: tertiary']	['n2']['Attr']											= val
 ]]--
 
+------------------------
+--- Global Constants ---
+------------------------
+PARSE_CONFIG_PATH = "data/config/"
+
+------------------------
+--- Global Variables ---
+------------------------
 -- set to true to enable prints
-parse_enableDebugPrints = false
+parse_enableDebugPrints = true
+
 
 -------------------------
 --- Utility Functions ---
@@ -60,7 +69,7 @@ parse_enableDebugPrints = false
 
 function dPrint_parse(message)
 	if (parse_enableDebugPrints) then
-		ba.print("[parse.lua] "..message)
+		ba.print("[parse.lua] "..message.."\n")
 	end
 end
 
@@ -162,7 +171,7 @@ end
 	@param value value or table of values
 	@return actual value
 ]]
-function getValue(value)
+function getValueForDifficulty(value)
 	if (type(value) == 'table') then
 		return value[ba.getGameDifficulty()]
 	else
@@ -189,6 +198,23 @@ end
 --- Core Functions ---
 ----------------------
 
+--[[
+	Parses a value or a list of values
+	
+	@param value : value to parse
+	@return value, or list of values
+]]
+function parse_parseValue(value)
+	if (value:find(line, ",")) then
+		dPrint_parse("\t\tParsing attribute value list: "..value)
+		return split(value, ",")
+	else
+		dPrint_parse("\t\tParsing attribute value: "..value)
+		return value
+	end
+end
+
+-- deprecated
 function getAttribute(value, isList)
 	if (isList) then
 		dPrint_parse("\t\tStuffing attribute list: "..value.."\n")
@@ -322,3 +348,137 @@ function getTableObjectAsString(tableObject)
 	return str
 end
 
+-------------------------
+--- New parsing stuff ---
+-------------------------
+
+--[[
+	Creates a table object
+	
+	@param tableName : name of the table
+	@return table object
+]]
+function parse_createTableObject(tableName)
+	dPrint_parse("Creating table object : "..tableName)
+
+	local tableObject = {
+		Name = tableName,
+		Categories = {}
+	}
+	
+	return tableObject
+end
+
+--[[
+	Creates a category object
+	
+	@param categoryName : name of the category
+	@return category object
+]]
+function parse_createCategory(categoryName)
+	dPrint_parse("Creating category object : "..categoryName)
+	
+	local category = {
+		Name = categoryName,
+		Entries = {}
+	}
+	
+	return category
+end
+
+--[[
+	Creates an entry object
+	
+	@param entryName : name of the entry
+	@return entry object
+]]
+function parse_createEntry(entryName)
+	dPrint_parse("Creating entry object : "..entryName)
+	
+	local entry = {
+		Name = entryName,
+		Attributes = {}
+	}
+	
+	return entry
+end
+
+--[[
+	Creates an attribute object
+	
+	@param attributeName : name of the attribute
+	@return attribute object
+]]
+function parse_createAttribute(attributeName, value)
+	dPrint_parse("Creating attribute object : "..attributeName)
+	
+	local attribute = {
+		Name = attributeName,
+		Value = parse_parseValue(value),
+		Attributes = {}
+	}
+	
+	return attribute
+end
+
+--TODO : doc
+function parse_parseTableFile(fileName)
+
+	if cf.fileExists(fileName, PARSE_CONFIG_PATH, true) then
+		-- Initialise loop variables
+		local file = cf.openFile(fileName, "r", PARSE_CONFIG_PATH)
+		local line = file:read("*l")
+		local lineNumber = 1
+		local tableObject = parse_createTableObject(fileName)
+		local currentCategory = nil
+		local currentEntry = nil
+		local currentAttribute = nil
+		local currentSubAttribute = nil
+		
+		dPrint_parse("#############################################")
+		dPrint_parse("Parsing file "..fileName);
+		dPrint_parse("#############################################")
+		
+		while (not (line == nil)) do
+			line = removeComments(line)
+			line = trim(line)
+			
+			dPrint_parse("Parsing line : "..line)
+			-- Don't parse empty lines
+			if not (line == "") then
+				-- Extract values
+				local attribute = extractLeft(line)
+				local value = extractRight(line)
+				
+				-- Identify and parse line
+				if (line:find("^#") and not line:find("^#End")) then
+					dPrint_parse("Found a category")
+					currentCategory = parse_createCategory(attribute)
+					tableObject.Categories[currentCategory.Name] = currentCategory
+					
+				elseif (line:find("^[$]Name")) then
+					dPrint_parse("Found an entry")
+					currentEntry = parse_createEntry(value)
+					currentCategory.Entries[currentEntry.Name] = currentEntry
+					
+				elseif (line:find("^[$]")) then
+					dPrint_parse("Found an attribute")
+					currentAttribute = parse_createAttribute(attribute, value)
+					currentEntry.Attributes[currentAttribute.Name] = currentAttribute
+					
+				elseif (line:find("^[+]")) then
+					dPrint_parse("Found a sub-attribute")
+					currentSubAttribute = parse_createAttribute(attribute, value)
+					currentAttribute.Attributes[currentSubAttribute.Name] = currentSubAttribute
+				end
+				
+			end
+			line = file:read("*l")
+			lineNumber = lineNumber + 1;
+		end
+	else
+		ba.warning("[parse.lua] Table file not found: "..PARSE_CONFIG_PATH..fileName.."\n")
+	end
+
+	return tableObject
+end
