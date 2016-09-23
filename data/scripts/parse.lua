@@ -218,7 +218,12 @@ end
 function getAttribute(value, isList)
 	if (isList) then
 		dPrint_parse("\t\tStuffing attribute list: "..value.."\n")
-		return split(value, ",")
+		local list = split(value, ",")
+		-- Trim each list entry
+		for index = 1, #list do
+			list[index] = trim(list[index])
+		end
+		return list
 	else
 		dPrint_parse("\t\tStuffing attribute value: "..value.."\n")
 		return value

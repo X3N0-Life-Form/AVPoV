@@ -7,6 +7,7 @@
 ;   +Min: integer (minimum range) (optional)
 ; $Cost: integer/list of integer (tied to diffculty level) (optional)
 ;   +Cost type: string (weapon energy reserve, what ammo consumption system is to be used) (optional)
+;	+Starting Reserve:	15 (optional)
 ; $Buff: list of string (optional)
 ; $Cooldown:      90
 ; $Duration: list of int (optional)
@@ -18,16 +19,7 @@ $Target Team:   Hostile
 $Cooldown:		24, 20, 17, 15, 13
 $Ability Data:
   +Strike Type: Shivan SSM Strike
-
-$Name:          SSM-moloch-std-global ;; concept : global ammo
-$Target Type:   cruiser, capital, corvette
-$Target Team:   Hostile
-$Cost:          1
-  +Cost Type:   global:SSM-moloch-ammo
-  +Starting Reserve:	15;;TODO : handle + add to the spec above
-$Cooldown:		24, 20, 17, 15, 13
-$Ability Data:
-  +Strike Type: Shivan SSM Strike
+  
 
 $Name:          Shield Recharge Aura ;; concept : passive ability
 $Target Type:   fighter, bomber

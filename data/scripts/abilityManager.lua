@@ -318,13 +318,20 @@ function ability_canBeFired(instanceId)
 				if (costType == nil) then
 					costTest = instance.Ammo - class.Cost
 					
-				elseif (costType.Global) then
-					ba.warning("Not yet implemented")--TODO
-					
 				elseif (costType.Energy) then
 					local ship = mn.Ships[instance.Ship]
-					ba.warning("Hey genius, fix this")--needs to handle shield & AB type
-					costTest = ship.WeaponEnergyLeft - class.Cost
+					local subType = extractRight(costType.Type)
+					
+					-- Handle sub-types
+					if (subType == 'weapon') then
+						costTest = ship.WeaponEnergyLeft - class.Cost
+					elseif (subType == 'afterburner') then
+						costTest = ship.AfterburnerFuelLeft - class.Cost
+					elseif (subType == 'shield') then
+						ba.warning("Not yet implemented")--TODO
+					else
+						ba.warning('Unrecognised energy cost type : '..costType)
+					end
 					
 				else
 					costTest = instance.Ammo - class.Cost
@@ -474,21 +481,55 @@ function ability_getTargetInRange(instanceId)
 	if (castingShip:isValid()) then
 		dPrint_ability("Looking for target in range of "..instanceId)
 		
-		-- Iterate through every ship in missionTime
 		local ships = #mn.Ships
+		local fittestShip = nil
+		local fitness = -1
+		
+		-- Iterate through every ship in mission
+		-- TODO : iterate through other object types?
 		for index = 0, ships do
 			local currentShip = mn.Ships[index]
+			
 			if (ability_canBeFiredAt(instanceId, currentShip.Name)) then
-				return currentShip
+				-- Test target fitness
+				local currentFitness = ability_evaluateTargetFitness(instanceId, currentShip)
+				
+				-- Lower values = target is better
+				if ((currentFitness < fitness) or (fitness == -1)) then
+					fitness = currentFitness
+					fittestShip = currentShip
+				end
+				
 			end
 		end
 		
-		-- TODO : iterate through other object types
+		return fittestShip
 	end
 	
 	return nil
 end
 
+
+--[[
+	Evaluates a target's fitness. Lower values = better targets
+	
+	@param instanceId : instance to look a target for
+	@param targetShip : ship handle
+	@return fitness value
+]]
+function ability_evaluateTargetFitness(instanceId, targetShip)
+	--TODO : add more fitness schemes
+	local instance = ability_instances[instanceId]
+	local class = ability_classes[instance.Class]
+	local firingShip = mn.Ships[instance.Ship]
+	
+	-- Fitness scheme : closest
+	dPrint_ability("Evaluating fitness scheme : closest for target "..targetShip.Name)
+	local distance = firingShip.Position:getDistance(targetShip.Position)
+	dPrint_ability("\tFitness = "..distance)
+	return distance
+
+end
 
 ------------
 --- main ---
