@@ -54,12 +54,17 @@ function setShipVariants(categoryName)
 				dPrint_shipVariantMissions("\tSetting mission-specific abilities")
 				
 				local abilities = attributes['Abilities']['value']
+				local manual = nil
+				if not ((attributes['Abilities']['sub'] == nil) or (attributes['Variant']['sub']['Manual'] == nil)) then
+					manual = attributes['Abilities']['sub']['Manual']
+				end
+				
 				if (type(abilities) == 'table') then
 					for index, currentAbility in pairs(abilities) do
-						ability_attachAbility(currentAbility, shipName)
+						ability_attachAbility(currentAbility, shipName, manual[index])
 					end
 				else
-					ability_attachAbility(abilities, shipName)
+					ability_attachAbility(abilities, shipName, manual)
 				end
 			end
 			

@@ -7,6 +7,7 @@
 ;; $Name:		ship name
 ;; $Variant: 	(optional) variant name, requires ship_variants.tbl
 ;; $Abilities:	(optional) list of abilities, requires abilities.tbl
+;; 		+Manual:(optional) list of booleans, true if the corresponding must be fired manually
 
 
 
@@ -47,6 +48,10 @@ $Variant:	Upgraded
 $Name:		E
 $Variant:	Carrier Corvette
 $Abilities:	SSM-moloch-std
+
+$Name:		Alpha 1
+$Abilities:	Energy Drain
+	+Manual:true
 
 #End
 

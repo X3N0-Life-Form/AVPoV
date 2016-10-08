@@ -55,11 +55,16 @@ function ability_fireAllPossible()
 	
 	-- Cycle through ability instances & fire them
 	for instanceId, instance in pairs(ability_instances) do
-		local target = ability_getTargetInRange(instanceId)
+		local isManuallyFired = ability_instances[instanceId].Manual
 		
-		-- If we grabbed a valid target
-		if (not (target == nil) and target:isValid()) then
-			ability_fireIfPossible(instanceId, target.Name)
+		-- If this ability is fired automatically
+		if (isManuallyFired == false) then
+			local target = ability_getTargetInRange(instanceId)
+			
+			-- If we grabbed a valid target
+			if (not (target == nil) and target:isValid()) then
+				ability_fireIfPossible(instanceId, target.Name)
+			end
 		end
 	end
 end
@@ -151,11 +156,16 @@ function ability_fire(instanceId, targetName)
 	-- Route the firing to the proper script
 	if (class.Name == "SSM-moloch-std") then
 		fireSSM(instance, class, targetName)
+	elseif (class.Name == "Energy Drain")) then
+		fireEnergyDrain(instance, class, targetName)
 	end
 	
 	-- Update instance status
 	instance.LastFired = mn.getMissionTime()
-	instance.Ammo = instance.Ammo - class.Cost
+	
+	-- Apply cost
+	ability_calculateCost(instance, class, true)
+	
 	dPrint_ability("Instance new status :")
 	dPrint_ability(ability_getInstanceAsString(instanceId))
 end
@@ -311,31 +321,7 @@ function ability_canBeFired(instanceId)
 			-- Verify cost
 			if (class.Cost > 0) then
 				-- Handle cost type
-				-- TODO : refactor cost handling into a sub function
-				local costType = class.CostType
-				local costTest = -1
-				
-				if (costType == nil) then
-					costTest = instance.Ammo - class.Cost
-					
-				elseif (costType.Energy) then
-					local ship = mn.Ships[instance.Ship]
-					local subType = extractRight(costType.Type)
-					
-					-- Handle sub-types
-					if (subType == 'weapon') then
-						costTest = ship.WeaponEnergyLeft - class.Cost
-					elseif (subType == 'afterburner') then
-						costTest = ship.AfterburnerFuelLeft - class.Cost
-					elseif (subType == 'shield') then
-						ba.warning("Not yet implemented")--TODO
-					else
-						ba.warning('Unrecognised energy cost type : '..costType)
-					end
-					
-				else
-					costTest = instance.Ammo - class.Cost
-				end
+				local costTest = ability_calculateCost(instance, class, false)
 				
 				-- Actual cost test
 				if (costTest >= 0) then
@@ -357,6 +343,51 @@ function ability_canBeFired(instanceId)
 	
 	-- Default
 	return false
+end
+
+--[[
+	Calculate how much firing this instance would cost
+	
+	@param instance : instance to fire
+	@param class : instance class
+	@param applyCost : boolean, if true apply the cost to the instance/ship according to its type
+	@return How much ammo/energy would remain
+]]
+function ability_calculateCost(instance, class, applyCost)
+	local costType = class.CostType
+	if (costType == nil) then
+		costTest = instance.Ammo - class.Cost
+		if (applyCost) then
+			instance.Ammo = costTest
+		end
+		
+	elseif (costType.Energy) then
+		local ship = mn.Ships[instance.Ship]
+		local subType = extractRight(costType.Type)
+		
+		-- Handle sub-types
+		if (subType == 'weapon') then
+			costTest = ship.WeaponEnergyLeft - class.Cost
+			if (applyCost) then
+				ship.WeaponEnergyLeft = costTest
+			end
+		elseif (subType == 'afterburner') then
+			costTest = ship.AfterburnerFuelLeft - class.Cost
+			if (applyCost) then
+				ship.AfterburnerFuelLeft = costTest
+			end
+		elseif (subType == 'shield') then
+			costTest = ship.Shields.CombinedLeft - class.Cost
+			if (applyCost) then
+				ship.Shields.CombinedLeft = costTest
+			end
+		else
+			ba.warning('Unrecognised energy cost type : '..costType)
+		end
+		
+	else
+		costTest = instance.Ammo - class.Cost
+	end
 end
 
 --[[
@@ -461,11 +492,13 @@ end
 	
 	@param className : ability name
 	@param shipName : ship to attach the ability to
+	@param isManuallyFired : true if the ability must be fired manually
 ]]
-function ability_attachAbility(className, shipName)
+function ability_attachAbility(className, shipName, isManuallyFired)
 	local instanceId = shipName.."::"..className
 	dPrint_ability("Attaching ability : "..instanceId)
 	ability_createInstance(instanceId, className, shipName)
+	ability_instances[instanceId].Manual = isManuallyFired
 end
 
 --[[

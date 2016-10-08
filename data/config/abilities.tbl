@@ -7,8 +7,9 @@
 ;   +Min: integer (minimum range) (optional)
 ; $Cost: integer/list of integer (tied to diffculty level) (optional)
 ;   +Cost type: string (weapon energy reserve, what ammo consumption system is to be used) (optional)
-;	+Starting Reserve:	15 (optional)
-; $Buff: list of string (optional)
+; TODO	+Starting Reserve:	15 (optional)
+; TODO: $Always manual: boolean
+; TODO: $Buff: list of string (optional)
 ; $Cooldown:      90
 ; $Duration: list of int (optional)
 ; $Ability Data: metadata used by whatever script actually uses the ability
@@ -21,6 +22,19 @@ $Ability Data:
   +Strike Type: Shivan SSM Strike
   
 
+$Name:			Energy Drain
+$Target Type:	fighter, bomber
+$Target Team:	Hostile
+$Range:			900
+$Cost:			35
+	+Cost type:	energy:weapon
+$Cooldown:		10
+$Ability Data:
+	+Weapon drain:		30
+	+Afterburner drain:	30
+	+Shield drain:		10
+
+  
 $Name:          Shield Recharge Aura ;; concept : passive ability
 $Target Type:   fighter, bomber
 $Target Team:   Friendly
