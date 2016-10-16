@@ -13,6 +13,7 @@ ability_lastCast = 0
 ------------------------
 -- set to true to enable prints
 ability_enableDebugPrints = true
+ability_debugPrintQuietMode = true
 
 ability_castInterval = 0.1
 
@@ -28,6 +29,23 @@ function ability_cycleTrigger()
 	if (missionTime > ability_lastCast + ability_castInterval) then
 		ability_fireAllPossible()
 		ability_lastCast = missionTime
+	end
+end
+
+--[[
+	Triggers an ability's firing routines.
+	
+	@param instanceId : Ability to trigger.
+]]
+function ability_trigger(instanceId)
+	dPrint_ability("Triggering firing routines for ability '"..instanceId.."'")
+	if (ability_instances[instanceId] == nil) then
+		ba.warning("Invalid instance id: '"..instanceId.."'")
+	end
+
+	local target = ability_getTargetInRange(instanceId)
+	if (target:isValid()) then
+		ability_fireIfPossible(instanceId, target.Name)
 	end
 end
 
@@ -51,7 +69,9 @@ end
 	Fires all abilities if possible. Also includes target lookup.
 ]]
 function ability_fireAllPossible()
-	dPrint_ability("Fire all possible instances !")
+	if (ability_debugPrintQuietMode == false) then
+		dPrint_ability("Fire all possible instances !")
+	end
 	
 	-- Cycle through ability instances & fire them
 	for instanceId, instance in pairs(ability_instances) do
@@ -64,6 +84,11 @@ function ability_fireAllPossible()
 			-- If we grabbed a valid target
 			if (not (target == nil) and target:isValid()) then
 				ability_fireIfPossible(instanceId, target.Name)
+			end
+			
+		else
+			if (ability_debugPrintQuietMode == false) then
+				dPrint_ability(instanceId.." must be triggered manually")
 			end
 		end
 	end
@@ -90,10 +115,12 @@ function ability_getClassAsString(className)
 	return "Ability class:\t"..class.Name.."\n"
 		.."\tTargetType = "..getValueAsString(class.TargetType).."\n"
 		.."\tTargetTeam = "..getValueAsString(class.TargetTeam).."\n"
+		.."\tTargetSelection"..getValueAsString(class.TargetSelection).."\n"
 		.."\tCooldown = "..getValueAsString(class.Cooldown).."\n"
 		.."\tDuration = "..getValueAsString(class.Duration).."\n"
 		.."\tRange = "..getValueAsString(class.Range).."\n"
 		.."\tCost = "..getValueAsString(class.Cost).."\n"
+		.."\tStarting Reserve = "..getValueAsString(class.StartingReserve).."\n"
 		.."\t\tCostType = "..ability_getCostTypeAsString(class.CostType).."\n"
 		.."\tAbilityData = "..getValueAsString("-- TODO --").."\n" --TODO : print ability data
 end
@@ -154,9 +181,9 @@ function ability_fire(instanceId, targetName)
 	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
 	
 	-- Route the firing to the proper script
-	if (class.Name == "SSM-moloch-std") then
+	if (class.Name == "SSM-moloch-std") or (class.Name == "Fighter-launched Mordiggian Strike") then
 		fireSSM(instance, class, targetName)
-	elseif (class.Name == "Energy Drain")) then
+	elseif (class.Name == "Energy Drain") then
 		fireEnergyDrain(instance, class, targetName)
 	end
 	
@@ -183,11 +210,13 @@ function ability_createClass(name, attributes)
 	  Name = name,
 	  TargetType = attributes['Target Type']['value'],--TODO : use getValue ?
 	  TargetTeam = attributes['Target Team']['value'],--TODO : ditto
+	  TargetSelection = "Closest",
 	  Cooldown = nil,
 	  Duration = nil,
 	  Range = -1,
 	  Cost = 0,
-	  CostType = nil,
+	  StartingReserve = nil,
+	  CostType = ability_createCostType('Ammo'),
 	  AbilityData = nil
 	}
 	
@@ -196,14 +225,20 @@ function ability_createClass(name, attributes)
 	end
 	
 	if not (attributes['Range'] == nil) then
-		ability_classes[name].Range = attributes['Range']['value']
+		ability_classes[name].Range = tonumber(attributes['Range']['value'])
 	end
 	
 	if not (attributes['Cost'] == nil) then
-		ability_classes[name].Cost = attributes['Cost']['value']
+		ability_classes[name].Cost = tonumber(attributes['Cost']['value'])
 		if not (attributes['Cost']['sub'] == nil) then --TODO : utility function to grab a sub attributes' value ???
+			-- Cost type
 			if not (attributes['Cost']['sub']['Cost Type'] == nil) then
 				ability_classes[name].CostType = ability_createCostType(attributes['Cost']['sub']['Cost Type'])
+			end
+			
+			-- Starting Reserve
+			if not (attributes['Cost']['sub']['Starting Reserve'] == nil) then
+				ability_classes[name].StartingReserve = attributes['Cost']['sub']['Starting Reserve']
 			end
 		end
 	end
@@ -214,6 +249,10 @@ function ability_createClass(name, attributes)
 	
 	if not (attributes['Ability Data'] == nil) then
 		ability_classes[name].AbilityData = attributes['Ability Data']['sub']
+	end
+	
+	if not (attributes['Target Selection'] == nil) then
+		ability_classes[name].TargetSelection = attributes['Target Selection']['value']
 	end
 	
 	-- Print class
@@ -230,7 +269,7 @@ function ability_createCostType(costTypeValue)
 	dPrint_ability("Creating cost type : "..costTypeValue)
 	-- Init
 	local costType = {
-		Type = "none",
+		Type = "Ammo",
 		Global = false,
 		Energy = false
 	}
@@ -271,6 +310,11 @@ end
 ]]
 function ability_createInstance(instanceId, className, shipName)
 	dPrint_ability("Creating instance of class "..className.." with id "..instanceId.." for ship "..getValueAsString(shipName))
+	local class = ability_classes[className]
+	if (class == nil) then
+		ba.warning("Invalid class name: "..className)
+	end
+	
 	ability_instances[instanceId] = {
 		Class = className,
 		Ship = shipName,
@@ -279,6 +323,12 @@ function ability_createInstance(instanceId, className, shipName)
 		Manual = false, --if that instance must be fire manually
 		Ammo = -1 --needs to be set after creation if necessary
 	}
+	
+	local instance = ability_instances[instanceId]
+	
+	if not (class.StartingReserve == nil) then
+		instance.Ammo = getValueForDifficulty(class.StartingReserve)
+	end
 	
 	dPrint_ability(ability_getInstanceAsString(instanceId))
 end
@@ -355,13 +405,18 @@ end
 ]]
 function ability_calculateCost(instance, class, applyCost)
 	local costType = class.CostType
-	if (costType == nil) then
+	local costTest = -1
+	dPrint_ability("Calculating cost for type "..costType.Type)
+	
+	if (costType == nil) or (costType.Type == "Ammo") then
+		dPrint_ability("\tCalculating Ammo")
 		costTest = instance.Ammo - class.Cost
 		if (applyCost) then
 			instance.Ammo = costTest
 		end
 		
 	elseif (costType.Energy) then
+		dPrint_ability("\tCalculating Energy")
 		local ship = mn.Ships[instance.Ship]
 		local subType = extractRight(costType.Type)
 		
@@ -388,6 +443,8 @@ function ability_calculateCost(instance, class, applyCost)
 	else
 		costTest = instance.Ammo - class.Cost
 	end
+	
+	return costTest
 end
 
 --[[
@@ -415,7 +472,7 @@ function ability_canBeFiredAt(instanceId, targetName)
 		return false
 	else
 		local distance = firingShip.Position:getDistance(targetShip.Position)
-		dPrint_ability("\tDistance to target: "..distance)
+		dPrint_ability("\tDistance to target: "..distance.." (range = "..class.Range..")")
 		-- Verify range
 		if (distance <= class.Range or class.Range == -1) then
 			dPrint_ability("\tTarget in range")
@@ -496,7 +553,7 @@ end
 ]]
 function ability_attachAbility(className, shipName, isManuallyFired)
 	local instanceId = shipName.."::"..className
-	dPrint_ability("Attaching ability : "..instanceId)
+	dPrint_ability("Attaching ability : "..instanceId.." (manual fire = "..getValueAsString(isManuallyFired)..")")
 	ability_createInstance(instanceId, className, shipName)
 	ability_instances[instanceId].Manual = isManuallyFired
 end
@@ -520,7 +577,7 @@ function ability_getTargetInRange(instanceId)
 		
 		-- Iterate through every ship in mission
 		-- TODO : iterate through other object types?
-		for index = 0, ships do
+		for index = 1, ships do
 			local currentShip = mn.Ships[index]
 			
 			if (ability_canBeFiredAt(instanceId, currentShip.Name)) then
@@ -556,11 +613,21 @@ function ability_evaluateTargetFitness(instanceId, targetShip)
 	local class = ability_classes[instance.Class]
 	local firingShip = mn.Ships[instance.Ship]
 	
-	-- Fitness scheme : closest
-	dPrint_ability("Evaluating fitness scheme : closest for target "..targetShip.Name)
-	local distance = firingShip.Position:getDistance(targetShip.Position)
-	dPrint_ability("\tFitness = "..distance)
-	return distance
+	local fitness = -1
+	-- Fitness scheme : closest (default)
+	dPrint_ability("Evaluating fitness scheme : "..class.TargetSelection.." for target "..targetShip.Name)
+	if (class.TargetSelection == nil) or (class.TargetSelection == "Closest") then
+		fitness = firingShip.Position:getDistance(targetShip.Position)
+	elseif (class.TargetSelection == "Current Target") then
+		if (firingShip.Target:isValid()) and (firingShip.Target.Name == targetShip.Name) then
+			fitness = 0
+		else
+			fitness = 9999
+		end
+	end
+	
+	dPrint_ability("\tFitness = "..fitness)
+	return fitness
 
 end
 

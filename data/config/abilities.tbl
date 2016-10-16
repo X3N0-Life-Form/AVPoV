@@ -3,36 +3,53 @@
 ; $Name: string
 ; $Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
 ; $Target Team: list of string (hostile, friendly, relative to the caster)
+; $Target Selection: Closest, Current target
 ; $Range: integer (optional)
 ;   +Min: integer (minimum range) (optional)
 ; $Cost: integer/list of integer (tied to diffculty level) (optional)
 ;   +Cost type: string (weapon energy reserve, what ammo consumption system is to be used) (optional)
-; TODO	+Starting Reserve:	15 (optional)
+; 	+Starting Reserve:	15 (optional)
 ; TODO: $Always manual: boolean
 ; TODO: $Buff: list of string (optional)
+; TODO : sound effects?
+; TODO : ability archetypes (SSM, energy drain, etc.éé)
 ; $Cooldown:      90
 ; $Duration: list of int (optional)
 ; $Ability Data: metadata used by whatever script actually uses the ability
 
-$Name:			SSM-moloch-std
-$Target Type:   cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
-$Target Team:   Hostile
-$Cooldown:		24, 20, 17, 15, 13
+$Name:				SSM-moloch-std
+$Target Type:   	cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
+$Target Team:   	Hostile
+$Target Selection:	Closest
+$Cooldown:			24, 20, 17, 15, 13
 $Ability Data:
-  +Strike Type: Shivan SSM Strike
+  +Strike Type: 	Shivan SSM Strike
   
-
-$Name:			Energy Drain
-$Target Type:	fighter, bomber
-$Target Team:	Hostile
-$Range:			900
-$Cost:			35
-	+Cost type:	energy:weapon
-$Cooldown:		10
+$Name:					Fighter-launched Mordiggian Strike
+$Target Type:   		cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
+$Target Team:   		Hostile
+$Target Selection:		Current Target
+$Range:					2500
+$Cost:					1
+	+Starting Reserve:	10
+$Cooldown:				9
 $Ability Data:
-	+Weapon drain:		30
-	+Afterburner drain:	30
-	+Shield drain:		10
+  +Strike Type: 	Mordiggian Strike
+
+; TODO : self targetted thing
+
+$Name:				Energy Drain
+$Target Type:		fighter, bomber
+$Target Team:		Hostile
+$Target Selection:	Current Target	; Ship targetted by the caster
+$Range:				900
+$Cost:				10
+	+Cost Type:		energy:weapon
+$Cooldown:			10
+$Ability Data:
+	+Weapon drain:		70
+	+Afterburner drain:	100
+	+Shield drain:		200
 
   
 $Name:          Shield Recharge Aura ;; concept : passive ability

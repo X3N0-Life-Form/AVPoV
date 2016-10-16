@@ -30,6 +30,8 @@ function setShipVariants(categoryName)
 		dPrint_shipVariantMissions("Setting mission-wide variants using variant list "..categoryName)
 		
 		for shipName, attributes in pairs(shipVariantMissionsTable[categoryName]) do
+			dPrint_shipVariantMissions("Setting up ship "..shipName)
+		
 			-- Set up variant
 			if not (attributes['Variant'] == nil) then
 				local variantName = attributes['Variant']['value']
@@ -54,8 +56,8 @@ function setShipVariants(categoryName)
 				dPrint_shipVariantMissions("\tSetting mission-specific abilities")
 				
 				local abilities = attributes['Abilities']['value']
-				local manual = nil
-				if not ((attributes['Abilities']['sub'] == nil) or (attributes['Variant']['sub']['Manual'] == nil)) then
+				local manual = false
+				if not ((attributes['Abilities']['sub'] == nil) or (attributes['Abilities']['sub']['Manual'] == nil)) then
 					manual = attributes['Abilities']['sub']['Manual']
 				end
 				
