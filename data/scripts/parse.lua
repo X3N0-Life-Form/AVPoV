@@ -60,7 +60,7 @@ PARSE_CONFIG_PATH = "data/config/"
 --- Global Variables ---
 ------------------------
 -- set to true to enable prints
-parse_enableDebugPrints = true
+parse_enableDebugPrints = false
 
 
 -------------------------
@@ -151,7 +151,7 @@ function getValueAsString(value)
 	elseif (type(value) == 'table') then
 		local str = ""
 		for index, currentValue in pairs(value) do
-			str = str..currentValue.." "
+			str = str..getValueAsString(currentValue).." "
 		end
 		return str
 	elseif (type(value) == 'boolean') then
