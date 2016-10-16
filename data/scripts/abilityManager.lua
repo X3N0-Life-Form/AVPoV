@@ -1,4 +1,14 @@
---TODO : doc
+--[[
+	---------------------------------
+	--- Ability Manager Framework ---
+	---------------------------------
+	This script is meant to provide a framework to create and use special abilities.
+	Abilities are defined in a table called "abilities.tbl".
+	Ability functions should be defined in a separate .lua file.
+	
+	TODO: tbl special
+	
+]]
 
 ------------------------
 --- Global Variables ---
@@ -30,6 +40,8 @@ function ability_cycleTrigger()
 		ability_fireAllPossible()
 		ability_lastCast = missionTime
 	end
+	
+	-- TODO: apply over-time effects?
 end
 
 --[[
@@ -47,6 +59,30 @@ function ability_trigger(instanceId)
 	if (target:isValid()) then
 		ability_fireIfPossible(instanceId, target.Name)
 	end
+end
+
+--[[
+	Fires an ability
+
+	@param instanceId : id of the ability instance to fire
+	@param targetName : name of the target ship
+]]
+function ability_fire(instanceId, targetName)
+	local instance = ability_instances[instanceId]
+	local class = ability_classes[instance.Class]
+	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
+	
+	-- Route the firing to the proper script
+	_G[class.Function](instance, class, targetName)
+	
+	-- Update instance status
+	instance.LastFired = mn.getMissionTime()
+	
+	-- Apply cost
+	ability_calculateCost(instance, class, true)
+	
+	dPrint_ability("Instance new status :")
+	dPrint_ability(ability_getInstanceAsString(instanceId))
 end
 
 --[[
@@ -113,6 +149,7 @@ end
 function ability_getClassAsString(className)
 	local class = ability_classes[className]
 	return "Ability class:\t"..class.Name.."\n"
+		.."\tFunction = "..getValueAsString(class.Function).."\n"
 		.."\tTargetType = "..getValueAsString(class.TargetType).."\n"
 		.."\tTargetTeam = "..getValueAsString(class.TargetTeam).."\n"
 		.."\tTargetSelection"..getValueAsString(class.TargetSelection).."\n"
@@ -169,33 +206,6 @@ end
 --- Core Functions ---
 ----------------------
 
---[[
-	Fires an ability
-
-	@param instanceId : id of the ability instance to fire
-	@param targetName : name of the target ship
-]]
-function ability_fire(instanceId, targetName)
-	local instance = ability_instances[instanceId]
-	local class = ability_classes[instance.Class]
-	dPrint_ability("Firing '"..instanceId.."' ("..class.Name..") at "..targetName)
-	
-	-- Route the firing to the proper script
-	if (class.Name == "SSM-moloch-std") or (class.Name == "Fighter-launched Mordiggian Strike") then
-		fireSSM(instance, class, targetName)
-	elseif (class.Name == "Energy Drain") then
-		fireEnergyDrain(instance, class, targetName)
-	end
-	
-	-- Update instance status
-	instance.LastFired = mn.getMissionTime()
-	
-	-- Apply cost
-	ability_calculateCost(instance, class, true)
-	
-	dPrint_ability("Instance new status :")
-	dPrint_ability(ability_getInstanceAsString(instanceId))
-end
 
 --[[
 	Creates a class of the specified name and attributes
@@ -208,6 +218,7 @@ function ability_createClass(name, attributes)
 	-- Initialize the class
 	ability_classes[name] = {
 	  Name = name,
+	  Function = attributes['Function']['value'],
 	  TargetType = attributes['Target Type']['value'],--TODO : use getValue ?
 	  TargetTeam = attributes['Target Team']['value'],--TODO : ditto
 	  TargetSelection = "Closest",

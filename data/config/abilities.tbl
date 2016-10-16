@@ -1,11 +1,12 @@
 #Abilities
 
 ; $Name: string
-; $Target Type:   list of string (self, fighter, corvette, tagged, buff:buffType)
+; Function: string, function to call when firing the ability
+; $Target Type: list of string (ship types)
 ; $Target Team: list of string (hostile, friendly, relative to the caster)
-; $Target Selection: Closest, Current target
+; $Target Selection: list of string ("Closest", "Current target")
 ; $Range: integer (optional)
-;   +Min: integer (minimum range) (optional)
+;   TODO: +Min: integer (minimum range) (optional)
 ; $Cost: integer/list of integer (tied to diffculty level) (optional)
 ;   +Cost type: string (weapon energy reserve, what ammo consumption system is to be used) (optional)
 ; 	+Starting Reserve:	15 (optional)
@@ -14,18 +15,20 @@
 ; TODO : sound effects?
 ; TODO : ability archetypes (SSM, energy drain, etc.éé)
 ; $Cooldown:      90
-; $Duration: list of int (optional)
-; $Ability Data: metadata used by whatever script actually uses the ability
+; TODO : $Duration: list of int (optional)
+; $Ability Data: sub-attributes contain metadata used by the function called
 
 $Name:				SSM-moloch-std
+$Function:			fireSSM
 $Target Type:   	cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
 $Target Team:   	Hostile
 $Target Selection:	Closest
 $Cooldown:			24, 20, 17, 15, 13
-$Ability Data:
+$Ability Data:		fireSSM
   +Strike Type: 	Shivan SSM Strike
   
 $Name:					Fighter-launched Mordiggian Strike
+$Function:				fireSSM
 $Target Type:   		cruiser, capital, corvette  ;; TODO: allow ship flags, like big damage & shit
 $Target Team:   		Hostile
 $Target Selection:		Current Target
@@ -36,9 +39,8 @@ $Cooldown:				9
 $Ability Data:
   +Strike Type: 	Mordiggian Strike
 
-; TODO : self targetted thing
-
 $Name:				Energy Drain
+$Function:			fireEnergyDrain
 $Target Type:		fighter, bomber
 $Target Team:		Hostile
 $Target Selection:	Current Target	; Ship targetted by the caster
@@ -51,22 +53,25 @@ $Ability Data:
 	+Afterburner drain:	100
 	+Shield drain:		200
 
-  
-$Name:          Shield Recharge Aura ;; concept : passive ability
-$Target Type:   fighter, bomber
-$Target Team:   Friendly
-$Range:         4000
-$Ability Data:
-  +Regen Rate:  1%/s
+; TODO : self targetted thing
 
-$Name:          Energy Dampening Field ;; concept : energy cost type
-$Target Type:   fighter, bomber
-$Target Team:   Hostile
-$Range:         1500
-$Cost:          70
-  +Cost Type:   energy:weapon
-$Cooldown:      90
-$Duration:      15
+
+
+;Name:          Shield Recharge Aura ;; concept : passive ability
+;$Target Type:   fighter, bomber
+;$Target Team:   Friendly
+;$Range:         4000
+;$Ability Data:
+;  +Regen Rate:  1%/s
+
+;$Name:          Energy Dampening Field ;; concept : energy cost type
+;$Target Type:   fighter, bomber
+;$Target Team:   Hostile
+;$Range:         1500
+;$Cost:          70
+;  +Cost Type:   energy:weapon
+;$Cooldown:      90
+;$Duration:      15
 
 
 #End
