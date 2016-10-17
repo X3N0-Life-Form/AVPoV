@@ -41,6 +41,13 @@ function ability_cycleTrigger()
 		ability_lastCast = missionTime
 	end
 	
+	-- TODO : test printing ability status
+	gr.setColor(255,255,255)
+	gr.drawString("Active abilities:", gr.getScreenWidth() * 0.17, gr.getScreenHeight() * 0.78)
+	for instanceId, instance in pairs(ability_instances) do
+		gr.drawString(instanceId..";")
+	end
+	
 	-- TODO: apply over-time effects?
 end
 
