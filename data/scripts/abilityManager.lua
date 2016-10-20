@@ -16,6 +16,7 @@
 
 ability_classes = {}
 ability_instances = {}
+ability_ships = {}
 ability_lastCast = 0
 
 ------------------------
@@ -31,6 +32,8 @@ ability_castInterval = 0.1
 --- High Level Functions ---
 ----------------------------
 
+-- TODO : reload
+
 --[[
 	Triggers the fireAllPossible function at regular intervals
 ]]
@@ -41,14 +44,59 @@ function ability_cycleTrigger()
 		ability_lastCast = missionTime
 	end
 	
-	-- TODO : test printing ability status
+	-- TODO: apply over-time effects?
+	
+	-- Print ability instances
 	gr.setColor(255,255,255)
-	gr.drawString("Active abilities:", gr.getScreenWidth() * 0.17, gr.getScreenHeight() * 0.78)
-	for instanceId, instance in pairs(ability_instances) do
-		gr.drawString(instanceId..";")
+	if (ability_enableDebugPrints) then
+		gr.drawString("Instanciated abilities:", gr.getScreenWidth() * 0.01, gr.getScreenHeight() * 0.15)
+		for instanceId, instance in pairs(ability_instances) do
+			gr.drawString("\t"..ability_getInstanceAsString(instanceId))
+		end
 	end
 	
-	-- TODO: apply over-time effects?
+	-- TODO : some cool player feeback thingy
+	if (true) then
+		-- Get the player's ship
+		local playerShip = mn.Ships[hv.Player.Name]
+		
+		gr.drawString("Active abilities:", gr.getScreenWidth() * 0.80, gr.getScreenHeight() * 0.15)
+		if not (ability_ships[playerShip.Name] == nil) then
+			for instanceId, instance in pairs(ability_ships[playerShip.Name]) do
+				-- TODO : refactor into subfunction
+				local class = ability_classes[instance.Class]
+				local cooldown =  (instance.LastFired + getValueForDifficulty(class.Cooldown)) - mn.getMissionTime()
+				if (cooldown < 0) or (instance.LastFired <= 0) then
+					cooldown = 0
+				end
+				
+				-- Status color
+				if (class.Cost > 0) and (instance.Ammo == 0) then
+					gr.setColor(255,0,0)
+				elseif (cooldown > 0) then
+					gr.setColor(255,255,0)
+				else
+					gr.setColor(0,255,0)
+				end
+				
+				-- Begin printing
+				gr.drawString(class.Name..":")
+				
+				if (class.Cost > 0) then
+					gr.drawString("\tCost: "..class.Cost.." ("..class.CostType.Type..")")
+					if (class.CostType.Type == 'Ammo') then
+						gr.drawString("\tAmmo: "..instance.Ammo)
+					end
+				end
+				
+				if (class.Range >= 0) then
+					gr.drawString("\tRange: "..class.Range)
+				end
+				
+				gr.drawString("\tCooldown: "..string.format("%.2f", cooldown))
+			end
+		end
+	end
 end
 
 --[[
@@ -209,6 +257,14 @@ function ability_getInstanceAsString(instanceId)
 		.."\tAmmo = "..getValueAsString(instance.Ammo).."\n"
 end
 
+--[[
+
+]]
+function ability_getShipAbilities(shipName)
+	local ship = nil
+	
+end
+
 ----------------------
 --- Core Functions ---
 ----------------------
@@ -315,6 +371,7 @@ end
 ]]
 function ability_resetMissionVariables()
 	ability_instances = {}
+	ability_ships = {}
 	ability_lastCast = 0
 end
 
@@ -325,6 +382,7 @@ end
 	@param instanceId : unique identifier for this instance
 	@param className : name of the ability
 	@param shipName : ship to tie the ability to. Can be nil.
+	@return Created instance
 ]]
 function ability_createInstance(instanceId, className, shipName)
 	dPrint_ability("Creating instance of class "..className.." with id "..instanceId.." for ship "..getValueAsString(shipName))
@@ -349,6 +407,7 @@ function ability_createInstance(instanceId, className, shipName)
 	end
 	
 	dPrint_ability(ability_getInstanceAsString(instanceId))
+	return instance
 end
 
 --[[
@@ -572,8 +631,15 @@ end
 function ability_attachAbility(className, shipName, isManuallyFired)
 	local instanceId = shipName.."::"..className
 	dPrint_ability("Attaching ability : "..instanceId.." (manual fire = "..getValueAsString(isManuallyFired)..")")
-	ability_createInstance(instanceId, className, shipName)
-	ability_instances[instanceId].Manual = isManuallyFired
+	local instance = ability_createInstance(instanceId, className, shipName)
+	
+	-- Tie instance to ship
+	if (ability_ships[shipName] == nil) then
+		ability_ships[shipName] = {}
+	end
+	ability_ships[shipName][instanceId] = instance
+	
+	instance.Manual = isManuallyFired
 end
 
 --[[
@@ -595,6 +661,7 @@ function ability_getTargetInRange(instanceId)
 		
 		-- Iterate through every ship in mission
 		-- TODO : iterate through other object types?
+		-- TODO : be smart & don't iterate on target & self
 		for index = 1, ships do
 			local currentShip = mn.Ships[index]
 			
@@ -636,8 +703,16 @@ function ability_evaluateTargetFitness(instanceId, targetShip)
 	dPrint_ability("Evaluating fitness scheme : "..class.TargetSelection.." for target "..targetShip.Name)
 	if (class.TargetSelection == nil) or (class.TargetSelection == "Closest") then
 		fitness = firingShip.Position:getDistance(targetShip.Position)
+		
 	elseif (class.TargetSelection == "Current Target") then
 		if (firingShip.Target:isValid()) and (firingShip.Target.Name == targetShip.Name) then
+			fitness = 0
+		else
+			fitness = 9999
+		end
+		
+	elseif (class.TargetSelection == "Self") then
+		if (firingShip.Target:isValid()) and (firingShip.Name == targetShip.Name) then
 			fitness = 0
 		else
 			fitness = 9999

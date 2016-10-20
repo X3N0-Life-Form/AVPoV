@@ -56,3 +56,33 @@ function fireEnergyDrain(instance, class, targetName)
 	dPrint_abilityLibrary("AfterburnerFuelLeft = "..targetShip.AfterburnerFuelLeft)
 	dPrint_abilityLibrary("Shields.CombinedLeft = "..targetShip.Shields.CombinedLeft)
 end
+
+
+
+
+function fireRepair(instance, class, targetName)
+	local castingShip = mn.Ships[instance.Ship]
+	local targetShip = mn.Ships[targetName]
+	
+	local hits = class.AbilityData['Hits']
+	local shields = class.AbilityData['Shields']
+	local weapons = class.AbilityData['Weapons']
+	local afterburners = class.AbilityData['Afterburners']
+
+	if not (hits == nil) then
+		targetShip.HitpointsLeft = targetShip.HitpointsLeft + hits
+	end
+	
+	if not (shields == nil) then
+		targetShip.Shields.CombinedLeft = targetShip.Shields.CombinedLeft + shields
+	end
+	
+	if not (weapons == nil) then
+		targetShip.WeaponEnergyLeft = targetShip.WeaponEnergyLeft + weapons
+	end
+	
+	if not (afterburners == nil) then
+		targetShip.AfterburnerFuelLeft = targetShip.AfterburnerFuelLeft + afterburners
+	end
+end
+

@@ -50,8 +50,8 @@ $Variant:	Carrier Corvette
 $Abilities:	SSM-moloch-std
 
 $Name:		Alpha 1
-$Abilities:	Energy Drain, Fighter-launched Mordiggian Strike
-	+Manual:true, true
+$Abilities:	Energy Drain, Fighter-launched Mordiggian Strike, Repair-Self, Shield-Recharge-Target
+	+Manual:true, true, true, true
 
 #End
 

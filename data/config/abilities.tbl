@@ -53,10 +53,33 @@ $Ability Data:
 	+Afterburner drain:	100
 	+Shield drain:		200
 
-; TODO : self targetted thing
+$Name:					Repair-Self
+$Function:				fireRepair
+$Target Type:			fighter, bomber
+$Target Team:			Friendly
+$Target Selection:		Self
+$Cost:					1
+	+Starting Reserve:	5
+$Cooldown:				30
+;; TODO : duration
+$Ability Data:
+	+Hits:				100
+	
+$Name:					Shield-Recharge-Target
+$Function:				fireRepair
+$Target Type:			fighter, bomber
+$Target Team:			Friendly
+$Target Selection:		Current Target	; Ship targetted by the caster
+$Range:					450
+$Cost:					1
+	+Starting Reserve:	5
+$Cooldown:				30
+;; TODO : duration
+$Ability Data:
+	+Shields:			200
 
-
-
+;; TODO : auto-targetted friendly
+	
 ;Name:          Shield Recharge Aura ;; concept : passive ability
 ;$Target Type:   fighter, bomber
 ;$Target Team:   Friendly
