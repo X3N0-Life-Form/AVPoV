@@ -1,4 +1,13 @@
--- TODO : doc
+--[[
+	-----------------------
+	--- Ability Library ---
+	-----------------------
+	
+	This file contains various functions for the ability manager framework.
+	
+	Currently, the functions are required to follow the following signature :
+		* functionName(instance, class, targetName)
+]]
 
 ------------------------
 --- Global Constants ---
@@ -22,6 +31,9 @@ end
 --- Library Functions ---
 -------------------------
 
+--[[
+	Calls a SSM strike.
+]]
 function fireSSM(instance, class, targetName)
 	local castingShip = mn.Ships[instance.Ship]
 	local strikeType = class.AbilityData['Strike Type']
@@ -31,7 +43,9 @@ function fireSSM(instance, class, targetName)
 	mn.evaluateSEXP("(when (true) (call-ssm-strike \""..strikeType.."\" \""..strikeTeam.."\" \""..targetName.."\"))")
 end
 
-
+--[[
+	Drains energy from the target.
+]]
 function fireEnergyDrain(instance, class, targetName)
 	local castingShip = mn.Ships[instance.Ship]
 	local targetShip = mn.Ships[targetName]
@@ -58,13 +72,14 @@ function fireEnergyDrain(instance, class, targetName)
 end
 
 
-
-
+--[[
+	Repairs/recharges the target ship
+]]
 function fireRepair(instance, class, targetName)
 	local castingShip = mn.Ships[instance.Ship]
 	local targetShip = mn.Ships[targetName]
 	
-	local hits = class.AbilityData['Hits']
+	local hits = class.AbilityData['Hull']
 	local shields = class.AbilityData['Shields']
 	local weapons = class.AbilityData['Weapons']
 	local afterburners = class.AbilityData['Afterburners']

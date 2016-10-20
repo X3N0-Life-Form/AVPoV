@@ -1,22 +1,10 @@
+;; TODO : have a global attribute section ?
+;; color schemes, whether player abilities should be displayed & shit ?
+
+
+
 #Abilities
 
-; $Name: string
-; Function: string, function to call when firing the ability
-; $Target Type: list of string (ship types)
-; $Target Team: list of string (hostile, friendly, relative to the caster)
-; $Target Selection: list of string ("Closest", "Current target")
-; $Range: integer (optional)
-;   TODO: +Min: integer (minimum range) (optional)
-; $Cost: integer/list of integer (tied to diffculty level) (optional)
-;   +Cost type: string (weapon energy reserve, what ammo consumption system is to be used) (optional)
-; 	+Starting Reserve:	15 (optional)
-; TODO: $Always manual: boolean
-; TODO: $Buff: list of string (optional)
-; TODO : sound effects?
-; TODO : ability archetypes (SSM, energy drain, etc.éé)
-; $Cooldown:      90
-; TODO : $Duration: list of int (optional)
-; $Ability Data: sub-attributes contain metadata used by the function called
 
 $Name:				SSM-moloch-std
 $Function:			fireSSM
@@ -63,7 +51,7 @@ $Cost:					1
 $Cooldown:				30
 ;; TODO : duration
 $Ability Data:
-	+Hits:				100
+	+Hull:				100
 	
 $Name:					Shield-Recharge-Target
 $Function:				fireRepair
@@ -77,8 +65,16 @@ $Cooldown:				30
 ;; TODO : duration
 $Ability Data:
 	+Shields:			200
-
-;; TODO : auto-targetted friendly
+	
+$Name:					Repair-Field
+$Function:				fireRepair
+$Target Type:			fighter, bomber
+$Target Team:			Friendly
+$Target Selection:		Random
+$Range:					900
+$Cooldown:				1
+$Ability Data:
+	+Hull:			15
 	
 ;Name:          Shield Recharge Aura ;; concept : passive ability
 ;$Target Type:   fighter, bomber
@@ -86,15 +82,6 @@ $Ability Data:
 ;$Range:         4000
 ;$Ability Data:
 ;  +Regen Rate:  1%/s
-
-;$Name:          Energy Dampening Field ;; concept : energy cost type
-;$Target Type:   fighter, bomber
-;$Target Team:   Hostile
-;$Range:         1500
-;$Cost:          70
-;  +Cost Type:   energy:weapon
-;$Cooldown:      90
-;$Duration:      15
 
 
 #End

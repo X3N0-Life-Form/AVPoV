@@ -52,6 +52,9 @@ $Abilities:	SSM-moloch-std
 $Name:		Alpha 1
 $Abilities:	Energy Drain, Fighter-launched Mordiggian Strike, Repair-Self, Shield-Recharge-Target
 	+Manual:true, true, true, true
+	
+$Name:		Repair Test 1
+$Abilities:	Repair-Field
 
 #End
 
