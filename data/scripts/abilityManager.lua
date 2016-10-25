@@ -9,6 +9,7 @@
 	Functions of interest :
 		* ability_cycleTrigger()
 		* ability_trigger(instanceId)
+		* ability_reload(instanceId)
 		* ability_getClassAsString(className)
 		* ability_getInstanceAsString(instanceId)
 		* ability_attachAbility(className, shipName, isManuallyFired)
@@ -72,7 +73,22 @@ ability_castInterval = 0.1
 --- High Level Functions ---
 ----------------------------
 
--- TODO : reload
+-- TODO : differenciate starting reserve & max ammo
+--[[
+	Reloads the specified instance to its starting reserve.
+	If it doesn't have a starting reserve, increase current ammo reserve by 1
+]]
+function ability_reload(instanceId)
+	local instance = ability_instances[instanceId]
+	local class = ability_classes[instance.Class]
+	
+	-- If no starting reserve is defined, add 1 shot
+	if (class.StartingReserve == nil) then
+		instance.Ammo = instance.Ammo + 1
+	else
+		instance.Ammo = class.StartingReserve
+	end
+end
 
 --[[
 	Triggers the fireAllPossible function at regular intervals
