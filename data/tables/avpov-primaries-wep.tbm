@@ -745,7 +745,7 @@ $Name:                              Hayg Mas
 	+Tech Title:				   XSTR("GVW-73 Hayg Mas", -1)
 	+Tech Anim:					   Tech_GTW-5a_Prometheus_R
 	+Tech Description:
-		XSTR("Given the mixed results of the GTW ML-70 Morning Star, Vasudan Tactical Command felt that the Alliance needed a more close-combat oriented kinetic primary weapon. Developed by Mekhu Enterprises, the Hayg Mas turned out to be significantly different from the Morning Star: packing significant anti-shield and subsystem capabilities, the Hayg Mas is also more energy efficient, at the cost of range, projectile speed and rate of fire. In order to compensate for its low rate of fire, the Hayg Mas alternates between its firing points to provide a constant stream of projectile between a fighter and its target.
+		XSTR("Given the mixed results of the GTW ML-70 Morning Star, Imperial Naval Command felt that the Alliance needed a more close-combat oriented kinetic primary weapon. Developed by Mekhu Enterprises, the Hayg Mas turned out to be significantly different from the Morning Star: packing significant anti-shield and subsystem capabilities, the Hayg Mas is also more energy efficient, at the cost of range, projectile speed and rate of fire. In order to compensate for its low rate of fire, the Hayg Mas alternates between its firing points to provide a constant stream of projectile between a fighter and its target.
 
 		Currently, the weapon can only be mounted on Vasudan power grids, limiting its use to Vasudan fighters, although the Security Council has contracted Subach-Innes to create a Terran version of this weapon, given the manufacturer's history with Mekhu Enterprises.", -1)
 	$end_multi_text
@@ -759,14 +759,14 @@ $Model File:						none
 @Laser Tail Radius:					0.4
 $Mass:                              3.2
 $Velocity:                          650.0
-$Fire Wait:                         0.35
+$Fire Wait:                         0.25
 $Damage:                            28
 $Damage Type:						NormalWeapon
-$Armor Factor:						0.35
+$Armor Factor:						0.3
 $Shield Factor:						1.0
 $Subsystem Factor:					0.8
 $Lifetime:                          1.6
-$Energy Consumed:					0.70
+$Energy Consumed:					0.35
 $Cargo Size:						0.0
 $Homing:                            NO
 $LaunchSnd:                         79
