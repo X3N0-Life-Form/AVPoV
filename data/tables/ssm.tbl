@@ -44,7 +44,7 @@ $SSM:				Mordiggian Strike
 
 $SSM:				Mordiggian Strike x2
 	+Weapon:		Shivan Mordiggian Bomb
-	+Count:			1
+	+Count:			2
 	+WarpRadius:	40
 	+WarpTime:		8
 	+Radius:		1600
@@ -55,7 +55,7 @@ $SSM:				Mordiggian Strike x2
 	
 $SSM:				Mordiggian Strike x4
 	+Weapon:		Shivan Mordiggian Bomb
-	+Count:			1
+	+Count:			4
 	+WarpRadius:	40
 	+WarpTime:		8
 	+Radius:		1600
@@ -66,7 +66,7 @@ $SSM:				Mordiggian Strike x4
 	
 $SSM:				Mordiggian Strike x6
 	+Weapon:		Shivan Mordiggian Bomb
-	+Count:			1
+	+Count:			6
 	+WarpRadius:	40
 	+WarpTime:		8
 	+Radius:		1600
@@ -77,7 +77,7 @@ $SSM:				Mordiggian Strike x6
 
 $SSM:				Shivan Cluster Strike
 	+Weapon:		Shivan Cluster SSM
-	+Count:			1
+	+Count:			8
 	+WarpRadius:	25
 	+WarpTime:		4
 	+Radius:		800
