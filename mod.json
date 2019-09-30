@@ -1,0 +1,41 @@
+{
+    "installed": true,
+    "id": "AVPoV",
+    "title": "A Vasudan Point of View",
+    "type": "mod",
+    "parent": "FS2",
+    "version": "1.0.0",
+    "stability": "stable",
+    "description": "",
+    "notes": "",
+    "logo": null,
+    "tile": null,
+    "banner": null,
+    "release_thread": null,
+    "videos": [],
+    "screenshots": [],
+    "attachments": [],
+    "first_release": null,
+    "last_update": null,
+    "cmdline": "",
+    "mod_flag": [
+        "AVPoV"
+    ],
+    "dev_mode": true,
+    "custom_build": null,
+    "packages": [
+        {
+            "name": "core",
+            "notes": "",
+            "status": "recommended",
+            "dependencies": [],
+            "environment": "",
+            "folder": "core",
+            "is_vp": false,
+            "files": [],
+            "filelist": [],
+            "executables": [],
+            "check_notes": ""
+        }
+    ]
+}

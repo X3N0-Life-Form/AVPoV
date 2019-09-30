@@ -1,0 +1,974 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("The Archangel of Death", -1)
+$Author: X3N0-Life-Form
+$Created: 05/13/12 at 23:19:26
+$Modified: 05/13/12 at 23:27:01
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
+
++Game Type Flags: 1
+
++Flags: 128
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
+
++Disallow Support: 0
+
++Hull Repair Ceiling: 0.000000
+
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 0.000000, 5302.964355, 1250.814209
++Viewer orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.395873, 0.918305,
+	0.000000, -0.918305, 0.395873
+
+
+$AI Profile: myProfile
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Players		;! 1 total
+
+$Starting Shipname: GTF Ulysses 0
+$Ship Choices: (
+	"GTF Ulysses"	5
+	"GTF Hercules"	5
+	"GTF Hercules Mark II"	5
+	"GTF Ares"	5
+	"GTF Erinyes"	5
+	"GTF Loki"	5
+	"GTF Pegasus"	5
+	"GTF Perseus"	5
+	"GTF Myrmidon"	5
+	"SF Mara (terrans)"	5
+	"GTB Artemis"	5
+	"GTB Artemis D.H."	5
+	"GTB Medusa"	5
+	"GTB Ursa"	5
+	"GTB Zeus"	5
+	"GTB Boanerges"	5
+	"GVF Ptah"	5
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	16
+	"Subach HL-D"	16
+	"Mekhu HL-7"	16
+	"Mekhu HL-7D"	16
+	"Akheton SDG"	16
+	"Morning Star"	16
+	"MorningStar D"	16
+	"Prometheus R"	16
+	"Prometheus S"	16
+	"Prometheus D"	16
+	"Maxim"	16
+	"Maxim D"	16
+	"UD-8 Kayser"	16
+	"UD-D Kayser"	16
+	"Circe"	16
+	"Lamprey"	16
+	"Shivan Light Laser"	16
+	"Shivan Heavy Laser"	16
+	"Shivan Mega Laser"	16
+	"UD-6"	16
+	"Fire Spitter"	16
+	"Hell Spitter"	16
+	"Hayg Mas"	16
+	"Sehku"	16
+	"Sahr AS"	16
+	"Shivan Light Laser Up"	16
+	"Shivan Heavy Laser Up"	16
+	"Shivan Anticap Laser"	16
+	"Shivan Heavy Anticap Laser"	16
+	"Shivan Scatter Gun"	16
+	"Shivan Light Scatter Gun"	16
+	"Shivan Sniper Gun"	16
+	"Shivan Large Canon"	16
+	"Shivan Flak Weapon"	16
+	"Rockeye"	500
+	"Rockeye D"	500
+	"Tempest"	500
+	"Tempest D"	500
+	"Hornet"	500
+	"Hornet D"	500
+	"Hornet#Weak"	500
+	"Tornado"	500
+	"Tornado D"	500
+	"Harpoon"	500
+	"Harpoon D"	500
+	"Harpoon#Weak"	500
+	"Trebuchet"	500
+	"TAG-A"	500
+	"TAG-B"	500
+	"TAG-C"	500
+	"Piranha"	500
+	"Stiletto II"	500
+	"Infyrno"	500
+	"Infyrno D"	500
+	"Cyclops"	500
+	"Cyclops#short"	500
+	"Helios"	500
+	"EMP Adv."	500
+	"Rockeye#Shivan"	500
+	"Tempest#Shivan"	500
+	"Hornet#Shivan"	500
+	"Hornet#Weak#Shivan"	500
+	"Tornado#Shivan"	500
+	"Harpoon#Shivan"	500
+	"Harpoon#Weak#Shivan"	500
+	"Trebuchet#Shivan"	500
+	"EMP Adv.#Shivan"	500
+	"Piranha#Shivan"	500
+	"Shivan Disruptor"	500
+	"Shivan Area Bomb"	500
+	"Shivan Bomb"	500
+	"Shivan Bomb#Short"	500
+	"Shivan Megabomb"	500
+	"Macross"	500
+	"Overkill"	500
+	"Bane"	500
+	"Overkill Mk2"	500
+	"TAG-C#Shivan"	500
+	"AntiFighterTAG#Shivan"	500
+	"TAG-C#Barrage"	500
+	"Shivan Mordiggian Bomb"	500
+	"Shivan Swarmer Bomb"	500
+	"Shivan Advanced Swarmer Bomb"	500
+	"Shivan LR Swarm"	500
+	"Tempest Adv#Shivan"	500
+)
+
+#Objects		;! 2 total
+
+$Name: GTF Ulysses 0		;! Object #0
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Kohl'Taar		;! Object #1
+$Class: SD Ravana
+$Team: Hostile
+$Location: -210.811295, 0.000011, 4468.791992
+$Orientation:
+	-0.979749, 0.000000, -0.200230,
+	0.000000, 1.000000, 0.000000,
+	0.200230, 0.000000, -0.979749
+$AI Behavior: None
++AI Class: Big
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Primary Banks: ( "MRedUp" )
++Subsystem: turret04
++Primary Banks: ( "MRedUp" )
++Subsystem: turret05
++Subsystem: turret06
++Primary Banks: ( "SAAA" )
++Subsystem: turret07
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret08
++Primary Banks: ( "SAAA" )
++Subsystem: turret09
++Primary Banks: ( "SAAA" )
++Subsystem: turret10
++Subsystem: turret11
++Primary Banks: ( "SAAA" )
++Subsystem: turret12
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret13
++Primary Banks: ( "SAAA" )
++Subsystem: turret14
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret15
++Primary Banks: ( "MRed" )
++Subsystem: turret16
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret17
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret18
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret19
++Secondary Banks: ( "Piranha#Shivan" )
++Sbank Ammo: ( 0 )
++Subsystem: turret20
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret21
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret22
++Primary Banks: ( "Fast Flak" )
++Subsystem: turret23
++Primary Banks: ( "MjolnirBeam#home" )
++Subsystem: turret24
++Primary Banks: ( "SAAA" )
++Subsystem: turret25
++Primary Banks: ( "MRed" )
++Subsystem: turret26
++Secondary Banks: ( "Piranha#Shivan" )
++Sbank Ammo: ( 0 )
++Subsystem: turret27
++Primary Banks: ( "MRed" )
++Subsystem: turret28
++Primary Banks: ( "MRed" )
++Subsystem: turret29
++Primary Banks: ( "SAAA" )
++Subsystem: turret30
++Primary Banks: ( "Fast Flak" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Special Hitpoints: 200000
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 670
+
+
+$Name: Pisces 1		;! Object #112
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1559.190918, 8135.108398, -1349.340820
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 2		;! Object #113
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1137.474731, 7883.306641, -1240.881592
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 3		;! Object #114
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1158.103516, 8163.388672, -1290.298096
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Pisces 4		;! Object #115
+$Class: SB Seraphim
+$Team: Hostile
+$Location: -1330.784668, 7815.963867, -1222.161865
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Demon
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Light Laser Up" "Shivan Heavy Anticap Laser" "Shivan Scatter Gun" )
++Secondary Banks: ( "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" "Shivan Mordiggian Bomb" )
++Subsystem: turret01
++Primary Banks: ( "Shivan Flak Weapon" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Flak Weapon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Hotkey: 7
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Mara		;! Object #116
+$Class: SF Mara#
+$Team: Hostile
+$Location: -1404.459839, 7943.873047, -1508.051758
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
+$AI Goals: ( goals ( ai-chase-any 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Shivan Scatter Gun" "Shivan Flak Weapon" )
++Secondary Banks: ( "Tempest Adv#Shivan" "TAG-C#Barrage" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 250
++Hotkey: 6
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Hell Bringer		;! Object #117
+$Class: SC Rakshasa
+$Team: Hostile
+$Location: -1572.130127, 7117.158691, -1558.024414
+$Orientation:
+	0.859315, -0.505533, 0.077548,
+	0.503487, 0.862807, 0.045437,
+	-0.089879, 0.000000, 0.995953
+$AI Behavior: None
++AI Class: Big
+$AI Goals: ( goals ( ai-chase "Reaper" 50 ) ( ai-chase "Sparta" 49 ) ( ai-chase "Streaker" 46 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret02
++Primary Banks: ( "Shivan Huge Lance" )
++Subsystem: turret03
++Primary Banks: ( "Shivan Huge Lance" )
++Subsystem: turret04
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret05
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret06
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret07
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret08
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret09
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret10
++Primary Banks: ( "Shivan Lance" )
++Subsystem: turret11
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret12
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret13
++Primary Banks: ( "Shivan Multi Turret Up" )
++Subsystem: turret14
++Primary Banks: ( "Shivan Multi Turret Up" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Pisces" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 400
++Special Hitpoints: 80000
++Hotkey: 5
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+
+#Wings		;! 0 total
+
+$Name: Pisces
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Pisces 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( destroyed-or-departed-delay 
+   5 
+   "Qwar Jet" 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Pisces 1"
+	"Pisces 2"
+	"Pisces 3"
+	"Pisces 4"
+)
+$AI Goals: ( goals ( ai-chase "Sparta" 50 ) ( ai-chase "Reaper" 49 ) ( ai-chase "Streaker" 47 ) ( ai-chase-any 45 ) )
++Flags: ( )
+
+#Events		;! 0 total
+
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      0 
+      "Pisces" 
+      "Mara" 
+      "Hell Bringer" 
+   )
+   ( set-armor-type 
+      "Mara" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communications" 
+      "sensors" 
+      "navigation" 
+   )
+   ( set-armor-type 
+      "Pisces 1" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 2" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 3" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( set-armor-type 
+      "Pisces 4" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+      "Shields" 
+      "engine" 
+      "weapons" 
+      "communication" 
+      "sensors" 
+      "navigation" 
+      "turret01" 
+      "turret02" 
+   )
+   ( deactivate-glow-maps 
+      "Pisces 1" 
+      "Pisces 2" 
+      "Pisces 3" 
+      "Pisces 4" 
+      "Mara" 
+      "Hell Bringer" 
+   )
+   ( set-armor-type 
+      "Hell Bringer" 
+      ( true ) 
+      "Shivan Destroyer Armor" 
+      "Hull" 
+   )
+   ( set-armor-type 
+      "Hell Bringer" 
+      ( true ) 
+      "Hell Armor" 
+      "reactor" 
+      "navigation" 
+      "weapons" 
+      "engine" 
+      "communication" 
+      "sensors" 
+      "turret14" 
+      "turret13" 
+      "turret12" 
+      "turret11" 
+      "turret10" 
+      "turret09" 
+      "turret08" 
+      "turret07" 
+      "turret06" 
+      "turret05" 
+      "turret04" 
+      "turret03" 
+      "turret02" 
+      "turret01" 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      200 
+      "turret01" 
+      "turret04" 
+   )
+)
++Name: pisces+mara+boss rak arrive
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Hell Armor" 
+      "weapons" 
+      "sensors" 
+      "communications" 
+      "navigation" 
+      "engine" 
+   )
+)
++Name: fighting chance
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Hell Bringer" ) 
+   ( do-nothing ) 
+)
++Name: destroy hell bringer
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Hell Bringer (F10)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Mara" ) 
+   ( do-nothing ) 
+)
++Name: destroy mara
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Elite Mara (F11)", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Pisces" ) 
+   ( do-nothing ) 
+)
++Name: destroy pisces
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Pisces (F12)", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Pisces" ) 
+   ( set-post-effect "lightshafts" 100 ) 
+)
++Name: shafts on
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Pisces" ) 
+   ( fade-out 2000 1 ) 
+)
++Name: white fade
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-post-effect "saturation" 100 ) 
+   ( set-post-effect "distort noise" 0 ) 
+   ( modify-variable 
+      @saturation-level[95] 
+      100 
+   )
+   ( fade-in ) 
+)
++Name: remove post effects
++Repeat Count: 1
++Interval: 1
++Chained: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Hell Bringer" ) 
+   ( unprotect-ship "Alpha 1" ) 
+)
++Name: ==boss fight==
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( != 
+      @saturation-level[95] 
+      ( hits-left "Alpha 1" ) 
+   )
+   ( if-then-else 
+      ( < 
+         @saturation-level[95] 
+         ( hits-left "Alpha 1" ) 
+      )
+      ( modify-variable 
+         @saturation-level[95] 
+         ( + @saturation-level[95] 1 ) 
+      )
+      ( modify-variable 
+         @saturation-level[95] 
+         ( - @saturation-level[95] 1 ) 
+      )
+   )
+   ( set-post-effect 
+      "saturation" 
+      @saturation-level[95] 
+   )
+)
++Name: health meter
++Repeat Count: -1
++Trigger Count: 8000
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Hell Bringer" ) 
+   ( repair-subsystem "Alpha 1" "Hull" 1 ) 
+)
++Name: regen
++Repeat Count: 8000
++Interval: 2
+
+$Formula: ( when 
+   ( has-arrived-delay 22 "Hell Bringer" ) 
+   ( call-ssm-strike 
+      2 
+      "Hell Bringer" 
+      "Friendly" 
+   )
+)
++Name: redirect ssm barrage
++Repeat Count: 2
++Interval: 10
+
+$Formula: ( when 
+   ( < ( hits-left "Mara" ) 10 ) 
+   ( set-primary-weapon "Mara" 0 "SAAA" ) 
+   ( set-primary-weapon "Mara" 1 "SAAA" ) 
+)
++Name: berserk - mara
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( sabotage-subsystem "Mara" "Hull" 1 ) 
+)
++Name: berserk failure - mara
++Repeat Count: 40
++Interval: 3
++Chained: 5
+
+$Formula: ( when 
+   ( < ( hits-left "Hell Bringer" ) 5 ) 
+   ( turret-change-weapon 
+      "Hell Bringer" 
+      "turret02" 
+      "Shivan Multi Lance" 
+      1 
+      0 
+   )
+   ( turret-change-weapon 
+      "Hell Bringer" 
+      "turret03" 
+      "Shivan Multi Lance" 
+      1 
+      0 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      300 
+      "turret01" 
+      "turret04" 
+   )
+   ( turret-set-rate-of-fire 
+      "Hell Bringer" 
+      150 
+      "turret07" 
+      "turret08" 
+      "turret09" 
+      "turret10" 
+   )
+)
++Name: berserk - hell bringer
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( sabotage-subsystem 
+      "Hell Bringer" 
+      "Hull" 
+      1 
+   )
+)
++Name: berserk failure - hellbringer
++Repeat Count: 5
++Interval: 5
++Chained: 5
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Hell Bringer" ) 
+      ( < ( hits-left "Alpha 1" ) 20 ) 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+   ( set-primary-weapon 
+      "Alpha 1" 
+      0 
+      "Dwarf Lance" 
+   )
+   ( set-primary-weapon 
+      "Alpha 1" 
+      1 
+      "Dwarf Lance" 
+   )
+)
++Name: berserk alpha 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-weapon-energy 
+      ( + 
+         ( weapon-energy-pct "Alpha 1" ) 
+         15 
+      )
+      "Alpha 1" 
+   )
+   ( set-shield-energy 
+      ( + ( shields-left "Alpha 1" ) 20 ) 
+      "Alpha 1" 
+   )
+   ( set-afterburner-energy 
+      ( + 
+         ( afterburner-energy-pct "Alpha 1" ) 
+         20 
+      )
+      "Alpha 1" 
+   )
+)
++Name: who's laughing now?
++Repeat Count: 8000
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Streaker" ) 40 ) 
+   ( set-armor-type 
+      "Streaker" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+   )
+)
++Name: streaker < 40
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Streaker" ) 20 ) 
+   ( set-armor-type 
+      "Streaker" 
+      ( true ) 
+      "Hell Armor" 
+      "Hull" 
+   )
+)
++Name: streaker < 20
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: ==END==
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 0 total
+
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 500
+$Ambient light level: 7895160
++Nebula: Nebula01
++Color: Blue
++Pitch: 115
++Bank: 178
++Heading: 169
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+

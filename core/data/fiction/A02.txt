@@ -1,0 +1,13 @@
+FROM:	Rear-Admiral Obster, GVD Apep
+TO:		3rd Fleet Terran Command
+
+OBJECT:	Situation in Gamma Draconis
+Message begins:
+	8 hours ago, the GVD Apep entered the Gamma Draconis system to support Alliance forces already in-system, effectively taking over the Aquitaine's role as Command and Control for all assets engaged in containement operations in Gamma Draconis and the nebula.
+
+	As some of you already know the the various operation reports from the last 8 hours, the Alliance is on the verge of regaining total control over the Gamma Draconis system, eliminating the last pockets of Shivan resistance. Our recon units present in the nebula indicate that the Shivans are still in disarray due to the destruction of the SD Ravana by the Aquitaine's battlegroup, although Special Operations Command is expecting a new command ship to take over Command & Control.
+	
+	When that happens, the Shivans are likely to launch a counter-offensive against our forces in Gamma Draconis after securing the node in the nebula. For this reason, a small blockade force should be present at all times at the Gamma Draconis node in the nebula, backed up by a blocade of the subspace portal itself in Gamma Draconis. The GTD Olorin will be leading the defence force present in the nebula, while the GTCv Arlington blocades the portal on the other side. If the Shivans deploy overwhelming force against the nebula defence force, the Olorin and escorting ships are to fall back and regroup with the rest of the forces present in the nebula. If the portal blocade fails to contain the Shivan assault, all nebula assets are to fall back to Gamma Draconis and hold the force there until reinforcement arrive from Capella.
+	
+Personal opinion:
+	At the moment, the nebula recon units are having a hard time gathering intel regarding enemy movement. Therefore, I recommend extreme care when deploying more warships in the nebula. Until AWACS can be deployed in the nebula, it would be wise to limit our confrontations with Shivan forces.

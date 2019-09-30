@@ -1,0 +1,12 @@
+; max 40 tips right now!! (Was 20, jacked up by MK on August 5, 1999.  Search for MAX_PLAYER_TIPS to change.)
+
++Tip: XSTR("Welcome to A Vasudan Point of View. Several tips will overview some of the gameplay differences between this mod and retail FS2.", -1)
++Tip: XSTR("The mod's repository is located on Github and can be freely accessed by anyone.", -1)
++Tip: XSTR("GTVA weaponry inflicts reduced damage to Shivan crafts. See armor entries in the techroom for more details, or the armor table itself.", -1)
++Tip: XSTR("Shivan weaponry inflicts extra damage to GTVA crafts. See armor entries in the techroom for more details, or the armor table itself.", -1)
++Tip: XSTR("Just like in Vassago's Dirge, all Shivan fighters are capable of gliding. Some of the most advanced crafts also have side and reverse thrusters and afterburners.", -1)
++Tip: XSTR("Capital ships tend to have a different loadout from their default retail loadout. Look in the techroom for more details regarding each new variant.", -1)
++Tip: XSTR("Shivan Command ships are tougher and usually carry better armament than the standard variants.", -1)
++Tip: XSTR("During the Battle of Capella, Shivan are starting to use improved versions of their standard weapons. Be careful.", -1)
+
+#end

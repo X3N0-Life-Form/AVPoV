@@ -1,0 +1,558 @@
+Campaign name :		A Vasudan Point of View (find a new name)
+Author : 		X3N0-Life-Form
+Goal :			Learn how to use FRED - done
+			Learn how to table - done
+			Extend modding skillset - under way
+			Do something good - ?
+			Release - lol
+
+
+ToDo : 	nameplates
+	backgrounds
+	Capella arc
+	more msgs
+	SOC loop
+	more tech entries
+
+12th Vasudan Battlegroup
+CO : Rear-Admiral Obster
+Squadron: 456th Dust Bringers
+//Admiral Aramcheck - name on stand by
+
+/********************************************************************************/
+/*				Introduction					*/
+/*										*/
+/*Those were among my very first missions. These are very small scale missions.	*/
+/********************************************************************************/
+# 				Fleet status					#
+# Player's base of operations :	GVD Apep (Hatshepsut class)			#
+#										#
+# New ships : 			GTCv Viper (Deimos class)			#
+#				GTCv Warspite (Deimos class) - canon ship	#
+#										#
+# Losses :			None						#
+///////////////////////////////////////////////////////////////////////////////////
+A_Intro_00.									//ToDo
+/////////////////////////////////////////////////////////////////////////////////
+		Cutscene mission
+		5th gen mission
+
+		The GVD Apep arrives in Gamma Draconis.
+		Ships:
+			-GTD Carthage (Orion class)		//vital
+			-GVCv Dahshor (Sobek class)		//vital
+			-SC Fallen (Cain class)			//destroyed
+			-SC Hadji (Rakshasa class)		//destroyed
+			-SCv Cyaegha (Moloch class)		//vital
+			-GVD Apep (Hatshepsut class)		//vital
+			-GVC Searing Fate (Mentu Enforcer class)//vital
+
+
+///////////////////////////////////////////////////////////////////////////////////
+A_Intro_01.The Viper's Bite							//Alpha Ready
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		New equipement : mekhu hl-7 ; tempest ; rockeye ; akheton SDG ;
+			prometheus r ; lamprey ; harpoon ; hornet
+		New ships : GVF Horus ; GVF Seth ; GVF Toth
+		Background to improve (same as several other missions in gamma draconis)
+		Has a fiction piece
+
+		The GTCv Viper tests its long range flak against sniper gun equipped
+		sentry guns and two cruisers.
+		Ships :
+			-GTCv Viper (Deimos class)		//vital
+			-SC Curse (Rakshasa class)		//destroyed
+			-SC Black Beast (Rakshasa class)	//destroyed
+			-GVGb Stone of Dovka (Hemsut class)	//vital
+
+
+///////////////////////////////////////////////////////////////////////////////////
+A_Intro_02.Blue Storm								//Alpha Ready
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		Background: green + blue + red nebs
+		FS2 Timeline: After "Slaying Ravana"
+
+		Assist the Warspite while it tests ULTRA-AAA. Small scale mission.
+		Ships :
+			-GTCv Warspite (Deimos class)		//vital
+			-SC Armaros (Cain class)		//destroyed
+		+ after mission switch
+
+
+/********************************************************************************/
+/*				Vampire arc					*/
+/*										*/
+/*Features some of my 1st generation of missions. In this arc, the player's 	*/
+/*battlegroup is facing a Ravana class destroyer, the SD Vampire.		*/
+/********************************************************************************/
+#				Fleet status					#
+# Player's base of operations :	GVD Apep (Hatshepsut class)			#
+# Current ships : 		GTCv Warspite (Deimos class) - canon ship	#
+#				GTCv Viper Deimos class)			#
+# New ships :			GTD Guardian (Hecate class)			#
+#				GVCv Forgefire (Sobek class)			#
+#				GVC Harakhti (Mentu class)			#
+#				GVC Somtus (Mentu class) - canon ship		#
+#				GVD Pharaoh (Typhon class)			#
+#				Hammer Combat Group (3*Aeolus class)		#
+#				GTCv Yakiba (Deimos class) - canon ship		#
+#				GVC Melek (Mentu class)				#
+#				GVCv Thebes (Sobek class) - canon ship		#
+#				GVCv Sphinx (Sobek class)			#
+#				GVC Ennead (Mentu class)			#
+#										#
+# Losses : GTD Guardian ; GVCv Forgefire ; GVC Harakhti ; GVC Somtus (optionnal) ;#
+#	GTCv Yakiba ; GVC Melek ; GVCv Sphinx ;	GVC Ennead ;			#	
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_01.Fangs in the Mist						//Alpha Ready
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		New equipment : Hayg Mas
+		FS2 Timeline : After "Slaying Ravana"
+
+		Introduction of the SD Vampire. Alpha wing escorts the GVC Melek.
+		I've got a few more of these nebula-escort missions later on.
+		Ships :
+			-SD Vampire (Ravana class)	//vital
+			-GVC Melek (Mentu class)	//destroyed
+		Other engagements :
+			-SD Vorvadoss (Demon class) - mentionned during briefing
+
+
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_02.Uninvited Guest						//ReWork in progress
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Background : todo
+		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
+
+		The SD Vampire blows up a few ships & enters Gamma Draconnis
+		Ships :
+			-SD Vampire (Ravana class)	//vital
+			-GTD Guardian (Hecate class)	//non-vital
+			-GVCv Forgefire (Sobek class)	//non-vital
+			-GTCv Yakiba (Deimos class)	//destroyed
+			-SC Haagenti (Rakshasa class)	//destroyed
+			-SC Putana (Cain class)		//destroyed
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_03.Into the jaws of Death						//need more messages & events
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Background : done
+		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
+
+		GTVA forces break the Shivan blockade at the subspace portal
+		Ships :
+			-Doom Combat Group (Rakshasa & Cain class) 	//destroyed
+			-GVD Apep (Hatshepsut class)			//vital
+			-SC Iron Maiden (Lilith class)			//destroyed
+			
+
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_04.The Great Hunt							//ToTestFurther
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Background : done
+		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
+
+		Vasudan forces attack a Shivan depot
+		Ships :
+			-SD Vampire (Ravana class)		//vital
+			-GVC Harakhti (Mentu class)		//non-vital
+			-SC Kayla (Rakshasa class)		//destroyed
+			-SC Abel (Cain class)			//destroyed
+			-SCv Grelier (Moloch class)		//destroyed
+
+
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_05.The Vampire Slayers						//Beta-Ready
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		Background : done
+		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
+
+		The SD Vampire is trying to break the Capella Node blockade
+		(I know, I use a lot of Mentu cruisers)
+		Ships :
+			-SD Vampire (Ravana class)	//destroyed
+			-GVD Pharaoh (Typhon class)	//vital
+			-GVCv Sphinx (Sobek class)	//non-vital
+			-GVC Ennead (Mentu class)	//destroyed
+			-SCv Devil (Moloch class)	//destroyed
+		Other:
+			-GTC Herbert Jung (Leviathan class)//destroyed - mentionned in briefing
+			-GVC Serkp'Pha (Aten class)	//destroyed - mentionned in briefing
+
+
+///////////////////////////////////////////////////////////////////////////////////
+B_Vampire_Arc_06.Healing the Wounds						//?
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		Background : done
+		Has a fiction piece
+		FS2 Timeline : between "The Sixth Wonder" and "Feint! Parry! Riposte!"
+
+		The GVD Pharaoh is still blockading the Node until reinforcements
+		arrive
+		Ships :
+			-GVD Pharaoh (Typhon class)		//vital
+			-GTCv Viper (Deimos class)		//vital
+			-Hammer Combat Group (Aeolus class)	//vital
+			-GVC Somtus (Mentu class)		//non-vital
+			-SCv Kraken (Moloch class)		//destroyed
+			-SC Familiar (Rakshasa class)		//destroyed
+
+
+/********************************************************************************/
+/*				Shivan Tech arc					*/
+/*										*/
+/*Features some of my first generation missions. Arc based on the acquisition of*/
+/*shivan ships (maras, seraphims and even a rakshasa)				*/
+/********************************************************************************/
+#				Fleet status					#
+# Player's base of operations :	GVD Apep (Hatshepsut class)			#
+# Current ships : 		GTCv Warspite (Deimos class) - canon ship	#
+#				GTCv Viper (Deimos class)			#
+#				GVD Pharaoh (Typhon class)			#
+#				Hammer Combat Group (3*Aeolus class)		#
+#				GVCv Thebes (Sobek class) - canon ship		#
+# New ships :			GVCv Dahshor (Sobek class) - canon ship		#
+#										#
+#										#
+# Losses : GVCv Dahshor								#
+///////////////////////////////////////////////////////////////////////////////////
+C_Shivan_Tech_Arc_01.Red Bath							//ToRework
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		New equipement : tornado
+		Background : todo
+		FS2 Timeline : between "Feint! Parry! Ripost!"
+			and "Battle of the Wilderness"
+
+		Hammer 1 & Alpha wing discover a derelict Rakshasa
+		Ships :
+			-GTC Hammer 1 (Aeolus class)		//vital
+			-SC Morpheus (Rakshasa class)		//vital
+		to add : SC ??? (cain class)
+			more fighters & bombers? 
+
+///////////////////////////////////////////////////////////////////////////////////
+C_Shivan_Tech_Arc_02.Here comes the Grim Reaper					//ToRework
+/////////////////////////////////////////////////////////////////////////////////
+		1st gen mission
+		Background : todo
+		FS2 Timeline : After "Battle of the Wilderness"
+
+		Alpha wing is defending a gas mining operation when the SC Reaper
+		arrives & blows up the allied warship
+		Ships :
+			-Jupiter mining vessels (2 Zephyrus & 2 Anuket class)	//semi vital
+			-GVCv Dahshor (Sobek class)				//destroyed
+			-SC Reaper (Lilith class)				//vital
+
+
+
+C_Shivan_Tech_Arc_03a.The Seraphim's Flight	//ToDo
+
+C_Shivan_Tech_Arc_03b.The Master of Death	//ToDo
+
+
+
+/********************************************************************************/
+/*				NTF arc						*/
+/*										*/
+/*Two short missions that take place while the NTF is making its final run for 	*/
+/*the nebula									*/
+/********************************************************************************/
+#				Fleet status					#
+# Player's base of operations :							#
+# Current ships :		GVCv Warspite (Deimos class)- canon ship	#
+#				GTCv Viper (Deimos class)			#
+#				GVD Pharaoh (Typhon class)			#
+#				Hammer Combat Group (3*Aeolus class)		#
+#				GVCv Thebes (Sobek class) - canon ship		#
+# New ships :			GTC Blair (Fenris class)			#
+#										#
+# Losses : none									#
+///////////////////////////////////////////////////////////////////////////////////
+D_NTF_Arc_01.Card Games								//Beta-Ready/toTestFurther
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		New equipement : prometheus s ; piranha; fire spitter, hell spitter
+		Background : done (toRework)
+		Has a fiction piece
+		FS2 Timeline : during "The Sicilian Defense"
+
+		Bomber mission. Alpha wing & GTCv Lamia attack a NTF rallying point.
+		Ships :
+			-NTD Stalker (Orion class)		//destroyed
+			-NTT Feral (Argo class)			//destroyed
+			-NTCv Byzance (Deimos class)		//destroyed
+			-NTC Tanto (Fenris class)		//destroyed
+			-NTC Reno (Fenris class)		//destroyed
+			-NTC Valiant (Leviathan class)		//destroyed
+			-GTCv Lamia (Deimos class)		//non-vital
+
+///////////////////////////////////////////////////////////////////////////////////
+D_NTF_Arc_02.Bluff								//ToTestFurther
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Scramble mission (Horus + 2*Prometheus S + tempest + TAG-B)
+		Background : todo
+		FS2 Timeline : a few hours before "Endgame"
+
+		Alpha wing & GTC Blair fake an attack on the NTC Alexandria
+		Ships :
+			-NTC Alexandria (Fenris class)		//vital
+			-GTC Blair (Fenris class)		//vital
+			-GTD Streaker (Hecate class)		//vital
+
+
+/********************************************************************************/
+/*				Sathanas arc					*/
+/*										*/
+/*The pilot is transfered to a Terran Squadron, and helps in the destruction of */
+/*the SJ Sathanas								*/
+/*The difficulty is supposed to be a bit higher in this arc			*/
+/*Ends with the arrival of the Sathanas armada					*/
+/********************************************************************************/
+#				Fleet status					#
+# Player's base of operations :	GTD Olympus Shadow (Hecate class)		#
+# Current ships :		GVCv Warspite (Deimos class)- canon ship	#
+#				GTCv Viper (Deimos class)			#
+#				GVD Pharaoh (Typhon class)			#
+#				Hammer Combat Group (3*Aeolus class)		#
+#				GVCv Thebes (Sobek class) - canon ship		#
+#				GTC Blair (Fenris class)			#
+# New ships :			GTCv Xeus (Deimos class)			#
+#				GTA Devil's Eye (Charybdis class)		#
+#				GVCv Sopedu (Sobek class) - canon ship		#
+#				GTD Carthage (Orion class) - canon ship		#
+#				GTA Seer (Charybdis class)			#
+#				GTCv Warihu (Deimos class)			#
+#										#
+# Losses : GVCv Thebes ; GTA Devil's Eye (optional) ; GVCv Sopedu (optional) ;	#
+#	GTD Carthage (optional) ; GVD Pharaoh ; GVD Black Mamba ; GTCv Warihu ;	#
+#	Hammer CG (optional)
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_Arc_01.Hit and Run							//Needs more refining + messages
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		New equipement : maxim, crossbow
+		Background : todo
+		Has a fiction piece
+		FS2 Timeline : during "The Fog of War"
+
+		Alpha wing escorts the GTCv Xeus while it engages shivan
+		forces
+		Ships :
+			-GTCv Xeus (Deimos class)		//vital
+			-GTA Devil's Eye (Charybdis class)	//non vital
+			-SC Baator (Rakshasa class)		//destroyed
+			-SC Feargus (Cain class)		//destroyed
+		Other engagements :
+			-GVCv Thebes (Sobek class) - destroyed by SJ Sathanas
+
+
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_Arc_02.Welcome to Trapper Town					//?
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Background : todo
+		Has a fiction piece
+		FS2 Timeline : during "Speaking in Tongues"
+
+		GTVA forces attempt to lure the Sathanas
+		Ships :
+			-GVCv Sopedu (Sobek class)		//non vital
+			-SC Harbinger (Rakshasa class)		//destroyed
+			-SC Butcher (Cain class)		//destroyed
+			-SC Garbad (Cain class)			//destroyed
+
+//////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_Arc_03.Watch out for the Bear					//ToRework - add allied corvettes + off range mjollnir firing + downgrade sath to LRLRed?
+/////////////////////////////////////////////////////////////////////////////////
+		2nd gen mission
+		Background : done
+		FS2 Timeline : right before "Bearbaiting"
+
+		"The Sathanas decimated our fleet at the Capella Node"
+		Ships :
+			-GTD Carthage (Orion class)		//vital
+			-GVD Pharaoh (Typhon class)		//destroyed
+			-GVD Black Mamba (Hatshepsut class)	//
+			-Lighter RBCs (Mjolnir class)		//destroyed
+			-SC Nyoghta (Rakshasa class)		//destroyed
+			-SC Nergal (Lilith class)		//destroyed
+			-SD Lamashtu (Demon class)		//destroyed
+			-SJ Sathanas (Sathanas class)		//vital
+			-GVA Watcher (Setekh class)		//vital
+			-GTA Seer (Charybdis class)		//vital
+			-SCv Kohl'Taar (Moloch class)		//destroyed
+			-SC Danjal (Rakshasa class)		//destroyed
+			-SC Abyzou (Cain class)			//destroyed
+
+
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_Arc_04.The Waiting Dark						//Beta-Ready
+/////////////////////////////////////////////////////////////////////////////////
+		3rd gen mission
+		New equipement : infyrno ; circe
+		Background : done (toRework)
+		Has a fiction piece
+		FS2 Timeline : during "High Noon"
+
+		The GTCv Warihu engages the SCv Cyaegha ; Cyaegha pulls back in the end
+		Ships :
+			-GTCv Warihu (Deimos class)		//destroyed
+			-SCv Cyaegha (Moloch class)		//vital
+			-GTC Lexington (Leviathan class)	//non-vital
+			-SC Hellknight (Rakshasa class)		//vital
+		Other :
+			-GTA Seer (Charibdys class) - mentionned during briefing
+			-SD Nix (Demon class) - idem
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_Arc_05.It's Hammer Time						//ToBalance
+/////////////////////////////////////////////////////////////////////////////////
+		3rd gen mission
+		Background : todo
+		FS2 Timeline : between "High Noon" and "Return to Babel"
+
+		The Hammer CG is sent to hunt down the SCv Cyaegha
+		Ships :
+			-Hammer CG (3xAeolus class)		//semi-vital
+			-SCv Cyaegha (Moloch class)		//destroyed
+			//SC Obizoth (Lilith class)
+			-SD Nix (Demon class)			//vital
+			-Blade CG (2xSobek class)		//vital
+			-GVD Apep (Hatshepsut class)		//vital
+			-Wrath CG (3xCain class)		//destroyed
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_06.We've got company !						//Beta-Ready
+/////////////////////////////////////////////////////////////////////////////////
+		3rd gen mission
+		Background : todo
+		Has a fiction piece
+		FS2 Timeline : during "Straight, no chaser"
+
+		The GTD Olympus Shadow is under attack !
+		Ships :
+			-GTD Olympus Shadow (Hecate class)	//vital
+			-GTC Julius (Leviathan class)		//non-vital
+			-GTC Axius (Leviathan class)		//non-vital
+			-SC Lurz (Cain class)			//destroyed
+			-SC Mekleth (Cain class)		//destroyed
+			-SCv Ish'Kafel (Moloch class)		//non-vital
+			-GTCv Monere (Deimos class)		//non-vital
+			
+		
+
+
+///////////////////////////////////////////////////////////////////////////////////
+E_Sathanas_07.Sorrow								//
+/////////////////////////////////////////////////////////////////////////////////
+		4th gen mission
+		Background : TODO (Capella node (again))
+		FS2 Timeline : after "Straight, no chaser"
+
+		The Shivans continue their attacks against the Olympus Shadow at the
+		Capella node
+		Ships :
+			-GTD Olympus Shadow (Hecate class)	//destroyed
+			-GTCv Kendrick Smith (Deimos class)	//non-vital
+			-Blade CG (2xSobek class)		//vital
+			-SC Lotode (Rakshasa class)		//destroyed
+			-SC Hellknight (Rakshasa class)		//vital
+			-SCv Toffolon (Moloch class)		//destroyed
+
+
+
+
+/********************************************************************************/
+/*				Capella Arc					*/
+/*										*/
+/*The Battle of Capella								*/
+/*Time to improve my warship battle skills					*/
+/********************************************************************************/
+#				Fleet status					#
+# Player's base of operation :	GVD Apep (Hatshepsut class)			#
+# Current ships :		
+#
+#
+#
+
+///////////////////////////////////////////////////////////////////////////////////
+F_Capella_01.Nightmare								//
+/////////////////////////////////////////////////////////////////////////////////
+	5th gen mission
+	Background: Capella
+
+	The Blade CG engages a Demon class destroyer
+	Ships:
+		-Blade CG (2xSobek class)	//destroyed
+		-SD Susl'Arh Mork (Demon class)	//vital
+		-GTA Fox (Charybdis class)	//non-vital
+		-SC Ragnarok (Lilith class)	//non-vital
+		-Vor CG (2xRakshasa class)	//non-vital
+
+
+F_Capella_02.Exodus
+
+
+
+F_Capella_03.The Lost Generation
+
+
+///////////////////////////////////////////////////////////////////////////////////
+F_Capella_04.Facing Goliath							//Need more testing
+/////////////////////////////////////////////////////////////////////////////////
+	5th gen mission
+	Background: TODO
+	FS2 Timeline: right after "Their Finest Hour"
+
+	The Apep engages a rampaging Sathanas juggernaught to prevent it from
+	striking refugee convoy and other fleet assets
+	Ships:
+		-SJ Sathanas (Sathanas class)		//non-vital
+		-GTI Paxton Shipyards (Arcadia class)	//destroyed
+		-GTI Ganymede Alpha			//destroyed
+		-GTI Ganymede Beta			//destroyed
+		-GTD Ballard (Hecate class)		//destroyed
+		-GVCv Eb'Siliss (Sobek class)		//destroyed
+		-GTCv Babylon (Sparta class)		//non-vital
+		-GVD Apep (Hatshepsut class)		//destroyed
+		-GVC Searing Fate (Mentu Enforcer class)//destroyed
+		-GVC Crixalis (Aten class)		//destroyed
+		-GVGb Stone of Dovka (Hemsut class)	//destroyed
+		-SC Hellknight (Rakshasa class)		//non-vital
+		-SC Plague (Cain class)			//non-vital
+		-Apocalypse BG (Ravana + 2xLilith)	//vital
+
+
+F_Capella_05.Final Round
+
+
+
+/********************************************************************************/
+/				Other						 /
+/********************************************************************************/
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+0_Demo										//
+/////////////////////////////////////////////////////////////////////////////////
+	4th gen mission
+	demo mission
