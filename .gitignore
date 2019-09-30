@@ -1,35 +1,35 @@
 settings.ini
-data/multi.log
-data/event.log
-data/maps/nameplate.dds
+core/data/multi.log
+core/data/event.log
+core/data/maps/nameplate.dds
 changelog.txt
 AVPoV-shots.lnk
 AVPoV-videos.lnk
 
-data/cache/
+core/data/cache/
 
-data/tables/*.disabled
-data/scripts/*.disabled
-data/maps/sub-*
-data/maps/-.dds
+core/data/tables/*.disabled
+core/data/scripts/*.disabled
+core/data/maps/sub-*
+core/data/maps/-.dds
 
-data/tables/screencam*
-data/models/marker.pof
-data/maps/invisiblebta.dds
+core/data/tables/screencam*
+core/data/models/marker.pof
+core/data/maps/invisiblebta.dds
 
-data/tables/aspov-adjustGunshipWeapons-sct.tbm_
-data/music/PST_Sigil-arv.ogg
-data/music/PST_Sigil-btl1.ogg
-data/music/PST_Sigil-btl2.ogg
-data/music/PST_Sigil-btl3.ogg
+core/data/tables/aspov-adjustGunshipWeapons-sct.tbm_
+core/data/music/PST_Sigil-arv.ogg
+core/data/music/PST_Sigil-btl1.ogg
+core/data/music/PST_Sigil-btl2.ogg
+core/data/music/PST_Sigil-btl3.ogg
 
-data/scripts/*.bak
+core/data/scripts/*.bak
 
-data/missions/*.bak
-data/missions/Backup.*
-data/missions/torpedoes.fs2
-data/missions/Z_*
-data/missions/0_Outnumbered*
-data/missions/0_Arena.fs2
+core/data/missions/*.bak
+core/data/missions/Backup.*
+core/data/missions/torpedoes.fs2
+core/data/missions/Z_*
+core/data/missions/0_Outnumbered*
+core/data/missions/0_Arena.fs2
 
 *~
