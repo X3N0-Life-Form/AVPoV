@@ -19,7 +19,8 @@
     "last_update": null,
     "cmdline": "",
     "mod_flag": [
-        "AVPoV"
+        "AVPoV",
+        "MVPS"
     ],
     "dev_mode": true,
     "custom_build": null,
@@ -27,9 +28,20 @@
         {
             "name": "core",
             "notes": "",
-            "status": "recommended",
-            "dependencies": [],
-            "environment": "",
+            "status": "required",
+            "dependencies": [
+                {
+                    "id": "MVPS",
+                    "version": null,
+                    "packages": [
+                        "MV_Music",
+                        "MV_CB_ANI_1",
+                        "MV_CB_ANI_2",
+                        "MV_CB_ANI_3"
+                    ]
+                }
+            ],
+            "environment": null,
             "folder": "core",
             "is_vp": false,
             "files": [],
