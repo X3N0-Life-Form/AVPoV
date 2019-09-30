@@ -232,6 +232,10 @@ $Thruster Glow Effect:				missileglow06
 ;; Alliance Missiles ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
+$Name:									Trebuchet
+	+nocreate
+$Flags:									( "player allowed" )
+
 $Name:                                  Trebuchet#Hemsut
 +Title:                                 XSTR("GTM-55 Trebuchet", 3349)
 +Description:
