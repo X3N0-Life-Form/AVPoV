@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("A Game of TAG", 1081)
 $Author: James Agay @ V
 $Created: 07/06/99 at 18:26:05
-$Modified: 08/16/12 at 21:06:45
+$Modified: 09/21/17 at 18:49:23
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -12,13 +12,16 @@ $End Notes:
 $Mission Desc:
  XSTR("The 134th tests the new Target Acquisition and Guidance (TAG) missile.", 1082)
 $end_multi_text
-
 +Game Type Flags: 1
 +Flags: 131076
 +NebAwacs: 2500.000000
+
 +Storm: s_active
-+Red Alert: 0
-+Scramble: 1
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -28,22 +31,14 @@ $end_multi_text
 
 +Viewer pos: -838.187317, 6825.831055, 10920.819336
 +Viewer orient:
-	-0.999917, 0.000003, 0.012916,
+	-0.999917, 0.000003, 0.012917,
 	-0.012904, -0.043972, -0.998950,
 	0.000565, -0.999033, 0.043968
-
 +SquadReassignName: 134th Barracudas
 +SquadReassignLogo: barracudas.pcx
 
-$AI Profile: myProfile
-#Plot Info
 
-$Tour:  XSTR("Blah", 6)
-$Pre-Briefing Cutscene: Blah
-$Pre-Mission Cutscene: Blah
-$Next Mission Success: Blah
-$Next Mission Partial: Blah
-$Next Mission Failure: Blah
+$AI Profile: myProfile
 
 #Sexp_variables
 
@@ -81,7 +76,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -93,7 +88,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -125,7 +120,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -137,7 +132,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -165,7 +160,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -177,7 +172,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -209,7 +204,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -221,7 +216,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -233,7 +228,7 @@ $type: 30
 $team: Friendly
 $class: GTA Charybdis
 $pos: 1371.518677, 478.368774, 15361.457031
-$label: GTA Lucidity
+$label:  XSTR("GTA Lucidity", -1)
 +id: 3
 $hlight: 0
 $mirror: 1
@@ -245,7 +240,7 @@ $type: 21
 $team: Hostile
 $class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
-$label: Hostile Craft
+$label:  XSTR("Hostile Craft", -1)
 +id: 4
 $hlight: 1
 $mirror: 0
@@ -277,7 +272,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -289,7 +284,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -301,7 +296,7 @@ $type: 21
 $team: Hostile
 $class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
-$label: Hostile Craft
+$label:  XSTR("Hostile Craft", -1)
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -329,7 +324,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 367.156799, 32.771877, 14600.122070
-$label: GTCv Warspite
+$label:  XSTR("GTCv Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 1
@@ -341,7 +336,7 @@ $type: 23
 $team: Friendly
 $class: GTF Ulysses
 $pos: 1622.730225, 347.403381, 14697.670898
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 2
 $hlight: 1
 $mirror: 0
@@ -353,7 +348,7 @@ $type: 21
 $team: Hostile
 $class: SF Basilisk
 $pos: 3459.455811, 427.468414, 14808.277344
-$label: Hostile Craft
+$label:  XSTR("Hostile Craft", -1)
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -526,7 +521,6 @@ $Orientation:
 	-0.814169, -0.192429, 0.547813,
 	-0.212679, 0.976749, 0.027014,
 	-0.540274, -0.094514, -0.836165
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 16
@@ -553,7 +547,6 @@ $Orientation:
 	-0.934812, 0.006332, 0.355088,
 	0.059875, 0.988339, 0.140004,
 	-0.350060, 0.152138, -0.924290
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Demon
 $AI Goals: ( goals ( ai-chase-any 50 ) )
@@ -583,18 +576,18 @@ $Orientation:
 	-0.829070, 0.000000, 0.559145,
 	-0.171899, 0.951570, -0.254883,
 	-0.532066, -0.307432, -0.788918
-$IFF: IFF 1
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-previous-goal-true 
    "SM2-01" 
@@ -603,7 +596,7 @@ $Arrival Cue: ( is-previous-goal-true
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 3
@@ -619,12 +612,12 @@ $Orientation:
 	-0.849565, -0.047641, 0.525330,
 	-0.031425, 0.998715, 0.039751,
 	-0.526548, 0.017263, -0.849970
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 10
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +AI Class: General
@@ -703,7 +696,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 4
@@ -722,7 +715,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Run in one" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -757,7 +749,6 @@ $Orientation:
 	0.884666, 0.000000, -0.466225,
 	-0.000014, 1.000000, -0.000027,
 	0.466225, 0.000031, 0.884666
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -773,6 +764,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 2		;! Object #6
@@ -783,7 +775,6 @@ $Orientation:
 	0.827439, 0.000000, -0.561555,
 	-0.000015, 1.000000, -0.000022,
 	0.561555, 0.000027, 0.827439
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -799,6 +790,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 3		;! Object #7
@@ -809,7 +801,6 @@ $Orientation:
 	0.952078, 0.000000, -0.305855,
 	-0.000009, 1.000000, -0.000027,
 	0.305855, 0.000028, 0.952078
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -825,6 +816,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Cancer 4		;! Object #8
@@ -835,7 +827,6 @@ $Orientation:
 	0.884666, 0.000000, -0.466225,
 	-0.000014, 1.000000, -0.000027,
 	0.466225, 0.000031, 0.884666
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -851,6 +842,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Scout 3		;! Object #9
@@ -861,7 +853,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 50 ) ( ai-warp-out 12 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -900,7 +891,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -927,7 +917,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -954,7 +943,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 34 ) ( ai-chase-any 23 ) )
@@ -981,7 +969,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 50 ) ( ai-chase-wing "Alpha" 50 ) )
@@ -1008,7 +995,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Scout 3" 50 ) ( ai-chase-wing "Alpha" 50 ) )
@@ -1035,7 +1021,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 66 ) ( ai-chase-any 50 ) )
@@ -1051,6 +1036,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Leo 2		;! Object #16
@@ -1061,7 +1047,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Close In" 66 ) ( ai-chase-any 50 ) )
@@ -1077,6 +1062,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Leo 3		;! Object #17
@@ -1087,7 +1073,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-chase "Kappa 3" 66 ) ( ai-chase-any 50 ) )
@@ -1103,6 +1088,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Leo 4		;! Object #18
@@ -1113,7 +1099,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-chase "Kappa 3" 66 ) ( ai-chase-any 50 ) )
@@ -1129,6 +1114,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 12
 
 $Name: Virgo 1		;! Object #19
@@ -1139,7 +1125,6 @@ $Orientation:
 	-0.068026, 0.000000, -0.997684,
 	-0.007793, 0.999970, 0.000531,
 	0.997653, 0.007811, -0.068024
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1167,7 +1152,6 @@ $Orientation:
 	-0.048438, 0.000000, -0.998826,
 	-0.007516, 0.999972, 0.000364,
 	0.998798, 0.007525, -0.048437
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1195,7 +1179,6 @@ $Orientation:
 	-0.062989, 0.000000, -0.998014,
 	-0.007996, 0.999968, 0.000505,
 	0.997982, 0.008012, -0.062987
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1223,7 +1206,6 @@ $Orientation:
 	-0.031393, 0.000000, -0.999507,
 	-0.007663, 0.999971, 0.000241,
 	0.999478, 0.007667, -0.031392
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $AI Goals: ( goals ( ai-chase "Lucidity" 50 ) ( ai-chase "Warspite" 23 ) )
@@ -1251,7 +1233,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1270,6 +1251,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Iota 2		;! Object #24
@@ -1280,7 +1262,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1299,6 +1280,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Iota 3		;! Object #25
@@ -1309,7 +1291,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1328,6 +1309,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Iota 4		;! Object #26
@@ -1338,7 +1320,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1357,6 +1338,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Libra 1		;! Object #27
@@ -1367,7 +1349,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1394,7 +1375,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1421,7 +1401,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 $AI Goals: ( goals ( ai-waypoints-once "Run in one" 50 ) ( ai-waypoints-once "Close In" 50 ) )
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1461,7 +1440,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
 $AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", 13)
@@ -1480,6 +1458,7 @@ $Determination: 10
 +Respawn priority: 0
 +Orders Accepted: 33023		;! note that this is a bitfield!!!
 +Group: 0
++Use Table Score:
 +Score: 10
 
 #Wings		;! 7 total
@@ -1669,7 +1648,24 @@ $Formula: ( when
    )
    ( turret-tagged-only "Warspite" ) 
    ( beam-free-all "Warspite" ) 
-   ( ship-guardian "Alpha 2" ) 
+   ( ship-guardian-threshold 
+      15 
+      "Alpha 2" 
+   )
+   ( set-armor-type 
+      "Alpha 2" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
+   ( set-armor-type 
+      "Alpha 1" 
+      ( true ) 
+      "Shivan Elite Armor" 
+      "Hull" 
+      "Shields" 
+   )
 )
 +Name: Intro Event
 +Repeat Count: 1
@@ -2217,9 +2213,9 @@ $Formula: ( and
 
 #Waypoints		;! 3 lists total
 
+
 $Jump Node: 23.923006, -109.418991, -1247.423462
 $Jump Node Name: Capella
-
 $Name: Lucidity Patrol
 $List: (		;! 6 points in list
 	( 1359.807861, 427.468201, 14921.681641 )
@@ -2242,6 +2238,7 @@ $List: (		;! 1 points in list
 )
 
 #Messages		;! 26 total
+
 
 $Name: A2- Intro
 $Team: -1
@@ -2457,12 +2454,13 @@ $end_multi_text
 #Background bitmaps		;! 0 total
 
 $Num stars: 0
-$Ambient light level: 0
+$Ambient light level: 7895160
 +Neb2: nbackblue2
+
 +Neb2Flags: 63
 
-#Asteroid Fields
 
+#Asteroid Fields
 
 #Music
 
