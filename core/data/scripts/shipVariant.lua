@@ -8,15 +8,15 @@ In order to work, this script needs:
 	- the global variable variantFileName needs to point to this file, eg. "data/config/ship_variants.tbl"
 	- call the setVariant() function via scrip-eval, with the name of the ship you want to alter and the name of the variant of the appropriate class as the function's argument.
 		For instance "setVariant(Colly, bunny)" means you want Colly to be of the "bunny" variant.
-		
+
 Descriptor table logic:
 	- Variants are classified by ship category, which starts with '#'
 	- Each variant starts with '$Name:', follow by attributes that start with "$"
 	- These may be followed by sub attributes, who themselves start with "+"
-	
+
 Descriptor table sample:
 	#SC Rakshasa
-	
+
 	$Name:	Lance Assault Cruiser
 	$ai class: Big
 	$subsystem armor: Hell Armor
@@ -38,10 +38,10 @@ Descriptor table sample:
 	$turret12:Shivan Multi Turret Up
 	$turret13:Shivan Multi Turret Up
 	$turret14:Shivan Multi Turret Up
-	
+
 	#End
-		
-			
+
+
 Valid attributes:
 	hull						: special hit points (note: accepts order of magnitude multipliers, eg. 1M = 1000k = 1000000)
 	armor						: hull armor type
@@ -50,11 +50,11 @@ Valid attributes:
 	texture:name=replacement	: doesn't work
 	team color					: change team color
 	ai class					: change ai class
-	
+
 Valid sub-attributes:
 	armor	: armor type
 	RoF		: new rate of fire (in percentage)
-	
+
 Sample entry:
 	$GTC Aeolus: nerfed
 			hull: 15k
@@ -72,7 +72,7 @@ Sample entry:
 ----------------------
 -- global variables --
 ----------------------
-variant_enableDebugPrint = false
+variant_enableDebugPrint = true
 
 variantTable = {}
 
@@ -85,7 +85,7 @@ variantShipsToSet = {}
 
 function dPrint_shipVariant(message)
 	if (variant_enableDebugPrint) then
-		ba.print("[shipVariant.lua] "..message)
+		ba.print("[shipVariant.lua] "..message.."\n")
 	end
 end
 
@@ -99,41 +99,41 @@ function setVariant(shipName, variantName)
 	-- start going through the attributes
 	local ship = mn.Ships[shipName]
 	if not (ship:isValid()) then
-		dPrint_shipVariant("Could not find ship "..shipName.."\n")
-		dPrint_shipVariant("adding ship/variant to variantShipsToSet\n")
+		dPrint_shipVariant("Could not find ship "..shipName)
+		dPrint_shipVariant("adding ship/variant to variantShipsToSet")
 		variantShipsToSet[shipName] = variantName
 		return nil
 	end
-	
+
 	local className = ship.Class.Name
-	local variantInfo = variantTable[className][variantName]
+	local variantInfo = variantTable.Categories[className].Entries[variantName]
 	if (variantInfo == nil) then
 		ba.warning("[shipVariant.lua] Could not find variant info for "..className..":"..variantName.."\n")
 		return nil
 	else
-		dPrint_shipVariant("Setting ship variant '"..className..":"..variantName.."' for ship '"..shipName.."'\n")
+		dPrint_shipVariant("Setting ship variant '"..className..":"..variantName.."' for ship '"..shipName.."'")
 	end
-	
+
 	local turretArmor = ""
 	local subsystemArmor = ""
 	local subToSkip = {}
-	for attribute, prefix in pairs(variantInfo) do
-		local value = prefix['value']
-		
-		if (attribute == "armor") then
-			dPrint_shipVariant("Armor ==> "..value.."\n")
+	for attributeName, attribute in pairs(variantInfo.Attributes) do
+		local value = attribute.Value
+
+		if (attributeName == "armor") then
+			dPrint_shipVariant("Armor ==> "..value)
 			ship.ArmorClass = value
-		elseif (attribute == "shield armor") then
-			dPrint_shipVariant("Shield Armor ==> "..value.."\n")
+		elseif (attributeName == "shield armor") then
+			dPrint_shipVariant("Shield Armor ==> "..value)
 			ship.ShieldArmorClass = value
-		elseif (attribute == "turret armor") then
-			dPrint_shipVariant("Global Turret Armor ==> "..value.."\n");
+		elseif (attributeName == "turret armor") then
+			dPrint_shipVariant("Global Turret Armor ==> "..value);
 			turretArmor = value
-		elseif (attribute == "subsystem armor") then
-			dPrint_shipVariant("Global Subsystem Armor ==> "..value.."\n");
+		elseif (attributeName == "subsystem armor") then
+			dPrint_shipVariant("Global Subsystem Armor ==> "..value);
 			subsystemArmor = value
-			
-		elseif (attribute == "hull") then
+
+		elseif (attributeName == "hull") then
 			-- deal with orders of magnitude
 			if not (string.find(value, "k") == nil) then
 				value = string.gsub(value, "k", "")
@@ -145,15 +145,15 @@ function setVariant(shipName, variantName)
 				value = string.gsub(value, "G", "")
 				value = value * 1000000000
 			end
-			
+
 			-- set max & current hit points
-			dPrint_shipVariant("Hull Max Hitpoints ==> "..value.."\n")
+			dPrint_shipVariant("Hull Max Hitpoints ==> "..value)
 			ratio = value / ship.HitpointsMax
 			ship.HitpointsMax = value
 			ship.HitpointsLeft = ship.HitpointsLeft * ratio
-			
-		elseif (attribute == "team color") then
-			dPrint_shipVariant("Team Color ==> "..value.."\n");
+
+		elseif (attributeName == "team color") then
+			dPrint_shipVariant("Team Color ==> "..value);
 			mn.evaluateSEXP([[
 				(when (true)
 					(change-team-color
@@ -163,8 +163,8 @@ function setVariant(shipName, variantName)
 					)
 				)
 			]])
-			
-		elseif (attribute == "ai class") then
+
+		elseif (attributeName == "ai class") then
 			dPrint_shipVariant("AI Class ==> "..value.."\n");
 			mn.evaluateSEXP([[
 				(when (true)
@@ -174,9 +174,9 @@ function setVariant(shipName, variantName)
 					)
 				)
 			]])
-			
-		elseif not (string.find(attribute, "texture") == nil) then --note: this doesn't work
-			--local textureName = extractRight(attribute)
+
+		elseif not (string.find(attributeName, "texture") == nil) then --note: this doesn't work
+			--local textureName = extractRight(attributeName)
 			--local texture = gr.loadTexture(textureName)
 			--if (texture:isValid()) then
 			--	ba.print("[ShipVariant.lua] Replacing texture '"..textureName.."' with texture '"..value.."'.\n")
@@ -184,62 +184,63 @@ function setVariant(shipName, variantName)
 			--else
 			--	ba.warning("[ShipVariant.lua] Texture "..value.." is invalid.\n")
 			--end
-			
-		
-			
-		elseif not (string.find(attribute, "turret") == nil) then -- turret
+
+
+
+		elseif not (string.find(attributeName, "turret") == nil) then -- turret
+			dPrint_shipVariant("Turret ==> "..value)
 			if (tb.WeaponClasses[value]:isPrimary()) then -- primary banks
-				for i = 0, #ship[attribute].PrimaryBanks do
-					dPrint_shipVariant("Primary Bank: "..attribute.." - "..ship[attribute].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
-					ship[attribute].PrimaryBanks[i].WeaponClass = tb.WeaponClasses[value]
+				for i = 0, #ship[attributeName].PrimaryBanks do
+					dPrint_shipVariant("Primary Bank: "..attributeName.." - "..ship[attributeName].PrimaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name)
+					ship[attributeName].PrimaryBanks[i].WeaponClass = tb.WeaponClasses[value]
 				end
 			else -- secondary banks
-				for i = 0, #ship[attribute].SecondaryBanks do
-					dPrint_shipVariant("Secondary Bank: "..attribute.." - "..ship[attribute].SecondaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name.."\n")
-					ship[attribute].SecondaryBanks[i].WeaponClass = tb.WeaponClasses[value]
+				for i = 0, #ship[attributeName].SecondaryBanks do
+					dPrint_shipVariant("Secondary Bank: "..attributeName.." - "..ship[attributeName].SecondaryBanks[i].WeaponClass.Name.." ==> "..tb.WeaponClasses[value].Name)
+					ship[attributeName].SecondaryBanks[i].WeaponClass = tb.WeaponClasses[value]
 				end
 			end
 		else
-			ba.warning("[shipVariant.lua] Unrecognised attribute: "..attribute.."\n")
+			ba.warning("[shipVariant.lua] Unrecognised attribute: "..attributeName.."\n")
 		end
-		
+
 		 -- sub-attributes
-		if not (prefix['sub'] == nil) then
-			for subAttribute, subValue in pairs(prefix['sub']) do
-				dPrint_shipVariant("     "..subAttribute.." ==> "..subValue)
-				
-				if (subAttribute == "armor") then
-					ship[attribute].ArmorClass = subValue
+		if (count(attribute.SubAttributes) > 0) then
+			for subAttributeName, subAttribute in pairs(attribute.SubAttributes) do
+				dPrint_shipVariant("     "..subAttributeName.." ==> "..getValueAsString(subAttribute.Value))
+
+				if (subAttributeName == "armor") then
+					ship[attributeName].ArmorClass = subAttribute.Value
 					-- also, need to make sure general armor settings don't override this
-					subToSkip[attribute] = true
-					
-				elseif (subAttribute == "RoF") then
+					subToSkip[attributeName] = true
+
+				elseif (subAttributeName == "RoF") then
 					mn.evaluateSEXP([[
 						(when (true)
 							(turret-set-rate-of-fire
 								"]]..shipName..[["
-								]]..subValue..[[
-								"]]..attribute..[["
+								]]..subAttribute.Value..[[
+								"]]..attributeName..[["
 							)
 						)
 					]])
-					
+
 				else
-					ba.warning("[shipVariant.lua] Unrecognised sub attribute: "..subAttribute)
+					ba.warning("[shipVariant.lua] Unrecognised sub attribute: "..subAttributeName.."\n")
 				end
 			end
 		end
-		
+
 	end
-	
-	dPrint_shipVariant("all attributes set, moving on to global settings...\n")
+
+	dPrint_shipVariant("all attributes set, moving on to global settings...")
 	if not (turretArmor == "") then
-		dPrint_shipVariant("Turret Armor ==> "..turretArmor.."\n")
+		dPrint_shipVariant("Turret Armor ==> "..turretArmor)
 	end
 	if not (subsystemArmor == "") then
-		dPrint_shipVariant("Subsystem Armor ==> "..subsystemArmor.."\n")
+		dPrint_shipVariant("Subsystem Armor ==> "..subsystemArmor)
 	end
-	
+
 	-- set turrets & subsystems armor
 	for subIndex = 0, #ship do
 		local subsystem = ship[subIndex]
@@ -249,8 +250,8 @@ function setVariant(shipName, variantName)
 			subsystem.ArmorClass = subsystemArmor
 		end
 	end
-	
-	dPrint_shipVariant("setVariant() ends\n")
+
+	dPrint_shipVariant("setVariant() ends")
 end
 
 
@@ -271,7 +272,4 @@ end
 -- main --
 ----------
 
-variantTable = parseTableFile("data/config/", "ship_variants.tbl")
-
-
-
+variantTable = TableObject:create("ship_variants.tbl")
