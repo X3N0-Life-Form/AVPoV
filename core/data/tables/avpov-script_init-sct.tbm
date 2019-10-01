@@ -1,11 +1,14 @@
 #Conditional Hooks
 $Application: FS2_Open
 
-$On Game Init: [[testextension.lua]]
 
 ;; Utility & parsing
 $On Game Init: [[utility.lua]]
 $On Game Init: [[parse.lua]]
+$On Game Init: [[TableObject.lua]]
+$On Game Init: [[Category.lua]]
+$On Game Init: [[Entry.lua]]
+$On Game Init: [[Attribute.lua]]
 
 ;; Shivan handling
 $On Game Init: [[shivanHUD.lua]]
@@ -17,16 +20,15 @@ $On Warp In: [setVariantDelayed()]
 
 $On Game Init: [[shipVariantMissionWide.lua]]
 
-;; (Deprecated) autoSSM
-; $On Game Init: [[autoSSM-targeting.lua]]
-; $On Game Init: [[autoSSM.lua]]
-; $On Gameplay Start: [auto_ssm_init_strike_tables()]
 
 ;; Ability Management
 $On Game Init:[[abilityManager.lua]]
 $On Game Init:[[abilityBuffManager.lua]]
 $On Gameplay Start:[ability_resetMissionVariables()]
+
 $On Game Init:[[abilityLibrary.lua]]
+
+$On Game Init:[ability_init()]
 
 $State:	GS_STATE_GAME_PLAY
 $On Frame:[ability_cycleTrigger()]

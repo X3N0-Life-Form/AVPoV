@@ -17,7 +17,7 @@
     "attachments": [],
     "first_release": null,
     "last_update": null,
-    "cmdline": "",
+    "cmdline": "-fullscreen_window ",
     "mod_flag": [
         "AVPoV",
         "MVPS"
@@ -39,6 +39,10 @@
                         "MV_CB_ANI_2",
                         "MV_CB_ANI_3"
                     ]
+                },
+                {
+                    "id": "FSO",
+                    "version": ">=3.8.1-20190829"
                 }
             ],
             "environment": null,
