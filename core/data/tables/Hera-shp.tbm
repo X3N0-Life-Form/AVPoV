@@ -1,0 +1,398 @@
+#Ship Classes
+
+
+$Name:		GTCa Hera
+$Short name:				HeraSovietTank
+$Species:				Terran
+	+Tech Description:		XSTR( "GTCa Hera
+Fleetcarrier
+
+Initially designed as carrier-compliment to the Colossus, the Hera fleetcarrier was never completed in time and entered active service in 2369. The newest addon to terran GTVA fleets, Hera is the first carrier-type vessel designed by terran engineers since the Unification War. Equivalent of vasudan Amaunet, Hera is mammoth of a ship. About a half of her 3km-long interior is occupied by hangarbays and cargo space. Housing two times more fighter and bomber wings then Hecate, the Hera was designed to put emphasis on the strongest advantage GTVA has against the shivans - strikecraft. Both terran and vasudan fleetcarriers were designed to be beating heart of every major fleet of the Alliance. Hera is equipped in advanced command and control facilities, AWACS devices, modern subspace scanners and paired jumpdrives powered by next-gen Nankam XG-3127h reactor. Internal superstructure is covered by collapsed-core molybdenium armor first mounted on Deimos-class corvettes. 
+
+As a dedicated fleetcarrier class, Hera offers almost no firepower by herself. Six corvette-grade slash beams are mostly designed to provide Hera with anykind of self-defense against enemy capital ships. Although the carrier can overload them to provide power output close to modern destroyers, Hera was designed around fighterbay capacity in mind. The fleetcarrier is capable of providing additional fire support for multiple operations at once, with countless fighters and bombers housed inside her cavernous hangarbays. She is also the only warship capable of maintaining Jotun-class superbombers, rendering her the only asset of GTVA fleet capable of effectively engaging shivan Sathanas juggernauts alone. Strong armor is enough to keep her vulnerable, internal structure safe from main cannons of enemy warships and thick point-defense screens of multiple flak cannons, AAA beams and laser turrets renders the Hera very easy to escort. Due to enormous strategic and logistic value, those impressive warships rarely enters direct combat. GTVA deploy heavy escort of multiple warships to keep their Hera-class carriers alive and safe. Only two fleetcarriers were ever constructed - prototype GTCa Hera, flagship of 2nd Fleet and GTCa Magnus assigned to reborn 6th Fleet headquartered in Polaris. Three more units are expected to be complete by 2400.", -1 )
+$end_multi_text
+$POF file:					HeraFS2.pof
+$Detail distance: 			(0, 4500, 9500, 15000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					1.5
+$Max Velocity:				0.0, 0.0, 20.0
+$Rotation time:				150.0, 150.0, 150.0
+$Rear Velocity:				20.0
+$Forward accel:				20.0
+$Forward decel:				10.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			100.0
+$Expl outer rad:			2400.0
+$Expl damage:				400.0
+$Expl blast:				6500.0
+$Expl Propagates:			YES
+$Shockwave Speed:			600.0
+$Shockwave Count:			4
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			8.0
+$Max Weapon Eng:			100.0
+$Hitpoints:				225000
+$Armor Type:				HeavyArmor
+$Flags: 				( "capital" "big damage" "in tech database" )
+$AI Class:				Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:				2000
+$EngineSnd:				138
+$Closeup_pos:				0.0, 0.0, -3300
+$Closeup_zoom:				0.5
+$Score:					1000
+
+;;Beam Cannons
+
+$Subsystem: 	turret01, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret02, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret03, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret04, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret05, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret06, 			2, 3.0
+	$Alt Subsystem Name: 		Beam Cannon
+	$Default PBanks:			( "TerSlash" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+
+;;Flak Cannons
+	
+$Subsystem: Turret07, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 0, 0
+$Subsystem: Turret08, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 0, 0
+$Subsystem: Turret09, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 0, 0
+$Subsystem: Turret10, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 90, 0
+$Subsystem: Turret11, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 270, 0
+$Subsystem: Turret12, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 90, 0
+$Subsystem: Turret13, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 270, 0
+$Subsystem: Turret14, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 90, 0
+$Subsystem: Turret15, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 270, 0
+$Subsystem: Turret16, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 180, 0
+$Subsystem: Turret17, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 180, 0
+$Subsystem: Turret18, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 270, 0
+$Subsystem: Turret19, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 90, 0
+$Subsystem: Turret20, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 0, 0
+$Subsystem: Turret43, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 270, 0
+$Subsystem: Turret44, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 90, 0
+$Subsystem: Turret45, 		7, 6.0
+	$Default PBanks:			( "Standard Flak" )
+	$Turret Base RotationSnd: 	256
+	$Turret Gun RotationSnd: 	257
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags:			 			( "check hull" "reset when idle" "carry no damage" "carry shockwave" "fire on target" "only target if can fire" "target requires fov" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:		90, 0, 0
+
+;;AAA Beams
+	
+$Subsystem: 	turret21, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret22, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret23, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret24, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret25, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret26, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret27, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+$Subsystem: 	turret28, 			0.7, 3.0
+	$Alt Subsystem Name: 		AAA Beam
+	$Default PBanks:			( "AAAf" )
+	$Flags:			 			( "check hull" "only target if can fire" "target requires fov" )
+	
+;;Point Defense Turrets
+
+$Subsystem: 	turret29, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret30, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret31, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret32, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret33, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret34, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret35, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret36, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret37, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret38, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret39, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret40, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret41, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret42, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret46, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret47, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret48, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret49, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret50, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret51, 			0.7, 3.0
+	$Alt Subsystem Name: 		Point Defense
+	$Default PBanks:			( "Terran Turret" )
+	$Flags:			 			( "check hull" )
+
+;;Common subsystems
+
+$Subsystem: 	navigation, 		5, 0.0
+$Subsystem: 	communications, 	5, 0.0
+$Subsystem: 	weapons, 			12.5, 0.0
+$Subsystem: 	sensors, 			5, 0.0
+$Subsystem: 	engines, 			18, 0.0
+	$Engine Wash: 					Default900
+$Subsystem: 	fighterbay01, 		0, 0.0
+$Subsystem: 	fighterbay02, 		0, 0.0
+$Subsystem: 	fighterbay03, 		0, 0.0
+
+
+
+#End
