@@ -341,14 +341,14 @@ $turret09:Piranha#Shivan
 #SC Rakshasa
 $Name:	Strike Cruiser
 $turret04:SRed
-$turret07:Shivan Multi Turret
+$turret05:Shivan Multi Turret
 $turret08:Shivan Multi Turret
 $turret10:SAAA
 
 $Name:	Support Cruiser
 $turret01:Shivan Multi Turret
 $turret04:Shivan Multi Turret
-$turret07:Standard Flak
+$turret05:Standard Flak
 $turret08:Standard Flak
 $turret10:Standard Flak
 ;;+improved AWACS range (6000)
@@ -362,9 +362,9 @@ $turret01:MRed
 $turret02:MRed
 $turret03:MRed
 $turret04:MRed
-$turret05:Shivan Multi Turret
+$turret05:SAAA
 $turret06:Shivan Multi Turret
-$turret07:SAAA
+$turret07:Shivan Multi Turret
 $turret08:SAAA
 $turret10:SAAA
 $turret11:Shivan Multi Turret
@@ -376,9 +376,9 @@ $turret14:Shivan Multi Turret
 $Name:	Heavy Assault Cruiser
 $armor: Shivan Elite Armor
 $turret04:SRed
-$turret05:Shivan Turret Laser Up
+$turret05:SAAA
 $turret06:Shivan Turret Laser Up
-$turret07:SAAA
+$turret07:Shivan Turret Laser Up
 $turret08:SAAA
 $turret10:SAAA
 $turret11:Shivan Turret Laser Up
@@ -390,9 +390,9 @@ $Name:	Heavy Flak Cruiser
 $armor: Shivan Elite Armor
 $turret03:SAAA
 $turret04:SAAA
-$turret05:Standard Flak
+$turret05:SAAA
 $turret06:Standard Flak
-$turret07:SAAA
+$turret07:Standard Flak
 $turret08:SAAA
 $turret10:SAAA
 $turret11:Standard Flak
@@ -403,7 +403,7 @@ $turret14:Standard Flak
 $Name:	Lance Assault Cruiser
 $ai class: Big
 $subsystem armor: Hell Armor
-$hull armor:	 Shivan Destroyer Armor
+$armor:	 Shivan Destroyer Armor
 $hull:		 80k
 $turret01:Shivan Multi Turret Up
 	+Rof:200
@@ -411,9 +411,9 @@ $turret02:Shivan Huge Lance
 $turret03:Shivan Huge Lance
 $turret04:Shivan Multi Turret Up
 	+Rof:200
-$turret05:Shivan Multi Turret Up
+$turret05:Shivan Lance
 $turret06:Shivan Multi Turret Up
-$turret07:Shivan Lance
+$turret07:Shivan Multi Turret Up
 $turret08:Shivan Lance
 $turret09:Shivan Lance
 $turret10:Shivan Lance

@@ -56,6 +56,12 @@ $Abilities:	Energy Drain, Fighter-launched Mordiggian Strike, Repair-Self, Shiel
 $Name:		Repair Test 1
 $Abilities:	Repair-Field
 
+$Name:		Rak
+$Variant:	Lance Assault Cruiser
+
+$Name:		Hec
+$Variant:	Combat
+
 #End
 
 

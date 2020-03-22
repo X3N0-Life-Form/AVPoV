@@ -1,0 +1,54 @@
+#Turret Types
+
+$Name:		Blob#Light
+$Color:		150, 150, 150
+$Weapons:	Terran Turret, Terran Huge Turret, Shivan Turret Laser, Shivan Weak Turret Laser, Shivan Megafunk Turret, Shivan Heavy Laser, Shivan Light Laser
+
+$Name:		Blob#Medium
+$Color:		125, 150, 250
+$Weapons:	Shivan Multi Turret, Shivan Turret Laser Up, Wraith
+
+$Name:		Blob#Heavy
+$Color:		150, 0, 150
+$Weapons:	Mass Driver, Shivan Multi Turret Up
+
+
+$Name:		Flak
+$Color:		250, 125, 0
+$Weapons:	Standard Flak, Heavy Flak, Long Range Flak, Light Flak, Suppression Flak, Fast Flak, Advanced Flak, Heavy Flak#Fast
+
+
+$Name:		AAA
+$Color:		0, 0, 255
+$Weapons:	AAAf, AAAh, ULTRA-AAA, SAAA
+
+
+$Name:		Beam#Medium
+$Color:		150, 0, 150
+$Weapons:	SGreen, MGreen, MGreenUp, LTerSlash, GreenBeam, TerSlash, SVas, VSlash, MVas, MVasUp, SRed, MRed
+
+$Name:		Beam#Heavy
+$Color:		250, 0, 250
+$Weapons:	BGreen, MjolnirBeam, BVas, LRed, LRLRed, MRedUp
+
+$Name:		Beam#Super Heavy
+$Color:		255, 0, 0
+$Weapons:	BFRed, BFGreen, LRBGreen, BFVas
+
+
+$Name:		Lance
+$Color:		255, 0, 255
+$Weapons:	Binary Lance, Pulsar Lance, Quasar Lance, Cluster Lance, Shivan Lance, Shivan Huge Lance, Shivan Multi Lance
+
+
+$Name:		Missile
+$Color:		150, 150, 0
+$Weapons:	Fusion Mortar, Trebuchet, Trebuchet#Hemsut, Hornet#Shivan#Asura, Shivan Area Bomb, Piranha#Shivan, Tornado#Shivan
+
+
+$Name:		Torpedo
+$Color:		250, 250, 0
+$Weapons:	Catapult, Vasudan Torpedo, Shivan Subspace Missile
+
+
+#End

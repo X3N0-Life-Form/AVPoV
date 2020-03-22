@@ -214,7 +214,7 @@ function setVariant(shipName, variantName)
 					-- also, need to make sure general armor settings don't override this
 					subToSkip[attributeName] = true
 
-				elseif (subAttributeName == "RoF") then
+				elseif (subAttributeName == "Rof") then
 					mn.evaluateSEXP([[
 						(when (true)
 							(turret-set-rate-of-fire
