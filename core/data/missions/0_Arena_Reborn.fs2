@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Arena:Reborn", -1)
 $Author: Tol Hrorim
 $Created: 07/13/16 at 20:41:36
-$Modified: 03/22/20 at 18:09:31
+$Modified: 03/23/20 at 10:51:38
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -29,7 +29,7 @@ $end_multi_text
 +Viewer pos: -2282.131104, 1732.888550, 509.946106
 +Viewer orient:
 	-0.375412, 0.000002, -0.926858,
-	0.399161, 0.902514, -0.161673,
+	0.399162, 0.902514, -0.161673,
 	0.836502, -0.430660, -0.338815
 
 
@@ -187,7 +187,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "protect-ship" "player-start" "invulnerable" )
++Flags: ( "cargo-known" "player-start" "invulnerable" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -245,6 +245,7 @@ $Orientation:
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 +Subsystem: turret01
 +Subsystem: turret02
@@ -274,16 +275,17 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Subsystem: turret26
 +Subsystem: turret27
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 15
 +Special Hitpoints: 200000
 +Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
 +Use Table Score:
 +Score: 1300
 

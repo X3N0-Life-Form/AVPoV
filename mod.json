@@ -17,7 +17,7 @@
     "attachments": [],
     "first_release": null,
     "last_update": null,
-    "cmdline": "-fullscreen_window ",
+    "cmdline": "-output_scripting -window ",
     "mod_flag": [
         "AVPoV",
         "MVPS"
@@ -42,7 +42,7 @@
                 },
                 {
                     "id": "FSO",
-                    "version": ">=3.8.1-20190829"
+                    "version": ">=19.0.0-RC2"
                 }
             ],
             "environment": null,

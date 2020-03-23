@@ -2,6 +2,7 @@
 
 $Name:		Blob#Light
 $Color:		150, 150, 150
+$Visible only:	true
 $Weapons:	Terran Turret, Terran Huge Turret, Shivan Turret Laser, Shivan Weak Turret Laser, Shivan Megafunk Turret, Shivan Heavy Laser, Shivan Light Laser
 
 $Name:		Blob#Medium
@@ -15,6 +16,7 @@ $Weapons:	Mass Driver, Shivan Multi Turret Up
 
 $Name:		Flak
 $Color:		250, 125, 0
+$Visible only:	true
 $Weapons:	Standard Flak, Heavy Flak, Long Range Flak, Light Flak, Suppression Flak, Fast Flak, Advanced Flak, Heavy Flak#Fast
 
 
@@ -43,6 +45,7 @@ $Weapons:	Binary Lance, Pulsar Lance, Quasar Lance, Cluster Lance, Shivan Lance,
 
 $Name:		Missile
 $Color:		150, 150, 0
+$Visible only:	true
 $Weapons:	Fusion Mortar, Trebuchet, Trebuchet#Hemsut, Hornet#Shivan#Asura, Shivan Area Bomb, Piranha#Shivan, Tornado#Shivan
 
 

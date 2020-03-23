@@ -163,3 +163,12 @@ function count(table)
 	end
 	return count
 end
+
+
+function getValueAsBoolean(value)
+	if (value == 'true') then
+		return true
+	else
+		return false
+	end
+end
