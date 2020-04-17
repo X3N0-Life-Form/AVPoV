@@ -295,7 +295,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     10.0
+$Fire Wait:                     14.0
 $Damage:                        60
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
@@ -314,7 +314,7 @@ $Anim:                          LoadGun07
 $Impact Explosion:					exp04
 $Impact Explosion Radius:			15
 $BeamInfo:
-	+Type:						0				;; 0 - 4 are valid #'s
+	+Type:						3				;; 0 - 4 are valid #'s
 	+Life:			  			10.0
 	+Warmup:		  			2500
 	+Warmdown:					500
@@ -328,7 +328,7 @@ $BeamInfo:
 	+WarmupSound:				153
 	+WarmdownSound:				157			;; associated warmdown sound
 	+Muzzleglow:				beamglow6_purple
-	+Shots:						0			;; only used for TYPE 3 beams
+	+Shots:						10			;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
 	+Range:						4000
@@ -672,7 +672,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     5.0
+$Fire Wait:                     7.0
 $Damage:                        180
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
@@ -691,7 +691,7 @@ $Anim:                          LoadGun07
 $Impact Explosion:              exp04
 $Impact Explosion Radius:       30.0
 $BeamInfo:
-	+Type:						0				;; 0 - 4 are valid #'s
+	+Type:						3				;; 0 - 4 are valid #'s
 	+Life:			  			5.0
 	+Warmup:		  			2500
 	+Warmdown:					250
@@ -705,7 +705,7 @@ $BeamInfo:
 	+WarmupSound:				184
 	+WarmdownSound:				188
 	+Muzzleglow:				SbeamAglow_white
-	+Shots:						0				;; only used for TYPE 3 beams
+	+Shots:						10				;; only used for TYPE 3 beams
 	+ShrinkFactor:				0.1				;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
 	+ShrinkPct:					1.8				;; what percentage of max width we subtract per second
 	+Range:						4000
@@ -766,7 +766,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          20.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     1.0
+$Fire Wait:                     0.5
 $Damage:                        80
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
@@ -786,7 +786,7 @@ $Impact Explosion:              exp04
 $Impact Explosion Radius:       15.0
 $BeamInfo:
 	+Type:						0				;; 0 - 4 are valid #'s
-	+Life:			  			20.0
+	+Life:			  			5.0
 	+Warmup:		  			250
 	+Warmdown:					250
 	+Radius:		  			20.0
@@ -1051,7 +1051,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          100.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     15.0
+$Fire Wait:                     45.0
 $Damage:                        450
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
@@ -1071,7 +1071,7 @@ $Impact Explosion:              exp04
 $Impact Explosion Radius:       30.0
 $BeamInfo:
 	+Type:						1
-	+Life:			  			45.0
+	+Life:			  			10.0
 	+Warmup:		  			3500
 	+Warmdown:					1500
 	+Radius:		  			28.0
@@ -1134,7 +1134,9 @@ $BeamInfo:
 		+RGBA Outer:	60 0 0 10
 		+Flicker:		0.2
 		+Zadd:			0.0
-	
+$Burst Shots:		3
+$Burst Delay:		4000
+$Burst Flags:		( "fast firing" )
 
 $Name:					Black Lance Colossal
 $Model File:                    none ; laser1-1.pof
@@ -1145,7 +1147,7 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          100.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     10.0
+$Fire Wait:                     84.0
 $Damage:                        1250
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
@@ -1165,7 +1167,7 @@ $Impact Explosion:              exp04
 $Impact Explosion Radius:       40.0
 $BeamInfo:
 	+Type:						1
-	+Life:			  			60.0
+	+Life:			  			10.0
 	+Warmup:		  			3500
 	+Warmdown:					1500
 	+Radius:		  			32.0
@@ -1228,10 +1230,13 @@ $BeamInfo:
 		+RGBA Outer:	60 0 0 10
 		+Flicker:		0.2
 		+Zadd:			0.0
-	
+$Burst Shots:		6
+$Burst Delay:		12000
+$Burst Flags:		( "fast firing" )
+
 ;
 	
-$Name:					Black Lance Titanesque ;; colossal * 8
+$Name:					Black Lance Titanesque
 $Model File:                    none ; laser1-1.pof
 @Laser Bitmap:                  laserglow01
 @Laser Color:					0, 0, 0
@@ -1240,8 +1245,8 @@ $Model File:                    none ; laser1-1.pof
 @Laser Tail Radius:				0.30
 $Mass:                          100.0
 $Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                     15.0
-$Damage:                        10000
+$Fire Wait:                     35.0
+$Damage:                        20000
 $Damage Type:					LanceWeapon
 $Armor Factor:                  1.0
 $Shield Factor:                 1.0
@@ -1260,7 +1265,7 @@ $Impact Explosion:              exp04_black
 $Impact Explosion Radius:       320.0
 $BeamInfo:
 	+Type:						0
-	+Life:			  			45.0
+	+Life:			  			5.0
 	+Warmup:		  			3500
 	+Warmdown:					1500
 	+Radius:		  			256.0
