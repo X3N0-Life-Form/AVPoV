@@ -2,4 +2,9 @@
 
 $Default Campaign File Name:	avpov
 
+
+#Other Settings
+
+$Beams Use Damage Factors:		YES
+
 #End
