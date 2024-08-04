@@ -8,7 +8,7 @@
     "stability": "stable",
     "description": "",
     "notes": "",
-    "logo": null,
+    "logo": "kn_images\\ce26d0077c04ce8115171d7ae77d98ae9b30ca8bea81a4ef0beae420594b2834.bmp",
     "tile": null,
     "banner": null,
     "release_thread": null,
@@ -17,7 +17,7 @@
     "attachments": [],
     "first_release": null,
     "last_update": null,
-    "cmdline": "-output_scripting -window ",
+    "cmdline": "-output_scripting -window -soft_particles -enable_shadows ",
     "mod_flag": [
         "AVPoV",
         "MVPS"
@@ -36,13 +36,12 @@
                     "packages": [
                         "MV_Music",
                         "MV_CB_ANI_1",
-                        "MV_CB_ANI_2",
-                        "MV_CB_ANI_3"
+                        "MV_CB_ANI_2"
                     ]
                 },
                 {
                     "id": "FSO",
-                    "version": ">=19.0.0-RC2"
+                    "version": ">=24.0.2"
                 }
             ],
             "environment": null,

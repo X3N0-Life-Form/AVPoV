@@ -3,7 +3,7 @@ $Name: A Vasudan Point of View
 $Type: Single
 
 $Flags: 0
-	+Starting Ships: ( "GVF Horus" "GVF Seth" "GVF Toth" )
+	+Starting Ships: ( "GVF Horus" "GVF Seth" "GVF Thoth" )
 	+Starting Weapons: ( "Mekhu HL-7" "Prometheus R" "Akheton SDG" "Lamprey" "Tempest" "Rockeye" "Harpoon" "Hornet" )
 
 $Mission: A_Intro_00.fs2

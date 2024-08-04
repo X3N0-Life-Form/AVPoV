@@ -34,12 +34,12 @@ $Name:	WC3_TragicConfrontation.ogg	72.2	88200		;; Death
 #Soundtrack Start
 $Soundtrack Name:		D_Cyaegha ;; should be changed to E_Cyeagha (D is the NTF arc) in this file & every mission that uses it
 $Name:	HWC_14.ogg					153.0	88200		;; Ambience
-$Name:	FO_metallic-monks.ogg		9.1		88200		;; Allied arrival during normal
+$Name:	FO_metallic-monks-arv.ogg		9.1		88200		;; Allied arrival during normal
 $Name:	TDC_14-arv.ogg				4.1		88200		;; Enemy arrival during normal
 $Name:	HWC_20-btl1.ogg				88.2	88200		;; Battle 1
 $Name:	HWC_20-btl2.ogg				35.3	88200		;; Battle 2
 $Name:	HWC_20-btl3.ogg				36.1	88200		;; Battle 3
-$Name:	FO_metallic-monks.ogg		9.1		88200		;; Allied arrival during battle
+$Name:	FO_metallic-monks-arv.ogg		9.1		88200		;; Allied arrival during battle
 $Name:	TDC_14-arv.ogg				4.1		88200		;; Enemy arrival during battle
 $Name:	MW_Triumph.ogg				9.8		88200		;; Goal completed
 $Name:	FL_hypergate.ogg			60.7	44100		;; all enemies dead, goals completed 	

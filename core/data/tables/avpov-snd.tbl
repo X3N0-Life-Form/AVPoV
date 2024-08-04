@@ -1,0 +1,28 @@
+#Game Sounds Start
+
+; my sounds
+$Name: bleeps ;258
+	+Filename bleeps.ogg
+	+Preload: no
+	+Volume: 0.50
+	+3D Sound:
+		+Attenuation start: 50
+		+Attenuation end: 100
+
+$Name:	bleeps-reverse ; 259
+	+Filename bleeps-reverse.ogg
+	+Preload: no
+	+Volume: 0.50
+	+3D Sound:
+		+Attenuation start: 50
+		+Attenuation end: 100
+
+$Name:	general alarm ; 260
+	+Filename genalmr.wav
+	+Preload: no
+	+Volume: 0.70
+
+;; look for message sounds
+;; remix shivan weapon sounds for upgraded and heavy variants
+;; & maybe beams as well?
+#Game Sounds End

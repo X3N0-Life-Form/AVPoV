@@ -21,10 +21,10 @@ $On Warp In: [setVariantDelayed()]
 $On Game Init: [[shipVariantMissionWide.lua]]
 
 ;; Waypoint & turret highlight
-$On Game Init:[[waypointHighlight.lua]]
-$On Gameplay Start:[waypointHighlight_init()]
+; $On Game Init:[[waypointHighlight.lua]] ((EOL))
+; $On Gameplay Start:[waypointHighlight_init()] ((EOL))
 
-$On Game Init:[[turretHighlight.lua]]
+; $On Game Init:[[turretHighlight.lua]] ((EOL))
 
 ;; Ability Management
 $On Game Init:[[abilityManager.lua]]
@@ -40,8 +40,8 @@ $On Game Init:[ability_init()]
 
 $State:	GS_STATE_GAME_PLAY
 $On Frame:[ability_cycleTrigger()]
-$On Frame:[waypointHighlight_highlight()]
-$On Frame:[turretHighlight_highlight()]
+; $On Frame:[waypointHighlight_highlight()] ((EOL))
+; $On Frame:[turretHighlight_highlight()] ((EOL))
 
 
 #End
