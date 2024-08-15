@@ -1,10 +1,10 @@
 #Mission Info
 
-$Version: 0.10
+$Version: 23.1
 $Name:  XSTR("Blue Storm", -1)
 $Author: X3N0-Life-Form
 $Created: 02/17/08 at 22:41:24
-$Modified: 08/16/14 at 21:18:09
+$Modified: 08/14/24 at 16:14:12
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -19,15 +19,16 @@ $end_multi_text
 
 +Fog Far Mult: 1.000000
 
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -2022.817261, 943.106262, 37208.734375
++Viewer pos: -3508.767822, 6426.360840, -94.986565
 +Viewer orient:
-	-0.982936, -0.000001, -0.183948,
-	0.149442, 0.583080, -0.798552,
-	0.107257, -0.812415, -0.573130
+	0.941116, -0.000001, -0.338083,
+	0.314902, 0.363915, 0.876586,
+	0.123032, -0.931432, 0.342487
 
 
 $Skybox Model: Starfield.pof
@@ -77,7 +78,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: -1341.289673, 278.241211, -1876.198242
-$label: Warspite
+$label:  XSTR("Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -89,7 +90,7 @@ $type: 1
 $team: Friendly
 $class: GVF Horus
 $pos: -4507.235352, 215.485306, -1281.567993
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -119,7 +120,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 958.174194, 278.241211, -351.123535
-$label: Warspite
+$label:  XSTR("Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -131,7 +132,7 @@ $type: 18
 $team: Hostile
 $class: SC Cain
 $pos: 626.015015, 547.653320, 1645.318115
-$label: Armaros
+$label:  XSTR("Armaros", -1)
 +id: 2
 $hlight: 0
 $mirror: 0
@@ -143,7 +144,7 @@ $type: 1
 $team: Friendly
 $class: GVF Horus
 $pos: -1852.019775, 215.485352, -435.477539
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -155,7 +156,7 @@ $type: 1
 $team: Hostile
 $class: SF Astaroth
 $pos: -2079.632568, 177.615234, 1527.117920
-$label: Escort Wing
+$label:  XSTR("Escort Wing", -1)
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -187,7 +188,7 @@ $type: 28
 $team: Friendly
 $class: GTCv Deimos
 $pos: 958.174194, 278.241211, -351.123535
-$label: Warspite
+$label:  XSTR("Warspite", -1)
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -199,7 +200,7 @@ $type: 18
 $team: Hostile
 $class: SC Cain
 $pos: 626.015015, 547.653320, 1645.318115
-$label: Armaros
+$label:  XSTR("Armaros", -1)
 +id: 2
 $hlight: 1
 $mirror: 0
@@ -211,7 +212,7 @@ $type: 1
 $team: Friendly
 $class: GVF Horus
 $pos: -1852.019775, 215.485352, -435.477539
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -223,7 +224,7 @@ $type: 1
 $team: Hostile
 $class: SF Astaroth
 $pos: -2079.632568, 177.615234, 1527.117920
-$label: Escort Wing
+$label:  XSTR("Escort Wing", -1)
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -235,7 +236,7 @@ $type: 1
 $team: Friendly
 $class: GVF Seth
 $pos: -4147.538574, 0.000000, -362.421143
-$label: Beta
+$label:  XSTR("Beta", -1)
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -315,28 +316,27 @@ $Ship Choices: (
 	"Mekhu HL-7"	30
 	"Prometheus R"	16
 	"Rockeye"	150
-	"Tempest"	2400
+	"Tempest"	3200
 	"Tornado"	128
 	"Harpoon"	64
-	"Hornet"	400
+	"Hornet"	240
 )
 
 #Objects		;! 64 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GVF Horus
+$Class: GVF Serapis
 $Team: Friendly
-$Location: -1413.877563, 215.485687, 2320.388916
+$Location: -1134.672607, 215.485840, 1145.031494
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" "Hornet" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -349,21 +349,19 @@ $Determination: 10
 +Score: 8
 
 $Name: Alpha 2		;! Object #1
-$Class: GVF Horus
+$Class: GVF Serapis
 $Team: Friendly
-$Location: -1505.258423, 215.485565, 2409.776367
+$Location: -1226.053467, 215.485718, 1234.418945
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Colonel
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" "Hornet" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -373,25 +371,22 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Alpha 3		;! Object #2
-$Class: GVF Horus
+$Class: GVF Serapis
 $Team: Friendly
-$Location: -1332.857178, 215.485565, 2268.178711
+$Location: -1053.652222, 215.485718, 1092.821289
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Colonel
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" "Hornet" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -401,25 +396,22 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Alpha 4		;! Object #3
-$Class: GVF Horus
+$Class: GVF Serapis
 $Team: Friendly
-$Location: -1486.014038, 215.485565, 2252.801514
+$Location: -1206.809082, 215.485718, 1077.444092
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Colonel
++AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Mekhu HL-7" "Mekhu HL-7" )
-+Secondary Banks: ( "Tempest" "Hornet" )
++Secondary Banks: ( "Tempest" "Tempest" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -429,18 +421,16 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Warspite		;! Object #4
 $Class: GTCv Deimos
 $Team: Friendly
-$Location: -1855.547485, 278.241119, 968.241516
+$Location: -1576.342163, 278.241272, -207.115906
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints "Warspite path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -448,43 +438,43 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret02
++Subsystem: Turret02
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret03
++Subsystem: Turret03
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret04
++Subsystem: Turret04
 +Primary Banks: ( "Wraith" )
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
-+Subsystem: turret12
++Subsystem: Turret12
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
++Subsystem: Turret21
 +Primary Banks: ( "Mass Driver" )
-+Subsystem: turret22
++Subsystem: Turret22
 +Primary Banks: ( "Mass Driver" )
-+Subsystem: turret23
++Subsystem: Turret23
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
-+Subsystem: turret24
++Subsystem: Turret24
 +Primary Banks: ( "ULTRA Anti-Fighter Beam" )
-+Subsystem: turret25
++Subsystem: Turret25
 +Sbank Ammo: ( 0 )
-+Subsystem: turret26
++Subsystem: Turret26
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 +Arrival Delay: 2
@@ -499,7 +489,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 10
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
 +Use Table Score:
 +Score: 800
@@ -515,8 +505,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -541,8 +529,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -567,8 +553,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -593,7 +577,6 @@ $Orientation:
 	-0.697849, 0.000000, -0.716246,
 	0.000000, 1.000000, 0.000000,
 	0.716246, 0.000000, -0.697849
-$AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -622,7 +605,6 @@ $Orientation:
 	-0.697849, 0.000000, -0.716245,
 	0.000000, 1.000000, 0.000000,
 	0.716245, 0.000000, -0.697849
-$AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -651,7 +633,6 @@ $Orientation:
 	-0.697849, 0.000000, -0.716245,
 	0.000000, 1.000000, 0.000000,
 	0.716245, 0.000000, -0.697849
-$AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -680,7 +661,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Dog_Fighter
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -706,7 +686,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Dog_Fighter
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -732,7 +711,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Dog_Fighter
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -758,7 +736,6 @@ $Orientation:
 	0.845676, -0.041581, 0.532075,
 	-0.429726, -0.644269, 0.632656,
 	0.316493, -0.763669, -0.562711
-$AI Behavior: None
 +AI Class: Lieutenant
 $AI Goals: ( goals ( ai-waypoints "Armaros path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -794,7 +771,7 @@ $Determination: 10
 +Respawn priority: 0
 +Escort priority: 5
 +Special Hitpoints: 32000
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 150
@@ -802,12 +779,11 @@ $Determination: 10
 $Name: Beta 1		;! Object #15
 $Class: GVF Seth
 $Team: Friendly
-$Location: -2889.435059, 0.000270, 3013.257568
+$Location: -2610.229248, 0.000423, 1837.900391
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -829,12 +805,11 @@ $Determination: 10
 $Name: Beta 2		;! Object #16
 $Class: GVF Seth
 $Team: Friendly
-$Location: -2705.711670, -0.000149, 2945.693604
+$Location: -2426.506104, 0.000004, 1770.336304
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -856,12 +831,11 @@ $Determination: 10
 $Name: Beta 3		;! Object #17
 $Class: GVF Seth
 $Team: Friendly
-$Location: -2802.408447, -0.000254, 2807.404053
+$Location: -2523.202881, -0.000101, 1632.046509
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -888,7 +862,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -915,7 +888,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -942,7 +914,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -969,7 +940,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -998,7 +968,6 @@ $Orientation:
 	0.031305, 0.987606, 0.153806,
 	-0.196978, 0.156959, -0.967763,
 	-0.979908, 0.000000, 0.199450
-$AI Behavior: None
 +AI Class: Big
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 86
@@ -1067,7 +1036,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 10
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 440
@@ -1080,7 +1049,6 @@ $Orientation:
 	-0.031935, -0.985720, -0.165342,
 	0.186933, -0.168397, 0.967833,
 	-0.981854, 0.000000, 0.189641
-$AI Behavior: None
 +AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints "Newet path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1113,7 +1081,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 9
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
 +Use Table Score:
 +Score: 100
@@ -1126,7 +1094,6 @@ $Orientation:
 	0.206013, 0.000000, 0.978549,
 	-0.772516, 0.613815, 0.162637,
 	-0.600648, -0.789450, 0.126454
-$AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Command Corvette" "topside docking" "bottom dock" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1143,7 +1110,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
-+Orders Accepted: 257		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "dock" )
 +Group: 0
 +Use Table Score:
 +Score: 10
@@ -1156,7 +1123,6 @@ $Orientation:
 	-0.891804, 0.000000, 0.452422,
 	0.308340, 0.731789, 0.607793,
 	-0.331077, 0.681532, -0.652612
-$AI Behavior: None
 $AI Goals: ( goals ( ai-dock "Command Corvette" "topside docking" "bottom dock" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1173,7 +1139,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 5
-+Orders Accepted: 257		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "dock" )
 +Group: 0
 +Use Table Score:
 +Score: 10
@@ -1186,7 +1152,6 @@ $Orientation:
 	-0.006279, -0.731146, -0.682193,
 	-0.006729, 0.682222, -0.731115,
 	0.999958, 0.000000, -0.009204
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1214,7 +1179,6 @@ $Orientation:
 	-0.006279, -0.731146, -0.682192,
 	-0.006729, 0.682221, -0.731115,
 	0.999958, 0.000000, -0.009203
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1242,7 +1206,6 @@ $Orientation:
 	-0.006279, -0.731146, -0.682192,
 	-0.006729, 0.682221, -0.731115,
 	0.999958, 0.000000, -0.009203
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1270,7 +1233,6 @@ $Orientation:
 	-0.006279, -0.731146, -0.682192,
 	-0.006729, 0.682221, -0.731115,
 	0.999958, 0.000000, -0.009203
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1298,7 +1260,6 @@ $Orientation:
 	0.025533, 0.985450, 0.168039,
 	-0.148040, 0.169967, -0.974267,
 	-0.988652, 0.000000, 0.150226
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1327,7 +1288,6 @@ $Orientation:
 	0.025533, 0.985450, 0.168039,
 	-0.148040, 0.169967, -0.974267,
 	-0.988652, 0.000000, 0.150226
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1356,7 +1316,6 @@ $Orientation:
 	0.025533, 0.985450, 0.168039,
 	-0.148040, 0.169967, -0.974267,
 	-0.988652, 0.000000, 0.150226
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1385,7 +1344,6 @@ $Orientation:
 	0.025533, 0.985450, 0.168039,
 	-0.148040, 0.169967, -0.974267,
 	-0.988652, 0.000000, 0.150226
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1414,7 +1372,6 @@ $Orientation:
 	-0.188077, -0.982155, 0.000000,
 	0.982155, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1439,7 +1396,6 @@ $Orientation:
 	-0.188077, -0.982154, 0.000000,
 	0.982154, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1464,7 +1420,6 @@ $Orientation:
 	-0.188077, -0.982154, 0.000000,
 	0.982154, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1489,7 +1444,6 @@ $Orientation:
 	-0.188077, -0.982154, 0.000000,
 	0.982154, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1514,7 +1468,6 @@ $Orientation:
 	-0.188077, -0.982154, 0.000000,
 	0.982154, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1539,7 +1492,6 @@ $Orientation:
 	-0.188077, -0.982154, 0.000000,
 	0.982154, -0.188077, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1564,7 +1516,6 @@ $Orientation:
 	0.992333, 0.000000, -0.123595,
 	0.109461, 0.464361, 0.878856,
 	0.057393, -0.885646, 0.460800
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1599,7 +1550,6 @@ $Orientation:
 	0.998071, 0.000000, 0.062078,
 	-0.055059, 0.461918, 0.885212,
 	-0.028675, -0.886923, 0.461027
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1634,7 +1584,6 @@ $Orientation:
 	0.976900, 0.000000, 0.213699,
 	-0.180365, 0.536317, 0.824520,
 	-0.114610, -0.844017, 0.523928
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1669,7 +1618,6 @@ $Orientation:
 	0.994505, 0.000000, 0.104689,
 	-0.084250, 0.593600, 0.800338,
 	-0.062144, -0.804760, 0.590338
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1704,7 +1652,6 @@ $Orientation:
 	0.997953, 0.000000, -0.063951,
 	0.051535, 0.592110, 0.804208,
 	0.037866, -0.805857, 0.590898
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1739,7 +1686,6 @@ $Orientation:
 	0.975924, 0.000000, -0.218110,
 	0.183276, 0.542137, 0.820060,
 	0.118245, -0.840290, 0.529085
-$AI Behavior: None
 +AI Class: Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1774,7 +1720,6 @@ $Orientation:
 	0.141221, -0.975723, 0.167393,
 	0.629172, 0.219007, 0.745773,
 	-0.764329, 0.000000, 0.644827
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1801,7 +1746,6 @@ $Orientation:
 	0.141221, -0.975723, 0.167393,
 	0.629172, 0.219007, 0.745773,
 	-0.764329, 0.000000, 0.644827
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1828,7 +1772,6 @@ $Orientation:
 	0.141221, -0.975723, 0.167393,
 	0.629172, 0.219007, 0.745774,
 	-0.764329, 0.000000, 0.644827
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1855,7 +1798,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1871,7 +1813,7 @@ $Determination: 10
 +Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1884,7 +1826,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1900,7 +1841,7 @@ $Determination: 10
 +Flags: ( )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -1913,7 +1854,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Shields: 100
@@ -1924,7 +1864,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "reinforcement" "no-shields" )
-+Flags2: ( )
++Flags2: ( "no_collide" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
@@ -1938,7 +1878,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1965,7 +1904,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -1992,7 +1930,6 @@ $Orientation:
 	0.396417, 0.000000, 0.918071,
 	-0.591438, 0.764843, 0.255379,
 	-0.702180, -0.644218, 0.303197
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2008,7 +1945,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -2021,7 +1958,6 @@ $Orientation:
 	0.396417, 0.000000, 0.918071,
 	-0.591437, 0.764842, 0.255379,
 	-0.702179, -0.644218, 0.303197
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2037,7 +1973,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 12
@@ -2050,7 +1986,6 @@ $Orientation:
 	-0.938826, 0.258736, 0.227294,
 	0.303998, 0.312450, 0.899978,
 	0.161839, 0.914019, -0.371992
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2066,7 +2001,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 14
@@ -2079,7 +2014,6 @@ $Orientation:
 	-0.938826, 0.258736, 0.227294,
 	0.303998, 0.312450, 0.899978,
 	0.161839, 0.914019, -0.371992
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2095,7 +2029,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 14
@@ -2108,7 +2042,6 @@ $Orientation:
 	-0.938826, 0.258736, 0.227294,
 	0.303999, 0.312451, 0.899979,
 	0.161839, 0.914020, -0.371992
-$AI Behavior: None
 +AI Class: Colonel
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2124,7 +2057,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
 +Use Table Score:
 +Score: 14
@@ -2137,7 +2070,6 @@ $Orientation:
 	0.108652, -0.994043, 0.008537,
 	-0.990990, -0.108987, -0.077860,
 	0.078327, 0.000000, -0.996928
-$AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2166,7 +2098,6 @@ $Orientation:
 	0.108652, -0.994043, 0.008537,
 	-0.990989, -0.108987, -0.077860,
 	0.078327, 0.000000, -0.996928
-$AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2195,7 +2126,6 @@ $Orientation:
 	0.108652, -0.994043, 0.008537,
 	-0.990989, -0.108987, -0.077860,
 	0.078327, 0.000000, -0.996928
-$AI Behavior: None
 +AI Class: Cap_Killer
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2224,7 +2154,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2251,7 +2180,6 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
@@ -2276,7 +2204,6 @@ $Name: Alpha
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Alpha 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -2298,7 +2225,6 @@ $Name: Leo
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Leo 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -2318,7 +2244,6 @@ $Name: Gemini
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Gemini 1
-
 $Arrival Location: Near Ship
 +Arrival Distance: 1500
 $Arrival Anchor: Warspite
@@ -2342,7 +2267,6 @@ $Name: Aquarius
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Aquarius 1
-
 $Arrival Location: Near Ship
 +Arrival Distance: 650
 $Arrival Anchor: Gemini 1
@@ -2366,7 +2290,6 @@ $Name: Beta
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Beta 1
-
 $Arrival Location: Near Ship
 +Arrival Distance: 2500
 $Arrival Anchor: Armaros
@@ -2394,7 +2317,6 @@ $Name: Swarm Assault
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Swarm Assault 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay 
    "swarmer arrival cue" 
@@ -2417,7 +2339,6 @@ $Name: Space Superiority
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Space Superiority 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay "back in" 0 ) 
 $Departure Location: Hyperspace
@@ -2435,7 +2356,6 @@ $Name: Disable Strike
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Disable Strike 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay "back in" 0 ) 
 $Departure Location: Hyperspace
@@ -2453,7 +2373,6 @@ $Name: Diversion Strike
 $Waves: 3
 $Wave Threshold: 0
 $Special Ship: 0		;! Diversion Strike 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay "back in" 4 ) 
 $Departure Location: Hyperspace
@@ -2475,7 +2394,6 @@ $Name: Cruiser Defence
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Cruiser Defence 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
    0 
@@ -2495,7 +2413,6 @@ $Name: Elite Space Superiority
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Elite Space Superiority 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
    1 
@@ -2517,7 +2434,6 @@ $Name: Capture 1 Escort
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Capture 1 Escort 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 0 "Capture 1" ) 
 $Departure Location: Hyperspace
@@ -2533,7 +2449,6 @@ $Name: Capture 2 Escort
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 2		;! Capture 2 Escort 3
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 0 "Capture 2" ) 
 $Departure Location: Hyperspace
@@ -2550,7 +2465,6 @@ $Name: Long Range Strike
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Long Range Strike 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 
    3 
@@ -2574,7 +2488,6 @@ $Name: Sweeper
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Sweeper 1
-
 $Arrival Location: Near Ship
 +Arrival Distance: 1600
 $Arrival Anchor: Command Corvette
@@ -2878,7 +2791,7 @@ $Formula: ( when
       "shiv rein arrive - anyw" 
    )
 )
-+Name: Event name
++Name: Gemini arrives
 +Repeat Count: 1
 +Interval: 1
 
@@ -3585,209 +3498,210 @@ $Num stars: 0
 $Ambient light level: 7895160
 
 $Bitmap List:
++Flags: ( "corrected angles" )
 $Sun: SunWhite
-+Angles: 0.000000 0.366519 1.553343
++Angles: 5.916725 0.000000 4.731084
 +Scale: 1.000000
 $Starbitmap: dneb16
-+Angles: 0.418879 0.000000 0.296706
++Angles: 5.883678 0.129445 5.960238
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb15
-+Angles: 0.122173 0.104720 5.829400
++Angles: 6.173430 6.124692 0.456740
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC2-Main
-+Angles: 0.541052 0.541052 0.000000
++Angles: 5.742134 5.742134 0.000000
 +ScaleX: 2.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC10-Whisp
-+Angles: 0.575959 5.969026 0.226893
++Angles: 5.723783 0.459219 6.014560
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC6-Whisp
-+Angles: 0.226893 0.000000 5.811946
++Angles: 6.081386 6.178755 0.481822
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb05
-+Angles: 6.248279 0.000000 5.829400
++Angles: 0.031372 0.015307 0.454025
 +ScaleX: 1.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulF9-Whisp
-+Angles: 0.349066 0.157080 5.969026
++Angles: 5.951877 6.014103 0.332903
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD7-Whisp
-+Angles: 5.899213 0.191986 0.157080
++Angles: 0.379003 6.028080 6.113995
 +ScaleX: 1.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD10-Whisp
-+Angles: 5.811946 0.715585 0.069813
++Angles: 0.469999 5.532073 6.204865
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD14-Whisp
-+Angles: 5.742134 0.785398 0.000000
++Angles: 0.541051 5.497787 0.000000
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb06
-+Angles: 5.986479 0.349066 0.296706
++Angles: 0.283374 5.844969 5.973754
 +ScaleX: 3.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC4-Whisp
-+Angles: 6.126106 0.000000 0.383972
++Angles: 0.145557 6.223923 5.894892
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC4-Whisp
-+Angles: 6.073746 3.141593 0.157080
++Angles: 0.206823 3.108353 6.122655
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC13-Whisp
-+Angles: 6.091199 5.567600 0.017453
++Angles: 0.191957 0.712193 6.265406
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC12-Whisp
-+Angles: 6.021386 0.157080 6.143559
++Angles: 0.259192 6.163380 0.144485
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC11-Whisp
-+Angles: 6.038839 0.000000 6.056293
++Angles: 0.237961 0.056028 0.233592
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC3-Whisp
-+Angles: 6.143559 0.174533 5.969026
++Angles: 0.132751 6.152055 0.317045
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb05
-+Angles: 6.143559 1.570796 5.864306
++Angles: 0.127486 4.769490 0.422525
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb10
-+Angles: 5.916667 0.523599 5.899213
++Angles: 0.338712 5.902405 0.408434
 +ScaleX: 2.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb16
-+Angles: 5.794493 2.949606 6.213372
++Angles: 0.487397 3.370653 0.079032
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD12-Whisp
-+Angles: 5.777040 0.000000 6.091199
++Angles: 0.495989 0.105375 0.218691
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD7-Whisp
-+Angles: 5.707227 0.680678 6.126106
++Angles: 0.567984 5.703750 0.186653
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb10
-+Angles: 6.178466 5.480334 0.506145
++Angles: 0.091550 0.751940 5.774708
 +ScaleX: 1.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC5-Whisp
-+Angles: 6.161013 0.000000 0.575959
++Angles: 0.102386 6.216412 5.703804
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC4-Whisp
-+Angles: 5.969026 5.602507 0.506145
++Angles: 0.273676 0.524438 5.755484
 +ScaleX: 3.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulC2-Main
-+Angles: 5.916667 6.056293 0.698132
++Angles: 0.278096 6.268167 5.551035
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb17
-+Angles: 5.777040 0.000000 0.628319
++Angles: 0.403043 5.968217 5.590005
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb17
-+Angles: 5.724680 0.000000 0.610865
++Angles: 0.449022 5.939038 5.592988
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb05
-+Angles: 5.637414 0.000000 0.767945
++Angles: 0.447718 5.800945 5.403385
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb06
-+Angles: 5.532694 0.000000 0.785398
++Angles: 0.503216 5.700239 5.343850
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb08
-+Angles: 5.637414 1.727876 0.541052
++Angles: 0.542006 4.185096 5.638176
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD2-Main
-+Angles: 5.515241 0.000000 0.506145
++Angles: 0.652987 5.845321 5.626644
 +ScaleX: 1.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulD3-Whisp
-+Angles: 5.462881 0.000000 0.418879
++Angles: 0.731685 5.871891 5.704824
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulF11-Whisp
-+Angles: 5.323255 0.000000 0.366519
++Angles: 0.870644 5.810142 5.693399
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
@@ -3799,13 +3713,13 @@ $Starbitmap: NebulA13-Whisp
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA7-Whisp
-+Angles: 6.108653 0.000000 3.124140
++Angles: 6.108680 6.280108 3.159315
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb01
-+Angles: 6.161013 0.279253 3.141593
++Angles: 6.161013 6.003932 3.141593
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
@@ -3817,79 +3731,79 @@ $Starbitmap: neb02
 +DivX: 1
 +DivY: 1
 $Starbitmap: neb03
-+Angles: 5.934120 0.000000 3.019420
++Angles: 5.936832 6.238858 3.271521
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA14-Whisp
-+Angles: 6.178466 0.000000 3.246313
++Angles: 6.179042 0.010986 3.036299
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA14-Whisp
-+Angles: 6.178466 0.872665 3.228859
++Angles: 6.178866 5.419681 3.053849
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA10-Whisp
-+Angles: 6.021386 0.000000 3.368485
++Angles: 6.028247 0.060203 2.906983
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: dneb01
-+Angles: 6.038839 0.872665 3.316126
++Angles: 6.042625 5.453789 2.961829
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA5-Whisp
-+Angles: 6.003933 0.541052 3.281219
++Angles: 6.006722 5.782020 2.996417
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA8-Whisp
-+Angles: 6.073746 5.881760 3.420846
++Angles: 6.081974 0.459947 2.856431
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA9-Whisp
-+Angles: 6.178466 0.000000 3.420846
++Angles: 6.182537 0.028963 2.860880
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA2-Main
-+Angles: 0.052360 1.099557 3.473205
++Angles: 0.049505 5.166568 2.809557
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA1-Main
-+Angles: 0.174533 5.794493 3.351032
++Angles: 0.170681 0.452048 2.929018
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA12-Whisp
-+Angles: 6.161013 1.343904 3.508112
++Angles: 6.169165 4.983255 2.772563
 +ScaleX: 1.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulA11-Whisp
-+Angles: 0.052360 1.570796 3.630285
++Angles: 0.046227 4.687790 2.652332
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulG8-Whisp
-+Angles: 0.104720 6.073746 3.682645
++Angles: 0.089719 0.155359 2.598113
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
