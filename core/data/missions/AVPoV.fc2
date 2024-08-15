@@ -1,202 +1,246 @@
-
 $Name: A Vasudan Point of View
-$Type: Single
-
+$Type: single
 $Flags: 0
-	+Starting Ships: ( "GVF Horus" "GVF Seth" "GVF Thoth" )
-	+Starting Weapons: ( "Mekhu HL-7" "Prometheus R" "Akheton SDG" "Lamprey" "Tempest" "Rockeye" "Harpoon" "Hornet" )
 
-$Mission: A_Intro_00.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
+
++Starting Ships: ( "GVF Seth"  "GVF Horus"  "GVF Thoth" )
+
++Starting Weapons: ( "Mekhu HL-7"  "Akheton SDG"  "Prometheus R"  "Lamprey"  "Rockeye"  "Tempest"  "Hornet"  "Harpoon" )
 
 
 $Mission: A_Intro_00.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "A_Intro_01.fs2" ) )
+)
+
++Level: 0
++Position: 1
 
 $Mission: A_Intro_01.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "A_Intro_02.fs2" ) )
+)
+
++Level: 1
++Position: 1
 
 $Mission: A_Intro_02.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_01.fs2" ) )
+)
+
++Level: 2
++Position: 1
 
 $Mission: B_Vampire_Arc_01.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_02.fs2" ) )
+)
+
++Level: 3
++Position: 1
 
 $Mission: B_Vampire_Arc_02.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_03.fs2" ) )
+)
+
++Level: 4
++Position: 1
 
 $Mission: B_Vampire_Arc_03.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_04.fs2" ) )
+)
+
++Level: 5
++Position: 1
 
 $Mission: B_Vampire_Arc_04.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_05.fs2" ) )
+)
+
++Level: 6
++Position: 1
 
 $Mission: B_Vampire_Arc_05.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "B_Vampire_Arc_06.fs2" ) )
+)
+
++Level: 7
++Position: 1
 
 $Mission: B_Vampire_Arc_06.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "C_Shivan_Tech_Arc_01.fs2" ) )
+)
+
++Level: 8
++Position: 1
 
 $Mission: C_Shivan_Tech_Arc_01.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "C_Shivan_Tech_Arc_02.fs2" ) )
+)
+
++Level: 9
++Position: 1
 
 $Mission: C_Shivan_Tech_Arc_02.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   (
+      ( is-previous-goal-true 
+         "C_Shivan_Tech_Arc_02.fs2" 
+         "Oversee the mining operation" 
+      )
+      ( next-mission "C_Shivan_Tech_Arc_02_loop_1.fs2" )
+   )
+   ( ( true ) ( next-mission "D_NTF_Arc_01.fs2" ) )
+)
+
++Level: 10
++Position: 1
 
 $Mission: C_Shivan_Tech_Arc_02_loop_1.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "C_Shivan_Tech_Arc_02_loop_2.fs2" ) )
+)
+
++Level: 11
++Position: 2
 
 $Mission: C_Shivan_Tech_Arc_02_loop_2.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "D_NTF_Arc_01.fs2" ) )
+)
+
++Level: 12
++Position: 2
 
 $Mission: D_NTF_Arc_01.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "D_NTF_Arc_02.fs2" ) )
+)
+
++Level: 13
++Position: 1
 
 $Mission: D_NTF_Arc_02.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_01.fs2" ) )
+)
+
++Level: 14
++Position: 1
 
 $Mission: E_Sathanas_Arc_01.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_02.fs2" ) )
+)
+
++Level: 15
++Position: 1
 
 $Mission: E_Sathanas_Arc_02.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_03.fs2" ) )
+)
+
++Level: 16
++Position: 1
 
 $Mission: E_Sathanas_Arc_03.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_04.fs2" ) )
+)
+
++Level: 17
++Position: 1
 
 $Mission: E_Sathanas_Arc_04.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_05.fs2" ) )
+)
+
++Level: 18
++Position: 1
 
 $Mission: E_Sathanas_Arc_05.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_06.fs2" ) )
+)
+
++Level: 19
++Position: 1
 
 $Mission: E_Sathanas_Arc_06.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "E_Sathanas_Arc_07.fs2" ) )
+)
+
++Level: 20
++Position: 1
 
 $Mission: E_Sathanas_Arc_07.fs2
-	+Flags: 0
-	+Main Hall: 0
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "F_Capella_01.fs2" ) )
+)
+
++Level: 21
++Position: 1
 
 $Mission: F_Capella_01.fs2
-	+Flags: 0
-	+Main Hall: 1
-	+Debriefing Persona Index: 0
-	+Formula: ( true )
-	+Level: 0
-	+Position: 0
++Flags: 0
++Main Hall: 1
+
++Level: 22
++Position: 1
 
 #End
+
