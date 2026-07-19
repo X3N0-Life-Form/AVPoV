@@ -1,10 +1,10 @@
 #Mission Info
 
-$Version: 0.10
+$Version: 23.1
 $Name:  XSTR("The Sicilian Defense", 1221)
 $Author: Brad Johnson
 $Created: 06/15/99 at 14:40:22
-$Modified: 10/16/11 at 11:15:57
+$Modified: 07/19/26 at 16:55:20
 $Notes:
 This is a FRED created mission
 $End Notes:
@@ -12,11 +12,13 @@ $End Notes:
 $Mission Desc:
  XSTR("The 64th executes a pre-emptive strike against a rebel rallying point in Gamma Draconis.", 1222)
 $end_multi_text
-
 +Game Type Flags: 1
 +Flags: 0
-+Red Alert: 0
-+Scramble: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
+
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -27,22 +29,15 @@ $end_multi_text
 +Viewer pos: 1233.178345, 5796.628418, -6345.724609
 +Viewer orient:
 	0.999995, -0.000001, 0.003211,
-	-0.001605, 0.866026, 0.499997,
+	-0.001605, 0.866025, 0.499997,
 	-0.002781, -0.500000, 0.866021
-
 +SquadReassignName: 64th Raptors
 +SquadReassignLogo: raptors.pcx
 
-$Skybox Model: Starfield.pof
-$AI Profile: myProfile
-#Plot Info
 
-$Tour:  XSTR("Blah", 6)
-$Pre-Briefing Cutscene: Blah
-$Pre-Mission Cutscene: Blah
-$Next Mission Success: Blah
-$Next Mission Partial: Blah
-$Next Mission Failure: Blah
+$Skybox Model: Starfield.pof
+
+$AI Profile: myProfile
 
 #Command Briefing
 
@@ -56,8 +51,8 @@ $end_multi_text
 $voice: SM205_MB_01.wav
 $camera_pos: 1233.178345, 5796.628418, -6345.724609
 $camera_orient:
-	0.999995, 0.000000, 0.003211,
-	-0.001605, 0.866025, 0.499998,
+	0.999995, -0.000001, 0.003211,
+	-0.001605, 0.866026, 0.499997,
 	-0.002781, -0.500000, 0.866021
 $camera_time: 500
 $num_lines: 0
@@ -69,7 +64,7 @@ $type: 33
 $team: Neutral
 $class: GTNB Pharos
 $pos: -2343.542480, -0.000242, 2504.354736
-$label: Gamma Draconis
+$label:  XSTR("Gamma Draconis", -1)
 +id: 1
 $hlight: 0
 $mirror: 0
@@ -81,7 +76,7 @@ $type: 9
 $team: Neutral
 $class: GTNB Pharos
 $pos: 788.886230, -154.007339, 7410.931641
-$label: Rally Point
+$label:  XSTR("Rally Point", -1)
 +id: 2
 $hlight: 1
 $mirror: 0
@@ -93,7 +88,7 @@ $type: 26
 $team: Friendly
 $class: Knossos
 $pos: 4729.928711, -0.000298, 3555.450928
-$label: Knossos Device
+$label:  XSTR("Knossos Device", -1)
 +id: 3
 $hlight: 0
 $mirror: 0
@@ -108,8 +103,8 @@ $end_multi_text
 $voice: SM205_MB_02.wav
 $camera_pos: 1678.721313, 2662.997070, -1665.950806
 $camera_orient:
-	0.999995, 0.000000, 0.003211,
-	-0.001605, 0.866025, 0.499998,
+	0.999995, -0.000001, 0.003211,
+	-0.001605, 0.866026, 0.499997,
 	-0.002781, -0.500000, 0.866021
 $camera_time: 500
 $num_lines: 0
@@ -121,7 +116,7 @@ $type: 28
 $team: Neutral
 $class: NTF Iceni
 $pos: 1663.055298, -154.007401, 3213.216064
-$label: Iceni
+$label:  XSTR("Iceni", -1)
 +id: 4
 $hlight: 0
 $mirror: 0
@@ -137,7 +132,7 @@ $voice: SM205_MB_03.wav
 $camera_pos: 0.985757, 651.364929, -1226.640747
 $camera_orient:
 	0.999995, -0.000001, 0.003211,
-	-0.001605, 0.866025, 0.499997,
+	-0.001605, 0.866026, 0.499997,
 	-0.002781, -0.500000, 0.866021
 $camera_time: 800
 $num_lines: 0
@@ -149,7 +144,7 @@ $type: 17
 $team: Friendly
 $class: GTB Artemis
 $pos: -2.637135, -0.000004, -98.449478
-$label: Alpha
+$label:  XSTR("Alpha", -1)
 +id: 5
 $hlight: 0
 $mirror: 0
@@ -296,14 +291,14 @@ $Alt: NTT Argo
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
-	"GTF Ulysses"		4
+	"GTF Ulysses"	4
 	"GTF Hercules Mark II"	4
-	"GTF Perseus"		4
-	"GTF Myrmidon"		4
+	"GTF Perseus"	4
+	"GTF Myrmidon"	4
 	"GTB Artemis D.H."	4
-	"GTB Medusa"		4
-	"GTB Ursa"			4
-	"GTB Boanerges"		4
+	"GTB Medusa"	4
+	"GTB Ursa"	4
+	"GTB Boanerges"	4
 )
 
 +Weaponry Pool: (
@@ -319,6 +314,7 @@ $Ship Choices: (
 	"Stiletto II"	120
 	"Cyclops#short"	62
 	"EMP Adv."	80
+	"Prometheus R"	8
 )
 
 #Objects		;! 54 total
@@ -331,11 +327,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 +Secondary Banks: ( "Piranha" "Cyclops#short" "Cyclops#short" )
@@ -347,7 +340,7 @@ $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -359,11 +352,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 +Secondary Banks: ( "Piranha" "Cyclops#short" "Cyclops#short" )
@@ -375,7 +365,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -387,11 +377,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 100
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 +Secondary Banks: ( "Piranha" "Cyclops#short" "Cyclops#short" )
@@ -403,7 +390,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -416,42 +403,41 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 78
 +Subsystem: Pilot
-+Subsystem: turret01a
-+Subsystem: turret02a
-+Subsystem: turret03a
-+Subsystem: turret04a
-+Subsystem: turret05a
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
++Subsystem: Turret01a
++Subsystem: Turret02a
++Subsystem: Turret03a
++Subsystem: Turret04a
++Subsystem: Turret05a
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret09
-+Subsystem: turret10
++Subsystem: Turret09
++Subsystem: Turret10
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
 +Primary Banks: ( "AAAh" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-time-elapsed 360 ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 90
-+Orders Accepted: 0		;! note that this is a bitfield!!!
++Orders Accepted List: ( )
 +Group: 0
++Use Table Score:
 +Score: 1000
 $Texture Replace:
 +old: capital01-05
@@ -466,49 +452,47 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 83
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret06
++Subsystem: Turret06
 +AI Class: Coward
-+Subsystem: turret07
++Subsystem: Turret07
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret08
++Subsystem: Turret08
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret09
++Subsystem: Turret09
 +AI Class: Coward
-+Subsystem: turret10
++Subsystem: Turret10
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret17
++Subsystem: Turret17
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
 $Damage: 100
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
-+Subsystem: turret25
++Subsystem: Turret21
++Subsystem: Turret22
++Subsystem: Turret23
++Subsystem: Turret24
++Subsystem: Turret25
 +Sbank Ammo: ( 0 )
-+Subsystem: turret26
++Subsystem: Turret26
 $Damage: 100
 +Secondary Banks: ( "MX-52" )
 +Sbank Ammo: ( 0 )
@@ -517,11 +501,11 @@ $Arrival Cue: ( is-destroyed-delay 8 "Vindicator" )
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Yoshitomo" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 89
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
 +Score: 400
 $Texture Replace:
@@ -537,13 +521,11 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 56
 +Subsystem: Pilot
-+Subsystem: turret01
++Subsystem: Turret01
 +Subsystem: turret02
 +Subsystem: turret03
 +Primary Banks: ( "AAAh" )
@@ -553,8 +535,8 @@ $Cargo 1:  XSTR("Nothing", 13)
 +Primary Banks: ( "Terran Turret" )
 +Subsystem: turret06
 +Primary Banks: ( "AAAh" )
-+Subsystem: turret07
-+Subsystem: turret08
++Subsystem: Turret07
++Subsystem: Turret08
 +Subsystem: turret09a-01-main
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
@@ -565,12 +547,13 @@ $Arrival Cue: ( is-event-true-delay
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Alba" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 87
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
++Use Table Score:
 +Score: 200
 $Texture Replace:
 +old: nameplate
@@ -585,20 +568,18 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 88
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret04
-+Subsystem: turret05
++Subsystem: Turret04
++Subsystem: Turret05
 +Primary Banks: ( "Terran Turret" )
-+Subsystem: turret06
++Subsystem: Turret06
 +Subsystem: turret07
 +Primary Banks: ( "AAAh" )
 +Subsystem: turret08
@@ -633,11 +614,11 @@ $Arrival Cue: ( and
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Epigoni" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 88
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
 +Score: 400
 $Texture Replace:
@@ -653,24 +634,22 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
 +Initial Hull: 79
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
++Subsystem: Turret01
++Subsystem: Turret02
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( has-arrived-delay 120 "Venture" ) 
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 50
-+Orders Accepted: 257		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "dock" )
 +Group: 0
 +Score: 10
 
@@ -683,11 +662,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -698,6 +674,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Aries 2		;! Object #9
@@ -709,11 +686,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -724,6 +698,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Aries 3		;! Object #10
@@ -735,11 +710,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -750,6 +722,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Aries 4		;! Object #11
@@ -761,11 +734,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -776,6 +746,7 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Hyksos		;! Object #12
@@ -783,21 +754,22 @@ $Class: GVCv Sobek
 $Team: Friendly
 $Location: -308.399994, -967.299988, 6123.000000
 $Orientation:
-	-0.674263, 0.000000, -0.738491,
+	-0.674264, 0.000000, -0.738491,
 	-0.203830, 0.961155, 0.186103,
 	0.709804, 0.276009, -0.648072
-$IFF: IFF 1
-$AI Behavior: None
++AI Class: Colonel
 $AI Goals: ( goals ( ai-waypoints-once "Waypoint path 1" 89 ) )
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 +Subsystem: turret01
++Primary Banks: ( "Wraith" )
 +Subsystem: turret02
++Primary Banks: ( "Wraith" )
 +Subsystem: turret03
 +Subsystem: turret04
 +Subsystem: turret05
++Primary Banks: ( "Wraith" )
 +Subsystem: turret06
 +Subsystem: turret07
 +Subsystem: turret08
@@ -827,12 +799,13 @@ $Departure Cue: ( destroyed-or-departed-delay
    "Venture" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
++Use Table Score:
 +Score: 400
 
 $Name: Taurus 1		;! Object #13
@@ -844,11 +817,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -870,11 +840,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -896,11 +863,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -922,11 +886,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -945,14 +906,11 @@ $Team: Friendly
 $Location: 128.702927, -100.202988, 3168.038330
 $Orientation:
 	0.706418, 0.000000, -0.707795,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.707795, 0.000000, 0.706418
-$IFF: IFF 1
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
 +Secondary Banks: ( "Tempest" "Tempest" )
@@ -964,10 +922,10 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 14
-+Persona Index: 6
++Persona Name: Wingman 7
 
 $Name: Epsilon 2		;! Object #18
 $Class: GVF Serapis
@@ -975,14 +933,11 @@ $Team: Friendly
 $Location: 18.479801, -100.203033, 3063.556396
 $Orientation:
 	0.705841, 0.000000, -0.708370,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.708370, 0.000000, 0.705841
-$IFF: IFF 1
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
 +Secondary Banks: ( "Tempest" "Tempest" )
@@ -994,7 +949,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 14
 
@@ -1004,14 +959,11 @@ $Team: Friendly
 $Location: 171.480591, -100.203140, 2946.845947
 $Orientation:
 	0.727605, 0.000000, -0.685996,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.685996, 0.000000, 0.727605
-$IFF: IFF 1
-$AI Behavior: None
 +AI Class: General
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" "Prometheus S" )
 +Secondary Banks: ( "Tempest" "Tempest" )
@@ -1023,7 +975,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 14
 
@@ -1035,10 +987,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus R" "Prometheus S" )
 +Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
@@ -1050,10 +999,10 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
-+Persona Index: 1
++Persona Name: Wingman 2
 
 $Name: Beta 2		;! Object #21
 $Class: GTF Myrmidon
@@ -1063,10 +1012,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus R" "Prometheus S" )
 +Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
@@ -1078,7 +1024,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1090,10 +1036,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus R" "Prometheus S" )
 +Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
@@ -1105,10 +1048,10 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
-+Persona Index: 1
++Persona Name: Wingman 2
 
 $Name: Beta 4		;! Object #23
 $Class: GTF Myrmidon
@@ -1118,10 +1061,7 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus R" "Prometheus S" )
 +Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
@@ -1133,8 +1073,9 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Diomedes		;! Object #24
@@ -1142,41 +1083,38 @@ $Class: GTCv Deimos
 $Team: Friendly
 $Location: -10.900000, 1079.553345, 7632.100098
 $Orientation:
-	-0.596724, 0.000000, -0.802446,
-	0.172569, 0.976602, -0.128328,
+	-0.596724, -0.000000, -0.802446,
+	0.172568, 0.976602, -0.128328,
 	0.783671, -0.215053, -0.582762
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
-+Subsystem: turret01
-+Subsystem: turret02
-+Subsystem: turret03
-+Subsystem: turret04
-+Subsystem: turret05
-+Subsystem: turret06
-+Subsystem: turret07
-+Subsystem: turret08
-+Subsystem: turret09
-+Subsystem: turret10
-+Subsystem: turret11
-+Subsystem: turret12
-+Subsystem: turret13
-+Subsystem: turret14
-+Subsystem: turret15
-+Subsystem: turret16
-+Subsystem: turret17
-+Subsystem: turret18
-+Subsystem: turret19
-+Subsystem: turret20
-+Subsystem: turret21
-+Subsystem: turret22
-+Subsystem: turret23
-+Subsystem: turret24
-+Subsystem: turret25
-+Subsystem: turret26
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
++Subsystem: Turret21
++Subsystem: Turret22
++Subsystem: Turret23
++Subsystem: Turret24
++Subsystem: Turret25
++Subsystem: Turret26
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay "Stand By" 8 ) 
 $Departure Location: Hyperspace
@@ -1189,11 +1127,11 @@ $Departure Cue: ( destroyed-or-departed-delay
    "Venture" 
 )
 $Determination: 10
-+Flags: ( "cargo-known" "escort" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 99
-+Orders Accepted: 1		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" )
 +Group: 0
 +Score: 400
 $Texture Replace:
@@ -1208,10 +1146,7 @@ $Orientation:
 	-0.511394, 0.000000, -0.859346,
 	0.000000, 1.000000, 0.000000,
 	0.859346, 0.000000, -0.511394
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
@@ -1222,8 +1157,9 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Delta 2		;! Object #26
@@ -1234,10 +1170,7 @@ $Orientation:
 	-0.527624, 0.000000, -0.849478,
 	0.000000, 1.000000, 0.000000,
 	0.849478, 0.000000, -0.527624
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
@@ -1248,8 +1181,9 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Delta 3		;! Object #27
@@ -1259,11 +1193,8 @@ $Location: 317.503937, 608.802551, 6644.025879
 $Orientation:
 	-0.491647, 0.000000, -0.870794,
 	0.000000, 1.000000, 0.000000,
-	0.870794, 0.000000, -0.491647
-$IFF: IFF 1
-$AI Behavior: None
+	0.870795, 0.000000, -0.491647
 $Cargo 1:  XSTR("Nothing", 13)
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
@@ -1274,8 +1205,9 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
++Use Table Score:
 +Score: 10
 
 $Name: Pisces 1		;! Object #28
@@ -1287,11 +1219,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1313,11 +1242,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1339,11 +1265,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1365,11 +1288,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1391,11 +1311,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1417,11 +1334,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1443,11 +1357,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1466,13 +1377,10 @@ $Team: Friendly
 $Location: 1.383075, 707.877625, 5006.683105
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1482,7 +1390,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1492,13 +1400,10 @@ $Team: Friendly
 $Location: -97.303322, 707.877197, 5108.373047
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1508,7 +1413,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1518,13 +1423,10 @@ $Team: Friendly
 $Location: -100.726471, 707.877197, 4902.678223
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1534,7 +1436,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1544,13 +1446,10 @@ $Team: Friendly
 $Location: -275.300049, 616.194214, 4434.301758
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1560,7 +1459,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1570,13 +1469,10 @@ $Team: Friendly
 $Location: -373.986389, 616.193848, 4535.991699
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1586,7 +1482,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1596,13 +1492,10 @@ $Team: Friendly
 $Location: -377.409546, 616.193848, 4330.296875
 $Orientation:
 	0.030792, 0.000000, -0.999526,
-	0.000000, 1.000000, 0.000000,
+	-0.000000, 1.000000, 0.000000,
 	0.999526, 0.000000, 0.030792
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1612,7 +1505,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 12
 
@@ -1625,11 +1518,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1651,11 +1541,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1677,11 +1564,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1703,11 +1587,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1729,11 +1610,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1755,11 +1633,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1781,11 +1656,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1807,11 +1679,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1833,11 +1702,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1859,11 +1725,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1885,11 +1748,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1911,11 +1771,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
@@ -1936,11 +1793,8 @@ $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
-$IFF: IFF 1
-$AI Behavior: None
 $Cargo 1:  XSTR("Nothing", 13)
 +Initial Velocity: 33
-+Initial Hull: 100
 +Subsystem: Pilot
 +Primary Banks: ( "Prometheus S" )
 $Arrival Location: Hyperspace
@@ -1951,7 +1805,7 @@ $Determination: 10
 +Flags: ( "cargo-known" )
 +Flags2: ( )
 +Respawn priority: 0
-+Orders Accepted: 33023		;! note that this is a bitfield!!!
++Orders Accepted List: ( "attack ship" "disable ship" "disarm ship" "guard ship" "ignore ship" "form on wing" "cover me" "attack any" "disable subsys" )
 +Group: 0
 +Score: 17
 
@@ -1961,7 +1815,6 @@ $Name: Alpha
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Alpha 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1979,7 +1832,6 @@ $Name: Aries
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Aries 1
-
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Vindicator
@@ -2000,7 +1852,6 @@ $Name: Taurus
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Taurus 1
-
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Vindicator
@@ -2023,7 +1874,6 @@ $Name: Epsilon
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Epsilon 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 2 "Hyksos" ) 
 $Departure Location: Hyperspace
@@ -2040,7 +1890,6 @@ $Name: Beta
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Beta 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -2059,7 +1908,6 @@ $Name: Delta
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Delta 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( or 
    ( has-arrived-delay 3 "Diomedes" ) 
@@ -2084,7 +1932,6 @@ $Name: Pisces
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Pisces 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 4 "Epigoni" ) 
 $Departure Location: Hyperspace
@@ -2102,7 +1949,6 @@ $Name: Cancer
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Cancer 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 3 "Alba" ) 
 $Departure Location: Hyperspace
@@ -2119,7 +1965,6 @@ $Name: Sigma
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Sigma 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( percent-ships-destroyed 
    75 
@@ -2143,7 +1988,6 @@ $Name: Kappa
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Kappa 1
-
 $Arrival Location: Hyperspace
 $Arrival Cue: ( has-arrived-delay 1 "Sigma" ) 
 $Departure Location: Hyperspace
@@ -2160,7 +2004,6 @@ $Name: Virgo
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Virgo 1
-
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Vindicator
@@ -2182,7 +2025,6 @@ $Name: Gemini
 $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Gemini 1
-
 $Arrival Location: Docking Bay
 +Arrival Distance: 0
 $Arrival Anchor: Vindicator
@@ -3015,122 +2857,123 @@ $end_multi_text
 #Background bitmaps		;! 22 total
 
 $Num stars: 2000
-$Ambient light level: 0
+$Ambient light level: 7895160
 
 $Bitmap List:
++Flags: ( "corrected angles" )
 $Sun: SunEtamin
-+Angles: 5.637409 0.000000 5.323250
++Angles: 0.352437 0.000000 1.060915
 +Scale: 4.000000
 $Starbitmap: NebulB3-Main
-+Angles: 1.553342 0.000000 1.047197
++Angles: 5.759674 1.550642 4.722466
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulG9-Whisp
-+Angles: 1.553342 3.281216 1.082103
++Angles: 5.794573 4.552998 4.721669
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB5-Whisp
-+Angles: 1.570795 0.000000 1.221730
++Angles: 5.934119 1.570795 4.712389
 +ScaleX: 2.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 1.745328 0.767944 0.959930
++Angles: 5.682918 1.014871 4.591394
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB8-Whisp
-+Angles: 2.373646 1.117010 1.343902
++Angles: 6.126277 1.269603 4.547818
 +ScaleX: 3.000000
 +ScaleY: 1.400000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB12-Whisp
-+Angles: 3.368483 5.148717 1.274089
++Angles: 0.065816 4.493353 4.422863
 +ScaleX: 3.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB12-Whisp
-+Angles: 0.506145 0.383972 1.239183
++Angles: 6.124684 0.098776 5.004907
 +ScaleX: 4.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB14-Whisp
-+Angles: 0.209439 0.069813 1.204276
++Angles: 6.208607 0.126080 5.071578
 +ScaleX: 2.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB11-Whisp
-+Angles: 1.378809 1.518435 1.500982
++Angles: 6.214656 6.143102 4.725731
 +ScaleX: 3.000000
 +ScaleY: 2.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 0.750491 0.959930 1.466075
++Angles: 6.211836 6.071007 4.789108
 +ScaleX: 5.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB1-Main
-+Angles: 5.235984 0.000000 5.934115
++Angles: 0.950658 0.534819 0.629243
 +ScaleX: 1.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB5-Whisp
-+Angles: 5.113811 0.000000 6.038835
++Angles: 1.104329 0.518029 0.567981
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB11-Whisp
-+Angles: 5.253437 6.126101 5.759582
++Angles: 0.836539 0.851126 0.842387
 +ScaleX: 4.000000
 +ScaleY: 1.200000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB12-Whisp
-+Angles: 5.305797 2.757618 5.934115
++Angles: 0.893135 3.994860 0.577006
 +ScaleX: 4.000000
 +ScaleY: 1.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 5.585049 2.513272 5.323250
++Angles: 0.377596 4.372105 1.078468
 +ScaleX: 4.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulG5-Whisp
-+Angles: 5.619956 6.195914 5.358157
++Angles: 0.379563 0.645130 1.034946
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB9-Whisp
-+Angles: 5.619956 0.000000 5.305797
++Angles: 0.351465 0.574772 1.082257
 +ScaleX: 3.000000
 +ScaleY: 3.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 0.000000 5.619956 0.000000
++Angles: 0.000000 0.663229 0.000000
 +ScaleX: 13.000000
 +ScaleY: 10.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 1.570795 1.343902 0.000000
++Angles: 4.712390 4.939283 0.000000
 +ScaleX: 10.000000
 +ScaleY: 8.000000
 +DivX: 1
@@ -3142,13 +2985,13 @@ $Starbitmap: NebulB9-Whisp
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB10-Whisp
-+Angles: 6.073741 3.089230 0.209439
++Angles: 0.204802 3.149790 6.069207
 +ScaleX: 4.000000
 +ScaleY: 4.000000
 +DivX: 1
 +DivY: 1
 $Starbitmap: NebulB2-Main
-+Angles: 6.195914 1.727875 2.513272
++Angles: 6.212613 4.503928 3.771728
 +ScaleX: 9.000000
 +ScaleY: 9.000000
 +DivX: 1

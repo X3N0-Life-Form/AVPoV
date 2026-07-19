@@ -532,6 +532,7 @@ F_Capella_04.Facing Goliath							//Need more testing
 		-GTD Ballard (Hecate class)		//destroyed
 		-GVCv Eb'Siliss (Sobek class)		//destroyed
 		-GTCv Babylon (Sparta class)		//non-vital
+		-GTCv Byzantium (Sparta class)		//non-vital
 		-GVD Apep (Hatshepsut class)		//destroyed
 		-GVC Searing Fate (Mentu Enforcer class)//destroyed
 		-GVC Crixalis (Aten class)		//destroyed

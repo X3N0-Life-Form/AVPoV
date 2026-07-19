@@ -1,0 +1,11 @@
+{
+  "custom_dependencies": null,
+  "custom_mod_flags": null,
+  "custom_build_id": null,
+  "custom_build_version": null,
+  "custom_build_exec": null,
+  "custom_cmdline": null,
+  "is_compressed": false,
+  "ignore_global_cmd": false,
+  "no_ingame_options": false
+}
