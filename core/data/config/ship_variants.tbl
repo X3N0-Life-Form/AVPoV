@@ -152,7 +152,7 @@ $turret30:Heavy Flak
 $Name:	Long Range Hunter Killer Destroyer
 $ai class: Big
 $armor: Shivan Elite Armor
-$turret01:LRLred
+$turret01:LRLRed
 $turret02:LRLRed
 $turret03:MRedUp
 $turret04:MRedUp
